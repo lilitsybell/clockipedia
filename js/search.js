@@ -81,11 +81,15 @@ const singularTeams = {
 
 item.innerHTML = `
 
-    <strong>${character.name}</strong>
+    <img src="${character.image}" class="search-icon">
 
-    <br>
+    <div>
+        <strong>${character.name}</strong>
 
-    <small>${singularTeams[character.team] || character.team}</small>
+        <br>
+
+        <small>${singularTeams[character.team] || character.team}</small>
+    </div>
 
 `;
 
