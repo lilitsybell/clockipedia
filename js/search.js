@@ -71,13 +71,15 @@ document.addEventListener("DOMContentLoaded", async () => {
 
             item.innerHTML = `
 
+                <img src="${character.image}" class="search-icon">
+
+                <div>
                 <strong>${character.name}</strong>
-
                 <br>
-
                 <small>${character.team}</small>
+                </div>
 
-            `;
+        `;
 
 
             item.onclick = () => {
