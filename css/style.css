@@ -389,6 +389,10 @@ serif;
 }
 
 
+/* ===========================
+   Character Pages
+=========================== */
+
 /* CHARACTER PAGES */
 .character-page {
 
@@ -448,4 +452,82 @@ font-size:20px;
 
 line-height:1.5;
 
+}
+
+.character-header {
+
+    display:flex;
+    align-items:center;
+    gap:30px;
+
+    margin-bottom:25px;
+
+}
+
+
+.character-header img {
+
+    width:220px;
+    height:220px;
+
+    object-fit:contain;
+
+}
+
+
+.character-header h1 {
+
+    margin:0;
+
+}
+
+
+.character-header h3 {
+
+    margin-top:10px;
+
+    font-size:20px;
+
+}
+
+
+/* Character links */
+
+.character-link{
+
+    font-weight:bold;
+    text-decoration:none;
+
+}
+
+
+.character-link:hover{
+
+    text-decoration:underline;
+
+}
+
+
+.character-link.blue{
+    color:#0883bd;
+}
+
+
+.character-link.red{
+    color:#a41618;
+}
+
+
+.character-link.purple{
+    color:#7851A9;
+}
+
+
+.character-link.gold{
+    color:#b77102;
+}
+
+
+.character-link.green{
+    color:#8ea742;
 }
