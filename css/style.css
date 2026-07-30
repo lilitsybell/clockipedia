@@ -51,7 +51,7 @@ font-family:'Heebo', Arial, Helvetica, sans-serif;
 
     overflow-y:auto;
 
-    overscroll-behavior:contain;
+    overscroll-behavior-y: contain;
 
     font-family: "Heebo", sans-serif;
 
