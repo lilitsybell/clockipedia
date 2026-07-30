@@ -144,6 +144,14 @@ serif;
 
 }
 
+.nav-link.active {
+
+    background:white;
+
+    color:var(--black);
+
+}
+
 
 /* CHARACTER MENU */
 
