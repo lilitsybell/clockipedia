@@ -9,27 +9,23 @@ document.addEventListener("DOMContentLoaded", async () => {
     let searchCharacters = [];
 
 
-// Load character data
-let searchCharacters = [];
+    // Load character data
+    try {
 
+        const response = await fetch("/data/characters.json");
 
-// Load character data
-try {
+        const data = await response.json();
 
-    const response = await fetch("/data/characters.json");
+        searchCharacters = Object.entries(data).map(([id, character]) => ({
+            id,
+            ...character
+        }));
 
-    const data = await response.json();
+    } catch (error) {
 
-    searchCharacters = Object.entries(data).map(([id, character]) => ({
-        id,
-        ...character
-    }));
+        console.error("Could not load characters:", error);
 
-} catch (error) {
-
-    console.error("Could not load characters:", error);
-
-}
+    }
 
     searchBox.addEventListener("input", () => {
 
