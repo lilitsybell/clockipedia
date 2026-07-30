@@ -67,6 +67,33 @@ function getSlug(name){
 
 }
 
+function formatCharacters(text){
+
+    return text.replace(/\[(.*?)\]/g, (_, character)=>{
+
+        const slug = getSlug(character);
+
+        const linkedCharacter = characters[slug];
+
+
+        let team = "default";
+
+
+        if(linkedCharacter){
+
+            team = teamColors[linkedCharacter.team] || "default";
+
+        }
+
+
+        return `<a href="character.html?id=${slug}" class="character-link ${team}">
+            ${character}
+        </a>`;
+
+    });
+
+}
+
 function fillDropdown(id){
 
     const select=document.getElementById(id);
@@ -280,7 +307,7 @@ let infoButtons = "";
 if(interaction.reason){
 
     infoButtons += `
-    <span class="info-button" title="${interaction.reason}">
+    <span class="info-button" title="${interaction.reason.replace(/"/g, '&quot;')}"
         ?
     </span>
     `;
@@ -291,7 +318,7 @@ if(interaction.reason){
 if(interaction.mathInfo){
 
     infoButtons += `
-    <span class="info-button" title="${interaction.mathInfo}">
+    <span class="info-button" title="${interaction.mathInfo.replace(/"/g, '&quot;')}"
         ▲
     </span>
     `;
