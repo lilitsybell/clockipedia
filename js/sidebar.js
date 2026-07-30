@@ -121,18 +121,14 @@ document.querySelectorAll(".nav-link").forEach(link => {
 
 });
 
-
 // Character dropdown
 const characterToggle = document.querySelector(".character-toggle");
 const characterMenu = document.querySelector(".character-menu");
 
-console.log(characterToggle, characterMenu);
-
-characterToggle.addEventListener("click", () => {
-    console.log("clicked");
-    characterMenu.classList.toggle("open");
-});
-
+if (characterToggle && characterMenu) {
+    characterToggle.onclick = function () {
+        characterMenu.classList.toggle("open");
+    };
 }
     
 });
