@@ -605,3 +605,18 @@ h1.green{
 .tab.active{
     background:#0883bd;
 }
+
+.content{
+    position:relative;
+
+    background:white;
+
+    border:3px solid #0883bd;
+    border-top:5px solid #0883bd;
+
+    border-radius:0 12px 12px 12px;
+
+    padding:40px 40px 60px;
+
+    box-shadow:0 10px 24px rgba(0,0,0,.12);
+}
