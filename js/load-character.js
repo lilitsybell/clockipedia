@@ -203,7 +203,7 @@ function formatCharacters(text){
         }
 
 
-        return `<a href="character.html?id=${slug}"" class="character-link ${team}">
+        return `<a href="character.html?id=${slug}" class="character-link ${team}">
                     ${character}
                 </a>`;
 
