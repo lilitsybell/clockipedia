@@ -1,1 +1,113 @@
+document.addEventListener("DOMContentLoaded", async () => {
 
+    const searchBox = document.getElementById("searchBox");
+    const searchResults = document.getElementById("searchResults");
+
+    if (!searchBox || !searchResults) return;
+
+
+    let characters = [];
+
+
+    // Load character data
+    try {
+
+        const response = await fetch("/data/characters.json");
+
+        characters = await response.json();
+
+    } catch (error) {
+
+        console.error("Could not load characters:", error);
+
+    }
+
+
+
+    searchBox.addEventListener("input", () => {
+
+        const query = searchBox.value.toLowerCase().trim();
+
+
+        searchResults.innerHTML = "";
+
+
+        if (!query) {
+
+            searchResults.style.display = "none";
+            return;
+
+        }
+
+
+
+        const matches = characters.filter(character =>
+
+            character.name.toLowerCase().includes(query)
+
+        ).slice(0, 8);
+
+
+
+        if (matches.length === 0) {
+
+            searchResults.style.display = "none";
+            return;
+
+        }
+
+
+
+        matches.forEach(character => {
+
+
+            const item = document.createElement("div");
+
+            item.className = "search-item";
+
+
+            item.innerHTML = `
+
+                <strong>${character.name}</strong>
+
+                <br>
+
+                <small>${character.team}</small>
+
+            `;
+
+
+            item.onclick = () => {
+
+                window.location.href = character.page;
+
+            };
+
+
+            searchResults.appendChild(item);
+
+
+        });
+
+
+        searchResults.style.display = "block";
+
+
+    });
+
+
+
+    // Hide when clicking elsewhere
+
+    document.addEventListener("click", (event) => {
+
+        if (!event.target.closest(".search-box")) {
+
+            searchResults.style.display = "none";
+
+        }
+
+    });
+
+
+});
