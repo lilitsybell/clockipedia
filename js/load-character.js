@@ -193,11 +193,18 @@ function formatCharacters(text){
             .replace(/[^a-z0-9]+/g, "-")
             .replace(/^-|-$/g, "");
 
-        const team = teamColors[character] || "default";
+        const foundCharacter = Object.values(characters)
+            .find(c => c.name === character);
+
+        const team = foundCharacter 
+            ? teamColors[foundCharacter.team]
+            : "default";
+
 
         return `<a href="../characters/${slug}.html" class="character-link ${team}">
                     ${character}
                 </a>`;
+
     });
 
 }
