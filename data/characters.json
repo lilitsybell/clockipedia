@@ -1044,85 +1044,85 @@
     },
       "angel": {
         "name": "Angel",
-        "team": "Travellers",
+        "team": "Fabled",
         "image": "https://images.klutzbanana.com/characters_official/angel.png",
         "ability": "Something bad might happen to whoever is most responsible for the death of a new player."
     },
       "buddhist": {
         "name": "Buddhist",
-        "team": "Travellers",
+        "team": "Fabled",
         "image": "https://images.klutzbanana.com/characters_official/buddhist.png",
         "ability": "For the first 2 minutes of each day, veteran players may not talk."
     },
       "deusexfiasco": {
         "name": "Deus ex Fiasco",
-        "team": "Travellers",
+        "team": "Fabled",
         "image": "https://images.klutzbanana.com/characters_official/deusexfiasco.png",
         "ability": "At least once per game, the Storyteller will make a mistake, correct it, and publicly admit to it."
     },
       "djinn": {
         "name": "Djinn",
-        "team": "Travellers",
+        "team": "Fabled",
         "image": "https://images.klutzbanana.com/characters_official/djinn.png",
         "ability": "Use the Djinn's special rule. All players know what it is."
     },
       "doomsayer": {
         "name": "Doomsayer",
-        "team": "Travellers",
+        "team": "Fabled",
         "image": "https://images.klutzbanana.com/characters_official/doomsayer.png",
         "ability": "If 4 or more players live, each living player may publicly choose (once per game) that a player of their own alignment dies."
     },
       "duchess": {
         "name": "Duchess",
-        "team": "Travellers",
+        "team": "Fabled",
         "image": "https://images.klutzbanana.com/characters_official/duchess.png",
         "ability": "Each day, 3 players may choose to visit you. At night*, each visitor learns how many visitors are evil, but 1 gets false info."
     },
       "ferryman": {
         "name": "Ferryman",
-        "team": "Travellers",
+        "team": "Fabled",
         "image": "https://images.klutzbanana.com/characters_official/ferryman.png",
         "ability": "On the final day, all dead players regain their vote token."
     },
       "fibbin": {
         "name": "Fibbin",
-        "team": "Travellers",
+        "team": "Fabled",
         "image": "https://images.klutzbanana.com/characters_official/fibbin.png",
         "ability": "Once per game, 1 good player might get incorrect information."
     },
       "fiddler": {
         "name": "Fiddler",
-        "team": "Travellers",
+        "team": "Fabled",
         "image": "https://images.klutzbanana.com/characters_official/fiddler.png",
         "ability": "Once per game, the Demon secretly chooses an opposing player: all players choose which of these 2 players win."
     },
       "hellslibrarian": {
         "name": "Hell's Librarian",
-        "team": "Travellers",
+        "team": "Fabled",
         "image": "https://images.klutzbanana.com/characters_official/hellslibrarian.png",
         "ability": "Something bad might happen to whoever talks when the Storyteller has asked for silence."
     },
       "revolutionary": {
         "name": "Revolutionary",
-        "team": "Travellers",
+        "team": "Fabled",
         "image": "https://images.klutzbanana.com/characters_official/revolutionary.png",
         "ability": "2 neighboring players are known to be the same alignment. Once per game, 1 of them registers falsely."
     },
       "sentinel": {
         "name": "Sentinel",
-        "team": "Travellers",
+        "team": "Fabled",
         "image": "https://images.klutzbanana.com/characters_official/sentinel.png",
         "ability": "There might be 1 extra or 1 fewer Outsider in play."
     },
       "spiritofivory": {
         "name": "Spirit of Ivory",
-        "team": "Travellers",
+        "team": "Fabled",
         "image": "https://images.klutzbanana.com/characters_official/spiritofivory.png",
         "ability": "There can't be more than 1 extra evil player."
     },
       "toymaker": {
         "name": "Toymaker",
-        "team": "Travellers",
+        "team": "Fabled",
         "image": "https://images.klutzbanana.com/characters_official/toymaker.png",
         "ability": "The Demon may choose not to attack & must do this at least once per game. Evil players get normal starting info."
     },
