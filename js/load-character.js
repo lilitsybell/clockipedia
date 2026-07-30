@@ -18,7 +18,7 @@ document.addEventListener("DOMContentLoaded", async () => {
 
         const response = await fetch("../data/characters.json");
 
-        const characters = await response.json();
+        characters = await response.json();
 
                 console.log("Characters loaded:", characters);
 
@@ -191,15 +191,21 @@ function formatCharacters(text){
             .replace(/[^a-z0-9]+/g, "-")
             .replace(/^-|-$/g, "");
 
-        const foundCharacter = Object.values(characters)
-            .find(c => c.name === character);
 
-        const team = foundCharacter 
-            ? teamColors[foundCharacter.team]
-            : "default";
+        const linkedCharacter = characters[slug];
 
 
-        return `<a href="../characters/${slug}.html" class="character-link ${team}">
+        let team = "default";
+
+
+        if(linkedCharacter){
+
+            team = teamColors[linkedCharacter.team] || "default";
+
+        }
+
+
+        return `<a href="../${slug}.html" class="character-link ${team}">
                     ${character}
                 </a>`;
 
