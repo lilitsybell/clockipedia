@@ -5,7 +5,7 @@ document.addEventListener("DOMContentLoaded", () => {
     sidebar.innerHTML = `
 
         <div class="logo">
-            <img src="https://betterbotcwiki.weebly.com/uploads/1/4/0/2/140233688/better-botc-wiki-by-bell.png">
+            <img src="/images/clockipedia-logo.png">
         </div>
 
 
