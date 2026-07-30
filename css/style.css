@@ -571,3 +571,37 @@ h1.gold{
 h1.green{
     color:#8ea742;
 }
+
+/* Wiki Container */
+
+.wiki{
+    width:min(1100px,95%);
+    margin:auto;
+}
+
+
+/* Tabs */
+
+.tabs{
+    display:flex;
+    gap:6px;
+}
+
+.tab{
+    background:#959799;
+    color:white;
+    padding:14px 28px;
+    font-weight:bold;
+    cursor:pointer;
+    user-select:none;
+    border-radius:12px 12px 0 0;
+    transition:.2s;
+}
+
+.tab:hover{
+    background:#858789;
+}
+
+.tab.active{
+    background:#0883bd;
+}
