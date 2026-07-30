@@ -4,14 +4,27 @@ console.log("Character ID:", characterID);
 let characters = {};
 
 const teamColors = {
+
     "Townsfolk":"blue",
+    "Townsfolk":"blue",
+
+    "Outsider":"blue",
     "Outsiders":"blue",
+
+    "Minion":"red",
     "Minions":"red",
+
+    "Demon":"red",
     "Demons":"red",
+
+    "Traveller":"traveller",
     "Travellers":"traveller",
+
     "Loric":"gold",
     "Fabled":"green"
+
 };
+
 document.addEventListener("DOMContentLoaded", async () => {
 
     try {
@@ -23,6 +36,8 @@ document.addEventListener("DOMContentLoaded", async () => {
                 console.log("Characters loaded:", characters);
 
         const character = characters[characterID];
+        console.log("Character team:", character.team);
+console.log("Color class:", teamColors[character.team]);
 
 
         if (!character) {
