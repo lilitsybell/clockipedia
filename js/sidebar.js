@@ -109,12 +109,15 @@ document.querySelectorAll("a.nav-link").forEach(link => {
     const characterToggle = document.querySelector(".character-toggle");
     const characterSection = document.querySelector(".character-section");
 
+if (characterToggle && characterSection) {
 
     characterToggle.addEventListener("click", () => {
 
         characterSection.classList.toggle("open");
 
     });
+
+}
 
 
 });
