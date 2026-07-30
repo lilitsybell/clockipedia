@@ -20,8 +20,8 @@ const teamColors = {
     "Traveller":"traveller",
     "Travellers":"traveller",
 
-    "Loric":"gold",
-    "Fabled":"green"
+    "Loric":"green",
+    "Fabled":"gold"
 
 };
 
