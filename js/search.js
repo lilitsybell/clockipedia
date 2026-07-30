@@ -69,17 +69,25 @@ document.addEventListener("DOMContentLoaded", async () => {
             item.className = "search-item";
 
 
-            item.innerHTML = `
+const singularTeams = {
+    "Townsfolk": "Townsfolk",
+    "Outsiders": "Outsider",
+    "Minions": "Minion",
+    "Demons": "Demon",
+    "Travellers": "Traveller",
+    "Loric": "Loric"
+};
 
-                <img src="${character.image}" class="search-icon">
 
-                <div>
-                <strong>${character.name}</strong>
-                <br>
-                <small>${character.team}</small>
-                </div>
+item.innerHTML = `
 
-        `;
+    <strong>${character.name}</strong>
+
+    <br>
+
+    <small>${singularTeams[character.team] || character.team}</small>
+
+`;
 
 
             item.onclick = () => {
