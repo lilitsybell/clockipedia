@@ -29,7 +29,7 @@ document.addEventListener("DOMContentLoaded", async () => {
 
         if (!character) {
 
-            document.body.innerHTML = "<h1>Character not found</h1>";
+            document.getElementById("character").innerHTML = "<h1>Character not found</h1>";
             return;
 
         }
@@ -38,7 +38,7 @@ document.addEventListener("DOMContentLoaded", async () => {
         document.title = character.name;
 
 
-        document.body.innerHTML = `
+        document.getElementById("character").innerHTML = `
 
         <div class="wiki">
 
