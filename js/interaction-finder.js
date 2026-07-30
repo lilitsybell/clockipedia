@@ -318,7 +318,7 @@ if(interaction.reason){
 if(interaction.mathInfo){
 
     infoButtons += `
-    <span class="info-button" title="${interaction.mathInfo.replace(/"/g, '&quot;')}"
+    <span class="info-button" title="${interaction.mathInfo.replace(/"/g, '&quot;')}">
         ▲
     </span>
     `;
