@@ -241,8 +241,75 @@ fillDropdown("char1");
 fillDropdown("char2");
 fillDropdown("char3");
 
-
 setupEvents();
 
+updateResults();
+}
+
+function updateResults(){
+
+    const selected = [
+        char1.value,
+        char2.value,
+        char3.value
+    ].filter(x => x !== "");
+
+
+    const list = document.getElementById("list");
+
+    list.innerHTML = "";
+
+
+    interactions.forEach(interaction=>{
+
+
+        const charactersInInteraction = getCharacters(interaction.text);
+
+
+        const show = selected.every(character =>
+            charactersInInteraction.includes(character)
+        );
+
+
+        if(show){
+
+            const li = document.createElement("li");
+
+            li.textContent = interaction.text;
+
+            list.appendChild(li);
+
+        }
+
+
+    });
+
+
+    if(list.children.length === 0){
+
+        list.innerHTML = "<li>No interactions found.</li>";
+
+    }
+
+}
+
+
+
+function setupEvents(){
+
+    document.getElementById("char1").onchange = updateResults;
+    document.getElementById("char2").onchange = updateResults;
+    document.getElementById("char3").onchange = updateResults;
+
+
+    document.getElementById("clearButton").onclick = ()=>{
+
+        char1.selectedIndex = 0;
+        char2.selectedIndex = 0;
+        char3.selectedIndex = 0;
+
+        updateResults();
+
+    };
 
 }
