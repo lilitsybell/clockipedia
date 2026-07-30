@@ -546,7 +546,7 @@ font-size:22px;
 }
 
 .wiki.traveller .content{
-    border-color:#7851A9;
+    border-color:#2f6fc4;
 }
 
 .wiki.traveller .content::after{
@@ -750,8 +750,8 @@ h1.green, h2.green, h3.green{
 }
 
 .wiki.traveller .content{
-    border:3px solid #7851A9;
-    border-top:5px solid #7851A9;
+    border:3px solid #2f6fc4;
+    border-top:5px solid #2f6fc4;
 }
 
 .content::after{
