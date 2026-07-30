@@ -41,19 +41,23 @@ document.addEventListener("DOMContentLoaded", async () => {
 
         <div class="wiki">
 
-            <div class="character-header">
+<div class="character-header">
 
-                <img src="${character.image}" id="characterImage">
+    <img src="${character.image}">
 
-                <div>
+    <div>
 
-                    <h1>${character.name}</h1>
+        <h1 class="${teamColors[character.team]}">
+            ${character.name}
+        </h1>
 
-                    <h3>${character.team}</h3>
+        <h3>
+            ${character.team}
+        </h3>
 
-                </div>
+    </div>
 
-            </div>
+</div>
 
 
             <div class="tabs">
@@ -73,7 +77,7 @@ document.addEventListener("DOMContentLoaded", async () => {
             </div>
 
 
-            <div class="content">
+            <div class="content ${teamColors[character.team]}">
 
 
                 <div class="page active">
