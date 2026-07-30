@@ -12,7 +12,6 @@
     "run": {
            "Setup": ["Thing 1",
                 "Thing 2"],
-           },
            "Anytime": ["Thing 1",
                 "Thing 2"],
            "First Night": ["Thing 1",
@@ -51,7 +50,6 @@
     "run": {
            "Setup": ["Thing 1",
                 "Thing 2"],
-           },
            "Anytime": [],
            "First Night": [],
            "Every Night": [],
