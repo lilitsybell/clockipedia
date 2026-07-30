@@ -25,6 +25,7 @@ const singularTeams = {
     try {
 
         const response = await fetch("/data/characters.json");
+        console.log("Characters response:", response);
 
         const data = await response.json();
 
