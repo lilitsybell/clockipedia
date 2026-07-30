@@ -551,3 +551,23 @@ line-height:1.5;
 .content.green{
     border-color:#8ea742;
 }
+
+h1.blue{
+    color:#0883bd;
+}
+
+h1.red{
+    color:#a41618;
+}
+
+h1.purple{
+    color:#7851A9;
+}
+
+h1.gold{
+    color:#b77102;
+}
+
+h1.green{
+    color:#8ea742;
+}
