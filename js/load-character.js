@@ -105,23 +105,30 @@ document.addEventListener("DOMContentLoaded", async () => {
 
 
                 </div>
+                
+<div class="page">
 
+    <h2>How to Run</h2>
 
+    ${
+        Object.entries(character.run || {})
+        .map(([section, items]) => `
 
-                <div class="page">
+            <h3>${section}</h3>
 
-                    <h2>How to Run</h2>
+            <ul>
+                ${
+                    (items || [])
+                    .map(item => `<li>${item}</li>`)
+                    .join("")
+                }
+            </ul>
 
-                    <ul>
+        `)
+        .join("")
+    }
 
-                    ${(character.run || [])
-                        .map(item => `<li>${item}</li>`)
-                        .join("")}
-
-                    </ul>
-
-                </div>
-
+</div>
 
 
                 <div class="page">
