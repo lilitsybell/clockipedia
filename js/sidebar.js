@@ -109,25 +109,32 @@ Contact
 
 `;
 
-    // Highlight current page
+// Highlight current page
 
-    const currentPage = window.location.pathname;
+const currentPage = window.location.pathname;
 
-    document.querySelectorAll(".nav-link").forEach(link => {
+document.querySelectorAll(".nav-link").forEach(link => {
 
-        if (link.href.includes(currentPage)) {
-            link.classList.add("active");
-        }
+    if (link.href.includes(currentPage)) {
+        link.classList.add("active");
+    }
 
-    });
+});
+
+
+// Character dropdown
 
 const characterToggle = document.querySelector(".character-toggle");
 const characterMenu = document.querySelector(".character-menu");
 
-characterToggle.addEventListener("click", () => {
+if (characterToggle && characterMenu) {
 
-    characterMenu.classList.toggle("open");
+    characterToggle.addEventListener("click", () => {
 
-});
+        characterMenu.classList.toggle("open");
+
+    });
+
+}
     
 });
