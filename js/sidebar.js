@@ -1,3 +1,4 @@
+console.log("Searchbar loaded");
 document.addEventListener("DOMContentLoaded", () => {
 
     const sidebar = document.getElementById("sidebar");
