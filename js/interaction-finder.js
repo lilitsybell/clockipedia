@@ -244,11 +244,13 @@ updateResults();
 
 function updateResults(){
 
-    const selected = [
-        char1.value,
-        char2.value,
-        char3.value
-    ].filter(x => x !== "");
+const selected = [
+
+    document.getElementById("char1").value,
+    document.getElementById("char2").value,
+    document.getElementById("char3").value
+
+].filter(x => x !== "");
 
 
     const list = document.getElementById("list");
@@ -300,9 +302,9 @@ function setupEvents(){
 
     document.getElementById("clearButton").onclick = ()=>{
 
-        char1.selectedIndex = 0;
-        char2.selectedIndex = 0;
-        char3.selectedIndex = 0;
+document.getElementById("char1").selectedIndex = 0;
+document.getElementById("char2").selectedIndex = 0;
+document.getElementById("char3").selectedIndex = 0;
 
         updateResults();
 
