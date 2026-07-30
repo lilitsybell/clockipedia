@@ -70,12 +70,13 @@
                 "The [Acrobat] does not learn if the player they selected was drunk, or poisoned, or both.",
                 "The [Drunk] registers as drunk to the [Acrobat]."],
     "run": {
-           "Other Nights": ["Wake the [Acrobat]. They point to a player. Put the [Acrobat] to sleep.",
-                "If the player the [Acrobat] pointed to is drunk or poisoned, or becomes drunk or poisoned at any time tonight, the [Acrobat] dies."]
+           "Other Nights": ["Each night except the first, the [Acrobat] chooses a player. If the player is drunk or poisoned at any point during the night, the [Acrobat] dies."]
            },
-    "examples": ["The [Sailor] chooses the [Assassin], and the Storyteller makes the [Sailor] drunk. The [Acrobat] chooses the [Sailor], and dies because the [Sailor] is drunk.",
-                 "The [Acrobat] chooses the [Tinker], who is sober and healthy. Nothing happens.",
-                 "The [Acrobat] chooses the [Preacher]. Later that night, the [Pukka] poisons the [Preacher]. The [Acrobat] dies, because the [Preacher] is no longer healthy."]
+    "examples": ["The [Poisoner] chooses the [Savant]. The [Acrobat] chooses the [Savant] and dies.",
+                 "The [Acrobat] chooses the sober and healthy [Princess]. Nothing happens.",
+                 "The [Acrobat] chooses the sober and healthy [Fortune Teller]. The [Fortune Teller] chooses the [Goon]. The [Fortune Teller] is now drunk so the [Acrobat] dies.",
+                 "The [Organ Grinder] chooses to be drunk. The [Acrobat] chooses the [Organ Grinder] and dies.",
+                 "The [Acrobat] chooses the [Soldier]. The [No Dashii] neighbors the [Soldier], but since the [Soldier] is safe from the Demon, the [Soldier] is not poisoned and the [Acrobat] does not die."]
 },
 "alchemist":
 {
@@ -106,11 +107,11 @@
                 "Any time the Minion who has the same ability as the [Alchemist] would act, the [Alchemist] acts. This includes announcements, passive abilities, and active abilities."
                 ],
            "First Night": [
-                "During the first night, the Storyteller wakes the [Alchemist] and tells them which Minion ability they have."
+                "During the [Alchemist]'s first night, the Storyteller tells them which Minion ability they have."
                 ],
            "End of Game": [
-                "The [Alchemist] is revealed as the [Alchemist], not as the Minion ability they have.",
-                "The [Alchemist] wins with their alignment, regardless of the ability they have."
+                "The [Alchemist] wins with their alignment, regardless of the ability they have.",
+                "The [Alchemist] is revealed as the [Alchemist], not as the Minion ability they have."
                 ]
            },
     "examples": [
