@@ -1,4 +1,4 @@
-console.log("load-character updated 7/30/2026 1:14PM");
+console.log("load-character updated 7/30/2026 1:28PM");
 console.log("Character ID:", characterID);
 
 let characters = {};
@@ -106,13 +106,11 @@ document.addEventListener("DOMContentLoaded", async () => {
                 
 <div class="page">
 
-    <h2>How to Run</h2>
-
     ${
         Object.entries(character.run || {})
         .map(([section, items]) => `
 
-            <h3>${section}</h3>
+            <h2>${section}</h2>
 
             <ul>
                 ${
