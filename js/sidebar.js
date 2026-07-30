@@ -123,17 +123,15 @@ document.querySelectorAll(".nav-link").forEach(link => {
 
 
 // Character dropdown
-
 const characterToggle = document.querySelector(".character-toggle");
 const characterMenu = document.querySelector(".character-menu");
 
-if (characterToggle && characterMenu) {
+console.log(characterToggle, characterMenu);
 
-    characterToggle.addEventListener("click", () => {
-
-        characterMenu.classList.toggle("open");
-
-    });
+characterToggle.addEventListener("click", () => {
+    console.log("clicked");
+    characterMenu.classList.toggle("open");
+});
 
 }
     
