@@ -620,6 +620,14 @@ h1.green{
     background:#0883bd;
 }
 
+.page {
+    display: none;
+}
+
+.page.active {
+    display: block;
+}
+
 .content{
     position:relative;
 
