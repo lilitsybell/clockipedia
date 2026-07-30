@@ -1,4 +1,4 @@
-document.addEventListener("DOMContentLoaded", async () => {
+async function loadSearch(){
 
     const searchBox = document.getElementById("searchBox");
     const searchResults = document.getElementById("searchResults");
@@ -140,6 +140,4 @@ if(first){
         }
 
     });
-
-
-});
+}
