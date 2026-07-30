@@ -55,12 +55,39 @@
                  "The [Acrobat] chooses the [Tinker], who is sober and healthy. Nothing happens.",
                  "The [Acrobat] chooses the [Preacher]. Later that night, the [Pukka] poisons the [Preacher]. The [Acrobat] dies, because the [Preacher] is no longer healthy."]
 },
-    "alchemist": {
-        "name": "Alchemist",
-        "team": "Townsfolk",
-        "image": "https://images.klutzbanana.com/characters_official/alchemist_g.png",
-        "ability": "You have a Minion ability. When using this, the Storyteller may prompt you to choose differently."
-    },
+"alchemist":
+{
+    "name": "Alchemist",
+    "team": "Townsfolk",
+    "image": "https://images.klutzbanana.com/characters_official/alchemist_g.png",
+    "ability": "You have a Minion ability. When using this, the Storyteller may prompt you to choose differently.",
+    "purpose": "Purpose",
+    "summary": ["Summary 1",
+                "Summary 2"],
+    "run": {
+           "Setup": ["Thing 1",
+                "Thing 2"],
+           "Anytime": ["Thing 1",
+                "Thing 2"],
+           "First Night": ["Thing 1",
+                "Thing 2"],
+           "Every Night": ["Thing 1",
+                "Thing 2"],
+           "First Day": ["Thing 1",
+                "Thing 2"],
+           "Every Day": ["Thing 1",
+                "Thing 2"],
+           "Other Nights": ["Thing 1",
+                "Thing 2"],
+           "Other Days": ["Thing 1",
+                "Thing 2"],
+           "End of Game": ["Thing 1",
+                "Thing 2"]
+           },
+    "examples": ["Example 1",
+                 "Example 2",
+                 "Example 3"]
+},
     "alsaahir": {
         "name": "Alsaahir",
         "team": "Townsfolk",
