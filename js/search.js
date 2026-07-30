@@ -8,6 +8,15 @@ document.addEventListener("DOMContentLoaded", async () => {
 
     let searchCharacters = [];
 
+    
+const singularTeams = {
+    "Townsfolk": "Townsfolk",
+    "Outsiders": "Outsider",
+    "Minions": "Minion",
+    "Demons": "Demon",
+    "Travellers": "Traveller",
+    "Loric": "Loric"
+};
 
     // Load character data
     try {
@@ -67,16 +76,6 @@ document.addEventListener("DOMContentLoaded", async () => {
             const item = document.createElement("div");
 
             item.className = "search-item";
-
-
-const singularTeams = {
-    "Townsfolk": "Townsfolk",
-    "Outsiders": "Outsider",
-    "Minions": "Minion",
-    "Demons": "Demon",
-    "Travellers": "Traveller",
-    "Loric": "Loric"
-};
 
 
 item.innerHTML = `
