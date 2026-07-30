@@ -727,6 +727,68 @@ h1.green, h2.green, h3.green{
     box-shadow:0 10px 24px rgba(0,0,0,.12);
 }
 
+/* Team colored character boxes */
+
+.wiki.blue .content{
+    border:3px solid #0883bd;
+    border-top:5px solid #0883bd;
+}
+
+.wiki.red .content{
+    border:3px solid #a41618;
+    border-top:5px solid #a41618;
+}
+
+.wiki.gold .content{
+    border:3px solid #b77102;
+    border-top:5px solid #b77102;
+}
+
+.wiki.green .content{
+    border:3px solid #8ea742;
+    border-top:5px solid #8ea742;
+}
+
+.wiki.traveller .content{
+    border:3px solid #7851A9;
+    border-top:5px solid #7851A9;
+}
+
+.content::after{
+    content:"";
+    position:absolute;
+    left:0;
+    right:0;
+    bottom:0;
+    height:12px;
+    background:#0883bd;
+    border-radius:0 0 9px 9px;
+}
+
+.wiki.blue .content::after{
+    background:#0883bd;
+}
+
+.wiki.red .content::after{
+    background:#a41618;
+}
+
+.wiki.gold .content::after{
+    background:#b77102;
+}
+
+.wiki.green .content::after{
+    background:#8ea742;
+}
+
+.wiki.traveller .content::after{
+    background:linear-gradient(
+        0deg,
+        #2f6fc4 50%,
+        #b52323 50%
+    );
+}
+
 /* Example Cards */
 
 .example{
