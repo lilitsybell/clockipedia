@@ -33,12 +33,12 @@ document.addEventListener("DOMContentLoaded", () => {
             </a>
 
 
-            <a href="/tools/interaction-finder.html" class="nav-link">
+            <a href="/interaction-finder.html" class="nav-link">
                 Interaction Finder
             </a>
 
 
-            <a href="/tools/script-generator.html" class="nav-link">
+            <a href="/script-generator.html" class="nav-link">
                 Random Script Generator
             </a>
 
