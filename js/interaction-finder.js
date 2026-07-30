@@ -326,7 +326,7 @@ if(interaction.mathInfo){
 }
 
 
-li.innerHTML = formatCharacters(interaction.text) + infoButtons;
+li.innerHTML = formatCharacters(interaction.text) + " " + infoButtons;
 
 
 list.appendChild(li);
