@@ -20,6 +20,7 @@ document.addEventListener("DOMContentLoaded", async () => {
             id,
             ...character
         }));
+        console.log(searchCharacters);
 
     } catch (error) {
 
