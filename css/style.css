@@ -488,8 +488,6 @@ font-size:22px;
 
 /* Character links */
 
-/* Character links */
-
 .character-link{
 
     font-weight:bold;
@@ -547,6 +545,25 @@ font-size:22px;
 
 }
 
+.wiki.traveller .tab.active{
+    background:linear-gradient(
+        0deg,
+        #2f6fc4 50%,
+        #b52323 50%
+    );
+}
+
+.wiki.traveller .content{
+    border-color:#7851A9;
+}
+
+.wiki.traveller .content::after{
+    background:linear-gradient(
+        0deg,
+        #2f6fc4 50%,
+        #b52323 50%
+    );
+}
 
 .character-link.default{
 
