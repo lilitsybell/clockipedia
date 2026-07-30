@@ -5,33 +5,54 @@
     "name": "Example",
     "team": "Townsfolk",
     "image": "https://images.klutzbanana.com/characters_official/acrobat_g.png",
-    "ability": "Ability Text",
+    "ability": "AbilityText",
     "purpose": "Purpose",
-    "summary": ["Summary 1",
-                "Summary 2"],
+    "summary": [
+             "Summary1",
+             "Summary2"
+             ],
     "run": {
-           "Setup": ["Thing 1",
-                "Thing 2"],
-           "Anytime": ["Thing 1",
-                "Thing 2"],
-           "First Night": ["Thing 1",
-                "Thing 2"],
-           "Every Night": ["Thing 1",
-                "Thing 2"],
-           "First Day": ["Thing 1",
-                "Thing 2"],
-           "Every Day": ["Thing 1",
-                "Thing 2"],
-           "Other Nights": ["Thing 1",
-                "Thing 2"],
-           "Other Days": ["Thing 1",
-                "Thing 2"],
-           "End of Game": ["Thing 1",
-                "Thing 2"]
+           "Setup": [
+                "Thing1",
+                "Thing2"
+                ],
+           "Anytime": [
+                "Thing1",
+                "Thing2"
+                ],
+           "First Night": [
+                "Thing1",
+                "Thing2"
+                ],
+           "Every Night": [
+                "Thing1",
+                "Thing2"
+                ],
+           "First Day": [
+                "Thing1",
+                "Thing2"
+                ],
+           "Every Day": [
+                "Thing1",
+                "Thing 2"
+                ],
+           "Other Nights": [
+                "Thing1",
+                "Thing2"
+                ],
+           "Other Days": [
+                "Thing1",
+                "Thing2"
+                ],
+           "End of Game": [
+                "Thing1",
+                "Thing2"
+                ]
            },
-    "examples": ["Example 1",
-                 "Example 2",
-                 "Example 3"]
+    "examples": [
+                "Example1",
+                "Example2"
+                ]
 },
 "acrobat":
 {
@@ -61,32 +82,50 @@
     "team": "Townsfolk",
     "image": "https://images.klutzbanana.com/characters_official/alchemist_g.png",
     "ability": "You have a Minion ability. When using this, the Storyteller may prompt you to choose differently.",
-    "purpose": "Purpose",
-    "summary": ["Summary 1",
-                "Summary 2"],
+    "purpose": "The [Alchemist] has a Minion ability. In general, Minion abilities are much more powerful than normal Townsfolk abilities.",
+    "summary": [
+             "The Storyteller chooses which Minion ability the [Alchemist] has.",
+             "The [Alchemist] can have the ability of a Minion that is in-play or out-of-play.",
+             "If the [Alchemist]’s Minion ability modifies game setup, this happens.",
+             "The [Alchemist] is a Townsfolk and registers as such.",
+             "The [Alchemist] learns which ability they have on the first night.",
+             "The [Alchemist] does not wake for Minion information. This includes but is not limited to learning who the Demon is, learning if they were chosen by the [Preacher], and learning if there is a [Damsel] in play.",
+             "The Storyteller may tell the [Alchemist] to choose differently. This must happen as soon as the [Alchemist] makes their choice."
+             ],
     "run": {
-           "Setup": ["Thing 1",
-                "Thing 2"],
-           "Anytime": ["Thing 1",
-                "Thing 2"],
-           "First Night": ["Thing 1",
-                "Thing 2"],
-           "Every Night": ["Thing 1",
-                "Thing 2"],
-           "First Day": ["Thing 1",
-                "Thing 2"],
-           "Every Day": ["Thing 1",
-                "Thing 2"],
-           "Other Nights": ["Thing 1",
-                "Thing 2"],
-           "Other Days": ["Thing 1",
-                "Thing 2"],
-           "End of Game": ["Thing 1",
-                "Thing 2"]
+           "Setup": [
+                "If the [Alchemist]’s Minion ability adds or removes characters, modify the setup.",
+                "[Baron]: Add 2 Outsiders.",
+                "[Godfather]: Add or subtract 1 Outsider.",
+                "[Summoner]: Do not put a Demon in.",
+                "[Xaan]: Add or subtract any number of Outsiders."
+                ],
+           "Anytime": [
+                "Thing1",
+                "Thing2"
+                ],
+           "First Night": [
+                "During the first night, the Storyteller wakes the [Alchemist] and tells them which Minion ability they have."
+                ],
+           "Every Night": [
+                "If the [Alchemist] has an ability that would act this night, they act right before the normal Minion step."
+                ],
+           "First Day": [
+                "If the [Alchemist] has an ability that requires the Storyteller to make an announcement, the announcement is made."
+                ],
+           "Every Day": [
+                "If the [Alchemist] has an ability that works during the day, it works when it normally would.",
+                "If there is a Minion with the same ability and the abilities would act at the same time, the Storyteller arbitrarily decides who goes first each day."
+                ],
+           "End of Game": [
+                "The [Alchemist] is revealed as the [Alchemist], not as the Minion ability they have.",
+                "The [Alchemist] wins with their alignment, regardless of the ability they have."
+                ]
            },
-    "examples": ["Example 1",
-                 "Example 2",
-                 "Example 3"]
+    "examples": [
+                "The [Alchemist] has the [Godfather] ability. During setup, the Storyteller removes one Outsider and adds one Townsfolk. The [Alchemist] learns which Outsiders are in-play. If an Outsider dies during the day, the [Alchemist] wakes and chooses a player to kill. The Storyteller may ask them to kill a different player.",
+                "The [Alchemist] is poisoned on the first night and learns they have the [Psychopath] ability. When they attempt to kill a player during the day, nothing happens. That night, when they are healthy, the [Alchemist] wakes to make a choice. They actually have the [Organ Grinder] ability."
+                ]
 },
     "alsaahir": {
         "name": "Alsaahir",
