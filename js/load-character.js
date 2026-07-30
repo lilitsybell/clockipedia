@@ -1,18 +1,16 @@
-console.log("load-character updated 7/30/2026 1:10PM");
+console.log("load-character updated 7/30/2026 12:52PM");
 console.log("Character ID:", characterID);
-const teamColors = {
 
+let characters = {};
+
+const teamColors = {
     "Townsfolk":"blue",
     "Outsiders":"blue",
-
     "Minions":"red",
     "Demons":"red",
-
     "Travellers":"traveller",
-
     "Loric":"gold",
     "Fabled":"green"
-
 };
 document.addEventListener("DOMContentLoaded", async () => {
 
