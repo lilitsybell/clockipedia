@@ -42,7 +42,7 @@ serif;
 
     height:100vh;
 
-    background:white;
+    background:var(--mint);
 
     border-right:none;
 
@@ -146,7 +146,7 @@ serif;
 
 .nav-link.active {
 
-    background:white;
+    background:var(--mint);
 
     color:var(--black);
 
@@ -253,7 +253,7 @@ serif;
 
     margin:40px auto;
 
-    background:white;
+    background:var(--mint);
 
     border-radius:18px;
 
@@ -314,7 +314,7 @@ serif;
 
     background:var(--blue);
 
-    color:white;
+    color:var(--mint);
 
     padding:12px 25px;
 
