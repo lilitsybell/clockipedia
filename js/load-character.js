@@ -1,4 +1,18 @@
 console.log("Character ID:", characterID);
+const teamColors = {
+
+    "Townsfolk":"blue",
+    "Outsiders":"blue",
+
+    "Minions":"red",
+    "Demons":"red",
+
+    "Travellers":"purple",
+
+    "Loric":"gold",
+    "Fabled":"green"
+
+};
 document.addEventListener("DOMContentLoaded", async () => {
 
     try {
