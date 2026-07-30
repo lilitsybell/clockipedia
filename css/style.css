@@ -565,6 +565,33 @@ font-size:22px;
     );
 }
 
+.wiki.blue h2{
+    color:#0883bd;
+}
+
+.wiki.red h2{
+    color:#a41618;
+}
+
+.wiki.gold h2{
+    color:#b77102;
+}
+
+.wiki.green h2{
+    color:#8ea742;
+}
+
+.wiki.traveller h2{
+    background:linear-gradient(
+        0deg,
+        #2f6fc4 50%,
+        #b52323 50%
+    );
+    -webkit-background-clip:text;
+    background-clip:text;
+    color:transparent;
+}
+
 .character-link.default{
 
     color:#7851A9;
