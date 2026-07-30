@@ -559,23 +559,23 @@ font-size:22px;
     border-color:#8ea742;
 }
 
-h1.blue{
+h1.blue, h2.blue, h3.blue{
     color:#0883bd;
 }
 
-h1.red{
+h1.red, h2.red, h3.red{
     color:#a41618;
 }
 
-h1.purple{
+h1.purple, h2.purple, h3.purple{
     color:#7851A9;
 }
 
-h1.gold{
+h1.gold, h2.gold, h3.gold{
     color:#b77102;
 }
 
-h1.green{
+h1.green, h2.green, h3.green{
     color:#8ea742;
 }
 
@@ -652,4 +652,8 @@ h1.green{
 
     margin:18px 0;
 
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: "Segoe UI", Arial, sans-serif;
 }
