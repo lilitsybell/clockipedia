@@ -83,11 +83,8 @@ item.innerHTML = `
 
     <img src="${character.image}" class="search-icon">
 
-    <div>
+    <div class="search-text">
         <strong>${character.name}</strong>
-
-        <br>
-
         <small>${singularTeams[character.team] || character.team}</small>
     </div>
 
