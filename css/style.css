@@ -531,3 +531,23 @@ line-height:1.5;
 .character-link.green{
     color:#8ea742;
 }
+
+.content.blue{
+    border-color:#0883bd;
+}
+
+.content.red{
+    border-color:#a41618;
+}
+
+.content.purple{
+    border-color:#7851A9;
+}
+
+.content.gold{
+    border-color:#b77102;
+}
+
+.content.green{
+    border-color:#8ea742;
+}
