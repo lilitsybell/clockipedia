@@ -109,7 +109,6 @@ Contact
 
 `;
 
-
     // Highlight current page
 
     const currentPage = window.location.pathname;
@@ -122,4 +121,13 @@ Contact
 
     });
 
+const characterToggle = document.querySelector(".character-toggle");
+const characterMenu = document.querySelector(".character-menu");
+
+characterToggle.addEventListener("click", () => {
+
+    characterMenu.classList.toggle("open");
+
+});
+    
 });
