@@ -807,6 +807,30 @@ h1.green, h2.green, h3.green{
 
 }
 
+
+/* Team colored examples */
+
+.wiki.red .example{
+    border-left-color:#a41618;
+}
+
+.wiki.gold .example{
+    border-left-color:#b77102;
+}
+
+.wiki.green .example{
+    border-left-color:#8ea742;
+}
+
+.wiki.traveller .example{
+    border-left:5px solid;
+    border-image:linear-gradient(
+        0deg,
+        #2f6fc4 50%,
+        #b52323 50%
+    ) 1;
+}
+
 h1, h2, h3, h4, h5, h6 {
     font-family: "Segoe UI", Arial, sans-serif;
 }
