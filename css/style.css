@@ -1,40 +1,209 @@
 :root {
 
-    --mint: #F3F7F0;
-    --black: #0D1821;
+--mint:#F3F7F0;
+--black:#0D1821;
 
-    --blue: #0883BD;
-    --red: #A41618;
-    --lime: #8EA742;
-    --copper: #B77102;
+--blue:#0883BD;
+--red:#A41618;
+--lime:#8EA742;
+--copper:#B77102;
 
 }
 
 
 body {
 
-    margin:0;
+margin:0;
 
-    background:var(--mint);
+background:var(--mint);
 
-    color:var(--black);
+color:var(--black);
 
-    font-family:
-    "Cormorant Garamond",
-    serif;
+font-family:
+"Cormorant Garamond",
+serif;
 
 }
 
 
-/* TOP LOGO */
+/* SIDEBAR */
 
-.logo-header {
+#sidebar {
 
-    width:100%;
+position:fixed;
 
-    text-align:center;
+left:0;
+top:0;
 
-    padding:20px 0;
+width:300px;
+
+height:100vh;
+
+background:#ffffff;
+
+padding:30px;
+
+box-sizing:border-box;
+
+border-right:2px solid #ddd;
+
+overflow-y:auto;
+
+}
+
+
+
+/* LOGO */
+
+.logo {
+
+text-align:center;
+
+margin-bottom:25px;
+
+}
+
+
+.logo img {
+
+width:220px;
+
+}
+
+
+
+/* SEARCH */
+
+.search-box input {
+
+width:100%;
+
+padding:12px;
+
+box-sizing:border-box;
+
+border-radius:12px;
+
+border:2px solid var(--blue);
+
+font-size:16px;
+
+}
+
+
+
+/* NAV */
+
+nav {
+
+margin-top:25px;
+
+}
+
+
+nav a {
+
+display:block;
+
+padding:10px;
+
+margin:5px 0;
+
+text-decoration:none;
+
+color:var(--black);
+
+font-size:18px;
+
+border-radius:8px;
+
+}
+
+
+
+nav a:hover {
+
+background:#e7f3f8;
+
+}
+
+
+
+nav h3 {
+
+color:var(--red);
+
+font-size:20px;
+
+margin-top:25px;
+
+margin-bottom:8px;
+
+}
+
+
+
+/* MAIN */
+
+#content {
+
+margin-left:300px;
+
+padding:40px;
+
+}
+
+
+
+/* PAGE CARD */
+
+.page-card {
+
+max-width:1000px;
+
+margin:auto;
+
+background:white;
+
+border-radius:18px;
+
+overflow:hidden;
+
+box-shadow:0 3px 10px rgba(0,0,0,.1);
+
+}
+
+
+
+/* TITLE */
+
+.page-title {
+
+background:var(--blue);
+
+color:white;
+
+font-size:32px;
+
+font-weight:bold;
+
+text-align:center;
+
+padding:25px;
+
+}
+
+
+
+/* CONTENT */
+
+.page-body {
+
+padding:30px;
+
+font-size:20px;
+
+}    padding:20px 0;
 
 }
 
