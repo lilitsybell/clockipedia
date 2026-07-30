@@ -520,15 +520,16 @@ font-size:22px;
 
 .character-header {
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
     align-items: center;
+    gap: 60px;
     margin-bottom: 30px;
     background: none;
 }
 
 
 .character-title {
-    flex: 1;
+    width: 500px;
 }
 
 
@@ -536,7 +537,6 @@ font-size:22px;
     width: 180px;
     height: 180px;
     object-fit: contain;
-    margin-left: 40px;
 }
 
 
@@ -556,7 +556,7 @@ font-size:22px;
 
 .character-ability {
     font-size: 22px;
-    font-style: italic;
+    font-style: normal;
     line-height: 1.5;
     max-width: 650px;
     margin-top: 20px;
