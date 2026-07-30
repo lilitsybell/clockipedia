@@ -93,11 +93,11 @@ item.innerHTML = `
 `;
 
 
-            item.onclick = () => {
+item.onclick = () => {
 
-                window.location.href = "/characters/" + character.id + ".html";
+    window.location.href = "/character.html?id=" + character.id;
 
-            };
+};
 
 
             searchResults.appendChild(item);
@@ -119,9 +119,9 @@ item.innerHTML = `
             character.name.toLowerCase().includes(searchBox.value.toLowerCase())
         )[0];
 
-        if(first){
-            window.location.href = "/characters/" + first.id + ".html";
-        }
+if(first){
+    window.location.href = "/character.html?id=" + first.id;
+}
 
     }
 
