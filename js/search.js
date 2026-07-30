@@ -100,6 +100,22 @@ document.addEventListener("DOMContentLoaded", async () => {
 
     });
 
+    searchBox.addEventListener("keydown", (event)=>{
+
+    if(event.key === "Enter"){
+
+        const first = searchCharacters.filter(character =>
+            character.name.toLowerCase().includes(searchBox.value.toLowerCase())
+        )[0];
+
+        if(first){
+            window.location.href = "/characters/" + first.id + ".html";
+        }
+
+    }
+
+});
+
 
 
     // Hide when clicking elsewhere
