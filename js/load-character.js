@@ -182,3 +182,22 @@ function showPage(index){
     pages[index].classList.add("active");
 
 }
+
+function formatCharacters(text){
+
+    return text.replace(/\[(.*?)\]/g, (_, character) => {
+
+        const slug = character
+            .toLowerCase()
+            .replace(/[’']/g, "")
+            .replace(/[^a-z0-9]+/g, "-")
+            .replace(/^-|-$/g, "");
+
+        const team = teamColors[character] || "default";
+
+        return `<a href="../characters/${slug}.html" class="character-link ${team}">
+                    ${character}
+                </a>`;
+    });
+
+}
