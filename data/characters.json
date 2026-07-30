@@ -5,7 +5,8 @@
     "name": "Example",
     "team": "Townsfolk",
     "image": "https://images.klutzbanana.com/characters_official/acrobat_g.png",
-    "ability": "AbilityText",
+    "ability": "Ability",
+    "flavor": "Flavor",
     "purpose": "Purpose",
     "summary": [
              "Summary1",
@@ -82,6 +83,7 @@
     "team": "Townsfolk",
     "image": "https://images.klutzbanana.com/characters_official/alchemist_g.png",
     "ability": "You have a Minion ability. When using this, the Storyteller may prompt you to choose differently.",
+    "flavor": "Visit the interior of the Earth. By rectification thou shalt find the hidden stone. Above the gold, lieth the red. Kether in Malkuth.",
     "purpose": "The [Alchemist] has a Minion ability. In general, Minion abilities are much more powerful than normal Townsfolk abilities.",
     "summary": [
              "The Storyteller chooses which Minion ability the [Alchemist] has.",
@@ -101,21 +103,10 @@
                 "[Xaan]: Add or subtract any number of Outsiders."
                 ],
            "Anytime": [
-                "Thing1",
-                "Thing2"
+                "Any time the Minion who has the same ability as the [Alchemist] would act, the [Alchemist] acts. This includes announcements, passive abilities, and active abilities."
                 ],
            "First Night": [
                 "During the first night, the Storyteller wakes the [Alchemist] and tells them which Minion ability they have."
-                ],
-           "Every Night": [
-                "If the [Alchemist] has an ability that would act this night, they act right before the normal Minion step."
-                ],
-           "First Day": [
-                "If the [Alchemist] has an ability that requires the Storyteller to make an announcement, the announcement is made."
-                ],
-           "Every Day": [
-                "If the [Alchemist] has an ability that works during the day, it works when it normally would.",
-                "If there is a Minion with the same ability and the abilities would act at the same time, the Storyteller arbitrarily decides who goes first each day."
                 ],
            "End of Game": [
                 "The [Alchemist] is revealed as the [Alchemist], not as the Minion ability they have.",
