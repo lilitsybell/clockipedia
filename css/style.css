@@ -12,6 +12,13 @@
 
 }
 
+html, body {
+    overscroll-behavior: none;
+}
+
+html {
+    height:100%;
+}
 
 body {
 
@@ -22,6 +29,9 @@ background:var(--mint);
 color:var(--black);
 
 font-family:'Heebo', Arial, Helvetica, sans-serif;
+
+    min-height:100%;
+    overscroll-behavior:none;
 
 }
 
