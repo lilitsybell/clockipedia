@@ -49,11 +49,15 @@ Random Script Generator
 </div>
 
 
-<div class="nav-section">
+<div class="nav-section character-menu">
 
-<div class="nav-title">
+<div class="nav-title character-toggle">
 Characters
+<span class="arrow">▼</span>
 </div>
+
+
+<div class="character-links">
 
 <a href="/characters/townsfolk.html" class="nav-link">
 Townsfolk
@@ -82,6 +86,8 @@ Loric
 <a href="/characters/fabled.html" class="nav-link">
 Fabled
 </a>
+
+</div>
 
 </div>
 
