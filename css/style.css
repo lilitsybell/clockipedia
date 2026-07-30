@@ -30,7 +30,6 @@ font-family:'Heebo', Arial, Helvetica, sans-serif;
    SIDEBAR
 ========================= */
 
-
 #sidebar {
 
     position:fixed;
@@ -51,6 +50,8 @@ font-family:'Heebo', Arial, Helvetica, sans-serif;
     box-sizing:border-box;
 
     overflow-y:auto;
+
+    overscroll-behavior:contain;
 
     font-family: "Heebo", sans-serif;
 
