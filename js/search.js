@@ -1,10 +1,7 @@
-console.log("SEARCH SCRIPT LOADED");
-
 async function loadSearch(){
 
     const searchBox = document.getElementById("searchBox");
     const searchResults = document.getElementById("searchResults");
-    console.log("Search elements:", searchBox, searchResults);
 
     if (!searchBox || !searchResults) return;
 
