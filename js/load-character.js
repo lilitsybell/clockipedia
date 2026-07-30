@@ -101,7 +101,7 @@ console.log("Color class:", teamColors[character.team]);
                     </div>
 
 
-                    <h1>Purpose</h1>
+                    <h2>Purpose</h2>
 
                     <p>${character.purpose || ""}</p>
 
