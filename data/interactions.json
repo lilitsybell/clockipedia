@@ -1,1 +1,15 @@
+[
+    {
+        "text":"The [Djinn] rule states if the [Investigator] is in play, the [Vizier] does not get announced.",
+        "math":"green",
+        "reason":"The Djinn prevents the Vizier from being announced when the Investigator is in play.",
+        "math-info":"The Mathematician registers this as normal because the Vizier is behaving exactly as intended by the Djinn."
+    },
 
+    {
+        "text":"The [Recluse] might misregister as a Minion to the [Investigator].",
+        "math":"red",
+        "reason":"The Recluse can register as evil and as a Minion, causing the Investigator to receive false information.",
+        "math-info":"The Mathematician registers this as abnormal because the Investigator is receiving incorrect information."
+    }
+]
