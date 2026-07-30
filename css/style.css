@@ -1,1 +1,155 @@
+:root {
 
+    --mint: #F3F7F0;
+    --black: #0D1821;
+
+    --blue: #0883BD;
+    --red: #A41618;
+    --lime: #8EA742;
+    --copper: #B77102;
+
+}
+
+
+body {
+
+    margin:0;
+
+    background:var(--mint);
+
+    color:var(--black);
+
+    font-family:
+    "Cormorant Garamond",
+    serif;
+
+}
+
+
+/* TOP LOGO */
+
+.logo-header {
+
+    width:100%;
+
+    text-align:center;
+
+    padding:20px 0;
+
+}
+
+
+.logo-header img {
+
+    max-width:500px;
+
+}
+
+
+
+/* SIDEBAR */
+
+#sidebar {
+
+    position:fixed;
+
+    left:0;
+
+    top:0;
+
+    width:260px;
+
+    height:100vh;
+
+    background:white;
+
+    border-right:3px solid var(--blue);
+
+    padding:20px;
+
+    box-sizing:border-box;
+
+    overflow-y:auto;
+
+}
+
+
+/* MAIN CONTENT */
+
+#content {
+
+    margin-left:260px;
+
+    padding:30px;
+
+}
+
+
+
+/* SEARCH */
+
+.search-box input {
+
+    width:100%;
+
+    padding:10px;
+
+    border:2px solid var(--blue);
+
+    border-radius:8px;
+
+    font-size:16px;
+
+}
+
+
+
+/* NAVIGATION */
+
+.nav-link {
+
+    display:block;
+
+    padding:8px 10px;
+
+    margin:3px 0;
+
+    text-decoration:none;
+
+    color:var(--black);
+
+    border-radius:6px;
+
+}
+
+
+.nav-link:hover {
+
+    background:var(--lime);
+
+    color:white;
+
+}
+
+
+.nav-link.active {
+
+    background:var(--blue);
+
+    color:white;
+
+}
+
+
+
+.nav-title {
+
+    font-weight:bold;
+
+    margin-top:20px;
+
+    color:var(--red);
+
+    font-size:20px;
+
+}
