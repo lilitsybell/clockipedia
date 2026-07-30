@@ -38,6 +38,7 @@ font-family:'Roboto', Arial, Helvetica, sans-serif;
 
     min-height:100%;
     overscroll-behavior:none;
+    font-weight: 400;
 
 }
 
@@ -70,6 +71,8 @@ font-family:'Roboto', Arial, Helvetica, sans-serif;
     overscroll-behavior-y: contain;
 
     font-family: "Roboto", sans-serif;
+
+    font-weight: 400;
 
 }
 
@@ -122,6 +125,8 @@ font-family:'Roboto', Arial, Helvetica, sans-serif;
     box-sizing:border-box;
 
     font-family:"Roboto", sans-serif;
+
+    font-weight: 400;
 
 }
 
