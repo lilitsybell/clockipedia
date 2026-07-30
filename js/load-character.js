@@ -1,4 +1,4 @@
-console.log("load-character updated 7/30/2026 12:33PM");
+console.log("load-character updated 7/30/2026 12:52PM");
 console.log("Character ID:", characterID);
 const teamColors = {
 
@@ -131,22 +131,30 @@ document.addEventListener("DOMContentLoaded", async () => {
 </div>
 
 
-                <div class="page">
+<div class="page">
 
-                    <h2>Examples</h2>
+    <h2>Written Examples</h2>
 
-                    ${(character.examples || [])
-                        .map(item => `<div class="example">${item}</div>`)
-                        .join("")}
+    ${(character.examples || [])
+        .map(item => `
+            <div class="example">
+                ${item}
+            </div>
+        `)
+        .join("")}
 
-                </div>
+</div>
 
 
             </div>
 
         </div>
-
         `;
+
+
+        document.querySelectorAll(".page").forEach(page => {
+            page.innerHTML = formatCharacters(page.innerHTML);
+        });
 
 
     } catch(error) {
