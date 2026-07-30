@@ -2,7 +2,7 @@
 @font-face {
     font-family: "Droid Sans";
     src: url("/fonts/DroidSans.tff") format("tff");
-    font-weight: 700;
+    font-weight: 400;
 }
 
 :root {
