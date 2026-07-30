@@ -232,6 +232,20 @@ serif;
 
 }
 
+/* MAIN CONTENT */
+
+#content {
+
+    margin-left:260px;
+
+    padding:40px;
+
+    min-height:100vh;
+
+    box-sizing:border-box;
+
+}
+
 /* HOMEPAGE STUFF */
 .home-hero {
 
