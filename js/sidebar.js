@@ -8,13 +8,21 @@ document.addEventListener("DOMContentLoaded", () => {
             <img src="/images/clockipedia-logo.png">
         </div>
 
+<div class="search-box">
 
-        <div class="search-box">
-            <input 
-                type="text"
-                placeholder="Search for a character..."
-            >
-        </div>
+    <input
+        type="text"
+        id="searchBox"
+        placeholder="Search for a character..."
+        autocomplete="off"
+    >
+
+    <div
+        id="searchResults"
+        class="search-results">
+    </div>
+
+</div>
 
 
         <nav class="sidebar-nav">
