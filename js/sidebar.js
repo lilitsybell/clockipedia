@@ -1,6 +1,7 @@
 document.addEventListener("DOMContentLoaded", () => {
 
     const sidebar = document.getElementById("sidebar");
+    console.log(sidebar);
 
 sidebar.innerHTML = `
 
