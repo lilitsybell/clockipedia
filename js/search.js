@@ -9,20 +9,27 @@ document.addEventListener("DOMContentLoaded", async () => {
     let characters = [];
 
 
-    // Load character data
-    try {
-
-        const response = await fetch("/data/characters.json");
-
-        characters = await response.json();
-
-    } catch (error) {
-
-        console.error("Could not load characters:", error);
-
-    }
+// Load character data
+let characters = [];
 
 
+// Load character data
+try {
+
+    const response = await fetch("/data/characters.json");
+
+    const data = await response.json();
+
+    characters = Object.entries(data).map(([id, character]) => ({
+        id,
+        ...character
+    }));
+
+} catch (error) {
+
+    console.error("Could not load characters:", error);
+
+}
 
     searchBox.addEventListener("input", () => {
 
@@ -79,7 +86,7 @@ document.addEventListener("DOMContentLoaded", async () => {
 
             item.onclick = () => {
 
-                window.location.href = character.page;
+                window.location.href = "/characters/" + character.id + ".html";
 
             };
 
