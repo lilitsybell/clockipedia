@@ -365,9 +365,3 @@ document.getElementById("char3").selectedIndex = 0;
     };
 
 }
-<body>
-<div id="sidebar"></div>
-<div id="character"></div>
-<script src="../js/search.js"></script>
-<script src="../js/sidebar.js"></script>
-</body>
