@@ -51,6 +51,55 @@ overflow-y:auto;
 
 }
 
+/* Sidebar category titles */
+
+.nav-title {
+    cursor: pointer;
+    font-family: "Special Elite", cursive;
+    font-size: 18px;
+    padding: 12px 15px;
+    transition: background .2s ease;
+}
+
+
+.nav-title:hover {
+    background: rgba(106,86,151,.15);
+}
+
+
+/* Character dropdown */
+
+.character-links {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height .35s ease;
+}
+
+
+.character-links .nav-link {
+    padding-left: 35px;
+    font-size: 15px;
+}
+
+
+/* Open state */
+
+.character-menu.open .character-links {
+    max-height: 500px;
+}
+
+
+.arrow {
+    float: right;
+    font-size: 12px;
+    transition: transform .3s ease;
+}
+
+
+.character-menu.open .arrow {
+    transform: rotate(180deg);
+}
+
 
 
 /* LOGO */
