@@ -165,10 +165,6 @@ document.addEventListener("DOMContentLoaded", async()=>{
 
 });
 
-function setupEvents(){
-
-}
-
 function buildPage(){
 
 
