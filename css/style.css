@@ -24,7 +24,7 @@ body {
 
 margin:0;
 
-background:var(--mint);
+background:white;
 
 color:var(--black);
 
@@ -51,7 +51,7 @@ font-family:'Heebo', Arial, Helvetica, sans-serif;
 
     height:100vh;
 
-    background:var(--mint);
+    background:white;
 
     border-right:none;
 
@@ -210,7 +210,7 @@ font-family:'Heebo', Arial, Helvetica, sans-serif;
 
 .nav-link.active {
 
-    background:var(--mint);
+    background:white;
 
     color:var(--black);
 
@@ -317,7 +317,7 @@ font-family:'Heebo', Arial, Helvetica, sans-serif;
 
     margin:40px auto;
 
-    background:var(--mint);
+    background:white;
 
     border-radius:18px;
 
@@ -378,7 +378,7 @@ font-family:'Heebo', Arial, Helvetica, sans-serif;
 
     background:var(--blue);
 
-    color:var(--mint);
+    color:white;
 
     padding:12px 25px;
 
@@ -458,7 +458,7 @@ margin-top:30px;
 
 padding:25px;
 
-background:var(--mint);
+background:white;
 
 border-radius:12px;
 
