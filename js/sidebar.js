@@ -95,13 +95,13 @@ document.addEventListener("DOMContentLoaded", () => {
 
     const currentPage = window.location.pathname;
 
-    document.querySelectorAll(".nav-link").forEach(link => {
+document.querySelectorAll("a.nav-link").forEach(link => {
 
-        if(link.href.includes(currentPage)) {
-            link.classList.add("active");
-        }
+    if(link.href.includes(currentPage)) {
+        link.classList.add("active");
+    }
 
-    });
+});
 
 
 
