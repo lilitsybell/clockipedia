@@ -1,3 +1,5 @@
+console.log("SEARCH SCRIPT LOADED");
+
 async function loadSearch(){
 
     const searchBox = document.getElementById("searchBox");
