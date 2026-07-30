@@ -1,8 +1,10 @@
+console.log("Character ID:", characterID);
 document.addEventListener("DOMContentLoaded", async () => {
 
     try {
 
         const response = await fetch("../data/characters.json");
+        console.log("Characters loaded:", characters);
 
         const characters = await response.json();
 
