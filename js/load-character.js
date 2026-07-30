@@ -42,7 +42,7 @@ document.addEventListener("DOMContentLoaded", async () => {
 
         <div class="wiki">
 
-<div class="character-header">
+<div class="character-header" style="border:5px solid red;">
 
     <img src="${character.image}">
 
