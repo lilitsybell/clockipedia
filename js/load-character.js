@@ -1,7 +1,23 @@
-console.log("load-character updated 7/30/2026 2:10PM");
+console.log("load-character updated 7/30/2026 5:35PM");
 console.log("Character ID:", characterID);
 
 let characters = {};
+
+function singularTeam(team){
+
+    const singular = {
+        "Townsfolk": "Townsfolk",
+        "Outsiders": "Outsider",
+        "Minions": "Minion",
+        "Demons": "Demon",
+        "Travellers": "Traveller",
+        "Loric": "Loric",
+        "Fabled": "Fabled"
+    };
+
+    return singular[team] || team;
+
+}
 
 const teamColors = {
 
@@ -91,9 +107,9 @@ console.log("Color class:", teamColors[character.team]);
 
         <h1 class="${teamColors[character.team]}">
             ${character.name}
-            <span class="character-team">
-                (${character.team})
-            </span>
+<span class="character-team">
+    (${singularTeam(character.team)})
+</span>
         </h1>
 
         <p class="character-ability">
