@@ -38,9 +38,9 @@ document.addEventListener("DOMContentLoaded", () => {
 
             <div class="character-section">
 
-                <div class="nav-link character-toggle">
-                    Characters
-                    <span class="arrow">▼</span>
+                <div class="character-toggle">
+                Characters
+                <span class="arrow">▼</span>
                 </div>
 
 
