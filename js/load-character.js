@@ -6,7 +6,6 @@ let characters = {};
 const teamColors = {
 
     "Townsfolk":"blue",
-    "Townsfolk":"blue",
 
     "Outsider":"blue",
     "Outsiders":"blue",
@@ -22,6 +21,20 @@ const teamColors = {
 
     "Loric":"gold",
     "Fabled":"green"
+
+};
+
+const slugExceptions = {
+
+    "Organ Grinder": "organgrinder",
+    "Lil’ Monsta": "lilmonsta",
+    "Lil' Monsta": "lilmonsta",
+    "Al-Hadikhia": "alhadikhia",
+    "Pit-Hag": "pithag",
+    "Devil’s Advocate": "devilsadvocate",
+    "Devil's Advocate": "devilsadvocate",
+    "Hell’s Librarian": "hellslibrarian",
+    "Hell's Librarian": "hellslibrarian"
 
 };
 
@@ -198,11 +211,11 @@ function formatCharacters(text){
 
     return text.replace(/\[(.*?)\]/g, (_, character) => {
 
-        const slug = character
-            .toLowerCase()
-            .replace(/[’']/g, "")
-            .replace(/[^a-z0-9]+/g, "-")
-            .replace(/^-|-$/g, "");
+const slug = slugExceptions[character] || character
+    .toLowerCase()
+    .replace(/[’']/g, "")
+    .replace(/[^a-z0-9]+/g, "-")
+    .replace(/^-|-$/g, "");
 
 
         const linkedCharacter = characters[slug];
