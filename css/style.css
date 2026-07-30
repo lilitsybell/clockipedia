@@ -165,6 +165,21 @@ font-family:'Heebo', Arial, Helvetica, sans-serif;
 
 }
 
+.search-text {
+    display:flex;
+    flex-direction:column;
+    line-height:1.1;
+}
+
+.search-text strong {
+    font-size:16px;
+}
+
+.search-text small {
+    font-size:13px;
+    margin-top:2px;
+}
+
 
 /* LINKS */
 
