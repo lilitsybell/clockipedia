@@ -1,91 +1,60 @@
 document.addEventListener("DOMContentLoaded", () => {
 
-const sidebar = document.getElementById("sidebar");
+    const sidebar = document.getElementById("sidebar");
 
-sidebar.innerHTML = `
+    sidebar.innerHTML = `
 
-<div class="logo">
+        <div class="logo">
 
-<img src="https://betterbotcwiki.weebly.com/uploads/1/4/0/2/140233688/better-botc-wiki-by-bell.png">
+            <img src="https://betterbotcwiki.weebly.com/uploads/1/4/0/2/140233688/better-botc-wiki-by-bell.png">
 
-</div>
-
-
-<div class="search-box">
-
-<input 
-type="text"
-placeholder="Search for a character..."
->
-
-</div>
+        </div>
 
 
-<nav>
+        <div class="search-box">
+
+            <input 
+                type="text"
+                placeholder="Search for a character..."
+            >
+
+        </div>
 
 
-<a href="/index.html">
-Home
-</a>
+        <nav>
 
-
-<h3>Tools</h3>
-
-<a href="/tools/interaction-finder.html">
-Interaction Finder
-</a>
-
-<a href="/tools/script-generator.html">
-Random Script Generator
-</a>
-
-
-<h3>Characters</h3>
-
-<a href="/characters/townsfolk.html">
-Townsfolk
-</a>
-
-<a href="/characters/outsiders.html">
-Outsiders
-</a>
-
-<a href="/characters/minions.html">
-Minions
-</a>
-
-<a href="/characters/demons.html">
-Demons
-</a>
-
-<a href="/characters/travellers.html">
-Travellers
-</a>
-
-<a href="/characters/loric.html">
-Loric
-</a>
-
-<a href="/characters/fabled.html">
-Fabled
-</a>
-
-
-<h3>Other</h3>
-
-<a href="/contact.html">
-Contact
-</a>
-
-
-</nav>
-
-`;
-
-});
 
             <div class="nav-section">
-                <div class="nav-title">Characters</div>
+
+                <a href="/index.html" class="nav-link">
+                    Home
+                </a>
+
+            </div>
+
+
+            <div class="nav-section">
+
+                <div class="nav-title">
+                    Tools
+                </div>
+
+                <a href="/tools/interaction-finder.html" class="nav-link">
+                    Interaction Finder
+                </a>
+
+                <a href="/tools/script-generator.html" class="nav-link">
+                    Random Script Generator
+                </a>
+
+            </div>
+
+
+            <div class="nav-section">
+
+                <div class="nav-title">
+                    Characters
+                </div>
 
                 <a href="/characters/townsfolk.html" class="nav-link">
                     Townsfolk
@@ -120,11 +89,16 @@ Contact
 
             <div class="nav-section">
 
+                <div class="nav-title">
+                    Other
+                </div>
+
                 <a href="/contact.html" class="nav-link">
                     Contact
                 </a>
 
             </div>
+
 
         </nav>
 
@@ -133,9 +107,11 @@ Contact
 
     // Highlight current page
 
+    const currentPage = window.location.pathname;
+
     document.querySelectorAll(".nav-link").forEach(link => {
 
-        if (link.href.includes(currentPage)) {
+        if (link.pathname === currentPage) {
             link.classList.add("active");
         }
 
