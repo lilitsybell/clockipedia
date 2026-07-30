@@ -110,7 +110,7 @@ Contact
 
     document.querySelectorAll(".nav-link").forEach(link => {
 
-        if (link.pathname === currentPage) {
+        if (link.href.includes(currentPage)) {
             link.classList.add("active");
         }
 
