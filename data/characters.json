@@ -1,1 +1,1083 @@
 
+{
+    "acrobat": {
+        "name": "Acrobat",
+        "team": "Townsfolk",
+        "image": "https://images.klutzbanana.com/characters_official/acrobat_g.png",
+        "ability": "Each night*, choose a player: if they are or become drunk or poisoned tonight, you die."
+    },
+    "alchemist": {
+        "name": "Alchemist",
+        "team": "Townsfolk",
+        "image": "https://images.klutzbanana.com/characters_official/alchemist_g.png",
+        "ability": "You have a Minion ability. When using this, the Storyteller may prompt you to choose differently."
+    },
+    "alsaahir": {
+        "name": "Alsaahir",
+        "team": "Townsfolk",
+        "image": "https://images.klutzbanana.com/characters_official/alsaahir_g.png",
+        "ability": "Each day, if you publicly guess which players are Minion(s) and which are Demon(s), good wins."
+    },
+      "amnesiac": {
+        "name": "Amnesiac",
+        "team": "Townsfolk",
+        "image": "https://images.klutzbanana.com/characters_official/amnesiac_g.png",
+        "ability": "You do not know what your ability is. Each day, privately guess what it is: you learn how accurate you are."
+    },
+      "artist": {
+        "name": "Artist",
+        "team": "Townsfolk",
+        "image": "https://images.klutzbanana.com/characters_official/artist_g.png",
+        "ability": "Once per game, during the day, privately ask the Storyteller any yes/no question."
+    },
+      "atheist": {
+        "name": "Atheist",
+        "team": "Townsfolk",
+        "image": "https://images.klutzbanana.com/characters_official/atheist_g.png",
+        "ability": "The Storyteller can break the game rules, and if executed, good wins, even if you are dead. [No evil characters]"
+    },
+      "balloonist": {
+        "name": "Balloonist",
+        "team": "Townsfolk",
+        "image": "https://images.klutzbanana.com/characters_official/balloonist_g.png",
+        "ability": "Each night, you learn a player of a different character type than last night. [+0 or +1 Outsider]"
+    },
+      "banshee": {
+        "name": "Banshee",
+        "team": "Townsfolk",
+        "image": "https://images.klutzbanana.com/characters_official/banshee_g.png",
+        "ability": "If the Demon kills you, all players learn this. From now on, you may nominate twice per day and vote twice per nomination."
+    },
+      "bountyhunter": {
+        "name": "Bounty Hunter",
+        "team": "Townsfolk",
+        "image": "https://images.klutzbanana.com/characters_official/bountyhunter_g.png",
+        "ability": "You start knowing 1 evil player. If the player you know dies, you learn another evil player tonight. [1 Townsfolk is evil]"
+    },
+      "cannibal": {
+        "name": "Cannibal",
+        "team": "Townsfolk",
+        "image": "https://images.klutzbanana.com/characters_official/cannibal_g.png",
+        "ability": "You have the ability of the recently killed executee. If they are evil, you are poisoned until a good player dies by execution."
+    },
+      "chambermaid": {
+        "name": "Chambermaid",
+        "team": "Townsfolk",
+        "image": "https://images.klutzbanana.com/characters_official/chambermaid_g.png",
+        "ability": "Each night, choose 2 alive players (not yourself): you learn how many woke tonight due to their ability."
+    },
+      "chef": {
+        "name": "Chef",
+        "team": "Townsfolk",
+        "image": "https://images.klutzbanana.com/characters_official/chef_g.png",
+        "ability": "You start knowing how many pairs of evil players there are."
+    },
+     "choirboy": {
+        "name": "Choirboy",
+        "team": "Townsfolk",
+        "image": "https://images.klutzbanana.com/characters_official/choirboy_g.png",
+        "ability": "If the Demon kills the King, you learn which player is the Demon. [+the King]"
+    },
+     "clockmaker": {
+        "name": "Clockmaker",
+        "team": "Townsfolk",
+        "image": "https://images.klutzbanana.com/characters_official/clockmaker_g.png",
+        "ability": "You start knowing how many steps from the Demon to its nearest Minion."
+    },
+     "courtier": {
+        "name": "Courtier",
+        "team": "Townsfolk",
+        "image": "https://images.klutzbanana.com/characters_official/courtier_g.png",
+        "ability": "Once per game, at night, choose a character: they are drunk for 3 nights & 3 days."
+    },
+     "cultleader": {
+        "name": "Cult Leader",
+        "team": "Townsfolk",
+        "image": "https://images.klutzbanana.com/characters_official/cultleader_g.png",
+        "ability": "Each night, you become the alignment of an alive neighbor. If all good players choose to join your cult, your team wins."
+    },
+     "dreamer": {
+        "name": "Dreamer",
+        "team": "Townsfolk",
+        "image": "https://images.klutzbanana.com/characters_official/dreamer_g.png",
+        "ability": "Each night, choose a player (not yourself or Travellers): you learn 1 good & 1 evil character, 1 of which is correct."
+    },
+    "empath": {
+        "name": "Empath",
+        "team": "Townsfolk",
+        "image": "https://images.klutzbanana.com/characters_official/empath_g.png",
+        "ability": "Each night, you learn how many of your 2 alive neighbors are evil."
+    },
+    "engineer": {
+        "name": "Engineer",
+        "team": "Townsfolk",
+        "image": "https://images.klutzbanana.com/characters_official/engineer_g.png",
+        "ability": "Once per game, at night, choose which Minions or which Demon is in play."
+    },
+    "exorcist": {
+        "name": "Exorcist",
+        "team": "Townsfolk",
+        "image": "https://images.klutzbanana.com/characters_official/exorcist_g.png",
+        "ability": "Each night*, choose a player (different to last night): the Demon, if chosen, learns who you are then doesn't wake tonight."
+    },
+    "farmer": {
+        "name": "Farmer",
+        "team": "Townsfolk",
+        "image": "https://images.klutzbanana.com/characters_official/farmer_g.png",
+        "ability": "When you die at night, an alive good player becomes a Farmer."
+    },
+        "fisherman": {
+        "name": "Fisherman",
+        "team": "Townsfolk",
+        "image": "https://images.klutzbanana.com/characters_official/fisherman_g.png",
+        "ability": "Once per game, during the day, visit the Storyteller for some advice to help your team win."
+    },
+       "flowergirl": {
+        "name": "Flowergirl",
+        "team": "Townsfolk",
+        "image": "https://images.klutzbanana.com/characters_official/flowergirl_g.png",
+        "ability": "Each night*, you learn if a Demon voted today."
+    },
+       "fool": {
+        "name": "Fool",
+        "team": "Townsfolk",
+        "image": "https://images.klutzbanana.com/characters_official/fool_g.png",
+        "ability": "The 1st time you die, you don't."
+    },
+       "fortuneteller": {
+        "name": "Fortune Teller",
+        "team": "Townsfolk",
+        "image": "https://images.klutzbanana.com/characters_official/fortuneteller_g.png",
+        "ability": "Each night, choose 2 players: you learn if either is a Demon. There is a good player that registers as a Demon to you."
+    },
+       "gambler": {
+        "name": "Gambler",
+        "team": "Townsfolk",
+        "image": "https://images.klutzbanana.com/characters_official/gambler_g.png",
+        "ability": "Each night*, choose a player & guess their character: if you guess wrong, you die."
+    },
+       "general": {
+        "name": "General",
+        "team": "Townsfolk",
+        "image": "https://images.klutzbanana.com/characters_official/general_g.png",
+        "ability": "Each night, you learn which alignment the Storyteller believes is winning: good, evil, or neither."
+    },
+         "gossip": {
+        "name": "Gossip",
+        "team": "Townsfolk",
+        "image": "https://images.klutzbanana.com/characters_official/gossip_g.png",
+        "ability": "Each day, you may make a public statement. Tonight, if it was true, a player dies."
+    },
+       "grandmother": {
+        "name": "Grandmother",
+        "team": "Townsfolk",
+        "image": "https://images.klutzbanana.com/characters_official/grandmother_g.png",
+        "ability": "You start knowing a good player & their character. If the Demon kills them, you die too."
+    },
+       "highpriestess": {
+        "name": "High Priestess",
+        "team": "Townsfolk",
+        "image": "https://images.klutzbanana.com/characters_official/highpriestess_g.png",
+        "ability": "Each night, learn which player the Storyteller believes you should talk to most."
+    },
+         "huntsman": {
+        "name": "Huntsman",
+        "team": "Townsfolk",
+        "image": "https://images.klutzbanana.com/characters_official/huntsman_g.png",
+        "ability": "Once per game, at night, choose a living player: the Damsel, if chosen, becomes a not-in-play Townsfolk. [+the Damsel]"
+    },
+      "innkeeper": {
+        "name": "Innkeeper",
+        "team": "Townsfolk",
+        "image": "https://images.klutzbanana.com/characters_official/innkeeper_g.png",
+        "ability": "Each night*, choose 2 players: they can't die tonight, but 1 is drunk until dusk."
+    },
+      "investigator": {
+        "name": "Investigator",
+        "team": "Townsfolk",
+        "image": "https://images.klutzbanana.com/characters_official/investigator_g.png",
+        "ability": "You start knowing that 1 of 2 players is a particular Minion."
+    },
+       "juggler": {
+        "name": "Juggler",
+        "team": "Townsfolk",
+        "image": "https://images.klutzbanana.com/characters_official/juggler_g.png",
+        "ability": "On your 1st day, publicly guess up to 5 players' characters. That night, you learn how many you got correct."
+    },
+       "king": {
+        "name": "King",
+        "team": "Townsfolk",
+        "image": "https://images.klutzbanana.com/characters_official/king_g.png",
+        "ability": "Each night, if the dead equal or outnumber the living, you learn 1 alive character. The Demon knows you are the King."
+    },
+       "knight": {
+        "name": "Knight",
+        "team": "Townsfolk",
+        "image": "https://images.klutzbanana.com/characters_official/knight_g.png",
+        "ability": "You start knowing 2 players that are not the Demon."
+    },
+       "librarian": {
+        "name": "Librarian",
+        "team": "Townsfolk",
+        "image": "https://images.klutzbanana.com/characters_official/librarian_g.png",
+        "ability": "You start knowing that 1 of 2 players is a particular Outsider. (Or that zero are in play.)"
+    },
+       "lycanthrope": {
+        "name": "Lycanthrope",
+        "team": "Townsfolk",
+        "image": "https://images.klutzbanana.com/characters_official/lycanthrope_g.png",
+        "ability": "Each night*, choose an alive player. If good, they die & the Demon doesn’t kill tonight. One good player registers as evil."
+    },
+      "magician": {
+        "name": "Magician",
+        "team": "Townsfolk",
+        "image": "https://images.klutzbanana.com/characters_official/magician_g.png",
+        "ability": "The Demon thinks you are a Minion. Minions think you are a Demon."
+    },
+      "mathematician": {
+        "name": "Mathematician",
+        "team": "Townsfolk",
+        "image": "https://images.klutzbanana.com/characters_official/mathematician_g.png",
+        "ability": "Each night, you learn how many players’ abilities worked abnormally (since dawn) due to another character's ability."
+    },
+      "mayor": {
+        "name": "Mayor",
+        "team": "Townsfolk",
+        "image": "https://images.klutzbanana.com/characters_official/mayor_g.png",
+        "ability": "If only 3 players live & no execution occurs, your team wins. If you die at night, another player might die instead."
+    },
+      "minstrel": {
+        "name": "Minstrel",
+        "team": "Townsfolk",
+        "image": "https://images.klutzbanana.com/characters_official/minstrel_g.png",
+        "ability": "When a Minion dies by execution, all other players (except Travellers) are drunk until dusk tomorrow."
+    },
+      "monk": {
+        "name": "Monk",
+        "team": "Townsfolk",
+        "image": "https://images.klutzbanana.com/characters_official/monk_g.png",
+        "ability": "Each night*, choose a player (not yourself): they are safe from the Demon tonight."
+    },
+      "nightwatchman": {
+        "name": "Nightwatchman",
+        "team": "Townsfolk",
+        "image": "https://images.klutzbanana.com/characters_official/nightwatchman_g.png",
+        "ability": "Once per game, at night, choose a player: they learn you are the Nightwatchman."
+    },
+    "noble": {
+        "name": "Noble",
+        "team": "Townsfolk",
+        "image": "https://images.klutzbanana.com/characters_official/noble_g.png",
+        "ability": "You start knowing 3 players, 1 and only 1 of which is evil."
+    },
+    "oracle": {
+        "name": "Oracle",
+        "team": "Townsfolk",
+        "image": "https://images.klutzbanana.com/characters_official/oracle_g.png",
+        "ability": "Each night*, you learn how many dead players are evil."
+    },
+    "pacifist": {
+        "name": "Pacifist",
+        "team": "Townsfolk",
+        "image": "https://images.klutzbanana.com/characters_official/pacifist_g.png",
+        "ability": "Executed good players might not die."
+    },
+      "philosopher": {
+        "name": "Philosopher",
+        "team": "Townsfolk",
+        "image": "https://images.klutzbanana.com/characters_official/philosopher_g.png",
+        "ability": "Once per game, at night, choose a good character: gain that ability. If this character is in play, they are drunk."
+    },
+     "pixie": {
+        "name": "Pixie",
+        "team": "Townsfolk",
+        "image": "https://images.klutzbanana.com/characters_official/pixie_g.png",
+        "ability": "You start knowing 1 in-play Townsfolk. If you were mad that you were this character, you gain their ability when they die."
+    },
+     "poppygrower": {
+        "name": "Poppy Grower",
+        "team": "Townsfolk",
+        "image": "https://images.klutzbanana.com/characters_official/poppygrower_g.png",
+        "ability": "Minions & Demons do not know each other. If you die, they learn who each other are that night."
+    },
+     "preacher": {
+        "name": "Preacher",
+        "team": "Townsfolk",
+        "image": "https://images.klutzbanana.com/characters_official/preacher_g.png",
+        "ability": "Each night, choose a player: a Minion, if chosen, learns this. All chosen Minions have no ability."
+    },
+     "princess": {
+        "name": "Princess",
+        "team": "Townsfolk",
+        "image": "https://images.klutzbanana.com/characters_official/princess_g.png",
+        "ability": "On your 1st day, if you nominated & executed a player, the Demon doesn't kill tonight."
+    },
+     "professor": {
+        "name": "Professor",
+        "team": "Townsfolk",
+        "image": "https://images.klutzbanana.com/characters_official/professor_g.png",
+        "ability": "Once per game, at night*, choose a dead player: if they are a Townsfolk, they are resurrected."
+    },
+     "ravenkeeper": {
+        "name": "Ravenkeeper",
+        "team": "Townsfolk",
+        "image": "https://images.klutzbanana.com/characters_official/ravenkeeper_g.png",
+        "ability": "If you die at night, you are woken to choose a player: you learn their character."
+    },
+     "sage": {
+        "name": "Sage",
+        "team": "Townsfolk",
+        "image": "https://images.klutzbanana.com/characters_official/sage_g.png",
+        "ability": "If the Demon kills you, you learn that it is 1 of 2 players."
+    },
+      "sailor": {
+        "name": "Sailor",
+        "team": "Townsfolk",
+        "image": "https://images.klutzbanana.com/characters_official/sailor_g.png",
+        "ability": "Each night, choose an alive player: either you or they are drunk until dusk. You can't die."
+    },
+      "savant": {
+        "name": "Savant",
+        "team": "Townsfolk",
+        "image": "https://images.klutzbanana.com/characters_official/savant_g.png",
+        "ability": "Each day, you may visit the Storyteller to learn 2 things in private: 1 is true & 1 is false."
+    },
+      "seamstress": {
+        "name": "Seamstress",
+        "team": "Townsfolk",
+        "image": "https://images.klutzbanana.com/characters_official/seamstress_g.png",
+        "ability": "Once per game, at night, choose 2 players (not yourself): you learn if they are the same alignment."
+    },
+      "shugenja": {
+        "name": "Shugenja",
+        "team": "Townsfolk",
+        "image": "https://images.klutzbanana.com/characters_official/shugenja_g.png",
+        "ability": "You start knowing if your closest evil player is clockwise or anti-clockwise. If equidistant, this info is arbitrary."
+    },
+      "slayer": {
+        "name": "Slayer",
+        "team": "Townsfolk",
+        "image": "https://images.klutzbanana.com/characters_official/slayer_g.png",
+        "ability": "Once per game, during the day, publicly choose a player: if they are the Demon, they die."
+    },
+      "snakecharmer": {
+        "name": "Snake Charmer",
+        "team": "Townsfolk",
+        "image": "https://images.klutzbanana.com/characters_official/snakecharmer_g.png",
+        "ability": "Each night, choose an alive player: a chosen Demon swaps characters & alignments with you & is then poisoned."
+    },
+      "soldier": {
+        "name": "Soldier",
+        "team": "Townsfolk",
+        "image": "https://images.klutzbanana.com/characters_official/soldier_g.png",
+        "ability": "You are safe from the Demon."
+    },
+      "steward": {
+        "name": "Steward",
+        "team": "Townsfolk",
+        "image": "https://images.klutzbanana.com/characters_official/steward_g.png",
+        "ability": "You start knowing 1 good player."
+    },
+      "tealady": {
+        "name": "Tea Lady",
+        "team": "Townsfolk",
+        "image": "https://images.klutzbanana.com/characters_official/tealady_g.png",
+        "ability": "If both your alive neighbors are good, they can't die."
+    },
+      "towncrier": {
+        "name": "Town Crier",
+        "team": "Townsfolk",
+        "image": "https://images.klutzbanana.com/characters_official/towncrier_g.png",
+        "ability": "Each night*, you learn if a Minion nominated today."
+    },
+      "undertaker": {
+        "name": "Undertaker",
+        "team": "Townsfolk",
+        "image": "https://images.klutzbanana.com/characters_official/undertaker_g.png",
+        "ability": "Each night*, you learn which character died by execution today."
+    },
+      "villageidiot": {
+        "name": "Village Idiot",
+        "team": "Townsfolk",
+        "image": "https://images.klutzbanana.com/characters_official/villageidiot_g.png",
+        "ability": "Each night, choose a player: you learn their alignment. [+0 to +2 Village Idiots. 1 of the extras is drunk]"
+    },
+      "virgin": {
+        "name": "Virgin",
+        "team": "Townsfolk",
+        "image": "https://images.klutzbanana.com/characters_official/virgin_g.png",
+        "ability": "The 1st time you are nominated, if the nominator is a Townsfolk, they are executed immediately."
+    },
+      "washerwoman": {
+        "name": "Washerwoman",
+        "team": "Townsfolk",
+        "image": "https://images.klutzbanana.com/characters_official/washerwoman_g.png",
+        "ability": "You start knowing that 1 of 2 players is a particular Townsfolk."
+    },
+    "barber": {
+        "name": "Barber",
+        "team": "Outsiders",
+        "image": "https://images.klutzbanana.com/characters_official/barber_g.png",
+        "ability": "If you died today or tonight, the Demon may choose 2 players (not another Demon) to swap characters."
+    },
+    "butler": {
+        "name": "Butler",
+        "team": "Outsiders",
+        "image": "https://images.klutzbanana.com/characters_official/butler_g.png",
+        "ability": "Each night, choose a player (not yourself): tomorrow, you may only vote if they are voting too."
+    },
+    "damsel": {
+        "name": "Damsel",
+        "team": "Outsiders",
+        "image": "https://images.klutzbanana.com/characters_official/damsel_g.png",
+        "ability": "All Minions know a Damsel is in play. If a Minion publicly guesses you (once), your team loses."
+    },
+    "drunk": {
+        "name": "Drunk",
+        "team": "Outsiders",
+        "image": "https://images.klutzbanana.com/characters_official/drunk_g.png",
+        "ability": "You do not know you are the Drunk. You think you are a Townsfolk character, but you are not."
+    },
+    "golem": {
+        "name": "Golem",
+        "team": "Outsiders",
+        "image": "https://images.klutzbanana.com/characters_official/golem_g.png",
+        "ability": "You may only nominate once per game. When you do, if the nominee is not the Demon, they die."
+    },
+    "goon": {
+        "name": "Goon",
+        "team": "Outsiders",
+        "image": "https://images.klutzbanana.com/characters_official/goon_g.png",
+        "ability": "Each night, the 1st player to choose you with their ability is drunk until dusk. You become their alignment."
+    },
+    "hatter": {
+        "name": "Hatter",
+        "team": "Outsiders",
+        "image": "https://images.klutzbanana.com/characters_official/hatter_g.png",
+        "ability": "If you died today or tonight, the Minion & Demon players may choose new Minion & Demon characters to be."
+    },
+    "heretic": {
+        "name": "Heretic",
+        "team": "Outsiders",
+        "image": "https://images.klutzbanana.com/characters_official/heretic_g.png",
+        "ability": "Whoever wins, loses & whoever loses, wins, even if you are dead."
+    },
+    "hermit": {
+        "name": "Hermit",
+        "team": "Outsiders",
+        "image": "https://images.klutzbanana.com/characters_official/hermit_g.png",
+        "ability": "You have all Outsider abilities. [-0 or -1 Outsider]"
+    },
+    "klutz": {
+        "name": "Klutz",
+        "team": "Outsiders",
+        "image": "https://images.klutzbanana.com/characters_official/klutz_g.png",
+        "ability": "When you learn that you died, publicly choose 1 alive player: if they are evil, your team loses."
+    },
+      "lunatic": {
+        "name": "Lunatic",
+        "team": "Outsiders",
+        "image": "https://images.klutzbanana.com/characters_official/lunatic_g.png",
+        "ability": "You think you are a Demon, but you are not. The Demon knows who you are & who you choose at night."
+    },
+      "moonchild": {
+        "name": "Moonchild",
+        "team": "Outsiders",
+        "image": "https://images.klutzbanana.com/characters_official/moonchild_g.png",
+        "ability": "When you learn that you died, publicly choose 1 alive player. Tonight, if it was a good player, they die."
+    },
+      "mutant": {
+        "name": "Mutant",
+        "team": "Outsiders",
+        "image": "https://images.klutzbanana.com/characters_official/mutant_g.png",
+        "ability": "If you are \"mad\" about being an Outsider, you might be executed."
+    },
+      "ogre": {
+        "name": "Ogre",
+        "team": "Outsiders",
+        "image": "https://images.klutzbanana.com/characters_official/ogre_g.png",
+        "ability": "On your 1st night, choose a player (not yourself): you become their alignment (you don't know which) even if drunk or poisoned."
+    },
+     "plaguedoctor": {
+        "name": "Plague Doctor",
+        "team": "Outsiders",
+        "image": "https://images.klutzbanana.com/characters_official/plaguedoctor_g.png",
+        "ability": "When you die, the Storyteller gains a Minion ability."
+    },
+     "politician": {
+        "name": "Politician",
+        "team": "Outsiders",
+        "image": "https://images.klutzbanana.com/characters_official/politician_g.png",
+        "ability": "If you were the player most responsible for your team losing, you change alignment & win, even if dead."
+    },
+    "puzzlemaster": {
+        "name": "Puzzlemaster",
+        "team": "Outsiders",
+        "image": "https://images.klutzbanana.com/characters_official/puzzlemaster_g.png",
+        "ability": "1 player is drunk, even if you die. If you guess (once) who it is, learn the Demon player, but guess wrong & get false info."
+    },
+     "recluse": {
+        "name": "Recluse",
+        "team": "Outsiders",
+        "image": "https://images.klutzbanana.com/characters_official/recluse_g.png",
+        "ability": "You might register as evil & as a Minion or Demon, even if dead."
+    },
+     "saint": {
+        "name": "Saint",
+        "team": "Outsiders",
+        "image": "https://images.klutzbanana.com/characters_official/saint_g.png",
+        "ability": "If you die by execution, your team loses."
+    },
+     "snitch": {
+        "name": "Snitch",
+        "team": "Outsiders",
+        "image": "https://images.klutzbanana.com/characters_official/snitch_g.png",
+        "ability": "Each Minion gets 3 bluffs."
+    },
+     "sweetheart": {
+        "name": "Sweetheart",
+        "team": "Outsiders",
+        "image": "https://images.klutzbanana.com/characters_official/sweetheart_g.png",
+        "ability": "When you die, 1 player is drunk from now on."
+    },
+     "tinker": {
+        "name": "Tinker",
+        "team": "Outsiders",
+        "image": "https://images.klutzbanana.com/characters_official/tinker_g.png",
+        "ability": "You might die at any time."
+    },
+     "zealot": {
+        "name": "Zealot",
+        "team": "Outsiders",
+        "image": "https://images.klutzbanana.com/characters_official/zealot_g.png",
+        "ability": "If there are 5 or more players alive, you must vote for every nomination."
+    },
+         "assassin": {
+        "name": "Assassin",
+        "team": "Minions",
+        "image": "https://images.klutzbanana.com/characters_official/assassin_e.png",
+        "ability": "Once per game, at night*, choose a player: they die, even if for some reason they could not."
+    },
+       "baron": {
+        "name": "Baron",
+        "team": "Minions",
+        "image": "https://images.klutzbanana.com/characters_official/baron_e.png",
+        "ability": "There are extra Outsiders in play. [+2 Outsiders]"
+    },
+       "boffin": {
+        "name": "Boffin",
+        "team": "Minions",
+        "image": "https://images.klutzbanana.com/characters_official/boffin_e.png",
+        "ability": "The Demon (even if drunk or poisoned) has a not-in-play good character’s ability. You both know which."
+    },
+       "boomdandy": {
+        "name": "Boomdandy",
+        "team": "Minions",
+        "image": "https://images.klutzbanana.com/characters_official/boomdandy_e.png",
+        "ability": "If you are executed, all but 3 players die. After a 10 to 1 countdown, the player with the most players pointing at them, dies."
+    },
+       "cerenovus": {
+        "name": "Cerenovus",
+        "team": "Minions",
+        "image": "https://images.klutzbanana.com/characters_official/cerenovus_e.png",
+        "ability": "Each night, choose a player & a good character: they are \"mad\" they are this character tomorrow, or might be executed."
+    },
+       "devilsadvocate": {
+        "name": "Devil's Advocate",
+        "team": "Minions",
+        "image": "https://images.klutzbanana.com/characters_official/devilsadvocate_e.png",
+        "ability": "Each night, choose a living player (different to last night): if executed tomorrow, they don't die."
+    },
+       "eviltwin": {
+        "name": "Evil Twin",
+        "team": "Minions",
+        "image": "https://images.klutzbanana.com/characters_official/eviltwin_e.png",
+        "ability": "You & an opposing player know each other. If the good player is executed, evil wins. Good can't win if you both live."
+    },
+       "fearmonger": {
+        "name": "Fearmonger",
+        "team": "Minions",
+        "image": "https://images.klutzbanana.com/characters_official/fearmonger_e.png",
+        "ability": "Each night, choose a player: if you nominate & execute them, their team loses. All players know if you choose a new player."
+    },
+       "goblin": {
+        "name": "Goblin",
+        "team": "Minions",
+        "image": "https://images.klutzbanana.com/characters_official/goblin_e.png",
+        "ability": "If you publicly claim to be the Goblin when nominated & are executed that day, your team wins."
+    },
+       "godfather": {
+        "name": "Godfather",
+        "team": "Minions",
+        "image": "https://images.klutzbanana.com/characters_official/godfather_e.png",
+        "ability": "You start knowing which Outsiders are in play. If 1 died today, choose a player tonight: they die. [-1 or +1 Outsider]"
+    },
+       "harpy": {
+        "name": "Harpy",
+        "team": "Minions",
+        "image": "https://images.klutzbanana.com/characters_official/harpy_e.png",
+        "ability": "Each night, choose 2 players: tomorrow, the 1st player is mad that the 2nd is evil, or one or both might die."
+    },
+       "marionette": {
+        "name": "Marionette",
+        "team": "Minions",
+        "image": "https://images.klutzbanana.com/characters_official/marionette_e.png",
+        "ability": "You think you are a good character, but you are not. The Demon knows who you are. [You neighbor the Demon]"
+    },
+       "mastermind": {
+        "name": "Mastermind",
+        "team": "Minions",
+        "image": "https://images.klutzbanana.com/characters_official/mastermind_e.png",
+        "ability": "If the Demon dies by execution (ending the game), play for 1 more day. If a player is then executed, their team loses."
+    },
+       "mezepheles": {
+        "name": "Mezepheles",
+        "team": "Minions",
+        "image": "https://images.klutzbanana.com/characters_official/mezepheles_e.png",
+        "ability": "You start knowing a secret word. The 1st good player to say this word becomes evil that night."
+    },
+       "organgrinder": {
+        "name": "Organ Grinder",
+        "team": "Minions",
+        "image": "https://images.klutzbanana.com/characters_official/organgrinder_e.png",
+        "ability": "All players keep their eyes closed when voting and the vote tally is secret. Each night, choose if you are drunk until dusk."
+    },
+       "pithag": {
+        "name": "Pit-Hag",
+        "team": "Minions",
+        "image": "https://images.klutzbanana.com/characters_official/pithag_e.png",
+        "ability": "Each night*, choose a player & a character they become (if not in play). If a Demon is made, deaths tonight are arbitrary."
+    },
+       "poisoner": {
+        "name": "Poisoner",
+        "team": "Minions",
+        "image": "https://images.klutzbanana.com/characters_official/poisoner_e.png",
+        "ability": "Each night, choose a player: they are poisoned tonight and tomorrow day."
+    },
+       "psychopath": {
+        "name": "Psychopath",
+        "team": "Minions",
+        "image": "https://images.klutzbanana.com/characters_official/psychopath_e.png",
+        "ability": "Each day, before nominations, you may publicly choose a player: they die. If executed, you only die if you lose roshambo."
+    },
+       "scarletwoman": {
+        "name": "Scarlet Woman",
+        "team": "Minions",
+        "image": "https://images.klutzbanana.com/characters_official/scarletwoman_e.png",
+        "ability": "If there are 5 or more players alive & the Demon dies, you become the Demon. (Travellers don't count.)"
+    },
+       "spy": {
+        "name": "Spy",
+        "team": "Minions",
+        "image": "https://images.klutzbanana.com/characters_official/spy_e.png",
+        "ability": "Each night, you see the Grimoire. You might register as good & as a Townsfolk or Outsider, even if dead."
+    },
+       "summoner": {
+        "name": "Summoner",
+        "team": "Minions",
+        "image": "https://images.klutzbanana.com/characters_official/summoner_e.png",
+        "ability": "You get 3 bluffs. On the 3rd night, choose a player: they become an evil Demon of your choice. [No Demon]"
+    },
+       "vizier": {
+        "name": "Vizier",
+        "team": "Minions",
+        "image": "https://images.klutzbanana.com/characters_official/vizier_e.png",
+        "ability": "All players know you are the Vizier. You cannot die during the day. If good voted, you may choose to execute immediately."
+    },
+       "widow": {
+        "name": "Widow",
+        "team": "Minions",
+        "image": "https://images.klutzbanana.com/characters_official/widow_e.png",
+        "ability": "On your 1st night, look at the Grimoire & choose a player: they are poisoned. 1 good player knows a Widow is in play."
+    },
+       "witch": {
+        "name": "Witch",
+        "team": "Minions",
+        "image": "https://images.klutzbanana.com/characters_official/witch_e.png",
+        "ability": "Each night, choose a player: if they nominate tomorrow, they die. If just 3 players live, you lose this ability."
+    },
+       "wizard": {
+        "name": "Wizard",
+        "team": "Minions",
+        "image": "https://images.klutzbanana.com/characters_official/wizard_e.png",
+        "ability": "Once per game, choose to make a wish. If granted, it might have a price & leave a clue as to its nature."
+    },
+       "wraith": {
+        "name": "Wraith",
+        "team": "Minions",
+        "image": "https://images.klutzbanana.com/characters_official/wraith_e.png",
+        "ability": "You may choose to open your eyes at night. You wake when other evil players do."
+    },
+       "xaan": {
+        "name": "Xaan",
+        "team": "Minions",
+        "image": "https://images.klutzbanana.com/characters_official/xaan_e.png",
+        "ability": "On night X, all Townsfolk are poisoned until dusk. [X Outsiders]"
+    },
+      "alhadikhia": {
+        "name": "Al-Hadikhia",
+        "team": "Demons",
+        "image": "https://images.klutzbanana.com/characters_official/alhadikhia_e.png",
+        "ability": "Each night*, you may choose 3 players (all players learn who): each silently chooses to live or die, but if all live, all die."
+    },
+      "fanggu": {
+        "name": "Fang Gu",
+        "team": "Demons",
+        "image": "https://images.klutzbanana.com/characters_official/fanggu_e.png",
+        "ability": "Each night*, choose a player: they die. The 1st Outsider this kills becomes an evil Fang Gu & you die instead. [+1 Outsider]"
+    },
+      "imp": {
+        "name": "Imp",
+        "team": "Demons",
+        "image": "https://images.klutzbanana.com/characters_official/imp_e.png",
+        "ability": "Each night*, choose a player: they die. If you kill yourself this way, a Minion becomes the Imp."
+    },
+      "kazali": {
+        "name": "Kazali",
+        "team": "Demons",
+        "image": "https://images.klutzbanana.com/characters_official/kazali_e.png",
+        "ability": "Each night*, choose a player: they die. [You choose which players are which Minions. -? to +? Outsiders]"
+    },
+      "legion": {
+        "name": "Legion",
+        "team": "Demons",
+        "image": "https://images.klutzbanana.com/characters_official/legion_e.png",
+        "ability": "Each night*, a player might die. Executions fail if only evil voted. You register as a Minion too. [Most players are Legion]"
+    },
+      "leviathan": {
+        "name": "Leviathan",
+        "team": "Demons",
+        "image": "https://images.klutzbanana.com/characters_official/leviathan_e.png",
+        "ability": "If more than 1 good player is executed, evil wins. All players know you are in play. After day 5, evil wins."
+    },
+     "lilmonsta": {
+        "name": "Lil' Monsta",
+        "team": "Demons",
+        "image": "https://images.klutzbanana.com/characters_official/lilmonsta_e.png",
+        "ability": "Each night, Minions choose who babysits Lil' Monsta & \"is the Demon\". Each night*, a player might die. [+1 Minion]"
+    },
+      "lleech": {
+        "name": "Lleech",
+        "team": "Demons",
+        "image": "https://images.klutzbanana.com/characters_official/lleech_e.png",
+        "ability": "Each night*, choose a player: they die. You start by choosing a player: they are poisoned. You die if & only if they are dead."
+    },
+      "lordoftyphon": {
+        "name": "Lord of Typhon",
+        "team": "Demons",
+        "image": "https://images.klutzbanana.com/characters_official/lordoftyphon_e.png",
+        "ability": "Each night*, choose a player: they die. [Evil characters are in a line. You are in the middle. +1 Minion. -? to +? Outsiders]"
+    },
+      "nodashii": {
+        "name": "No Dashii",
+        "team": "Demons",
+        "image": "https://images.klutzbanana.com/characters_official/nodashii_e.png",
+        "ability": "Each night*, choose a player: they die. Your 2 Townsfolk neighbors are poisoned."
+    },
+      "ojo": {
+        "name": "Ojo",
+        "team": "Demons",
+        "image": "https://images.klutzbanana.com/characters_official/ojo_e.png",
+        "ability": "Each night*, choose a character: they die. If they are not in play, the Storyteller chooses who dies."
+    },
+      "po": {
+        "name": "Po",
+        "team": "Demons",
+        "image": "https://images.klutzbanana.com/characters_official/po_e.png",
+        "ability": "Each night*, you may choose a player: they die. If your last choice was no-one, choose 3 players tonight."
+    },
+      "pukka": {
+        "name": "Pukka",
+        "team": "Demons",
+        "image": "https://images.klutzbanana.com/characters_official/pukka_e.png",
+        "ability": "Each night, choose a player: they are poisoned. The previously poisoned player dies then becomes healthy."
+    },
+      "riot": {
+        "name": "Riot",
+        "team": "Demons",
+        "image": "https://images.klutzbanana.com/characters_official/riot_e.png",
+        "ability": "On day 3, Minions become Riot & nominees die but nominate an alive player immediately. This must happen."
+    },
+      "shabaloth": {
+        "name": "Shabaloth",
+        "team": "Demons",
+        "image": "https://images.klutzbanana.com/characters_official/shabaloth_e.png",
+        "ability": "Each night*, choose 2 players: they die. A dead player you chose last night might be regurgitated."
+    },
+      "vigormortis": {
+        "name": "Vigormortis",
+        "team": "Demons",
+        "image": "https://images.klutzbanana.com/characters_official/vigormortis_e.png",
+        "ability": "Each night*, choose a player: they die. Minions you kill keep their ability & poison 1 Townsfolk neighbor. [-1 Outsider]"
+    },
+      "vortox": {
+        "name": "Vortox",
+        "team": "Demons",
+        "image": "https://images.klutzbanana.com/characters_official/vortox_e.png",
+        "ability": "Each night*, choose a player: they die. Townsfolk abilities yield false info. Each day, if no-one is executed, evil wins."
+    },
+      "yaggababble": {
+        "name": "Yaggababble",
+        "team": "Demons",
+        "image": "https://images.klutzbanana.com/characters_official/yaggababble_e.png",
+        "ability": "You start knowing a secret phrase. For each time you said it publicly today, a player might die."
+    },
+      "zombuul": {
+        "name": "Zombuul",
+        "team": "Demons",
+        "image": "https://images.klutzbanana.com/characters_official/zombuul_e.png",
+        "ability": "Each night*, if no-one died today, choose a player: they die. The 1st time you die, you live but register as dead."
+    },
+      "apprentice": {
+        "name": "Apprentice",
+        "team": "Travellers",
+        "image": "https://images.klutzbanana.com/characters_official/apprentice.png",
+        "ability": "On your 1st night, you gain a Townsfolk ability (if good), or a Minion ability (if evil)."
+    },
+      "barista": {
+        "name": "Barista",
+        "team": "Travellers",
+        "image": "https://images.klutzbanana.com/characters_official/barista.png",
+        "ability": "Each night, until dusk, 1) a player becomes sober, healthy & gets true info, or 2) their ability works twice. They learn which."
+    },
+      "beggar": {
+        "name": "Beggar",
+        "team": "Travellers",
+        "image": "https://images.klutzbanana.com/characters_official/beggar.png",
+        "ability": "You must use a vote token to vote. If a dead player gives you theirs, you learn their alignment. You are sober & healthy."
+    },
+      "bishop": {
+        "name": "Bishop",
+        "team": "Travellers",
+        "image": "https://images.klutzbanana.com/characters_official/bishop.png",
+        "ability": "Only the Storyteller can nominate. At least 1 opposing player must be nominated each day."
+    },
+      "bonecollector": {
+        "name": "Bone Collector",
+        "team": "Travellers",
+        "image": "https://images.klutzbanana.com/characters_official/bonecollector.png",
+        "ability": "Once per game, at night*, choose a dead player: they regain their ability until dusk."
+    },
+      "bureaucrat": {
+        "name": "Bureaucrat",
+        "team": "Travellers",
+        "image": "https://images.klutzbanana.com/characters_official/bureaucrat.png",
+        "ability": "Each night, choose a player (not yourself): their vote counts as 3 votes tomorrow."
+    },
+      "butcher": {
+        "name": "Butcher",
+        "team": "Travellers",
+        "image": "https://images.klutzbanana.com/characters_official/butcher.png",
+        "ability": "Each day, after the 1st execution, you may nominate again."
+    },
+      "cacklejack": {
+        "name": "Cacklejack",
+        "team": "Travellers",
+        "image": "https://images.klutzbanana.com/characters_official/cacklejack.png",
+        "ability": "Each day, choose a player: a different player changes character tonight."
+    },
+      "deviant": {
+        "name": "Deviant",
+        "team": "Travellers",
+        "image": "https://images.klutzbanana.com/characters_official/deviant.png",
+        "ability": "If you were funny today, you cannot die by exile."
+    },
+      "gangster": {
+        "name": "Gangster",
+        "team": "Travellers",
+        "image": "https://images.klutzbanana.com/characters_official/gangster.png",
+        "ability": "Once per day, you may choose to kill an alive neighbor, if your other alive neighbor agrees."
+    },
+      "gnome": {
+        "name": "Gnome",
+        "team": "Travellers",
+        "image": "https://images.klutzbanana.com/characters_official/gnome.png",
+        "ability": "All players start knowing a player of your alignment. You may choose to kill anyone who nominates them."
+    },
+      "gunslinger": {
+        "name": "Gunslinger",
+        "team": "Travellers",
+        "image": "https://images.klutzbanana.com/characters_official/gunslinger.png",
+        "ability": "Each day, after the 1st vote has been tallied, you may choose a player that voted: they die."
+    },
+      "harlot": {
+        "name": "Harlot",
+        "team": "Travellers",
+        "image": "https://images.klutzbanana.com/characters_official/harlot.png",
+        "ability": "Each night*, choose a living player: if they agree, you learn their character, but you both might die."
+    },
+      "judge": {
+        "name": "Judge",
+        "team": "Travellers",
+        "image": "https://images.klutzbanana.com/characters_official/judge.png",
+        "ability": "Once per game, if another player nominated, you may choose to force the current execution to pass or fail."
+    },
+      "matron": {
+        "name": "Matron",
+        "team": "Travellers",
+        "image": "https://images.klutzbanana.com/characters_official/matron.png",
+        "ability": "Each day, you may choose up to 3 sets of 2 players to swap seats. Players may not leave their seats to talk in private."
+    },
+      "scapegoat": {
+        "name": "Scapegoat",
+        "team": "Travellers",
+        "image": "https://images.klutzbanana.com/characters_official/scapegoat.png",
+        "ability": "If a player of your alignment is executed, you might be executed instead."
+    },
+      "thief": {
+        "name": "Thief",
+        "team": "Travellers",
+        "image": "https://images.klutzbanana.com/characters_official/thief.png",
+        "ability": "Each night, choose a player (not yourself): their vote counts negatively tomorrow."
+    },
+      "voudon": {
+        "name": "Voudon",
+        "team": "Travellers",
+        "image": "https://images.klutzbanana.com/characters_official/voudon.png",
+        "ability": "Only you & the dead can vote. They don't need a vote token to do so. A 50% majority isn't required."
+    },
+      "angel": {
+        "name": "Angel",
+        "team": "Travellers",
+        "image": "https://images.klutzbanana.com/characters_official/angel.png",
+        "ability": "Something bad might happen to whoever is most responsible for the death of a new player."
+    },
+      "buddhist": {
+        "name": "Buddhist",
+        "team": "Travellers",
+        "image": "https://images.klutzbanana.com/characters_official/buddhist.png",
+        "ability": "For the first 2 minutes of each day, veteran players may not talk."
+    },
+      "deusexfiasco": {
+        "name": "Deus ex Fiasco",
+        "team": "Travellers",
+        "image": "https://images.klutzbanana.com/characters_official/deusexfiasco.png",
+        "ability": "At least once per game, the Storyteller will make a mistake, correct it, and publicly admit to it."
+    },
+      "djinn": {
+        "name": "Djinn",
+        "team": "Travellers",
+        "image": "https://images.klutzbanana.com/characters_official/djinn.png",
+        "ability": "Use the Djinn's special rule. All players know what it is."
+    },
+      "doomsayer": {
+        "name": "Doomsayer",
+        "team": "Travellers",
+        "image": "https://images.klutzbanana.com/characters_official/doomsayer.png",
+        "ability": "If 4 or more players live, each living player may publicly choose (once per game) that a player of their own alignment dies."
+    },
+      "duchess": {
+        "name": "Duchess",
+        "team": "Travellers",
+        "image": "https://images.klutzbanana.com/characters_official/duchess.png",
+        "ability": "Each day, 3 players may choose to visit you. At night*, each visitor learns how many visitors are evil, but 1 gets false info."
+    },
+      "ferryman": {
+        "name": "Ferryman",
+        "team": "Travellers",
+        "image": "https://images.klutzbanana.com/characters_official/ferryman.png",
+        "ability": "On the final day, all dead players regain their vote token."
+    },
+      "fibbin": {
+        "name": "Fibbin",
+        "team": "Travellers",
+        "image": "https://images.klutzbanana.com/characters_official/fibbin.png",
+        "ability": "Once per game, 1 good player might get incorrect information."
+    },
+      "fiddler": {
+        "name": "Fiddler",
+        "team": "Travellers",
+        "image": "https://images.klutzbanana.com/characters_official/fiddler.png",
+        "ability": "Once per game, the Demon secretly chooses an opposing player: all players choose which of these 2 players win."
+    },
+      "hellslibrarian": {
+        "name": "Hell's Librarian",
+        "team": "Travellers",
+        "image": "https://images.klutzbanana.com/characters_official/hellslibrarian.png",
+        "ability": "Something bad might happen to whoever talks when the Storyteller has asked for silence."
+    },
+      "revolutionary": {
+        "name": "Revolutionary",
+        "team": "Travellers",
+        "image": "https://images.klutzbanana.com/characters_official/revolutionary.png",
+        "ability": "2 neighboring players are known to be the same alignment. Once per game, 1 of them registers falsely."
+    },
+      "sentinel": {
+        "name": "Sentinel",
+        "team": "Travellers",
+        "image": "https://images.klutzbanana.com/characters_official/sentinel.png",
+        "ability": "There might be 1 extra or 1 fewer Outsider in play."
+    },
+      "spiritofivory": {
+        "name": "Spirit of Ivory",
+        "team": "Travellers",
+        "image": "https://images.klutzbanana.com/characters_official/spiritofivory.png",
+        "ability": "There can't be more than 1 extra evil player."
+    },
+      "toymaker": {
+        "name": "Toymaker",
+        "team": "Travellers",
+        "image": "https://images.klutzbanana.com/characters_official/toymaker.png",
+        "ability": "The Demon may choose not to attack & must do this at least once per game. Evil players get normal starting info."
+    },
+      "bigwig": {
+        "name": "Big Wig",
+        "team": "Loric",
+        "image": "https://images.klutzbanana.com/characters_official/bigwig.png",
+        "ability": "Each nominee chooses a player: until voting, only they may speak & they are mad the nominee is good or they might die."
+    },
+      "gardener": {
+        "name": "Gardener",
+        "team": "Loric",
+        "image": "https://images.klutzbanana.com/characters_official/gardener.png",
+        "ability": "The Storyteller assigns all players' characters."
+    },
+      "godofug": {
+        "name": "God of Ug",
+        "team": "Loric",
+        "image": "https://images.klutzbanana.com/characters_official/godofug.png",
+        "ability": "One Ug hat. When wear Ug hat, must speak one sound at a time but vote twice. If fail, pass Ug hat."
+    },
+      "hindu": {
+        "name": "Hindu",
+        "team": "Loric",
+        "image": "https://images.klutzbanana.com/characters_official/hindu.png",
+        "ability": "The first 4 players to die are immediately reincarnated as Travellers of the same alignment."
+    },
+      "knaves": {
+        "name": "Knaves",
+        "team": "Loric",
+        "image": "https://images.klutzbanana.com/characters_official/knaves.png",
+        "ability": "There are 2 Storytellers: one lies & one tells the truth. Once per game, at dusk, they might switch."
+    },
+      "pope": {
+        "name": "Pope",
+        "team": "Loric",
+        "image": "https://images.klutzbanana.com/characters_official/pope.png",
+        "ability": "There are duplicate good characters in play. They might also be bluffs."
+    },
+      "stormcatcher": {
+        "name": "Storm Catcher",
+        "team": "Loric",
+        "image": "https://images.klutzbanana.com/characters_official/stormcatcher.png",
+        "ability": "Name a good character. If in play, they can only die by execution, but evil players learn which player it is."
+    },
+      "tor": {
+        "name": "Tor",
+        "team": "Loric",
+        "image": "https://images.klutzbanana.com/characters_official/tor.png",
+        "ability": "Players don't know their character or alignment. They learn them when they die."
+    },
+      "ventriloquist": {
+        "name": "Ventriloquist",
+        "team": "Loric",
+        "image": "https://images.klutzbanana.com/characters_official/ventriloquist.png",
+        "ability": "If a player is mad as a fresh character during their nomination, they might not die if executed today."
+    },
+      "zenomancer": {
+        "name": "Zenomancer",
+        "team": "Loric",
+        "image": "https://images.klutzbanana.com/characters_official/zenomancer.png",
+        "ability": "One or more players each have a goal. When achieved, that player learns a piece of true info."
+    }
+}
