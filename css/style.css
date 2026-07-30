@@ -995,3 +995,31 @@ h1, h2, h3, h4, h5, h6 {
     opacity:1;
 
 }
+
+.info-button{
+
+    display:inline-flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    width:20px;
+
+    height:20px;
+
+    margin-left:8px;
+
+    border-radius:50%;
+
+    background:#6a5697;
+
+    color:white;
+
+    font-size:13px;
+
+    font-weight:bold;
+
+    cursor:help;
+
+}
