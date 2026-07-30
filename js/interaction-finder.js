@@ -307,7 +307,7 @@ let infoButtons = "";
 if(interaction.reason){
 
     infoButtons += `
-    <span class="info-button" title="${interaction.reason.replace(/"/g, '&quot;')}"
+    <span class="info-button" title="${interaction.reason.replace(/"/g, '&quot;')}">
         ?
     </span>
     `;
