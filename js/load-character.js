@@ -16,7 +16,7 @@ document.addEventListener("DOMContentLoaded", async () => {
 
     try {
 
-        const response = await fetch("../data/characters.json");
+        const response = await fetch("/data/characters.json");
 
         characters = await response.json();
 
