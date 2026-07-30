@@ -6,7 +6,7 @@ sidebar.innerHTML = `
 
 <div class="logo">
 
-<img src="/images/logo.png">
+<img src="https://betterbotcwiki.weebly.com/uploads/1/4/0/2/140233688/better-botc-wiki-by-bell.png">
 
 </div>
 
