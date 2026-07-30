@@ -402,7 +402,12 @@ font-family:'Heebo', Arial, Helvetica, sans-serif;
    Character Pages
 =========================== */
 
-/* CHARACTER PAGES */
+#character {
+    margin-left:260px;
+    padding:40px;
+    min-height:100vh;
+    box-sizing:border-box;
+}
 .character-page {
 
 max-width:700px;
@@ -418,8 +423,6 @@ border-radius:18px;
 text-align:center;
 
 box-shadow:0 3px 12px rgba(0,0,0,.08);
-
-margin-left:260px;
 
 }
 
