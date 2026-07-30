@@ -159,50 +159,42 @@ serif;
 /* CHARACTER MENU */
 
 .character-toggle {
-
     display:flex;
-
     justify-content:space-between;
-
     align-items:center;
-
 }
-
 
 
 .arrow {
-
     font-size:12px;
-
-    transition:.3s;
-
+    transition:transform .3s ease;
 }
 
 
-
-/* Hidden dropdown */
+/* Hide character choices by default */
 
 .character-dropdown {
-
+    display:block;
     max-height:0;
-
     overflow:hidden;
-
-    transition:max-height .35s ease;
-
+    opacity:0;
+    transition:
+        max-height .35s ease,
+        opacity .25s ease;
 }
 
 
-
-/* Open dropdown */
+/* Show character choices when opened */
 
 .character-section.open .character-dropdown {
 
     max-height:500px;
+    opacity:1;
 
 }
 
 
+/* Rotate arrow */
 
 .character-section.open .arrow {
 
@@ -211,13 +203,11 @@ serif;
 }
 
 
-
-/* Indented character choices */
+/* Indented character links */
 
 .sub-link {
 
     padding-left:35px;
-
     font-size:16px;
 
 }
