@@ -1,1 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
 
+<head>
+
+<meta charset="UTF-8">
+<title>Character</title>
+
+<link rel="stylesheet" href="../css/style.css">
+
+</head>
+
+
+<body>
+
+<div id="sidebar"></div>
+
+
+<main id="content">
+
+<div class="character-page">
+
+
+<img id="characterImage">
+
+
+<h1 id="characterName"></h1>
+
+
+<h3 id="characterTeam"></h3>
+
+
+<div class="ability-box">
+
+<p id="characterAbility"></p>
+
+</div>
+
+
+</div>
+
+</main>
+
+
+<script src="../js/sidebar.js"></script>
+
+<script>
+
+
+const params = new URLSearchParams(window.location.search);
+
+const id = params.get("id");
+
+
+fetch("../characters.json")
+
+.then(response => response.json())
+
+.then(characters => {
+
+
+const character = characters[id];
+
+
+if(!character){
+
+document.querySelector(".character-page").innerHTML =
+"<h1>Character not found</h1>";
+
+return;
+
+}
+
+
+document.title = character.name + " | Clockipedia";
+
+
+document.getElementById("characterImage").src = character.image;
+
+
+document.getElementById("characterName").textContent =
+character.name;
+
+
+document.getElementById("characterTeam").textContent =
+character.team;
+
+
+document.getElementById("characterAbility").textContent =
+character.ability;
+
+
+});
+
+
+</script>
+
+
+</body>
+
+</html>
