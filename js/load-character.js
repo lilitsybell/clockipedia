@@ -8,7 +8,7 @@ const teamColors = {
     "Minions":"red",
     "Demons":"red",
 
-    "Travellers":"purple",
+    "Travellers":"traveller",
 
     "Loric":"gold",
     "Fabled":"green"
