@@ -1,4 +1,4 @@
-console.log("load-character updated 7/30/2026 1:28PM");
+console.log("load-character updated 7/30/2026 1:32PM");
 console.log("Character ID:", characterID);
 
 let characters = {};
@@ -203,7 +203,7 @@ function formatCharacters(text){
         }
 
 
-        return `<a href="../characters/${slug}.html" class="character-link ${team}">
+        return `<a href="character.html?id=${slug}"" class="character-link ${team}">
                     ${character}
                 </a>`;
 
