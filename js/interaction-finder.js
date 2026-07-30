@@ -271,11 +271,38 @@ const selected = [
 
         if(show){
 
-            const li = document.createElement("li");
+const li = document.createElement("li");
 
-            li.textContent = interaction.text;
 
-            list.appendChild(li);
+let infoButtons = "";
+
+
+if(interaction.reason){
+
+    infoButtons += `
+    <span class="info-button" title="${interaction.reason}">
+        ?
+    </span>
+    `;
+
+}
+
+
+if(interaction.mathInfo){
+
+    infoButtons += `
+    <span class="info-button" title="${interaction.mathInfo}">
+        ▲
+    </span>
+    `;
+
+}
+
+
+li.innerHTML = formatCharacters(interaction.text) + infoButtons;
+
+
+list.appendChild(li);
 
         }
 
