@@ -87,19 +87,23 @@ console.log("Color class:", teamColors[character.team]);
 
 <div class="character-header">
 
-    <img src="${character.image}">
-
-    <div>
+    <div class="character-title">
 
         <h1 class="${teamColors[character.team]}">
             ${character.name}
+            <span class="character-team">
+                (${character.team})
+            </span>
         </h1>
 
-        <h3>
-            ${character.team}
-        </h3>
+        <p class="character-ability">
+            "${character.ability}"
+        </p>
 
     </div>
+
+
+    <img src="${character.image}">
 
 </div>
 
