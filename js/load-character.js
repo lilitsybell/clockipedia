@@ -38,7 +38,7 @@ document.addEventListener("DOMContentLoaded", async () => {
 
         document.getElementById("character").innerHTML = `
 
-        <div class="wiki">
+        <div class="wiki ${teamColors[character.team]}">
 
 <div class="character-header">
 
