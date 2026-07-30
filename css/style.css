@@ -408,23 +408,6 @@ font-family:'Heebo', Arial, Helvetica, sans-serif;
     min-height:100vh;
     box-sizing:border-box;
 }
-.character-page {
-
-max-width:700px;
-
-margin:40px auto;
-
-background:white;
-
-padding:40px;
-
-border-radius:18px;
-
-text-align:center;
-
-box-shadow:0 3px 12px rgba(0,0,0,.08);
-
-}
 
 
 .character-page img {
@@ -448,23 +431,6 @@ margin:20px 0 5px;
 color:var(--blue);
 
 font-size:22px;
-
-}
-
-
-.ability-box {
-
-margin-top:30px;
-
-padding:25px;
-
-background:white;
-
-border-radius:12px;
-
-font-size:20px;
-
-line-height:1.5;
 
 }
 
