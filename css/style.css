@@ -1,5 +1,9 @@
 @import url('https://fonts.googleapis.com/css2?family=Heebo:wght@400;500;700&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Noto+Sans:wght@400;700&display=swap');
+@font-face {
+    font-family: "Droid Sans";
+    src: url("/fonts/DroidSans.tff") format("tff");
+    font-weight: 700;
+}
 
 :root {
 
@@ -833,5 +837,5 @@ h1.green, h2.green, h3.green{
 }
 
 h1, h2, h3, h4, h5, h6 {
-    font-family: "Noto Sans", Arial, sans-serif;
+    font-family: "Droid Sans", Arial, sans-serif;
 }
