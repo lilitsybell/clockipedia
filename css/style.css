@@ -545,14 +545,6 @@ font-size:22px;
 
 }
 
-.wiki.traveller .tab.active{
-    background:linear-gradient(
-        0deg,
-        #2f6fc4 50%,
-        #b52323 50%
-    );
-}
-
 .wiki.traveller .content{
     border-color:#7851A9;
 }
@@ -690,6 +682,26 @@ h1.green, h2.green, h3.green{
 
 .tab.active{
     background:#0883bd;
+}
+
+.wiki.red .tab.active{
+    background:#a41618;
+}
+
+.wiki.gold .tab.active{
+    background:#b77102;
+}
+
+.wiki.green .tab.active{
+    background:#8ea742;
+}
+
+.wiki.traveller .tab.active{
+    background:linear-gradient(
+        0deg,
+        #2f6fc4 50%,
+        #b52323 50%
+    );
 }
 
 .page {
