@@ -1001,14 +1001,12 @@ h1, h2, h3, h4, h5, h6 {
     display:inline-flex;
 
     justify-content:center;
-
     align-items:center;
 
     width:20px;
-
     height:20px;
 
-    margin-left:8px;
+    margin-left:10px;
 
     border-radius:50%;
 
@@ -1018,8 +1016,15 @@ h1, h2, h3, h4, h5, h6 {
 
     font-size:13px;
 
+    cursor:pointer;
+
     font-weight:bold;
 
-    cursor:help;
+}
+
+
+.info-button:hover{
+
+    background:#57447d;
 
 }
