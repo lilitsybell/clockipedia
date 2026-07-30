@@ -1,4 +1,4 @@
-console.log("updated 7/30/2026 11:23AM");
+console.log("load-character updated 7/30/2026 11:36AM");
 console.log("Character ID:", characterID);
 const teamColors = {
 
