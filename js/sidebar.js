@@ -2,133 +2,120 @@ document.addEventListener("DOMContentLoaded", () => {
 
     const sidebar = document.getElementById("sidebar");
 
-sidebar.innerHTML = `
+    sidebar.innerHTML = `
 
-<div class="logo">
-
-<img src="https://betterbotcwiki.weebly.com/uploads/1/4/0/2/140233688/better-botc-wiki-by-bell.png">
-
-</div>
+        <div class="logo">
+            <img src="https://betterbotcwiki.weebly.com/uploads/1/4/0/2/140233688/better-botc-wiki-by-bell.png">
+        </div>
 
 
-<div class="search-box">
-
-<input 
-type="text"
-placeholder="Search for a character..."
->
-
-</div>
+        <div class="search-box">
+            <input 
+                type="text"
+                placeholder="Search for a character..."
+            >
+        </div>
 
 
-<nav>
-
-<div class="nav-section">
-
-<a href="/index.html" class="nav-link">
-Home
-</a>
-
-</div>
+        <nav class="sidebar-nav">
 
 
-<div class="nav-section">
-
-<div class="nav-title">
-Tools
-</div>
-
-<a href="/tools/interaction-finder.html" class="nav-link">
-Interaction Finder
-</a>
-
-<a href="/tools/script-generator.html" class="nav-link">
-Random Script Generator
-</a>
-
-</div>
+            <a href="/index.html" class="nav-link">
+                Home
+            </a>
 
 
-<div class="nav-section character-menu">
-
-<div class="nav-title character-toggle">
-Characters
-<span class="arrow">▼</span>
-</div>
+            <a href="/tools/interaction-finder.html" class="nav-link">
+                Interaction Finder
+            </a>
 
 
-<div class="character-links">
-
-<a href="/characters/townsfolk.html" class="nav-link">
-Townsfolk
-</a>
-
-<a href="/characters/outsiders.html" class="nav-link">
-Outsiders
-</a>
-
-<a href="/characters/minions.html" class="nav-link">
-Minions
-</a>
-
-<a href="/characters/demons.html" class="nav-link">
-Demons
-</a>
-
-<a href="/characters/travellers.html" class="nav-link">
-Travellers
-</a>
-
-<a href="/characters/loric.html" class="nav-link">
-Loric
-</a>
-
-<a href="/characters/fabled.html" class="nav-link">
-Fabled
-</a>
-
-</div>
-
-</div>
+            <a href="/tools/script-generator.html" class="nav-link">
+                Random Script Generator
+            </a>
 
 
-<div class="nav-section">
 
-<div class="nav-title">
-Other
-</div>
+            <div class="character-section">
 
-<a href="/contact.html" class="nav-link">
-Contact
-</a>
-
-</div>
+                <div class="nav-link character-toggle">
+                    Characters
+                    <span class="arrow">▼</span>
+                </div>
 
 
-</nav>
+                <div class="character-dropdown">
 
-`;
+                    <a href="/characters/townsfolk.html" class="nav-link sub-link">
+                        Townsfolk
+                    </a>
 
-// Highlight current page
+                    <a href="/characters/outsiders.html" class="nav-link sub-link">
+                        Outsiders
+                    </a>
 
-const currentPage = window.location.pathname;
+                    <a href="/characters/minions.html" class="nav-link sub-link">
+                        Minions
+                    </a>
 
-document.querySelectorAll(".nav-link").forEach(link => {
+                    <a href="/characters/demons.html" class="nav-link sub-link">
+                        Demons
+                    </a>
 
-    if (link.href.includes(currentPage)) {
-        link.classList.add("active");
-    }
+                    <a href="/characters/travellers.html" class="nav-link sub-link">
+                        Travellers
+                    </a>
 
-});
+                    <a href="/characters/loric.html" class="nav-link sub-link">
+                        Loric
+                    </a>
 
-// Character dropdown
-const characterToggle = document.querySelector(".character-toggle");
-const characterMenu = document.querySelector(".character-menu");
+                    <a href="/characters/fabled.html" class="nav-link sub-link">
+                        Fabled
+                    </a>
 
-if (characterToggle && characterMenu) {
-    characterToggle.onclick = function () {
-        characterMenu.classList.toggle("open");
-    };
-}
-    
+                </div>
+
+            </div>
+
+
+
+            <a href="/contact.html" class="nav-link">
+                Contact
+            </a>
+
+
+        </nav>
+
+    `;
+
+
+
+    // Highlight current page
+
+    const currentPage = window.location.pathname;
+
+    document.querySelectorAll(".nav-link").forEach(link => {
+
+        if(link.href.includes(currentPage)) {
+            link.classList.add("active");
+        }
+
+    });
+
+
+
+    // Character dropdown
+
+    const characterToggle = document.querySelector(".character-toggle");
+    const characterSection = document.querySelector(".character-section");
+
+
+    characterToggle.addEventListener("click", () => {
+
+        characterSection.classList.toggle("open");
+
+    });
+
+
 });
