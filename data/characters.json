@@ -6,7 +6,7 @@
         "image": "https://images.klutzbanana.com/characters_official/acrobat_g.png",
         "ability": "Each night*, choose a player: if they are or become drunk or poisoned tonight, you die.",
         "flavor": "Ladies and gentlemen, hold fast to your hats, for I shall defy the very laws of gravity and dance upon the air, a marvel of agility and daring, all for your delight and wonder!",
-        "purpose": "The Acrobat dies when they find a drunk or poisoned player.",
+        "purpose": "The [Acrobat] dies when they find a drunk or poisoned player.",
         "summary": ["Each night except the first, the [Acrobat] chooses a player. If the chosen player is sober and healthy, nothing happens. If the player is drunk or poisoned, the [Acrobat] dies.",
                    "If the [Acrobat] is drunk or poisoned, they cannot die to their own ability.",
                    "The [Acrobat] may choose any player, dead or alive, even themself.",
