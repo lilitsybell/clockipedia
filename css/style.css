@@ -145,17 +145,6 @@ serif;
 }
 
 
-
-.nav-link.active {
-
-    background:var(--blue);
-
-    color:white;
-
-}
-
-
-
 /* CHARACTER MENU */
 
 .character-toggle {
