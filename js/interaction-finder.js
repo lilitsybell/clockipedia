@@ -25,6 +25,70 @@ const teamColors = {
 
 };
 
+function fillDropdown(id){
+
+    const select=document.getElementById(id);
+
+    select.innerHTML="";
+
+
+    const blank=document.createElement("option");
+
+    blank.value="";
+
+    blank.textContent="-- Select Character --";
+
+    select.appendChild(blank);
+
+
+    getInteractionCharacters()
+    .forEach(character=>{
+
+        const option=document.createElement("option");
+
+        option.value=character;
+
+        option.textContent=character;
+
+        select.appendChild(option);
+
+    });
+
+}
+
+function getCharacters(text){
+
+    const matches=text.match(/\[(.*?)\]/g);
+
+    if(!matches) return [];
+
+    return matches.map(match=>
+        match.slice(1,-1)
+    );
+
+}
+
+function getInteractionCharacters(){
+
+    const set = new Set();
+
+
+    interactions.forEach(interaction=>{
+
+        getCharacters(interaction.text)
+        .forEach(character=>{
+
+            set.add(character);
+
+        });
+
+    });
+
+
+    return [...set].sort((a,b)=>a.localeCompare(b));
+
+}
+
 
 
 document.addEventListener("DOMContentLoaded", async()=>{
@@ -58,6 +122,10 @@ document.addEventListener("DOMContentLoaded", async()=>{
 
 
 });
+
+function setupEvents(){
+
+}
 
 function buildPage(){
 
