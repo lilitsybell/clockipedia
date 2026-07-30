@@ -127,5 +127,7 @@ if (characterToggle && characterSection) {
 
 }
 
+loadSearch();
+
 
 });
