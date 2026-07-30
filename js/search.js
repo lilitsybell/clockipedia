@@ -6,11 +6,11 @@ document.addEventListener("DOMContentLoaded", async () => {
     if (!searchBox || !searchResults) return;
 
 
-    let characters = [];
+    let searchCharacters = [];
 
 
 // Load character data
-let characters = [];
+let searchCharacters = [];
 
 
 // Load character data
@@ -20,7 +20,7 @@ try {
 
     const data = await response.json();
 
-    characters = Object.entries(data).map(([id, character]) => ({
+    searchCharacters = Object.entries(data).map(([id, character]) => ({
         id,
         ...character
     }));
@@ -48,7 +48,7 @@ try {
 
 
 
-        const matches = characters.filter(character =>
+        const matches = searchCharacters.filter(character =>
 
             character.name.toLowerCase().includes(query)
 
