@@ -48,8 +48,7 @@
                 "The [Acrobat] does not learn if the player they selected was drunk, or poisoned, or both.",
                 "The [Drunk] registers as drunk to the [Acrobat]."],
     "run": {
-           "Setup": ["Thing 1",
-                "Thing 2"],
+           "Setup": [],
            "Anytime": [],
            "First Night": [],
            "Every Night": [],
