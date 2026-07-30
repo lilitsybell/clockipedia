@@ -90,14 +90,13 @@ document.addEventListener("DOMContentLoaded", () => {
     `;
 
 
+// Highlight current page
 
-    // Highlight current page
-
-    const currentPage = window.location.pathname;
+const currentPage = window.location.pathname;
 
 document.querySelectorAll("a.nav-link").forEach(link => {
 
-    if(link.href.includes(currentPage)) {
+    if (link.href && link.href.includes(currentPage)) {
         link.classList.add("active");
     }
 
