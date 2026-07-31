@@ -200,10 +200,9 @@ if(interaction.math){
         mathText = "Mathematician registers this as abnormal.";
     }
     mathTriangle = `
-    <span class="math-triangle ${interaction.math}"
-    data-info="${mathText.replace(/"/g, '&quot;')}">
-        ▲
-    </span>
+<span class="math-triangle ${interaction.math}"
+data-info="${mathText.replace(/"/g, '&quot;')}">
+</span>
     `;
 }
 if(interaction.reason){
