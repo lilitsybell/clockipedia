@@ -966,6 +966,7 @@ font-size:22px;
 
 .ability-tooltip {
     position:absolute;
+    display:none;
     width:300px;
     background:white;
     border-radius:12px;
