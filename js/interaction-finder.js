@@ -303,6 +303,31 @@ const li = document.createElement("li");
 
 let infoButtons = "";
 
+let mathTriangle = "";
+
+if(interaction.math === "green"){
+
+    mathTriangle = `
+    <span class="triangle green info-button"
+    title="Mathematician registers this as normal">
+    ▲
+    </span>
+    `;
+
+}
+
+
+if(interaction.math === "red"){
+
+    mathTriangle = `
+    <span class="triangle red info-button"
+    title="Mathematician registers this as abnormal">
+    ▲
+    </span>
+    `;
+
+}
+
 
 if(interaction.reason){
 
@@ -325,8 +350,11 @@ if(interaction.mathInfo){
 
 }
 
-
-li.innerHTML = formatCharacters(interaction.text) + " " + infoButtons;
+li.innerHTML =
+formatCharacters(interaction.text)
++ " "
++ infoButtons
++ mathTriangle;
 
 
 list.appendChild(li);
