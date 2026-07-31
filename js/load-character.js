@@ -1,6 +1,5 @@
 console.log("load-character updated 7/31/2026 16:18PM");
 console.log("Character ID:", characterID);
-let characters = {};
 function singularTeam(team){
     const singular = {
         "Townsfolk": "Townsfolk",
