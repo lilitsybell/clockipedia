@@ -606,9 +606,9 @@ font-size:22px;
 .info-button::after{
     content:attr(data-info);
     position:absolute;
-    bottom:140%;
-    left:50%;
-    transform:translateX(-50%);
+    right:120%;
+    top:50%;
+    transform:translateY(-50%);
     width:260px;
     padding:12px 15px;
     background:#333;
@@ -845,9 +845,9 @@ font-size:22px;
 .math-triangle::after{
     content:attr(data-info);
     position:absolute;
-    bottom:130%;
-    left:50%;
-    transform:translateX(-50%);
+    right:120%;
+    top:50%;
+    transform:translateY(-50%);
     width:240px;
     padding:10px 12px;
     background:#333;
