@@ -812,6 +812,10 @@ font-size:22px;
 .math-triangle.red{
     background:#b22222;
 }
+.math-triangle::after{
+    content:attr(title);
+    position:absolute;
+}
 /* ===========================
    Interaction Finder Layout
 =========================== */
