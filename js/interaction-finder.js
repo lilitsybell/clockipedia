@@ -273,9 +273,9 @@ function updateResults(){
 
 const selected = [
 
-    document.getElementById("char1").value,
-    document.getElementById("char2").value,
-    document.getElementById("char3").value
+    document.querySelector("#char1").tomselect.getValue(),
+    document.querySelector("#char2").tomselect.getValue(),
+    document.querySelector("#char3").tomselect.getValue()
 
 ].filter(x => x !== "");
 
@@ -377,19 +377,43 @@ list.appendChild(li);
 
 function setupEvents(){
 
-    document.getElementById("char1").onchange = updateResults;
-    document.getElementById("char2").onchange = updateResults;
-    document.getElementById("char3").onchange = updateResults;
+    const selectors = [
+        "#char1",
+        "#char2",
+        "#char3"
+    ];
+
+
+    selectors.forEach(selector=>{
+
+        new TomSelect(selector,{
+
+            create:false,
+
+            sortField:{
+                field:"text",
+                direction:"asc"
+            },
+
+            onChange:updateResults
+
+        });
+
+    });
+
 
 
     document.getElementById("clearButton").onclick = ()=>{
 
-document.getElementById("char1").selectedIndex = 0;
-document.getElementById("char2").selectedIndex = 0;
-document.getElementById("char3").selectedIndex = 0;
+
+        document.querySelector("#char1")[0].tomselect.clear();
+        document.querySelector("#char2")[0].tomselect.clear();
+        document.querySelector("#char3")[0].tomselect.clear();
+
 
         updateResults();
 
     };
+
 
 }
