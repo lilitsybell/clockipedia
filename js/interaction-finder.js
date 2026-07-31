@@ -146,16 +146,16 @@ function buildPage(){
             Clear
         </button>
     </div>
-    <div class="legend">
-<span class="triangle green info-button info-popup"
-data-info="Mathematician registers this as normal">
-▲
-</span>
-<span class="triangle red info-button info-popup"
-data-info="Mathematician registers this as abnormal">
-▲
-</span>
+<div class="legend">
+    <div class="legend-item">
+        <span class="triangle green">▲</span>
+        The <b>Mathematician</b> registers this as <b>normal</b>.
     </div>
+    <div class="legend-item">
+        <span class="triangle red">▲</span>
+        The <b>Mathematician</b> registers this as <b>abnormal</b>.
+    </div>
+</div>
     <div id="results">
         <ul id="list"></ul>
     </div>
