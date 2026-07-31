@@ -71,7 +71,7 @@ document.addEventListener("DOMContentLoaded", async()=>{
         const interactionResponse = await fetch("/data/interactions.json");
         interactions = await interactionResponse.json();
         buildPage();
-    }
+    }});
 function buildPage(){
     document.getElementById("interaction-finder").innerHTML = `
 <div class="finder-container">
