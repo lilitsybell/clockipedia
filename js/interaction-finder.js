@@ -243,9 +243,13 @@ function createCharacterSearch(id){
         });
         results.style.display="block";
     });
-    container.getValue = ()=>{
-        return selected;
-    };
+container.getValue = ()=>{
+    return selected;
+};
+container.clear = ()=>{
+    selected = "";
+    input.value = "";
+};
     document.addEventListener("click",(event)=>{
         if(!event.target.closest("#"+id)){
             results.style.display="none";
@@ -257,10 +261,10 @@ function setupEvents(){
     createCharacterSearch("selector2");
     createCharacterSearch("selector3");
     document.getElementById("clearButton").onclick = ()=>{
-        document.querySelectorAll(".character-search")
-            .forEach(input=>{
-                input.value="";
-            });
-        updateResults();
+document.querySelectorAll(".character-selector")
+    .forEach(selector=>{
+        selector.clear();
+    });
+updateResults();
     };
 }
