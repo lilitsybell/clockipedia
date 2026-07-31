@@ -1,22 +1,9 @@
-console.log("tooltip.js updated 7/31/26 14:24");
-let tooltipCharacters = {};
-const tooltipTeamColors = {
-    "Townsfolk":"blue",
-    "Outsider":"blue",
-    "Outsiders":"blue",
-    "Minion":"red",
-    "Minions":"red",
-    "Demon":"red",
-    "Demons":"red",
-    "Traveller":"traveller",
-    "Travellers":"traveller",
-    "Loric":"green",
-    "Fabled":"gold"
-};
-fetch("/data/characters.json")
-.then(response => response.json())
-.then(data => {
-    tooltipCharacters = data;
+console.log("tooltip.js updated 7/31/26 16:43");
+document.addEventListener("DOMContentLoaded", async () => {
+    // Load shared character data once if needed
+    if (Object.keys(characters).length === 0) {
+        await loadCharacters();
+    }
     setupTooltips();
 });
 function setupTooltips(){
@@ -29,31 +16,27 @@ function setupTooltips(){
     document.addEventListener("mouseover", event=>{
         const target = event.target.closest("[data-character]");
         if(!target) return;
-        const id = target.dataset.character;
-        const character = tooltipCharacters[id];
+        const character = characters[target.dataset.character];
         if(!character) return;
-        const teamClass = tooltipTeamColors[character.team] || "purple";
-        tooltip.className = 
-            "ability-tooltip " + teamClass;
-tooltip.innerHTML = `
-<div class="tooltip-header">
-    <img src="${character.image}">
-    <div class="tooltip-title">
-        <strong>${character.name}</strong>
-        <span>${singularTeams[character.team] || character.team}</span>
-    </div>
-</div>
-<div class="tooltip-ability">
-    ${character.ability}
-</div>
-`;
+        tooltip.className =
+            "ability-tooltip " + (teamColors[character.team] || "purple");
+        tooltip.innerHTML = `
+            <div class="tooltip-header">
+                <img src="${character.image}">
+                <div class="tooltip-title">
+                    <strong>${character.name}</strong>
+                    <span>${singularTeam(character.team)}</span>
+                </div>
+            </div>
+
+            <div class="tooltip-ability">
+                ${character.ability}
+            </div>
+        `;
         tooltip.style.display = "block";
         const rect = target.getBoundingClientRect();
-        let left =
-            rect.left + window.scrollX;
-        let top =
-            rect.bottom + window.scrollY + 10;
-        // Keep tooltip on screen
+        let left = rect.left + window.scrollX;
+        let top = rect.bottom + window.scrollY + 10;
         if(left + 320 > window.innerWidth){
             left = window.innerWidth - 340;
         }
@@ -61,8 +44,8 @@ tooltip.innerHTML = `
         tooltip.style.top = top + "px";
     });
     document.addEventListener("mouseout", event=>{
-        const target = event.target.closest("[data-character]");
-        if(!target) return;
-        tooltip.style.display="none";
+        if(event.target.closest("[data-character]")){
+            tooltip.style.display = "none";
+        }
     });
 }
