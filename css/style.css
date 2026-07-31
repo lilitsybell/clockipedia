@@ -420,25 +420,22 @@ font-size:22px;
 .character-link.default{
     color:var(--purple);
 }
-.content.blue h2,
-.content.blue h3{
-    color:var(--blue);
+.content h1,
+.content h2,
+.content h3 {
+    color:var(--team-color);
 }
-.content.red h2,
-.content.red h3{
-    color:#a41618;
+.content.blue,
+.wiki.blue {
+    --team-color:var(--blue);
 }
-.content.purple h2,
-.content.purple h3{
-    color:var(--purple);
+.content.red,
+.wiki.red {
+    --team-color:var(--red);
 }
-.content.gold h2,
-.content.gold h3{
-    color:#b77102;
-}
-.content.green h2,
-.content.green h3{
-    color:#8ea742;
+.content.purple,
+.wiki.purple {
+    --team-color:var(--purple);
 }
 .content.traveller h1,
 .content.traveller h2,
@@ -598,15 +595,6 @@ h1.green, h2.green, h3.green{
         var(--traveller-blue) 50%,
         var(--traveller-red) 50%
     ) 1;
-}
-.character-header h1,
-.character-header h2,
-.character-header h3,
-.character-header h4,
-.character-header h5,
-.character-header h6 {
-    font-family:"Droid Sans", Arial, sans-serif !important;
-    font-weight:400 !important;
 }
 
 /* ===========================
