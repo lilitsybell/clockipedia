@@ -143,7 +143,7 @@ function buildPage(){
 </div>
 <div id="results">
     <div id="result-count">
-        showing 0 interactions
+        Interactions Found: 0
     </div>
 
     <ul id="list"></ul>
@@ -204,7 +204,7 @@ list.appendChild(li);
         }
     });
     resultCount.textContent =
-    `Showing ${list.children.length} interaction${list.children.length === 1 ? "" : "s"}`;
+    `Interaction${list.children.length === 1 ? "" : "s"} found: ${list.children.length}`;
     if(list.children.length === 0){
         list.innerHTML = "<li>No interactions found.</li>";
     }
