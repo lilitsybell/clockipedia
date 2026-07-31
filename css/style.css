@@ -690,6 +690,13 @@ font-size:22px;
     border-radius:8px;
     border:1px solid var(--border);
 }
+#result-count{
+    font-size:18px;
+    font-weight:bold;
+    color:var(--purple);
+    margin-bottom:15px;
+    text-align:center;
+}
 #list{
     list-style:none;
     padding:0;
