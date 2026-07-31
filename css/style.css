@@ -966,44 +966,46 @@ font-size:22px;
 
 .ability-tooltip {
     position:absolute;
-    width:320px;
+    width:300px;
     background:white;
     border-radius:12px;
+    border:3px solid #7851A9;
+    box-shadow:0 6px 18px rgba(0,0,0,.25);
     overflow:hidden;
-    box-shadow:0 8px 25px rgba(0,0,0,.25);
     z-index:99999;
     pointer-events:none;
 }
 .tooltip-header {
     display:flex;
     align-items:center;
-    gap:15px;
-    padding:15px;
-    color:white;
+    gap:10px;
+    padding:8px 12px;
+    background:white;
 }
 .tooltip-header img {
-    width:75px;
-    height:75px;
+    width:45px;
+    height:45px;
     object-fit:contain;
 }
-.tooltip-header strong {
+.tooltip-title strong {
     display:block;
-    font-size:20px;
+    font-size:18px;
 }
-.tooltip-header span {
+.tooltip-title span {
     display:block;
-    font-size:15px;
+    font-size:14px;
 }
 .tooltip-ability {
-    padding:18px;
-    font-size:15px;
-    line-height:1.5;
-}
-.ability-tooltip.red {
-    border-color:var(--red);
+    padding:12px;
+    font-size:14px;
+    line-height:1.4;
+    border-top:1px solid #ddd;
 }
 .ability-tooltip.blue {
     border-color:var(--blue);
+}
+.ability-tooltip.red {
+    border-color:var(--red);
 }
 .ability-tooltip.green {
     border-color:var(--lime);
@@ -1011,35 +1013,22 @@ font-size:22px;
 .ability-tooltip.gold {
     border-color:var(--copper);
 }
-.ability-tooltip.purple {
-    border-color:var(--purple);
+.ability-tooltip.traveller {
+    border-color:var(--traveller);
 }
-.ability-tooltip.blue .tooltip-header{
-    background:var(--blue);
+.ability-tooltip.blue .tooltip-title strong,
+.ability-tooltip.blue .tooltip-title span {
+    color:var(--blue);
 }
-.ability-tooltip.red .tooltip-header{
-    background:var(--red);
+.ability-tooltip.red .tooltip-title strong,
+.ability-tooltip.red .tooltip-title span {
+    color:var(--red);
 }
-.ability-tooltip.green .tooltip-header{
-    background:var(--lime);
+.ability-tooltip.green .tooltip-title strong,
+.ability-tooltip.green .tooltip-title span {
+    color:var(--lime);
 }
-.ability-tooltip.gold .tooltip-header{
-    background:var(--copper);
-}
-.ability-tooltip.purple .tooltip-header{
-    background:var(--purple);
-}
-.ability-tooltip.traveller .tooltip-header{
-    background:linear-gradient(
-        0deg,
-        var(--traveller-blue) 50%,
-        var(--traveller-red) 50%
-    );
-}
-.tooltip-title strong {
-    display:block;
-    font-size:22px;
-}
-.tooltip-title span {
-    font-size:15px;
+.ability-tooltip.gold .tooltip-title strong,
+.ability-tooltip.gold .tooltip-title span {
+    color:var(--copper);
 }
