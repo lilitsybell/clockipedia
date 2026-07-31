@@ -12,8 +12,6 @@
 --lime:#8EA742;
 --copper:#B77102;
 --purple:#666699;
---traveller-blue:#2f6fc4;
---traveller-red:#b52323;
 --gray:#959799;
 --light-gray:#fafafa;
 --border:#ddd;
@@ -375,21 +373,21 @@ font-size:22px;
 .character-link.traveller{
     background:linear-gradient(
         0deg,
-        var(--traveller-blue) 50%,
-        var(--traveller-red) 50%
+        var(--blue) 50%,
+        var(--red) 50%
     );
     -webkit-background-clip:text;
     background-clip:text;
     color:transparent;
 }
 .wiki.traveller .content{
-    border-color:var(--traveller-blue);
+    border-color:var(--blue);
 }
 .wiki.traveller .content::after{
     background:linear-gradient(
         0deg,
-        var(--traveller-blue) 50%,
-        var(--traveller-red) 50%
+        var(--blue) 50%,
+        var(--red) 50%
     );
 }
 .wiki.blue h2{
@@ -407,8 +405,8 @@ font-size:22px;
 .wiki.traveller h2{
     background:linear-gradient(
         0deg,
-        var(--traveller-blue) 50%,
-        var(--traveller-red) 50%
+        var(--blue) 50%,
+        var(--red) 50%
     );
     -webkit-background-clip:text;
     background-clip:text;
@@ -439,8 +437,8 @@ font-size:22px;
 .content.traveller h3{
     background:linear-gradient(
         0deg,
-        var(--traveller-blue) 50%,
-        var(--traveller-red) 50%
+        var(--blue) 50%,
+        var(--red) 50%
     );
     -webkit-background-clip:text;
     background-clip:text;
@@ -490,8 +488,8 @@ font-size:22px;
 .wiki.traveller .tab.active{
     background:linear-gradient(
         0deg,
-        var(--traveller-blue) 50%,
-        var(--traveller-red) 50%
+        var(--blue) 50%,
+        var(--red) 50%
     );
 }
 .page {
@@ -542,13 +540,13 @@ font-size:22px;
     --team-color:var(--purple);
 }
 .wiki.traveller {
-    --team-color:var(--traveller-blue);
+    --team-color:var(--blue);
 }
 .wiki.traveller .content::after{
     background:linear-gradient(
         0deg,
-        var(--traveller-blue) 50%,
-        var(--traveller-red) 50%
+        var(--blue) 50%,
+        var(--red) 50%
     );
 }
 
@@ -580,8 +578,8 @@ font-size:22px;
     border-left:5px solid;
     border-image:linear-gradient(
         0deg,
-        var(--traveller-blue) 50%,
-        var(--traveller-red) 50%
+        var(--blue) 50%,
+        var(--red) 50%
     ) 1;
 }
 
