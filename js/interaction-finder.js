@@ -148,11 +148,13 @@ if(interaction.reason){
     </span>
     `;
 }
-li.innerHTML =
-formatCharacters(interaction.text)
-+ " "
-+ infoButtons
-+ mathTriangle;
+li.innerHTML = `
+<a class="interaction-link" href="interaction.html?id=${interaction.id}">
+    ${formatCharacters(interaction.text)}
+</a>
+${infoButtons}
+${mathTriangle}
+`;
 list.appendChild(li);
         }
     });
