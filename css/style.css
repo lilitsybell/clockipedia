@@ -5,7 +5,6 @@
     font-style: normal;
 }
 @import url('https://fonts.googleapis.com/css2?family=Heebo:wght@400;500;700&family=Roboto:wght@400;500;700&display=swap');
-
 :root {
 --black:#0D1821;
 --blue:#0883BD;
@@ -739,11 +738,12 @@ font-size:22px;
     border-radius:8px;
     border:1px solid var(--border);
     text-align:center;
+    display:flex;
+    justify-content:center;
+    gap:25px;
+    flex-wrap:wrap;
 }
 .legend-item{
-    background:#f5f5f5;
-    padding:10px 15px;
-    border-radius:20px;
     display:flex;
     align-items:center;
     gap:8px;
