@@ -611,28 +611,52 @@ font-size:22px;
     background:#57447d;
     opacity:.75;
 }
-.ts-dropdown{
-    border-radius:8px;
+/* ===========================
+   TomSelect Dropdowns
+=========================== */
+
+.finder-container .ts-wrapper{
+    width:260px;
 }
-.ts-dropdown .active {
+.finder-container .ts-control{
+    min-height:48px;
+    padding:8px 12px;
+    border:2px solid var(--purple);
+    border-radius:10px;
+    background:white;
+    box-shadow:none;
+    font-size:16px;
+    font-family:"Roboto", sans-serif;
+    display:flex;
+    align-items:center;
+}
+.finder-container .ts-control.focus{
+    border-color:#57447d;
+    box-shadow:0 0 0 2px rgba(120,81,169,.15);
+}
+/* Dropdown arrow */
+.finder-container .ts-control::after{
+    border-color:#7851A9 transparent transparent transparent;
+}
+/* Dropdown menu */
+.finder-container .ts-dropdown{
+    border:2px solid var(--purple);
+    border-radius:10px;
+    overflow:hidden;
+    box-shadow:0 8px 20px rgba(0,0,0,.12);
+}
+/* Dropdown options */
+.finder-container .ts-dropdown .option{
+    padding:10px 14px;
+    font-size:16px;
+}
+.finder-container .ts-dropdown .active{
     background:#eee;
     color:#333;
 }
-.ts-control input {
-    font-family:inherit;
-}
-.ts-wrapper{
-    width:250px;
-}
-.ts-control{
-    min-height:48px;
-    border:2px solid var(--blue);
-    border-radius:12px;
-    box-shadow:none;
-    font-size:16px;
-}
-.ts-control:focus-within{
-    border-color:#06618c;
+/* Selected text */
+.finder-container .item{
+    color:#333;
 }
 #clearButton{
     padding:12px 24px;
