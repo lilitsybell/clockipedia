@@ -99,3 +99,31 @@ function formatCharacters(text){
 </a>`;
     });
 }
+function getCharacters(text){
+    const matches = text.match(/\[(.*?)\]/g);
+    if(!matches) return [];
+    return matches.map(match =>
+        match.slice(1,-1)
+    );
+}
+function getInteractionColor(interaction){
+    const chars = getCharacters(interaction.text);
+    let colors = [];
+    chars.forEach(character => {
+        const slug = getSlug(character);
+        const data = characters[slug];
+        if(data){
+            const color = teamColors[data.team];
+            if(color && !colors.includes(color)){
+                colors.push(color);
+            }
+        }
+    });
+    if(colors.includes("traveller")){
+        return "traveller";
+    }
+    if(colors.length === 1){
+        return colors[0];
+    }
+    return "purple";
+}
