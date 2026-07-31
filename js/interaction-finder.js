@@ -278,6 +278,8 @@ const selected = [
 
 const li = document.createElement("li");
 
+li.className = "interaction-card";
+
 
 let infoButtons = "";
 
