@@ -191,97 +191,60 @@ document.addEventListener("DOMContentLoaded", async()=>{
 
 
 });
-
 function buildPage(){
 
-
-document.getElementById("interaction-finder").innerHTML = `
-
+    document.getElementById("interaction-finder").innerHTML = `
 
 <div class="wiki">
+
     <div class="content">
 
         <h1>Interaction Finder</h1>
 
         <div class="selector-container">
-            ...
+
+            <select id="char1"></select>
+            <select id="char2"></select>
+            <select id="char3"></select>
+
+            <button id="clearButton">
+                Clear
+            </button>
+
         </div>
 
         <div class="legend">
-            ...
+
+            <div class="legend-item">
+                <span class="triangle green">▲</span>
+                Mathematician registers this as <b>normal</b>
+            </div>
+
+            <div class="legend-item">
+                <span class="triangle red">▲</span>
+                Mathematician registers this as <b>abnormal</b>
+            </div>
+
         </div>
+
+        <h2 id="resultCount"></h2>
 
         <div id="results">
             <ul id="list"></ul>
         </div>
 
     </div>
-</div>
-
-
-<div class="finder-header">
-Interaction Finder
-</div>
-
-
-
-<div class="selector-container">
-
-
-<select id="char1"></select>
-
-<select id="char2"></select>
-
-<select id="char3"></select>
-
-
-<button id="clearButton">
-Clear
-</button>
-
 
 </div>
-
-
-
-<div class="legend">
-
-<span class="triangle green">▲</span>
-Mathematician registers this as <b>normal</b>
-
-
-<span class="triangle red">▲</span>
-Mathematician registers this as <b>abnormal</b>
-
-
-</div>
-
-
-
-<div id="results">
-
-<ul id="list"></ul>
-
-</div>
-
-
-
-</div>
-
-
-</div>
-
 
 `;
 
+    fillDropdown("char1");
+    fillDropdown("char2");
+    fillDropdown("char3");
 
-fillDropdown("char1");
-fillDropdown("char2");
-fillDropdown("char3");
-
-setupEvents();
-
-updateResults();
+    setupEvents();
+    updateResults();
 }
 
 function updateResults(){
