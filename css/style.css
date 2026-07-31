@@ -646,12 +646,12 @@ font-size:22px;
     align-items:center;
 }
 .finder-container .ts-control.focus{
-    border-color:#57447d;
+    border-color:var(--purple);
     box-shadow:0 0 0 2px rgba(120,81,169,.15);
 }
 /* Dropdown arrow */
 .finder-container .ts-control::after{
-    border-color:#7851A9 transparent transparent transparent;
+    border-color:var(--purple) transparent transparent transparent;
 }
 /* Dropdown menu */
 .finder-container .ts-dropdown{
@@ -683,7 +683,7 @@ font-size:22px;
     cursor:pointer;
 }
 #clearButton:hover{
-    background:#57447d;
+    background:var(--purple);
 }
 #results{
     margin:0 25px 25px;
@@ -861,7 +861,7 @@ font-size:22px;
     overflow:hidden;
 }
 .finder-header{
-    background:#6a5697;
+    background:var(--purple);
     color:white;
     font-size:30px;
     font-weight:bold;
