@@ -1,5 +1,23 @@
 [
     {
+        "text":"The [Djinn] rule states \"\".",
+        "math":"green",
+        "reason":"The Djinn changes the way interactions work.",
+        "mathInfo":"The Djinn rule changes the rules, which changes what can cause abilities to register as malfunctioning."
+    },
+    {
+        "text":"The [Djinn] rule states \"An [Alchemist]-[Marionette] has no [Marionette] ability & the [Marionette] is in play.\".",
+        "math":"green",
+        "reason":"The Djinn changes the way interactions work.",
+        "mathInfo":"The Djinn rule changes the rules, which changes what can cause abilities to register as malfunctioning."
+    },
+    {
+        "text":"The [Djinn] rule states \"If the [Alchemist] has the [Boffin] ability, the [Alchemist] does not learn what ability the Demon has.\".",
+        "math":"green",
+        "reason":"Normally the [Boffin] would learn the ability, but the Alchemist does not.",
+        "mathInfo":"The Djinn rule changes the rules, which changes what can cause abilities to register as malfunctioning."
+    },
+    {
         "text":"If the [Acrobat] chooses the [Drunk], the [Acrobat] dies.",
         "math":"green",
         "reason":"The Acrobat's ability includes the Drunk.",
@@ -96,7 +114,7 @@
         "mathInfo":"The Acrobat's ability is working as intended."
     },
     {
-        "text":"If the [Acrobat] chooses the [Alchemist] [Organ Grinder], who chooses to be drunk, the Acrobat dies.",
+        "text":"If the [Acrobat] chooses the [Alchemist]-[Organ Grinder], who chooses to be drunk, the Acrobat dies.",
         "math":"green",
         "reason":"The Acrobat registers drunk or poisoned due to any reason, even if due to the character's own ability.",
         "mathInfo":"The Acrobat's ability is working as intended."
@@ -360,19 +378,19 @@
         "mathInfo":"The Acrobat's ability is working as intended."
     },
     {
-        "text":"If the [Acrobat] chooses the [Alchemist] or [Organ Grinder] who is drunk due to the [Alchemist] [Organ Grinder] [Djinn] rule, the [Acrobat] dies.",
+        "text":"If the [Acrobat] chooses the [Alchemist] or [Organ Grinder] who is drunk due to the [Alchemist]-[Organ Grinder] [Djinn] rule, the [Acrobat] dies.",
         "math":"green",
         "reason":"The Acrobat only detects drunkenness or poison.",
         "mathInfo":"The Acrobat's ability is working as intended."
     },
     {
-        "text":"If the [Acrobat] chooses the [Damsel] who is poisoned due to the [Spy] [Damsel] [Djinn] rule, the [Acrobat] dies.",
+        "text":"If the [Acrobat] chooses the [Damsel] who is poisoned due to the [Spy]-[Damsel] [Djinn] rule, the [Acrobat] dies.",
         "math":"green",
         "reason":"The Acrobat only detects drunkenness or poison.",
         "mathInfo":"The Acrobat's ability is working as intended."
     },
     {
-        "text":"If the [Acrobat] chooses the [Damsel] who is poisoned due to the [Widow] [Damsel] [Djinn] rule, the [Acrobat] dies.",
+        "text":"If the [Acrobat] chooses the [Damsel] who is poisoned due to the [Widow]-[Damsel] [Djinn] rule, the [Acrobat] dies.",
         "math":"green",
         "reason":"The Acrobat only detects drunkenness or poison.",
         "mathInfo":"The Acrobat's ability is working as intended."
@@ -420,7 +438,7 @@
         "mathInfo":"The Acrobat's ability is working as intended."
     },
     {
-        "text":"The [Acrobat] does not die due to choosing the [Philosopher] [Bounty Hunter] who did not turn a player evil due to the [Spirit of Ivory] ability.",
+        "text":"The [Acrobat] does not die due to choosing the [Philosopher]-[Bounty Hunter] who did not turn a player evil due to the [Spirit of Ivory] ability.",
         "math":"green",
         "reason":"The Acrobat only detects drunkenness or poison.",
         "mathInfo":"The Acrobat's ability is working as intended."
