@@ -1152,3 +1152,95 @@ h1, h2, h3, h4, h5, h6 {
     box-shadow:0 2px 8px rgba(0,0,0,.05);
 
 }
+
+/* ===========================
+   Interaction Finder
+=========================== */
+
+#interaction-finder{
+
+    margin-left:260px;
+    padding:40px;
+
+}
+
+
+.selector-container{
+
+    display:flex;
+
+    gap:15px;
+
+    flex-wrap:wrap;
+
+    align-items:center;
+
+    background:#fafafa;
+
+    border:1px solid #ddd;
+
+    border-radius:12px;
+
+    padding:20px;
+
+    margin-bottom:25px;
+
+}
+
+
+.selector-container button{
+
+    background:#0883bd;
+
+    color:white;
+
+    border:none;
+
+    padding:12px 25px;
+
+    border-radius:8px;
+
+    cursor:pointer;
+
+    font-size:16px;
+
+}
+
+
+.selector-container button:hover{
+
+    opacity:.85;
+
+}
+
+
+.legend{
+
+    display:flex;
+
+    gap:20px;
+
+    flex-wrap:wrap;
+
+    margin-bottom:25px;
+
+}
+
+
+.legend-item{
+
+    background:#f5f5f5;
+
+    padding:10px 15px;
+
+    border-radius:20px;
+
+    display:flex;
+
+    align-items:center;
+
+    gap:8px;
+
+    font-size:15px;
+
+}
