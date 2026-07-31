@@ -139,9 +139,9 @@ function buildPage(){
         Interaction Finder
     </div>
     <div class="selector-container">
-        <select id="char1"></select>
-        <select id="char2"></select>
-        <select id="char3"></select>
+<div class="character-selector" id="selector1"></div>
+<div class="character-selector" id="selector2"></div>
+<div class="character-selector" id="selector3"></div>
         <button id="clearButton">
             Clear
         </button>
@@ -169,9 +169,9 @@ function buildPage(){
 }
 function updateResults(){
 const selected = [
-    document.querySelector("#char1").tomselect.getValue(),
-    document.querySelector("#char2").tomselect.getValue(),
-    document.querySelector("#char3").tomselect.getValue()
+    document.querySelector("#selector1").getValue(),
+    document.querySelector("#selector2").getValue(),
+    document.querySelector("#selector3").getValue()
 ].filter(x => x !== "");
     const list = document.getElementById("list");
     list.innerHTML = "";
@@ -220,28 +220,65 @@ list.appendChild(li);
         list.innerHTML = "<li>No interactions found.</li>";
     }
 }
-function setupEvents(){
-    const selectors = [
-        "#char1",
-        "#char2",
-        "#char3"
-    ];
-    selectors.forEach(selector=>{
-        new TomSelect(selector,{
-            create:false,
-            highlight:false,
-            placeholder:"-- Select Character --",
-            sortField:{
-                field:"text",
-                direction:"asc"
-            },
-            onChange:updateResults
+function createCharacterSearch(id){
+    const container = document.getElementById(id);
+    container.innerHTML = `
+        <input class="character-search" placeholder="Select Character...">
+        <div class="character-results"></div>
+    `;
+    const input = container.querySelector(".character-search");
+    const results = container.querySelector(".character-results");
+    let selected = "";
+    input.addEventListener("input",()=>{
+        const query = input.value.toLowerCase().trim();
+        results.innerHTML = "";
+        if(!query){
+            results.style.display="none";
+            return;
+        }
+        const matches = Object.entries(characters)
+            .filter(([id,char]) =>
+                char.name.toLowerCase().includes(query)
+            )
+            .slice(0,8);
+        matches.forEach(([id,char])=>{
+            const item=document.createElement("div");
+            item.className="search-item";
+            item.innerHTML=`
+                <img src="${char.image}" class="search-icon">
+                <div class="search-text">
+                    <strong>${char.name}</strong>
+                    <small>${char.team}</small>
+                </div>
+            `;
+            item.onclick=()=>{
+                selected = char.name;
+                input.value = char.name;
+                results.style.display="none";
+                updateResults();
+            };
+            results.appendChild(item);
         });
+        results.style.display="block";
     });
-document.getElementById("clearButton").onclick = ()=>{
-document.querySelector("#char1").tomselect.clear();
-document.querySelector("#char2").tomselect.clear();
-document.querySelector("#char3").tomselect.clear();
+    container.getValue = ()=>{
+        return selected;
+    };
+    document.addEventListener("click",(event)=>{
+        if(!event.target.closest("#"+id)){
+            results.style.display="none";
+        }
+    });
+}
+function setupEvents(){
+    createCharacterSearch("selector1");
+    createCharacterSearch("selector2");
+    createCharacterSearch("selector3");
+    document.getElementById("clearButton").onclick = ()=>{
+        document.querySelectorAll(".character-search")
+            .forEach(input=>{
+                input.value="";
+            });
         updateResults();
     };
 }
