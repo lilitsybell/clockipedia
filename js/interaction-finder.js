@@ -158,7 +158,30 @@ function getInteractionCharacters(){
 
 }
 
-
+function getInteractionColor(interaction){
+    const chars = getCharacters(interaction.text);
+    let colors = [];
+    chars.forEach(character=>{
+        const slug = getSlug(character);
+        const data = characters[slug];
+        if(data){
+            const color = teamColors[data.team];
+            if(color && !colors.includes(color)){
+                colors.push(color);
+            }
+        }
+    });
+    // Traveller gets priority
+    if(colors.includes("traveller")){
+        return "traveller";
+    }
+    // If all same color, use it
+    if(colors.length === 1){
+        return colors[0];
+    }
+    // Mixed teams default purple
+    return "purple";
+}
 
 document.addEventListener("DOMContentLoaded", async()=>{
 
@@ -270,7 +293,8 @@ const charactersInInteraction = new Set(
         );
         if(show){
 const li = document.createElement("li");
-li.className = "interaction-card";
+const interactionColor = getInteractionColor(interaction);
+li.className = `interaction-card ${interactionColor}`;
 let infoButtons = "";
 let mathTriangle = "";
 if(interaction.math === "green"){
