@@ -7,10 +7,6 @@ document.addEventListener("DOMContentLoaded", () => {
         const target = event.target.closest("[data-tooltip], .character-link");
         if(!target) return;
         let text = target.dataset.tooltip;
-        // Character ability support
-        if(target.classList.contains("character-link")){
-            text = target.dataset.ability;
-        }
         if(!text || text.trim() === "") return;
         tooltip.textContent = text;
         tooltip.style.display = "block";
