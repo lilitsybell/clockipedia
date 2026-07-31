@@ -1,8 +1,11 @@
 console.log("tooltip.js loaded");
 document.addEventListener("DOMContentLoaded", () => {
-    const tooltip = document.createElement("div");
+let tooltip = document.querySelector(".ability-tooltip");
+if(!tooltip){
+    tooltip = document.createElement("div");
     tooltip.className = "ability-tooltip";
     document.body.appendChild(tooltip);
+}
     document.addEventListener("mouseover", (event)=>{
         const target = event.target.closest("[data-tooltip], .character-link");
         if(!target) return;
