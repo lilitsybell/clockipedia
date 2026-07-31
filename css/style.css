@@ -368,30 +368,6 @@ font-size:22px;
 .character-link.green{
     color:#8ea742;
 }
-.character-link::after{
-    content:attr(data-ability);
-    position:absolute;
-    left:50%;
-    bottom:130%;
-    transform:translateX(-50%);
-    width:300px;
-    background:#333;
-    color:white;
-    padding:12px 14px;
-    border-radius:8px;
-    font-size:14px;
-    font-weight:normal;
-    line-height:1.4;
-    text-align:left;
-    opacity:0;
-    pointer-events:none;
-    transition:.15s;
-    z-index:9999;
-    white-space:normal;
-}
-.character-link:hover::after{
-    opacity:1;
-}
 
 /* Travellers are half Townsfolk blue and half Minion red */
 
