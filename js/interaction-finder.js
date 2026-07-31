@@ -189,9 +189,9 @@ if(interaction.reason){
     `;
 }
 li.innerHTML = `
-<div class="interaction-text">
+<span class="interaction-text">
     ${formatCharacters(interaction.text)}
-</div>
+</span>
 ${infoButtons}
 ${mathTriangle}
 `;
