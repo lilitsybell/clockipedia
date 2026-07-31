@@ -33,26 +33,29 @@ function setupTooltips(){
                     ${character.ability}
                 </div>
             `;
-            tooltip.style.display = "block";
-            const rect = target.getBoundingClientRect();
-            let left = rect.left + window.scrollX;
-            let top = rect.bottom + window.scrollY + 10;
-            const tooltipWidth = 320;
-            const tooltipHeight = tooltip.offsetHeight;
-            // Prevent right edge overflow
-            if(left + tooltipWidth > window.innerWidth){
-                left = window.innerWidth - tooltipWidth - 20;
-            }
-            // Prevent bottom overflow
-            if(top + tooltipHeight > window.innerHeight + window.scrollY){
-                top = rect.top + window.scrollY - tooltipHeight - 10;
-            }
-            // Prevent left overflow
-            if(left < 10){
-                left = 10;
-            }
-            tooltip.style.left = left + "px";
-            tooltip.style.top = top + "px";
+tooltip.style.display = "block";
+const rect = target.getBoundingClientRect();
+let left = rect.left + window.scrollX;
+let top = rect.bottom + window.scrollY + 10;
+// Wait until the tooltip has its real size
+requestAnimationFrame(() => {
+    const tooltipWidth = tooltip.offsetWidth;
+    const tooltipHeight = tooltip.offsetHeight;
+    // Keep inside right edge
+    if(left + tooltipWidth > window.innerWidth + window.scrollX){
+        left = window.innerWidth + window.scrollX - tooltipWidth - 20;
+    }
+    // Keep inside left edge
+    if(left < window.scrollX + 10){
+        left = window.scrollX + 10;
+    }
+    // If below screen, put above character
+    if(top + tooltipHeight > window.innerHeight + window.scrollY){
+        top = rect.top + window.scrollY - tooltipHeight - 10;
+    }
+    tooltip.style.left = left + "px";
+    tooltip.style.top = top + "px";
+});
         },250);
     });
 document.addEventListener("mouseout", event=>{
