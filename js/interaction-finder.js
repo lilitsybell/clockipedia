@@ -188,17 +188,21 @@ const interactionColor = getInteractionColor(interaction);
 li.className = `interaction-card ${interactionColor}`;
 let infoButtons = "";
 let mathTriangle = "";
-if(interaction.math === "green"){
+if(interaction.math){
+    let mathText = "";
+    if(interaction.mathInfo){
+        mathText = interaction.mathInfo;
+    }
+    else if(interaction.math === "green"){
+        mathText = "Mathematician registers this as normal.";
+    }
+    else if(interaction.math === "red"){
+        mathText = "Mathematician registers this as abnormal.";
+    }
     mathTriangle = `
-    <span class="math-triangle green"
-    data-info="Mathematician registers this as normal.">
-    </span>
-    `;
-}
-if(interaction.math === "red"){
-    mathTriangle = `
-    <span class="math-triangle red"
-    data-info="Mathematician registers this as abnormal.">
+    <span class="math-triangle ${interaction.math}"
+    data-info="${mathText.replace(/"/g, '&quot;')}">
+        ▲
     </span>
     `;
 }
@@ -207,14 +211,6 @@ if(interaction.reason){
     <span class="info-button info-popup"
     data-info="${interaction.reason.replace(/"/g, '&quot;')}">
         ?
-    </span>
-    `;
-}
-if(interaction.mathInfo){
-    infoButtons += `
-    <span class="info-button info-popup"
-    data-info="${interaction.mathInfo.replace(/"/g, '&quot;')}">
-        ▲
     </span>
     `;
 }
