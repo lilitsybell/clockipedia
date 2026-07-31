@@ -1001,3 +1001,33 @@ font-size:22px;
     color:#333;
     line-height:1.5;
 }
+.ability-tooltip.red {
+    border-color:var(--red);
+}
+.ability-tooltip.red .tooltip-header {
+    background:var(--red);
+}
+.ability-tooltip.blue {
+    border-color:var(--blue);
+}
+.ability-tooltip.blue .tooltip-header {
+    background:var(--blue);
+}
+.ability-tooltip.green {
+    border-color:var(--lime);
+}
+.ability-tooltip.green .tooltip-header {
+    background:var(--lime);
+}
+.ability-tooltip.gold {
+    border-color:var(--copper);
+}
+.ability-tooltip.gold .tooltip-header {
+    background:var(--copper);
+}
+.ability-tooltip.purple {
+    border-color:var(--purple);
+}
+.ability-tooltip.purple .tooltip-header {
+    background:var(--purple);
+}
