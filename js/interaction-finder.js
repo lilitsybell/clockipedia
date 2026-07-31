@@ -198,14 +198,16 @@ if(interaction.math === "red"){
 }
 if(interaction.reason){
     infoButtons += `
-    <span class="info-button" title="${interaction.reason.replace(/"/g, '&quot;')}">
+    <span class="info-button info-popup"
+    data-info="${interaction.reason.replace(/"/g, '&quot;')}">
         ?
     </span>
     `;
 }
 if(interaction.mathInfo){
     infoButtons += `
-    <span class="info-button" title="${interaction.mathInfo.replace(/"/g, '&quot;')}">
+    <span class="info-button info-popup"
+    data-info="${interaction.mathInfo.replace(/"/g, '&quot;')}">
         ▲
     </span>
     `;
@@ -239,6 +241,11 @@ function setupEvents(){
             },
             onChange:updateResults
         });
+    document.addEventListener("click", e=>{
+    const button = e.target.closest(".info-popup");
+    if(!button) return;
+    alert(button.dataset.info);
+});
     });
 document.getElementById("clearButton").onclick = ()=>{
 document.querySelector("#char1").tomselect.clear();
