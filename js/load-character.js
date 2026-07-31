@@ -104,11 +104,7 @@ function showPage(index){
 }
 function formatCharacters(text){
     return text.replace(/\[(.*?)\]/g, (_, character) => {
-        const slug = slugExceptions[character] || character
-            .toLowerCase()
-            .replace(/[’']/g, "")
-            .replace(/[^a-z0-9]+/g, "-")
-            .replace(/^-|-$/g, "");
+const slug = getSlug(character);
         const linkedCharacter = characters[slug];
 const team =
     linkedCharacter
