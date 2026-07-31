@@ -383,8 +383,6 @@ function setupEvents(){
 
 
     document.getElementById("clearButton").onclick = ()=>{
-
-
         document.querySelector("#char1")[0].tomselect.clear();
         document.querySelector("#char2")[0].tomselect.clear();
         document.querySelector("#char3")[0].tomselect.clear();
