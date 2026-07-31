@@ -18,6 +18,11 @@ function formatCharacters(text){
         `;
     });
 }
+function getInteractionURL(interaction){
+    const characters = getCharacters(interaction.text)
+        .map(character => getSlug(character));
+    return "interaction.html?characters=" + characters.join(",");
+}
 function getCharacters(text){
     const matches=text.match(/\[(.*?)\]/g);
     if(!matches) return [];
@@ -152,6 +157,10 @@ li.innerHTML = `
 <div class="interaction-text">
     ${formatCharacters(interaction.text)}
 </div>
+<a class="interaction-view"
+   href="${getInteractionURL(interaction)}">
+    View Interaction
+</a>
 ${infoButtons}
 ${mathTriangle}
 `;
