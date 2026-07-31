@@ -1057,3 +1057,12 @@ h1, h2, h3, h4, h5, h6 {
     border-radius:8px;
 
 }
+
+.ts-dropdown .active {
+    background:#eee;
+    color:#333;
+}
+
+.ts-control input {
+    font-family:inherit;
+}
