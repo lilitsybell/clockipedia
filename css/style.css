@@ -794,11 +794,17 @@ font-size:22px;
     color:#b22222;
 }
 .math-triangle{
+    display:inline-block;
     width:22px;
     height:22px;
-    display:inline-block;
-    clip-path:polygon(50% 5%, 95% 90%, 5% 90%);
     margin-left:8px;
+    vertical-align:middle;
+    clip-path:polygon(
+        50% 0%,
+        100% 100%,
+        0% 100%
+    );
+    cursor:help;
 }
 .math-triangle.green{
     background:#2e9d3f;
