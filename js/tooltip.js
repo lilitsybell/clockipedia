@@ -55,10 +55,12 @@ function setupTooltips(){
             tooltip.style.top = top + "px";
         },250);
     });
-    document.addEventListener("mouseout", event=>{
-        if(event.target.closest("[data-character]")){
-            clearTimeout(tooltipTimer);
-            tooltip.style.display = "none";
-        }
-    });
+document.addEventListener("mouseout", event=>{
+    if(event.target.closest("[data-character]")){
+        clearTimeout(tooltipTimer);
+        tooltip.style.display = "none";
+        tooltip.innerHTML = "";
+        tooltip.className = "ability-tooltip";
+    }
+});
 }
