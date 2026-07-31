@@ -11,7 +11,7 @@ document.addEventListener("DOMContentLoaded", () => {
         if(target.classList.contains("character-link")){
             text = target.dataset.ability;
         }
-        if(!text) return;
+        if(!text || text.trim() === "") return;
         tooltip.textContent = text;
         tooltip.style.display = "block";
         const rect = target.getBoundingClientRect();
