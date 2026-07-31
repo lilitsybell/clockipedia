@@ -67,16 +67,11 @@ function getInteractionColor(interaction){
 }
 document.addEventListener("DOMContentLoaded", async()=>{
     try{
-        const characterResponse = await fetch("/data/characters.json");
-        characters = await characterResponse.json();
+        await loadCharacters();
         const interactionResponse = await fetch("/data/interactions.json");
         interactions = await interactionResponse.json();
         buildPage();
     }
-    catch(error){
-        console.error("Interaction Finder failed:",error);
-    }
-});
 function buildPage(){
     document.getElementById("interaction-finder").innerHTML = `
 <div class="finder-container">
