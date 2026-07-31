@@ -199,13 +199,15 @@ matchingInteractions
         </span>
         `;
     }
-    li.innerHTML = `
-    <span class="interaction-text">
-        ${formatCharacters(interaction.text)}
-    </span>
+li.innerHTML = `
+<div class="interaction-text">
+    ${formatCharacters(interaction.text)}
+</div>
+<div class="interaction-icons">
     ${infoButtons}
     ${mathTriangle}
-    `;
+</div>
+`;
     list.appendChild(li);
 });
     resultCount.textContent =
