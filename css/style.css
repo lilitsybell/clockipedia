@@ -926,28 +926,5 @@ font-size:22px;
     cursor:pointer;
 }
 .character-results .search-item:hover{
-    background:#eee;
-}
-.interaction-card.blue{
-    border-left-color:var(--blue);
-}
-.interaction-card.red{
-    border-left-color:var(--red);
-}
-.interaction-card.green{
-    border-left-color:var(--lime);
-}
-.interaction-card.gold{
-    border-left-color:var(--copper);
-}
-.interaction-card.purple{
-    border-left-color:var(--purple);
-}
-.interaction-card.traveller{
-    border-left:5px solid;
-    border-image:linear-gradient(
-        0deg,
-        var(--traveller-blue) 50%,
-        var(--traveller-red) 50%
-    ) 1;
+    background:var(--purple);
 }
