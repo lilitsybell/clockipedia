@@ -40,9 +40,13 @@ console.log("Color class:", teamColors[character.team]);
                 <div class="tab" onclick="showPage(1)">
                     How to Run
                 </div>
-                <div class="tab" onclick="showPage(2)">
-                    Examples
-                </div>
+<div class="tab" onclick="showPage(2)">
+    Examples
+</div>
+
+<div class="tab" onclick="showPage(3)">
+    Interactions
+</div>
             </div>
             <div class="content ${teamColors[character.team]}">
                 <div class="page active">
@@ -84,12 +88,18 @@ console.log("Color class:", teamColors[character.team]);
         `)
         .join("")}
 </div>
+<div class="page">
+    <h2>Interactions</h2>
+    <ul id="character-interactions">
+    </ul>
+</div>
             </div>
         </div>
         `;
-        document.querySelectorAll(".page").forEach(page => {
-            page.innerHTML = formatCharacters(page.innerHTML);
-        });
+document.querySelectorAll(".page").forEach(page => {
+    page.innerHTML = formatCharacters(page.innerHTML);
+});
+loadCharacterInteractions(characterID);
     } catch(error) {
         console.error("Character loading failed:", error);
     }
@@ -119,4 +129,39 @@ return `
     ${character}
 </a>`;
     });
+}
+async function loadCharacterInteractions(id){
+    try{
+        const response = await fetch("/data/interactions.json");
+        const interactions = await response.json();
+        const list = document.getElementById("character-interactions");
+        if(!list) return;
+        const characterName = characters[id].name;
+        const results = interactions.filter(interaction => {
+            return getCharacters(interaction.text)
+                .includes(characterName);
+        });
+        if(results.length === 0){
+            list.innerHTML = `
+                <li>No interactions found.</li>
+            `;
+            return;
+        }
+        list.innerHTML = "";
+        results.forEach(interaction => {
+            const li = document.createElement("li");
+            li.className = 
+                "interaction-card " + 
+                getInteractionColor(interaction);
+            li.innerHTML = `
+                ${formatCharacters(interaction.text)}
+            `;
+            list.appendChild(li);
+        });
+    }catch(error){
+        console.error(
+            "Failed loading interactions:",
+            error
+        );
+    }
 }
