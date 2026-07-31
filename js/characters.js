@@ -26,6 +26,7 @@ const slugExceptions = {
     "Bounty Hunter": "bountyhunter",
     "Cult Leader": "cultleader",
     "Evil Twin": "eviltwin",
+    "Fang Gu": "fanggu",
     "Fortune Teller": "fortuneteller",
     "High Priestess": "highpriestess",
     "Lord of Typhon": "lordoftyphon",
