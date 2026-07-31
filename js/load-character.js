@@ -1,9 +1,8 @@
-console.log("load-character updated 7/31/2026 16:18PM");
+console.log("load-character updated 7/31/2026 16:37PM");
 console.log("Character ID:", characterID);
 document.addEventListener("DOMContentLoaded", async () => {
     try {
-        const response = await fetch("/data/characters.json");
-        characters = await response.json();
+await loadCharacters();
                 console.log("Characters loaded:", characters);
         const character = characters[characterID];
         console.log("Character team:", character.team);
