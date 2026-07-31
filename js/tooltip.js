@@ -1,18 +1,24 @@
-console.log("tooltip.js updated 7/31/26 14:05");
+console.log("tooltip.js updated 7/31/26 14:24");
 document.addEventListener("DOMContentLoaded", () => {
-    const tooltip = document.createElement("div");
-    tooltip.className = "ability-tooltip";
-    document.body.appendChild(tooltip);
+    let tooltip = document.querySelector(".ability-tooltip");
+    if(!tooltip){
+        tooltip = document.createElement("div");
+        tooltip.className = "ability-tooltip";
+        document.body.appendChild(tooltip);
+    }
     document.addEventListener("mouseover", event=>{
         const target = event.target.closest("[data-character]");
         if(!target) return;
         const id = target.dataset.character;
         const character = characters[id];
         if(!character) return;
+        const teamClass = teamColors[character.team] || "purple";
+        tooltip.className = 
+            "ability-tooltip " + teamClass;
         tooltip.innerHTML = `
             <div class="tooltip-header">
                 <img src="${character.image}">
-                <div>
+                <div class="tooltip-title">
                     <strong>${character.name}</strong>
                     <span>${character.team}</span>
                 </div>
@@ -21,17 +27,18 @@ document.addEventListener("DOMContentLoaded", () => {
                 ${character.ability}
             </div>
         `;
-        tooltip.className =
-            "ability-tooltip " +
-            (teamColors[character.team] || "");
-        tooltip.style.display="block";
+        tooltip.style.display = "block";
         const rect = target.getBoundingClientRect();
-        tooltip.style.left =
-            rect.left + window.scrollX
-            + "px";
-        tooltip.style.top =
-            rect.bottom + window.scrollY + 8
-            + "px";
+        let left =
+            rect.left + window.scrollX;
+        let top =
+            rect.bottom + window.scrollY + 10;
+        // Keep tooltip on screen
+        if(left + 320 > window.innerWidth){
+            left = window.innerWidth - 340;
+        }
+        tooltip.style.left = left + "px";
+        tooltip.style.top = top + "px";
     });
     document.addEventListener("mouseout", event=>{
         const target = event.target.closest("[data-character]");
