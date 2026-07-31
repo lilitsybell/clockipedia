@@ -1,5 +1,34 @@
 console.log("tooltip.js updated 7/31/26 14:24");
-document.addEventListener("DOMContentLoaded", () => {
+let tooltipCharacters = {};
+const tooltipTeamColors = {
+    "Townsfolk":"blue",
+    "Outsider":"blue",
+    "Outsiders":"blue",
+    "Minion":"red",
+    "Minions":"red",
+    "Demon":"red",
+    "Demons":"red",
+    "Traveller":"traveller",
+    "Travellers":"traveller",
+    "Loric":"green",
+    "Fabled":"gold"
+};
+const singularTeams = {
+    "Townsfolk": "Townsfolk",
+    "Outsiders": "Outsider",
+    "Minions": "Minion",
+    "Demons": "Demon",
+    "Travellers": "Traveller",
+    "Loric": "Loric",
+    "Fabled": "Fabled"
+};
+fetch("/data/characters.json")
+.then(response => response.json())
+.then(data => {
+    tooltipCharacters = data;
+    setupTooltips();
+});
+function setupTooltips(){
     let tooltip = document.querySelector(".ability-tooltip");
     if(!tooltip){
         tooltip = document.createElement("div");
@@ -10,20 +39,11 @@ document.addEventListener("DOMContentLoaded", () => {
         const target = event.target.closest("[data-character]");
         if(!target) return;
         const id = target.dataset.character;
-        const character = characters[id];
+        const character = tooltipCharacters[id];
         if(!character) return;
-        const teamClass = teamColors[character.team] || "purple";
+        const teamClass = tooltipTeamColors[character.team] || "purple";
         tooltip.className = 
             "ability-tooltip " + teamClass;
-const singularTeams = {
-    "Townsfolk": "Townsfolk",
-    "Outsiders": "Outsider",
-    "Minions": "Minion",
-    "Demons": "Demon",
-    "Travellers": "Traveller",
-    "Loric": "Loric",
-    "Fabled": "Fabled"
-};
 tooltip.innerHTML = `
 <div class="tooltip-header">
     <img src="${character.image}">
