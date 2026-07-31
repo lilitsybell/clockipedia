@@ -814,27 +814,26 @@ font-size:22px;
     background:#b22222;
 }
 .math-triangle::after{
-    content:attr(title);
-    position:absolute;
-}
-.math-triangle:hover::after{
     content:attr(data-info);
     position:absolute;
     bottom:130%;
     left:50%;
     transform:translateX(-50%);
-
     width:240px;
     padding:10px 12px;
-
     background:#333;
     color:white;
-
     border-radius:8px;
     font-size:14px;
     line-height:1.4;
-
+    text-align:left;
+    opacity:0;
+    pointer-events:none;
+    transition:.2s;
     z-index:9999;
+}
+.math-triangle:hover::after{
+    opacity:1;
 }
 /* ===========================
    Interaction Finder Layout
