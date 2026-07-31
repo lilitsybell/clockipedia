@@ -168,11 +168,6 @@ function formatCharacters(text){
             .replace(/^-|-$/g, "");
         const linkedCharacter = characters[slug];
         let team = "default";
-        let ability = "";
-        if(linkedCharacter){
-            team = teamColors[linkedCharacter.team] || "default";
-            ability = linkedCharacter.ability || "";
-        }
 return `
 <a 
     href="character.html?id=${slug}" 
