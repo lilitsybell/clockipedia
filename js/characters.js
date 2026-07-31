@@ -54,7 +54,15 @@ const slugExceptions = {
     "Storm Catcher":"stormcatcher"
 };
 function singularTeam(team){
-    return singularTeams[team] || team;
+    return {
+        "Townsfolk":"Townsfolk",
+        "Outsiders":"Outsider",
+        "Minions":"Minion",
+        "Demons":"Demon",
+        "Travellers":"Traveller",
+        "Loric":"Loric",
+        "Fabled":"Fabled"
+    }[team] || team;
 }
 function getSlug(name){
     return slugExceptions[name] || name
