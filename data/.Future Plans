@@ -3,3 +3,7 @@ Interaction Finder:
 
 Character Pages:
 - add an interactions tab to character pages that automatically show interactions that include that character
+
+Tooltips:
+- prevent them from going offscreen
+- color code them to character team
