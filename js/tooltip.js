@@ -1,9 +1,6 @@
 console.log("tooltip.js updated 7/31/26 16:43");
 document.addEventListener("DOMContentLoaded", async () => {
-    // Load shared character data once if needed
-    if (Object.keys(characters).length === 0) {
-        await loadCharacters();
-    }
+    await loadCharacters();
     setupTooltips();
 });
 function setupTooltips(){
