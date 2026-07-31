@@ -1,4 +1,4 @@
-console.log("interaction-finder Updated 7/30/26 10:38PM");
+console.log("interaction-finder Updated 7/30/26 11:04PM");
 let characters = {};
 let interactions = [];
 const teamColors = {
@@ -190,18 +190,16 @@ let infoButtons = "";
 let mathTriangle = "";
 if(interaction.math === "green"){
     mathTriangle = `
-    <span class="triangle green info-button"
-    data-info="Mathematician registers this as normal">
+<span class="math-triangle green">
     ▲
-    </span>
+</span>
     `;
 }
 if(interaction.math === "red"){
     mathTriangle = `
-    <span class="triangle red info-button"
-    data-info="Mathematician registers this as abnormal">
+<span class="math-triangle red">
     ▲
-    </span>
+</span>
     `;
 }
 if(interaction.reason){
