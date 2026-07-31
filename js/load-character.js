@@ -73,8 +73,13 @@ console.log("Color class:", teamColors[character.team]);
         <div class="wiki ${teamColors[character.team]}">
 <div class="character-header">
     <div class="character-title">
-        <h1 class="${teamColors[character.team]}">
-            ${character.name}
+<h1 class="${teamColors[character.team]}">
+<span 
+    class="character-link ${teamColors[character.team]}"
+    data-character="${characterID}"
+>
+    ${character.name}
+</span>
 <span class="character-team">
     (${singularTeam(character.team)})
 </span>
@@ -168,14 +173,13 @@ function formatCharacters(text){
             team = teamColors[linkedCharacter.team] || "default";
             ability = linkedCharacter.ability || "";
         }
-        return `
-        <a 
-            href="character.html?id=${slug}" 
-            class="character-link ${team}"
-            data-tooltip="${ability.replace(/"/g,"&quot;")}"
-        >
-            ${character}
-        </a>
-        `;
+return `
+<a 
+    href="character.html?id=${slug}" 
+    class="character-link ${team}"
+    data-character="${slug}"
+>
+    ${character}
+</a>`;
     });
 }
