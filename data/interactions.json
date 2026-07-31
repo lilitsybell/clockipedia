@@ -472,7 +472,7 @@
         "math":"green",
         "reason":"The Acrobat only detects drunkenness or poison.",
         "mathInfo":"The Acrobat's ability is working as intended."
-    }
+    },
     {
         "text":"The [Acrobat] cannot die due to their own ability if they are [Courtier] drunk.",
         "math":"red",
