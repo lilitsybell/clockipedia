@@ -12,8 +12,12 @@
 --red:#A41618;
 --lime:#8EA742;
 --copper:#B77102;
+--purple:#7851A9;
 --traveller-blue:#2f6fc4;
 --traveller-red:#b52323;
+--gray:#959799;
+--light-gray:#fafafa;
+--border:#ddd;
 }
 html, body {
     overscroll-behavior: none;
@@ -33,7 +37,6 @@ html {
 .hidden{
     display:none;
 }
-
 .center{
     text-align:center;
 }
@@ -90,203 +93,113 @@ body {
     font-family: "Roboto", sans-serif;
 }
 
-
-
 /* LOGO */
 
 .logo {
-
     text-align:center;
-
     margin-bottom:25px;
-
 }
-
-
 .logo img {
-
     width:210px;
-
 }
-
-
 
 /* SEARCH */
 
 .search-box{
-
     position:relative;
-
     margin-bottom:25px;
-
 }
-
-
 .search-box input{
-
     width:100%;
-
     padding:10px 14px;
-
     border-radius:10px;
-
     border:2px solid var(--blue);
-
     background:white;
-
     font-size:15px;
-
     box-sizing:border-box;
-
     font-family:"Roboto", sans-serif;
-
 }
-
 .search-results{
-
     position:absolute;
-
     left:0;
-
     top:100%;
-
     width:100%;
-
     margin-top:6px;
-
     background:white;
-
     border-radius:10px;
-
     box-shadow:0 8px 20px rgba(0,0,0,.08);
-
     overflow:hidden;
-
     display:none;
-
     z-index:9999;
-
 }
-
 .search-item {
     display:flex;
     align-items:center;
     gap:10px;
 }
-
 .search-icon {
     width:40px;
     height:40px;
     object-fit:contain;
 }
-
 .search-item:hover{
-
     background:var(--blue);
-
     color:white;
-
 }
-
 .search-text {
     display:flex;
     flex-direction:column;
     line-height:1.1;
 }
-
 .search-text strong {
     font-size:16px;
 }
-
 .search-text small {
     font-size:13px;
     margin-top:2px;
 }
 
-
 /* LINKS */
 
 .sidebar-nav {
-
     display:flex;
-
     flex-direction:column;
-
 }
-
-
-
 .nav-link {
-
     display:block;
-
     padding:10px 12px;
-
     margin:3px 0;
-
     border-radius:8px;
-
     text-decoration:none;
-
     color:var(--black);
-
     font-size:18px;
-
     cursor:pointer;
-
     transition:.2s;
-
 }
-
-
-
 .nav-link:hover {
-
     background:#e7f3f8;
-
 }
-
 .nav-link.active {
-
     background:white;
-
     color:var(--black);
-
 }
-
 
 /* CHARACTER MENU */
 
 .character-toggle {
-
     display:flex;
-
     justify-content:space-between;
-
     align-items:center;
-
     padding:10px 12px;
-
     margin:3px 0;
-
     border-radius:8px;
-
     color:var(--black);
-
     font-size:18px;
-
     cursor:pointer;
-
 }
-
-
 .character-toggle:hover {
-
     background:#e7f3f8;
-
 }
-
-
 .arrow {
     font-size:12px;
     transition:transform .3s ease;
@@ -309,29 +222,23 @@ body {
 /* Show character choices when opened */
 
 .character-section.open .character-dropdown {
-
     max-height:500px;
     opacity:1;
-
 }
 
 
 /* Rotate arrow */
 
 .character-section.open .arrow {
-
     transform:rotate(180deg);
-
 }
 
 
 /* Indented character links */
 
 .sub-link {
-
     padding-left:35px;
     font-size:16px;
-
 }
 
 /* MAIN CONTENT */
@@ -343,92 +250,47 @@ body {
 }
 
 /* HOMEPAGE STUFF */
+
 .home-hero {
-
     max-width:900px;
-
     margin:40px auto;
-
     background:white;
-
     border-radius:18px;
-
     padding:40px;
-
     text-align:center;
-
     box-shadow:0 3px 12px rgba(0,0,0,.08);
-
 }
-
-
 .home-logo {
-
     width:350px;
-
     max-width:80%;
-
     margin-bottom:20px;
-
 }
-
-
 .home-hero h1 {
-
     font-size:42px;
-
     margin:10px 0;
-
     color:var(--black);
-
 }
-
-
 .home-hero p {
-
     font-size:22px;
-
     max-width:650px;
-
     margin:0 auto 30px;
-
 }
-
-
 .hero-buttons {
-
     display:flex;
-
     justify-content:center;
-
     gap:20px;
-
 }
-
-
 .hero-buttons a {
-
     background:var(--blue);
-
     color:white;
-
     padding:12px 25px;
-
     border-radius:10px;
-
     text-decoration:none;
-
     font-size:18px;
-
 }
-
-
 .hero-buttons a:hover {
-
     opacity:.85;
-
 }
-
 
 /* ===========================
    Character Pages
@@ -440,32 +302,17 @@ body {
     min-height:100vh;
     box-sizing:border-box;
 }
-
-
 .character-page img {
-
 width:220px;
-
 }
-
-
 .character-page h1 {
-
 font-size:42px;
-
 margin:20px 0 5px;
-
 }
-
-
 .character-page h3 {
-
 color:var(--blue);
-
 font-size:22px;
-
 }
-
 .character-header {
     display: flex;
     justify-content: center;
@@ -474,34 +321,24 @@ font-size:22px;
     margin-bottom: 30px;
     background: none;
 }
-
-
 .character-title {
     width: 500px;
 }
-
-
 .character-header img {
     width: 180px;
     height: 180px;
     object-fit: contain;
 }
-
-
 .character-header h1 {
     font-size: 42px;
     margin: 0 0 20px 0;
     font-family: "Cormorant Garamond", serif;
 }
-
-
 .character-team {
     color: #959799;
     font-size: 22px;
     font-weight: normal;
 }
-
-
 .character-ability {
     font-size: 22px;
     font-style: normal;
@@ -514,66 +351,43 @@ font-size:22px;
 /* Character links */
 
 .character-link{
-
     font-weight:bold;
     text-decoration:none;
-
 }
-
-
 .character-link:hover{
-
     text-decoration:underline;
-
 }
-
-
 .character-link.blue{
     color:var(--blue);
 }
-
-
 .character-link.red{
     color:#a41618;
 }
-
-
 .character-link.purple{
-    color:#7851A9;
+    color:var(--purple);
 }
-
-
 .character-link.gold{
     color:#b77102;
 }
-
-
 .character-link.green{
     color:#8ea742;
 }
 
-
 /* Travellers are half Townsfolk blue and half Minion red */
 
 .character-link.traveller{
-
     background:linear-gradient(
         0deg,
         var(--traveller-blue) 50%,
         var(--traveller-red) 50%
     );
-
     -webkit-background-clip:text;
     background-clip:text;
-
     color:transparent;
-
 }
-
 .wiki.traveller .content{
     border-color:var(--traveller-blue);
 }
-
 .wiki.traveller .content::after{
     background:linear-gradient(
         0deg,
@@ -581,23 +395,18 @@ font-size:22px;
         var(--traveller-red) 50%
     );
 }
-
 .wiki.blue h2{
     color:var(--blue);
 }
-
 .wiki.red h2{
     color:#a41618;
 }
-
 .wiki.gold h2{
     color:#b77102;
 }
-
 .wiki.green h2{
     color:#8ea742;
 }
-
 .wiki.traveller h2{
     background:linear-gradient(
         0deg,
@@ -608,38 +417,29 @@ font-size:22px;
     background-clip:text;
     color:transparent;
 }
-
 .character-link.default{
-
-    color:#7851A9;
-
+    color:var(--purple);
 }
-
 .content.blue h2,
 .content.blue h3{
     color:var(--blue);
 }
-
 .content.red h2,
 .content.red h3{
     color:#a41618;
 }
-
 .content.purple h2,
 .content.purple h3{
-    color:#7851A9;
+    color:var(--purple);
 }
-
 .content.gold h2,
 .content.gold h3{
     color:#b77102;
 }
-
 .content.green h2,
 .content.green h3{
     color:#8ea742;
 }
-
 .content.traveller h1,
 .content.traveller h2,
 .content.traveller h3{
@@ -648,29 +448,22 @@ font-size:22px;
         var(--traveller-blue) 50%,
         var(--traveller-red) 50%
     );
-
     -webkit-background-clip:text;
     background-clip:text;
-
     color:transparent;
 }
-
 h1.blue, h2.blue, h3.blue{
     color:var(--blue);
 }
-
 h1.red, h2.red, h3.red{
     color:#a41618;
 }
-
 h1.purple, h2.purple, h3.purple{
-    color:#7851A9;
+    color:var(--purple);
 }
-
 h1.gold, h2.gold, h3.gold{
     color:#b77102;
 }
-
 h1.green, h2.green, h3.green{
     color:#8ea742;
 }
@@ -682,7 +475,6 @@ h1.green, h2.green, h3.green{
     margin:auto;
 }
 
-
 /* Tabs */
 
 .tabs{
@@ -690,7 +482,6 @@ h1.green, h2.green, h3.green{
     gap:8px;
     margin-bottom:0;
 }
-
 .tab{
     background:#959799;
     color:white;
@@ -702,27 +493,21 @@ h1.green, h2.green, h3.green{
     border-radius:12px 12px 0 0;
     transition:.2s;
 }
-
 .tab:hover{
     background:#858789;
 }
-
 .tab.active{
     background:var(--blue);
 }
-
 .wiki.red .tab.active{
     background:#a41618;
 }
-
 .wiki.gold .tab.active{
     background:#b77102;
 }
-
 .wiki.green .tab.active{
     background:#8ea742;
 }
-
 .wiki.traveller .tab.active{
     background:linear-gradient(
         0deg,
@@ -730,57 +515,28 @@ h1.green, h2.green, h3.green{
         var(--traveller-red) 50%
     );
 }
-
 .page {
     display: none;
 }
-
 .page.active {
     display: block;
 }
-
 .content{
     position:relative;
-
     background:white;
-
     border:3px solid var(--blue);
     border-top:5px solid var(--blue);
-
     border-radius:0 12px 12px 12px;
-
     padding:25px 55px 70px;
-
     box-shadow:0 10px 24px rgba(0,0,0,.12);
 }
 
 /* Team colored character boxes */
 
-.wiki.blue .content{
-    border:3px solid var(--blue);
-    border-top:5px solid var(--blue);
+.wiki .content {
+    border:3px solid var(--team-color);
+    border-top:5px solid var(--team-color);
 }
-
-.wiki.red .content{
-    border:3px solid #a41618;
-    border-top:5px solid #a41618;
-}
-
-.wiki.gold .content{
-    border:3px solid #b77102;
-    border-top:5px solid #b77102;
-}
-
-.wiki.green .content{
-    border:3px solid #8ea742;
-    border-top:5px solid #8ea742;
-}
-
-.wiki.traveller .content{
-    border:3px solid var(--traveller-blue);
-    border-top:5px solid var(--traveller-blue);
-}
-
 .content::after{
     content:"";
     position:absolute;
@@ -788,26 +544,21 @@ h1.green, h2.green, h3.green{
     right:0;
     bottom:0;
     height:12px;
-    background:var(--blue);
+    background:var(--team-color);
     border-radius:0 0 9px 9px;
 }
-
-.wiki.blue .content::after{
-    background:var(--blue);
+.wiki.blue {
+    --team-color:var(--blue);
 }
-
-.wiki.red .content::after{
-    background:#a41618;
+.wiki.red {
+    --team-color:var(--red);
 }
-
-.wiki.gold .content::after{
-    background:#b77102;
+.wiki.gold {
+    --team-color:var(--copper);
 }
-
-.wiki.green .content::after{
-    background:#8ea742;
+.wiki.green {
+    --team-color:var(--lime);
 }
-
 .wiki.traveller .content::after{
     background:linear-gradient(
         0deg,
@@ -823,10 +574,8 @@ h1.green, h2.green, h3.green{
     border:1px solid #d8d8d8;
     border-left:5px solid var(--blue);
     border-radius:8px;
-
     padding:22px 24px;
     margin:25px 0;
-
     line-height:1.7;
 }
 
@@ -836,15 +585,12 @@ h1.green, h2.green, h3.green{
 .wiki.red .example{
     border-left-color:#a41618;
 }
-
 .wiki.gold .example{
     border-left-color:#b77102;
 }
-
 .wiki.green .example{
     border-left-color:#8ea742;
 }
-
 .wiki.traveller .example{
     border-left:5px solid;
     border-image:linear-gradient(
@@ -853,7 +599,6 @@ h1.green, h2.green, h3.green{
         var(--traveller-red) 50%
     ) 1;
 }
-
 .character-header h1,
 .character-header h2,
 .character-header h3,
@@ -869,37 +614,22 @@ h1.green, h2.green, h3.green{
 =========================== */
 
 .info-button{
-
     display:inline-flex;
-
     justify-content:center;
     align-items:center;
-
     width:22px;
     height:22px;
-
     margin-left:8px;
-
     border-radius:50%;
-
     background:#6a5697;
-
     color:white;
-
     font-size:13px;
-
     cursor:pointer;
-
     font-weight:bold;
-
 }
-
-
 .info-button:hover{
-
     background:#57447d;
     opacity:.75;
-
 }
 .ts-dropdown{
     border-radius:8px;
@@ -939,30 +669,18 @@ h1.green, h2.green, h3.green{
 }
 #list{
     list-style:none;
-
     margin:0;
-
     padding:0;
-
 }
 #list li{
-
     background:#fafafa;
-
     border:1px solid #ddd;
-
     border-left:5px solid var(--blue);
-
     border-radius:10px;
-
     padding:18px 22px;
-
     margin-bottom:18px;
-
     line-height:1.7;
-
     box-shadow:0 2px 8px rgba(0,0,0,.05);
-
 }
 
 /* ===========================
@@ -970,122 +688,60 @@ h1.green, h2.green, h3.green{
 =========================== */
 
 #interaction-finder{
-
     margin-left:260px;
     padding:40px;
-
 }
-
-
 .selector-container{
-
     display:flex;
-
     gap:15px;
-
     flex-wrap:wrap;
-
     align-items:center;
-
     background:#fafafa;
-
     border:1px solid #ddd;
-
     border-radius:12px;
-
     padding:20px;
-
     margin-bottom:25px;
-
 }
-
-
 .selector-container button{
-
     background:var(--blue);
-
     color:white;
-
     border:none;
-
     padding:12px 25px;
-
     border-radius:8px;
-
     cursor:pointer;
-
     font-size:16px;
-
 }
-
-
 .selector-container button:hover{
-
     opacity:.85;
-
 }
-
-
 .legend{
-
     display:flex;
-
     gap:20px;
-
     flex-wrap:wrap;
-
     margin-bottom:25px;
-
 }
-
-
 .legend-item{
-
     background:#f5f5f5;
-
     padding:10px 15px;
-
     border-radius:20px;
-
     display:flex;
-
     align-items:center;
-
     gap:8px;
-
     font-size:15px;
-
 }
-
 .interaction-card{
-
     list-style:none;
-
     background:#fafafa;
-
     border:1px solid #ddd;
-
     border-left:5px solid var(--blue);
-
     border-radius:10px;
-
     padding:18px 22px;
-
     margin:15px 0;
-
     font-size:17px;
-
     line-height:1.6;
-
     transition:.2s;
-
 }
-
-
 .interaction-card:hover{
-
     transform:translateX(5px);
-
     box-shadow:0 5px 15px rgba(0,0,0,.1);
-
 }
