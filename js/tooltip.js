@@ -25,7 +25,7 @@ function setupTooltips(){
                 <img src="${character.image}">
                 <div class="tooltip-title">
                     <strong>${character.name}</strong>
-                    <span>${singularTeam(character.team)}</span>
+                    <span>${singularTeams(character.team)}</span>
                 </div>
             </div>
 
