@@ -141,9 +141,13 @@ function buildPage(){
         The <b>Mathematician</b> registers this as <b>abnormal</b>.
     </div>
 </div>
-    <div id="results">
-        <ul id="list"></ul>
+<div id="results">
+    <div id="result-count">
+        showing 0 interactions
     </div>
+
+    <ul id="list"></ul>
+</div>
 </div>
 `;
     setupEvents();
@@ -157,6 +161,7 @@ const selected = [
 ].filter(x => x !== "");
     const list = document.getElementById("list");
     list.innerHTML = "";
+    const resultCount = document.getElementById("result-count");
     interactions.forEach(interaction=>{
 const charactersInInteraction = new Set(
     getCharacters(interaction.text)
@@ -198,6 +203,8 @@ formatCharacters(interaction.text)
 list.appendChild(li);
         }
     });
+    resultCount.textContent =
+    `Showing ${list.children.length} interaction${list.children.length === 1 ? "" : "s"}`;
     if(list.children.length === 0){
         list.innerHTML = "<li>No interactions found.</li>";
     }
