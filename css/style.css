@@ -968,11 +968,10 @@ font-size:22px;
     position:absolute;
     width:320px;
     background:white;
-    border:3px solid var(--blue);
     border-radius:12px;
+    overflow:hidden;
     box-shadow:0 8px 25px rgba(0,0,0,.25);
     z-index:99999;
-    overflow:hidden;
     pointer-events:none;
 }
 .tooltip-header {
@@ -980,12 +979,11 @@ font-size:22px;
     align-items:center;
     gap:15px;
     padding:15px;
-    background:var(--blue);
     color:white;
 }
 .tooltip-header img {
-    width:70px;
-    height:70px;
+    width:75px;
+    height:75px;
     object-fit:contain;
 }
 .tooltip-header strong {
@@ -997,37 +995,51 @@ font-size:22px;
     font-size:15px;
 }
 .tooltip-ability {
-    padding:15px;
-    color:#333;
+    padding:18px;
+    font-size:15px;
     line-height:1.5;
 }
 .ability-tooltip.red {
     border-color:var(--red);
 }
-.ability-tooltip.red .tooltip-header {
-    background:var(--red);
-}
 .ability-tooltip.blue {
     border-color:var(--blue);
-}
-.ability-tooltip.blue .tooltip-header {
-    background:var(--blue);
 }
 .ability-tooltip.green {
     border-color:var(--lime);
 }
-.ability-tooltip.green .tooltip-header {
-    background:var(--lime);
-}
 .ability-tooltip.gold {
     border-color:var(--copper);
-}
-.ability-tooltip.gold .tooltip-header {
-    background:var(--copper);
 }
 .ability-tooltip.purple {
     border-color:var(--purple);
 }
-.ability-tooltip.purple .tooltip-header {
+.ability-tooltip.blue .tooltip-header{
+    background:var(--blue);
+}
+.ability-tooltip.red .tooltip-header{
+    background:var(--red);
+}
+.ability-tooltip.green .tooltip-header{
+    background:var(--lime);
+}
+.ability-tooltip.gold .tooltip-header{
+    background:var(--copper);
+}
+.ability-tooltip.purple .tooltip-header{
     background:var(--purple);
+}
+.ability-tooltip.traveller .tooltip-header{
+    background:linear-gradient(
+        0deg,
+        var(--traveller-blue) 50%,
+        var(--traveller-red) 50%
+    );
+}
+.tooltip-title strong {
+    display:block;
+    font-size:22px;
+}
+.tooltip-title span {
+    font-size:15px;
 }
