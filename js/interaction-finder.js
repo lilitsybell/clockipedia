@@ -18,11 +18,6 @@ function formatCharacters(text){
         `;
     });
 }
-function getInteractionURL(interaction){
-    const characterIDs = getCharacters(interaction.text)
-        .map(character => getSlug(character));
-    return "interaction-finder.html?characters=" + characterIDs.join(",");
-}
 function getCharacters(text){
     const matches=text.match(/\[(.*?)\]/g);
     if(!matches) return [];
@@ -69,8 +64,8 @@ document.addEventListener("DOMContentLoaded", async()=>{
         await loadCharacters();
         const interactionResponse = await fetch("/data/interactions.json");
         interactions = await interactionResponse.json();
-        buildPage();
-        loadURLCharacters();
+buildPage();
+loadURLCharacters();
     }
     catch(error){
         console.error("Interaction Finder failed:", error);
@@ -89,9 +84,31 @@ function loadURLCharacters(){
     charactersFromURL.forEach((id,index)=>{
         const character = characters[id];
         if(!character) return;
-        selectors[index].setValue(character.name);
+        if(selectors[index] && selectors[index].setValue){
+            selectors[index].setValue(character.name);
+        }
     });
     updateResults();
+}
+function updateURLCharacters(){
+    const selected = [
+        document.querySelector("#selector1").getValue(),
+        document.querySelector("#selector2").getValue(),
+        document.querySelector("#selector3").getValue()
+    ]
+    .filter(x => x !== "")
+    .map(name => getSlug(name));
+    const url = new URL(window.location);
+    if(selected.length){
+        url.searchParams.set(
+            "characters",
+            selected.join(",")
+        );
+    }
+    else{
+        url.searchParams.delete("characters");
+    }
+    history.replaceState(null,"",url);
 }
 function buildPage(){
     document.getElementById("interaction-finder").innerHTML = `
@@ -175,10 +192,6 @@ li.innerHTML = `
 <div class="interaction-text">
     ${formatCharacters(interaction.text)}
 </div>
-<a class="interaction-view"
-   href="${getInteractionURL(interaction)}">
-    View this interaction
-</a>
 ${infoButtons}
 ${mathTriangle}
 `;
@@ -227,13 +240,14 @@ container.innerHTML = `
                     <small>${singularTeam(char.team)}</small>
                 </div>
             `;
-            item.onclick=()=>{
-                selected = char.name;
-                input.value = char.name;
-                clearButton.style.display = "flex";
-                results.style.display="none";
-                updateResults();
-            };
+item.onclick=()=>{
+    selected = char.name;
+    input.value = char.name;
+    clearButton.style.display = "flex";
+    results.style.display="none";
+    updateURLCharacters();
+    updateResults();
+};
             results.appendChild(item);
         });
         results.style.display="block";
@@ -253,13 +267,12 @@ container.clear = ()=>{
 };
     clearButton.onclick = (event)=>{
     event.stopPropagation();
-
     selected = "";
     input.value = "";
     results.innerHTML = "";
     results.style.display = "none";
     clearButton.style.display = "none";
-
+    updateURLCharacters();
     updateResults();
 };
     document.addEventListener("click",(event)=>{
@@ -277,6 +290,7 @@ document.querySelectorAll(".character-selector")
     .forEach(selector=>{
         selector.clear();
     });
+updateURLCharacters();
 updateResults();
     };
 }
