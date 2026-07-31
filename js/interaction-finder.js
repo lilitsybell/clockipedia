@@ -155,49 +155,59 @@ const selected = [
     const list = document.getElementById("list");
     list.innerHTML = "";
     const resultCount = document.getElementById("result-count");
-    interactions.forEach(interaction=>{
-const charactersInInteraction = new Set(
-    getCharacters(interaction.text)
-);
-        const show = selected.every(character =>
-            charactersInInteraction.has(character)
-        );
-        if(show){
-const li = document.createElement("li");
-const interactionColor = getInteractionColor(interaction);
-li.className = `interaction-card ${interactionColor}`;
-let infoButtons = "";
-let mathTriangle = "";
-if(interaction.math){
-    let mathText = interaction.mathInfo || 
-        (interaction.math === "green"
-            ? "Mathematician registers this as normal."
-            : "Mathematician registers this as abnormal.");
-
-    mathTriangle = `
-    <span class="math-triangle ${interaction.math}"
-    data-info="${mathText.replace(/"/g, '&quot;')}">
+const matchingInteractions = interactions.filter(interaction=>{
+    const charactersInInteraction = new Set(
+        getCharacters(interaction.text)
+    );
+    return selected.every(character =>
+        charactersInInteraction.has(character)
+    );
+});
+matchingInteractions
+.sort((a,b)=>{
+    const aCharacters = getCharacters(a.text).length;
+    const bCharacters = getCharacters(b.text).length;
+    // First: fewest characters
+    if(aCharacters !== bCharacters){
+        return aCharacters - bCharacters;
+    }
+    // Second: shortest text length
+    return a.text.length - b.text.length;
+})
+.forEach(interaction=>{
+    const li = document.createElement("li");
+    const interactionColor = getInteractionColor(interaction);
+    li.className = `interaction-card ${interactionColor}`;
+    let infoButtons = "";
+    let mathTriangle = "";
+    if(interaction.math){
+        let mathText = interaction.mathInfo ||
+            (interaction.math === "green"
+                ? "Mathematician registers this as normal."
+                : "Mathematician registers this as abnormal.");
+        mathTriangle = `
+        <span class="math-triangle ${interaction.math}"
+        data-info="${mathText.replace(/"/g, '&quot;')}">
+        </span>
+        `;
+    }
+    if(interaction.reason){
+        infoButtons += `
+        <span class="info-button info-popup"
+        data-info="${interaction.reason.replace(/"/g, '&quot;')}">
+            ?
+        </span>
+        `;
+    }
+    li.innerHTML = `
+    <span class="interaction-text">
+        ${formatCharacters(interaction.text)}
     </span>
+    ${infoButtons}
+    ${mathTriangle}
     `;
-}
-if(interaction.reason){
-    infoButtons += `
-    <span class="info-button info-popup"
-    data-info="${interaction.reason.replace(/"/g, '&quot;')}">
-        ?
-    </span>
-    `;
-}
-li.innerHTML = `
-<span class="interaction-text">
-    ${formatCharacters(interaction.text)}
-</span>
-${infoButtons}
-${mathTriangle}
-`;
-list.appendChild(li);
-        }
-    });
+    list.appendChild(li);
+});
     resultCount.textContent =
     `Interaction${list.children.length === 1 ? "" : "s"}: ${list.children.length}`;
     if(list.children.length === 0){
