@@ -149,9 +149,9 @@ if(interaction.reason){
     `;
 }
 li.innerHTML = `
-<a class="interaction-link" href="interaction.html?id=${interaction.id}">
+<div class="interaction-text">
     ${formatCharacters(interaction.text)}
-</a>
+</div>
 ${infoButtons}
 ${mathTriangle}
 `;
