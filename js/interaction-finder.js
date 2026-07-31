@@ -204,12 +204,17 @@ list.appendChild(li);
 }
 function createCharacterSearch(id){
     const container = document.getElementById(id);
-    container.innerHTML = `
-        <input class="character-search" placeholder="Select Character...">
-        <div class="character-results"></div>
-    `;
+container.innerHTML = `
+<div class="character-search-wrapper">
+    <input class="character-search" placeholder="Select Character...">
+    <span class="clear-character">&times;</span>
+</div>
+<div class="character-results"></div>
+`;
     const input = container.querySelector(".character-search");
     const results = container.querySelector(".character-results");
+    const clearButton = container.querySelector(".clear-character");
+    clearButton.style.display = "none";
     let selected = "";
     input.addEventListener("input",()=>{
         const query = input.value.toLowerCase().trim();
@@ -236,6 +241,7 @@ function createCharacterSearch(id){
             item.onclick=()=>{
                 selected = char.name;
                 input.value = char.name;
+                clearButton.style.display = "flex";
                 results.style.display="none";
                 updateResults();
             };
@@ -249,6 +255,18 @@ container.getValue = ()=>{
 container.clear = ()=>{
     selected = "";
     input.value = "";
+    clearButton.style.display = "none";
+};
+    clearButton.onclick = (event)=>{
+    event.stopPropagation();
+
+    selected = "";
+    input.value = "";
+    results.innerHTML = "";
+    results.style.display = "none";
+    clearButton.style.display = "none";
+
+    updateResults();
 };
     document.addEventListener("click",(event)=>{
         if(!event.target.closest("#"+id)){
