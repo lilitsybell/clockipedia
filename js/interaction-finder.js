@@ -198,10 +198,25 @@ function buildPage(){
 document.getElementById("interaction-finder").innerHTML = `
 
 
-<div class="page-card">
+<div class="wiki">
+    <div class="content">
 
+        <h1>Interaction Finder</h1>
 
-<div class="finder-container">
+        <div class="selector-container">
+            ...
+        </div>
+
+        <div class="legend">
+            ...
+        </div>
+
+        <div id="results">
+            <ul id="list"></ul>
+        </div>
+
+    </div>
+</div>
 
 
 <div class="finder-header">
