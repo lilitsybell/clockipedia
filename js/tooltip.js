@@ -15,18 +15,27 @@ document.addEventListener("DOMContentLoaded", () => {
         const teamClass = teamColors[character.team] || "purple";
         tooltip.className = 
             "ability-tooltip " + teamClass;
-        tooltip.innerHTML = `
-            <div class="tooltip-header">
-                <img src="${character.image}">
-                <div class="tooltip-title">
-                    <strong>${character.name}</strong>
-                    <span>${character.team}</span>
-                </div>
-            </div>
-            <div class="tooltip-ability">
-                ${character.ability}
-            </div>
-        `;
+const singularTeams = {
+    "Townsfolk": "Townsfolk",
+    "Outsiders": "Outsider",
+    "Minions": "Minion",
+    "Demons": "Demon",
+    "Travellers": "Traveller",
+    "Loric": "Loric",
+    "Fabled": "Fabled"
+};
+tooltip.innerHTML = `
+<div class="tooltip-header">
+    <img src="${character.image}">
+    <div class="tooltip-title">
+        <strong>${character.name}</strong>
+        <span>${singularTeams[character.team] || character.team}</span>
+    </div>
+</div>
+<div class="tooltip-ability">
+    ${character.ability}
+</div>
+`;
         tooltip.style.display = "block";
         const rect = target.getBoundingClientRect();
         let left =
