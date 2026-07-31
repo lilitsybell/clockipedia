@@ -1,32 +1,20 @@
-console.log("interaction-finder loaded");
-
-
+console.log("interaction-finder Updated 7/30/26 10:38PM");
 let characters = {};
 let interactions = [];
-
-
 const teamColors = {
-
     "Townsfolk":"blue",
     "Outsider":"blue",
     "Outsiders":"blue",
-
     "Minion":"red",
     "Minions":"red",
-
     "Demon":"red",
     "Demons":"red",
-
     "Traveller":"traveller",
     "Travellers":"traveller",
-
     "Loric":"green",
     "Fabled":"gold"
-
 };
-
 const slugExceptions = {
-
     "Organ Grinder": "organgrinder",
     "Lil’ Monsta": "lilmonsta",
     "Lil' Monsta": "lilmonsta",
@@ -56,108 +44,54 @@ const slugExceptions = {
     "God of Ug": "godofug",
     "Storm Catcher": "stormcatcher",
 };
-
 function getSlug(name){
-
     return slugExceptions[name] || name
         .toLowerCase()
         .replace(/[’']/g,"")
         .replace(/[^a-z0-9]+/g,"-")
         .replace(/^-|-$/g,"");
-
 }
-
 function formatCharacters(text){
-
     return text.replace(/\[(.*?)\]/g, (_, character)=>{
-
         const slug = getSlug(character);
-
         const linkedCharacter = characters[slug];
-
-
         let team = "default";
-
-
         if(linkedCharacter){
-
             team = teamColors[linkedCharacter.team] || "default";
-
         }
-
-
         return `<a href="character.html?id=${slug}" class="character-link ${team}">
             ${character}
         </a>`;
-
     });
-
 }
-
 function fillDropdown(id){
-
     const select=document.getElementById(id);
-
     select.innerHTML="";
-
-
-    const blank=document.createElement("option");
-
-    blank.value="";
-
-    blank.textContent="-- Select Character --";
-
-    select.appendChild(blank);
-
-
     getInteractionCharacters()
     .forEach(character=>{
-
         const option=document.createElement("option");
-
         option.value=character;
-
         option.textContent=character;
-
         select.appendChild(option);
-
     });
-
 }
-
 function getCharacters(text){
-
     const matches=text.match(/\[(.*?)\]/g);
-
     if(!matches) return [];
-
     return matches.map(match=>
         match.slice(1,-1)
     );
-
 }
-
 function getInteractionCharacters(){
-
     const set = new Set();
-
-
     interactions.forEach(interaction=>{
-
         getCharacters(interaction.text)
         .forEach(character=>{
-
             set.add(character);
-
         });
-
     });
-
-
     return [...set].sort((a,b)=>a.localeCompare(b));
-
 }
-
 function getInteractionColor(interaction){
     const chars = getCharacters(interaction.text);
     let colors = [];
@@ -182,109 +116,58 @@ function getInteractionColor(interaction){
     // Mixed teams default purple
     return "purple";
 }
-
 document.addEventListener("DOMContentLoaded", async()=>{
-
-
     try{
-
-
         const characterResponse = await fetch("/data/characters.json");
-
         characters = await characterResponse.json();
-
-
-
         const interactionResponse = await fetch("/data/interactions.json");
-
         interactions = await interactionResponse.json();
-
-
-
         buildPage();
-
-
     }
-
     catch(error){
-
         console.error("Interaction Finder failed:",error);
-
     }
-
-
 });
 function buildPage(){
-
     document.getElementById("interaction-finder").innerHTML = `
-
 <div class="finder-container">
-
     <div class="finder-header">
         Interaction Finder
     </div>
-
-
     <div class="selector-container">
-
         <select id="char1"></select>
         <select id="char2"></select>
         <select id="char3"></select>
-
         <button id="clearButton">
             Clear
         </button>
-
     </div>
-
-
     <div class="legend">
-
         <span class="triangle green">▲</span>
         Mathematician registers this as <b>normal</b>
-
         <span class="triangle red">▲</span>
         Mathematician registers this as <b>abnormal</b>
-
     </div>
-
-
     <div id="results">
-
         <ul id="list"></ul>
-
     </div>
-
 </div>
-
 `;
-
     fillDropdown("char1");
     fillDropdown("char2");
     fillDropdown("char3");
-
     setupEvents();
     updateResults();
 }
-
 function updateResults(){
-
 const selected = [
-
     document.querySelector("#char1").tomselect.getValue(),
     document.querySelector("#char2").tomselect.getValue(),
     document.querySelector("#char3").tomselect.getValue()
-
 ].filter(x => x !== "");
-
-
     const list = document.getElementById("list");
-
     list.innerHTML = "";
-
-
     interactions.forEach(interaction=>{
-
 const charactersInInteraction = new Set(
     getCharacters(interaction.text)
 );
@@ -312,94 +195,55 @@ if(interaction.math === "red"){
     ▲
     </span>
     `;
-
 }
-
-
 if(interaction.reason){
-
     infoButtons += `
     <span class="info-button" title="${interaction.reason.replace(/"/g, '&quot;')}">
         ?
     </span>
     `;
-
 }
-
-
 if(interaction.mathInfo){
-
     infoButtons += `
     <span class="info-button" title="${interaction.mathInfo.replace(/"/g, '&quot;')}">
         ▲
     </span>
     `;
-
 }
-
 li.innerHTML =
 formatCharacters(interaction.text)
 + " "
 + infoButtons
 + mathTriangle;
-
-
 list.appendChild(li);
-
         }
-
-
     });
-
-
     if(list.children.length === 0){
-
         list.innerHTML = "<li>No interactions found.</li>";
-
     }
-
 }
-
-
-
 function setupEvents(){
-
     const selectors = [
         "#char1",
         "#char2",
         "#char3"
     ];
-
-
     selectors.forEach(selector=>{
-
         new TomSelect(selector,{
-
             create:false,
             highlight:false,
-
+            placeholder:"-- Select Character --",
             sortField:{
                 field:"text",
                 direction:"asc"
             },
-
             onChange:updateResults
-
         });
-
     });
-
-
-
 document.getElementById("clearButton").onclick = ()=>{
 document.querySelector("#char1").tomselect.clear();
 document.querySelector("#char2").tomselect.clear();
 document.querySelector("#char3").tomselect.clear();
-
-
         updateResults();
-
     };
-
-
 }
