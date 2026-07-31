@@ -64,21 +64,6 @@ function formatCharacters(text){
         </a>`;
     });
 }
-function fillDropdown(id){
-    const select=document.getElementById(id);
-    select.innerHTML="";
-    const blank=document.createElement("option");
-    blank.value="";
-    blank.textContent="-- Select Character --";
-    select.appendChild(blank);
-    getInteractionCharacters()
-    .forEach(character=>{
-        const option=document.createElement("option");
-        option.value=character;
-        option.textContent=character;
-        select.appendChild(option);
-    });
-}
 function getCharacters(text){
     const matches=text.match(/\[(.*?)\]/g);
     if(!matches) return [];
@@ -161,9 +146,6 @@ function buildPage(){
     </div>
 </div>
 `;
-    fillDropdown("char1");
-    fillDropdown("char2");
-    fillDropdown("char3");
     setupEvents();
     updateResults();
 }
