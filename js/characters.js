@@ -1,4 +1,4 @@
-console.log("characters.js loaded");
+console.log("characters.js updated 7/31/26 14:16");
 let characters = {};
 const teamColors = {
     "Townsfolk":"blue",
