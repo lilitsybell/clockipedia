@@ -143,10 +143,14 @@ function buildPage(){
         </button>
     </div>
     <div class="legend">
-        <span class="triangle green">▲</span>
-        Mathematician registers this as <b>normal</b>
-        <span class="triangle red">▲</span>
-        Mathematician registers this as <b>abnormal</b>
+<span class="triangle green info-button info-popup"
+data-info="Mathematician registers this as normal">
+▲
+</span>
+<span class="triangle red info-button info-popup"
+data-info="Mathematician registers this as abnormal">
+▲
+</span>
     </div>
     <div id="results">
         <ul id="list"></ul>
@@ -241,11 +245,6 @@ function setupEvents(){
             },
             onChange:updateResults
         });
-    document.addEventListener("click", e=>{
-    const button = e.target.closest(".info-popup");
-    if(!button) return;
-    alert(button.dataset.info);
-});
     });
 document.getElementById("clearButton").onclick = ()=>{
 document.querySelector("#char1").tomselect.clear();
