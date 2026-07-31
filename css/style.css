@@ -355,9 +355,6 @@ font-size:22px;
     font-weight:bold;
     text-decoration:none;
 }
-.character-link:hover{
-    text-decoration:underline;
-}
 .character-link.blue{
     color:var(--blue);
 }
