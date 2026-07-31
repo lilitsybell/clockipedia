@@ -189,17 +189,18 @@ li.className = `interaction-card ${interactionColor}`;
 let infoButtons = "";
 let mathTriangle = "";
 if(interaction.math === "green"){
-mathTriangle = `
-<span class="math-triangle green"
-data-info="Mathematician registers this as normal">
-</span>
-`;
+    mathTriangle = `
+    <span class="math-triangle green"
+    data-info="Mathematician registers this as normal.">
+    </span>
+    `;
 }
-mathTriangle = `
-<span class="math-triangle red"
-data-info="Mathematician registers this as abnormal">
-</span>
-`;
+if(interaction.math === "red"){
+    mathTriangle = `
+    <span class="math-triangle red"
+    data-info="Mathematician registers this as abnormal.">
+    </span>
+    `;
 }
 if(interaction.reason){
     infoButtons += `
