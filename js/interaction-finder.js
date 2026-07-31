@@ -19,9 +19,9 @@ function formatCharacters(text){
     });
 }
 function getInteractionURL(interaction){
-    const characters = getCharacters(interaction.text)
+    const characterIDs = getCharacters(interaction.text)
         .map(character => getSlug(character));
-    return "interaction.html?characters=" + characters.join(",");
+    return "interaction-finder.html?characters=" + characterIDs.join(",");
 }
 function getCharacters(text){
     const matches=text.match(/\[(.*?)\]/g);
@@ -70,11 +70,29 @@ document.addEventListener("DOMContentLoaded", async()=>{
         const interactionResponse = await fetch("/data/interactions.json");
         interactions = await interactionResponse.json();
         buildPage();
+        loadURLCharacters();
     }
     catch(error){
         console.error("Interaction Finder failed:", error);
     }
 });
+function loadURLCharacters(){
+    const params = new URLSearchParams(window.location.search);
+    const ids = params.get("characters");
+    if(!ids) return;
+    const charactersFromURL = ids.split(",");
+    const selectors = [
+        document.querySelector("#selector1"),
+        document.querySelector("#selector2"),
+        document.querySelector("#selector3")
+    ];
+    charactersFromURL.forEach((id,index)=>{
+        const character = characters[id];
+        if(!character) return;
+        selectors[index].setValue(character.name);
+    });
+    updateResults();
+}
 function buildPage(){
     document.getElementById("interaction-finder").innerHTML = `
 <div class="finder-container">
@@ -159,7 +177,7 @@ li.innerHTML = `
 </div>
 <a class="interaction-view"
    href="${getInteractionURL(interaction)}">
-    View Interaction
+    View this interaction
 </a>
 ${infoButtons}
 ${mathTriangle}
@@ -220,6 +238,11 @@ container.innerHTML = `
         });
         results.style.display="block";
     });
+container.setValue = (name)=>{
+    selected = name;
+    input.value = name;
+    clearButton.style.display = "flex";
+};
 container.getValue = ()=>{
     return selected;
 };
