@@ -1,18 +1,12 @@
-console.log("interaction-finder Updated 7/31/26 14:12");
+console.log("interaction-finder Updated 7/31/26 17:02");
 let interactions = [];
 function formatCharacters(text){
     return text.replace(/\[(.*?)\]/g, (_, character)=>{
         const slug = getSlug(character);
         const linkedCharacter = characters[slug];
-
-        let team = "default";
-        let ability = "";
-
-        if(linkedCharacter){
-            team = teamColors[linkedCharacter.team] || "default";
-            ability = linkedCharacter.ability || "";
-        }
-
+        const team = linkedCharacter
+            ? teamColors[linkedCharacter.team] || "default"
+            : "default";
         return `
             <a
                 href="character.html?id=${slug}"
@@ -48,7 +42,7 @@ function getInteractionColor(interaction){
         const slug = getSlug(character);
         const data = characters[slug];
         if(data){
-            const color = teamColors[data.team];
+            const color = teamColors[data.team] || "default";
             if(color && !colors.includes(color)){
                 colors.push(color);
             }
@@ -201,7 +195,7 @@ container.innerHTML = `
                 <img src="${char.image}" class="search-icon">
                 <div class="search-text">
                     <strong>${char.name}</strong>
-                    <small>${char.team}</small>
+                    <small>${singularTeam(char.team)}</small>
                 </div>
             `;
             item.onclick=()=>{
