@@ -926,3 +926,27 @@ font-size:22px;
 .character-results .search-item:hover{
     background:var(--purple);
 }
+.character-search-wrapper{
+    position:relative;
+}
+.clear-character{
+    position:absolute;
+    right:12px;
+    top:50%;
+    transform:translateY(-50%);
+    width:20px;
+    height:20px;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    color:#7851A9;
+    font-size:18px;
+    font-weight:bold;
+    cursor:pointer;
+    border-radius:50%;
+    user-select:none;
+}
+.clear-character:hover{
+    background:#7851A9;
+    color:white;
+}
