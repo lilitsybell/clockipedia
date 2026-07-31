@@ -68,7 +68,7 @@ function formatCharacters(text){
             <a
                 href="character.html?id=${slug}"
                 class="character-link ${team}"
-                data-ability="${ability.replace(/"/g,"&quot;")}"
+                data-tooltip="${ability.replace(/"/g,"&quot;")}"
             >
                 ${character}
             </a>
