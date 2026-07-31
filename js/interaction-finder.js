@@ -1,4 +1,4 @@
-console.log("interaction-finder Updated 7/31/26 17:02");
+console.log("interaction-finder Updated 7/31/26 18:20");
 let interactions = [];
 function formatCharacters(text){
     return text.replace(/\[(.*?)\]/g, (_, character)=>{
@@ -165,13 +165,13 @@ const matchingInteractions = interactions.filter(interaction=>{
 });
 matchingInteractions
 .sort((a,b)=>{
-    const aCharacters = getCharacters(a.text).length;
-    const bCharacters = getCharacters(b.text).length;
-    // First: fewest characters
+    const aCharacters = new Set(getCharacters(a.text)).size;
+    const bCharacters = new Set(getCharacters(b.text)).size;
+    // First: fewest unique characters
     if(aCharacters !== bCharacters){
         return aCharacters - bCharacters;
     }
-    // Second: shortest text length
+    // Second: shortest interaction text
     return a.text.length - b.text.length;
 })
 .forEach(interaction=>{
