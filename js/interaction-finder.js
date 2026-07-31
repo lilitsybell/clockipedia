@@ -389,6 +389,7 @@ function setupEvents(){
         new TomSelect(selector,{
 
             create:false,
+            highlight:false,
 
             sortField:{
                 field:"text",
