@@ -265,40 +265,26 @@ const selected = [
 
     interactions.forEach(interaction=>{
 
-
-        const charactersInInteraction = getCharacters(interaction.text);
-
-
+const charactersInInteraction = new Set(
+    getCharacters(interaction.text)
+);
         const show = selected.every(character =>
-            charactersInInteraction.includes(character)
+            charactersInInteraction.has(character)
         );
-
-
         if(show){
-
 const li = document.createElement("li");
-
 li.className = "interaction-card";
-
-
 let infoButtons = "";
-
 let mathTriangle = "";
-
 if(interaction.math === "green"){
-
     mathTriangle = `
     <span class="triangle green info-button"
     title="Mathematician registers this as normal">
     ▲
     </span>
     `;
-
 }
-
-
 if(interaction.math === "red"){
-
     mathTriangle = `
     <span class="triangle red info-button"
     title="Mathematician registers this as abnormal">
@@ -384,10 +370,10 @@ function setupEvents(){
 
 
 
-    document.getElementById("clearButton").onclick = ()=>{
-        document.querySelector("#char1")[0].tomselect.clear();
-        document.querySelector("#char2")[0].tomselect.clear();
-        document.querySelector("#char3")[0].tomselect.clear();
+document.getElementById("clearButton").onclick = ()=>{
+document.querySelector("#char1").tomselect.clear();
+document.querySelector("#char2").tomselect.clear();
+document.querySelector("#char3").tomselect.clear();
 
 
         updateResults();
