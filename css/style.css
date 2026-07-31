@@ -1066,3 +1066,89 @@ h1, h2, h3, h4, h5, h6 {
 .ts-control input {
     font-family:inherit;
 }
+.selector-container{
+
+    display:flex;
+    flex-wrap:wrap;
+    gap:15px;
+    margin:25px 0 35px;
+
+}
+.ts-wrapper{
+
+    width:250px;
+
+}
+
+.ts-control{
+
+    min-height:48px;
+
+    border:2px solid var(--blue);
+
+    border-radius:12px;
+
+    box-shadow:none;
+
+    font-size:16px;
+
+}
+
+.ts-control:focus-within{
+
+    border-color:#06618c;
+
+}
+#clearButton{
+
+    padding:12px 22px;
+
+    border:none;
+
+    border-radius:12px;
+
+    background:var(--blue);
+
+    color:white;
+
+    font-size:16px;
+
+    cursor:pointer;
+
+    transition:.2s;
+
+}
+
+#clearButton:hover{
+
+    opacity:.85;
+
+}
+#list{
+
+    list-style:none;
+
+    margin:0;
+
+    padding:0;
+
+}
+#list li{
+
+    background:#fafafa;
+
+    border:1px solid #ddd;
+
+    border-left:5px solid var(--blue);
+
+    border-radius:10px;
+
+    padding:18px 22px;
+
+    margin-bottom:18px;
+
+    line-height:1.7;
+
+    box-shadow:0 2px 8px rgba(0,0,0,.05);
+
+}
