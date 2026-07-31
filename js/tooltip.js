@@ -1,4 +1,4 @@
-console.log("tooltip.js loaded");
+console.log("tooltip.js updated 7/31/26 2:00PM");
 document.addEventListener("DOMContentLoaded", () => {
 let tooltip = document.querySelector(".ability-tooltip");
 if(!tooltip){
