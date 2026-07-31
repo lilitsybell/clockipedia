@@ -332,7 +332,7 @@ font-size:22px;
 .character-header h1 {
     font-size: 42px;
     margin: 0 0 20px 0;
-    font-family: "Cormorant Garamond", serif;
+    font-family:"Droid Sans", Arial, sans-serif;
 }
 .character-team {
     color: #959799;
@@ -449,21 +449,6 @@ font-size:22px;
     background-clip:text;
     color:transparent;
 }
-h1.blue, h2.blue, h3.blue{
-    color:var(--blue);
-}
-h1.red, h2.red, h3.red{
-    color:#a41618;
-}
-h1.purple, h2.purple, h3.purple{
-    color:var(--purple);
-}
-h1.gold, h2.gold, h3.gold{
-    color:#b77102;
-}
-h1.green, h2.green, h3.green{
-    color:#8ea742;
-}
 
 /* Wiki Container */
 
@@ -555,6 +540,12 @@ h1.green, h2.green, h3.green{
 }
 .wiki.green {
     --team-color:var(--lime);
+}
+.wiki.purple {
+    --team-color:var(--purple);
+}
+.wiki.traveller {
+    --team-color:var(--traveller-blue);
 }
 .wiki.traveller .content::after{
     background:linear-gradient(
