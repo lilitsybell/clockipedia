@@ -1,24 +1,30 @@
+console.log("tooltip.js loaded");
 document.addEventListener("DOMContentLoaded", () => {
     const tooltip = document.createElement("div");
     tooltip.className = "ability-tooltip";
     document.body.appendChild(tooltip);
     document.addEventListener("mouseover", (event)=>{
-        const link = event.target.closest(".character-link");
-        if(!link) return;
-        const ability = link.dataset.ability;
-        if(!ability) return;
-        tooltip.textContent = ability;
-        tooltip.style.display = "block";
-    });
-    document.addEventListener("mousemove", (event)=>{
-        if(tooltip.style.display === "block"){
-            tooltip.style.left = event.pageX + 15 + "px";
-            tooltip.style.top = event.pageY + 15 + "px";
+        const target = event.target.closest("[data-tooltip], .character-link");
+        if(!target) return;
+        let text = target.dataset.tooltip;
+        // Character ability support
+        if(target.classList.contains("character-link")){
+            text = target.dataset.ability;
         }
+        if(!text) return;
+        tooltip.textContent = text;
+        tooltip.style.display = "block";
+        const rect = target.getBoundingClientRect();
+        tooltip.style.left =
+            rect.left + (rect.width / 2) - (tooltip.offsetWidth / 2)
+            + "px";
+        tooltip.style.top =
+            rect.top - tooltip.offsetHeight - 10
+            + "px";
     });
     document.addEventListener("mouseout", (event)=>{
-        const link = event.target.closest(".character-link");
-        if(!link) return;
+        const target = event.target.closest("[data-tooltip], .character-link");
+        if(!target) return;
         tooltip.style.display = "none";
     });
 });
