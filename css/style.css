@@ -178,6 +178,7 @@ body {
 }
 .nav-link:hover {
     background:#e7f3f8;
+    text-decoration:none;
 }
 .nav-link.active {
     background:white;
