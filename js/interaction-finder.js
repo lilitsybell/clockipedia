@@ -67,6 +67,10 @@ function formatCharacters(text){
 function fillDropdown(id){
     const select=document.getElementById(id);
     select.innerHTML="";
+    const blank=document.createElement("option");
+    blank.value="";
+    blank.textContent="-- Select Character --";
+    select.appendChild(blank);
     getInteractionCharacters()
     .forEach(character=>{
         const option=document.createElement("option");
