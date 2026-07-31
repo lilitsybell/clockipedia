@@ -13,15 +13,6 @@ const tooltipTeamColors = {
     "Loric":"green",
     "Fabled":"gold"
 };
-const singularTeams = {
-    "Townsfolk": "Townsfolk",
-    "Outsiders": "Outsider",
-    "Minions": "Minion",
-    "Demons": "Demon",
-    "Travellers": "Traveller",
-    "Loric": "Loric",
-    "Fabled": "Fabled"
-};
 fetch("/data/characters.json")
 .then(response => response.json())
 .then(data => {
