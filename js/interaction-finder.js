@@ -71,7 +71,11 @@ document.addEventListener("DOMContentLoaded", async()=>{
         const interactionResponse = await fetch("/data/interactions.json");
         interactions = await interactionResponse.json();
         buildPage();
-    }});
+    }
+    catch(error){
+        console.error("Interaction Finder failed:", error);
+    }
+});
 function buildPage(){
     document.getElementById("interaction-finder").innerHTML = `
 <div class="finder-container">
