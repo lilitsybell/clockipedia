@@ -656,7 +656,7 @@ font-size:22px;
 .finder-container .ts-dropdown{
     border:2px solid var(--purple);
     border-radius:10px;
-    overflow:hidden;
+    overflow:visible;
     box-shadow:0 8px 20px rgba(0,0,0,.12);
 }
 /* Dropdown options */
@@ -787,6 +787,7 @@ font-size:22px;
     font-weight:bold;
     text-align:center;
     padding:20px;
+    border-radius:14px 14px 0 0;
 }
 .triangle{
     display:inline-block;
