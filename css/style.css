@@ -984,3 +984,21 @@ font-size:22px;
     background:var(--purple);
     color:white;
 }
+/* =========================
+   Tooltip
+========================= */
+
+.ability-tooltip {
+    position:absolute;
+    display:none;
+    max-width:350px;
+    background:#333;
+    color:white;
+    padding:12px 15px;
+    border-radius:8px;
+    font-size:14px;
+    line-height:1.4;
+    z-index:99999;
+    pointer-events:none;
+    box-shadow:0 5px 15px rgba(0,0,0,.25);
+}
