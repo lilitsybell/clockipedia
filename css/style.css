@@ -931,20 +931,22 @@ font-size:22px;
 }
 .clear-character{
     position:absolute;
-    right:12px;
+    right:10px;
     top:50%;
     transform:translateY(-50%);
-    width:20px;
-    height:20px;
+    width:22px;
+    height:22px;
     display:flex;
     align-items:center;
     justify-content:center;
-    color:#7851A9;
-    font-size:18px;
-    font-weight:bold;
-    cursor:pointer;
     border-radius:50%;
+    cursor:pointer;
     user-select:none;
+    color:#7851A9;
+    font-size:20px;
+    font-weight:400;
+    line-height:1;
+    padding:0;
 }
 .clear-character:hover{
     background:#7851A9;
