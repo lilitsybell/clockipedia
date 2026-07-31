@@ -55,13 +55,24 @@ function formatCharacters(text){
     return text.replace(/\[(.*?)\]/g, (_, character)=>{
         const slug = getSlug(character);
         const linkedCharacter = characters[slug];
+
         let team = "default";
+        let ability = "";
+
         if(linkedCharacter){
             team = teamColors[linkedCharacter.team] || "default";
+            ability = linkedCharacter.ability || "";
         }
-        return `<a href="character.html?id=${slug}" class="character-link ${team}">
-            ${character}
-        </a>`;
+
+        return `
+            <a
+                href="character.html?id=${slug}"
+                class="character-link ${team}"
+                data-ability="${ability.replace(/"/g,"&quot;")}"
+            >
+                ${character}
+            </a>
+        `;
     });
 }
 function getCharacters(text){
