@@ -114,12 +114,6 @@
         "mathInfo":"The Acrobat's ability is working as intended."
     },
     {
-        "text":"If the [Acrobat] chooses the [Alchemist] [Organ Grinder], who chooses to be drunk, the Acrobat dies.",
-        "math":"green",
-        "reason":"The Acrobat registers drunk or poisoned due to any reason, even if due to the character's own ability.",
-        "mathInfo":"The Acrobat's ability is working as intended."
-    },
-    {
         "text":"The [Acrobat] does not die due to choosing a player whose character has changed due to the [Engineer] ability.",
         "math":"green",
         "reason":"The Acrobat only detects drunkenness or poison.",
@@ -480,7 +474,7 @@
         "mathInfo":"The Acrobat's ability malfunctioned only if the Acrobat chose a drunk or poisoned player and did not die."
     },
     {
-        "text":"The [Acrobat] cannot die due to their own ability if they are [Inkeeper] drunk.",
+        "text":"The [Acrobat] cannot die due to their own ability if they are [Innkeeper] drunk.",
         "math":"red",
         "reason":"If the Acrobat is drunk or poisoned, they do not have an ability.",
         "mathInfo":"The Acrobat's ability malfunctioned only if the Acrobat chose a drunk or poisoned player and did not die."
