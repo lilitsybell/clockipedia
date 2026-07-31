@@ -191,13 +191,13 @@ let mathTriangle = "";
 if(interaction.math === "green"){
 mathTriangle = `
 <span class="math-triangle green"
-title="Mathematician registers this as normal.">
+data-info="Mathematician registers this as normal">
 </span>
 `;
 }
 mathTriangle = `
 <span class="math-triangle red"
-title="Mathematician registers this as abnormal.">
+data-info="Mathematician registers this as abnormal">
 </span>
 `;
 }
