@@ -200,13 +200,13 @@ matchingInteractions
         `;
     }
 li.innerHTML = `
-<div class="interaction-text">
-    ${formatCharacters(interaction.text)}
-</div>
-<div class="interaction-icons">
-    ${infoButtons}
-    ${mathTriangle}
-</div>
+    <div class="interaction-text">
+        ${formatCharacters(interaction.text)}
+    </div>
+    <div class="interaction-icons">
+        ${infoButtons}
+        ${mathTriangle}
+    </div>
 `;
     list.appendChild(li);
 });
