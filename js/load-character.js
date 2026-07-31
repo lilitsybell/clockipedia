@@ -110,7 +110,10 @@ function formatCharacters(text){
             .replace(/[^a-z0-9]+/g, "-")
             .replace(/^-|-$/g, "");
         const linkedCharacter = characters[slug];
-        let team = "default";
+const team =
+    linkedCharacter
+        ? teamColors[linkedCharacter.team] || "default"
+        : "default";
 return `
 <a 
     href="character.html?id=${slug}" 
