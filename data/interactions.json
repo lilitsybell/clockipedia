@@ -595,7 +595,22 @@
         "reason":"The Acrobat only detects drunkenness or poison.",
         "mathInfo":"The Acrobat's ability is working as intended."},
     {
-        "text":"If the [Acrobat] chooses the Demon whose [Boffin] ability is drunk or poisoned, the [Acrobat] dies.",
+        "text":"If the [Acrobat] chooses the Demon who is poisoned due to the [Boffin] [Cannibal] ability, the [Acrobat] dies.",
+        "math":"green",
+        "reason":"The [Acrobat] detects drunkenness or poison.",
+        "mathInfo":"The Acrobat's ability is working as intended."},
+    {
+        "text":"If the [Acrobat] chooses the Demon who is drunk due to the [Boffin] [Village Idiot] ability, the [Acrobat] dies.",
+        "math":"green",
+        "reason":"The [Acrobat] detects drunkenness or poison.",
+        "mathInfo":"The Acrobat's ability is working as intended."},
+    {
+        "text":"If the [Acrobat] chooses the Demon who is drunk due to the [Boffin] [Sailor] ability, the [Acrobat] dies.",
+        "math":"green",
+        "reason":"The [Acrobat] detects drunkenness or poison.",
+        "mathInfo":"The Acrobat's ability is working as intended."},
+    {
+        "text":"If the [Acrobat] chooses the Demon who is drunk due to the [Boffin] [Alchemist] [Organ Grinder] ability, the [Acrobat] dies.",
         "math":"green",
         "reason":"The [Acrobat] detects drunkenness or poison.",
         "mathInfo":"The Acrobat's ability is working as intended."},
