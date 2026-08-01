@@ -1,5 +1,15 @@
 [
     {
+        "text":"The [Vizier] [Zealot] [Djinn] rule states \"The [Zealot] might register as evil to the [Vizier].\" This might cause the [Vizier]'s ability to fail.",
+        "math":"red",
+        "reason":"The Djinn changes the way characters interact with each other.",
+        "mathInfo":"If the Vizier's ability fails due to the Zealot misregistering, the Vizier's ability malfunctioned."},
+    {
+        "text":"The [Vizier] [Politician] [Djinn] rule states \"The [Politician] might register as evil to the [Vizier].\" This might cause the [Vizier]'s ability to fail.",
+        "math":"red",
+        "reason":"The Djinn changes the way characters interact with each other.",
+        "mathInfo":"If the Vizier's ability fails due to the Politician misregistering, the Vizier's ability malfunctioned."},
+    {
         "text":"The [Vizier] [Fearmonger] [Djinn] rule states \"The [Vizier] wakes with the [Fearmonger], learns who they choose and cannot choose to immediately execute that player.\" If the [Vizier] attempts to execute that player, it is considered breaking the rules. It does not matter who nominated the player.",
         "math":"green",
         "reason":"The Djinn changes the way characters interact with each other.",
@@ -85,7 +95,7 @@
         "reason":"The Spy will always register as evil to the Ogre for the purpose of the Ogre friend.",
         "mathInfo":"The Spy registering as evil is not a malfunction."},
     {
-        "text":"The [Widow] [Damsel] [Djinn] rule states \"If the [Widow] is (or has been) in play, the [Damsel] is poisoned.\"",
+        "text":"The [Widow] [Damsel] [Djinn] rule states \"If the [Widow] is (or has been) in play, the [Damsel] is poisoned.\" The [Widow] sees the Grimoire and chooses a player to poison at their first opportunity, when the [Poppy Grower] is dead, drunk, poisoned, or out of play.",
         "math":"red",
         "reason":"The Damsel is poisoned. Minions do not learn there is a Damsel in play. Guessing the Damsel does not cause the game to end.",
         "mathInfo":"The Minions not learning a Damsel is in play is the Damsel's ability malfunctioning. If a Minion guesses the Damsel as the Damsel and the game does not end, this is the Damsel's ability malfunctioning."},
