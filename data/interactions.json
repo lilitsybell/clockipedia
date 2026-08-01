@@ -1,5 +1,25 @@
 [
     {
+        "text":"The [Lil' Monsta] [Vizier] [Djinn] rule states \"If the [Vizier] is babysitting [Lil' Monsta], they die when executed.\"",
+        "math":"green",
+        "reason":"The Djinn changes the way characters interact with each other.",
+        "mathInfo":"The Djinn rule changes the way the Vizier's ability works, but does not count the ability as malfunctioning."},
+    {
+        "text":"The [Lil' Monsta] [Scarlet Woman] [Djinn] rule states \"If [Lil' Monsta] dies with 5 or more players alive, the [Scarlet Woman] babysits [Lil' Monsta] for the rest of the game.\"",
+        "math":"green",
+        "reason":"The Djinn changes the way characters interact with each other.",
+        "mathInfo":"The Djinn rule changes the way the Lil Monsta's ability works, but does not count the ability as malfunctioning."},
+    {
+        "text":"The [Lil' Monsta] [Magician] [Djinn] rule states \"If the [Magician] is alive, the Storyteller chooses which Minion babysits [Lil' Monsta].\"",
+        "math":"green",
+        "reason":"The Djinn changes the way characters interact with each other.",
+        "mathInfo":"The Djinn rule changes the way the Lil Monsta's ability works, but does not count the ability as malfunctioning."},
+    {
+        "text":"The [Lil' Monsta] [Psychopath] [Djinn] rule states \"If the [Psychopath] is babysitting [Lil' Monsta], they die when executed.\"",
+        "math":"green",
+        "reason":"The Djinn changes the way characters interact with each other.",
+        "mathInfo":"The Djinn rule changes the way the Psychopath's ability works, but does not count the ability as malfunctioning."},
+    {
         "text":"The [Lil' Monsta] [Poppy Grower] [Djinn] rule states \"If [Lil' Monsta] & the [Poppy Grower] are alive, Minions wake one by one, until one of them chooses to take the [Lil' Monsta] token.\"",
         "math":"green",
         "reason":"The Djinn changes the way characters interact with each other.",
