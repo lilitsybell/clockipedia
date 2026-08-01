@@ -1,6 +1,24 @@
 [
     {
-        "text":"The [Djinn] rule states \"\".",
+        "text":"The [Djinn] rule states \"The Alchemist-Summoner does not get bluffs, and chooses which Demon but not which player. If they die before this happens, evil wins. [No Demon]\".",
+        "math":"green",
+        "reason":"The Djinn changes the way interactions work.",
+        "mathInfo":"The Djinn rule changes the rules, which changes what can cause abilities to register as malfunctioning."
+    },
+    {
+        "text":"The [Djinn] rule states \"An [Alchemist]-[Spy] has no [Spy] ability & a [Spy] is in play. After each execution, a living [Alchemist]-[Spy] may publicly guess a living player as the [Spy]. If correct, the Demon must choose the [Spy] tonight.\".",
+        "math":"green",
+        "reason":"The Djinn changes the way interactions work.",
+        "mathInfo":"The Djinn rule changes the rules, which changes what can cause abilities to register as malfunctioning."
+    },
+    {
+        "text":"The [Djinn] rule states \"If the [Alchemist] has the [Organ Grinder] ability, the [Organ Grinder] is in play. If both are sober, both are drunk.\".",
+        "math":"red",
+        "reason":"The Djinn changes the way interactions work.",
+        "mathInfo":"If the [Organ Grinder] and [Alchemist] are drunk due to both choosing to be sober, both register as malfunctioning to the Mathematician the next night (after the ability fails)."
+    },
+    {
+        "text":"The [Djinn] rule states \"An [Alchemist]-[Mastermind] has no [Mastermind] ability & the [Mastermind] is not-in-play.\".",
         "math":"green",
         "reason":"The Djinn changes the way interactions work.",
         "mathInfo":"The Djinn rule changes the rules, which changes what can cause abilities to register as malfunctioning."
