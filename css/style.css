@@ -878,12 +878,6 @@ font-size:22px;
     width:min(1000px,95%);
     margin:auto;
 }
-.finder-container{
-    background:white;
-    border-radius:14px;
-    border:1px solid #ccc;
-    overflow:visible;
-}
 .finder-header{
     background:var(--purple);
     color:white;
@@ -982,7 +976,7 @@ font-size:22px;
    Tooltip
 ========================= */
 
-.ability-tooltip {
+.ability-tooltip{
     position:absolute;
     display:none;
     width:300px;
@@ -994,6 +988,10 @@ font-size:22px;
     z-index:99999;
     pointer-events:none;
     word-wrap:break-word;
+    overflow:visible;
+    background-clip:padding-box;
+    -webkit-background-clip:padding-box;
+    transform:translateZ:(0);
 }
 .tooltip-header {
     display:flex;
