@@ -1,39 +1,255 @@
 [
     {
-        "text":"The [Djinn] rule states \"The [Alchemist]-[Summoner] does not get bluffs, and chooses which Demon but not which player. If they die before this happens, evil wins. [[No Demon]]\".",
-        "math":"green",
-        "reason":"The Djinn changes the way interactions work.",
-        "mathInfo":"The Djinn rule changes the rules, which changes what can cause abilities to register as malfunctioning."
+        "text":"The [Recluse] [Sage] [Djinn] rule states \"The [Recluse] might register as the Demon to the [Sage].\"",
+        "math":"red",
+        "reason":"The Djinn changes the way interactions work. Normally, the Sage would learn the Demon who specifically killed them.",
+        "mathInfo":"The Sage learning the Recluse due to a misregistration registers as abnormal."
     },
     {
-        "text":"The [Djinn] rule states \"An [Alchemist]-[Spy] has no [Spy] ability & a [Spy] is in play. After each execution, a living [Alchemist]-[Spy] may publicly guess a living player as the [Spy]. If correct, the Demon must choose the [Spy] tonight.\".",
+        "text":"The [Recluse] [Ogre] [Djinn] rule states \"If the [Recluse] registers as evil to the [Ogre], the [Ogre] learns that they are evil.\"",
         "math":"green",
         "reason":"The Djinn changes the way interactions work.",
-        "mathInfo":"The Djinn rule changes the rules, which changes what can cause abilities to register as malfunctioning."
+        "mathInfo":"The Djinn rule changes the way the Ogre's ability works, but does not count the ability as malfunctioning."
     },
     {
-        "text":"The [Djinn] rule states \"If the [Alchemist] has the [Organ Grinder] ability, the [Organ Grinder] is in play. If both are sober, both are drunk.\".",
+        "text":"The [Plague Doctor] [Wraith] [Djinn] rule states \"If the Storyteller would gain the [Wraith] ability, a Minion gains it, and learns this.\" This Minion may be good or evil and gains the [Fearmonger] ability as well as their own ability.",
+        "math":"green",
+        "reason":"The Djinn changes the way interactions work.",
+        "mathInfo":"No ability is malfunctioning."
+    },
+    {
+        "text":"The [Plague Doctor] [Spy] [Djinn] rule states \"If the Storyteller would gain the [Spy] ability, a Minion gains it, and learns this.\" This Minion may be good or evil and gains the [Fearmonger] ability as well as their own ability.",
+        "math":"green",
+        "reason":"The Djinn changes the way interactions work.",
+        "mathInfo":"No ability is malfunctioning."
+    },
+    {
+        "text":"The [Plague Doctor] [Scarlet Woman] [Djinn] rule states \"If the Storyteller would gain the [Scarlet Woman] ability, a Minion gains it, and learns this.\" This Minion may be good or evil and gains the [Fearmonger] ability as well as their own ability.",
+        "math":"green",
+        "reason":"The Djinn changes the way interactions work.",
+        "mathInfo":"No ability is malfunctioning."
+    },
+    {
+        "text":"The [Plague Doctor] [Marionette] [Djinn] rule states \"If the Storyteller would gain the [Marionette] ability, one of the Demon's good neighbors becomes the [Marionette].\" They do not turn evil.",
+        "math":"red",
+        "reason":"The Djinn changes the way interactions work. Essentially, the Demon creates a drunk player that neighbors them, but they are and register as the good Minion Marionette.",
+        "mathInfo":"The Mathematician registers if the new Marionette's ability malfunctions or yields false information."
+    },
+    {
+        "text":"The [Plague Doctor] [Goblin] [Djinn] rule states \"If the Storyteller would gain the [Goblin] ability, a Minion gains it, and learns this.\" This Minion may be good or evil and gains the [Fearmonger] ability as well as their own ability.",
+        "math":"green",
+        "reason":"The Djinn changes the way interactions work.",
+        "mathInfo":"No ability is malfunctioning."
+    },
+    {
+        "text":"The [Plague Doctor] [Fearmonger] [Djinn] rule states \"If the Storyteller would gain the [Fearmonger] ability, a Minion gains it, and learns this.\" This Minion may be good or evil and gains the [Fearmonger] ability as well as their own ability.",
+        "math":"green",
+        "reason":"The Djinn changes the way interactions work.",
+        "mathInfo":"No ability is malfunctioning."
+    },
+    {
+        "text":"The [Plague Doctor] [Evil Twin] [Djinn] rule states \"If the Storyteller would gain the [Evil Twin] ability, a player becomes the [Evil Twin].\" This player may be good or evil.",
+        "math":"green",
+        "reason":"The Djinn changes the way interactions work.",
+        "mathInfo":"Players changing characters does not count as an ability malfunctioning."
+    },
+    {
+        "text":"The [Plague Doctor] [Boomdandy] [Djinn] rule states \"If the Storyteller would gain the [Boomdandy] ability, a player becomes the [Boomdandy].\" This player may be good or evil.",
+        "math":"green",
+        "reason":"The Djinn changes the way interactions work.",
+        "mathInfo":"Players changing characters does not count as an ability malfunctioning."
+    },
+    {
+        "text":"The [Plague Doctor] [Baron] [Djinn] rule states \"If the Storyteller would gain the [Baron] ability, up to two players become Outsiders." These players may be good or evil.",
+        "math":"green",
+        "reason":"The Djinn changes the way interactions work.",
+        "mathInfo":"No ability is malfunctioning."
+    },
+    {
+        "text":"The [Djinn] rules only one of the [Heretic] or [Widow] may be in play at any time. This includes dead, drunk, and poisoned characters.",
+        "math":"green",
+        "reason":"The Djinn changes the way interactions work.",
+        "mathInfo":"The [Mathematician] does not register the Storyteller's choice of which characters to add as an ability."
+    },
+    {
+        "text":"The [Djinn] rules only one of the [Heretic] or [Spy] may be in play at any time. This includes dead, drunk, and poisoned characters.",
+        "math":"green",
+        "reason":"The Djinn changes the way interactions work.",
+        "mathInfo":"The [Mathematician] does not register the Storyteller's choice of which characters to add as an ability."
+    },
+    {
+        "text":"The [Djinn] rules only one of the [Heretic] or [Pit-Hag] may be in play at any time. This includes dead, drunk, and poisoned characters.",
+        "math":"green",
+        "reason":"The Djinn changes the way interactions work.",
+        "mathInfo":"The [Mathematician] does not register the Storyteller's choice of which characters to add as an ability."
+    },
+    {
+        "text":"The [Djinn] rules only one of the [Heretic] or [Lleech] may be in play at any time. This includes dead, drunk, and poisoned characters.",
+        "math":"green",
+        "reason":"The Djinn changes the way interactions work.",
+        "mathInfo":"The [Mathematician] does not register the Storyteller's choice of which characters to add as an ability."
+    },
+    {
+        "text":"The [Djinn] rules only one of the [Heretic] or [Godfather] may be in play at any time. This includes dead, drunk, and poisoned characters.",
+        "math":"green",
+        "reason":"The Djinn changes the way interactions work.",
+        "mathInfo":"The [Mathematician] does not register the Storyteller's choice of which characters to add as an ability."
+    },
+    {
+        "text":"The [Djinn] rules only one of the [Heretic] or [Baron] may be in play at any time. This includes dead, drunk, and poisoned characters.",
+        "math":"green",
+        "reason":"The Djinn changes the way interactions work.",
+        "mathInfo":"The [Mathematician] does not register the Storyteller's choice of which characters to add as an ability."
+    },
+    {
+        "text":"The [Butler] [Organ Grinder] [Djinn] rule states \"If the [Organ Grinder] is causing eyes closed voting, the [Butler] may raise their hand to vote but their vote is only counted if their master voted too.\"",
+        "math":"green",
+        "reason":"The Djinn changes the way interactions work.",
+        "mathInfo":"The Djinn rule changes the way the Butler's ability works, but does not count the ability as malfunctioning."
+    },
+    {
+        "text":"The [Magician] [Wraith] [Djinn] rule states \"After each execution, the living [Magician] may publicly guess a living player as the [Wraith]. If correct, the Demon must choose the [Wraith] tonight.\"",
+        "math":"green",
+        "reason":"The Djinn changes the way interactions work.",
+        "mathInfo":"The Djinn rule changes the way the Magician's ability works, but does not count the ability as malfunctioning."
+    },
+    {
+        "text":"The [Magician] [Widow] [Djinn] rule states \"When the [Widow] sees the Grimoire, the Demon and [Magician]'s character tokens are removed.\"",
+        "math":"green",
+        "reason":"The Djinn changes the way interactions work.",
+        "mathInfo":"The Djinn rule changes the way the Widow and Magician's abilities work, but does not count the abilities as malfunctioning."
+    },
+    {
+        "text":"The [Magician] [Vizier] [Djinn] rule states \"If the [Vizier] is in play, the [Magician] has no ability but is immune to the [Vizier]'s ability.\"",
+        "math":"green",
+        "reason":"The Djinn changes the way interactions work.",
+        "mathInfo":"The Djinn rule changes the way the Vizier and Magician's abilities work, but does not count the abilities as malfunctioning."
+    },
+    {
+        "text":"The [Magician] [Spy] [Djinn] rule states \"When the [Spy] sees the Grimoire, the Demon and [Magician]'s character tokens are removed.\"",
+        "math":"green",
+        "reason":"The Djinn changes the way interactions work.",
+        "mathInfo":"The Djinn rule changes the way the Spy and Magician's abilities work, but does not count the abilities as malfunctioning."
+    },
+    {
+        "text":"The [Magician] [Marionette] [Djinn] rule states \"If the [Magician] is alive, the Demon doesn't know which neighbor is the [Marionette].\"",
+        "math":"green",
+        "reason":"The Djinn changes the way interactions work.",
+        "mathInfo":"The Djinn rule changes the way the Marionette and Magician's abilities work, but does not count the abilities as malfunctioning."
+    },
+    {
+        "text":"The [Magician] [Legion] [Djinn] rule states \"If the [Magician] is in play, during the Demon info step, [Legion] wake in separate groups. Each group learns which players are good, but does not learn the [Magician].\"",
+        "math":"green",
+        "reason":"The Djinn changes the way interactions work.",
+        "mathInfo":"Demon and Minion info does not count as a player's ability. The Djinn rule changes the way the Magician's ability works, but does not count the ability as malfunctioning."
+    },
+    {
+        "text":"The [Mathematician] [Marionette] [Djinn] rule states \"The [Mathematician] learns if the [Marionette]'s ability yielded false info or failed to work properly.\"",
+        "math":"green",
+        "reason":"The Djinn changes the way interactions work.",
+        "mathInfo":"The Mathematician's ability is not malfunctioning by learning if the Marionette's ability malfunctioned."
+    },
+    {
+        "text":"The [Mathematician] [Lunatic] [Djinn] rule states \"The [Mathematician] learns if the [Lunatic] attacks a different player than the real Demon attacked.\"",
+        "math":"green",
+        "reason":"The Djinn changes the way interactions work.",
+        "mathInfo":"The Mathematician's ability is not malfunctioning by learning if the Lunatic's ability malfunctioned."
+    },
+    {
+        "text":"The [Mathematician] [Drunk] [Djinn] rule states \"The [Mathematician] learns if the [Drunk]’s ability yielded false info or failed to work properly.\"",
+        "math":"green",
+        "reason":"The Djinn changes the way interactions work.",
+        "mathInfo":"The Mathematician's ability is not malfunctioning by learning if the Drunk's ability malfunctioned."
+    },
+    {
+        "text":"The [Chambermaid] [Mathematician] [Djinn] rule states \"The [Chambermaid] can detect if the [Mathematician] will wake tonight.\"",
+        "math":"green",
+        "reason":"The Djinn changes the way interactions work.",
+        "mathInfo":"There is no ability malfunctioning."
+    },
+    {
+        "text":"The [Cannibal] [Zealot] [Djinn] rule states \"If the [Cannibal] gains the [Zealot] ability, the [Cannibal] learns this.\"",
+        "math":"green",
+        "reason":"The Djinn changes the way interactions work.",
+        "mathInfo":"There is no ability malfunctioning."
+    },
+    {
+        "text":"The [Cannibal] [Princess] [Djinn] rule states \"If the [Cannibal] nominated, executed, & killed the [Princess] today, the Demon doesn’t kill tonight.\"",
+        "math":"green",
+        "reason":"The Djinn changes the way interactions work.",
+        "mathInfo":"There is no ability malfunctioning."
+    },
+    {
+        "text":"The [Cannibal] [Juggler] [Djinn] rule states \"If the [Juggler] guesses on their first day and dies by execution, tonight the living [Cannibal] learns how many guesses the [Juggler] got correct.\"",
+        "math":"green",
+        "reason":"The Djinn changes the way interactions work.",
+        "mathInfo":"There is no ability malfunctioning."
+    },
+    {
+        "text":"The [Cannibal] [Butler] [Djinn] rule states \"If the [Cannibal] gains the [Butler] ability, the [Cannibal] learns this.\"",
+        "math":"green",
+        "reason":"The Djinn changes the way interactions work.",
+        "mathInfo":"There is no ability malfunctioning."
+    },
+    {
+        "text":"The [Bounty Hunter] [Philosopher] [Djinn] rule states \"If the [Philosopher] gains the [Bounty Hunter] ability, a Townsfolk might turn evil.\"",
+        "math":"green",
+        "reason":"The Djinn changes the way interactions work.",
+        "mathInfo":"There is no ability malfunctioning."
+    },
+    {
+        "text":"The [Bounty Hunter] [Kazali] [Djinn] rule states \"If the [Kazali] turns the [Bounty Hunter] into a Minion, an evil Townsfolk is not created.\"",
+        "math":"green",
+        "reason":"The Djinn changes the way interactions work.",
+        "mathInfo":"The Djinn changes the rules, which changes what can cause abilities to register as malfunctioning."
+    },
+    {
+        "text":"The [Alchemist] [Widow] [Djinn] rule states \"An [Alchemist]-[Widow] has no [Widow] ability & a [Widow] is in play. After each execution, a living [Alchemist]-[Widow] may publicly guess a living player as the [Widow]. If correct, the Demon must choose the [Widow] tonight.\"",
+        "math":"green",
+        "reason":"The Djinn changes the way interactions work.",
+        "mathInfo":"The Djinn changes the rules, which changes what can cause abilities to register as malfunctioning."
+    },
+    {
+        "text":"The [Alchemist] [Wraith] [Djinn] rule states \"An [Alchemist]-[Wraith] has no [Wraith] ability & a [Wraith] is in play. After each execution, a living [Alchemist]-[Wraith] may publicly guess a living player as the [Wraith]. If correct, the Demon must choose the [Wraith] tonight.\"",
+        "math":"green",
+        "reason":"The Djinn changes the way interactions work.",
+        "mathInfo":"The Djinn changes the rules, which changes what can cause abilities to register as malfunctioning."
+    },
+    {
+        "text":"The [Alchemist] [Summoner] [Djinn] rule states \"The [Alchemist]-[Summoner] does not get bluffs, and chooses which Demon but not which player. If they die before this happens, evil wins. [[No Demon]]\".",
+        "math":"green",
+        "reason":"The Djinn changes the way interactions work.",
+        "mathInfo":"The Djinn changes the rules, which changes what can cause abilities to register as malfunctioning."
+    },
+    {
+        "text":"The [Alchemist] [Spy] [Djinn] rule states \"An [Alchemist]-[Spy] has no [Spy] ability & a [Spy] is in play. After each execution, a living [Alchemist]-[Spy] may publicly guess a living player as the [Spy]. If correct, the Demon must choose the [Spy] tonight.\"",
+        "math":"green",
+        "reason":"The Djinn changes the way interactions work.",
+        "mathInfo":"The Djinn changes the rules, which changes what can cause abilities to register as malfunctioning."
+    },
+    {
+        "text":"The [Alchemist] [Organ Grinder] [Djinn] rule states \"If the [Alchemist] has the [Organ Grinder] ability, the [Organ Grinder] is in play. If both are sober, both are drunk.\"",
         "math":"red",
         "reason":"The Djinn changes the way interactions work.",
         "mathInfo":"If the [Organ Grinder] and [Alchemist] are drunk due to both choosing to be sober, both register as malfunctioning to the Mathematician the next night (after the ability fails)."
     },
     {
-        "text":"The [Djinn] rule states \"An [Alchemist]-[Mastermind] has no [Mastermind] ability & the [Mastermind] is not-in-play.\".",
+        "text":"The [Alchemist] [Mastermind] [Djinn] rule states \"An [Alchemist]-[Mastermind] has no [Mastermind] ability & the [Mastermind] is not in play.\"",
         "math":"green",
         "reason":"The Djinn changes the way interactions work.",
-        "mathInfo":"The Djinn rule changes the rules, which changes what can cause abilities to register as malfunctioning."
+        "mathInfo":"The Djinn changes the rules, which changes what can cause abilities to register as malfunctioning."
     },
     {
-        "text":"The [Djinn] rule states \"An [Alchemist]-[Marionette] has no [Marionette] ability & the [Marionette] is in play.\".",
+        "text":"The [Alchemist] [Marionette] [Djinn] rule states \"An [Alchemist]-[Marionette] has no [Marionette] ability & the [Marionette] is in play.\"",
         "math":"green",
         "reason":"The Djinn changes the way interactions work.",
-        "mathInfo":"The Djinn rule changes the rules, which changes what can cause abilities to register as malfunctioning."
+        "mathInfo":"The Djinn changes the rules, which changes what can cause abilities to register as malfunctioning."
     },
     {
-        "text":"The [Djinn] rule states \"If the [Alchemist] has the [Boffin] ability, the [Alchemist] does not learn what ability the Demon has.\".",
+        "text":"The [Alchemist] [Boffin] [Djinn] rule states \"If the [Alchemist] has the [Boffin] ability, the [Alchemist] does not learn what ability the Demon has.\"",
         "math":"green",
         "reason":"Normally the [Boffin] would learn the ability, but the Alchemist does not.",
-        "mathInfo":"The Djinn rule changes the rules, which changes what can cause abilities to register as malfunctioning."
+        "mathInfo":"The Djinn changes the rules, which changes what can cause abilities to register as malfunctioning."
     },
     {
         "text":"If the [Acrobat] chooses the [Drunk], the [Acrobat] dies.",
@@ -174,7 +390,7 @@
         "mathInfo":"The Acrobat's ability is working as intended."
     },
     {
-        "text":"The [Acrobat] does not die due to choosing the [Fortune Teller] who received false info due to a Red Herring.",
+        "text":"The [Acrobat] does not die due to choosing the [Fortune Teller] who yielded false info due to a Red Herring.",
         "math":"green",
         "reason":"The Acrobat only detects drunkenness or poison.",
         "mathInfo":"The Acrobat's ability is working as intended."
@@ -192,7 +408,7 @@
         "mathInfo":"The Acrobat's ability is working as intended."
     },
     {
-        "text":"The [Acrobat] does not die due to choosing a player who received false info due to the [Lycanthrope] ability.",
+        "text":"The [Acrobat] does not die due to choosing a player who yielded false info due to the [Lycanthrope] ability.",
         "math":"green",
         "reason":"The Acrobat only detects drunkenness or poison.",
         "mathInfo":"The Acrobat's ability is working as intended."
@@ -222,7 +438,7 @@
         "mathInfo":"The Acrobat's ability is working as intended."
     },
     {
-        "text":"The [Acrobat] does not die due to choosing the [Shugenja] who received arbitrary information due to their own ability.",
+        "text":"The [Acrobat] does not die due to choosing the [Shugenja] who yielded arbitrary information due to their own ability.",
         "math":"green",
         "reason":"The Acrobat only detects drunkenness or poison.",
         "mathInfo":"The Acrobat's ability is working as intended."
@@ -282,7 +498,7 @@
         "mathInfo":"The Acrobat's ability is working as intended."
     },
     {
-        "text":"The [Acrobat] does not die due to choosing a player who received false info due to the [Recluse] ability.",
+        "text":"The [Acrobat] does not die due to choosing a player who yielded false info due to the [Recluse] ability.",
         "math":"green",
         "reason":"The Acrobat only detects drunkenness or poison.",
         "mathInfo":"The Acrobat's ability is working as intended."
@@ -324,7 +540,7 @@
         "mathInfo":"The Acrobat's ability is working as intended."
     },
     {
-        "text":"The [Acrobat] does not die due to choosing a player who received false info due to the [Spy] ability.",
+        "text":"The [Acrobat] does not die due to choosing a player who yielded false info due to the [Spy] ability.",
         "math":"green",
         "reason":"The Acrobat only detects drunkenness or poison.",
         "mathInfo":"The Acrobat's ability is working as intended."
@@ -354,7 +570,7 @@
         "mathInfo":"The Acrobat's ability is working as intended."
     },
     {
-        "text":"The [Acrobat] does not die due to choosing a player who received false info due to the [Vortox] ability.",
+        "text":"The [Acrobat] does not die due to choosing a player who yielded false info due to the [Vortox] ability.",
         "math":"green",
         "reason":"The Acrobat only detects drunkenness or poison.",
         "mathInfo":"The Acrobat's ability is working as intended."
@@ -414,7 +630,7 @@
         "mathInfo":"The Acrobat's ability is working as intended."
     },
     {
-        "text":"The [Acrobat] does not die due to choosing a player who received false information due to the [Fibbin] ability.",
+        "text":"The [Acrobat] does not die due to choosing a player who yielded false information due to the [Fibbin] ability.",
         "math":"green",
         "reason":"The Acrobat only detects drunkenness or poison.",
         "mathInfo":"The Acrobat's ability is working as intended."
@@ -492,7 +708,7 @@
         "mathInfo":"The Acrobat's ability is working as intended."
     },
     {
-        "text":"The [Acrobat] does not die due to choosing a player who received false information due to the [Knaves] ability.",
+        "text":"The [Acrobat] does not die due to choosing a player who yielded false information due to the [Knaves] ability.",
         "math":"green",
         "reason":"The Acrobat only detects drunkenness or poison.",
         "mathInfo":"The Acrobat's ability is working as intended."
