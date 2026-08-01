@@ -22,7 +22,7 @@
     {
         "text":"The [Summoner] [Zombuul] [Djinn] rule states \"If the [Summoner] summons a dead player into the [Zombuul], the [Zombuul] has already \"died once\".\" Essentially, the new [Zombuul] is no longer dead, but registering as dead.",
         "math":"green",
-        "reason":"The Summoner is able to /"resurrect/" a player by using this jinx into a Zombuul who is registering as dead.",
+        "reason":"The Summoner is able to \"resurrect\" a player by using this jinx into a Zombuul who is registering as dead.",
         "mathInfo":"No ability has malfunctioned."},
     {
         "text":"The [Summoner] [Pukka] [Djinn] rule states \"The [Summoner] may summon a [Pukka] on the 2nd night instead of the 3rd.\"",
