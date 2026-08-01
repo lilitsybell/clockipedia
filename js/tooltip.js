@@ -1,4 +1,4 @@
-console.log("tooltip.js updated 7/31/26 16:43");
+console.log("tooltip.js updated 08/01/26 00:01");
 document.addEventListener("DOMContentLoaded", async () => {
     await loadCharacters();
     setupTooltips();
@@ -35,24 +35,22 @@ function setupTooltips(){
             `;
 tooltip.style.display = "block";
 const rect = target.getBoundingClientRect();
-let left = rect.left + window.scrollX;
-let top = rect.bottom + window.scrollY + 10;
+let left = rect.left;
+let top = rect.bottom + 10;
 // Wait until the tooltip has its real size
 requestAnimationFrame(() => {
     const tooltipWidth = tooltip.offsetWidth;
     const tooltipHeight = tooltip.offsetHeight;
     // Keep inside right edge
-    if(left + tooltipWidth > window.innerWidth + window.scrollX){
-        left = window.innerWidth + window.scrollX - tooltipWidth - 20;
-    }
-    // Keep inside left edge
-    if(left < window.scrollX + 10){
-        left = window.scrollX + 10;
-    }
-    // If below screen, put above character
-    if(top + tooltipHeight > window.innerHeight + window.scrollY){
-        top = rect.top + window.scrollY - tooltipHeight - 10;
-    }
+if(left + tooltipWidth > window.innerWidth){
+    left = window.innerWidth - tooltipWidth - 20;
+}
+if(left < 10){
+    left = 10;
+}
+if(top + tooltipHeight > window.innerHeight){
+    top = rect.top - tooltipHeight - 10;
+}
     tooltip.style.left = left + "px";
     tooltip.style.top = top + "px";
 });
