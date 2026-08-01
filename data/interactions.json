@@ -375,6 +375,51 @@
         "reason":"Normally the [Boffin] would learn the ability, but the Alchemist does not.",
         "mathInfo":"The Djinn changes the rules, which changes what can cause abilities to register as malfunctioning."},
     {
+        "text":"If the [Acrobat] chooses the [Zombuul], who cannot kill that night because no-one died during the day, the [Acrobat] does not die.",
+        "math":"green",
+        "reason":"The Acrobat's ability detects drunkenness or poison.",
+        "mathInfo":"No ability has malfunctioned."},
+    {
+        "text":"If the [Acrobat] chooses the [Po], who chooses to kill no-one, the [Acrobat] does not die.",
+        "math":"green",
+        "reason":"The Acrobat's ability detects drunkenness or poison.",
+        "mathInfo":"No ability has malfunctioned."},
+    {
+        "text":"If the dead [Gambler] is chosen by the [Bone Collector], there would be no mechanical impact since the [Gambler] cannot die a second time and there would be no death announcement.",
+        "math":"green",
+        "reason":"Players can only die once.",
+        "mathInfo":"No ability has malfunctioned."},
+    {
+        "text":"If the [Acrobat] chooses the [Chambermaid], the [Chambermaid] chooses the [Acrobat] and then the [Goon], and the [Goon] drunks the [Chambermaid], and the [Acrobat] dies.",
+        "math":"red",
+        "reason":"This is a way the Chambermaid can choose a player who wakes up dead.",
+        "mathInfo":"If the Chambermaid yields false information due to being Goon drunk, the Chambermaid's ability malfunctioned."},
+    {
+        "text":"If the [Acrobat] chooses the [Chambermaid], the [Chambermaid] chooses the [Goon] and then the [Acrobat], and the [Goon] drunks the [Chambermaid], the [Acrobat] dies and the [Chambermaid] must choose a player other than the [Acrobat].",
+        "math":"red",
+        "reason":"The Chambermaid cannot choose a dead player. If the Chambermaid becomes drunk, the Acrobat dies before the Chambermaid chooses the Acrobat.",
+        "mathInfo":"If the Chambermaid yields false information due to being Goon drunk, the Chambermaid's ability malfunctioned."},
+    {
+        "text":"If the dead [Acrobat] is chosen by the [Bone Collector], there would be no mechanical impact since the [Acrobat] cannot die a second time and there would be no death announcement.",
+        "math":"green",
+        "reason":"Players can only die once.",
+        "mathInfo":"No ability has malfunctioned."},
+    {
+        "text":"If [Tor] is in play, and the [Acrobat] chooses a player who is sober, but then later becomes drunk because of the [Goon] ability, the [Acrobat] dies but might not learn their character or alignment until the next night",
+        "math":"green",
+        "reason":"Learning your character due to the Tor ability might happen before the player selects the Goon in night order.",
+        "mathInfo":"No ability has malfunctioned."},
+    {
+        "text":"If the [Acrobat] chooses a player in the [Revolutionary] pair, who registers as the [Drunk], the [Acrobat] dies.",
+        "math":"red",
+        "reason":"The Acrobat's ability includes the Drunk.",
+        "mathInfo":"The Acrobat's ability malfunctioned due to a misregistration."},
+    {
+        "text":"If the [Acrobat] chooses the [Spy], who registers as the [Drunk], the [Acrobat] dies.",
+        "math":"red",
+        "reason":"The Acrobat's ability includes the Drunk.",
+        "mathInfo":"The Acrobat's ability malfunctioned due to a misregistration."},
+    {
         "text":"If the [Acrobat] chooses the [Hermit] with the [Drunk] ability, the [Acrobat] dies.",
         "math":"green",
         "reason":"The Acrobat's ability includes the Drunk.",
