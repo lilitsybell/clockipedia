@@ -1,6 +1,96 @@
 [
     {
-        "text":"The [Boffin] [Cult Leader] [Djinn] rule states \"If the Demon has the [Cult Leader] ability, they can’t turn good due to this ability.\"",
+        "text":"The [Pit-Hag] [Politician] [Djinn] rule states \"If the [Pit-Hag] turns an evil player into the [Politician], they can't turn good due to their own ability.\"",
+        "math":"green",
+        "reason":"The Djinn changes the way interactions work. The evil player cannot turn good, but can turn evil. The evil player does not learn if they would have turned good.",
+        "mathInfo":"The Djinn rule changes the way the Politician's ability works, but does not count the ability as malfunctioning."},
+    {
+        "text":"The [Pit-Hag] [Ogre] [Djinn] rule states \"If the [Pit-Hag] turns an evil player into the [Ogre], they can't turn good due to their own ability.\"",
+        "math":"green",
+        "reason":"The Djinn changes the way interactions work. The evil player cannot turn good, but can turn evil. The evil player does not learn if they would have turned good.",
+        "mathInfo":"The Djinn rule changes the way the Ogre's ability works, but does not count the ability as malfunctioning."},
+    {
+        "text":"The [Pit-Hag] [Goon] [Djinn] rule states \"If the [Pit-Hag] turns an evil player into the [Goon], they can't turn good due to their own ability.\"",
+        "math":"green",
+        "reason":"The Djinn changes the way interactions work. The evil player cannot turn good, but can turn evil. The evil player does not learn if they would have turned good.",
+        "mathInfo":"The Djinn rule changes the way the Goon's ability works, but does not count the ability as malfunctioning."},
+    {
+        "text":"The [Pit-Hag] [Damsel] [Djinn] rule states \"If a [Pit-Hag] creates a [Damsel], the Storyteller chooses which player it is.\"",
+        "math":"green",
+        "reason":"The Djinn changes the way interactions work.",
+        "mathInfo":"The Djinn rule modified the Pit-Hag ability, so no ability is malfunctioning."},
+    {
+        "text":"The [Pit-Hag] [Cult Leader] [Djinn] rule states \"If the [Pit-Hag] turns an evil player into the [Cult Leader], they can't turn good due to their own ability.\" A cult still may form and cause an evil win.",
+        "math":"green",
+        "reason":"The Djinn changes the way interactions work. The evil player cannot turn good, but can turn evil. The evil player does not learn if they would have turned good.",
+        "mathInfo":"The Djinn rule changes the way the Cult Leader's ability works, but does not count the ability as malfunctioning."},
+    {
+        "text":"The [Mastermind] [Vigormortis] [Djinn] rule states \"A [Mastermind] that has their ability keeps it if the [Vigormortis] dies.\"",
+        "math":"green",
+        "reason":"The Djinn changes the way interactions work. Normally, if the Vigormortis dies or changes character, dead Minions who have their abilities lose their abilities.",
+        "mathInfo":"The Djinn rule modified the Vigormortis ability, so no ability is malfunctioning."},
+    {
+        "text":"The [Marionette] [Summoner] [Djinn] rule states \"If there would be a [Marionette] in play, they enter play after the Demon & must start as their neighbor.\" This may cause there to be only one starting evil player in player counts up to 12.",
+        "math":"green",
+        "reason":"The Storyteller chooses which Demon neighbor becomes the Marionette.",
+        "mathInfo":"No ability is malfunctioning."},
+    {
+        "text":"The [Marionette] [Lil' Monsta] [Djinn] rule states \"If there would be a [Marionette] in play, they enter play after the Demon & must start as their neighbor.\"",
+        "math":"green",
+        "reason":"The Storyteller chooses which Demon neighbor becomes the Marionette.",
+        "mathInfo":"No ability is malfunctioning."},
+    {
+        "text":"The [Marionette] [Kazali] [Djinn] rule states \"If there would be a [Marionette] in play, they enter play after the Demon & must start as their neighbor.\"",
+        "math":"green",
+        "reason":"The Kazali chooses which neighbor becomes the Marionette.",
+        "mathInfo":"The Kazali not being able to make a certain choice does not count as abnormal."},
+    {
+        "text":"The [Marionette] [Huntsman] [Djinn] rule states \"If the [Marionette] thinks that they are the [Huntsman], the [Damsel] was added during setup.\"",
+        "math":"green",
+        "reason":"The Djinn changes the way interactions work. Since the Storyteller cannot control who the Marionette is before players draw tokens, the Storyteller added the Damsel due to the Huntsman ability.",
+        "mathInfo":"The Djinn rule modified the Marionette ability, so no ability is malfunctioning."},
+    {
+        "text":"The [Marionette] [Balloonist] [Djinn] rule states \"If the [Marionette] thinks that they are the [Balloonist], an Outsider might have been added during setup.\"",
+        "math":"green",
+        "reason":"The Djinn changes the way interactions work. Since the Storyteller cannot control who the Marionette is before players draw tokens, the Storyteller might have added an Outsider due to the Balloonist ability.",
+        "mathInfo":"The Djinn rule modified the Marionette ability, so no ability is malfunctioning."},
+    {
+        "text":"The [Cerenovus] [Goblin] [Djinn] rule states \"The [Cerenovus] may choose to make a player mad that they are the [Goblin].\"",
+        "math":"green",
+        "reason":"The Djinn changes the way interactions work. Normally, the Cerenovus may only choose good characters.",
+        "mathInfo":"No ability is malfunctioning."},
+    {
+        "text":"The [Boffin] [Village Idiot] [Djinn] rule states \"If there is a spare token, the [Boffin] can give the Demon the [Village Idiot] ability.\" If there are fewer than 3 players seeing the [Village Idiot] token, the Demon may have the ability. If there are 2 [Village Idiot]s and one [Drunk] who believes they are the [Village Idiot], there are no spare [Village Idiot] tokens.",
+        "math":"green",
+        "reason":"The Djinn changes the way interactions work.",
+        "mathInfo":"No ability is malfunctioning."},
+    {
+        "text":"The [Boffin] [Politician] [Djinn] rule states \"The Demon cannot have the [Politician] ability.\"",
+        "math":"green",
+        "reason":"The Djinn changes the way interactions work.",
+        "mathInfo":"The Storyteller not being able to make a certain choice does not count as abnormal."},
+    {
+        "text":"The [Boffin] [Ogre] [Djinn] rule states \"The Demon cannot have the [Ogre] ability.\"",
+        "math":"green",
+        "reason":"The Djinn changes the way interactions work.",
+        "mathInfo":"The Storyteller not being able to make a certain choice does not count as abnormal."},
+    {
+        "text":"The [Boffin] [Heretic] [Djinn] rule states \"The Demon cannot have the [Heretic] ability.\"",
+        "math":"green",
+        "reason":"The Djinn changes the way interactions work.",
+        "mathInfo":"The Storyteller not being able to make a certain choice does not count as abnormal."},
+    {
+        "text":"The [Boffin] [Goon] [Djinn] rule states \"If the Demon has the [Goon] ability, they can’t turn good due to this ability.\"",
+        "math":"green",
+        "reason":"The Djinn changes the way interactions work. The Demon cannot turn good, but can turn evil. The Demon does not learn if they would have turned good.",
+        "mathInfo":"The Djinn rule changes the way the Goon's ability works, but does not count the ability as malfunctioning."},
+    {
+        "text":"The [Boffin] [Drunk] [Djinn] rule states \"The Demon cannot have the [Drunk] ability.\"",
+        "math":"green",
+        "reason":"The Djinn changes the way interactions work.",
+        "mathInfo":"The Storyteller not being able to make a certain choice does not count as abnormal."},
+    {
+        "text":"The [Boffin] [Cult Leader] [Djinn] rule states \"If the Demon has the [Cult Leader] ability, they can’t turn good due to this ability.\" A cult still may form and cause an evil win.",
         "math":"green",
         "reason":"The Djinn changes the way interactions work. The Demon cannot turn good, but can turn evil. The Demon does not learn if they would have turned good.",
         "mathInfo":"The Djinn rule changes the way the Cult Leader's ability works, but does not count the ability as malfunctioning."},
