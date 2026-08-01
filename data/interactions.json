@@ -720,7 +720,12 @@
         "reason":"The Acrobat only detects drunkenness or poison.",
         "mathInfo":"The Acrobat's ability is not what is malfunctioning."},
     {
-        "text":"If the [Acrobat]'s ability works twice due to the [Barista] ability, the [Acrobat] chooses a player at a time. If they do not die after their first choice, they choose a second player.",
+        "text":"If the [Gambler]'s ability works twice due to the [Barista] ability, the [Gambler] chooses one player at a time. If they do not die after their first choice, they choose a second player.",
+        "math":"green",
+        "reason":"If the Gambler dies after their first choice, they do not have an ability to choose a second player. The Barista does not give abilities back to the dead.",
+        "mathInfo":"The Gambler using their ability twice does not register as malfunctioning."},
+    {
+        "text":"If the [Acrobat]'s ability works twice due to the [Barista] ability, the [Acrobat] chooses one player at a time. If they do not die after their first choice, they choose a second player.",
         "math":"green",
         "reason":"If the Acrobat dies after their first choice, they do not have an ability to choose a second player. The Barista does not give abilities back to the dead.",
         "mathInfo":"The Acrobat using their ability twice does not register as malfunctioning."},
