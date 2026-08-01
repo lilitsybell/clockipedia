@@ -1,23 +1,5 @@
 console.log("interaction-finder Updated 7/31/26 18:20");
 let interactions = [];
-function formatCharacters(text){
-    return text.replace(/\[(.*?)\]/g, (_, character)=>{
-        const slug = getSlug(character);
-        const linkedCharacter = characters[slug];
-        const team = linkedCharacter
-            ? teamColors[linkedCharacter.team] || "default"
-            : "default";
-        return `
-            <a
-                href="character.html?id=${slug}"
-                class="character-link ${team}"
-                data-character="${slug}"
-            >
-                ${character}
-            </a>
-        `;
-    });
-}
 function getCharacters(text){
     const matches=text.match(/\[(.*?)\]/g);
     if(!matches) return [];
