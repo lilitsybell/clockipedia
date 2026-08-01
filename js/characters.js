@@ -83,7 +83,11 @@ function getCharacter(id){
     return characters[id];
 }
 function formatCharacters(text){
-    return text.replace(/\[(.*?)\]/g, (_, character)=>{
+    // Preserve escaped brackets
+    text = text
+        .replace(/\[\[/g, "__LBRACKET__")
+        .replace(/\]\]/g, "__RBRACKET__");
+    text = text.replace(/\[(.*?)\]/g, (_, character)=>{
         const slug = getSlug(character);
         const linkedCharacter = getCharacter(slug);
         let team = "default";
@@ -98,8 +102,14 @@ function formatCharacters(text){
     ${character}
 </a>`;
     });
+    return text
+        .replace(/__LBRACKET__/g, "[")
+        .replace(/__RBRACKET__/g, "]");
 }
 function getCharacters(text){
+    text = text
+        .replace(/\[\[/g, "__LBRACKET__")
+        .replace(/\]\]/g, "__RBRACKET__");
     const matches = text.match(/\[(.*?)\]/g);
     if(!matches) return [];
     return matches.map(match =>
