@@ -1,5 +1,45 @@
 [
     {
+        "text":"The [Summoner] [Lord of Typhon] [Djinn] rule states \"If a [Lord of Typhon] is summoned, they must neighbor a Minion & their other neighbor becomes an evil Minion.\" If the [Summoner] accidentally chooses a non-Minion due to the [Poppy Grower] ability, the Storyteller prompts them to choose again.",
+        "math":"green",
+        "reason":"The Summoner must choose a Minion's neighbor. This Minion may be the Summoner.",
+        "mathInfo":"No ability has malfunctioned."},
+    {
+        "text":"The [Summoner] [Lord of Typhon] [Djinn] rule states \"If a [Lord of Typhon] is summoned, they must neighbor a Minion & their other neighbor becomes an evil Minion.\"",
+        "math":"green",
+        "reason":"The Summoner must choose a Minion's neighbor. This Minion may be the Summoner.",
+        "mathInfo":"No ability has malfunctioned."},
+    {
+        "text":"The [Summoner] [Kazali] [Djinn] rule states \"If the [Summoner] creates a second living Demon, deaths tonight are arbitrary.\" Instead of the Demon choosing who dies, the Storyteller chooses. The Storyteller may choose no-one, one player, or multiple players.",
+        "math":"red",
+        "reason":"If there was already a Demon before the third night and the Kazali ability creates a Summoner, the third night's deaths are arbitrary if the Summoner uses their ability to create a second Demon.",
+        "mathInfo":"If the Storyteller makes a different choice than the Demon, the Demon's abililty malfunctioned."},
+    {
+        "text":"The [Summoner] [Hatter] [Djinn] rule states \"If the [Summoner] creates a second living Demon, deaths tonight are arbitrary.\" Instead of the Demon choosing who dies, the Storyteller chooses. The Storyteller may choose no-one, one player, or multiple players.",
+        "math":"red",
+        "reason":"If there was already a Demon before the third night and the Hatter ability creates a Summoner, the third night's deaths are arbitrary if the Summoner uses their ability to create a second Demon.",
+        "mathInfo":"If the Storyteller makes a different choice than the Demon, the Demon's abililty malfunctioned."},
+    {
+        "text":"The [Summoner] [Engineer] [Djinn] rule states \"If the living [Summoner] is removed from play, the Storyteller has the [Summoner] ability.\" Instead of the [Summoner] choosing the player and Demon, the Storyteller chooses.",
+        "math":"green",
+        "reason":"Instead of the Summoner choosing the player and Demon, the Storyteller chooses.",
+        "mathInfo":"The Summoner changing characters does not count as malfunctioning."},
+    {
+        "text":"The [Summoner] [Courtier] [Djinn] rule states \"If the living [Summoner] has no ability, the Storyteller has the [Summoner] ability.\" Instead of the [Summoner] choosing the player and Demon, the Storyteller chooses.",
+        "math":"red",
+        "reason":"Instead of the Summoner choosing the player and Demon, the Storyteller chooses.",
+        "mathInfo":"If the Storyteller makes a different choice than the Summoner, the Summoner's ability malfunctioned"},
+    {
+        "text":"The [Summoner] [Clockmaker] [Djinn] rule states \"The Summoner registers as the Demon to the Clockmaker.\"",
+        "math":"green",
+        "reason":"The Djinn rule changes the Clockmaker's ability.",
+        "mathInfo":"The Djinn rule changes the way the Clockmaker's ability works, but does not count the ability as malfunctioning."},
+    {
+        "text":"The [Spy] [Poppy Grower] [Djinn] rule states \"If the [Poppy Grower] has their ability, the [Spy] does not see the Grimoire.\" The Spy sees the Grimoire whenever the [Poppy Grower] is drunk, poisoned, dead, or out of play.",
+        "math":"green",
+        "reason":"The Djinn rule changes the Spy's ability.",
+        "mathInfo":"The Djinn rule changes the way the Spy's ability works, but does not count the ability as malfunctioning."},
+    {
         "text":"The [Spy] [Ogre] [Djinn] rule states \"The [Spy] registers as evil to the [Ogre].\"",
         "math":"green",
         "reason":"The Spy will always register as evil to the Ogre for the purpose of the Ogre friend.",
@@ -334,6 +374,11 @@
         "math":"green",
         "reason":"Normally the [Boffin] would learn the ability, but the Alchemist does not.",
         "mathInfo":"The Djinn changes the rules, which changes what can cause abilities to register as malfunctioning."},
+    {
+        "text":"If the [Acrobat] chooses the [Hermit] with the [Drunk] ability, the [Acrobat] dies.",
+        "math":"green",
+        "reason":"The Acrobat's ability includes the Drunk.",
+        "mathInfo":"The Acrobat's ability includes the Drunk."},
     {
         "text":"If the [Acrobat] chooses the [Drunk], the [Acrobat] dies.",
         "math":"green",
