@@ -1,9 +1,9 @@
 [
     {
-        "text":"The [Summoner] [Lord of Typhon] [Djinn] rule states \"If a [Lord of Typhon] is summoned, they must neighbor a Minion & their other neighbor becomes an evil Minion.\" If the [Summoner] accidentally chooses a non-Minion due to the [Poppy Grower] ability, the Storyteller prompts them to choose again.",
-        "math":"green",
-        "reason":"The Summoner must choose a Minion's neighbor. This Minion may be the Summoner.",
-        "mathInfo":"No ability has malfunctioned."},
+        "text":"The [Summoner] [Pit-Hag] [Djinn] rule states \"If the [Summoner] creates a second living Demon, deaths tonight are arbitrary.\" Instead of the Demon choosing who dies, the Storyteller chooses. The Storyteller may choose no-one, one player, or multiple players.",
+        "math":"red",
+        "reason":"If there was already a Demon before the third night and the Pit-Hag ability creates a Summoner, the third night's deaths are arbitrary if the Summoner uses their ability to create a second Demon.",
+        "mathInfo":"If the Storyteller makes a different choice than the Demon, the Demon's abililty malfunctioned."},
     {
         "text":"The [Summoner] [Lord of Typhon] [Djinn] rule states \"If a [Lord of Typhon] is summoned, they must neighbor a Minion & their other neighbor becomes an evil Minion.\"",
         "math":"green",
