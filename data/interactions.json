@@ -3,816 +3,680 @@
         "text":"The [Recluse] [Sage] [Djinn] rule states \"The [Recluse] might register as the Demon to the [Sage].\"",
         "math":"red",
         "reason":"The Djinn changes the way interactions work. Normally, the Sage would learn the Demon who specifically killed them.",
-        "mathInfo":"The Sage learning the Recluse due to a misregistration registers as abnormal."
-    },
+        "mathInfo":"The Sage learning the Recluse due to a misregistration registers as abnormal."},
     {
         "text":"The [Recluse] [Ogre] [Djinn] rule states \"If the [Recluse] registers as evil to the [Ogre], the [Ogre] learns that they are evil.\"",
         "math":"green",
         "reason":"The Djinn changes the way interactions work.",
-        "mathInfo":"The Djinn rule changes the way the Ogre's ability works, but does not count the ability as malfunctioning."
-    },
+        "mathInfo":"The Djinn rule changes the way the Ogre's ability works, but does not count the ability as malfunctioning."},
     {
         "text":"The [Plague Doctor] [Wraith] [Djinn] rule states \"If the Storyteller would gain the [Wraith] ability, a Minion gains it, and learns this.\" This Minion may be good or evil and gains the [Fearmonger] ability as well as their own ability.",
         "math":"green",
         "reason":"The Djinn changes the way interactions work.",
-        "mathInfo":"No ability is malfunctioning."
-    },
+        "mathInfo":"No ability is malfunctioning."},
     {
         "text":"The [Plague Doctor] [Spy] [Djinn] rule states \"If the Storyteller would gain the [Spy] ability, a Minion gains it, and learns this.\" This Minion may be good or evil and gains the [Fearmonger] ability as well as their own ability.",
         "math":"green",
         "reason":"The Djinn changes the way interactions work.",
-        "mathInfo":"No ability is malfunctioning."
-    },
+        "mathInfo":"No ability is malfunctioning."},
     {
         "text":"The [Plague Doctor] [Scarlet Woman] [Djinn] rule states \"If the Storyteller would gain the [Scarlet Woman] ability, a Minion gains it, and learns this.\" This Minion may be good or evil and gains the [Fearmonger] ability as well as their own ability.",
         "math":"green",
         "reason":"The Djinn changes the way interactions work.",
-        "mathInfo":"No ability is malfunctioning."
-    },
+        "mathInfo":"No ability is malfunctioning."},
     {
         "text":"The [Plague Doctor] [Marionette] [Djinn] rule states \"If the Storyteller would gain the [Marionette] ability, one of the Demon's good neighbors becomes the [Marionette].\" They do not turn evil.",
         "math":"red",
         "reason":"The Djinn changes the way interactions work. Essentially, the Demon creates a drunk player that neighbors them, but they are and register as the good Minion Marionette.",
-        "mathInfo":"The Mathematician registers if the new Marionette's ability malfunctions or yields false information."
-    },
+        "mathInfo":"The Mathematician registers if the new Marionette's ability malfunctions or yields false information."},
     {
         "text":"The [Plague Doctor] [Goblin] [Djinn] rule states \"If the Storyteller would gain the [Goblin] ability, a Minion gains it, and learns this.\" This Minion may be good or evil and gains the [Fearmonger] ability as well as their own ability.",
         "math":"green",
         "reason":"The Djinn changes the way interactions work.",
-        "mathInfo":"No ability is malfunctioning."
-    },
+        "mathInfo":"No ability is malfunctioning."},
     {
         "text":"The [Plague Doctor] [Fearmonger] [Djinn] rule states \"If the Storyteller would gain the [Fearmonger] ability, a Minion gains it, and learns this.\" This Minion may be good or evil and gains the [Fearmonger] ability as well as their own ability.",
         "math":"green",
         "reason":"The Djinn changes the way interactions work.",
-        "mathInfo":"No ability is malfunctioning."
-    },
+        "mathInfo":"No ability is malfunctioning."},
     {
         "text":"The [Plague Doctor] [Evil Twin] [Djinn] rule states \"If the Storyteller would gain the [Evil Twin] ability, a player becomes the [Evil Twin].\" This player may be good or evil.",
         "math":"green",
         "reason":"The Djinn changes the way interactions work.",
-        "mathInfo":"Players changing characters does not count as an ability malfunctioning."
-    },
+        "mathInfo":"Players changing characters does not count as an ability malfunctioning."},
     {
         "text":"The [Plague Doctor] [Boomdandy] [Djinn] rule states \"If the Storyteller would gain the [Boomdandy] ability, a player becomes the [Boomdandy].\" This player may be good or evil.",
         "math":"green",
         "reason":"The Djinn changes the way interactions work.",
-        "mathInfo":"Players changing characters does not count as an ability malfunctioning."
-    },
+        "mathInfo":"Players changing characters does not count as an ability malfunctioning."},
     {
         "text":"The [Plague Doctor] [Baron] [Djinn] rule states \"If the Storyteller would gain the [Baron] ability, up to two players become Outsiders." These players may be good or evil.",
         "math":"green",
         "reason":"The Djinn changes the way interactions work.",
-        "mathInfo":"No ability is malfunctioning."
-    },
+        "mathInfo":"No ability is malfunctioning."},
     {
         "text":"The [Djinn] rules only one of the [Heretic] or [Widow] may be in play at any time. This includes dead, drunk, and poisoned characters.",
         "math":"green",
         "reason":"The Djinn changes the way interactions work.",
-        "mathInfo":"The [Mathematician] does not register the Storyteller's choice of which characters to add as an ability."
-    },
+        "mathInfo":"The [Mathematician] does not register the Storyteller's choice of which characters to add as an ability."},
     {
         "text":"The [Djinn] rules only one of the [Heretic] or [Spy] may be in play at any time. This includes dead, drunk, and poisoned characters.",
         "math":"green",
         "reason":"The Djinn changes the way interactions work.",
-        "mathInfo":"The [Mathematician] does not register the Storyteller's choice of which characters to add as an ability."
-    },
+        "mathInfo":"The [Mathematician] does not register the Storyteller's choice of which characters to add as an ability."},
     {
         "text":"The [Djinn] rules only one of the [Heretic] or [Pit-Hag] may be in play at any time. This includes dead, drunk, and poisoned characters.",
         "math":"green",
         "reason":"The Djinn changes the way interactions work.",
-        "mathInfo":"The [Mathematician] does not register the Storyteller's choice of which characters to add as an ability."
-    },
+        "mathInfo":"The [Mathematician] does not register the Storyteller's choice of which characters to add as an ability."},
     {
         "text":"The [Djinn] rules only one of the [Heretic] or [Lleech] may be in play at any time. This includes dead, drunk, and poisoned characters.",
         "math":"green",
         "reason":"The Djinn changes the way interactions work.",
-        "mathInfo":"The [Mathematician] does not register the Storyteller's choice of which characters to add as an ability."
-    },
+        "mathInfo":"The [Mathematician] does not register the Storyteller's choice of which characters to add as an ability."},
     {
         "text":"The [Djinn] rules only one of the [Heretic] or [Godfather] may be in play at any time. This includes dead, drunk, and poisoned characters.",
         "math":"green",
         "reason":"The Djinn changes the way interactions work.",
-        "mathInfo":"The [Mathematician] does not register the Storyteller's choice of which characters to add as an ability."
-    },
+        "mathInfo":"The [Mathematician] does not register the Storyteller's choice of which characters to add as an ability."},
     {
         "text":"The [Djinn] rules only one of the [Heretic] or [Baron] may be in play at any time. This includes dead, drunk, and poisoned characters.",
         "math":"green",
         "reason":"The Djinn changes the way interactions work.",
-        "mathInfo":"The [Mathematician] does not register the Storyteller's choice of which characters to add as an ability."
-    },
+        "mathInfo":"The [Mathematician] does not register the Storyteller's choice of which characters to add as an ability."},
     {
         "text":"The [Butler] [Organ Grinder] [Djinn] rule states \"If the [Organ Grinder] is causing eyes closed voting, the [Butler] may raise their hand to vote but their vote is only counted if their master voted too.\"",
         "math":"green",
         "reason":"The Djinn changes the way interactions work.",
-        "mathInfo":"The Djinn rule changes the way the Butler's ability works, but does not count the ability as malfunctioning."
-    },
+        "mathInfo":"The Djinn rule changes the way the Butler's ability works, but does not count the ability as malfunctioning."},
     {
         "text":"The [Magician] [Wraith] [Djinn] rule states \"After each execution, the living [Magician] may publicly guess a living player as the [Wraith]. If correct, the Demon must choose the [Wraith] tonight.\"",
         "math":"green",
         "reason":"The Djinn changes the way interactions work.",
-        "mathInfo":"The Djinn rule changes the way the Magician's ability works, but does not count the ability as malfunctioning."
-    },
+        "mathInfo":"The Djinn rule changes the way the Magician's ability works, but does not count the ability as malfunctioning."},
     {
         "text":"The [Magician] [Widow] [Djinn] rule states \"When the [Widow] sees the Grimoire, the Demon and [Magician]'s character tokens are removed.\"",
         "math":"green",
         "reason":"The Djinn changes the way interactions work.",
-        "mathInfo":"The Djinn rule changes the way the Widow and Magician's abilities work, but does not count the abilities as malfunctioning."
-    },
+        "mathInfo":"The Djinn rule changes the way the Widow and Magician's abilities work, but does not count the abilities as malfunctioning."},
     {
         "text":"The [Magician] [Vizier] [Djinn] rule states \"If the [Vizier] is in play, the [Magician] has no ability but is immune to the [Vizier]'s ability.\"",
         "math":"green",
         "reason":"The Djinn changes the way interactions work.",
-        "mathInfo":"The Djinn rule changes the way the Vizier and Magician's abilities work, but does not count the abilities as malfunctioning."
-    },
+        "mathInfo":"The Djinn rule changes the way the Vizier and Magician's abilities work, but does not count the abilities as malfunctioning."},
     {
         "text":"The [Magician] [Spy] [Djinn] rule states \"When the [Spy] sees the Grimoire, the Demon and [Magician]'s character tokens are removed.\"",
         "math":"green",
         "reason":"The Djinn changes the way interactions work.",
-        "mathInfo":"The Djinn rule changes the way the Spy and Magician's abilities work, but does not count the abilities as malfunctioning."
-    },
+        "mathInfo":"The Djinn rule changes the way the Spy and Magician's abilities work, but does not count the abilities as malfunctioning."},
     {
         "text":"The [Magician] [Marionette] [Djinn] rule states \"If the [Magician] is alive, the Demon doesn't know which neighbor is the [Marionette].\"",
         "math":"green",
         "reason":"The Djinn changes the way interactions work.",
-        "mathInfo":"The Djinn rule changes the way the Marionette and Magician's abilities work, but does not count the abilities as malfunctioning."
-    },
+        "mathInfo":"The Djinn rule changes the way the Marionette and Magician's abilities work, but does not count the abilities as malfunctioning."},
     {
         "text":"The [Magician] [Legion] [Djinn] rule states \"If the [Magician] is in play, during the Demon info step, [Legion] wake in separate groups. Each group learns which players are good, but does not learn the [Magician].\"",
         "math":"green",
         "reason":"The Djinn changes the way interactions work.",
-        "mathInfo":"Demon and Minion info does not count as a player's ability. The Djinn rule changes the way the Magician's ability works, but does not count the ability as malfunctioning."
-    },
+        "mathInfo":"Demon and Minion info does not count as a player's ability. The Djinn rule changes the way the Magician's ability works, but does not count the ability as malfunctioning."},
     {
         "text":"The [Mathematician] [Marionette] [Djinn] rule states \"The [Mathematician] learns if the [Marionette]'s ability yielded false info or failed to work properly.\"",
         "math":"green",
         "reason":"The Djinn changes the way interactions work.",
-        "mathInfo":"The Mathematician's ability is not malfunctioning by learning if the Marionette's ability malfunctioned."
-    },
+        "mathInfo":"The Mathematician's ability is not malfunctioning by learning if the Marionette's ability malfunctioned."},
     {
         "text":"The [Mathematician] [Lunatic] [Djinn] rule states \"The [Mathematician] learns if the [Lunatic] attacks a different player than the real Demon attacked.\"",
         "math":"green",
         "reason":"The Djinn changes the way interactions work.",
-        "mathInfo":"The Mathematician's ability is not malfunctioning by learning if the Lunatic's ability malfunctioned."
-    },
+        "mathInfo":"The Mathematician's ability is not malfunctioning by learning if the Lunatic's ability malfunctioned."},
     {
         "text":"The [Mathematician] [Drunk] [Djinn] rule states \"The [Mathematician] learns if the [Drunk]’s ability yielded false info or failed to work properly.\"",
         "math":"green",
         "reason":"The Djinn changes the way interactions work.",
-        "mathInfo":"The Mathematician's ability is not malfunctioning by learning if the Drunk's ability malfunctioned."
-    },
+        "mathInfo":"The Mathematician's ability is not malfunctioning by learning if the Drunk's ability malfunctioned."},
     {
         "text":"The [Chambermaid] [Mathematician] [Djinn] rule states \"The [Chambermaid] can detect if the [Mathematician] will wake tonight.\"",
         "math":"green",
         "reason":"The Djinn changes the way interactions work.",
-        "mathInfo":"There is no ability malfunctioning."
-    },
+        "mathInfo":"There is no ability malfunctioning."},
     {
         "text":"The [Cannibal] [Zealot] [Djinn] rule states \"If the [Cannibal] gains the [Zealot] ability, the [Cannibal] learns this.\"",
         "math":"green",
         "reason":"The Djinn changes the way interactions work.",
-        "mathInfo":"There is no ability malfunctioning."
-    },
+        "mathInfo":"There is no ability malfunctioning."},
     {
         "text":"The [Cannibal] [Princess] [Djinn] rule states \"If the [Cannibal] nominated, executed, & killed the [Princess] today, the Demon doesn’t kill tonight.\"",
         "math":"green",
         "reason":"The Djinn changes the way interactions work.",
-        "mathInfo":"There is no ability malfunctioning."
-    },
+        "mathInfo":"There is no ability malfunctioning."},
     {
         "text":"The [Cannibal] [Juggler] [Djinn] rule states \"If the [Juggler] guesses on their first day and dies by execution, tonight the living [Cannibal] learns how many guesses the [Juggler] got correct.\"",
         "math":"green",
         "reason":"The Djinn changes the way interactions work.",
-        "mathInfo":"There is no ability malfunctioning."
-    },
+        "mathInfo":"There is no ability malfunctioning."},
     {
         "text":"The [Cannibal] [Butler] [Djinn] rule states \"If the [Cannibal] gains the [Butler] ability, the [Cannibal] learns this.\"",
         "math":"green",
         "reason":"The Djinn changes the way interactions work.",
-        "mathInfo":"There is no ability malfunctioning."
-    },
+        "mathInfo":"There is no ability malfunctioning."},
     {
         "text":"The [Bounty Hunter] [Philosopher] [Djinn] rule states \"If the [Philosopher] gains the [Bounty Hunter] ability, a Townsfolk might turn evil.\"",
         "math":"green",
         "reason":"The Djinn changes the way interactions work.",
-        "mathInfo":"There is no ability malfunctioning."
-    },
+        "mathInfo":"There is no ability malfunctioning."},
     {
         "text":"The [Bounty Hunter] [Kazali] [Djinn] rule states \"If the [Kazali] turns the [Bounty Hunter] into a Minion, an evil Townsfolk is not created.\"",
         "math":"green",
         "reason":"The Djinn changes the way interactions work.",
-        "mathInfo":"The Djinn changes the rules, which changes what can cause abilities to register as malfunctioning."
-    },
+        "mathInfo":"The Djinn changes the rules, which changes what can cause abilities to register as malfunctioning."},
     {
         "text":"The [Alchemist] [Widow] [Djinn] rule states \"An [Alchemist]-[Widow] has no [Widow] ability & a [Widow] is in play. After each execution, a living [Alchemist]-[Widow] may publicly guess a living player as the [Widow]. If correct, the Demon must choose the [Widow] tonight.\"",
         "math":"green",
         "reason":"The Djinn changes the way interactions work.",
-        "mathInfo":"The Djinn changes the rules, which changes what can cause abilities to register as malfunctioning."
-    },
+        "mathInfo":"The Djinn changes the rules, which changes what can cause abilities to register as malfunctioning."},
     {
         "text":"The [Alchemist] [Wraith] [Djinn] rule states \"An [Alchemist]-[Wraith] has no [Wraith] ability & a [Wraith] is in play. After each execution, a living [Alchemist]-[Wraith] may publicly guess a living player as the [Wraith]. If correct, the Demon must choose the [Wraith] tonight.\"",
         "math":"green",
         "reason":"The Djinn changes the way interactions work.",
-        "mathInfo":"The Djinn changes the rules, which changes what can cause abilities to register as malfunctioning."
-    },
+        "mathInfo":"The Djinn changes the rules, which changes what can cause abilities to register as malfunctioning."},
     {
         "text":"The [Alchemist] [Summoner] [Djinn] rule states \"The [Alchemist]-[Summoner] does not get bluffs, and chooses which Demon but not which player. If they die before this happens, evil wins. [[No Demon]]\".",
         "math":"green",
         "reason":"The Djinn changes the way interactions work.",
-        "mathInfo":"The Djinn changes the rules, which changes what can cause abilities to register as malfunctioning."
-    },
+        "mathInfo":"The Djinn changes the rules, which changes what can cause abilities to register as malfunctioning."},
     {
         "text":"The [Alchemist] [Spy] [Djinn] rule states \"An [Alchemist]-[Spy] has no [Spy] ability & a [Spy] is in play. After each execution, a living [Alchemist]-[Spy] may publicly guess a living player as the [Spy]. If correct, the Demon must choose the [Spy] tonight.\"",
         "math":"green",
         "reason":"The Djinn changes the way interactions work.",
-        "mathInfo":"The Djinn changes the rules, which changes what can cause abilities to register as malfunctioning."
-    },
+        "mathInfo":"The Djinn changes the rules, which changes what can cause abilities to register as malfunctioning."},
     {
         "text":"The [Alchemist] [Organ Grinder] [Djinn] rule states \"If the [Alchemist] has the [Organ Grinder] ability, the [Organ Grinder] is in play. If both are sober, both are drunk.\"",
         "math":"red",
         "reason":"The Djinn changes the way interactions work.",
-        "mathInfo":"If the [Organ Grinder] and [Alchemist] are drunk due to both choosing to be sober, both register as malfunctioning to the Mathematician the next night (after the ability fails)."
-    },
+        "mathInfo":"If the [Organ Grinder] and [Alchemist] are drunk due to both choosing to be sober, both register as malfunctioning to the Mathematician the next night (after the ability fails)."},
     {
         "text":"The [Alchemist] [Mastermind] [Djinn] rule states \"An [Alchemist]-[Mastermind] has no [Mastermind] ability & the [Mastermind] is not in play.\"",
         "math":"green",
         "reason":"The Djinn changes the way interactions work.",
-        "mathInfo":"The Djinn changes the rules, which changes what can cause abilities to register as malfunctioning."
-    },
+        "mathInfo":"The Djinn changes the rules, which changes what can cause abilities to register as malfunctioning."},
     {
         "text":"The [Alchemist] [Marionette] [Djinn] rule states \"An [Alchemist]-[Marionette] has no [Marionette] ability & the [Marionette] is in play.\"",
         "math":"green",
         "reason":"The Djinn changes the way interactions work.",
-        "mathInfo":"The Djinn changes the rules, which changes what can cause abilities to register as malfunctioning."
-    },
+        "mathInfo":"The Djinn changes the rules, which changes what can cause abilities to register as malfunctioning."},
     {
         "text":"The [Alchemist] [Boffin] [Djinn] rule states \"If the [Alchemist] has the [Boffin] ability, the [Alchemist] does not learn what ability the Demon has.\"",
         "math":"green",
         "reason":"Normally the [Boffin] would learn the ability, but the Alchemist does not.",
-        "mathInfo":"The Djinn changes the rules, which changes what can cause abilities to register as malfunctioning."
-    },
+        "mathInfo":"The Djinn changes the rules, which changes what can cause abilities to register as malfunctioning."},
     {
         "text":"If the [Acrobat] chooses the [Drunk], the [Acrobat] dies.",
         "math":"green",
         "reason":"The Acrobat's ability includes the Drunk.",
-        "mathInfo":"The Acrobat's ability includes the Drunk."
-    },
+        "mathInfo":"The Acrobat's ability includes the Drunk."},
     {
         "text":"If the [Acrobat] chooses a player who is [Courtier] drunk, the Acrobat dies.",
         "math":"green",
         "reason":"The Acrobat dies whether or not the drunk player's ability malfunctions.",
-        "mathInfo":"The Acrobat's ability is working as intended."
-    },
+        "mathInfo":"The Acrobat's ability is working as intended."},
     {
         "text":"If the [Acrobat] chooses a player who is [Innkeeper] drunk, the Acrobat dies.",
         "math":"green",
         "reason":"The Acrobat dies whether or not the drunk player's ability malfunctions.",
-        "mathInfo":"The Acrobat's ability is working as intended."
-    },
+        "mathInfo":"The Acrobat's ability is working as intended."},
     {
         "text":"If the [Acrobat] chooses a player who is [Minstrel] drunk, the Acrobat dies.",
         "math":"green",
         "reason":"The Acrobat dies whether or not the drunk player's ability malfunctions.",
-        "mathInfo":"The Acrobat's ability is working as intended."
-    },
+        "mathInfo":"The Acrobat's ability is working as intended."},
     {
         "text":"If the [Acrobat] chooses a player who is [Philosopher] drunk, the Acrobat dies.",
         "math":"green",
         "reason":"The Acrobat dies whether or not the drunk player's ability malfunctions.",
-        "mathInfo":"The Acrobat's ability is working as intended."
-    },
+        "mathInfo":"The Acrobat's ability is working as intended."},
     {
         "text":"If the [Acrobat] chooses a player who is [Sailor] drunk, the Acrobat dies.",
         "math":"green",
         "reason":"The Acrobat dies whether or not the drunk player's ability malfunctions.",
-        "mathInfo":"The Acrobat's ability is working as intended."
-    },
+        "mathInfo":"The Acrobat's ability is working as intended."},
     {
         "text":"If the [Acrobat] chooses a player who is or becomes [Goon] drunk, the Acrobat dies.",
         "math":"green",
         "reason":"The Acrobat dies whether or not the drunk player's ability malfunctions.",
-        "mathInfo":"The Acrobat's ability is working as intended."
-    },
+        "mathInfo":"The Acrobat's ability is working as intended."},
     {
         "text":"If the [Acrobat] chooses a player who is [Puzzlemaster] drunk, the Acrobat dies.",
         "math":"green",
         "reason":"The Acrobat dies whether or not the drunk player's ability malfunctions.",
-        "mathInfo":"The Acrobat's ability is working as intended."
-    },
+        "mathInfo":"The Acrobat's ability is working as intended."},
     {
         "text":"If the [Acrobat] chooses a player who is [Sweetheart] drunk, the Acrobat dies.",
         "math":"green",
         "reason":"The Acrobat dies whether or not the drunk player's ability malfunctions.",
-        "mathInfo":"The Acrobat's ability is working as intended."
-    },
+        "mathInfo":"The Acrobat's ability is working as intended."},
     {
         "text":"If the [Acrobat] chooses a player who is [Poisoner] poisoned, the Acrobat dies.",
         "math":"green",
         "reason":"The Acrobat dies whether or not the poisoned player's ability malfunctions.",
-        "mathInfo":"The Acrobat's ability is working as intended."
-    },
+        "mathInfo":"The Acrobat's ability is working as intended."},
     {
         "text":"If the [Acrobat] chooses a player who is [Widow] poisoned, the Acrobat dies.",
         "math":"green",
         "reason":"The Acrobat dies whether or not the poisoned player's ability malfunctions.",
-        "mathInfo":"The Acrobat's ability is working as intended."
-    },
+        "mathInfo":"The Acrobat's ability is working as intended."},
     {
         "text":"If the [Acrobat] chooses a player who is [Xaan] poisoned, the Acrobat dies.",
         "math":"green",
         "reason":"The Acrobat dies whether or not the poisoned player's ability malfunctions.",
-        "mathInfo":"The Acrobat's ability is working as intended."
-    },
+        "mathInfo":"The Acrobat's ability is working as intended."},
     {
         "text":"If the [Acrobat] chooses a player who is [Lleech] poisoned, the Acrobat dies.",
         "math":"green",
         "reason":"The Acrobat dies whether or not the poisoned player's ability malfunctions.",
-        "mathInfo":"The Acrobat's ability is working as intended."
-    },
+        "mathInfo":"The Acrobat's ability is working as intended."},
     {
         "text":"If the [Acrobat] chooses a player who is [No Dashii] poisoned, the Acrobat dies.",
         "math":"green",
         "reason":"The Acrobat dies whether or not the poisoned player's ability malfunctions.",
-        "mathInfo":"The Acrobat's ability is working as intended."
-    },
+        "mathInfo":"The Acrobat's ability is working as intended."},
     {
         "text":"If the [Acrobat] chooses a player who is [Vigormortis] poisoned, the Acrobat dies.",
         "math":"green",
         "reason":"The Acrobat dies whether or not the poisoned player's ability malfunctions.",
-        "mathInfo":"The Acrobat's ability is working as intended."
-    },
+        "mathInfo":"The Acrobat's ability is working as intended."},
     {
         "text":"If the [Acrobat] chooses a player who is or becomes [Pukka] poisoned, the Acrobat dies.",
         "math":"green",
         "reason":"The Acrobat dies whether or not the poisoned player's ability malfunctions.",
-        "mathInfo":"The Acrobat's ability is working as intended."
-    },
+        "mathInfo":"The Acrobat's ability is working as intended."},
     {
         "text":"If the [Acrobat] chooses the [Alchemist]-[Organ Grinder], who chooses to be drunk, the Acrobat dies.",
         "math":"green",
         "reason":"The Acrobat registers drunk or poisoned due to any reason, even if due to the character's own ability.",
-        "mathInfo":"The Acrobat's ability is working as intended."
-    },
+        "mathInfo":"The Acrobat's ability is working as intended."},
     {
         "text":"If the [Atheist] ability is in play, the [Acrobat] might die after choosing any player.",
         "math":"red",
         "reason":"The Storyteller can break the rules due to the Atheist.",
-        "mathInfo":"If the Acrobat died because the Atheist allowed the Storyteller to break the rules, the Mathematician registers this as abnormal."
-    },
+        "mathInfo":"If the Acrobat died because the Atheist allowed the Storyteller to break the rules, the Mathematician registers this as abnormal."},
     {
         "text":"If an evil player died by execution, and the [Acrobat] chooses the [Cannibal], the [Acrobat] dies.",
         "math":"green",
         "reason":"The Acrobat registers drunk or poisoned due to any reason, even if due to the character's own ability. The Acrobat dies whether or not the Cannibal's ability malfunctions.",
-        "mathInfo":"The Acrobat's ability is working as intended."
-    },
+        "mathInfo":"The Acrobat's ability is working as intended."},
     {
         "text":"The [Acrobat] does not die due to choosing a player whose character has changed due to the [Engineer] ability.",
         "math":"green",
         "reason":"The Acrobat only detects drunkenness or poison.",
-        "mathInfo":"The Acrobat's ability is working as intended."
-    },
+        "mathInfo":"The Acrobat's ability is working as intended."},
     {
         "text":"The [Acrobat] does not die due to choosing a Demon who does not wake due to the [Exorcist] ability.",
         "math":"green",
         "reason":"The Acrobat only detects drunkenness or poison.",
-        "mathInfo":"The Acrobat's ability is working as intended."
-    },
+        "mathInfo":"The Acrobat's ability is working as intended."},
     {
         "text":"The [Acrobat] does not die due to choosing a player whose character has changed due to the [Farmer] ability.",
         "math":"green",
         "reason":"The Acrobat only detects drunkenness or poison.",
-        "mathInfo":"The Acrobat's ability is working as intended."
-    },
+        "mathInfo":"The Acrobat's ability is working as intended."},
     {
         "text":"The [Acrobat] does not die due to choosing a player who not cause a death due to the [Fool] ability.",
         "math":"green",
         "reason":"The Acrobat only detects drunkenness or poison.",
-        "mathInfo":"The Acrobat's ability is working as intended."
-    },
+        "mathInfo":"The Acrobat's ability is working as intended."},
     {
         "text":"The [Acrobat] does not die due to choosing the [Fortune Teller] who yielded false info due to a Red Herring.",
         "math":"green",
         "reason":"The Acrobat only detects drunkenness or poison.",
-        "mathInfo":"The Acrobat's ability is working as intended."
-    },
+        "mathInfo":"The Acrobat's ability is working as intended."},
     {
         "text":"The [Acrobat] does not die due to choosing a player who did not cause a death due to the [Innkeeper] ability.",
         "math":"green",
         "reason":"The Acrobat only detects drunkenness or poison.",
-        "mathInfo":"The Acrobat's ability is working as intended."
-    },
+        "mathInfo":"The Acrobat's ability is working as intended."},
     {
         "text":"The [Acrobat] does not die due to choosing a Demon who did not cause a death due to the [Lycanthrope] ability.",
         "math":"green",
         "reason":"The Acrobat only detects drunkenness or poison.",
-        "mathInfo":"The Acrobat's ability is working as intended."
-    },
+        "mathInfo":"The Acrobat's ability is working as intended."},
     {
         "text":"The [Acrobat] does not die due to choosing a player who yielded false info due to the [Lycanthrope] ability.",
         "math":"green",
         "reason":"The Acrobat only detects drunkenness or poison.",
-        "mathInfo":"The Acrobat's ability is working as intended."
-    },
+        "mathInfo":"The Acrobat's ability is working as intended."},
     {
         "text":"The [Acrobat] does not die due to choosing a Demon who did not cause an intended death due to the [Mayor] ability.",
         "math":"green",
         "reason":"The Acrobat only detects drunkenness or poison.",
-        "mathInfo":"The Acrobat's ability is working as intended."
-    },
+        "mathInfo":"The Acrobat's ability is working as intended."},
     {
         "text":"The [Acrobat] does not die due to choosing a Demon who did not cause a death due to the [Monk] ability.",
         "math":"green",
         "reason":"The Acrobat only detects drunkenness or poison.",
-        "mathInfo":"The Acrobat's ability is working as intended."
-    },
+        "mathInfo":"The Acrobat's ability is working as intended."},
     {
         "text":"The [Acrobat] does not die due to choosing a Minion who has no ability due to the [Preacher] ability.",
         "math":"green",
         "reason":"The Acrobat only detects drunkenness or poison.",
-        "mathInfo":"The Acrobat's ability is working as intended."
-    },
+        "mathInfo":"The Acrobat's ability is working as intended."},
     {
         "text":"The [Acrobat] does not die due to choosing a Demon who did not cause a death due to the [Princess] ability.",
         "math":"green",
         "reason":"The Acrobat only detects drunkenness or poison.",
-        "mathInfo":"The Acrobat's ability is working as intended."
-    },
+        "mathInfo":"The Acrobat's ability is working as intended."},
     {
         "text":"The [Acrobat] does not die due to choosing the [Shugenja] who yielded arbitrary information due to their own ability.",
         "math":"green",
         "reason":"The Acrobat only detects drunkenness or poison.",
-        "mathInfo":"The Acrobat's ability is working as intended."
-    },
+        "mathInfo":"The Acrobat's ability is working as intended."},
     {
         "text":"The [Acrobat] dies if they choose a [Snake Charmer] who is poisoned due to previously being the Demon.",
         "math":"green",
         "reason":"The Acrobat registers drunk or poisoned due to any reason, even if due to the character's own ability.",
-        "mathInfo":"The Acrobat's ability is working as intended."
-    },
+        "mathInfo":"The Acrobat's ability is working as intended."},
     {
         "text":"The [Acrobat] does not die due to choosing a Demon who did not cause a death due to the [Soldier] ability.",
         "math":"green",
         "reason":"The Acrobat only detects drunkenness or poison.",
-        "mathInfo":"The Acrobat's ability is working as intended."
-    },
+        "mathInfo":"The Acrobat's ability is working as intended."},
     {
         "text":"The [Acrobat] does not die due to choosing a Demon who did not cause a death due to the [Tea Lady] ability.",
         "math":"green",
         "reason":"The Acrobat only detects drunkenness or poison.",
-        "mathInfo":"The Acrobat's ability is working as intended."
-    },
+        "mathInfo":"The Acrobat's ability is working as intended."},
     {
         "text":"If the [Acrobat] chooses the drunk [Village Idiot], the [Acrobat] dies.",
         "math":"green",
         "reason":"The Acrobat registers drunk or poisoned due to any reason, even if due to the character's own ability.",
-        "mathInfo":"The Acrobat's ability is working as intended."
-    },
+        "mathInfo":"The Acrobat's ability is working as intended."},
     {
         "text":"The [Acrobat] does not die due to choosing a player whose character has changed due to the [Barber] ability.",
         "math":"green",
         "reason":"The Acrobat only detects drunkenness or poison.",
-        "mathInfo":"The Acrobat's ability is working as intended."
-    },
+        "mathInfo":"The Acrobat's ability is working as intended."},
     {
         "text":"The [Acrobat] does not die due to choosing a player whose character has changed due to the [Hatter] ability.",
         "math":"green",
         "reason":"The Acrobat only detects drunkenness or poison.",
-        "mathInfo":"The Acrobat's ability is working as intended."
-    },
+        "mathInfo":"The Acrobat's ability is working as intended."},
     {
         "text":"The [Acrobat] does not die due to choosing the [Lunatic] who choose a player who does not die.",
         "math":"green",
         "reason":"The Acrobat only detects drunkenness or poison.",
-        "mathInfo":"The Acrobat's ability is working as intended."
-    },
+        "mathInfo":"The Acrobat's ability is working as intended."},
     {
         "text":"The [Acrobat] does not die due to choosing the [Moonchild] who did not cause a death due to the player being or registering as evil.",
         "math":"green",
         "reason":"The Acrobat only detects drunkenness or poison.",
-        "mathInfo":"The Acrobat's ability is working as intended."
-    },
+        "mathInfo":"The Acrobat's ability is working as intended."},
     {
         "text":"If the [Acrobat] chooses the drunk or poisoned [Ogre], the [Acrobat] dies.",
         "math":"green",
         "reason":"Even if the Ogre's ability works whether or not they are drunk or poisoned, they still register as drunk or poisoned if they are.",
-        "mathInfo":"The Acrobat's ability is working as intended."
-    },
+        "mathInfo":"The Acrobat's ability is working as intended."},
     {
         "text":"The [Acrobat] does not die due to choosing a player who yielded false info due to the [Recluse] ability.",
         "math":"green",
         "reason":"The Acrobat only detects drunkenness or poison.",
-        "mathInfo":"The Acrobat's ability is working as intended."
-    },
+        "mathInfo":"The Acrobat's ability is working as intended."},
     {
         "text":"The [Acrobat] does not die due to choosing a player who was killed by an [Assassin] ability even though they otherwise wouldn't have died.",
         "math":"green",
         "reason":"The Acrobat only detects drunkenness or poison.",
-        "mathInfo":"The Acrobat's ability is working as intended."
-    },
+        "mathInfo":"The Acrobat's ability is working as intended."},
     {
         "text":"If the [Acrobat] chooses the Demon whose [Boffin] ability is drunk or poisoned, the [Acrobat] dies.",
         "math":"green",
         "reason":"The [Acrobat] detects drunkenness or poison.",
-        "mathInfo":"The Acrobat's ability is working as intended."
-    },
+        "mathInfo":"The Acrobat's ability is working as intended."},
     {
         "text":"The [Acrobat] does not die due to choosing the [Marionette].",
         "math":"green",
         "reason":"The Acrobat's ability does not include the Marionette.",
-        "mathInfo":"The Acrobat's ability does not include the Marionette."
-    },
+        "mathInfo":"The Acrobat's ability does not include the Marionette."},
     {
         "text":"If the [Acrobat] chooses the [Organ Grinder], who chooses to be drunk, the Acrobat dies.",
         "math":"green",
         "reason":"The Acrobat registers drunk or poisoned due to any reason, even if due to the character's own ability.",
-        "mathInfo":"The Acrobat's ability is working as intended."
-    },
+        "mathInfo":"The Acrobat's ability is working as intended."},
     {
         "text":"The [Acrobat] does not die due to choosing a player whose character has changed due to the [Pit-Hag] ability.",
         "math":"green",
         "reason":"The Acrobat only detects drunkenness or poison.",
-        "mathInfo":"The Acrobat's ability is working as intended."
-    },
+        "mathInfo":"The Acrobat's ability is working as intended."},
     {
         "text":"The [Acrobat] does not die due to choosing a player whose character has changed due to the [Scarlet Woman] ability.",
         "math":"green",
         "reason":"The Acrobat only detects drunkenness or poison.",
-        "mathInfo":"The Acrobat's ability is working as intended."
-    },
+        "mathInfo":"The Acrobat's ability is working as intended."},
     {
         "text":"The [Acrobat] does not die due to choosing a player who yielded false info due to the [Spy] ability.",
         "math":"green",
         "reason":"The Acrobat only detects drunkenness or poison.",
-        "mathInfo":"The Acrobat's ability is working as intended."
-    },
+        "mathInfo":"The Acrobat's ability is working as intended."},
     {
         "text":"The [Acrobat] does not die due to choosing a player whose character has changed due to the [Summoner] ability.",
         "math":"green",
         "reason":"The Acrobat only detects drunkenness or poison.",
-        "mathInfo":"The Acrobat's ability is working as intended."
-    },
+        "mathInfo":"The Acrobat's ability is working as intended."},
     {
         "text":"The [Acrobat] does not die due to choosing a player whose character has changed due to the [Imp] ability.",
         "math":"green",
         "reason":"The Acrobat only detects drunkenness or poison.",
-        "mathInfo":"The Acrobat's ability is working as intended."
-    },
+        "mathInfo":"The Acrobat's ability is working as intended."},
     {
         "text":"The [Acrobat] does not die due to choosing a player whose character has changed due to the [Fang Gu] ability.",
         "math":"green",
         "reason":"The Acrobat only detects drunkenness or poison.",
-        "mathInfo":"The Acrobat's ability is working as intended."
-    },
+        "mathInfo":"The Acrobat's ability is working as intended."},
     {
         "text":"The [Acrobat] does not die due to choosing a player whose character has changed due to the [Riot] ability.",
         "math":"green",
         "reason":"The Acrobat only detects drunkenness or poison.",
-        "mathInfo":"The Acrobat's ability is working as intended."
-    },
+        "mathInfo":"The Acrobat's ability is working as intended."},
     {
         "text":"The [Acrobat] does not die due to choosing a player who yielded false info due to the [Vortox] ability.",
         "math":"green",
         "reason":"The Acrobat only detects drunkenness or poison.",
-        "mathInfo":"The Acrobat's ability is working as intended."
-    },
+        "mathInfo":"The Acrobat's ability is working as intended."},
     {
         "text":"If the [Vortox] ability is in play, the [Acrobat]'s ability remains unaffected.",
         "math":"green",
         "reason":"The Acrobat has a mechanical ability. The Vortox only affects informative abilities.",
-        "mathInfo":"The Acrobat's ability is working as intended."
-    },
+        "mathInfo":"The Acrobat's ability is working as intended."},
     {
         "text":"If the [Acrobat] chooses a player who is sober and healthy due to the [Barista] ability, but would be drunk or poisoned otherwise, the [Acrobat] does not die.",
         "math":"green",
         "reason":"The Acrobat only detects drunkenness or poison.",
-        "mathInfo":"The Acrobat's ability is not what is malfunctioning."
-    },
+        "mathInfo":"The Acrobat's ability is not what is malfunctioning."},
     {
         "text":"If the [Acrobat]'s ability works twice due to the [Barista] ability, the [Acrobat] chooses a player at a time. If they do not die after their first choice, they choose a second player.",
         "math":"green",
         "reason":"If the Acrobat dies after their first choice, they do not have an ability to choose a second player. The Barista does not give abilities back to the dead.",
-        "mathInfo":"The Acrobat using their ability twice does not register as malfunctioning."
-    },
+        "mathInfo":"The Acrobat using their ability twice does not register as malfunctioning."},
     {
         "text":"If the [Acrobat] chooses the [Beggar] who is sober and healthy due to the [Beggar] ability, but would be drunk or poisoned otherwise, the [Acrobat] does not die.",
         "math":"green",
         "reason":"The Beggar cannot be drunk or poisoned.",
-        "mathInfo":"The Acrobat's ability is not what is malfunctioning."
-    },
+        "mathInfo":"The Acrobat's ability is not what is malfunctioning."},
     {
         "text":"The [Acrobat] does not die due to choosing a player whose character has changed due to the [Cacklejack] ability.",
         "math":"green",
         "reason":"The Acrobat only detects drunkenness or poison.",
-        "mathInfo":"The Acrobat's ability is working as intended."
-    },
+        "mathInfo":"The Acrobat's ability is working as intended."},
     {
         "text":"The [Acrobat] does not die due to choosing a player whose ability malfunctioned due to the [Deus ex Fiasco] ability.",
         "math":"green",
         "reason":"The Acrobat only detects drunkenness or poison.",
-        "mathInfo":"The Acrobat's ability is working as intended."
-    },
+        "mathInfo":"The Acrobat's ability is working as intended."},
     {
         "text":"If the [Acrobat] chooses the [Alchemist] or [Organ Grinder] who is drunk due to the [Alchemist]-[Organ Grinder] [Djinn] rule, the [Acrobat] dies.",
         "math":"green",
         "reason":"The Acrobat only detects drunkenness or poison.",
-        "mathInfo":"The Acrobat's ability is working as intended."
-    },
+        "mathInfo":"The Acrobat's ability is working as intended."},
     {
         "text":"If the [Acrobat] chooses the [Damsel] who is poisoned due to the [Spy]-[Damsel] [Djinn] rule, the [Acrobat] dies.",
         "math":"green",
         "reason":"The Acrobat only detects drunkenness or poison.",
-        "mathInfo":"The Acrobat's ability is working as intended."
-    },
+        "mathInfo":"The Acrobat's ability is working as intended."},
     {
         "text":"If the [Acrobat] chooses the [Damsel] who is poisoned due to the [Widow]-[Damsel] [Djinn] rule, the [Acrobat] dies.",
         "math":"green",
         "reason":"The Acrobat only detects drunkenness or poison.",
-        "mathInfo":"The Acrobat's ability is working as intended."
-    },
+        "mathInfo":"The Acrobat's ability is working as intended."},
     {
         "text":"The [Acrobat] does not die due to choosing a player who yielded false information due to the [Fibbin] ability.",
         "math":"green",
         "reason":"The Acrobat only detects drunkenness or poison.",
-        "mathInfo":"The Acrobat's ability is working as intended."
-    },
+        "mathInfo":"The Acrobat's ability is working as intended."},
     {
         "text":"The [Acrobat] can not survive after choose a drunk or poisoned player due to the [Fibbin] ability.",
         "math":"green",
         "reason":"The Acrobat only detects drunkenness or poison.",
-        "mathInfo":"The Acrobat's ability is working as intended."
-    },
+        "mathInfo":"The Acrobat's ability is working as intended."},
     {
         "text":"The [Acrobat] can not survive after choose a drunk or poisoned player due to the [Monk] ability.",
         "math":"green",
         "reason":"The Acrobat only detects drunkenness or poison.",
-        "mathInfo":"The Acrobat's ability is working as intended."
-    },
+        "mathInfo":"The Acrobat's ability is working as intended."},
     {
         "text":"The [Acrobat] does not die due to choosing a player whose ability malfunctioned due to the [Revolutionary] ability.",
         "math":"green",
         "reason":"The Acrobat only detects drunkenness or poison.",
-        "mathInfo":"The Acrobat's ability is working as intended."
-    },
+        "mathInfo":"The Acrobat's ability is working as intended."},
     {
         "text":"The [Acrobat] does not die due to choosing the [Cult Leader] who did not turn evil due to the [Spirit of Ivory] ability.",
         "math":"green",
         "reason":"The Acrobat only detects drunkenness or poison.",
-        "mathInfo":"The Acrobat's ability is working as intended."
-    },
+        "mathInfo":"The Acrobat's ability is working as intended."},
     {
         "text":"The [Acrobat] does not die due to choosing the [Goon] who did not turn evil due to the [Spirit of Ivory] ability.",
         "math":"green",
         "reason":"The Acrobat only detects drunkenness or poison.",
-        "mathInfo":"The Acrobat's ability is working as intended."
-    },
+        "mathInfo":"The Acrobat's ability is working as intended."},
     {
         "text":"The [Acrobat] does not die due to choosing the [Ogre] who did not turn evil due to the [Spirit of Ivory] ability.",
         "math":"green",
         "reason":"The Acrobat only detects drunkenness or poison.",
-        "mathInfo":"The Acrobat's ability is working as intended."
-    },
+        "mathInfo":"The Acrobat's ability is working as intended."},
     {
         "text":"The [Acrobat] does not die due to choosing the [Philosopher]-[Bounty Hunter] who did not turn a player evil due to the [Spirit of Ivory] ability.",
         "math":"green",
         "reason":"The Acrobat only detects drunkenness or poison.",
-        "mathInfo":"The Acrobat's ability is working as intended."
-    },
+        "mathInfo":"The Acrobat's ability is working as intended."},
     {
         "text":"The [Acrobat] does not die due to choosing the [Mezepheles] who did not turn a player evil due to the [Spirit of Ivory] ability.",
         "math":"green",
         "reason":"The Acrobat only detects drunkenness or poison.",
-        "mathInfo":"The Acrobat's ability is working as intended."
-    },
+        "mathInfo":"The Acrobat's ability is working as intended."},
     {
         "text":"The [Acrobat] does not die due to choosing the [Summoner] who did not turn a player evil due to the [Spirit of Ivory] ability.",
         "math":"green",
         "reason":"The Acrobat only detects drunkenness or poison.",
-        "mathInfo":"The Acrobat's ability is working as intended."
-    },
+        "mathInfo":"The Acrobat's ability is working as intended."},
     {
         "text":"The [Acrobat] does not die due to choosing the [Fang Gu] who did not turn a player into an evil [Fang Gu] due to the [Spirit of Ivory] ability.",
         "math":"green",
         "reason":"The Acrobat only detects drunkenness or poison.",
-        "mathInfo":"The Acrobat's ability is working as intended."
-    },
+        "mathInfo":"The Acrobat's ability is working as intended."},
     {
         "text":"The [Acrobat] does not die due to choosing a Demon who does not wake due to the [Toymaker] ability.",
         "math":"green",
         "reason":"The Acrobat only detects drunkenness or poison.",
-        "mathInfo":"The Acrobat's ability is working as intended."
-    },
+        "mathInfo":"The Acrobat's ability is working as intended."},
     {
         "text":"The [Acrobat] does not die due to choosing a player whose character has changed due to the [Hindu] ability.",
         "math":"green",
         "reason":"The Acrobat only detects drunkenness or poison.",
-        "mathInfo":"The Acrobat's ability is working as intended."
-    },
+        "mathInfo":"The Acrobat's ability is working as intended."},
     {
         "text":"The [Acrobat] does not die due to choosing a player who yielded false information due to the [Knaves] ability.",
         "math":"green",
         "reason":"The Acrobat only detects drunkenness or poison.",
-        "mathInfo":"The Acrobat's ability is working as intended."
-    },
+        "mathInfo":"The Acrobat's ability is working as intended."},
     {
         "text":"The [Acrobat] does not die due to choosing a player who does not cause a death due to the [Storm Catcher] ability.",
         "math":"green",
         "reason":"The Acrobat only detects drunkenness or poison.",
-        "mathInfo":"The Acrobat's ability is working as intended."
-    },
+        "mathInfo":"The Acrobat's ability is working as intended."},
     {
         "text":"The [Acrobat] cannot die due to their own ability if they are [Courtier] drunk.",
         "math":"red",
         "reason":"If the Acrobat is drunk or poisoned, they do not have an ability.",
-        "mathInfo":"The Acrobat's ability malfunctioned only if the Acrobat chose a drunk or poisoned player and did not die."
-    },
+        "mathInfo":"The Acrobat's ability malfunctioned only if the Acrobat chose a drunk or poisoned player and did not die."},
     {
         "text":"The [Acrobat] cannot die due to their own ability if they are [Innkeeper] drunk.",
         "math":"red",
         "reason":"If the Acrobat is drunk or poisoned, they do not have an ability.",
-        "mathInfo":"The Acrobat's ability malfunctioned only if the Acrobat chose a drunk or poisoned player and did not die."
-    },
+        "mathInfo":"The Acrobat's ability malfunctioned only if the Acrobat chose a drunk or poisoned player and did not die."},
     {
         "text":"The [Acrobat] cannot die due to their own ability if they are [Minstrel] drunk.",
         "math":"red",
         "reason":"If the Acrobat is drunk or poisoned, they do not have an ability.",
-        "mathInfo":"The Acrobat's ability malfunctioned only if the Acrobat chose a drunk or poisoned player and did not die."
-    },
+        "mathInfo":"The Acrobat's ability malfunctioned only if the Acrobat chose a drunk or poisoned player and did not die."},
     {
         "text":"The [Acrobat] cannot die due to their own ability if they are [Philosopher] drunk.",
         "math":"red",
         "reason":"If the Acrobat is drunk or poisoned, they do not have an ability.",
-        "mathInfo":"The Acrobat's ability malfunctioned only if the Acrobat chose a drunk or poisoned player and did not die."
-    },
+        "mathInfo":"The Acrobat's ability malfunctioned only if the Acrobat chose a drunk or poisoned player and did not die."},
     {
         "text":"The [Acrobat] cannot die due to their own ability if they are [Sailor] drunk.",
         "math":"red",
         "reason":"If the Acrobat is drunk or poisoned, they do not have an ability.",
-        "mathInfo":"The Acrobat's ability malfunctioned only if the Acrobat chose a drunk or poisoned player and did not die."
-    },
+        "mathInfo":"The Acrobat's ability malfunctioned only if the Acrobat chose a drunk or poisoned player and did not die."},
     {
         "text":"The [Acrobat] cannot die due to their own ability if they are [Goon] drunk.",
         "math":"red",
         "reason":"If the Acrobat is drunk or poisoned, they do not have an ability.",
-        "mathInfo":"The Acrobat's ability malfunctioned only if the Acrobat chose a drunk or poisoned player and did not die."
-    },
+        "mathInfo":"The Acrobat's ability malfunctioned only if the Acrobat chose a drunk or poisoned player and did not die."},
     {
         "text":"The [Acrobat] cannot die due to their own ability if they are [Puzzlemaster] drunk.",
         "math":"red",
         "reason":"If the Acrobat is drunk or poisoned, they do not have an ability.",
-        "mathInfo":"The Acrobat's ability malfunctioned only if the Acrobat chose a drunk or poisoned player and did not die."
-    },
+        "mathInfo":"The Acrobat's ability malfunctioned only if the Acrobat chose a drunk or poisoned player and did not die."},
     {
         "text":"The [Acrobat] cannot die due to their own ability if they are [Sweetheart] drunk.",
         "math":"red",
         "reason":"If the Acrobat is drunk or poisoned, they do not have an ability.",
-        "mathInfo":"The Acrobat's ability malfunctioned only if the Acrobat chose a drunk or poisoned player and did not die."
-    },
+        "mathInfo":"The Acrobat's ability malfunctioned only if the Acrobat chose a drunk or poisoned player and did not die."},
     {
         "text":"The [Acrobat] cannot die due to their own ability if they are [Poisoner] poisoned.",
         "math":"red",
         "reason":"If the Acrobat is drunk or poisoned, they do not have an ability.",
-        "mathInfo":"The Acrobat's ability malfunctioned only if the Acrobat chose a drunk or poisoned player and did not die."
-    },
+        "mathInfo":"The Acrobat's ability malfunctioned only if the Acrobat chose a drunk or poisoned player and did not die."},
     {
         "text":"The [Acrobat] cannot die due to their own ability if they are [Widow] poisoned.",
         "math":"red",
         "reason":"If the Acrobat is drunk or poisoned, they do not have an ability.",
-        "mathInfo":"The Acrobat's ability malfunctioned only if the Acrobat chose a drunk or poisoned player and did not die."
-    },
+        "mathInfo":"The Acrobat's ability malfunctioned only if the Acrobat chose a drunk or poisoned player and did not die."},
     {
         "text":"The [Acrobat] cannot die due to their own ability if they are [Xaan] poisoned.",
         "math":"red",
         "reason":"If the Acrobat is drunk or poisoned, they do not have an ability.",
-        "mathInfo":"The Acrobat's ability malfunctioned only if the Acrobat chose a drunk or poisoned player and did not die."
-    },
+        "mathInfo":"The Acrobat's ability malfunctioned only if the Acrobat chose a drunk or poisoned player and did not die."},
     {
         "text":"The [Acrobat] cannot die due to their own ability if they are [Lleech] poisoned.",
         "math":"red",
         "reason":"If the Acrobat is drunk or poisoned, they do not have an ability.",
-        "mathInfo":"The Acrobat's ability malfunctioned only if the Acrobat chose a drunk or poisoned player and did not die."
-    },
+        "mathInfo":"The Acrobat's ability malfunctioned only if the Acrobat chose a drunk or poisoned player and did not die."},
     {
         "text":"The [Acrobat] cannot die due to their own ability if they are [No Dashii] poisoned.",
         "math":"red",
         "reason":"If the Acrobat is drunk or poisoned, they do not have an ability.",
-        "mathInfo":"The Acrobat's ability malfunctioned only if the Acrobat chose a drunk or poisoned player and did not die."
-    },
+        "mathInfo":"The Acrobat's ability malfunctioned only if the Acrobat chose a drunk or poisoned player and did not die."},
     {
         "text":"The [Acrobat] cannot die due to their own ability if they are [Pukka] poisoned.",
         "math":"red",
         "reason":"If the Acrobat is drunk or poisoned, they do not have an ability.",
-        "mathInfo":"The Acrobat's ability malfunctioned only if the Acrobat chose a drunk or poisoned player and did not die."
-    },
+        "mathInfo":"The Acrobat's ability malfunctioned only if the Acrobat chose a drunk or poisoned player and did not die."},
     {
         "text":"The [Acrobat] cannot die due to their own ability if they are [Vigormortis] poisoned.",
         "math":"red",
         "reason":"If the Acrobat is drunk or poisoned, they do not have an ability.",
-        "mathInfo":"The Acrobat's ability malfunctioned only if the Acrobat chose a drunk or poisoned player and did not die."
-    },
+        "mathInfo":"The Acrobat's ability malfunctioned only if the Acrobat chose a drunk or poisoned player and did not die."},
     {
         "text":"The [Acrobat] cannot die due to their own ability if they are [Innkeeper] protected.",
         "math":"red",
         "reason":"The Innkeeper protects players from dying in any way, even due to their own ability.",
-        "mathInfo":"The Acrobat's ability malfunctioned only if the Acrobat chose a drunk or poisoned player and did not die."
-    }
+        "mathInfo":"The Acrobat's ability malfunctioned only if the Acrobat chose a drunk or poisoned player and did not die."}
 ]
