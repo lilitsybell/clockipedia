@@ -1,5 +1,175 @@
 [
     {
+        "text":"The [Riot] [Sage] [Djinn] rule states \"Each night*, the [Riot] chooses an alive good player (different to previous nights): a chosen [Sage] uses their ability but does not die.\" If the [Riot] accidentally chooses an evil player due to the [Poppy Grower] ability, the Storyteller prompts them to choose again.",
+        "math":"green",
+        "reason":"The Djinn changes the way characters interact with each other.",
+        "mathInfo":"The Djinn rule changes the way the Riot's ability works, but does not count the ability as malfunctioning."},
+    {
+        "text":"The [Riot] [Sage] [Djinn] rule states \"Each night*, the [Riot] chooses an alive good player (different to previous nights): a chosen [Sage] uses their ability but does not die.\" If the [Riot] accidentally chooses an evil player due to the [Magician] ability, the Storyteller prompts them to choose again.",
+        "math":"green",
+        "reason":"The Djinn changes the way characters interact with each other.",
+        "mathInfo":"The Djinn rule changes the way the Riot's ability works, but does not count the ability as malfunctioning."},
+    {
+        "text":"The [Riot] [Sage] [Djinn] rule states \"Each night*, the [Riot] chooses an alive good player (different to previous nights): a chosen [Sage] uses their ability but does not die.\" If the [Riot] accidentally chooses an evil player due to miscommunication, the Storyteller prompts them to choose again.",
+        "math":"green",
+        "reason":"The Djinn changes the way characters interact with each other.",
+        "mathInfo":"The Djinn rule changes the way the Riot's ability works, but does not count the ability as malfunctioning."},
+    {
+        "text":"The [Riot] [Ravenkeeper] [Djinn] rule states \"Each night*, the [Riot] chooses an alive good player (different to previous nights): a chosen [Ravenkeeper] uses their ability but does not die.\" If the [Riot] accidentally chooses an evil player due to the [Poppy Grower] ability, the Storyteller prompts them to choose again.",
+        "math":"green",
+        "reason":"The Djinn changes the way characters interact with each other.",
+        "mathInfo":"The Djinn rule changes the way the Riot's ability works, but does not count the ability as malfunctioning."},
+    {
+        "text":"The [Riot] [Ravenkeeper] [Djinn] rule states \"Each night*, the [Riot] chooses an alive good player (different to previous nights): a chosen [Ravenkeeper] uses their ability but does not die.\" If the [Riot] accidentally chooses an evil player due to the [Magician] ability, the Storyteller prompts them to choose again.",
+        "math":"green",
+        "reason":"The Djinn changes the way characters interact with each other.",
+        "mathInfo":"The Djinn rule changes the way the Riot's ability works, but does not count the ability as malfunctioning."},
+    {
+        "text":"The [Riot] [Ravenkeeper] [Djinn] rule states \"Each night*, the [Riot] chooses an alive good player (different to previous nights): a chosen [Ravenkeeper] uses their ability but does not die.\" If the [Riot] accidentally chooses an evil player due to miscommunication, the Storyteller prompts them to choose again.",
+        "math":"green",
+        "reason":"The Djinn changes the way characters interact with each other.",
+        "mathInfo":"The Djinn rule changes the way the Riot's ability works, but does not count the ability as malfunctioning."},
+    {
+        "text":"The [Riot] [Farmer] [Djinn] rule states \"Each night*, the [Riot] chooses an alive good player (different to previous nights): a chosen [Farmer] uses their ability but does not die.\" If the [Riot] accidentally chooses an evil player due to the [Poppy Grower] ability, the Storyteller prompts them to choose again.",
+        "math":"green",
+        "reason":"The Djinn changes the way characters interact with each other.",
+        "mathInfo":"The Djinn rule changes the way the Riot's ability works, but does not count the ability as malfunctioning."},
+    {
+        "text":"The [Riot] [Farmer] [Djinn] rule states \"Each night*, the [Riot] chooses an alive good player (different to previous nights): a chosen [Farmer] uses their ability but does not die.\" If the [Riot] accidentally chooses an evil player due to the [Magician] ability, the Storyteller prompts them to choose again.",
+        "math":"green",
+        "reason":"The Djinn changes the way characters interact with each other.",
+        "mathInfo":"The Djinn rule changes the way the Riot's ability works, but does not count the ability as malfunctioning."},
+    {
+        "text":"The [Riot] [Farmer] [Djinn] rule states \"Each night*, the [Riot] chooses an alive good player (different to previous nights): a chosen [Farmer] uses their ability but does not die.\" If the [Riot] accidentally chooses an evil player due to miscommunication, the Storyteller prompts them to choose again.",
+        "math":"green",
+        "reason":"The Djinn changes the way characters interact with each other.",
+        "mathInfo":"The Djinn rule changes the way the Riot's ability works, but does not count the ability as malfunctioning."},
+    {
+        "text":"The [Riot] [Banshee] [Djinn] rule states \"Each night*, the [Riot] chooses an alive good player (different to previous nights): a chosen [Banshee] dies & gains their ability.\" If the [Riot] accidentally chooses an evil player due to the [Poppy Grower] ability, the Storyteller prompts them to choose again.",
+        "math":"green",
+        "reason":"The Djinn changes the way characters interact with each other.",
+        "mathInfo":"The Djinn rule changes the way the Riot's ability works, but does not count the ability as malfunctioning."},
+    {
+        "text":"The [Riot] [Banshee] [Djinn] rule states \"Each night*, the [Riot] chooses an alive good player (different to previous nights): a chosen [Banshee] dies & gains their ability.\" If the [Riot] accidentally chooses an evil player due to the [Magician] ability, the Storyteller prompts them to choose again.",
+        "math":"green",
+        "reason":"The Djinn changes the way characters interact with each other.",
+        "mathInfo":"The Djinn rule changes the way the Riot's ability works, but does not count the ability as malfunctioning."},
+    {
+        "text":"The [Riot] [Banshee] [Djinn] rule states \"Each night*, the [Riot] chooses an alive good player (different to previous nights): a chosen [Banshee] dies & gains their ability.\" If the [Riot] accidentally chooses an evil player due to miscommunication, the Storyteller prompts them to choose again.",
+        "math":"green",
+        "reason":"The Djinn changes the way characters interact with each other.",
+        "mathInfo":"The Djinn rule changes the way the Riot's ability works, but does not count the ability as malfunctioning."},
+    {
+        "text":"The [Leviathan] [Sage] [Djinn] rule states \"Each night*, the [Leviathan] chooses an alive good player (different to previous nights): a chosen [Sage] uses their ability but does not die.\" If the [Leviathan] accidentally chooses an evil player due to the [Poppy Grower] ability, the Storyteller prompts them to choose again.",
+        "math":"green",
+        "reason":"The Djinn changes the way characters interact with each other.",
+        "mathInfo":"The Djinn rule changes the way the Leviathan's ability works, but does not count the ability as malfunctioning."},
+    {
+        "text":"The [Leviathan] [Sage] [Djinn] rule states \"Each night*, the [Leviathan] chooses an alive good player (different to previous nights): a chosen [Sage] uses their ability but does not die.\" If the [Leviathan] accidentally chooses an evil player due to the [Magician] ability, the Storyteller prompts them to choose again.",
+        "math":"green",
+        "reason":"The Djinn changes the way characters interact with each other.",
+        "mathInfo":"The Djinn rule changes the way the Leviathan's ability works, but does not count the ability as malfunctioning."},
+    {
+        "text":"The [Leviathan] [Sage] [Djinn] rule states \"Each night*, the [Leviathan] chooses an alive good player (different to previous nights): a chosen [Sage] uses their ability but does not die.\" If the [Leviathan] accidentally chooses an evil player due to miscommunication, the Storyteller prompts them to choose again.",
+        "math":"green",
+        "reason":"The Djinn changes the way characters interact with each other.",
+        "mathInfo":"The Djinn rule changes the way the Leviathan's ability works, but does not count the ability as malfunctioning."},
+    {
+        "text":"The [Leviathan] [Ravenkeeper] [Djinn] rule states \"Each night*, the [Leviathan] chooses an alive player (different to previous nights): a chosen [Ravenkeeper] uses their ability but does not die.\"",
+        "math":"green",
+        "reason":"The Djinn changes the way characters interact with each other.",
+        "mathInfo":"The Djinn rule changes the way the Leviathan's ability works, but does not count the ability as malfunctioning."},
+    {
+        "text":"The [Leviathan] [Farmer] [Djinn] rule states \"Each night*, the [Leviathan] chooses an alive good player (different to previous nights): a chosen [Farmer] uses their ability but does not die.\" If the [Leviathan] accidentally chooses an evil player due to the [Poppy Grower] ability, the Storyteller prompts them to choose again.",
+        "math":"green",
+        "reason":"The Djinn changes the way characters interact with each other.",
+        "mathInfo":"The Djinn rule changes the way the Leviathan's ability works, but does not count the ability as malfunctioning."},
+    {
+        "text":"The [Leviathan] [Farmer] [Djinn] rule states \"Each night*, the [Leviathan] chooses an alive good player (different to previous nights): a chosen [Farmer] uses their ability but does not die.\" If the [Leviathan] accidentally chooses an evil player due to the [Magician] ability, the Storyteller prompts them to choose again.",
+        "math":"green",
+        "reason":"The Djinn changes the way characters interact with each other.",
+        "mathInfo":"The Djinn rule changes the way the Leviathan's ability works, but does not count the ability as malfunctioning."},
+    {
+        "text":"The [Leviathan] [Farmer] [Djinn] rule states \"Each night*, the [Leviathan] chooses an alive good player (different to previous nights): a chosen [Farmer] uses their ability but does not die.\" If the [Leviathan] accidentally chooses an evil player due to miscommunication, the Storyteller prompts them to choose again.",
+        "math":"green",
+        "reason":"The Djinn changes the way characters interact with each other.",
+        "mathInfo":"The Djinn rule changes the way the Leviathan's ability works, but does not count the ability as malfunctioning."},
+    {
+        "text":"The [Leviathan] [Banshee] [Djinn] rule states \"Each night*, the [Leviathan] chooses an alive good player (different to previous nights): a chosen [Banshee] dies & gains their ability.\" If the [Leviathan] accidentally chooses an evil player due to the [Poppy Grower] ability, the Storyteller prompts them to choose again.",
+        "math":"green",
+        "reason":"The Djinn changes the way characters interact with each other.",
+        "mathInfo":"The Djinn rule changes the way the Leviathan's ability works, but does not count the ability as malfunctioning."},
+    {
+        "text":"The [Leviathan] [Banshee] [Djinn] rule states \"Each night*, the [Leviathan] chooses an alive good player (different to previous nights): a chosen [Banshee] dies & gains their ability.\" If the [Leviathan] accidentally chooses an evil player due to the [Magician] ability, the Storyteller prompts them to choose again.",
+        "math":"green",
+        "reason":"The Djinn changes the way characters interact with each other.",
+        "mathInfo":"The Djinn rule changes the way the Leviathan's ability works, but does not count the ability as malfunctioning."},
+    {
+        "text":"The [Leviathan] [Banshee] [Djinn] rule states \"Each night*, the [Leviathan] chooses an alive good player (different to previous nights): a chosen [Banshee] dies & gains their ability.\" If the [Leviathan] accidentally chooses an evil player due to miscommunication, the Storyteller prompts them to choose again.",
+        "math":"green",
+        "reason":"The Djinn changes the way characters interact with each other.",
+        "mathInfo":"The Djinn rule changes the way the Leviathan's ability works, but does not count the ability as malfunctioning."},
+    {
+        "text":"The [Legion] [Summoner] [Djinn] rule states \"If [Legion] is summoned, all evil players become [Legion].\"",
+        "math":"green",
+        "reason":"The Djinn changes the way characters interact with each other.",
+        "mathInfo":"No ability has malfunctioned."},
+    {
+        "text":"The [Legion] [Preacher] [Djinn] rule states \"If the [Preacher] chooses [Legion], [Legion] keeps their ability, but the [Preacher] might learn they are [Legion].\"",
+        "math":"green",
+        "reason":"The Djinn changes the way characters interact with each other.",
+        "mathInfo":"The Djinn rule changes the way the Preacher's ability works, but does not count the ability as malfunctioning."},
+    {
+        "text":"The [Legion] [Zealot] [Djinn] rule states \"The [Zealot] might register as evil to [Legion].\" This might cause a nomination to fail.",
+        "math":"red",
+        "reason":"The Djinn changes the way characters interact with each other.",
+        "mathInfo":"If a nomination fails due to the Zealot misregistering, the Legion's ability malfunctioned."},
+    {
+        "text":"The [Legion] [Politician] [Djinn] rule states \"The [Politician] might register as evil to [Legion].\" This might cause a nomination to fail.",
+        "math":"red",
+        "reason":"The Djinn changes the way characters interact with each other.",
+        "mathInfo":"If a nomination fails due to the Politician misregistering, the Legion's ability malfunctioned."},
+    {
+        "text":"The [Legion] [Minstrel] [Djinn] rule states \"If [Legion] died by execution today, [Legion] keeps their ability, but the [Minstrel] might learn they are [Legion].\"",
+        "math":"green",
+        "reason":"The Djinn changes the way characters interact with each other.",
+        "mathInfo":"The Djinn rule changes the way the Minstrel's ability works, but does not count the ability as malfunctioning."},
+    {
+        "text":"The [Legion] [Hatter] [Djinn] rule states \"If [Legion] is created, all evil players become [Legion]. If [Legion] is in play, the [Hatter] has no ability.\"",
+        "math":"green",
+        "reason":"The Djinn changes the way characters interact with each other.",
+        "mathInfo":"The Djinn rule changes the way the Hatter's ability works, but does not count the ability as malfunctioning."},
+    {
+        "text":"The [Legion] [Engineer] [Djinn] rule states \"If [Legion] is created, all evil players become [Legion]. If [Legion] is in play, the [Engineer] starts knowing this but has no ability.\"",
+        "math":"green",
+        "reason":"The Djinn changes the way characters interact with each other.",
+        "mathInfo":"The Djinn rule changes the way the Engineer's ability works, but does not count the ability as malfunctioning."},
+    {
+        "text":"The [Al-Hadikhia] [Mastermind] [Djinn] rule states \"If the [Al-Hadikhia] dies by execution, and the [Mastermind] is alive, the [Al-Hadikhia] chooses 3 good players tonight: if all 3 choose to live, evil wins. Otherwise, good wins.\" If the [Al-Hadikhia] accidentally chooses an evil player due to the [Magician] ability, the Storyteller prompts them to choose again.",
+        "math":"green",
+        "reason":"The Djinn changes the way characters interact with each other.",
+        "mathInfo":"The Djinn rule changes the way the Mastermind's ability works, but does not count the ability as malfunctioning."},
+    {
+        "text":"The [Al-Hadikhia] [Mastermind] [Djinn] rule states \"If the [Al-Hadikhia] dies by execution, and the [Mastermind] is alive, the [Al-Hadikhia] chooses 3 good players tonight: if all 3 choose to live, evil wins. Otherwise, good wins.\" If the [Al-Hadikhia] accidentally chooses an evil player due to the [Poppy Grower] ability, the Storyteller prompts them to choose again.",
+        "math":"green",
+        "reason":"The Djinn changes the way characters interact with each other.",
+        "mathInfo":"The Djinn rule changes the way the Mastermind's ability works, but does not count the ability as malfunctioning."},
+    {
+        "text":"The [Al-Hadikhia] [Mastermind] [Djinn] rule states \"If the [Al-Hadikhia] dies by execution, and the [Mastermind] is alive, the [Al-Hadikhia] chooses 3 good players tonight: if all 3 choose to live, evil wins. Otherwise, good wins.\" If the [Al-Hadikhia] accidentally chooses an evil player due to miscommunication, the Storyteller prompts them to choose again.",
+        "math":"green",
+        "reason":"The Djinn changes the way characters interact with each other.",
+        "mathInfo":"The Djinn rule changes the way the Mastermind's ability works, but does not count the ability as malfunctioning."},
+    {
+        "text":"The [Al-Hadikhia] [Mastermind] [Djinn] rule states \"If the [Al-Hadikhia] dies by execution, and the [Mastermind] is alive, the [Al-Hadikhia] chooses 3 good players tonight: if all 3 choose to live, evil wins. Otherwise, good wins.\"",
+        "math":"green",
+        "reason":"The Djinn changes the way characters interact with each other.",
+        "mathInfo":"The Djinn rule changes the way the Mastermind's ability works, but does not count the ability as malfunctioning."},
+    {
+        "text":"The [Al-Hadikhia] [Princess] [Djinn] rule states \"If the [Princess] nominated & executed a player on their 1st day, no one dies to the [Al-Hadikhia] tonight.\" The [Al-Hadikhia] still chooses three players, who still make the choice to live or die.",
+        "math":"red",
+        "reason":"The Djinn changes the way characters interact with each other.",
+        "mathInfo":"If the Al-Hadikhia fails to kill, their ability malfunctioned."},
+    {
         "text":"The [Vizier] [Zealot] [Djinn] rule states \"The [Zealot] might register as evil to the [Vizier].\" This might cause the [Vizier]'s ability to fail.",
         "math":"red",
         "reason":"The Djinn changes the way characters interact with each other.",
@@ -48,7 +218,7 @@
         "text":"The [Summoner] [Poppy Grower] [Djinn] rule states \"If the [Poppy Grower] is alive on the 3rd night, the [Summoner] chooses which Demon but not which player.\" Instead of the [Summoner] choosing which player becomes the Demon, the Storyteller chooses.",
         "math":"green",
         "reason":"The Storyteller makes part of the decision instead of the Summoner.",
-        "mathInfo":"The Djinn rule changes how abilities work, so no ability has malfunctioned."},
+        "mathInfo":"The Djinn rule changes the way the Summoner's ability works, but does not count the ability as malfunctioning."},
     {
         "text":"The [Summoner] [Pit-Hag] [Djinn] rule states \"If the [Summoner] creates a second living Demon, deaths tonight are arbitrary.\" Instead of the Demon choosing who dies, the Storyteller chooses. The Storyteller may choose no-one, one player, or multiple players.",
         "math":"red",
