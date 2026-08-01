@@ -10,17 +10,17 @@
         "reason":"The Djinn changes the way interactions work.",
         "mathInfo":"The Djinn rule changes the way the Ogre's ability works, but does not count the ability as malfunctioning."},
     {
-        "text":"The [Plague Doctor] [Wraith] [Djinn] rule states \"If the Storyteller would gain the [Wraith] ability, a Minion gains it, and learns this.\" This Minion may be good or evil and gains the [Fearmonger] ability as well as their own ability.",
+        "text":"The [Plague Doctor] [Wraith] [Djinn] rule states \"If the Storyteller would gain the [Wraith] ability, a Minion gains it, and learns this.\" This Minion may be good or evil and gains the [Wraith] ability as well as their own ability.",
         "math":"green",
         "reason":"The Djinn changes the way interactions work.",
         "mathInfo":"No ability is malfunctioning."},
     {
-        "text":"The [Plague Doctor] [Spy] [Djinn] rule states \"If the Storyteller would gain the [Spy] ability, a Minion gains it, and learns this.\" This Minion may be good or evil and gains the [Fearmonger] ability as well as their own ability.",
+        "text":"The [Plague Doctor] [Spy] [Djinn] rule states \"If the Storyteller would gain the [Spy] ability, a Minion gains it, and learns this.\" This Minion may be good or evil and gains the [Spy] ability as well as their own ability.",
         "math":"green",
         "reason":"The Djinn changes the way interactions work.",
         "mathInfo":"No ability is malfunctioning."},
     {
-        "text":"The [Plague Doctor] [Scarlet Woman] [Djinn] rule states \"If the Storyteller would gain the [Scarlet Woman] ability, a Minion gains it, and learns this.\" This Minion may be good or evil and gains the [Fearmonger] ability as well as their own ability.",
+        "text":"The [Plague Doctor] [Scarlet Woman] [Djinn] rule states \"If the Storyteller would gain the [Scarlet Woman] ability, a Minion gains it, and learns this.\" This Minion may be good or evil and gains the [Scarlet Woman] ability as well as their own ability.",
         "math":"green",
         "reason":"The Djinn changes the way interactions work.",
         "mathInfo":"No ability is malfunctioning."},
@@ -30,7 +30,7 @@
         "reason":"The Djinn changes the way interactions work. Essentially, the Demon creates a drunk player that neighbors them, but they are and register as the good Minion Marionette.",
         "mathInfo":"The Mathematician registers if the new Marionette's ability malfunctions or yields false information."},
     {
-        "text":"The [Plague Doctor] [Goblin] [Djinn] rule states \"If the Storyteller would gain the [Goblin] ability, a Minion gains it, and learns this.\" This Minion may be good or evil and gains the [Fearmonger] ability as well as their own ability.",
+        "text":"The [Plague Doctor] [Goblin] [Djinn] rule states \"If the Storyteller would gain the [Goblin] ability, a Minion gains it, and learns this.\" This Minion may be good or evil and gains the [Goblin] ability as well as their own ability.",
         "math":"green",
         "reason":"The Djinn changes the way interactions work.",
         "mathInfo":"No ability is malfunctioning."},
