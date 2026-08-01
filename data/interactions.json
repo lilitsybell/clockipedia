@@ -1,5 +1,10 @@
 [
     {
+        "text":"The [Boffin] [Cult Leader] [Djinn] rule states \"If the Demon has the [Cult Leader] ability, they can’t turn good due to this ability.\"",
+        "math":"green",
+        "reason":"The Djinn changes the way interactions work. The Demon cannot turn good, but can turn evil. The Demon does not learn if they would have turned good.",
+        "mathInfo":"The Djinn rule changes the way the Cult Leader's ability works, but does not count the ability as malfunctioning."},
+    {
         "text":"The [Recluse] [Sage] [Djinn] rule states \"The [Recluse] might register as the Demon to the [Sage].\"",
         "math":"red",
         "reason":"The Djinn changes the way interactions work. Normally, the Sage would learn the Demon who specifically killed them.",
