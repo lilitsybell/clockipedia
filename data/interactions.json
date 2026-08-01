@@ -1,5 +1,60 @@
 [
     {
+        "text":"The [Lil' Monsta] [Poppy Grower] [Djinn] rule states \"If [Lil' Monsta] & the [Poppy Grower] are alive, Minions wake one by one, until one of them chooses to take the [Lil' Monsta] token.\"",
+        "math":"green",
+        "reason":"The Djinn changes the way characters interact with each other.",
+        "mathInfo":"The Djinn rule changes the way the Lil' Monsta's ability works, but does not count the ability as malfunctioning."},
+    {
+        "text":"The [Lil' Monsta] [Hatter] [Djinn] rule states \"If the [Hatter] dies & the Demon chooses [Lil' Monsta], they also choose a Minion to become.\"",
+        "math":"green",
+        "reason":"The Djinn changes the way characters interact with each other.",
+        "mathInfo":"The Djinn rule changes the way the Hatter's ability works, but does not count the ability as malfunctioning."},
+    {
+        "text":"The [Leviathan] [Soldier] [Djinn] rule states \"If the [Leviathan] nominates and executes the [Soldier], good wins.\"",
+        "math":"green",
+        "reason":"The Djinn changes the way characters interact with each other.",
+        "mathInfo":"The Djinn rule changes the way the Soldier's ability works, but does not count the ability as malfunctioning."},
+    {
+        "text":"The [Leviathan] [Mayor] [Djinn] rule states \"The [Leviathan] cannot enter play after day 5.\"",
+        "math":"green",
+        "reason":"The Djinn changes the way characters interact with each other.",
+        "mathInfo":"The Djinn rule changes the way the Pit-Hag's ability works, but does not count the ability as malfunctioning."},
+    {
+        "text":"The [Leviathan] [Mayor] [Djinn] rule states \"If the [Leviathan] nominates and executes the [Monk]-protected player, good wins.\"",
+        "math":"green",
+        "reason":"The Djinn changes the way characters interact with each other.",
+        "mathInfo":"The Djinn rule changes the way the Monk's ability works, but does not count the ability as malfunctioning."},
+    {
+        "text":"The [Leviathan] [Mayor] [Djinn] rule states \"If the [Leviathan] and the [Mayor] are alive on day 5 & no execution occurs, good wins.\"",
+        "math":"green",
+        "reason":"The Djinn changes the way characters interact with each other.",
+        "mathInfo":"The Djinn rule changes the way the Mayor's ability works, but does not count the ability as malfunctioning."},
+    {
+        "text":"The [Leviathan] [King] [Djinn] rule states \"If the [Leviathan] is in play, and at least 1 player is dead, the [King] learns an alive character each night.\"",
+        "math":"green",
+        "reason":"The Djinn changes the way characters interact with each other.",
+        "mathInfo":"The Djinn rule changes the way the King's ability works, but does not count the ability as malfunctioning."},
+    {
+        "text":"The [Leviathan] [Innkeeper] [Djinn] rule states \"If the [Leviathan] nominates and executes an [Innkeeper]-protected player, good wins.\"",
+        "math":"green",
+        "reason":"The Djinn changes the way characters interact with each other.",
+        "mathInfo":"The Djinn rule changes the way the Innkeeper's ability works, but does not count the ability as malfunctioning."},
+    {
+        "text":"The [Leviathan] [Hatter] [Djinn] rule states \"The [Leviathan] cannot enter play after day 5.\"",
+        "math":"green",
+        "reason":"The Djinn changes the way characters interact with each other.",
+        "mathInfo":"The Djinn rule changes the way the Hatter's ability works, but does not count the ability as malfunctioning."},
+    {
+        "text":"The [Leviathan] [Grandmother] [Djinn] rule states \"If the [Leviathan] is in play and the Grandchild dies by execution, evil wins.\" It does not matter who nominates the Grandchild.",
+        "math":"green",
+        "reason":"The Djinn changes the way characters interact with each other.",
+        "mathInfo":"The Djinn rule changes the way the Grandmother's ability works, but does not count the ability as malfunctioning."},
+    {
+        "text":"The [Leviathan] [Exorcist] [Djinn] rule states \"If the [Leviathan] nominates and executes the [Exorcist]-chosen player, good wins.\"",
+        "math":"green",
+        "reason":"The Djinn changes the way characters interact with each other.",
+        "mathInfo":"The Djinn rule changes the way the Exorcist's ability works, but does not count the ability as malfunctioning."},
+    {
         "text":"The [Riot] [Sage] [Djinn] rule states \"Each night*, the [Riot] chooses an alive good player (different to previous nights): a chosen [Sage] uses their ability but does not die.\" If the [Riot] accidentally chooses an evil player due to the [Poppy Grower] ability, the Storyteller prompts them to choose again.",
         "math":"green",
         "reason":"The Djinn changes the way characters interact with each other.",
