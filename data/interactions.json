@@ -1,6 +1,6 @@
 [
     {
-        "text":"The [Djinn] rule states \"The Alchemist-Summoner does not get bluffs, and chooses which Demon but not which player. If they die before this happens, evil wins. [No Demon]\".",
+        "text":"The [Djinn] rule states \"The [Alchemist]-[Summoner] does not get bluffs, and chooses which Demon but not which player. If they die before this happens, evil wins. [[No Demon]]\".",
         "math":"green",
         "reason":"The Djinn changes the way interactions work.",
         "mathInfo":"The Djinn rule changes the rules, which changes what can cause abilities to register as malfunctioning."
