@@ -1,5 +1,35 @@
 [
     {
+        "text":"The [Spy] [Ogre] [Djinn] rule states \"The [Spy] registers as evil to the [Ogre].\"",
+        "math":"green",
+        "reason":"The Spy will always register as evil to the Ogre for the purpose of the Ogre friend.",
+        "mathInfo":"The Spy registering as evil is not a malfunction."},
+    {
+        "text":"The [Widow] [Damsel] [Djinn] rule states \"If the [Widow] is (or has been) in play, the [Damsel] is poisoned.\"",
+        "math":"red",
+        "reason":"The Damsel is poisoned. Minions do not learn there is a Damsel in play. Guessing the Damsel does not cause the game to end.",
+        "mathInfo":"The Minions not learning a Damsel is in play is the Damsel's ability malfunctioning. If a Minion guesses the Damsel as the Damsel and the game does not end, this is the Damsel's ability malfunctioning."},
+    {
+        "text":"The [Spy] [Damsel] [Djinn] rule states \"If the [Spy] is (or has been) in play, the [Damsel] is poisoned.\"",
+        "math":"red",
+        "reason":"The Damsel is poisoned. Minions do not learn there is a Damsel in play. Guessing the Damsel does not cause the game to end.",
+        "mathInfo":"The Minions not learning a Damsel is in play is the Damsel's ability malfunctioning. If a Minion guesses the Damsel as the Damsel and the game does not end, this is the Damsel's ability malfunctioning."},
+    {
+        "text":"The [Scarlet Woman] [Fang Gu] [Djinn] rule states \"If there would be two Demons, one of which was the [Scarlet Woman], the [Scarlet Woman] remains the [Scarlet Woman].\"",
+        "math":"green",
+        "reason":"If the Fang Gu dies so that an Outsider becomes the Fang Gu, the Scarlet Woman does not become the Demon.",
+        "mathInfo":"The Djinn rule changes the way the Scarlet Woman's ability works. Character changes do not count as malfunctioning."},
+    {
+        "text":"The [Scarlet Woman] [Al-Hadikhia] [Djinn] rule states \"If there would be two Demons, one of which was the [Scarlet Woman], the [Scarlet Woman] becomes the [Scarlet Woman] again.\"",
+        "math":"green",
+        "reason":"Since the Al-Hadikhia can resurrect players, the Al-Hadikhia could cause two Demons. The Djinn rule fixes that.",
+        "mathInfo":"The Djinn rule changes the way the Scarlet Woman's ability works. Character changes do not count as malfunctioning."},
+    {
+        "text":"The [Pit-Hag] [Village Idiot] [Djinn] rule states \"If there is a spare token, the [Pit-Hag] can create an extra [Village Idiot]. If so, the drunk [Village Idiot] might change.\" If there are fewer than 3 players seeing the [Village Idiot] token, the [Pit-Hag] may create a [Village Idiot]. If there are 2 [Village Idiot]s and one [Drunk] who believes they are the [Village Idiot], there are no spare [Village Idiot] tokens. The [Village Idiot] drunkenness may switch to a different [Village Idiot]",
+        "math":"green",
+        "reason":"The Djinn changes the way interactions work.",
+        "mathInfo":"The Djinn rule changes the way the Pit Hag and Village Idiot's abilities work, but does not count the abilities as malfunctioning."},
+    {
         "text":"The [Pit-Hag] [Politician] [Djinn] rule states \"If the [Pit-Hag] turns an evil player into the [Politician], they can't turn good due to their own ability.\"",
         "math":"green",
         "reason":"The Djinn changes the way interactions work. The evil player cannot turn good, but can turn evil. The evil player does not learn if they would have turned good.",
