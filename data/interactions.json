@@ -1,5 +1,260 @@
 [
     {
+        "text":"The [Zenomancer] is not a playable character, so cannot be chosen by the [Gambler].",
+        "math":"green",
+        "reason":"Players are never NPCs.",
+        "mathInfo":"No ability has malfunctioned."},
+    {
+        "text":"The [Ventriloquist] is not a playable character, so cannot be chosen by the [Gambler].",
+        "math":"green",
+        "reason":"Players are never NPCs.",
+        "mathInfo":"No ability has malfunctioned."},
+    {
+        "text":"The [Tor] is not a playable character, so cannot be chosen by the [Gambler].",
+        "math":"green",
+        "reason":"Players are never NPCs.",
+        "mathInfo":"No ability has malfunctioned."},
+    {
+        "text":"The [Storm Catcher] is not a playable character, so cannot be chosen by the [Gambler].",
+        "math":"green",
+        "reason":"Players are never NPCs.",
+        "mathInfo":"No ability has malfunctioned."},
+    {
+        "text":"The [Pope] is not a playable character, so cannot be chosen by the [Gambler].",
+        "math":"green",
+        "reason":"Players are never NPCs.",
+        "mathInfo":"No ability has malfunctioned."},
+    {
+        "text":"The [Knaves] is not a playable character, so cannot be chosen by the [Gambler].",
+        "math":"green",
+        "reason":"Players are never NPCs.",
+        "mathInfo":"No ability has malfunctioned."},
+    {
+        "text":"The [Hindu] is not a playable character, so cannot be chosen by the [Gambler].",
+        "math":"green",
+        "reason":"Players are never NPCs.",
+        "mathInfo":"No ability has malfunctioned."},
+    {
+        "text":"The [God of Ug] is not a playable character, so cannot be chosen by the [Gambler].",
+        "math":"green",
+        "reason":"Players are never NPCs.",
+        "mathInfo":"No ability has malfunctioned."},
+    {
+        "text":"The [Gardener] is not a playable character, so cannot be chosen by the [Gambler].",
+        "math":"green",
+        "reason":"Players are never NPCs.",
+        "mathInfo":"No ability has malfunctioned."},
+    {
+        "text":"The [Bootlegger] is not a playable character, so cannot be chosen by the [Gambler].",
+        "math":"green",
+        "reason":"Players are never NPCs.",
+        "mathInfo":"No ability has malfunctioned."},
+    {
+        "text":"The [Big Wig] is not a playable character, so cannot be chosen by the [Gambler].",
+        "math":"green",
+        "reason":"Players are never NPCs.",
+        "mathInfo":"No ability has malfunctioned."},
+    {
+        "text":"The [Toymaker] is not a playable character, so cannot be chosen by the [Gambler].",
+        "math":"green",
+        "reason":"Players are never NPCs.",
+        "mathInfo":"No ability has malfunctioned."},
+    {
+        "text":"The [Spirit of Ivory] is not a playable character, so cannot be chosen by the [Gambler].",
+        "math":"green",
+        "reason":"Players are never NPCs.",
+        "mathInfo":"No ability has malfunctioned."},
+    {
+        "text":"The [Sentinel] is not a playable character, so cannot be chosen by the [Gambler].",
+        "math":"green",
+        "reason":"Players are never NPCs.",
+        "mathInfo":"No ability has malfunctioned."},
+    {
+        "text":"The [Revolutionary] is not a playable character, so cannot be chosen by the [Gambler].",
+        "math":"green",
+        "reason":"Players are never NPCs.",
+        "mathInfo":"No ability has malfunctioned."},
+    {
+        "text":"The [Hell's Librarian] is not a playable character, so cannot be chosen by the [Gambler].",
+        "math":"green",
+        "reason":"Players are never NPCs.",
+        "mathInfo":"No ability has malfunctioned."},
+    {
+        "text":"The [Fiddler] is not a playable character, so cannot be chosen by the [Gambler].",
+        "math":"green",
+        "reason":"Players are never NPCs.",
+        "mathInfo":"No ability has malfunctioned."},
+    {
+        "text":"The [Fibbin] is not a playable character, so cannot be chosen by the [Gambler].",
+        "math":"green",
+        "reason":"Players are never NPCs.",
+        "mathInfo":"No ability has malfunctioned."},
+    {
+        "text":"The [Ferryman] is not a playable character, so cannot be chosen by the [Gambler].",
+        "math":"green",
+        "reason":"Players are never NPCs.",
+        "mathInfo":"No ability has malfunctioned."},
+    {
+        "text":"The [Duchess] is not a playable character, so cannot be chosen by the [Gambler].",
+        "math":"green",
+        "reason":"Players are never NPCs.",
+        "mathInfo":"No ability has malfunctioned."},
+    {
+        "text":"The [Doomsayer] is not a playable character, so cannot be chosen by the [Gambler].",
+        "math":"green",
+        "reason":"Players are never NPCs.",
+        "mathInfo":"No ability has malfunctioned."},
+    {
+        "text":"The [Djinn] is not a playable character, so cannot be chosen by the [Gambler].",
+        "math":"green",
+        "reason":"Players are never NPCs.",
+        "mathInfo":"No ability has malfunctioned."},
+    {
+        "text":"The [Deus ex Fiasco] is not a playable character, so cannot be chosen by the [Gambler].",
+        "math":"green",
+        "reason":"Players are never NPCs.",
+        "mathInfo":"No ability has malfunctioned."},
+    {
+        "text":"The [Buddhist] is not a playable character, so cannot be chosen by the [Gambler].",
+        "math":"green",
+        "reason":"Players are never NPCs.",
+        "mathInfo":"No ability has malfunctioned."},
+    {
+        "text":"The [Angel] is not a playable character, so cannot be chosen by the [Gambler].",
+        "math":"green",
+        "reason":"Players are never NPCs.",
+        "mathInfo":"No ability has malfunctioned."},
+    {
+        "text":"The [Toymaker] is not a player, so cannot be chosen by the [Courtier].",
+        "math":"green",
+        "reason":"NPCs cannot be drunk or poisoned.",
+        "mathInfo":"No ability has malfunctioned."},
+    {
+        "text":"The [Spirit of Ivory] is not a player, so cannot be chosen by the [Courtier].",
+        "math":"green",
+        "reason":"NPCs cannot be drunk or poisoned.",
+        "mathInfo":"No ability has malfunctioned."},
+    {
+        "text":"The [Sentinel] is not a player, so cannot be chosen by the [Courtier].",
+        "math":"green",
+        "reason":"NPCs cannot be drunk or poisoned.",
+        "mathInfo":"No ability has malfunctioned."},
+    {
+        "text":"The [Revolutionary] is not a player, so cannot be chosen by the [Courtier].",
+        "math":"green",
+        "reason":"NPCs cannot be drunk or poisoned.",
+        "mathInfo":"No ability has malfunctioned."},
+    {
+        "text":"The [Hell's Librarian] is not a player, so cannot be chosen by the [Courtier].",
+        "math":"green",
+        "reason":"NPCs cannot be drunk or poisoned.",
+        "mathInfo":"No ability has malfunctioned."},
+    {
+        "text":"The [Fiddler] is not a player, so cannot be chosen by the [Courtier].",
+        "math":"green",
+        "reason":"NPCs cannot be drunk or poisoned.",
+        "mathInfo":"No ability has malfunctioned."},
+    {
+        "text":"The [Fibbin] is not a player, so cannot be chosen by the [Courtier].",
+        "math":"green",
+        "reason":"NPCs cannot be drunk or poisoned.",
+        "mathInfo":"No ability has malfunctioned."},
+    {
+        "text":"The [Ferryman] is not a player, so cannot be chosen by the [Courtier].",
+        "math":"green",
+        "reason":"NPCs cannot be drunk or poisoned.",
+        "mathInfo":"No ability has malfunctioned."},
+    {
+        "text":"The [Duchess] is not a player, so cannot be chosen by the [Courtier].",
+        "math":"green",
+        "reason":"NPCs cannot be drunk or poisoned.",
+        "mathInfo":"No ability has malfunctioned."},
+    {
+        "text":"The [Doomsayer] is not a player, so cannot be chosen by the [Courtier].",
+        "math":"green",
+        "reason":"NPCs cannot be drunk or poisoned.",
+        "mathInfo":"No ability has malfunctioned."},
+    {
+        "text":"The [Djinn] is not a player, so cannot be chosen by the [Courtier].",
+        "math":"green",
+        "reason":"NPCs cannot be drunk or poisoned.",
+        "mathInfo":"No ability has malfunctioned."},
+    {
+        "text":"The [Deus ex Fiasco] is not a player, so cannot be chosen by the [Courtier].",
+        "math":"green",
+        "reason":"NPCs cannot be drunk or poisoned.",
+        "mathInfo":"No ability has malfunctioned."},
+    {
+        "text":"The [Buddhist] is not a player, so cannot be chosen by the [Courtier].",
+        "math":"green",
+        "reason":"NPCs cannot be drunk or poisoned.",
+        "mathInfo":"No ability has malfunctioned."},
+    {
+        "text":"The [Angel] is not a player, so cannot be chosen by the [Courtier].",
+        "math":"green",
+        "reason":"NPCs cannot be drunk or poisoned.",
+        "mathInfo":"No ability has malfunctioned."},
+    {
+        "text":"The [Zenomancer] is not a player, so cannot be chosen by the [Courtier].",
+        "math":"green",
+        "reason":"NPCs cannot be drunk or poisoned.",
+        "mathInfo":"No ability has malfunctioned."},
+    {
+        "text":"The [Ventriloquist] is not a player, so cannot be chosen by the [Courtier].",
+        "math":"green",
+        "reason":"NPCs cannot be drunk or poisoned.",
+        "mathInfo":"No ability has malfunctioned."},
+    {
+        "text":"The [Tor] is not a player, so cannot be chosen by the [Courtier].",
+        "math":"green",
+        "reason":"NPCs cannot be drunk or poisoned.",
+        "mathInfo":"No ability has malfunctioned."},
+    {
+        "text":"The [Storm Catcher] is not a player, so cannot be chosen by the [Courtier].",
+        "math":"green",
+        "reason":"NPCs cannot be drunk or poisoned.",
+        "mathInfo":"No ability has malfunctioned."},
+    {
+        "text":"The [Pope] is not a player, so cannot be chosen by the [Courtier].",
+        "math":"green",
+        "reason":"NPCs cannot be drunk or poisoned.",
+        "mathInfo":"No ability has malfunctioned."},
+    {
+        "text":"The [Knaves] is not a player, so cannot be chosen by the [Courtier].",
+        "math":"green",
+        "reason":"NPCs cannot be drunk or poisoned.",
+        "mathInfo":"No ability has malfunctioned."},
+    {
+        "text":"The [Hindu] is not a player, so cannot be chosen by the [Courtier].",
+        "math":"green",
+        "reason":"NPCs cannot be drunk or poisoned.",
+        "mathInfo":"No ability has malfunctioned."},
+    {
+        "text":"The [God of Ug] is not a player, so cannot be chosen by the [Courtier].",
+        "math":"green",
+        "reason":"NPCs cannot be drunk or poisoned.",
+        "mathInfo":"No ability has malfunctioned."},
+    {
+        "text":"The [Gardener] is not a player, so cannot be chosen by the [Courtier].",
+        "math":"green",
+        "reason":"NPCs cannot be drunk or poisoned.",
+        "mathInfo":"No ability has malfunctioned."},
+    {
+        "text":"The [Bootlegger] is not a player, so cannot be chosen by the [Courtier].",
+        "math":"green",
+        "reason":"NPCs cannot be drunk or poisoned.",
+        "mathInfo":"No ability has malfunctioned."},
+    {
+        "text":"The [Big Wig] is not a player, so cannot be chosen by the [Courtier].",
+        "math":"green",
+        "reason":"NPCs cannot be drunk or poisoned.",
+        "mathInfo":"No ability has malfunctioned."},
+    {
+        "text":"The [Lil' Monsta] is not a player, so cannot be chosen by the [Courtier].",
+        "math":"green",
+        "reason":"NPCs cannot be drunk or poisoned.",
+        "mathInfo":"No ability has malfunctioned."},
+    {
         "text":"If the [Hindu] ability causes a character who is named by the [Storm Catcher] to change, the player is no longer protected by the [Storm Catcher].",
         "math":"green",
         "reason":"The Storm Catcher only protects the character named.",
