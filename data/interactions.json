@@ -1,5 +1,55 @@
 [
     {
+        "text":"If the [Assassin] is [Pukka] poisoned, the [Assassin]'s kill fails.",
+        "math":"red",
+        "reason":"A drunk or poisoned player has no ability..",
+        "mathInfo":"If the [Assassin] does not kill a player due to being drunk or poisoned, the Assassin's ability malfunctioned."}, 
+    {
+        "text":"If the [Assassin] is [Lleech] poisoned, the [Assassin]'s kill fails.",
+        "math":"red",
+        "reason":"A drunk or poisoned player has no ability..",
+        "mathInfo":"If the [Assassin] does not kill a player due to being drunk or poisoned, the Assassin's ability malfunctioned."}, 
+    {
+        "text":"If the [Assassin] is [Widow] poisoned, the [Assassin]'s kill fails.",
+        "math":"red",
+        "reason":"A drunk or poisoned player has no ability..",
+        "mathInfo":"If the [Assassin] does not kill a player due to being drunk or poisoned, the Assassin's ability malfunctioned."}, 
+    {
+        "text":"If the [Assassin] is [Poisoner] poisoned, the [Assassin]'s kill fails.",
+        "math":"red",
+        "reason":"A drunk or poisoned player has no ability..",
+        "mathInfo":"If the [Assassin] does not kill a player due to being drunk or poisoned, the Assassin's ability malfunctioned."}, 
+    {
+        "text":"If the [Assassin] is [Sweetheart] drunk, the [Assassin]'s kill fails.",
+        "math":"red",
+        "reason":"A drunk or poisoned player has no ability..",
+        "mathInfo":"If the [Assassin] does not kill a player due to being drunk or poisoned, the Assassin's ability malfunctioned."}, 
+    {
+        "text":"If the [Assassin] is [Puzzlemaster] drunk, the [Assassin]'s kill fails.",
+        "math":"red",
+        "reason":"A drunk or poisoned player has no ability..",
+        "mathInfo":"If the [Assassin] does not kill a player due to being drunk or poisoned, the Assassin's ability malfunctioned."}, 
+    {
+        "text":"If the [Assassin] is [Sailor] drunk, the [Assassin]'s kill fails.",
+        "math":"red",
+        "reason":"A drunk or poisoned player has no ability..",
+        "mathInfo":"If the [Assassin] does not kill a player due to being drunk or poisoned, the Assassin's ability malfunctioned."}, 
+    {
+        "text":"If the [Assassin] is [Minstrel] drunk, the [Assassin]'s kill fails.",
+        "math":"red",
+        "reason":"A drunk or poisoned player has no ability..",
+        "mathInfo":"If the [Assassin] does not kill a player due to being drunk or poisoned, the Assassin's ability malfunctioned."}, 
+    {
+        "text":"If the [Assassin] is [Innkeeper] drunk, the [Assassin]'s kill fails.",
+        "math":"red",
+        "reason":"A drunk or poisoned player has no ability..",
+        "mathInfo":"If the [Assassin] does not kill a player due to being drunk or poisoned, the Assassin's ability malfunctioned."}, 
+    {
+        "text":"If the [Assassin] is [Courtier] drunk, the [Assassin]'s kill fails.",
+        "math":"red",
+        "reason":"A drunk or poisoned player has no ability..",
+        "mathInfo":"If the [Assassin] does not kill a player due to being drunk or poisoned, the Assassin's ability malfunctioned."}, 
+    {
         "text":"If the [Hindu] is in play, and a player dies to the [Assassin], the player is still resurrected as a Traveller.",
         "math":"green",
         "reason":"The Assassin does not stop players from resurrection.",
