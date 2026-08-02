@@ -1,5 +1,140 @@
 [
     {
+        "text":"The [Soldier] cannot die due to the Demon with the [Boffin] [Alchemist] [Witch] ability.",
+        "math":"red",
+        "reason":"The Soldier is safe from all Demon attacks.",
+        "mathInfo":"If the Demon failed to kill the Soldier, the Demon's ability malfunctioned."},
+    {
+        "text":"The [Soldier] can die due to the [Witch] ability.",
+        "math":"green",
+        "reason":"The Soldier is only safe from the Demon.",
+        "mathInfo":"No ability has malfunctioned."},
+    {
+        "text":"The [Soldier] can be executed, but cannot die due to the Demon with the [Boffin] [Alchemist] [Vizier] ability.",
+        "math":"red",
+        "reason":"The Soldier is safe from all Demon attacks.",
+        "mathInfo":"If the Demon failed to kill the Soldier, the Demon's ability malfunctioned."},
+    {
+        "text":"The [Soldier] can die due to the [Vizier] ability.",
+        "math":"green",
+        "reason":"The Soldier is only safe from the Demon.",
+        "mathInfo":"No ability has malfunctioned."},
+    {
+        "text":"The [Soldier] cannot die due to the Demon with the [Boffin] [Alchemist] [Psychopath] ability.",
+        "math":"red",
+        "reason":"The Soldier is safe from all Demon attacks.",
+        "mathInfo":"If the Demon failed to kill the Soldier, the Demon's ability malfunctioned."},
+    {
+        "text":"The [Soldier] can die due to the [Psychopath] ability.",
+        "math":"green",
+        "reason":"The Soldier is only safe from the Demon.",
+        "mathInfo":"No ability has malfunctioned."},
+    {
+        "text":"The [Soldier] cannot die due to the Demon with the [Boffin] [Alchemist] [Harpy] ability.",
+        "math":"red",
+        "reason":"The Soldier is safe from all Demon attacks.",
+        "mathInfo":"If the Demon failed to kill the Soldier, the Demon's ability malfunctioned."},
+    {
+        "text":"The [Soldier] can die due to the [Harpy] ability.",
+        "math":"green",
+        "reason":"The Soldier is only safe from the Demon.",
+        "mathInfo":"No ability has malfunctioned."},
+    {
+        "text":"The [Soldier] cannot die due to the Demon with the [Boffin] [Alchemist] [Godfather] ability.",
+        "math":"red",
+        "reason":"The Soldier is safe from all Demon attacks.",
+        "mathInfo":"If the Demon failed to kill the Soldier, the Demon's ability malfunctioned."},
+    {
+        "text":"The [Soldier] can die due to the [Godfather] ability.",
+        "math":"green",
+        "reason":"The Soldier is only safe from the Demon.",
+        "mathInfo":"No ability has malfunctioned."},
+    {
+        "text":"The [Soldier] can be executed, but cannot die due to the Demon with the [Boffin] [Alchemist] [Cerenovus] ability.",
+        "math":"red",
+        "reason":"The Soldier is safe from all Demon attacks.",
+        "mathInfo":"If the Demon failed to kill the Soldier, the Demon's ability malfunctioned."},
+    {
+        "text":"The [Soldier] can die due to the [Cerenovus] ability.",
+        "math":"green",
+        "reason":"The Soldier is only safe from the Demon.",
+        "mathInfo":"No ability has malfunctioned."},
+    {
+        "text":"The [Soldier] cannot die due to the Demon with the [Boffin] [Alchemist] [Boomdandy] ability. This might cause there to be more than 3 players alive after the [Boomdandy] ability finishes killing.",
+        "math":"red",
+        "reason":"The Soldier is safe from all Demon attacks.",
+        "mathInfo":"If the Demon failed to kill the Soldier, the Demon's ability malfunctioned."},
+    {
+        "text":"The [Soldier] can die due to the [Boomdandy] ability.",
+        "math":"green",
+        "reason":"The Soldier is only safe from the Demon.",
+        "mathInfo":"No ability has malfunctioned."},
+    {
+        "text":"The [Soldier] can die due to the Demon with the [Boffin] [Alchemist] [Assassin] ability.",
+        "math":"red",
+        "reason":"Even though the Soldier is safe from Demon attacks, the Assassin abililty is able to kill players that normally wouldn't die..",
+        "mathInfo":"If the Demon kills the Soldier using the Assassin ability, the Soldier's ability malfunctioned."},
+    {
+        "text":"The [Soldier] can die due to the [Assassin] ability.",
+        "math":"green",
+        "reason":"The Soldier is only safe from the Demon.",
+        "mathInfo":"No ability has malfunctioned."},
+    {
+        "text":"The [Soldier] cannot die due to the Demon with the [Boffin] [Moonchild] ability.",
+        "math":"red",
+        "reason":"The Soldier is safe from all Demon attacks.",
+        "mathInfo":"If the Demon failed to kill the Soldier, the Demon's ability malfunctioned."},
+    {
+        "text":"The [Soldier] can die due to the [Moonchild] ability.",
+        "math":"green",
+        "reason":"The Soldier is only safe from the Demon.",
+        "mathInfo":"No ability has malfunctioned."},
+    {
+        "text":"The [Soldier] cannot die due to the Demon with the [Boffin] [Golem] ability.",
+        "math":"red",
+        "reason":"The Soldier is safe from all Demon attacks.",
+        "mathInfo":"If the Demon failed to kill the Soldier, the Demon's ability malfunctioned."},
+    {
+        "text":"The [Soldier] can die due to the [Golem] ability.",
+        "math":"green",
+        "reason":"The Soldier is only safe from the Demon.",
+        "mathInfo":"No ability has malfunctioned."},
+    {
+        "text":"The [Soldier] cannot die due to the [Mayor] ability protecting the [Mayor] from a Demon attack.",
+        "math":"green",
+        "reason":"If a player dies instead of the Mayor, the death still registers as coming from the original source.",
+        "mathInfo":"No ability has malfunctioned."},
+    {
+        "text":"The [Soldier] cannot die due to the Demon with the [Boffin] [Lycanthrope] ability.",
+        "math":"red",
+        "reason":"The Soldier is safe from all Demon attacks.",
+        "mathInfo":"If the Demon failed to kill the Soldier, the Demon's ability malfunctioned."},
+    {
+        "text":"The [Soldier] can die due to the [Lycanthrope] ability.",
+        "math":"green",
+        "reason":"The Soldier is only safe from the Demon.",
+        "mathInfo":"No ability has malfunctioned."},
+    {
+        "text":"The [Soldier] cannot die due to the Demon with the [Boffin] [Gossip] ability.",
+        "math":"red",
+        "reason":"The Soldier is safe from all Demon attacks.",
+        "mathInfo":"If the Demon failed to kill the Soldier, the Demon's ability malfunctioned."},
+    {
+        "text":"The [Soldier] can die due to the [Gossip] ability.",
+        "math":"green",
+        "reason":"The Soldier is only safe from the Demon.",
+        "mathInfo":"No ability has malfunctioned."},
+    {
+        "text":"The [Soldier] cannot die due to the Demon with the [Boffin] [Cannibal] ability with a good Demon ability.",
+        "math":"red",
+        "reason":"The Soldier is safe from all Demon attacks.",
+        "mathInfo":"If the Demon failed to kill the Soldier, the Demon's ability malfunctioned."},
+    {
+        "text":"The [Soldier] can die due to the [Cannibal] with a good Demon ability.",
+        "math":"green",
+        "reason":"The Soldier is only safe from the Demon. The Cannibal is not the Demon.",
+        "mathInfo":"No ability has malfunctioned."},
+    {
         "text":"If the [Marionette] believes they are the [Alchemist] [Assassin], the [Marionette]'s kill fails.",
         "math":"green",
         "reason":"The Marionette does not have the ability they believe they do.",
@@ -1500,7 +1635,7 @@
         "reason":"The character named by the Storm Catcher can only die by execution. Breaking Cerenovus madness results in an execution.",
         "mathInfo":"The Cerenovus' ability is working as intended."},
     {
-        "text":"A character named by the [Storm Catcher] cannot die due to the [Boomdandy]. This might cause there to be more than 3 players alive after the [Boomdandy] finishes killing",
+        "text":"A character named by the [Storm Catcher] cannot die due to the [Boomdandy]. This might cause there to be more than 3 players alive after the [Boomdandy] finishes killing.",
         "math":"red",
         "reason":"The character named by the Storm Catcher can only die by execution.",
         "mathInfo":"If the Boomdandy did not kill due to the Storm Catcher, the Boomdandy's ability malfunctioned."},
