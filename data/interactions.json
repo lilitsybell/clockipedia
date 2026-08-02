@@ -1,5 +1,120 @@
 [
     {
+        "text":"If the [Butler] is [Pukka] poisoned, voting without their Master is still considered breaking the rules.",
+        "math":"green",
+        "reason":"The Butler has no way of knowing their sobriety or health.",
+        "mathInfo":"No ability has malfunctioned."},
+    {
+        "text":"If the [Butler] is [Lleech] poisoned, voting without their Master is still considered breaking the rules.",
+        "math":"green",
+        "reason":"The Butler has no way of knowing their sobriety or health.",
+        "mathInfo":"No ability has malfunctioned."},
+    {
+        "text":"If the [Butler] is [Widow] poisoned, voting without their Master is still considered breaking the rules.",
+        "math":"green",
+        "reason":"The Butler has no way of knowing their sobriety or health.",
+        "mathInfo":"No ability has malfunctioned."},
+    {
+        "text":"If the [Butler] is [Poisoner] poisoned, voting without their Master is still considered breaking the rules.",
+        "math":"green",
+        "reason":"The Butler has no way of knowing their sobriety or health.",
+        "mathInfo":"No ability has malfunctioned."},
+    {
+        "text":"If the [Butler] is [Sweetheart] drunk, voting without their Master is still considered breaking the rules.",
+        "math":"green",
+        "reason":"The Butler has no way of knowing their sobriety or health.",
+        "mathInfo":"No ability has malfunctioned."},
+    {
+        "text":"If the [Butler] is [Puzzlemaster] drunk, voting without their Master is still considered breaking the rules.",
+        "math":"green",
+        "reason":"The Butler has no way of knowing their sobriety or health.",
+        "mathInfo":"No ability has malfunctioned."},
+    {
+        "text":"If the [Butler] is [Goon] drunk, voting without their Master is still considered breaking the rules.",
+        "math":"green",
+        "reason":"The Butler has no way of knowing their sobriety or health.",
+        "mathInfo":"No ability has malfunctioned."},
+    {
+        "text":"If the [Butler] is [Sailor] drunk, voting without their Master is still considered breaking the rules.",
+        "math":"green",
+        "reason":"The Butler has no way of knowing their sobriety or health.",
+        "mathInfo":"No ability has malfunctioned."},
+    {
+        "text":"If the [Butler] is [Philosopher] drunk, voting without their Master is still considered breaking the rules.",
+        "math":"green",
+        "reason":"The Butler has no way of knowing their sobriety or health.",
+        "mathInfo":"No ability has malfunctioned."},
+    {
+        "text":"If the [Butler] is [Minstrel] drunk, voting without their Master is still considered breaking the rules.",
+        "math":"green",
+        "reason":"The Butler has no way of knowing their sobriety or health.",
+        "mathInfo":"No ability has malfunctioned."},
+    {
+        "text":"If the [Butler] is [Innkeeper] drunk, voting without their Master is still considered breaking the rules.",
+        "math":"green",
+        "reason":"The Butler has no way of knowing their sobriety or health.",
+        "mathInfo":"No ability has malfunctioned."},
+    {
+        "text":"If the [Butler] is [Courtier] drunk, voting without their Master is still considered breaking the rules.",
+        "math":"green",
+        "reason":"The Butler has no way of knowing their sobriety or health.",
+        "mathInfo":"No ability has malfunctioned."},
+    {
+        "text":"If the [Zealot] is [Pukka] poisoned, not voting is still considered breaking the rules.",
+        "math":"green",
+        "reason":"The Zealot has no way of knowing their sobriety or health.",
+        "mathInfo":"No ability has malfunctioned."},
+    {
+        "text":"If the [Zealot] is [Lleech] poisoned, not voting is still considered breaking the rules.",
+        "math":"green",
+        "reason":"The Zealot has no way of knowing their sobriety or health.",
+        "mathInfo":"No ability has malfunctioned."},
+    {
+        "text":"If the [Zealot] is [Widow] poisoned, not voting is still considered breaking the rules.",
+        "math":"green",
+        "reason":"The Zealot has no way of knowing their sobriety or health.",
+        "mathInfo":"No ability has malfunctioned."},
+    {
+        "text":"If the [Zealot] is [Poisoner] poisoned, not voting is still considered breaking the rules.",
+        "math":"green",
+        "reason":"The Zealot has no way of knowing their sobriety or health.",
+        "mathInfo":"No ability has malfunctioned."},
+    {
+        "text":"If the [Zealot] is [Sweetheart] drunk, not voting is still considered breaking the rules.",
+        "math":"green",
+        "reason":"The Zealot has no way of knowing their sobriety or health.",
+        "mathInfo":"No ability has malfunctioned."},
+    {
+        "text":"If the [Zealot] is [Puzzlemaster] drunk, not voting is still considered breaking the rules.",
+        "math":"green",
+        "reason":"The Zealot has no way of knowing their sobriety or health.",
+        "mathInfo":"No ability has malfunctioned."},
+    {
+        "text":"If the [Zealot] is [Sailor] drunk, not voting is still considered breaking the rules.",
+        "math":"green",
+        "reason":"The Zealot has no way of knowing their sobriety or health.",
+        "mathInfo":"No ability has malfunctioned."},
+    {
+        "text":"If the [Zealot] is [Philosopher] drunk, not voting is still considered breaking the rules.",
+        "math":"green",
+        "reason":"The Zealot has no way of knowing their sobriety or health.",
+        "mathInfo":"No ability has malfunctioned."},
+    {
+        "text":"If the [Zealot] is [Minstrel] drunk, not voting is still considered breaking the rules.",
+        "math":"green",
+        "reason":"The Zealot has no way of knowing their sobriety or health.",
+        "mathInfo":"No ability has malfunctioned."},
+    {
+        "text":"If the [Zealot] is [Innkeeper] drunk, not voting is still considered breaking the rules.",
+        "math":"green",
+        "reason":"The Zealot has no way of knowing their sobriety or health.",
+        "mathInfo":"No ability has malfunctioned."},
+    {
+        "text":"If the [Zealot] is [Courtier] drunk, not voting is still considered breaking the rules.",
+        "math":"green",
+        "reason":"The Zealot has no way of knowing their sobriety or health.",
+        "mathInfo":"No ability has malfunctioned."},
+    {
         "text":"The [Zenomancer] is not a playable character, so cannot be chosen by the [Gambler].",
         "math":"green",
         "reason":"Players are never NPCs.",
