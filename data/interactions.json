@@ -1,5 +1,60 @@
 [
     {
+        "text":"If the [Wizard] is [Pukka] poisoned after making a wish, the wish stays in play.",
+        "math":"green",
+        "reason":"Wishes are permanent changes to the game.",
+        "mathInfo":"No ability has malfunctioned."},
+    {
+        "text":"If the [Wizard] is [Lleech] poisoned after making a wish, the wish stays in play.",
+        "math":"green",
+        "reason":"Wishes are permanent changes to the game.",
+        "mathInfo":"No ability has malfunctioned."},
+    {
+        "text":"If the [Wizard] is [Widow] poisoned after making a wish, the wish stays in play.",
+        "math":"green",
+        "reason":"Wishes are permanent changes to the game.",
+        "mathInfo":"No ability has malfunctioned."},
+    {
+        "text":"If the [Wizard] is [Poisoner] poisoned after making a wish, the wish stays in play.",
+        "math":"green",
+        "reason":"Wishes are permanent changes to the game.",
+        "mathInfo":"No ability has malfunctioned."},
+    {
+        "text":"If the [Wizard] is [Sweetheart] drunk after making a wish, the wish stays in play.",
+        "math":"green",
+        "reason":"Wishes are permanent changes to the game.",
+        "mathInfo":"No ability has malfunctioned."},
+    {
+        "text":"If the [Wizard] is [Puzzlemaster] drunk after making a wish, the wish stays in play.",
+        "math":"green",
+        "reason":"Wishes are permanent changes to the game.",
+        "mathInfo":"No ability has malfunctioned."},
+    {
+        "text":"If the [Wizard] is [Goon] drunk after making a wish, the wish stays in play.",
+        "math":"green",
+        "reason":"Wishes are permanent changes to the game.",
+        "mathInfo":"No ability has malfunctioned."},
+    {
+        "text":"If the [Wizard] is [Sailor] drunk after making a wish, the wish stays in play.",
+        "math":"green",
+        "reason":"Wishes are permanent changes to the game.",
+        "mathInfo":"No ability has malfunctioned."},
+    {
+        "text":"If the [Wizard] is [Minstrel] drunk after making a wish, the wish stays in play.",
+        "math":"green",
+        "reason":"Wishes are permanent changes to the game.",
+        "mathInfo":"No ability has malfunctioned."},
+    {
+        "text":"If the [Wizard] is [Innkeeper] drunk after making a wish, the wish stays in play.",
+        "math":"green",
+        "reason":"Wishes are permanent changes to the game.",
+        "mathInfo":"No ability has malfunctioned."},
+    {
+        "text":"If the [Wizard] is [Courtier] drunk after making a wish, the wish stays in play.",
+        "math":"green",
+        "reason":"Wishes are permanent changes to the game.",
+        "mathInfo":"No ability has malfunctioned."},
+    {
         "text":"If the [Leviathan] is [Pukka] poisoned, any players executed during this time do not count toward the [Leviathan]’s win condition. If this was on the [Leviathan]'s first night, the Storyteller does not declare a [Leviathan] is in play until the [Leviathan] is healthy. If the [Leviathan] is poisoned at the start of night 6, the game continues until the [Leviathan] is healthy, which ends the game immediately with an evil victory.",
         "math":"red",
         "reason":"If the Leviathan is drunk or poisoned, they have no ability.",
