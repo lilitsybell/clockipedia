@@ -1,5 +1,20 @@
 [
     {
+        "text":"The [Riot] [Innkeeper] [Djinn] rule states \"If [Riot] nominates and executes an [Innkeeper]-protected player, good wins.\"",
+        "math":"green",
+        "reason":"The Djinn changes the way characters interact with each other.",
+        "mathInfo":"The Djinn rule changes the way the Innkeeper's ability works, but does not count the ability as malfunctioning."},
+    {
+        "text":"The [Riot] [Grandmother] [Djinn] rule states \"If [Riot] is in play and the Grandchild dies by execution, evil wins.\"",
+        "math":"green",
+        "reason":"The Djinn changes the way characters interact with each other.",
+        "mathInfo":"The Djinn rule changes the way the Grandmother's ability works, but does not count the ability as malfunctioning."},
+    {
+        "text":"The [Riot] [Exorcist] [Djinn] rule states \"If [Riot] nominates and executes the [Exorcist]-chosen player, good wins.\"",
+        "math":"green",
+        "reason":"The Djinn changes the way characters interact with each other.",
+        "mathInfo":"The Djinn rule changes the way the Exorcist's ability works, but does not count the ability as malfunctioning."},
+    {
         "text":"The [Riot] [Atheist] [Djinn] rule states \"During a riot, if the Storyteller is nominated, players vote. If they are \"about to die\", the game ends. If not, they nominate again.\"",
         "math":"green",
         "reason":"The Djinn changes the way characters interact with each other.",
