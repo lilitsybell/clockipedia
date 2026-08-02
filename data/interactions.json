@@ -1,5 +1,100 @@
 [
     {
+        "text":"If the good [Voudon] is executed due to the [Cerenovus], the [Cannibal] gains the [Voudon] ability.",
+        "math":"green",
+        "reason":"The Cannibal gains the ability of a character that was executed in any way.",
+        "mathInfo":"The Cannibal's ability is working as intended."},
+    {
+        "text":"If the good [Thief] is executed due to the [Cerenovus], the [Cannibal] gains the [Thief] ability.",
+        "math":"green",
+        "reason":"The Cannibal gains the ability of a character that was executed in any way.",
+        "mathInfo":"The Cannibal's ability is working as intended."},
+    {
+        "text":"If the good [Scapegoat] is executed due to the [Scapegoat]'s ability, the [Cannibal] gains the [Scapegoat] ability.",
+        "math":"green",
+        "reason":"The Cannibal gains the ability of a character that was executed in any way.",
+        "mathInfo":"The Cannibal's ability is working as intended."},
+    {
+        "text":"If the good [Scapegoat] is executed due to the [Cerenovus], the [Cannibal] gains the [Scapegoat] ability.",
+        "math":"green",
+        "reason":"The Cannibal gains the ability of a character that was executed in any way.",
+        "mathInfo":"The Cannibal's ability is working as intended."},
+    {
+        "text":"If the good [Matron] is executed due to the [Cerenovus], the [Cannibal] gains the [Matron] ability.",
+        "math":"green",
+        "reason":"The Cannibal gains the ability of a character that was executed in any way.",
+        "mathInfo":"The Cannibal's ability is working as intended."},
+    {
+        "text":"If the good [Judge] is executed due to the [Cerenovus], the [Cannibal] gains the [Judge] ability.",
+        "math":"green",
+        "reason":"The Cannibal gains the ability of a character that was executed in any way.",
+        "mathInfo":"The Cannibal's ability is working as intended."},
+    {
+        "text":"If the good [Harlot] is executed due to the [Cerenovus], the [Cannibal] gains the [Harlot] ability.",
+        "math":"green",
+        "reason":"The Cannibal gains the ability of a character that was executed in any way.",
+        "mathInfo":"The Cannibal's ability is working as intended."},
+    {
+        "text":"If the good [Gunslinger] is executed due to the [Cerenovus], the [Cannibal] gains the [Gunslinger] ability.",
+        "math":"green",
+        "reason":"The Cannibal gains the ability of a character that was executed in any way.",
+        "mathInfo":"The Cannibal's ability is working as intended."},
+    {
+        "text":"If the good [Gnome] is executed due to the [Cerenovus], the [Cannibal] gains the [Gnome] ability.",
+        "math":"green",
+        "reason":"The Cannibal gains the ability of a character that was executed in any way.",
+        "mathInfo":"The Cannibal's ability is working as intended."},
+    {
+        "text":"If the good [Gangster] is executed due to the [Cerenovus], the [Cannibal] gains the [Gangster] ability.",
+        "math":"green",
+        "reason":"The Cannibal gains the ability of a character that was executed in any way.",
+        "mathInfo":"The Cannibal's ability is working as intended."},
+    {
+        "text":"If the good [Deviant] is executed due to the [Cerenovus], the [Cannibal] gains the [Deviant] ability.",
+        "math":"green",
+        "reason":"The Cannibal gains the ability of a character that was executed in any way.",
+        "mathInfo":"The Cannibal's ability is working as intended."},
+    {
+        "text":"If the good [Cacklejack] is executed due to the [Cerenovus], the [Cannibal] gains the [Cacklejack] ability.",
+        "math":"green",
+        "reason":"The Cannibal gains the ability of a character that was executed in any way.",
+        "mathInfo":"The Cannibal's ability is working as intended."},
+    {
+        "text":"If the good [Butcher] is executed due to the [Cerenovus], the [Cannibal] gains the [Butcher] ability.",
+        "math":"green",
+        "reason":"The Cannibal gains the ability of a character that was executed in any way.",
+        "mathInfo":"The Cannibal's ability is working as intended."},
+    {
+        "text":"If the good [Bureaucrat] is executed due to the [Cerenovus], the [Cannibal] gains the [Bureaucrat] ability.",
+        "math":"green",
+        "reason":"The Cannibal gains the ability of a character that was executed in any way.",
+        "mathInfo":"The Cannibal's ability is working as intended."},
+    {
+        "text":"If the good [Bone Collector] is executed due to the [Cerenovus], the [Cannibal] gains the [Bone Collector] ability.",
+        "math":"green",
+        "reason":"The Cannibal gains the ability of a character that was executed in any way.",
+        "mathInfo":"The Cannibal's ability is working as intended."},
+    {
+        "text":"If the good [Bishop] is executed due to the [Cerenovus], the [Cannibal] gains the [Bishop] ability.",
+        "math":"green",
+        "reason":"The Cannibal gains the ability of a character that was executed in any way.",
+        "mathInfo":"The Cannibal's ability is working as intended."},
+    {
+        "text":"If the good [Beggar] is executed due to the [Cerenovus], the [Cannibal] gains the [Beggar] ability.",
+        "math":"green",
+        "reason":"The Cannibal gains the ability of a character that was executed in any way.",
+        "mathInfo":"The Cannibal's ability is working as intended."},
+    {
+        "text":"If the good [Barista] is executed due to the [Cerenovus], the [Cannibal] gains the [Barista] ability.",
+        "math":"green",
+        "reason":"The Cannibal gains the ability of a character that was executed in any way.",
+        "mathInfo":"The Cannibal's ability is working as intended."},
+    {
+        "text":"If the good [Apprentice] is executed due to the [Cerenovus], the [Cannibal] gains the [Apprentice] ability.",
+        "math":"green",
+        "reason":"The Cannibal gains the ability of a character that was executed in any way.",
+        "mathInfo":"The Cannibal's ability is working as intended."},
+    {
         "text":"If the [Wizard] is [Pukka] poisoned after making a wish, the wish stays in play.",
         "math":"green",
         "reason":"Wishes are permanent changes to the game.",
