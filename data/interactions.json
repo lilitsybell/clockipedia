@@ -1,5 +1,60 @@
 [
     {
+        "text":"A player who is protected by a [Monk] may still die due to the [Harpy] ability.",
+        "math":"green",
+        "reason":"The Monk only protects players from the Demon.",
+        "mathInfo":"No ability has malfunctioned."},
+    {
+        "text":"A player who is protected by a [Monk] may still die due to the [Godfather] ability.",
+        "math":"green",
+        "reason":"The Monk only protects players from the Demon.",
+        "mathInfo":"No ability has malfunctioned."},
+    {
+        "text":"A player who is protected by a [Monk] may still die due to the [Cerenovus] ability.",
+        "math":"green",
+        "reason":"The Monk only protects players from the Demon.",
+        "mathInfo":"No ability has malfunctioned."},
+    {
+        "text":"A player who is protected by a [Monk] may still die due to the [Assassin] ability.",
+        "math":"green",
+        "reason":"The Monk only protects players from the Demon.",
+        "mathInfo":"No ability has malfunctioned."},
+    {
+        "text":"A player who is protected by a [Monk] may still die due to the [Tinker] ability.",
+        "math":"green",
+        "reason":"The Monk only protects players from the Demon.",
+        "mathInfo":"No ability has malfunctioned."},
+    {
+        "text":"A player who is protected by a [Monk] may still die due to the [Moonchild] ability.",
+        "math":"green",
+        "reason":"The Monk only protects players from the Demon.",
+        "mathInfo":"No ability has malfunctioned."},
+    {
+        "text":"A player who is protected by a [Monk] may still die due to the [Lycanthrope] ability.",
+        "math":"green",
+        "reason":"The Monk only protects players from the Demon.",
+        "mathInfo":"No ability has malfunctioned."},
+    {
+        "text":"A player who is protected by a [Monk] may still die due to the [Grandmother] ability.",
+        "math":"green",
+        "reason":"The Monk only protects players from the Demon.",
+        "mathInfo":"No ability has malfunctioned."},
+    {
+        "text":"A player who is protected by a [Monk] may still die due to the [Gossip] ability.",
+        "math":"green",
+        "reason":"The Monk only protects players from the Demon.",
+        "mathInfo":"No ability has malfunctioned."},
+    {
+        "text":"A player who is protected by a [Monk] may still die due to the [Gambler] ability.",
+        "math":"green",
+        "reason":"The Monk only protects players from the Demon.",
+        "mathInfo":"No ability has malfunctioned."},
+    {
+        "text":"A player who is protected by a [Monk] may still die due to the [Acrobat] ability.",
+        "math":"green",
+        "reason":"The Monk only protects players from the Demon.",
+        "mathInfo":"No ability has malfunctioned."},
+    {
         "text":"If the [Buddhist] is in play, a player who is considered a veteran player may still talk to use the [Duchess] ability.",
         "math":"green",
         "reason":"The Buddhist does not stop players from using their abilities.",
@@ -3020,12 +3075,7 @@
         "reason":"The Acrobat only detects drunkenness or poison.",
         "mathInfo":"The Acrobat's ability is working as intended."},
     {
-        "text":"The [Acrobat] can not survive after choose a drunk or poisoned player due to the [Fibbin] ability.",
-        "math":"green",
-        "reason":"The Acrobat only detects drunkenness or poison.",
-        "mathInfo":"The Acrobat's ability is working as intended."},
-    {
-        "text":"The [Acrobat] can not survive after choose a drunk or poisoned player due to the [Monk] ability.",
+        "text":"The [Acrobat] cannot survive after choose a drunk or poisoned player due to the [Fibbin] ability.",
         "math":"green",
         "reason":"The Acrobat only detects drunkenness or poison.",
         "mathInfo":"The Acrobat's ability is working as intended."},
