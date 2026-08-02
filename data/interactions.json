@@ -1,5 +1,15 @@
 [
     {
+        "text":"If the [Marionette] believes they are the [Alchemist] [Assassin], the [Marionette]'s kill fails.",
+        "math":"green",
+        "reason":"The Marionette does not have the ability they believe they do.",
+        "mathInfo":"If the Marionette's ability malfunctioned, the Mathematician does not register this as abnormal."},
+    {
+        "text":"If the [Drunk] believes they are the [Alchemist] [Assassin], the [Drunk]'s kill fails.",
+        "math":"red",
+        "reason":"The Drunk does not have the ability they believe they do.",
+        "mathInfo":"If the Drunk's ability malfunctioned, the Mathematician registers this as abnormal."},
+    {
         "text":"If the [Alchemist] [Assassin] is [Vigormortis] poisoned, the [Alchemist] [Assassin]'s kill fails.",
         "math":"red",
         "reason":"A drunk or poisoned player has no ability.",
