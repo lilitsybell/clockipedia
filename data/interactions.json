@@ -1,5 +1,10 @@
 [
     {
+        "text":"The [Investigator] cannot see the Storyteller with a [Plague Doctor] Minion ability.",
+        "math":"green",
+        "reason":"The Investigator must see a player.",
+        "mathInfo":"No ability has malfunctioned."},
+    {
         "text":"A Minion who gains the [Fearmonger] ability due to the [Plague Doctor] cannot register as the [Fearmonger] to the [Artist].",
         "math":"green",
         "reason":"Gaining an ability does not mean you are that character.",
