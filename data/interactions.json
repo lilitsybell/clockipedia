@@ -1,5 +1,50 @@
 [
     {
+        "text":"If the [Hindu] ability causes a character who is named by the [Storm Catcher] to change, the player is no longer protected by the [Storm Catcher].",
+        "math":"green",
+        "reason":"The Storm Catcher only protects the character named.",
+        "mathInfo":"No ability has malfunctioned."},
+    {
+        "text":"A character named by the [Storm Catcher] cannot die due to the [Big Wig].",
+        "math":"green",
+        "reason":"The character named by the Storm Catcher can only die by execution.",
+        "mathInfo":"The Big Wig is not a player and therefore cannot count as malfunctioning to the Mathematician."},
+    {
+        "text":"A character named by the [Storm Catcher] who is in a [Revolutionary] pair might register as a different character and die due to another character's ability.",
+        "math":"green",
+        "reason":"The Revolutionary might cause a player to misregister as a different character to the Storm Catcher.",
+        "mathInfo":"The Storm Catcher is not a player and therefore cannot count as malfunctioning to the Mathematician."},
+    {
+        "text":"A character named by the [Storm Catcher] cannot die due to the [Doomsayer].",
+        "math":"green",
+        "reason":"The character named by the Storm Catcher can only die by execution.",
+        "mathInfo":"The Doomsayer is not a player and therefore cannot count as malfunctioning to the Mathematician."},
+    {
+        "text":"A character named by the [Storm Catcher] cannot die due to the [Harlot].",
+        "math":"red",
+        "reason":"The character named by the Storm Catcher can only die by execution.",
+        "mathInfo":"If the Harlot did not kill due to the Storm Catcher, the Harlot's ability malfunctioned."},
+    {
+        "text":"A character named by the [Storm Catcher] cannot die due to the [Gunslinger].",
+        "math":"red",
+        "reason":"The character named by the Storm Catcher can only die by execution.",
+        "mathInfo":"If the Gunslinger did not kill due to the Storm Catcher, the Gunslinger's ability malfunctioned."},
+    {
+        "text":"A character named by the [Storm Catcher] cannot die due to the [Gnome].",
+        "math":"red",
+        "reason":"The character named by the Storm Catcher can only die by execution.",
+        "mathInfo":"If the Gnome did not kill due to the Storm Catcher, the Gnome's ability malfunctioned."},
+    {
+        "text":"A character named by the [Storm Catcher] cannot die due to the [Gangster].",
+        "math":"red",
+        "reason":"The character named by the Storm Catcher can only die by execution.",
+        "mathInfo":"If the Gangster did not kill due to the Storm Catcher, the Gangster's ability malfunctioned."},
+    {
+        "text":"If the [Cacklejack] ability causes a character who is named by the [Storm Catcher] to change, the player is no longer protected by the [Storm Catcher].",
+        "math":"green",
+        "reason":"The Storm Catcher only protects the character named.",
+        "mathInfo":"No ability has malfunctioned."},
+    {
         "text":"A character named by the [Storm Catcher] cannot die due to the [Zombuul].",
         "math":"red",
         "reason":"The character named by the Storm Catcher can only die by execution.",
@@ -118,7 +163,7 @@
         "text":"If the [Spy] registers as the character named by the [Storm Catcher], the [Spy] player is Stormcaught and evil players (including the [Spy]) immediately learn this.",
         "math":"green",
         "reason":"The Spy might misregister as a good character to the Storm Catcher.",
-        "mathInfo":"The Storm Catcher is not a player and therefore does not count as malfunctioning to the Mathematician."},
+        "mathInfo":"The Storm Catcher is not a player and therefore cannot count as malfunctioning to the Mathematician."},
     {
         "text":"A character named by the [Storm Catcher] cannot die due to the [Psychopath].",
         "math":"red",
