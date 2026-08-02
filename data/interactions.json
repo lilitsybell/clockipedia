@@ -1,5 +1,120 @@
 [
     {
+        "text":"If the [Marionette] is [Pukka] poisoned there is no tangible effect.",
+        "math":"green",
+        "reason":"The Marionette does not learn if they are drunk or poisoned.",
+        "mathInfo":"No ability has malfunctioned."},
+    {
+        "text":"If the [Drunk] is [Pukka] poisoned there is no tangible effect.",
+        "math":"green",
+        "reason":"The Drunk does not learn if they are drunk or poisoned.",
+        "mathInfo":"No ability has malfunctioned."},
+    {
+        "text":"If the [Marionette] is [Lleech] poisoned there is no tangible effect.",
+        "math":"green",
+        "reason":"The Marionette does not learn if they are drunk or poisoned.",
+        "mathInfo":"No ability has malfunctioned."},
+    {
+        "text":"If the [Drunk] is [Lleech] poisoned there is no tangible effect.",
+        "math":"green",
+        "reason":"The Drunk does not learn if they are drunk or poisoned.",
+        "mathInfo":"No ability has malfunctioned."},
+    {
+        "text":"If the [Marionette] is [Widow] poisoned there is no tangible effect.",
+        "math":"green",
+        "reason":"The Marionette does not learn if they are drunk or poisoned.",
+        "mathInfo":"No ability has malfunctioned."},
+    {
+        "text":"If the [Drunk] is [Widow] poisoned there is no tangible effect.",
+        "math":"green",
+        "reason":"The Drunk does not learn if they are drunk or poisoned.",
+        "mathInfo":"No ability has malfunctioned."},
+    {
+        "text":"If the [Marionette] is [Poisoner] poisoned there is no tangible effect.",
+        "math":"green",
+        "reason":"The Marionette does not learn if they are drunk or poisoned.",
+        "mathInfo":"No ability has malfunctioned."},
+    {
+        "text":"If the [Drunk] is [Poisoner] poisoned there is no tangible effect.",
+        "math":"green",
+        "reason":"The Drunk does not learn if they are drunk or poisoned.",
+        "mathInfo":"No ability has malfunctioned."},
+    {
+        "text":"If the [Marionette] is [Sweetheart] drunk there is no tangible effect.",
+        "math":"green",
+        "reason":"The Marionette does not learn if they are drunk or poisoned.",
+        "mathInfo":"No ability has malfunctioned."},
+    {
+        "text":"If the [Drunk] is [Sweetheart] drunk there is no tangible effect.",
+        "math":"green",
+        "reason":"The Drunk does not learn if they are drunk or poisoned.",
+        "mathInfo":"No ability has malfunctioned."},
+    {
+        "text":"If the [Marionette] is [Puzzlemaster] drunk there is no tangible effect.",
+        "math":"green",
+        "reason":"The Marionette does not learn if they are drunk or poisoned.",
+        "mathInfo":"No ability has malfunctioned."},
+    {
+        "text":"If the [Drunk] is [Puzzlemaster] drunk there is no tangible effect.",
+        "math":"green",
+        "reason":"The Drunk does not learn if they are drunk or poisoned.",
+        "mathInfo":"No ability has malfunctioned."},
+    {
+        "text":"If the [Marionette] is [Goon] drunk there is no tangible effect.",
+        "math":"green",
+        "reason":"The Marionette does not learn if they are drunk or poisoned.",
+        "mathInfo":"No ability has malfunctioned."},
+    {
+        "text":"If the [Drunk] is [Goon] drunk there is no tangible effect.",
+        "math":"green",
+        "reason":"The Drunk does not learn if they are drunk or poisoned.",
+        "mathInfo":"No ability has malfunctioned."},
+    {
+        "text":"If the [Marionette] is [Sailor] drunk there is no tangible effect.",
+        "math":"green",
+        "reason":"The Marionette does not learn if they are drunk or poisoned.",
+        "mathInfo":"No ability has malfunctioned."},
+    {
+        "text":"If the [Drunk] is [Sailor] drunk there is no tangible effect.",
+        "math":"green",
+        "reason":"The Drunk does not learn if they are drunk or poisoned.",
+        "mathInfo":"No ability has malfunctioned."},
+    {
+        "text":"If the [Drunk] is [Philosopher] drunk there is no tangible effect.",
+        "math":"green",
+        "reason":"The Drunk does not learn if they are drunk or poisoned.",
+        "mathInfo":"No ability has malfunctioned."},
+    {
+        "text":"If the [Marionette] is [Minstrel] drunk there is no tangible effect.",
+        "math":"green",
+        "reason":"The Marionette does not learn if they are drunk or poisoned.",
+        "mathInfo":"No ability has malfunctioned."},
+    {
+        "text":"If the [Drunk] is [Minstrel] drunk there is no tangible effect.",
+        "math":"green",
+        "reason":"The Drunk does not learn if they are drunk or poisoned.",
+        "mathInfo":"No ability has malfunctioned."},
+    {
+        "text":"If the [Marionette] is [Innkeeper] drunk there is no tangible effect.",
+        "math":"green",
+        "reason":"The Marionette does not learn if they are drunk or poisoned.",
+        "mathInfo":"No ability has malfunctioned."},
+    {
+        "text":"If the [Drunk] is [Innkeeper] drunk there is no tangible effect.",
+        "math":"green",
+        "reason":"The Drunk does not learn if they are drunk or poisoned.",
+        "mathInfo":"No ability has malfunctioned."},
+    {
+        "text":"If the [Marionette] is [Courtier] drunk there is no tangible effect.",
+        "math":"green",
+        "reason":"The Marionette does not learn if they are drunk or poisoned.",
+        "mathInfo":"No ability has malfunctioned."},
+    {
+        "text":"If the [Drunk] is [Courtier] drunk there is no tangible effect.",
+        "math":"green",
+        "reason":"The Drunk does not learn if they are drunk or poisoned.",
+        "mathInfo":"No ability has malfunctioned."},
+    {
         "text":"If the [Courtier] is [Vigormortis] poisoned after using their ability, the [Courtier] drunk player is no longer drunk until the [Courtier] becomes healthy. The drunk days do not pause while the [Courtier] is poisoned.",
         "math":"red",
         "reason":"A drunk or poisoned player has no ability.",
