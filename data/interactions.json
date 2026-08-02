@@ -1,5 +1,45 @@
 [
     {
+        "text":"If the [Leviathan] is [Pukka] poisoned, any players executed during this time do not count toward the [Leviathan]’s win condition. If this was on the [Leviathan]'s first night, the Storyteller does not declare a [Leviathan] is in play until the [Leviathan] is healthy. If the [Leviathan] is poisoned at the start of night 6, the game continues until the [Leviathan] is healthy, which ends the game immediately with an evil victory.",
+        "math":"red",
+        "reason":"If the Leviathan is drunk or poisoned, they have no ability.",
+        "mathInfo":"If the Storyteller did not declare a Leviathan is in play, a good player was executed, or the game has not ended after day 5, the Leviathan's ability malfunctioned."},
+    {
+        "text":"If the [Leviathan] is [Lleech] poisoned, any players executed during this time do not count toward the [Leviathan]’s win condition. If this was on the [Leviathan]'s first night, the Storyteller does not declare a [Leviathan] is in play until the [Leviathan] is healthy. If the [Leviathan] is poisoned at the start of night 6, the game continues until the [Leviathan] is healthy, which ends the game immediately with an evil victory.",
+        "math":"red",
+        "reason":"If the Leviathan is drunk or poisoned, they have no ability.",
+        "mathInfo":"If the Storyteller did not declare a Leviathan is in play, a good player was executed, or the game has not ended after day 5, the Leviathan's ability malfunctioned."},
+    {
+        "text":"If the [Leviathan] is [Widow] poisoned, any players executed during this time do not count toward the [Leviathan]’s win condition. If this was on the [Leviathan]'s first night, the Storyteller does not declare a [Leviathan] is in play until the [Leviathan] is healthy. If the [Leviathan] is poisoned at the start of night 6, the game continues until the [Leviathan] is healthy, which ends the game immediately with an evil victory.",
+        "math":"red",
+        "reason":"If the Leviathan is drunk or poisoned, they have no ability.",
+        "mathInfo":"If the Storyteller did not declare a Leviathan is in play, a good player was executed, or the game has not ended after day 5, the Leviathan's ability malfunctioned."},
+    {
+        "text":"If the [Leviathan] is [Poisoner] poisoned, any players executed during this time do not count toward the [Leviathan]’s win condition. If this was on the [Leviathan]'s first night, the Storyteller does not declare a [Leviathan] is in play until the [Leviathan] is healthy.",
+        "math":"red",
+        "reason":"If the Leviathan is drunk or poisoned, they have no ability.",
+        "mathInfo":"If the Storyteller did not declare a Leviathan is in play or a good player was executed, the Leviathan's ability malfunctioned."},
+    {
+        "text":"If the [Leviathan] is [Sweetheart] drunk, any players executed during this time do not count toward the [Leviathan]’s win condition. If this was on the [Leviathan]'s first night, the Storyteller does not declare a [Leviathan] is in play until the [Leviathan] is sober. If the [Leviathan] is drunk at the start of night 6, the game continues until the [Leviathan] is sober, which ends the game immediately with an evil victory.",
+        "math":"red",
+        "reason":"If the Leviathan is drunk or poisoned, they have no ability.",
+        "mathInfo":"If the Storyteller did not declare a Leviathan is in play, a good player was executed, or the game has not ended after day 5, the Leviathan's ability malfunctioned."},
+    {
+        "text":"If the [Leviathan] is [Puzzlemaster] drunk, any players executed during this time do not count toward the [Leviathan]’s win condition. If this was on the [Leviathan]'s first night, the Storyteller does not declare a [Leviathan] is in play until the [Leviathan] is sober. If the [Leviathan] is drunk at the start of night 6, the game continues until the [Leviathan] is sober, which ends the game immediately with an evil victory.",
+        "math":"red",
+        "reason":"If the Leviathan is drunk or poisoned, they have no ability.",
+        "mathInfo":"If the Storyteller did not declare a Leviathan is in play, a good player was executed, or the game has not ended after day 5, the Leviathan's ability malfunctioned."},
+    {
+        "text":"If the [Leviathan] is [Minstrel] drunk, any players executed during this time do not count toward the [Leviathan]’s win condition. If this was on the [Leviathan]'s first night, the Storyteller does not declare a [Leviathan] is in play until the [Leviathan] is sober. If the [Leviathan] is drunk at the start of night 6, the game continues until the [Leviathan] is sober, which ends the game immediately with an evil victory.",
+        "math":"red",
+        "reason":"If the Leviathan is drunk or poisoned, they have no ability.",
+        "mathInfo":"If the Storyteller did not declare a Leviathan is in play, a good player was executed, or the game has not ended after day 5, the Leviathan's ability malfunctioned."},
+    {
+        "text":"If the [Leviathan] is [Courtier] drunk, any players executed during this time do not count toward the [Leviathan]’s win condition. If this was on the [Leviathan]'s first night, the Storyteller does not declare a [Leviathan] is in play until the [Leviathan] is sober. If the [Leviathan] is drunk at the start of night 6, the game continues until the [Leviathan] is sober, which ends the game immediately with an evil victory.",
+        "math":"red",
+        "reason":"If the Leviathan is drunk or poisoned, they have no ability.",
+        "mathInfo":"If the Storyteller did not declare a Leviathan is in play, a good player was executed, or the game has not ended after day 5, the Leviathan's ability malfunctioned."},
+    {
         "text":"If the [Marionette] is [Pukka] poisoned there is no tangible effect.",
         "math":"green",
         "reason":"The Marionette does not learn if they are drunk or poisoned.",
