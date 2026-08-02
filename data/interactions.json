@@ -1,5 +1,90 @@
 [
     {
+        "text":"The [Grandmother] does not die if the Grandchild was killed due to the [Witch] ability.",
+        "math":"green",
+        "reason":"The Grandmother only dies if the Demon killed the grandchild.",
+        "mathInfo":"No ability has malfunctioned."},
+    {
+        "text":"The [Grandmother] does not die if the Grandchild was killed due to the [Vizier] ability.",
+        "math":"green",
+        "reason":"The Grandmother only dies if the Demon killed the grandchild.",
+        "mathInfo":"No ability has malfunctioned."},
+    {
+        "text":"The [Grandmother] does not die if the Grandchild was killed due to the [Psychopath] ability.",
+        "math":"green",
+        "reason":"The Grandmother only dies if the Demon killed the grandchild.",
+        "mathInfo":"No ability has malfunctioned."},
+    {
+        "text":"The [Grandmother] does not die if the Grandchild was killed due to the [Harpy] ability.",
+        "math":"green",
+        "reason":"The Grandmother only dies if the Demon killed the grandchild.",
+        "mathInfo":"No ability has malfunctioned."},
+    {
+        "text":"The [Grandmother] does not die if the Grandchild was killed due to the [Godfather] ability.",
+        "math":"green",
+        "reason":"The Grandmother only dies if the Demon killed the grandchild.",
+        "mathInfo":"No ability has malfunctioned."},
+    {
+        "text":"The [Grandmother] does not die if the Grandchild was killed due to the [Cerenovus] ability.",
+        "math":"green",
+        "reason":"The Grandmother only dies if the Demon killed the grandchild.",
+        "mathInfo":"No ability has malfunctioned."},
+    {
+        "text":"The [Grandmother] does not die if the Grandchild was killed due to the [Mutant] ability.",
+        "math":"green",
+        "reason":"The Grandmother only dies if the Demon killed the grandchild.",
+        "mathInfo":"No ability has malfunctioned."},
+    {
+        "text":"The [Grandmother] does not die if the Grandchild was killed due to the [Boomdandy] ability.",
+        "math":"green",
+        "reason":"The Grandmother only dies if the Demon killed the grandchild.",
+        "mathInfo":"No ability has malfunctioned."},
+    {
+        "text":"The [Grandmother] does not die if the Grandchild was killed due to the [Assassin] ability.",
+        "math":"green",
+        "reason":"The Grandmother only dies if the Demon killed the grandchild.",
+        "mathInfo":"No ability has malfunctioned."},
+    {
+        "text":"The [Grandmother] does not die if the Grandchild was killed due to the [Tinker] ability.",
+        "math":"green",
+        "reason":"The Grandmother only dies if the Demon killed the grandchild.",
+        "mathInfo":"No ability has malfunctioned."},
+    {
+        "text":"The [Grandmother] does not die if the Grandchild was killed due to the [Moonchild] ability.",
+        "math":"green",
+        "reason":"The Grandmother only dies if the Demon killed the grandchild.",
+        "mathInfo":"No ability has malfunctioned."},
+    {
+        "text":"The [Grandmother] does not die if the Grandchild was killed due to the [Golem] ability.",
+        "math":"green",
+        "reason":"The Grandmother only dies if the Demon killed the grandchild.",
+        "mathInfo":"No ability has malfunctioned."},
+    {
+        "text":"The [Grandmother] does not die if the Grandchild was killed due to the [Slayer] ability.",
+        "math":"green",
+        "reason":"The Grandmother only dies if the Demon killed the grandchild.",
+        "mathInfo":"No ability has malfunctioned."},
+    {
+        "text":"The [Grandmother] does not die if the Grandchild was killed due to the [Lycanthrope] ability.",
+        "math":"green",
+        "reason":"The Grandmother only dies if the Demon killed the grandchild.",
+        "mathInfo":"No ability has malfunctioned."},
+    {
+        "text":"The [Grandmother] does not die if the Grandchild was killed due to the [Gossip] ability.",
+        "math":"green",
+        "reason":"The Grandmother only dies if the Demon killed the grandchild.",
+        "mathInfo":"No ability has malfunctioned."},
+    {
+        "text":"The [Grandmother] does not die if the Grandchild was killed due to the [Gambler] ability.",
+        "math":"green",
+        "reason":"The Grandmother only dies if the Demon killed the grandchild.",
+        "mathInfo":"No ability has malfunctioned."},
+    {
+        "text":"The [Grandmother] does not die if the Grandchild was killed due to the [Acrobat] ability.",
+        "math":"green",
+        "reason":"The Grandmother only dies if the Demon killed the grandchild.",
+        "mathInfo":"No ability has malfunctioned."},
+    {
         "text":"A player who is protected by a [Monk] may still die due to the [Harpy] ability.",
         "math":"green",
         "reason":"The Monk only protects players from the Demon.",
