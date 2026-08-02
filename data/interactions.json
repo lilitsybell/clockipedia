@@ -1,11 +1,41 @@
 [
     {
+        "text":"The [Yaggababble] [Exorcist] [Djinn] rule states \"If the [Exorcist] chooses the [Yaggababble], the [Yaggababble] does not kill tonight.\" The [Yaggababble] learns who the [Exorcist] is.",
+        "math":"green",
+        "reason":"The Djinn changes the way characters interact with each other.",
+        "mathInfo":"Since the Storyteller does not have to kill anyone from the Yaggababble, the Yaggababble ability is not malfunctioning."},
+    {
+        "text":"The [Vortox] [Banshee] [Djinn] rule states \"If the [Vortox] kills the [Banshee], all players learn that the [Banshee] has died.\"",
+        "math":"green",
+        "reason":"The Djinn changes the way characters interact with each other.",
+        "mathInfo":"The Djinn rule changes the way the Vortox's ability works, but does not count the ability as malfunctioning."},
+    {
+        "text":"The [Riot] [Soldier] [Djinn] rule states \"If [Riot] nominates and executes the [Soldier], good wins.\"",
+        "math":"green",
+        "reason":"The Djinn changes the way characters interact with each other.",
+        "mathInfo":"The Djinn rule changes the way the Soldier's ability works, but does not count the ability as malfunctioning."},
+    {
+        "text":"The [Riot] [Monk] [Djinn] rule states \"If [Riot] nominates and executes the [Monk]-protected player, good wins.\"",
+        "math":"green",
+        "reason":"The Djinn changes the way characters interact with each other.",
+        "mathInfo":"The Djinn rule changes the way the Monk's ability works, but does not count the ability as malfunctioning."},
+    {
+        "text":"The [Riot] [Mayor] [Djinn] rule states \"The [Mayor] may choose to stop the riot. If they do so when only 1 Riot is alive, good wins. Otherwise, evil wins.\"",
+        "math":"green",
+        "reason":"The Djinn changes the way characters interact with each other.",
+        "mathInfo":"The Djinn rule changes the way the Mayor's and Riot's abilities works, but does not count the abilities as malfunctioning."},
+    {
+        "text":"The [Riot] [King] [Djinn] rule states \"If [Riot] is in play, and at least 1 player is dead, the [King] learns an alive character each night.\"",
+        "math":"green",
+        "reason":"The Djinn changes the way characters interact with each other.",
+        "mathInfo":"The Djinn rule changes the way the King's ability works, but does not count the ability as malfunctioning."},
+    {
         "text":"The [Riot] [Innkeeper] [Djinn] rule states \"If [Riot] nominates and executes an [Innkeeper]-protected player, good wins.\"",
         "math":"green",
         "reason":"The Djinn changes the way characters interact with each other.",
         "mathInfo":"The Djinn rule changes the way the Innkeeper's ability works, but does not count the ability as malfunctioning."},
     {
-        "text":"The [Riot] [Grandmother] [Djinn] rule states \"If [Riot] is in play and the Grandchild dies by execution, evil wins.\"",
+        "text":"The [Riot] [Grandmother] [Djinn] rule states \"If [Riot] is in play and the Grandchild dies by execution, evil wins.\" It does not matter who nominates the Grandchild.",
         "math":"green",
         "reason":"The Djinn changes the way characters interact with each other.",
         "mathInfo":"The Djinn rule changes the way the Grandmother's ability works, but does not count the ability as malfunctioning."},
