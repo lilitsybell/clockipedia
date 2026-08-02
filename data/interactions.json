@@ -10,7 +10,7 @@
         "reason":"The character named by the Storm Catcher can only die by execution.",
         "mathInfo":"The Big Wig is not a player and therefore cannot count as malfunctioning to the Mathematician."},
     {
-        "text":"A character named by the [Storm Catcher] who is in a [Revolutionary] pair might register as a different character and die due to another character's ability.",
+        "text":"A character named by the [Storm Catcher] who is in a [Revolutionary] pair might register as a different character and die due to another character\'s ability.",
         "math":"green",
         "reason":"The Revolutionary might cause a player to misregister as a different character to the Storm Catcher.",
         "mathInfo":"The Storm Catcher is not a player and therefore cannot count as malfunctioning to the Mathematician."},
