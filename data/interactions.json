@@ -1,5 +1,380 @@
 [
     {
+        "text":"A Minion who gains the [Fearmonger] ability due to the [Plague Doctor] cannot register as the [Fearmonger] to the [Artist].",
+        "math":"green",
+        "reason":"Gaining an ability does not mean you are that character.",
+        "mathInfo":"No ability has malfunctioned."},
+    {
+        "text":"A Minion who gains the [Goblin] ability due to the [Plague Doctor] cannot register as the [Goblin] to the [Artist].",
+        "math":"green",
+        "reason":"Gaining an ability does not mean you are that character.",
+        "mathInfo":"No ability has malfunctioned."},
+    {
+        "text":"A Minion who gains the [Scarlet Woman] ability due to the [Plague Doctor] cannot register as the [Scarlet Woman] to the [Artist].",
+        "math":"green",
+        "reason":"Gaining an ability does not mean you are that character.",
+        "mathInfo":"No ability has malfunctioned."},
+    {
+        "text":"A Minion who gains the [Spy] ability due to the [Plague Doctor] cannot register as the [Spy] to the [Artist].",
+        "math":"green",
+        "reason":"Gaining an ability does not mean you are that character.",
+        "mathInfo":"No ability has malfunctioned."},
+    {
+        "text":"A Minion who gains the [Wraith] ability due to the [Plague Doctor] cannot register as the [Wraith] to the [Artist].",
+        "math":"green",
+        "reason":"Gaining an ability does not mean you are that character.",
+        "mathInfo":"No ability has malfunctioned."},
+    {
+        "text":"A Minion who gains the [Fearmonger] ability due to the [Plague Doctor] cannot register as the [Fearmonger] to the [Cannibal].",
+        "math":"green",
+        "reason":"Gaining an ability does not mean you are that character.",
+        "mathInfo":"No ability has malfunctioned."},
+    {
+        "text":"A Minion who gains the [Goblin] ability due to the [Plague Doctor] cannot register as the [Goblin] to the [Cannibal].",
+        "math":"green",
+        "reason":"Gaining an ability does not mean you are that character.",
+        "mathInfo":"No ability has malfunctioned."},
+    {
+        "text":"A Minion who gains the [Scarlet Woman] ability due to the [Plague Doctor] cannot register as the [Scarlet Woman] to the [Cannibal].",
+        "math":"green",
+        "reason":"Gaining an ability does not mean you are that character.",
+        "mathInfo":"No ability has malfunctioned."},
+    {
+        "text":"A Minion who gains the [Spy] ability due to the [Plague Doctor] cannot register as the [Spy] to the [Cannibal].",
+        "math":"green",
+        "reason":"Gaining an ability does not mean you are that character.",
+        "mathInfo":"No ability has malfunctioned."},
+    {
+        "text":"A Minion who gains the [Wraith] ability due to the [Plague Doctor] cannot register as the [Wraith] to the [Cannibal].",
+        "math":"green",
+        "reason":"Gaining an ability does not mean you are that character.",
+        "mathInfo":"No ability has malfunctioned."},
+    {
+        "text":"A Minion who gains the [Fearmonger] ability due to the [Plague Doctor] cannot register as the [Fearmonger] to the [Courtier].",
+        "math":"green",
+        "reason":"Gaining an ability does not mean you are that character.",
+        "mathInfo":"No ability has malfunctioned."},
+    {
+        "text":"A Minion who gains the [Goblin] ability due to the [Plague Doctor] cannot register as the [Goblin] to the [Courtier].",
+        "math":"green",
+        "reason":"Gaining an ability does not mean you are that character.",
+        "mathInfo":"No ability has malfunctioned."},
+    {
+        "text":"A Minion who gains the [Scarlet Woman] ability due to the [Plague Doctor] cannot register as the [Scarlet Woman] to the [Courtier].",
+        "math":"green",
+        "reason":"Gaining an ability does not mean you are that character.",
+        "mathInfo":"No ability has malfunctioned."},
+    {
+        "text":"A Minion who gains the [Spy] ability due to the [Plague Doctor] cannot register as the [Spy] to the [Courtier].",
+        "math":"green",
+        "reason":"Gaining an ability does not mean you are that character.",
+        "mathInfo":"No ability has malfunctioned."},
+    {
+        "text":"A Minion who gains the [Wraith] ability due to the [Plague Doctor] cannot register as the [Wraith] to the [Courtier].",
+        "math":"green",
+        "reason":"Gaining an ability does not mean you are that character.",
+        "mathInfo":"No ability has malfunctioned."},
+    {
+        "text":"A Minion who gains the [Fearmonger] ability due to the [Plague Doctor] cannot register as the [Fearmonger] to the [Gambler].",
+        "math":"green",
+        "reason":"Gaining an ability does not mean you are that character.",
+        "mathInfo":"No ability has malfunctioned."},
+    {
+        "text":"A Minion who gains the [Goblin] ability due to the [Plague Doctor] cannot register as the [Goblin] to the [Gambler].",
+        "math":"green",
+        "reason":"Gaining an ability does not mean you are that character.",
+        "mathInfo":"No ability has malfunctioned."},
+    {
+        "text":"A Minion who gains the [Scarlet Woman] ability due to the [Plague Doctor] cannot register as the [Scarlet Woman] to the [Gambler].",
+        "math":"green",
+        "reason":"Gaining an ability does not mean you are that character.",
+        "mathInfo":"No ability has malfunctioned."},
+    {
+        "text":"A Minion who gains the [Spy] ability due to the [Plague Doctor] cannot register as the [Spy] to the [Gambler].",
+        "math":"green",
+        "reason":"Gaining an ability does not mean you are that character.",
+        "mathInfo":"No ability has malfunctioned."},
+    {
+        "text":"A Minion who gains the [Wraith] ability due to the [Plague Doctor] cannot register as the [Wraith] to the [Gambler].",
+        "math":"green",
+        "reason":"Gaining an ability does not mean you are that character.",
+        "mathInfo":"No ability has malfunctioned."},
+    {
+        "text":"A Minion who gains the [Fearmonger] ability due to the [Plague Doctor] cannot register as the [Fearmonger] to the [Gossip].",
+        "math":"green",
+        "reason":"Gaining an ability does not mean you are that character.",
+        "mathInfo":"No ability has malfunctioned."},
+    {
+        "text":"A Minion who gains the [Goblin] ability due to the [Plague Doctor] cannot register as the [Goblin] to the [Gossip].",
+        "math":"green",
+        "reason":"Gaining an ability does not mean you are that character.",
+        "mathInfo":"No ability has malfunctioned."},
+    {
+        "text":"A Minion who gains the [Scarlet Woman] ability due to the [Plague Doctor] cannot register as the [Scarlet Woman] to the [Gossip].",
+        "math":"green",
+        "reason":"Gaining an ability does not mean you are that character.",
+        "mathInfo":"No ability has malfunctioned."},
+    {
+        "text":"A Minion who gains the [Spy] ability due to the [Plague Doctor] cannot register as the [Spy] to the [Gossip].",
+        "math":"green",
+        "reason":"Gaining an ability does not mean you are that character.",
+        "mathInfo":"No ability has malfunctioned."},
+    {
+        "text":"A Minion who gains the [Wraith] ability due to the [Plague Doctor] cannot register as the [Wraith] to the [Gossip].",
+        "math":"green",
+        "reason":"Gaining an ability does not mean you are that character.",
+        "mathInfo":"No ability has malfunctioned."},
+    {
+        "text":"A Minion who gains the [Fearmonger] ability due to the [Plague Doctor] cannot register as the [Fearmonger] to the [Grandmother].",
+        "math":"green",
+        "reason":"Gaining an ability does not mean you are that character.",
+        "mathInfo":"No ability has malfunctioned."},
+    {
+        "text":"A Minion who gains the [Goblin] ability due to the [Plague Doctor] cannot register as the [Goblin] to the [Grandmother].",
+        "math":"green",
+        "reason":"Gaining an ability does not mean you are that character.",
+        "mathInfo":"No ability has malfunctioned."},
+    {
+        "text":"A Minion who gains the [Scarlet Woman] ability due to the [Plague Doctor] cannot register as the [Scarlet Woman] to the [Grandmother].",
+        "math":"green",
+        "reason":"Gaining an ability does not mean you are that character.",
+        "mathInfo":"No ability has malfunctioned."},
+    {
+        "text":"A Minion who gains the [Spy] ability due to the [Plague Doctor] cannot register as the [Spy] to the [Grandmother].",
+        "math":"green",
+        "reason":"Gaining an ability does not mean you are that character.",
+        "mathInfo":"No ability has malfunctioned."},
+    {
+        "text":"A Minion who gains the [Wraith] ability due to the [Plague Doctor] cannot register as the [Wraith] to the [Grandmother].",
+        "math":"green",
+        "reason":"Gaining an ability does not mean you are that character.",
+        "mathInfo":"No ability has malfunctioned."},
+    {
+        "text":"A Minion who gains the [Fearmonger] ability due to the [Plague Doctor] cannot register as the [Fearmonger] to the [King].",
+        "math":"green",
+        "reason":"Gaining an ability does not mean you are that character.",
+        "mathInfo":"No ability has malfunctioned."},
+    {
+        "text":"A Minion who gains the [Goblin] ability due to the [Plague Doctor] cannot register as the [Goblin] to the [King].",
+        "math":"green",
+        "reason":"Gaining an ability does not mean you are that character.",
+        "mathInfo":"No ability has malfunctioned."},
+    {
+        "text":"A Minion who gains the [Scarlet Woman] ability due to the [Plague Doctor] cannot register as the [Scarlet Woman] to the [King].",
+        "math":"green",
+        "reason":"Gaining an ability does not mean you are that character.",
+        "mathInfo":"No ability has malfunctioned."},
+    {
+        "text":"A Minion who gains the [Spy] ability due to the [Plague Doctor] cannot register as the [Spy] to the [King].",
+        "math":"green",
+        "reason":"Gaining an ability does not mean you are that character.",
+        "mathInfo":"No ability has malfunctioned."},
+    {
+        "text":"A Minion who gains the [Wraith] ability due to the [Plague Doctor] cannot register as the [Wraith] to the [King].",
+        "math":"green",
+        "reason":"Gaining an ability does not mean you are that character.",
+        "mathInfo":"No ability has malfunctioned."},
+    {
+        "text":"A Minion who gains the [Fearmonger] ability due to the [Plague Doctor] cannot register as the [Fearmonger] to the [Ravenkeeper].",
+        "math":"green",
+        "reason":"Gaining an ability does not mean you are that character.",
+        "mathInfo":"No ability has malfunctioned."},
+    {
+        "text":"A Minion who gains the [Goblin] ability due to the [Plague Doctor] cannot register as the [Goblin] to the [Ravenkeeper].",
+        "math":"green",
+        "reason":"Gaining an ability does not mean you are that character.",
+        "mathInfo":"No ability has malfunctioned."},
+    {
+        "text":"A Minion who gains the [Scarlet Woman] ability due to the [Plague Doctor] cannot register as the [Scarlet Woman] to the [Ravenkeeper].",
+        "math":"green",
+        "reason":"Gaining an ability does not mean you are that character.",
+        "mathInfo":"No ability has malfunctioned."},
+    {
+        "text":"A Minion who gains the [Spy] ability due to the [Plague Doctor] cannot register as the [Spy] to the [Ravenkeeper].",
+        "math":"green",
+        "reason":"Gaining an ability does not mean you are that character.",
+        "mathInfo":"No ability has malfunctioned."},
+    {
+        "text":"A Minion who gains the [Wraith] ability due to the [Plague Doctor] cannot register as the [Wraith] to the [Ravenkeeper].",
+        "math":"green",
+        "reason":"Gaining an ability does not mean you are that character.",
+        "mathInfo":"No ability has malfunctioned."},
+    {
+        "text":"A Minion who gains the [Fearmonger] ability due to the [Plague Doctor] cannot register as the [Fearmonger] to the [Undertaker].",
+        "math":"green",
+        "reason":"Gaining an ability does not mean you are that character.",
+        "mathInfo":"No ability has malfunctioned."},
+    {
+        "text":"A Minion who gains the [Goblin] ability due to the [Plague Doctor] cannot register as the [Goblin] to the [Undertaker].",
+        "math":"green",
+        "reason":"Gaining an ability does not mean you are that character.",
+        "mathInfo":"No ability has malfunctioned."},
+    {
+        "text":"A Minion who gains the [Scarlet Woman] ability due to the [Plague Doctor] cannot register as the [Scarlet Woman] to the [Undertaker].",
+        "math":"green",
+        "reason":"Gaining an ability does not mean you are that character.",
+        "mathInfo":"No ability has malfunctioned."},
+    {
+        "text":"A Minion who gains the [Spy] ability due to the [Plague Doctor] cannot register as the [Spy] to the [Undertaker].",
+        "math":"green",
+        "reason":"Gaining an ability does not mean you are that character.",
+        "mathInfo":"No ability has malfunctioned."},
+    {
+        "text":"A Minion who gains the [Wraith] ability due to the [Plague Doctor] cannot register as the [Wraith] to the [Undertaker].",
+        "math":"green",
+        "reason":"Gaining an ability does not mean you are that character.",
+        "mathInfo":"No ability has malfunctioned."},
+    {
+        "text":"A Minion who gains the [Fearmonger] ability due to the [Plague Doctor] cannot register as the [Fearmonger] to the [Barber].",
+        "math":"green",
+        "reason":"Gaining an ability does not mean you are that character.",
+        "mathInfo":"No ability has malfunctioned."},
+    {
+        "text":"A Minion who gains the [Goblin] ability due to the [Plague Doctor] cannot register as the [Goblin] to the [Barber].",
+        "math":"green",
+        "reason":"Gaining an ability does not mean you are that character.",
+        "mathInfo":"No ability has malfunctioned."},
+    {
+        "text":"A Minion who gains the [Scarlet Woman] ability due to the [Plague Doctor] cannot register as the [Scarlet Woman] to the [Barber].",
+        "math":"green",
+        "reason":"Gaining an ability does not mean you are that character.",
+        "mathInfo":"No ability has malfunctioned."},
+    {
+        "text":"A Minion who gains the [Spy] ability due to the [Plague Doctor] cannot register as the [Spy] to the [Barber].",
+        "math":"green",
+        "reason":"Gaining an ability does not mean you are that character.",
+        "mathInfo":"No ability has malfunctioned."},
+    {
+        "text":"A Minion who gains the [Wraith] ability due to the [Plague Doctor] cannot register as the [Wraith] to the [Barber].",
+        "math":"green",
+        "reason":"Gaining an ability does not mean you are that character.",
+        "mathInfo":"No ability has malfunctioned."},
+    {
+        "text":"A Minion who gains the [Fearmonger] ability due to the [Plague Doctor] cannot register as the [Fearmonger] to the [Evil Twin].",
+        "math":"green",
+        "reason":"Gaining an ability does not mean you are that character.",
+        "mathInfo":"No ability has malfunctioned."},
+    {
+        "text":"A Minion who gains the [Goblin] ability due to the [Plague Doctor] cannot register as the [Goblin] to the [Evil Twin].",
+        "math":"green",
+        "reason":"Gaining an ability does not mean you are that character.",
+        "mathInfo":"No ability has malfunctioned."},
+    {
+        "text":"A Minion who gains the [Scarlet Woman] ability due to the [Plague Doctor] cannot register as the [Scarlet Woman] to the [Evil Twin].",
+        "math":"green",
+        "reason":"Gaining an ability does not mean you are that character.",
+        "mathInfo":"No ability has malfunctioned."},
+    {
+        "text":"A Minion who gains the [Spy] ability due to the [Plague Doctor] cannot register as the [Spy] to the [Evil Twin].",
+        "math":"green",
+        "reason":"Gaining an ability does not mean you are that character.",
+        "mathInfo":"No ability has malfunctioned."},
+    {
+        "text":"A Minion who gains the [Wraith] ability due to the [Plague Doctor] cannot register as the [Wraith] to the [Evil Twin].",
+        "math":"green",
+        "reason":"Gaining an ability does not mean you are that character.",
+        "mathInfo":"No ability has malfunctioned."},
+    {
+        "text":"A Minion who gains the [Fearmonger] ability due to the [Plague Doctor] cannot register as the [Fearmonger] to the [Spy].",
+        "math":"green",
+        "reason":"Gaining an ability does not mean you are that character.",
+        "mathInfo":"No ability has malfunctioned."},
+    {
+        "text":"A Minion who gains the [Goblin] ability due to the [Plague Doctor] cannot register as the [Goblin] to the [Spy].",
+        "math":"green",
+        "reason":"Gaining an ability does not mean you are that character.",
+        "mathInfo":"No ability has malfunctioned."},
+    {
+        "text":"A Minion who gains the [Scarlet Woman] ability due to the [Plague Doctor] cannot register as the [Scarlet Woman] to the [Spy].",
+        "math":"green",
+        "reason":"Gaining an ability does not mean you are that character.",
+        "mathInfo":"No ability has malfunctioned."},
+    {
+        "text":"A Minion who gains the [Spy] ability due to the [Plague Doctor] cannot register as the [Spy] to the [Spy].",
+        "math":"green",
+        "reason":"Gaining an ability does not mean you are that character.",
+        "mathInfo":"No ability has malfunctioned."},
+    {
+        "text":"A Minion who gains the [Wraith] ability due to the [Plague Doctor] cannot register as the [Wraith] to the [Spy].",
+        "math":"green",
+        "reason":"Gaining an ability does not mean you are that character.",
+        "mathInfo":"No ability has malfunctioned."},
+    {
+        "text":"A Minion who gains the [Fearmonger] ability due to the [Plague Doctor] cannot register as the [Fearmonger] to the [Harlot].",
+        "math":"green",
+        "reason":"Gaining an ability does not mean you are that character.",
+        "mathInfo":"No ability has malfunctioned."},
+    {
+        "text":"A Minion who gains the [Goblin] ability due to the [Plague Doctor] cannot register as the [Goblin] to the [Harlot].",
+        "math":"green",
+        "reason":"Gaining an ability does not mean you are that character.",
+        "mathInfo":"No ability has malfunctioned."},
+    {
+        "text":"A Minion who gains the [Scarlet Woman] ability due to the [Plague Doctor] cannot register as the [Scarlet Woman] to the [Harlot].",
+        "math":"green",
+        "reason":"Gaining an ability does not mean you are that character.",
+        "mathInfo":"No ability has malfunctioned."},
+    {
+        "text":"A Minion who gains the [Spy] ability due to the [Plague Doctor] cannot register as the [Spy] to the [Harlot].",
+        "math":"green",
+        "reason":"Gaining an ability does not mean you are that character.",
+        "mathInfo":"No ability has malfunctioned."},
+    {
+        "text":"A Minion who gains the [Wraith] ability due to the [Plague Doctor] cannot register as the [Wraith] to the [Harlot].",
+        "math":"green",
+        "reason":"Gaining an ability does not mean you are that character.",
+        "mathInfo":"No ability has malfunctioned."},
+    {
+        "text":"A Minion who gains the [Fearmonger] ability due to the [Plague Doctor] cannot register as the [Fearmonger] to the [Dreamer].",
+        "math":"green",
+        "reason":"Gaining an ability does not mean you are that character.",
+        "mathInfo":"No ability has malfunctioned."},
+    {
+        "text":"A Minion who gains the [Goblin] ability due to the [Plague Doctor] cannot register as the [Goblin] to the [Dreamer].",
+        "math":"green",
+        "reason":"Gaining an ability does not mean you are that character.",
+        "mathInfo":"No ability has malfunctioned."},
+    {
+        "text":"A Minion who gains the [Scarlet Woman] ability due to the [Plague Doctor] cannot register as the [Scarlet Woman] to the [Dreamer].",
+        "math":"green",
+        "reason":"Gaining an ability does not mean you are that character.",
+        "mathInfo":"No ability has malfunctioned."},
+    {
+        "text":"A Minion who gains the [Spy] ability due to the [Plague Doctor] cannot register as the [Spy] to the [Dreamer].",
+        "math":"green",
+        "reason":"Gaining an ability does not mean you are that character.",
+        "mathInfo":"No ability has malfunctioned."},
+    {
+        "text":"A Minion who gains the [Wraith] ability due to the [Plague Doctor] cannot register as the [Wraith] to the [Dreamer].",
+        "math":"green",
+        "reason":"Gaining an ability does not mean you are that character.",
+        "mathInfo":"No ability has malfunctioned."},
+    {
+        "text":"A Minion who gains the [Fearmonger] ability due to the [Plague Doctor] cannot register as the [Fearmonger] to the [Investigator].",
+        "math":"green",
+        "reason":"Gaining an ability does not mean you are that character.",
+        "mathInfo":"No ability has malfunctioned."},
+    {
+        "text":"A Minion who gains the [Goblin] ability due to the [Plague Doctor] cannot register as the [Goblin] to the [Investigator].",
+        "math":"green",
+        "reason":"Gaining an ability does not mean you are that character.",
+        "mathInfo":"No ability has malfunctioned."},
+    {
+        "text":"A Minion who gains the [Scarlet Woman] ability due to the [Plague Doctor] cannot register as the [Scarlet Woman] to the [Investigator].",
+        "math":"green",
+        "reason":"Gaining an ability does not mean you are that character.",
+        "mathInfo":"No ability has malfunctioned."},
+    {
+        "text":"A Minion who gains the [Spy] ability due to the [Plague Doctor] cannot register as the [Spy] to the [Investigator].",
+        "math":"green",
+        "reason":"Gaining an ability does not mean you are that character.",
+        "mathInfo":"No ability has malfunctioned."},
+    {
+        "text":"A Minion who gains the [Wraith] ability due to the [Plague Doctor] cannot register as the [Wraith] to the [Investigator].",
+        "math":"green",
+        "reason":"Gaining an ability does not mean you are that character.",
+        "mathInfo":"No ability has malfunctioned."},
+    {
         "text":"If the good [Voudon] is executed due to the [Cerenovus], the [Cannibal] gains the [Voudon] ability.",
         "math":"green",
         "reason":"The Cannibal gains the ability of a character that was executed in any way.",
