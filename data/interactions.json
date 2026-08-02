@@ -1,5 +1,140 @@
 [
     {
+        "text":"If the [Courtier] is [Vigormortis] poisoned after using their ability, the [Courtier] drunk player is no longer drunk until the [Courtier] becomes healthy. The drunk days do not pause while the [Courtier] is poisoned.",
+        "math":"red",
+        "reason":"A drunk or poisoned player has no ability.",
+        "mathInfo":"The [Courtier]'s ability malfunctioned."},
+    {
+        "text":"If the [Courtier] is [Pukka] poisoned after using their ability, the [Courtier] drunk player is no longer drunk until the [Courtier] becomes healthy. The drunk days do not pause while the [Courtier] is poisoned.",
+        "math":"red",
+        "reason":"A drunk or poisoned player has no ability.",
+        "mathInfo":"The [Courtier]'s ability malfunctioned."},
+    {
+        "text":"If the [Courtier] is [Lleech] poisoned after using their ability, the [Courtier] drunk player is no longer drunk until the [Courtier] becomes healthy. The drunk days do not pause while the [Courtier] is poisoned.",
+        "math":"red",
+        "reason":"A drunk or poisoned player has no ability.",
+        "mathInfo":"The [Courtier]'s ability malfunctioned."},
+    {
+        "text":"If the [Courtier] is [No Dashii] poisoned after using their ability, the [Courtier] drunk player is no longer drunk until the [Courtier] becomes healthy. The drunk days do not pause while the [Courtier] is poisoned.",
+        "math":"red",
+        "reason":"A drunk or poisoned player has no ability.",
+        "mathInfo":"The [Courtier]'s ability malfunctioned."},
+    {
+        "text":"If the [Courtier] is [Xaan] poisoned after using their ability, the [Courtier] drunk player is no longer drunk until the [Courtier] becomes healthy. The drunk days do not pause while the [Courtier] is poisoned.",
+        "math":"red",
+        "reason":"A drunk or poisoned player has no ability.",
+        "mathInfo":"The [Courtier]'s ability malfunctioned."},
+    {
+        "text":"If the [Courtier] is [Widow] poisoned after using their ability, the [Courtier] drunk player is no longer drunk until the [Courtier] becomes healthy. The drunk days do not pause while the [Courtier] is poisoned.",
+        "math":"red",
+        "reason":"A drunk or poisoned player has no ability.",
+        "mathInfo":"The [Courtier]'s ability malfunctioned."},
+    {
+        "text":"If the [Courtier] is [Poisoner] poisoned after using their ability, the [Courtier] drunk player is no longer drunk until the [Courtier] becomes healthy. The drunk days do not pause while the [Courtier] is poisoned.",
+        "math":"red",
+        "reason":"A drunk or poisoned player has no ability.",
+        "mathInfo":"The [Courtier]'s ability malfunctioned."},
+    {
+        "text":"If the [Courtier] is [Sweetheart] drunk after using their ability, the [Courtier] drunk player is no longer drunk until the [Courtier] becomes sober. The drunk days do not pause while the [Courtier] is drunk.",
+        "math":"red",
+        "reason":"A drunk or poisoned player has no ability.",
+        "mathInfo":"The [Courtier]'s ability malfunctioned."},
+    {
+        "text":"If the [Courtier] is [Puzzlemaster] drunk after using their ability, the [Courtier] drunk player is no longer drunk until the [Courtier] becomes sober. The drunk days do not pause while the [Courtier] is drunk.",
+        "math":"red",
+        "reason":"A drunk or poisoned player has no ability.",
+        "mathInfo":"The [Courtier]'s ability malfunctioned."},
+    {
+        "text":"If the [Courtier] is [Sailor] drunk after using their ability, the [Courtier] drunk player is no longer drunk until the [Courtier] becomes sober. The drunk days do not pause while the [Courtier] is drunk.",
+        "math":"red",
+        "reason":"A drunk or poisoned player has no ability.",
+        "mathInfo":"The [Courtier]'s ability malfunctioned."},
+    {
+        "text":"If the [Courtier] is [Minstrel] drunk after using their ability, the [Courtier] drunk player is no longer drunk until the [Courtier] becomes sober. The drunk days do not pause while the [Courtier] is drunk.",
+        "math":"red",
+        "reason":"A drunk or poisoned player has no ability.",
+        "mathInfo":"The [Courtier]'s ability malfunctioned."},
+    {
+        "text":"If the [Courtier] is [Innkeeper] drunk after using their ability, the [Courtier] drunk player is no longer drunk until the [Courtier] becomes sober. The drunk days do not pause while the [Courtier] is drunk.",
+        "math":"red",
+        "reason":"A drunk or poisoned player has no ability.",
+        "mathInfo":"The [Courtier]'s ability malfunctioned."},
+    {
+        "text":"If the [Courtier] chooses the [Goon], and the [Goon] has already drunk a player, the [Goon] is drunk and the player who was [Goon] drunk becomes sober.",
+        "math":"red",
+        "reason":"A drunk or poisoned player has no ability.",
+        "mathInfo":"The [Goon]'s ability malfunctioned."},
+    {
+        "text":"If the [Courtier] chooses the [Goon], and is the first player at night to do so, the [Courtier] becomes [Goon] drunk, their ability has no effect, and the [Goon] changes to the [Courtier]'s alignment.",
+        "math":"red",
+        "reason":"A drunk or poisoned player has no ability.",
+        "mathInfo":"The [Courtier]'s ability malfunctioned."},
+    {
+        "text":"If the [Courtier] is [Vigormortis] poisoned while choosing to use their ability, the ability has no effect.",
+        "math":"red",
+        "reason":"A drunk or poisoned player has no ability.",
+        "mathInfo":"The [Courtier]'s ability malfunctioned."},
+    {
+        "text":"If the [Courtier] is [Pukka] poisoned while choosing to use their ability, the ability has no effect.",
+        "math":"red",
+        "reason":"A drunk or poisoned player has no ability.",
+        "mathInfo":"The [Courtier]'s ability malfunctioned."},
+    {
+        "text":"If the [Courtier] is [No Dashii] poisoned while choosing to use their ability, the ability has no effect.",
+        "math":"red",
+        "reason":"A drunk or poisoned player has no ability.",
+        "mathInfo":"The [Courtier]'s ability malfunctioned."},
+    {
+        "text":"If the [Courtier] is [Lleech] poisoned while choosing to use their ability, the ability has no effect.",
+        "math":"red",
+        "reason":"A drunk or poisoned player has no ability.",
+        "mathInfo":"The [Courtier]'s ability malfunctioned."},
+    {
+        "text":"If the [Courtier] is [Xaan] poisoned while choosing to use their ability, the ability has no effect.",
+        "math":"red",
+        "reason":"A drunk or poisoned player has no ability.",
+        "mathInfo":"The [Courtier]'s ability malfunctioned."},
+    {
+        "text":"If the [Courtier] is [Widow] poisoned while choosing to use their ability, the ability has no effect.",
+        "math":"red",
+        "reason":"A drunk or poisoned player has no ability.",
+        "mathInfo":"The [Courtier]'s ability malfunctioned."},
+    {
+        "text":"If the [Courtier] is [Poisoner] poisoned while choosing to use their ability, the ability has no effect.",
+        "math":"red",
+        "reason":"A drunk or poisoned player has no ability.",
+        "mathInfo":"The [Courtier]'s ability malfunctioned."},
+    {
+        "text":"If the [Courtier] is [Puzzlemaster] drunk while choosing to use their ability, the ability has no effect.",
+        "math":"red",
+        "reason":"A drunk or poisoned player has no ability.",
+        "mathInfo":"The [Courtier]'s ability malfunctioned."},
+    {
+        "text":"If the [Courtier] is [Sweetheart] drunk while choosing to use their ability, the ability has no effect.",
+        "math":"red",
+        "reason":"A drunk or poisoned player has no ability.",
+        "mathInfo":"The [Courtier]'s ability malfunctioned."},
+    {
+        "text":"If the [Courtier] is [Sailor] drunk while choosing to use their ability, the ability has no effect.",
+        "math":"red",
+        "reason":"A drunk or poisoned player has no ability.",
+        "mathInfo":"The [Courtier]'s ability malfunctioned."},
+    {
+        "text":"If the [Courtier] is [Philosopher] drunk while choosing to use their ability, the ability has no effect.",
+        "math":"red",
+        "reason":"A drunk or poisoned player has no ability.",
+        "mathInfo":"The [Courtier]'s ability malfunctioned."},
+    {
+        "text":"If the [Courtier] is [Minstrel] drunk while choosing to use their ability, the ability has no effect.",
+        "math":"red",
+        "reason":"A drunk or poisoned player has no ability.",
+        "mathInfo":"The [Courtier]'s ability malfunctioned."},
+    {
+        "text":"If the [Courtier] is [Innkeeper] drunk while choosing to use their ability, the ability has no effect.",
+        "math":"red",
+        "reason":"A drunk or poisoned player has no ability.",
+        "mathInfo":"The [Courtier]'s ability malfunctioned."},
+    {
         "text":"If the [Butler] is [Pukka] poisoned, voting without their Master is still considered breaking the rules.",
         "math":"green",
         "reason":"The Butler has no way of knowing their sobriety or health.",
@@ -1046,19 +1181,19 @@
         "mathInfo":"The Djinn rule changes the way the Clockmaker's ability works, but does not count the ability as malfunctioning."},
     {
         "text":"The [Spy] [Poppy Grower] [Djinn] rule states \"If the [Poppy Grower] has their ability, the [Spy] does not see the Grimoire.\" The Spy sees the Grimoire whenever the [Poppy Grower] is drunk, poisoned, dead, or out of play.",
-        "math":"green",
-        "reason":"The Djinn rule changes the Spy's ability.",
-        "mathInfo":"The Djinn rule changes the way the Spy's ability works, but does not count the ability as malfunctioning."},
+        "math":"red",
+        "reason":"The Spy does not see the Grimoire while the Poppy Grower is alive, sober, and healthy.",
+        "mathInfo":"The Spy's ability malfunctions due to being unable to see the Grimoire due to the Poppy Grower."},
     {
         "text":"The [Spy] [Ogre] [Djinn] rule states \"The [Spy] registers as evil to the [Ogre].\"",
         "math":"green",
         "reason":"The Spy will always register as evil to the Ogre for the purpose of the Ogre friend.",
         "mathInfo":"The Spy registering as evil is not a malfunction."},
     {
-        "text":"The [Widow] [Damsel] [Djinn] rule states \"If the [Widow] is (or has been) in play, the [Damsel] is poisoned.\" The [Widow] sees the Grimoire and chooses a player to poison at their first opportunity, when the [Poppy Grower] is dead, drunk, poisoned, or out of play.",
+        "text":"The [Widow] [Poppy Grower] [Djinn] rule states \"If the [Poppy Grower] has their ability, the [Widow] does not see the Grimoire.\" The [Widow] sees the Grimoire and chooses a player to poison at their first opportunity, when the [Poppy Grower] is dead, drunk, poisoned, or out of play.",
         "math":"red",
-        "reason":"The Damsel is poisoned. Minions do not learn there is a Damsel in play. Guessing the Damsel does not cause the game to end.",
-        "mathInfo":"The Minions not learning a Damsel is in play is the Damsel's ability malfunctioning. If a Minion guesses the Damsel as the Damsel and the game does not end, this is the Damsel's ability malfunctioning."},
+        "reason":"The Widow does not see the Grimoire or poison a player while the Poppy Grower is alive, sober, and healthy.",
+        "mathInfo":"The Widow's ability malfunctions due to being unable to see the Grimoire due to the Poppy Grower."},
     {
         "text":"The [Spy] [Damsel] [Djinn] rule states \"If the [Spy] is (or has been) in play, the [Damsel] is poisoned.\"",
         "math":"red",
