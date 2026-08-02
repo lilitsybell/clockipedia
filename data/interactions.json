@@ -1,5 +1,10 @@
 [
     {
+        "text":"The [Grandmother] does not die if the Grandchild was killed due to the [Virgin] ability.",
+        "math":"green",
+        "reason":"The Grandmother only dies if the Demon killed the grandchild.",
+        "mathInfo":"No ability has malfunctioned."},
+    {
         "text":"The [Grandmother] does not die if the Grandchild was killed due to the [Witch] ability.",
         "math":"green",
         "reason":"The Grandmother only dies if the Demon killed the grandchild.",
