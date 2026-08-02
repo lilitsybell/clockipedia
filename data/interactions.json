@@ -1,5 +1,235 @@
 [
     {
+        "text":"A character named by the [Storm Catcher] cannot die due to the [Zombuul].",
+        "math":"red",
+        "reason":"The character named by the Storm Catcher can only die by execution.",
+        "mathInfo":"If the Zombuul did not kill due to the Storm Catcher, the Zombuul's ability malfunctioned."},
+    {
+        "text":"A character named by the [Storm Catcher] cannot die due to the [Yaggababble].",
+        "math":"red",
+        "reason":"The character named by the Storm Catcher can only die by execution.",
+        "mathInfo":"If the Yaggababble did not kill due to the Storm Catcher, the Yaggababble's ability malfunctioned."},
+    {
+        "text":"If the [Vortox] is in play, the evil team still learns who the character named by the [Storm Catcher] is correctly.",
+        "math":"green",
+        "reason":"The Storm Catcher is a Loric, which are unaffected by the Vortox.",
+        "mathInfo":"No ability malfunctioned."},
+    {
+        "text":"A character named by the [Storm Catcher] cannot die due to the [Vortox].",
+        "math":"red",
+        "reason":"The character named by the Storm Catcher can only die by execution.",
+        "mathInfo":"If the Vortox did not kill due to the Storm Catcher, the Vortox's ability malfunctioned."},
+    {
+        "text":"A character named by the [Storm Catcher] cannot die due to the [Vigormortis].",
+        "math":"red",
+        "reason":"The character named by the Storm Catcher can only die by execution.",
+        "mathInfo":"If the Vigormortis did not kill due to the Storm Catcher, the Vigormortis's ability malfunctioned."},
+    {
+        "text":"A character named by the [Storm Catcher] cannot die due to the [Shabaloth].",
+        "math":"red",
+        "reason":"The character named by the Storm Catcher can only die by execution.",
+        "mathInfo":"If the Shabaloth did not kill due to the Storm Catcher, the Shabaloth's ability malfunctioned."},
+    {
+        "text":"A character named by the [Storm Catcher] cannot die due to the [Riot]'s riot.",
+        "math":"red",
+        "reason":"The character named by the Storm Catcher can only die by execution.",
+        "mathInfo":"If a player did not die during a riot due to the Storm Catcher, the Riot's ability malfunctioned."},
+    {
+        "text":"A character named by the [Storm Catcher] cannot die due to the [Pukka].",
+        "math":"red",
+        "reason":"The character named by the Storm Catcher can only die by execution.",
+        "mathInfo":"If the Pukka did not kill due to the Storm Catcher, the Pukka's ability malfunctioned."},
+    {
+        "text":"A character named by the [Storm Catcher] cannot die due to the [Po].",
+        "math":"red",
+        "reason":"The character named by the Storm Catcher can only die by execution.",
+        "mathInfo":"If the Po did not kill due to the Storm Catcher, the Po's ability malfunctioned."},
+    {
+        "text":"A character named by the [Storm Catcher] cannot die due to the [Ojo].",
+        "math":"red",
+        "reason":"The character named by the Storm Catcher can only die by execution.",
+        "mathInfo":"If the Ojo did not kill due to the Storm Catcher, the Ojo's ability malfunctioned."},
+    {
+        "text":"A character named by the [Storm Catcher] cannot die due to the [No Dashii].",
+        "math":"red",
+        "reason":"The character named by the Storm Catcher can only die by execution.",
+        "mathInfo":"If the No Dashii did not kill due to the Storm Catcher, the No Dashii's ability malfunctioned."},
+    {
+        "text":"A character named by the [Storm Catcher] cannot die due to the [Lord of Typhon].",
+        "math":"red",
+        "reason":"The character named by the Storm Catcher can only die by execution.",
+        "mathInfo":"If the Lord of Typhon did not kill due to the Storm Catcher, the Lord of Typhon's ability malfunctioned."},
+    {
+        "text":"A character named by the [Storm Catcher] cannot die due to the [Lleech].",
+        "math":"red",
+        "reason":"The character named by the Storm Catcher can only die by execution.",
+        "mathInfo":"If the Lleech did not kill due to the Storm Catcher, the Lleech's ability malfunctioned."},
+    {
+        "text":"A character named by the [Storm Catcher] cannot die due to the [Lil' Monsta].",
+        "math":"red",
+        "reason":"The character named by the Storm Catcher can only die by execution.",
+        "mathInfo":"If the Lil' Monsta did not kill due to the Storm Catcher, the Lil Monsta's ability malfunctioned."},
+    {
+        "text":"A character named by the [Storm Catcher] cannot die due to the [Legion].",
+        "math":"red",
+        "reason":"The character named by the Storm Catcher can only die by execution.",
+        "mathInfo":"If the Legion did not kill due to the Storm Catcher, the Legion's ability malfunctioned."},
+    {
+        "text":"A character named by the [Storm Catcher] cannot die due to the [Kazali].",
+        "math":"red",
+        "reason":"The character named by the Storm Catcher can only die by execution.",
+        "mathInfo":"If the Kazali did not kill due to the Storm Catcher, the Kazali's ability malfunctioned."},
+    {
+        "text":"A character named by the [Storm Catcher] cannot die due to the [Imp].",
+        "math":"red",
+        "reason":"The character named by the Storm Catcher can only die by execution.",
+        "mathInfo":"If the Imp did not kill due to the Storm Catcher, the Imp's ability malfunctioned."},
+    {
+        "text":"An Outsider named by the [Storm Catcher] cannot become an evil [Fang Gu] due to the [Fang Gu] ability.",
+        "math":"red",
+        "reason":"The character named by the Storm Catcher can only die by execution. In order for the Outsider to become an evil Fang Gu, they must be able to die.",
+        "mathInfo":"If the Fang Gu did not cause an Outsider to become an evil Fang Gu due to the Storm Catcher, the Fang Gu's ability malfunctioned."},
+    {
+        "text":"A character named by the [Storm Catcher] cannot die due to the [Fang Gu].",
+        "math":"red",
+        "reason":"The character named by the Storm Catcher can only die by execution.",
+        "mathInfo":"If the Fang Gu did not kill due to the Storm Catcher, the Fang Gu's ability malfunctioned."},
+    {
+        "text":"A character named by the [Storm Catcher] cannot die due to the [Al-Hadikhia].",
+        "math":"red",
+        "reason":"The character named by the Storm Catcher can only die by execution.",
+        "mathInfo":"If the Al-Hadikhia did not kill due to the Storm Catcher, the Al-Hadikhia's ability malfunctioned."},
+    {
+        "text":"A character named by the [Storm Catcher] cannot die due to the [Witch].",
+        "math":"red",
+        "reason":"The character named by the Storm Catcher can only die by execution.",
+        "mathInfo":"If the Witch did not kill due to the Storm Catcher, the Witch's ability malfunctioned."},
+    {
+        "text":"A character named by the [Storm Catcher] can die due to the [Vizier].",
+        "math":"green",
+        "reason":"The character named by the Storm Catcher can only die by execution. The Vizier may choose for the Stormcaught player to be executed if a good player voted.",
+        "mathInfo":"The Vizier' ability is working as intended."},
+    {
+        "text":"If the [Summoner] ability causes a character who is named by the [Storm Catcher] to change, the player is no longer protected by the [Storm Catcher].",
+        "math":"green",
+        "reason":"The Storm Catcher only protects the character named.",
+        "mathInfo":"No ability has malfunctioned."},
+    {
+        "text":"If the [Spy] registers as the character named by the [Storm Catcher], the [Spy] player is Stormcaught and evil players (including the [Spy]) immediately learn this.",
+        "math":"green",
+        "reason":"The Spy might misregister as a good character to the Storm Catcher.",
+        "mathInfo":"The Storm Catcher is not a player and therefore does not count as malfunctioning to the Mathematician."},
+    {
+        "text":"A character named by the [Storm Catcher] cannot die due to the [Psychopath].",
+        "math":"red",
+        "reason":"The character named by the Storm Catcher can only die by execution.",
+        "mathInfo":"If the Psychopath did not kill due to the Storm Catcher, the Psychopath's ability malfunctioned."},
+    {
+        "text":"If the [Pit-Hag] ability causes a character who is named by the [Storm Catcher] to change, the player is no longer protected by the [Storm Catcher].",
+        "math":"green",
+        "reason":"The Storm Catcher only protects the character named.",
+        "mathInfo":"No ability has malfunctioned."},
+    {
+        "text":"A character named by the [Storm Catcher] cannot die due to the [Harpy].",
+        "math":"red",
+        "reason":"The character named by the Storm Catcher can only die by execution.",
+        "mathInfo":"If the Harpy did not kill due to the Storm Catcher, the Harpy's ability malfunctioned."},
+    {
+        "text":"A character named by the [Storm Catcher] cannot die due to the [Godfather].",
+        "math":"red",
+        "reason":"The character named by the Storm Catcher can only die by execution.",
+        "mathInfo":"If the Godfather did not kill due to the Storm Catcher, the Godfather's ability malfunctioned."},
+    {
+        "text":"A character named by the [Storm Catcher] can die due to the [Cerenovus].",
+        "math":"green",
+        "reason":"The character named by the Storm Catcher can only die by execution. Breaking Cerenovus madness results in an execution.",
+        "mathInfo":"The Cerenovus' ability is working as intended."},
+    {
+        "text":"A character named by the [Storm Catcher] cannot die due to the [Boomdandy]. This might cause there to be more than 3 players alive after the [Boomdandy] finishes killing",
+        "math":"red",
+        "reason":"The character named by the Storm Catcher can only die by execution.,
+        "mathInfo":"If the Boomdandy did not kill due to the Storm Catcher, the Boomdandy's ability malfunctioned."},
+    {
+        "text":"A Demon who has the [Boffin] character ability that is named by the [Storm Catcher] is not Stormcaught.",
+        "math":"green",
+        "reason":"The Storm Catcher protects only the character named.",
+        "mathInfo":"No ability is malfunctioning."},
+    {
+        "text":"A character named by the [Storm Catcher] cannot die due to the [Assassin].",
+        "math":"red",
+        "reason":"The character named by the Storm Catcher can only die by execution. Lorics trump player character abilities.",
+        "mathInfo":"If the Assassin did not kill due to the Storm Catcher, the Assassin's ability malfunctioned."},
+    {
+        "text":"If the [Tinker] is named by the [Storm Catcher], the [Tinker] cannot die due to their own ability.",
+        "math":"red",
+        "reason":"The character named by the Storm Catcher can only die by execution.",
+        "mathInfo":"If the Tinker would have died, but did not due to the Storm Catcher, the Tinker's ability malfunctioned."},
+    {
+        "text":"If the [Mutant] is named by the [Storm Catcher], the [Mutant] can still die due to their own ability.",
+        "math":"green",
+        "reason":"The character named by the Storm Catcher can only die by execution. If the Mutant breaks madness, it is an execution.",
+        "mathInfo":"The Mutant's ability is working as intended."},
+    {
+        "text":"A character named by the [Storm Catcher] cannot die due to the [Moonchild].",
+        "math":"red",
+        "reason":"The character named by the Storm Catcher can only die by execution.",
+        "mathInfo":"If the Moonchild did not kill due to the Storm Catcher, the Moonchild's ability malfunctioned."},
+    {
+        "text":"A character named by the [Storm Catcher] cannot die due to the [Golem].",
+        "math":"red",
+        "reason":"The character named by the Storm Catcher can only die by execution.",
+        "mathInfo":"If the Golem did not kill due to the Storm Catcher, the Golem's ability malfunctioned."},
+    {
+        "text":"If the [Marionette] believes they are the character named by the [Storm Catcher], they are not, and the evil team does not learn the [Marionette].",
+        "math":"red",
+        "reason":"The evil team only learns a player if they are the character named by the Stormcatcher.",
+        "mathInfo":"Even though the Marionette believes they are Stormcaught, the Storm Catcher's ability did not malfunction."},
+    {
+        "text":"If the [Drunk] believes they are the character named by the [Storm Catcher], they are not, and the evil team does not learn the [Drunk].",
+        "math":"red",
+        "reason":"The evil team only learns a player if they are the character named by the Stormcatcher.",
+        "mathInfo":"Even though the Drunk believes they are Stormcaught, the Storm Catcher's ability did not malfunction."},
+    {
+        "text":"If the [Drunk] is named by the [Storm Catcher], the evil team learns who the [Drunk] is, but not the character they believe they are.",
+        "math":"red",
+        "reason":"The evil team learns who the Stormcaught player is, but not information they learn.",
+        "mathInfo":"No ability has malfunctioned."},
+    {
+        "text":"If the [Barber] ability causes a character who is named by the [Storm Catcher] to move, the evil team immediately learns the new Stormcaught player.",
+        "math":"green",
+        "reason":"The evil team knows who the Stormcaught player is.",
+        "mathInfo":"No ability has malfunctioned."},
+    {
+        "text":"A character named by the [Storm Catcher] cannot die due to the [Lycanthrope].",
+        "math":"red",
+        "reason":"The character named by the Storm Catcher can only die by execution.",
+        "mathInfo":"If the Lycanthrope did not kill due to the Storm Catcher, the Lycanthrope's ability malfunctioned."},
+    {
+        "text":"If the [Grandmother] is named by the [Storm Catcher], the [Grandmother] cannot die due to their own ability.",
+        "math":"red",
+        "reason":"The character named by the Storm Catcher can only die by execution.",
+        "mathInfo":"If the Grandmother would have died, but did not due to the Storm Catcher, the Grandmother's ability malfunctioned."},
+    {
+        "text":"A character named by the [Storm Catcher] cannot die due to the [Gossip].",
+        "math":"red",
+        "reason":"The character named by the Storm Catcher can only die by execution.",
+        "mathInfo":"If the Gossip did not kill due to the Storm Catcher, the Gossip's ability malfunctioned."},
+    {
+        "text":"If the [Gambler] is named by the [Storm Catcher], the [Gambler] cannot die due to their own ability.",
+        "math":"red",
+        "reason":"The character named by the Storm Catcher can only die by execution.",
+        "mathInfo":"If the Gambler would have died, but did not due to the Storm Catcher, the Gambler's ability malfunctioned."},
+    {
+        "text":"If the [Fool] is named by the [Storm Catcher], the [Fool] would need to be specifically executed twice in order to die.",
+        "math":"green",
+        "reason":"The character named by the Storm Catcher can only die by execution.",
+        "mathInfo":"The Fool's ability is working as intended."},
+    {
+        "text":"If the [Acrobat] is named by the [Storm Catcher], the [Acrobat] cannot die due to their own ability.",
+        "math":"red",
+        "reason":"The character named by the Storm Catcher can only die by execution.",
+        "mathInfo":"If the Acrobat would have died, but did not due to the Storm Catcher, the Acrobat's ability malfunctioned."},
+    {
         "text":"If the [Damsel] is poisoned by the [Widow] [Damsel] [Djinn] rule, the [Huntsman] still changes the [Damsel]'s character if chosen correctly. If the [Damsel] changes character, the [Damsel] is no longer poisoned due to the [Djinn] rule.",
         "math":"green",
         "reason":"The Djinn changes the way characters interact with each other.",
