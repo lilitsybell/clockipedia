@@ -192,7 +192,7 @@
     {
         "text":"A character named by the [Storm Catcher] cannot die due to the [Boomdandy]. This might cause there to be more than 3 players alive after the [Boomdandy] finishes killing",
         "math":"red",
-        "reason":"The character named by the Storm Catcher can only die by execution.,
+        "reason":"The character named by the Storm Catcher can only die by execution.",
         "mathInfo":"If the Boomdandy did not kill due to the Storm Catcher, the Boomdandy's ability malfunctioned."},
     {
         "text":"A Demon who has the [Boffin] character ability that is named by the [Storm Catcher] is not Stormcaught.",
