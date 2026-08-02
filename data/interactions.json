@@ -1,5 +1,60 @@
 [
     {
+        "text":"If the [Summoner] chooses the [Goon], and the [Goon] had not yet been chosen that night, the [Summoner] is drunk, the [Goon] becomes evil, and if there is no living Demon, good wins.",
+        "math":"red",
+        "reason":"If the Summoner cannot create a Demon, good wins.",
+        "mathInfo":"If the Summoner failed to create a Demon due to being drunk or poisoned, their ability malfunctioned."},
+    {
+        "text":"If the [Summoner] is [Pukka] poisoned on the third night and there is no living Demon, good wins.",
+        "math":"red",
+        "reason":"If the Summoner cannot create a Demon, good wins.",
+        "mathInfo":"If the Summoner failed to create a Demon due to being drunk or poisoned, their ability malfunctioned."},
+    {
+        "text":"If the [Summoner] is [Lleech] poisoned on the third night and there is no living Demon, good wins.",
+        "math":"red",
+        "reason":"If the Summoner cannot create a Demon, good wins.",
+        "mathInfo":"If the Summoner failed to create a Demon due to being drunk or poisoned, their ability malfunctioned."},
+    {
+        "text":"If the [Summoner] is [Widow] poisoned on the third night and there is no living Demon, good wins.",
+        "math":"red",
+        "reason":"If the Summoner cannot create a Demon, good wins.",
+        "mathInfo":"If the Summoner failed to create a Demon due to being drunk or poisoned, their ability malfunctioned."},
+    {
+        "text":"If the [Summoner] is [Poisoner] poisoned on the third night and there is no living Demon, good wins.",
+        "math":"red",
+        "reason":"If the Summoner cannot create a Demon, good wins.",
+        "mathInfo":"If the Summoner failed to create a Demon due to being drunk or poisoned, their ability malfunctioned."},
+    {
+        "text":"If the [Summoner] is [Sweetheart] drunk on the third night and there is no living Demon, good wins.",
+        "math":"red",
+        "reason":"If the Summoner cannot create a Demon, good wins.",
+        "mathInfo":"If the Summoner failed to create a Demon due to being drunk or poisoned, their ability malfunctioned."},
+    {
+        "text":"If the [Summoner] is [Puzzlemaster] drunk on the third night and there is no living Demon, good wins.",
+        "math":"red",
+        "reason":"If the Summoner cannot create a Demon, good wins.",
+        "mathInfo":"If the Summoner failed to create a Demon due to being drunk or poisoned, their ability malfunctioned."},
+    {
+        "text":"If the [Summoner] is [Sailor] drunk on the third night and there is no living Demon, good wins.",
+        "math":"red",
+        "reason":"If the Summoner cannot create a Demon, good wins.",
+        "mathInfo":"If the Summoner failed to create a Demon due to being drunk or poisoned, their ability malfunctioned."},
+    {
+        "text":"If the [Summoner] is [Minstrel] drunk on the third night and there is no living Demon, good wins.",
+        "math":"red",
+        "reason":"If the Summoner cannot create a Demon, good wins.",
+        "mathInfo":"If the Summoner failed to create a Demon due to being drunk or poisoned, their ability malfunctioned."},
+    {
+        "text":"If the [Summoner] is [Innkeeper] drunk on the third night and there is no living Demon, good wins.",
+        "math":"red",
+        "reason":"If the Summoner cannot create a Demon, good wins.",
+        "mathInfo":"If the Summoner failed to create a Demon due to being drunk or poisoned, their ability malfunctioned."},
+    {
+        "text":"If the [Summoner] is [Courtier] drunk on the third night and there is no living Demon, good wins.",
+        "math":"red",
+        "reason":"If the Summoner cannot create a Demon, good wins.",
+        "mathInfo":"If the Summoner failed to create a Demon due to being drunk or poisoned, their ability malfunctioned."},
+    {
         "text":"The [Soldier] cannot die due to the Demon with the [Boffin] [Alchemist] [Witch] ability.",
         "math":"red",
         "reason":"The Soldier is safe from all Demon attacks.",
