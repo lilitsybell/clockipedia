@@ -1,5 +1,20 @@
 [
     {
+        "text":"The [Riot] [Atheist] [Djinn] rule states \"During a riot, if the Storyteller is nominated, players vote. If they are \"about to die\", the game ends. If not, they nominate again.\"",
+        "math":"green",
+        "reason":"The Djinn changes the way characters interact with each other.",
+        "mathInfo":"The Djinn rule changes the way the Riot's ability works, but does not count the ability as malfunctioning."},
+    {
+        "text":"The [Lleech] [Slayer] [Djinn] rule states \"If the [Slayer] slays the [Lleech] host, the host dies.\"",
+        "math":"green",
+        "reason":"The Djinn changes the way characters interact with each other.",
+        "mathInfo":"The Djinn rule changes the way the Slayer's ability works, but does not count the ability as malfunctioning."},
+    {
+        "text":"The [Lleech] [Mastermind] [Djinn] rule states \"If the [Mastermind] is alive and the [Lleech] host dies by execution, the [Lleech] lives but loses their ability.\" The [Mastermind] ability continues to work as normal. The [Lleech] cannot kill using their ability and dies if killed.",
+        "math":"green",
+        "reason":"The Djinn changes the way characters interact with each other.",
+        "mathInfo":"The [Lleech] does not have an ability to malfunction."},
+    {
         "text":"The [Lil' Monsta] [Vizier] [Djinn] rule states \"If the [Vizier] is babysitting [Lil' Monsta], they die when executed.\"",
         "math":"green",
         "reason":"The Djinn changes the way characters interact with each other.",
