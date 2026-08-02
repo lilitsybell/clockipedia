@@ -1,5 +1,95 @@
 [
     {
+        "text":"If the [Buddhist] is in play, a player who is considered a veteran player may still talk to use the [Duchess] ability.",
+        "math":"green",
+        "reason":"The Buddhist does not stop players from using their abilities.",
+        "mathInfo":"No ability has malfunctioned."},
+    {
+        "text":"If the [Buddhist] is in play, a player who is considered a veteran player may still talk to use the [Doomsayer] ability.",
+        "math":"green",
+        "reason":"The Buddhist does not stop players from using their abilities.",
+        "mathInfo":"No ability has malfunctioned."},
+    {
+        "text":"If the [Buddhist] is in play, a [Cacklejack] who is considered a veteran player may still talk to use their ability.",
+        "math":"green",
+        "reason":"The Buddhist does not stop players from using their abilities.",
+        "mathInfo":"No ability has malfunctioned."},
+    {
+        "text":"If the [Buddhist] is in play, a player who is considered a veteran player may still talk to use the [Beggar] ability.",
+        "math":"green",
+        "reason":"The Buddhist does not stop players from using their abilities.",
+        "mathInfo":"No ability has malfunctioned."},
+    {
+        "text":"If the [Buddhist] is in play, a [Wizard] who is considered a veteran player may still talk to use their ability.",
+        "math":"green",
+        "reason":"The Buddhist does not stop players from using their abilities.",
+        "mathInfo":"No ability has malfunctioned."},
+    {
+        "text":"If the [Buddhist] is in play, a [Psychopath] who is considered a veteran player may still talk to use their ability.",
+        "math":"green",
+        "reason":"The Buddhist does not stop players from using their abilities.",
+        "mathInfo":"No ability has malfunctioned."},
+    {
+        "text":"If the [Buddhist] is in play, a [Moonchild] who is considered a veteran player may still talk to use their ability.",
+        "math":"green",
+        "reason":"The Buddhist does not stop players from using their abilities.",
+        "mathInfo":"No ability has malfunctioned."},
+    {
+        "text":"If the [Buddhist] is in play, a [Klutz] who is considered a veteran player may still talk to use their ability.",
+        "math":"green",
+        "reason":"The Buddhist does not stop players from using their abilities.",
+        "mathInfo":"No ability has malfunctioned."},
+    {
+        "text":"If the [Buddhist] is in play, a Minion who is considered a veteran player may still talk to use the [Damsel] guess.",
+        "math":"green",
+        "reason":"The Buddhist does not stop players from using their abilities.",
+        "mathInfo":"No ability has malfunctioned."},
+    {
+        "text":"If the [Buddhist] is in play, a [Slayer] who is considered a veteran player may still talk to use their ability.",
+        "math":"green",
+        "reason":"The Buddhist does not stop players from using their abilities.",
+        "mathInfo":"No ability has malfunctioned."},
+    {
+        "text":"If the [Buddhist] is in play, a [Savant] who is considered a veteran player may still talk to use their ability.",
+        "math":"green",
+        "reason":"The Buddhist does not stop players from using their abilities.",
+        "mathInfo":"No ability has malfunctioned."},
+    {
+        "text":"If the [Buddhist] is in play, a [Juggler] who is considered a veteran player may still talk to use their ability.",
+        "math":"green",
+        "reason":"The Buddhist does not stop players from using their abilities.",
+        "mathInfo":"No ability has malfunctioned."},
+    {
+        "text":"If the [Buddhist] is in play, a [Gossip] who is considered a veteran player may still talk to use their ability.",
+        "math":"green",
+        "reason":"The Buddhist does not stop players from using their abilities.",
+        "mathInfo":"No ability has malfunctioned."},
+    {
+        "text":"If the [Buddhist] is in play, a [Fisherman] who is considered a veteran player may still talk to use their ability.",
+        "math":"green",
+        "reason":"The Buddhist does not stop players from using their abilities.",
+        "mathInfo":"No ability has malfunctioned."},
+    {
+        "text":"If the [Buddhist] is in play, a [Cult Leader] who is considered a veteran player may still talk to use their ability.",
+        "math":"green",
+        "reason":"The Buddhist does not stop players from using their abilities.",
+        "mathInfo":"No ability has malfunctioned."},
+    {
+        "text":"If the [Buddhist] is in play, an [Artist] who is considered a veteran player may still talk to use their ability.",
+        "math":"green",
+        "reason":"The Buddhist does not stop players from using their abilities.",
+        "mathInfo":"No ability has malfunctioned."},
+    {
+        "text":"If the [Buddhist] is in play, an [Amnesiac] who is considered a veteran player may still talk to use their ability.",
+        "math":"green",
+        "reason":"The Buddhist does not stop players from using their abilities.",
+        "mathInfo":"No ability has malfunctioned."},
+    {
+        "text":"If the [Buddhist] is in play, an [Alsaahir] who is considered a veteran player may still talk to use their ability.",
+        "math":"green",
+        "reason":"The Buddhist does not stop players from using their abilities.",
+        "mathInfo":"No ability has malfunctioned."},
+    {
         "text":"If the [Summoner] chooses the [Goon], and the [Goon] had not yet been chosen that night, the [Summoner] is drunk, the [Goon] becomes evil, and if there is no living Demon, good wins.",
         "math":"red",
         "reason":"If the Summoner cannot create a Demon, good wins.",
