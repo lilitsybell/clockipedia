@@ -1,5 +1,15 @@
 [
     {
+        "text":"If the [Damsel] is poisoned by the [Widow] [Damsel] [Djinn] rule, the [Huntsman] still changes the [Damsel]'s character if chosen correctly. If the [Damsel] changes character, the [Damsel] is no longer poisoned due to the [Djinn] rule.",
+        "math":"green",
+        "reason":"The Djinn changes the way characters interact with each other.",
+        "mathInfo":"The Huntsman ability is working as intended."},
+    {
+        "text":"If the [Damsel] is poisoned by the [Spy] [Damsel] [Djinn] rule, the [Huntsman] still changes the [Damsel]'s character if chosen correctly. If the [Damsel] changes character, the [Damsel] is no longer poisoned due to the [Djinn] rule.",
+        "math":"green",
+        "reason":"The Djinn changes the way characters interact with each other.",
+        "mathInfo":"The Huntsman ability is working as intended."},
+    {
         "text":"The [Yaggababble] [Exorcist] [Djinn] rule states \"If the [Exorcist] chooses the [Yaggababble], the [Yaggababble] does not kill tonight.\" The [Yaggababble] learns who the [Exorcist] is.",
         "math":"green",
         "reason":"The Djinn changes the way characters interact with each other.",
@@ -326,9 +336,9 @@
         "mathInfo":"The Vizier learns their ability has changed and does not register as malfunctioning."},
     {
         "text":"The [Vizier] [Preacher] [Djinn] rule states \"If the [Vizier] loses their ability, they learn this, and cannot die during the day.\" If the Vizier was preached on the first night, there would be no Vizier announcement the next day.",
-        "math":"green",
+        "math":"red",
         "reason":"The Djinn changes the way characters interact with each other.",
-        "mathInfo":"A Minion who is preached has no ability able to malfunction."},
+        "mathInfo":"If the Vizier attempts to execute a player who would have been executed had the Vizier not been preached, the Vizier's ability malfunctioned due to the Preacher."},
     {
         "text":"The [Vizier] [Alsaahir] [Djinn] rule states \"The Storyteller doesn't declare the [Vizier] is in play.\"",
         "math":"red",
@@ -346,9 +356,9 @@
         "mathInfo":"No ability has malfunctioned."},
     {
         "text":"The [Summoner] [Preacher] [Djinn] rule states \"If the living [Summoner] has no ability, the Storyteller has the [Summoner] ability.\" Instead of the [Summoner] choosing the player and Demon, the Storyteller chooses.",
-        "math":"green",
+        "math":"red",
         "reason":"Instead of the Summoner choosing the player and Demon, the Storyteller chooses.",
-        "mathInfo":"A Minion who has been preached does not register as malfunctioning."},
+        "mathInfo":"If the Summoner cannot choose the Demon themselves due to being preached, the Summoner's ability malfunctioned due to the Preacher."},
     {
         "text":"The [Summoner] [Poppy Grower] [Djinn] rule states \"If the [Poppy Grower] is alive on the 3rd night, the [Summoner] chooses which Demon but not which player.\" Instead of the [Summoner] choosing which player becomes the Demon, the Storyteller chooses.",
         "math":"green",
@@ -727,7 +737,7 @@
     {
         "text":"The [Alchemist] [Boffin] [Djinn] rule states \"If the [Alchemist] has the [Boffin] ability, the [Alchemist] does not learn what ability the Demon has.\"",
         "math":"green",
-        "reason":"Normally the [Boffin] would learn the ability, but the Alchemist does not.",
+        "reason":"Normally, the [Boffin] would learn the ability, but the Alchemist does not.",
         "mathInfo":"The Djinn changes the rules, which changes what can cause abilities to register as malfunctioning."},
     {
         "text":"If the [Acrobat] chooses the [Zombuul], who cannot kill that night because no-one died during the day, the [Acrobat] does not die.",
