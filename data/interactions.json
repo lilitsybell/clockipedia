@@ -2340,10 +2340,15 @@
         "reason":"The Djinn changes the way interactions work.",
         "mathInfo":"The Djinn rule changes the way the Butler's ability works, but does not count the ability as malfunctioning."},
     {
-        "text":"The [Magician] [Wraith] [Djinn] rule states \"After each execution, the living [Magician] may publicly guess a living player as the [Wraith]. If correct, the Demon must choose the [Wraith] tonight.\"",
-        "math":"green",
+        "text":"The [Magician] [Wraith] [Djinn] rule states \"After each execution, the living [Magician] may publicly guess a living player as the [Wraith]. If correct, the Demon must choose the [Wraith] tonight.\" If the Demon accidentally chooses the wrong player because of micommunication, the Storyteller tells them who to choose.",
+        "math":"red",
         "reason":"The Djinn changes the way interactions work.",
-        "mathInfo":"The Djinn rule changes the way the Magician's ability works, but does not count the ability as malfunctioning."},
+        "mathInfo":"If the Demon is forced to choose a certain player, the Demon's ability malfunctioned"},
+    {
+        "text":"The [Magician] [Wraith] [Djinn] rule states \"After each execution, the living [Magician] may publicly guess a living player as the [Wraith]. If correct, the Demon must choose the [Wraith] tonight.\" If the Demon accidentally chooses the wrong player because of the [Poppy Grower] ability, the Storyteller tells them who to choose.",
+        "math":"red",
+        "reason":"The Djinn changes the way interactions work.",
+        "mathInfo":"If the Demon is forced to choose a certain player, the Demon's ability malfunctioned"},
     {
         "text":"The [Magician] [Widow] [Djinn] rule states \"When the [Widow] sees the Grimoire, the Demon and [Magician]'s character tokens are removed.\"",
         "math":"green",
@@ -2420,25 +2425,45 @@
         "reason":"The Djinn changes the way interactions work.",
         "mathInfo":"The Djinn changes the rules, which changes what can cause abilities to register as malfunctioning."},
     {
-        "text":"The [Alchemist] [Widow] [Djinn] rule states \"An [Alchemist]-[Widow] has no [Widow] ability & a [Widow] is in play. After each execution, a living [Alchemist]-[Widow] may publicly guess a living player as the [Widow]. If correct, the Demon must choose the [Widow] tonight.\"",
-        "math":"green",
+        "text":"The [Alchemist] [Widow] [Djinn] rule states \"An [Alchemist]-[Widow] has no [Widow] ability & a [Widow] is in play. After each execution, a living [Alchemist]-[Widow] may publicly guess a living player as the [Widow]. If correct, the Demon must choose the [Widow] tonight.\" If the Demon accidentally chooses the wrong player due to the [Magician] ability, the Storyteller tells them who to choose.",
+        "math":"red",
         "reason":"The Djinn changes the way interactions work.",
-        "mathInfo":"The Djinn changes the rules, which changes what can cause abilities to register as malfunctioning."},
+        "mathInfo":"If the Demon is forced to choose a certain player, the Demon's ability malfunctioned."},
     {
-        "text":"The [Alchemist] [Wraith] [Djinn] rule states \"An [Alchemist]-[Wraith] has no [Wraith] ability & a [Wraith] is in play. After each execution, a living [Alchemist]-[Wraith] may publicly guess a living player as the [Wraith]. If correct, the Demon must choose the [Wraith] tonight.\"",
-        "math":"green",
+        "text":"The [Alchemist] [Widow] [Djinn] rule states \"An [Alchemist]-[Widow] has no [Widow] ability & a [Widow] is in play. After each execution, a living [Alchemist]-[Widow] may publicly guess a living player as the [Widow]. If correct, the Demon must choose the [Widow] tonight.\" If the Demon accidentally chooses the wrong player due to the [Poppy Grower] ability, the Storyteller tells them who to choose.",
+        "math":"red",
         "reason":"The Djinn changes the way interactions work.",
-        "mathInfo":"The Djinn changes the rules, which changes what can cause abilities to register as malfunctioning."},
+        "mathInfo":"If the Demon is forced to choose a certain player, the Demon's ability malfunctioned."},
+    {
+        "text":"The [Alchemist] [Widow] [Djinn] rule states \"An [Alchemist]-[Widow] has no [Widow] ability & a [Widow] is in play. After each execution, a living [Alchemist]-[Widow] may publicly guess a living player as the [Widow]. If correct, the Demon must choose the [Widow] tonight.\" If the Demon accidentally chooses the wrong player due to miscommunication, the Storyteller tells them who to choose.",
+        "math":"red",
+        "reason":"The Djinn changes the way interactions work.",
+        "mathInfo":"If the Demon is forced to choose a certain player, the Demon's ability malfunctioned."},
+    {
+        "text":"The [Alchemist] [Wraith] [Djinn] rule states \"An [Alchemist]-[Wraith] has no [Wraith] ability & a [Wraith] is in play. After each execution, a living [Alchemist]-[Wraith] may publicly guess a living player as the [Wraith]. If correct, the Demon must choose the [Wraith] tonight.\" If the Demon accidentally chooses the wrong player due to miscommunication, the Storyteller tells them who to choose.",
+        "math":"red",
+        "reason":"The Djinn changes the way interactions work.",
+        "mathInfo":"If the Demon is forced to choose a certain player, the Demon's ability malfunctioned"},
     {
         "text":"The [Alchemist] [Summoner] [Djinn] rule states \"The [Alchemist]-[Summoner] does not get bluffs, and chooses which Demon but not which player. If they die before this happens, evil wins. [[No Demon]]\".",
         "math":"green",
         "reason":"The Djinn changes the way interactions work.",
         "mathInfo":"The Djinn changes the rules, which changes what can cause abilities to register as malfunctioning."},
     {
-        "text":"The [Alchemist] [Spy] [Djinn] rule states \"An [Alchemist]-[Spy] has no [Spy] ability & a [Spy] is in play. After each execution, a living [Alchemist]-[Spy] may publicly guess a living player as the [Spy]. If correct, the Demon must choose the [Spy] tonight.\"",
-        "math":"green",
+        "text":"The [Alchemist] [Spy] [Djinn] rule states \"An [Alchemist]-[Spy] has no [Spy] ability & a [Spy] is in play. After each execution, a living [Alchemist]-[Spy] may publicly guess a living player as the [Spy]. If correct, the Demon must choose the [Spy] tonight.\" If the Demon accidentally chooses the wrong player due to the [Magician] ability, the Storyteller tells them who to choose.",
+        "math":"red",
         "reason":"The Djinn changes the way interactions work.",
-        "mathInfo":"The Djinn changes the rules, which changes what can cause abilities to register as malfunctioning."},
+        "mathInfo":"If the Demon is forced to choose a certain player, the Demon's ability malfunctioned"},
+    {
+        "text":"The [Alchemist] [Spy] [Djinn] rule states \"An [Alchemist]-[Spy] has no [Spy] ability & a [Spy] is in play. After each execution, a living [Alchemist]-[Spy] may publicly guess a living player as the [Spy]. If correct, the Demon must choose the [Spy] tonight.\" If the Demon accidentally chooses the wrong player due to the [Poppy Grower] ability, the Storyteller tells them who to choose.",
+        "math":"red",
+        "reason":"The Djinn changes the way interactions work.",
+        "mathInfo":"If the Demon is forced to choose a certain player, the Demon's ability malfunctioned"},
+    {
+        "text":"The [Alchemist] [Spy] [Djinn] rule states \"An [Alchemist]-[Spy] has no [Spy] ability & a [Spy] is in play. After each execution, a living [Alchemist]-[Spy] may publicly guess a living player as the [Spy]. If correct, the Demon must choose the [Spy] tonight.\" If the Demon accidentally chooses the wrong player due to miscommunication, the Storyteller tells them who to choose.",
+        "math":"red",
+        "reason":"The Djinn changes the way interactions work.",
+        "mathInfo":"If the Demon is forced to choose a certain player, the Demon's ability malfunctioned"},
     {
         "text":"The [Alchemist] [Organ Grinder] [Djinn] rule states \"If the [Alchemist] has the [Organ Grinder] ability, the [Organ Grinder] is in play. If both are sober, both are drunk.\"",
         "math":"red",
