@@ -1,5 +1,45 @@
 [
     {
+        "text":"If the [Hindu] is in play, and a player dies to the [Assassin], the player is still resurrected as a Traveller.",
+        "math":"green",
+        "reason":"The Assassin does not stop players from resurrection.",
+        "mathInfo":"No ability has malfunctioned."},  
+    {
+        "text":"If the [Assassin] chooses the [Zombuul], who has their ability, the [Zombuul] dies. The [Zombuul] does not register as dead. The [Zombuul] is dead.",
+        "math":"red",
+        "reason":"The Assassin ability allows the Assassin to kill players who otherwise cannot die.",
+        "mathInfo":"If the Zombuul was killed while having their ability, the Zombuul's ability malfunctioned."},  
+    {
+        "text":"If the [Assassin] chooses the [Lleech], who has their ability, the [Lleech] dies. The host does not die.",
+        "math":"red",
+        "reason":"The Assassin ability allows the Assassin to kill players who otherwise cannot die.",
+        "mathInfo":"If the Lleech was killed while having their ability, the Lleech's ability malfunctioned."},  
+    {
+        "text":"If the [Assassin] chooses the [Goon], who has not yet been chosen this night, the [Goon] dies and becomes the [Assassin]'s alignment. The [Assassin] is not [Goon] drunk.",
+        "math":"red",
+        "reason":"The Assassin ability allows the Assassin to kill players who otherwise cannot die. The Assassin cannot become drunk due to choosing a player that would cause them to become drunk, because that player is dead.",
+        "mathInfo":"If the Goon was killed by the Assassin, when the Assassin should have been Goon drunk, the Goon's ability malfunctioned."}, 
+    {
+        "text":"If the [Assassin] chooses a player who is protected by the [Tea Lady], the player dies.",
+        "math":"red",
+        "reason":"The Assassin ability allows the Assassin to kill players who otherwise cannot die.",
+        "mathInfo":"If a player dies while protected by the Tea Lady, the Tea Lady's ability malfuntioned."},  
+    {
+        "text":"If the [Assassin] chooses the [Mayor], who has their ability, the [Mayor] dies. If the [Mayor]'s ability would cause another player to die instead, that player dies as well.",
+        "math":"red",
+        "reason":"The Assassin ability allows the Assassin to kill players who otherwise cannot die.",
+        "mathInfo":"If two players die due to the Mayor's ability, the Mayor's ability malfunctioned."},
+    {
+        "text":"If the [Assassin] chooses a player who is protected by the [Innkeeper], the player dies.",
+        "math":"red",
+        "reason":"The Assassin ability allows the Assassin to kill players who otherwise cannot die.",
+        "mathInfo":"If a player dies while protected by the Innkeeper, the Innkeeper's ability malfuntioned."},   
+    {
+        "text":"If the [Assassin] chooses the [Fool], who has their ability, the [Fool] dies.",
+        "math":"red",
+        "reason":"The Assassin ability allows the Assassin to kill players who otherwise cannot die.",
+        "mathInfo":"If the Fool was killed while having their ability, the Fool's ability malfunctioned."},    
+    {
         "text":"The [Investigator] cannot see the Storyteller with a [Plague Doctor] Minion ability.",
         "math":"green",
         "reason":"The Investigator must see a player.",
