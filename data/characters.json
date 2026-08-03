@@ -191,7 +191,7 @@
              ],
     "run": {
            "Setup": [
-                "The Storyteller may choose to add an Outsider to the game, but does not have to. If they do, the Outsider replaces a Townsfolk.",
+                "The Storyteller may choose to add an Outsider to the game, but does not have to. If they do, the Outsider replaces a Townsfolk."
                 ],
            "Every Night": [
                 "Every night, the [Balloonist] learns a player. This player must be a different character type to the player they learned the night before.",
@@ -201,7 +201,7 @@
     "examples": [
                 "On the first night, the [Balloonist] is learns the [Alchemist]. The next night, they learn the [Ogre]. The night after that, they learn the [Chambermaid].",
                 "On the third night, the [Balloonist] learns the [Leviathan]. The next night, the [Leviathan] was chosen by the [Snake Charmer], and is now the new [Snake Charmer]. The [Balloonist] learns the new [Snake Charmer], even though they learned the same player the night before.",
-                "On the first night, the [Balloonist] learns the [Courtier]. The next night, the [Poisoner] chooses the [Balloonist]. The poisoned [Balloonist] learns the [Preacher]. The next night, the healthy [Balloonist] learns the [Witch].",
+                "On the first night, the [Balloonist] learns the [Courtier]. The next night, the [Poisoner] chooses the [Balloonist]. The poisoned [Balloonist] learns the [Preacher]. The next night, the healthy [Balloonist] learns the [Witch]."
                 ]
 },
 "banshee":
