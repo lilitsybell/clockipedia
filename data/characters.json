@@ -128,47 +128,15 @@
     "image": "https://images.klutzbanana.com/characters_official/artist_g.png",
     "ability": "Once per game, during the day, privately ask the Storyteller any yes/no question.",
     "flavor": "Mon Dieu! C'est lumineux! My work, she is... how you say... Magnifique! Dieu est révélé! Oui.",
-    "purpose": "Purpose",
+    "purpose": "The [Artist] can know the answer to any one question.",
     "summary": [
              "Summary1",
              "Summary2"
              ],
     "run": {
-           "Setup": [
-                "Thing1",
-                "Thing2"
-                ],
-           "Anytime": [
-                "Thing1",
-                "Thing2"
-                ],
-           "First Night": [
-                "Thing1",
-                "Thing2"
-                ],
-           "Every Night": [
-                "Thing1",
-                "Thing2"
-                ],
-           "First Day": [
-                "Thing1",
-                "Thing2"
-                ],
            "Every Day": [
                 "Thing1",
                 "Thing 2"
-                ],
-           "Other Nights": [
-                "Thing1",
-                "Thing2"
-                ],
-           "Other Days": [
-                "Thing1",
-                "Thing2"
-                ],
-           "End of Game": [
-                "Thing1",
-                "Thing2"
                 ]
            },
     "examples": [
