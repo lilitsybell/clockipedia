@@ -91,6 +91,7 @@
                 "The [Alsaahir] guesses that the [Lleech] is the Demon and that the [Widow] is the Minion. The game immediately ends and the [Alsaahir]'s team wins.",
                 "The [Fang Gu] jumps to the [Hatter]. The [Alsaahir] guesses that the new [Fang Gu] is the Demon, and the [Wraith] and [Poisoner] are the Minions. The [Alsaahir] did not also guess the original [Fang Gu], so nothing happens."
                 ],
+}
 "amnesiac":
 {
     "name": "Amnesiac",
@@ -1888,4 +1889,4 @@
         "image": "https://images.klutzbanana.com/characters_official/zenomancer.png",
         "ability": "One or more players each have a goal. When achieved, that player learns a piece of true info."
     }
-}}
+}
