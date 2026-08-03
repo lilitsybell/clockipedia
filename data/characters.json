@@ -192,35 +192,7 @@
                 "Thing1",
                 "Thing2"
                 ],
-           "Anytime": [
-                "Thing1",
-                "Thing2"
-                ],
-           "First Night": [
-                "Thing1",
-                "Thing2"
-                ],
            "Every Night": [
-                "Thing1",
-                "Thing2"
-                ],
-           "First Day": [
-                "Thing1",
-                "Thing2"
-                ],
-           "Every Day": [
-                "Thing1",
-                "Thing 2"
-                ],
-           "Other Nights": [
-                "Thing1",
-                "Thing2"
-                ],
-           "Other Days": [
-                "Thing1",
-                "Thing2"
-                ],
-           "End of Game": [
                 "Thing1",
                 "Thing2"
                 ]
@@ -243,41 +215,13 @@
              "Summary2"
              ],
     "run": {
-           "Setup": [
-                "Thing1",
-                "Thing2"
-                ],
            "Anytime": [
-                "Thing1",
-                "Thing2"
-                ],
-           "First Night": [
-                "Thing1",
-                "Thing2"
-                ],
-           "Every Night": [
-                "Thing1",
-                "Thing2"
-                ],
-           "First Day": [
                 "Thing1",
                 "Thing2"
                 ],
            "Every Day": [
                 "Thing1",
                 "Thing 2"
-                ],
-           "Other Nights": [
-                "Thing1",
-                "Thing2"
-                ],
-           "Other Days": [
-                "Thing1",
-                "Thing2"
-                ],
-           "End of Game": [
-                "Thing1",
-                "Thing2"
                 ]
            },
     "examples": [
@@ -302,10 +246,6 @@
                 "Thing1",
                 "Thing2"
                 ],
-           "Anytime": [
-                "Thing1",
-                "Thing2"
-                ],
            "First Night": [
                 "Thing1",
                 "Thing2"
@@ -314,26 +254,6 @@
                 "Thing1",
                 "Thing2"
                 ],
-           "First Day": [
-                "Thing1",
-                "Thing2"
-                ],
-           "Every Day": [
-                "Thing1",
-                "Thing 2"
-                ],
-           "Other Nights": [
-                "Thing1",
-                "Thing2"
-                ],
-           "Other Days": [
-                "Thing1",
-                "Thing2"
-                ],
-           "End of Game": [
-                "Thing1",
-                "Thing2"
-                ]
            },
     "examples": [
                 "Example1",
@@ -353,10 +273,6 @@
              "Summary2"
              ],
     "run": {
-           "Setup": [
-                "Thing1",
-                "Thing2"
-                ],
            "Anytime": [
                 "Thing1",
                 "Thing2"
@@ -377,18 +293,6 @@
                 "Thing1",
                 "Thing 2"
                 ],
-           "Other Nights": [
-                "Thing1",
-                "Thing2"
-                ],
-           "Other Days": [
-                "Thing1",
-                "Thing2"
-                ],
-           "End of Game": [
-                "Thing1",
-                "Thing2"
-                ]
            },
     "examples": [
                 "Example1",
@@ -408,39 +312,7 @@
              "Summary2"
              ],
     "run": {
-           "Setup": [
-                "Thing1",
-                "Thing2"
-                ],
-           "Anytime": [
-                "Thing1",
-                "Thing2"
-                ],
-           "First Night": [
-                "Thing1",
-                "Thing2"
-                ],
            "Every Night": [
-                "Thing1",
-                "Thing2"
-                ],
-           "First Day": [
-                "Thing1",
-                "Thing2"
-                ],
-           "Every Day": [
-                "Thing1",
-                "Thing 2"
-                ],
-           "Other Nights": [
-                "Thing1",
-                "Thing2"
-                ],
-           "Other Days": [
-                "Thing1",
-                "Thing2"
-                ],
-           "End of Game": [
                 "Thing1",
                 "Thing2"
                 ]
@@ -463,39 +335,7 @@
              "Summary2"
              ],
     "run": {
-           "Setup": [
-                "Thing1",
-                "Thing2"
-                ],
-           "Anytime": [
-                "Thing1",
-                "Thing2"
-                ],
            "First Night": [
-                "Thing1",
-                "Thing2"
-                ],
-           "Every Night": [
-                "Thing1",
-                "Thing2"
-                ],
-           "First Day": [
-                "Thing1",
-                "Thing2"
-                ],
-           "Every Day": [
-                "Thing1",
-                "Thing 2"
-                ],
-           "Other Nights": [
-                "Thing1",
-                "Thing2"
-                ],
-           "Other Days": [
-                "Thing1",
-                "Thing2"
-                ],
-           "End of Game": [
                 "Thing1",
                 "Thing2"
                 ]
