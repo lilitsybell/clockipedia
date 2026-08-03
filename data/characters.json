@@ -130,18 +130,18 @@
     "flavor": "Mon Dieu! C'est lumineux! My work, she is... how you say... Magnifique! Dieu est révélé! Oui.",
     "purpose": "The [Artist] can know the answer to any one question.",
     "summary": [
-             "Summary1",
-             "Summary2"
+             "The [Artist] may ask any question they'd like. It does not need to be related to the game.",
+             "The Storyteller may only answer with \"yes\", \"no\", or \"I don't know\".",
+             "The question must be asked in private and during the day."
              ],
     "run": {
            "Every Day": [
-                "Thing1",
-                "Thing 2"
+                "During any time of the day, the [Artist] may ask the Storyteller for a private chat. The [Artist] may then ask any one \"yes\" or \"no\" question. The Storyteller must answer honestly to the best of their ability with \"yes\", \"no\", or \"I don't know\"."
                 ]
            },
     "examples": [
-                "Example1",
-                "Example2"
+                "The [Artist] asks if the Demon is on the top half of the Grimoire. The Storyteller specifies which players that includes, then answers honestly with \"yes\".",
+                "The [Artist] asks if any Minion is a Dodgers fan. The [Storyteller] answers honestly with \"I don't know\"."
                 ]
 },
 "atheist":
