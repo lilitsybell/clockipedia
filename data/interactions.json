@@ -1,5 +1,150 @@
 [
     {
+        "text":"A player protected by the [Monk] cannot be drunk due a Demon with the [Boffin] [Sweetheart] ability.",
+        "math":"red",
+        "reason":"The Monk protects players from dying, turning evil, and becoming drunk or poisoned from the Demon.",
+        "mathInfo":"If the Demon would have made a player drunk, but did not due to the Monk, the Demon's ability malfunctioned."},
+    {
+        "text":"A player protected by the [Monk] cannot be drunk due a Demon with the [Boffin] [Puzzlemaster] ability.",
+        "math":"red",
+        "reason":"The Monk protects players from dying, turning evil, and becoming drunk or poisoned from the Demon.",
+        "mathInfo":"If the Demon would have made a player drunk, but did not due to the Monk, the Demon's ability malfunctioned."},
+    {
+        "text":"A player protected by the [Monk] cannot be drunk due a Demon with the [Boffin] [Goon] ability.",
+        "math":"red",
+        "reason":"The Monk protects players from dying, turning evil, and becoming drunk or poisoned from the Demon.",
+        "mathInfo":"If the Demon would have made a player drunk, but did not due to the Monk, the Demon's ability malfunctioned."},
+    {
+        "text":"A player protected by the [Monk] cannot be drunk due a Demon with the [Boffin] [Sailor] ability.",
+        "math":"red",
+        "reason":"The Monk protects players from dying, turning evil, and becoming drunk or poisoned from the Demon.",
+        "mathInfo":"If the Demon would have made a player drunk, but did not due to the Monk, the Demon's ability malfunctioned."},
+    {
+        "text":"A player protected by the [Monk] cannot be drunk due a Demon with the [Boffin] [Philosopher] ability.",
+        "math":"red",
+        "reason":"The Monk protects players from dying, turning evil, and becoming drunk or poisoned from the Demon.",
+        "mathInfo":"If the Demon would have made a player drunk, but did not due to the Monk, the Demon's ability malfunctioned."},
+    {
+        "text":"A player protected by the [Monk] cannot be drunk due a Demon with the [Boffin] [Minstrel] ability.",
+        "math":"red",
+        "reason":"The Monk protects players from dying, turning evil, and becoming drunk or poisoned from the Demon.",
+        "mathInfo":"If the Demon would have made a player drunk, but did not due to the Monk, the Demon's ability malfunctioned."},
+    {
+        "text":"A player protected by the [Monk] cannot be drunk due a Demon with the [Boffin] [Innkeeper] ability.",
+        "math":"red",
+        "reason":"The Monk protects players from dying, turning evil, and becoming drunk or poisoned from the Demon.",
+        "mathInfo":"If the Demon would have made a player drunk, but did not due to the Monk, the Demon's ability malfunctioned."},
+    {
+        "text":"A player protected by the [Monk] cannot be drunk due a Demon with the [Boffin] [Courtier] ability.",
+        "math":"red",
+        "reason":"The Monk protects players from dying, turning evil, and becoming drunk or poisoned from the Demon.",
+        "mathInfo":"If the Demon would have made a player drunk, but did not due to the Monk, the Demon's ability malfunctioned."},
+    {
+        "text":"An evil player protected by the [Monk] can be cursed by a Demon with the [Boffin] [Alchemist] [Witch] ability.",
+        "math":"green",
+        "reason":"The Monk only protects players from dying, turning evil, and becoming drunk or poisoned from the Demon. A curse, while being able to cause death, is not dying.",
+        "mathInfo":"No ability has malfunctioned."},
+    {
+        "text":"A good player protected by the [Monk] cannot be summoned into a Demon by a Demon with the [Boffin] [Alchemist] [Summoner] ability.",
+        "math":"red",
+        "reason":"The Monk protects players from dying, turning evil, and becoming drunk or poisoned from the Demon.",
+        "mathInfo":"If the Demon would have summoned a Demon, but did not due to the Monk, the Demon's ability malfunctioned."},
+    {
+        "text":"A player protected by the [Monk] cannot be poisoned by a Demon with the [Boffin] [Alchemist] [Xaan] ability.",
+        "math":"red",
+        "reason":"The Monk protects players from dying, turning evil, and becoming drunk or poisoned from the Demon.",
+        "mathInfo":"If the Demon would have poisoned a player, but did not due to the Monk, the Demon's ability malfunctioned."},
+    {
+        "text":"A player protected by the [Monk] cannot be poisoned by a Demon with the [Boffin] [Alchemist] [Widow] ability.",
+        "math":"red",
+        "reason":"The Monk protects players from dying, turning evil, and becoming drunk or poisoned from the Demon.",
+        "mathInfo":"If the Demon would have poisoned a player, but did not due to the Monk, the Demon's ability malfunctioned."},
+    {
+        "text":"A player protected by the [Monk] cannot be poisoned by a Demon with the [Boffin] [Alchemist] [Poisoner] ability.",
+        "math":"red",
+        "reason":"The Monk protects players from dying, turning evil, and becoming drunk or poisoned from the Demon.",
+        "mathInfo":"If the Demon would have poisoned a player, but did not due to the Monk, the Demon's ability malfunctioned."},
+    {
+        "text":"A player protected by the [Monk] can change character due to the Demon with the [Boffin] [Alchemist] [Pit-Hag] ability.",
+        "math":"green",
+        "reason":"The Monk only protects players from dying, turning evil, or becoming drunk or poisoned due to the Demon.",
+        "mathInfo":"No ability has malfunctioned."},
+    {
+        "text":"A player protected by the [Monk] cannot turn evil due to a Demon with the [Boffin] [Alchemist] [Mezepheles] ability. If a player is protected from this, the ability is used and no player turns evil.",
+        "math":"red",
+        "reason":"The Monk protects players from dying, turning evil, and becoming drunk or poisoned from the Demon.",
+        "mathInfo":"If the Demon would have turned a player evil, but did not due to the Monk, the Demon's ability malfunctioned."},
+    {
+        "text":"A player protected by the [Monk] cannot die due to a Demon with the [Boffin] [Alchemist] [Godfather] ability.",
+        "math":"red",
+        "reason":"The Monk protects players from all Demon attacks.",
+        "mathInfo":"If the Demon would have killed a player, but did not due to the Monk, the Demon's ability malfunctioned."},
+    {
+        "text":"A player protected by the [Monk] can be the Fear target due to the Demon with the [Boffin] [Alchemist] [Fearmonger] ability.",
+        "math":"green",
+        "reason":"The Monk only protects players from dying, turning evil, or becoming drunk or poisoned due to the Demon.",
+        "mathInfo":"No ability has malfunctioned."},
+    {
+        "text":"A player protected by the [Monk] can be the good twin due to the Demon with the [Boffin] [Alchemist] [Evil Twin] ability.",
+        "math":"green",
+        "reason":"The Monk only protects players from dying, turning evil, or becoming drunk or poisoned due to the Demon.",
+        "mathInfo":"No ability has malfunctioned."},
+    {
+        "text":"A player protected by the [Monk] can be protected due to the Demon with the [Boffin] [Alchemist] [Devil's Advocate] ability.",
+        "math":"green",
+        "reason":"The Monk only protects players from dying, turning evil, or becoming drunk or poisoned due to the Demon.",
+        "mathInfo":"No ability has malfunctioned."},
+    {
+        "text":"A player protected by the [Monk] can gain madness due to the Demon with the [Boffin] [Alchemist] [Harpy] ability. While protected, the player cannot die.",
+        "math":"red",
+        "reason":"The Monk only protects players from dying, turning evil, or becoming drunk or poisoned due to the Demon.",
+        "mathInfo":"If the Demon would have killed a player, but did not due to the Monk, the Demon's ability malfunctioned."},
+    {
+        "text":"A player protected by the [Monk] can gain madness due to the Demon with the [Boffin] [Alchemist] [Cerenovus] ability. While protected, the player may be executed but cannot die.",
+        "math":"red",
+        "reason":"The Monk only protects players from dying, turning evil, or becoming drunk or poisoned due to the Demon.",
+        "mathInfo":"If the Demon would have killed a player, but did not due to the Monk, the Demon's ability malfunctioned."},
+    {
+        "text":"A player protected by the [Monk] can die due to the Demon with the [Boffin] [Alchemist] [Assassin] ability.",
+        "math":"red",
+        "reason":"Even though the Monk protects players from Demon attacks, the Assassin abililty is able to kill players that normally wouldn't die..",
+        "mathInfo":"If the Demon kills a player protected by the Monk using the Assassin ability, the Monk's ability malfunctioned."},
+    {
+        "text":"A Demon protected by the [Monk] cannot die due to the [Boffin] [Tinker] ability.",
+        "math":"red",
+        "reason":"The Monk protects players from all Demon attacks.",
+        "mathInfo":"If the Demon would have died, but did not due to the Monk, the Demon's ability malfunctioned."},
+    {
+        "text":"A player protected by the [Monk] cannot die due to a Demon with the [Boffin] [Moonchild] ability.",
+        "math":"red",
+        "reason":"The Monk protects players from all Demon attacks.",
+        "mathInfo":"If the Demon would have killed a player, but did not due to the Monk, the Demon's ability malfunctioned."},
+    {
+        "text":"A player protected by the [Monk] cannot die due to a Demon with the [Boffin] [Lycanthrope] ability.",
+        "math":"red",
+        "reason":"The Monk protects players from all Demon attacks.",
+        "mathInfo":"If the Demon would have killed a player, but did not due to the Monk, the Demon's ability malfunctioned."},
+    {
+        "text":"A Demon protected by the [Monk] cannot die due to the [Boffin] [Grandmother] ability.",
+        "math":"red",
+        "reason":"The Monk protects players from all Demon attacks.",
+        "mathInfo":"If the Demon would have died, but did not due to the Monk, the Demon's ability malfunctioned."},
+    {
+        "text":"A Demon protected by the [Monk] cannot die due to the [Boffin] [Gambler] ability.",
+        "math":"red",
+        "reason":"The Monk protects players from all Demon attacks.",
+        "mathInfo":"If the Demon would have died, but did not due to the Monk, the Demon's ability malfunctioned."},
+    {
+        "text":"A Demon protected by the [Monk] cannot die due to the [Boffin] [Acrobat] ability.",
+        "math":"red",
+        "reason":"The Monk protects players from all Demon attacks.",
+        "mathInfo":"If the Demon would have died, but did not due to the Monk, the Demon's ability malfunctioned."},
+    {
+        "text":"A player protected by the [Monk] cannot die due to a Demon with the [Boffin] [Gossip] ability.",
+        "math":"red",
+        "reason":"The Monk protects players from all Demon attacks.",
+        "mathInfo":"If the Demon would have killed a player, but did not due to the Monk, the Demon's ability malfunctioned."},
+    {
         "text":"The [Grandmother] does not die if the Grandchild was killed due to the [Virgin] ability.",
         "math":"green",
         "reason":"The Grandmother only dies if the Demon killed the grandchild.",
