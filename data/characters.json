@@ -182,24 +182,26 @@
     "image": "https://images.klutzbanana.com/characters_official/balloonist_g.png",
     "ability": "Each night, you learn a player of a different character type than last night. [+0 or +1 Outsider]",
     "flavor": "More heat! Higher! Higher! Più alto! Ahhh... it is so beautiful from up here, don't you agree? Can you see the children fishing by the river, under the willow? Can you see the glint of the sun on the circus tent-poles? What's this? An old man, alone, passed out in the vineyard? Less heat! Lower! Lower! Vai più in basso!",
-    "purpose": "Purpose",
+    "purpose": "The [Balloonist] learns players of different character types.",
     "summary": [
-             "Summary1",
-             "Summary2"
+             "Each night, the [Balloonist] learns the name of a player that is a different character type than the name they learned last night.",
+             "The [Balloonist] only learns the name of the player. The [Balloonist] must figure out which character type the player is to use their information.",
+             "The [Balloonist] may learn any player, alive or dead, good or evil, even a Traveller. The [Balloonist] may learn a player they have already learned previously.",
+             "During Setup, the Storyteller may choose to add an Outsider to the game. If they do, the Outsider replaces a Townsfolk."
              ],
     "run": {
            "Setup": [
-                "Thing1",
-                "Thing2"
+                "The Storyteller may choose to add an Outsider to the game, but does not have to. If they do, the Outsider replaces a Townsfolk.",
                 ],
            "Every Night": [
-                "Thing1",
-                "Thing2"
+                "Every night, the [Balloonist] learns a player. This player must be a different character type to the player they learned the night before.",
+                "If the player was a different character type the night before, the [Balloonist] may learn the same player again this night."
                 ]
            },
     "examples": [
-                "Example1",
-                "Example2"
+                "On the first night, the [Balloonist] is learns the [Alchemist]. The next night, they learn the [Ogre]. The night after that, they learn the [Chambermaid].",
+                "On the third night, the [Balloonist] learns the [Leviathan]. The next night, the [Leviathan] was chosen by the [Snake Charmer], and is now the new [Snake Charmer]. The [Balloonist] learns the new [Snake Charmer], even though they learned the same player the night before.",
+                "On the first night, the [Balloonist] learns the [Courtier]. The next night, the [Poisoner] chooses the [Balloonist]. The poisoned [Balloonist] learns the [Preacher]. The next night, the healthy [Balloonist] learns the [Witch].",
                 ]
 },
 "banshee":
