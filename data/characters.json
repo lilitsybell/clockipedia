@@ -99,52 +99,26 @@
     "image": "https://images.klutzbanana.com/characters_official/amnesiac_g.png",
     "ability": "You do not know what your ability is. Each day, privately guess what it is: you learn how accurate you are.",
     "flavor": "Wait. What. Who? Oh, ok. Wait. What?",
-    "purpose": "Purpose",
+    "purpose": "The [Amnesiac] has a powerful ability, but does not know what it is.",
     "summary": [
-             "Summary1",
-             "Summary2"
+             "The Storyteller chooses what ability the [Amnesiac] has. It should be unique and more powerful than a regular Townsfolk ability.",
+             "The [Amnesiac] may privately visit the Storyteller once per day to guess what their ability is. The Storyteller tells them how hot (correct) or cold (wrong) they are.",
+             "The guess can be anything the [Amnesiac] wants to ask, and as specific or vague as they want."
              ],
     "run": {
            "Setup": [
-                "Thing1",
-                "Thing2"
+                "During setup, the Storyteller decides which ability the [Amnesiac] has."
                 ],
            "Anytime": [
-                "Thing1",
-                "Thing2"
-                ],
-           "First Night": [
-                "Thing1",
-                "Thing2"
-                ],
-           "Every Night": [
-                "Thing1",
-                "Thing2"
-                ],
-           "First Day": [
-                "Thing1",
-                "Thing2"
+                "The Storyteller does whatever they need to do to satisfy the [Amnesiac] ability. That might be waking them at night to learn information or make a choice or it could be a passive effect."
                 ],
            "Every Day": [
-                "Thing1",
-                "Thing 2"
-                ],
-           "Other Nights": [
-                "Thing1",
-                "Thing2"
-                ],
-           "Other Days": [
-                "Thing1",
-                "Thing2"
-                ],
-           "End of Game": [
-                "Thing1",
-                "Thing2"
+                "Every day, the [Amnesiac] may privately make a guess as to what their ability is or is about. They may ask any question they'd like, as long as it can be answered via \"hot\", \"cold\" or somewhere inbetween. The Storyteller should not give the [Amnesiac] any hints or clues to what their ability is. If the [Amnesiac] guesses correctly, the Storyteller gives them a \"bingo\"."
                 ]
            },
     "examples": [
-                "Example1",
-                "Example2"
+                "The [Amnesiac] has the ability \"Each night, choose a player. They cannot die tonight or tomorrow.\". The [Amnesiac] wakes and chooses a player. That day, the [Amnesiac] asks if they have a protective ability. The Storyteller gives them a \"hot\".",
+                "The [Amnesiac] has the ability \"Each night, learn which characters selected you.\" The first night, the [Village Idiot] chooses the [Amnesiac]. The [Amnesiac] is woken and shown the [Village Idiot] token. The [Amnesiac] asks if they learn which characters chose them at night and the Storyteller gives them a \"bingo\"."
                 ]
 },
 "artist":
