@@ -1,9 +1,10 @@
 Interaction Finder:
-- make each result have its own link
 
 Character Pages:
-- add an interactions tab to character pages that automatically show interactions that include that character
+- fix interactions tab
+- add scripts tab
 
 Tooltips:
-- prevent them from going offscreen
-- add small delay
+
+Script Generator:
+- create script generator
