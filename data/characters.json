@@ -70,53 +70,27 @@
     "team": "Townsfolk",
     "image": "https://images.klutzbanana.com/characters_official/alsaahir_g.png",
     "ability": "Each day, if you publicly guess which players are Minion(s) and which are Demon(s), good wins.",
-    "flavor": "Flavor",
-    "purpose": "Purpose",
+    "flavor": "I am here because of you, and you are here because of me.",
+    "purpose": "If the [Alsaahir] guesses the evil team correctly, they win.",
     "summary": [
-             "Summary1",
-             "Summary2"
+             "The [Alsaahir] must guess publicly and during the day. The [Alsaahir] does not need to use their ability if they choose not to.",
+             "The [Alsaahir] may only make one guess each day. They may not change their mind after a guess.",
+             "Any player may pretend to be the [Alsaahir].",
+             "The [Alsaahir] must guess all current Minions and Demons correctly to win. This includes good, evil, dead, and alive players.",
+             "The [Alsaahir] does not need to guess evil Townsfolk, Outsiders, or Travellers.",
+             "If the [Alsaahir] guesses correctly, the game immediately ends and the [Alsaahir]'s team wins.",
+             "If a player registers as both a Minion and a Demon (such as [Legion] or [Lil' Monsta]), the [Alsaahir] must guess them as a Demon."
              ],
     "run": {
-           "Setup": [
-                "Thing1",
-                "Thing2"
-                ],
-           "Anytime": [
-                "Thing1",
-                "Thing2"
-                ],
-           "First Night": [
-                "Thing1",
-                "Thing2"
-                ],
-           "Every Night": [
-                "Thing1",
-                "Thing2"
-                ],
-           "First Day": [
-                "Thing1",
-                "Thing2"
-                ],
            "Every Day": [
-                "Thing1",
-                "Thing 2"
+                "Each day, the [Alsaahir] may publicly attempt a guess at who the current Minions and Demon(s) are.",
+                "If the [Alsaahir] guesses correctly, their team immediately wins.",
+                "If the [Alsaahir] guesses incorrectly, nothing happens."
                 ],
-           "Other Nights": [
-                "Thing1",
-                "Thing2"
-                ],
-           "Other Days": [
-                "Thing1",
-                "Thing2"
-                ],
-           "End of Game": [
-                "Thing1",
-                "Thing2"
-                ]
-           },
     "examples": [
-                "Example1",
-                "Example2"
+                "The [Alsaahir] guesses that the [Po] is the Demon and that the [Minstrel] and the [Fortune Teller] are the Minions. Nothing happens.",
+                "The [Alsaahir] guesses that the [Lleech] is the Demon and that the [Widow] is the Minion. The game immediately ends and the [Alsaahir]'s team wins.",
+                "The [Fang Gu] jumps to the [Hatter]. The [Alsaahir] guesses that the new [Fang Gu] is the Demon, and the [Wraith] and [Poisoner] are the Minions. The [Alsaahir] did not also guess the original [Fang Gu], so nothing happens."
                 ]
 },
 "amnesiac":
@@ -669,36 +643,281 @@
                 "Example2"
                 ]
 },
-     "clockmaker": {
-        "name": "Clockmaker",
-        "team": "Townsfolk",
-        "image": "https://images.klutzbanana.com/characters_official/clockmaker_g.png",
-        "ability": "You start knowing how many steps from the Demon to its nearest Minion."
-    },
-     "courtier": {
-        "name": "Courtier",
-        "team": "Townsfolk",
-        "image": "https://images.klutzbanana.com/characters_official/courtier_g.png",
-        "ability": "Once per game, at night, choose a character: they are drunk for 3 nights & 3 days."
-    },
-     "cultleader": {
-        "name": "Cult Leader",
-        "team": "Townsfolk",
-        "image": "https://images.klutzbanana.com/characters_official/cultleader_g.png",
-        "ability": "Each night, you become the alignment of an alive neighbor. If all good players choose to join your cult, your team wins."
-    },
-     "dreamer": {
-        "name": "Dreamer",
-        "team": "Townsfolk",
-        "image": "https://images.klutzbanana.com/characters_official/dreamer_g.png",
-        "ability": "Each night, choose a player (not yourself or Travellers): you learn 1 good & 1 evil character, 1 of which is correct."
-    },
-    "empath": {
-        "name": "Empath",
-        "team": "Townsfolk",
-        "image": "https://images.klutzbanana.com/characters_official/empath_g.png",
-        "ability": "Each night, you learn how many of your 2 alive neighbors are evil."
-    },
+"clockmaker":
+{
+    "name": "Clockmaker",
+    "team": "Townsfolk",
+    "image": "https://images.klutzbanana.com/characters_official/clockmaker_g.png",
+    "ability": "You start knowing how many steps from the Demon to its nearest Minion.",
+    "flavor": "Flavor",
+    "purpose": "Purpose",
+    "summary": [
+             "Summary1",
+             "Summary2"
+             ],
+    "run": {
+           "Setup": [
+                "Thing1",
+                "Thing2"
+                ],
+           "Anytime": [
+                "Thing1",
+                "Thing2"
+                ],
+           "First Night": [
+                "Thing1",
+                "Thing2"
+                ],
+           "Every Night": [
+                "Thing1",
+                "Thing2"
+                ],
+           "First Day": [
+                "Thing1",
+                "Thing2"
+                ],
+           "Every Day": [
+                "Thing1",
+                "Thing 2"
+                ],
+           "Other Nights": [
+                "Thing1",
+                "Thing2"
+                ],
+           "Other Days": [
+                "Thing1",
+                "Thing2"
+                ],
+           "End of Game": [
+                "Thing1",
+                "Thing2"
+                ]
+           },
+    "examples": [
+                "Example1",
+                "Example2"
+                ]
+},
+"courtier":
+{
+    "name": "Courtier",
+    "team": "Townsfolk",
+    "image": "https://images.klutzbanana.com/characters_official/courtier_g.png",
+    "ability": "Once per game, at night, choose a character: they are drunk for 3 nights & 3 days.",
+    "flavor": "Flavor",
+    "purpose": "Purpose",
+    "summary": [
+             "Summary1",
+             "Summary2"
+             ],
+    "run": {
+           "Setup": [
+                "Thing1",
+                "Thing2"
+                ],
+           "Anytime": [
+                "Thing1",
+                "Thing2"
+                ],
+           "First Night": [
+                "Thing1",
+                "Thing2"
+                ],
+           "Every Night": [
+                "Thing1",
+                "Thing2"
+                ],
+           "First Day": [
+                "Thing1",
+                "Thing2"
+                ],
+           "Every Day": [
+                "Thing1",
+                "Thing 2"
+                ],
+           "Other Nights": [
+                "Thing1",
+                "Thing2"
+                ],
+           "Other Days": [
+                "Thing1",
+                "Thing2"
+                ],
+           "End of Game": [
+                "Thing1",
+                "Thing2"
+                ]
+           },
+    "examples": [
+                "Example1",
+                "Example2"
+                ]
+},
+"cultleader":
+{
+    "name": "Cult Leader",
+    "team": "Townsfolk",
+    "image": "https://images.klutzbanana.com/characters_official/cultleader_g.png",
+    "ability": "Each night, you become the alignment of an alive neighbor. If all good players choose to join your cult, your team wins.",
+    "flavor": "Flavor",
+    "purpose": "Purpose",
+    "summary": [
+             "Summary1",
+             "Summary2"
+             ],
+    "run": {
+           "Setup": [
+                "Thing1",
+                "Thing2"
+                ],
+           "Anytime": [
+                "Thing1",
+                "Thing2"
+                ],
+           "First Night": [
+                "Thing1",
+                "Thing2"
+                ],
+           "Every Night": [
+                "Thing1",
+                "Thing2"
+                ],
+           "First Day": [
+                "Thing1",
+                "Thing2"
+                ],
+           "Every Day": [
+                "Thing1",
+                "Thing 2"
+                ],
+           "Other Nights": [
+                "Thing1",
+                "Thing2"
+                ],
+           "Other Days": [
+                "Thing1",
+                "Thing2"
+                ],
+           "End of Game": [
+                "Thing1",
+                "Thing2"
+                ]
+           },
+    "examples": [
+                "Example1",
+                "Example2"
+                ]
+},
+"dreamer":
+{
+    "name": "Dreamer",
+    "team": "Townsfolk",
+    "image": "https://images.klutzbanana.com/characters_official/dreamer_g.png",
+    "ability": "Each night, choose a player (not yourself or Travellers): you learn 1 good & 1 evil character, 1 of which is correct.",
+    "flavor": "Flavor",
+    "purpose": "Purpose",
+    "summary": [
+             "Summary1",
+             "Summary2"
+             ],
+    "run": {
+           "Setup": [
+                "Thing1",
+                "Thing2"
+                ],
+           "Anytime": [
+                "Thing1",
+                "Thing2"
+                ],
+           "First Night": [
+                "Thing1",
+                "Thing2"
+                ],
+           "Every Night": [
+                "Thing1",
+                "Thing2"
+                ],
+           "First Day": [
+                "Thing1",
+                "Thing2"
+                ],
+           "Every Day": [
+                "Thing1",
+                "Thing 2"
+                ],
+           "Other Nights": [
+                "Thing1",
+                "Thing2"
+                ],
+           "Other Days": [
+                "Thing1",
+                "Thing2"
+                ],
+           "End of Game": [
+                "Thing1",
+                "Thing2"
+                ]
+           },
+    "examples": [
+                "Example1",
+                "Example2"
+                ]
+},
+"empath":
+{
+    "name": "Empath",
+    "team": "Townsfolk",
+    "image": "https://images.klutzbanana.com/characters_official/empath_g.png",
+    "ability": "Each night, you learn how many of your 2 alive neighbors are evil.",
+    "flavor": "Flavor",
+    "purpose": "Purpose",
+    "summary": [
+             "Summary1",
+             "Summary2"
+             ],
+    "run": {
+           "Setup": [
+                "Thing1",
+                "Thing2"
+                ],
+           "Anytime": [
+                "Thing1",
+                "Thing2"
+                ],
+           "First Night": [
+                "Thing1",
+                "Thing2"
+                ],
+           "Every Night": [
+                "Thing1",
+                "Thing2"
+                ],
+           "First Day": [
+                "Thing1",
+                "Thing2"
+                ],
+           "Every Day": [
+                "Thing1",
+                "Thing 2"
+                ],
+           "Other Nights": [
+                "Thing1",
+                "Thing2"
+                ],
+           "Other Days": [
+                "Thing1",
+                "Thing2"
+                ],
+           "End of Game": [
+                "Thing1",
+                "Thing2"
+                ]
+           },
+    "examples": [
+                "Example1",
+                "Example2"
+                ]
+},
     "engineer": {
         "name": "Engineer",
         "team": "Townsfolk",
