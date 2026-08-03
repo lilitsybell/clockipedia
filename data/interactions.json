@@ -465,7 +465,7 @@
         "reason":"The Soldier is only safe from the Demon.",
         "mathInfo":"No ability has malfunctioned."},
     {
-        "text":"The [Soldier] cannot die due to the Demon with the [Boffin] [Alchemist] [Harpy] ability.",
+        "text":"The [Soldier] can gain madness but cannot die due to the Demon with the [Boffin] [Alchemist] [Harpy] ability.",
         "math":"red",
         "reason":"The Soldier is safe from all Demon attacks.",
         "mathInfo":"If the Demon failed to kill the Soldier, the Demon's ability malfunctioned."},
@@ -485,7 +485,7 @@
         "reason":"The Soldier is only safe from the Demon.",
         "mathInfo":"No ability has malfunctioned."},
     {
-        "text":"The [Soldier] can be executed, but cannot die due to the Demon with the [Boffin] [Alchemist] [Cerenovus] ability.",
+        "text":"The [Soldier] can gain madness and be executed, but cannot die due to the Demon with the [Boffin] [Alchemist] [Cerenovus] ability.",
         "math":"red",
         "reason":"The Soldier is safe from all Demon attacks.",
         "mathInfo":"If the Demon failed to kill the Soldier, the Demon's ability malfunctioned."},
