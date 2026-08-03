@@ -151,52 +151,28 @@
     "image": "https://images.klutzbanana.com/characters_official/atheist_g.png",
     "ability": "The Storyteller can break the game rules, and if executed, good wins, even if you are dead. [No evil characters]",
     "flavor": "Let us disperse with unnecessary conjecture and silly paranoia. There is a perfectly rational explanation for everything. Yes, a teacup may indeed be orbiting the planet, too small to see, but I shall drink my tea from the very real china in my very real hands.",
-    "purpose": "Purpose",
+    "purpose": "The [Atheist] knows exactly who to execute to win.",
     "summary": [
-             "Summary1",
-             "Summary2"
+             "If the [Atheist] is in play on setup, there are no evil players. This includes evil Townsfolk, Outsiders, and Travellers.",
+             "The Storyteller may break any rule of the game they wish. This includes but is not limited to: having duplicate in play characters, lying about information, killing players when they wouldn't have died otherwise, and changing player's characters.",
+             "The good team wins if the Storyteller is executed. The Storyteller nomination works like a normal player nomination. a 50% majority is required and may be lifted. If an [Atheist] or [Atheist] ability is created during the game, the good team wins if they execute either the Storyteller or the last living Demon.",
+             "The good team loses if the Storyteller is not executed. If an [Atheist] or [Atheist] ability is created during the game, the good team loses if they execute neither the Storyteller or the last living Demon."
              ],
     "run": {
            "Setup": [
-                "Thing1",
-                "Thing2"
+                "There are no evil players. This includes Minions, Demons, evil Townsfolk, evil Outsiders, and evil Travellers.",
+                "The Storyteller may choose to use any number of Townsfolk and Outsiders to equal the player count and may use duplicate tokens."
                 ],
            "Anytime": [
-                "Thing1",
-                "Thing2"
-                ],
-           "First Night": [
-                "Thing1",
-                "Thing2"
-                ],
-           "Every Night": [
-                "Thing1",
-                "Thing2"
-                ],
-           "First Day": [
-                "Thing1",
-                "Thing2"
-                ],
-           "Every Day": [
-                "Thing1",
-                "Thing 2"
-                ],
-           "Other Nights": [
-                "Thing1",
-                "Thing2"
-                ],
-           "Other Days": [
-                "Thing1",
-                "Thing2"
+                "The Storyteller may choose to create any information they wish to simulate an evil team. They may kill players at any time as they see fit."
                 ],
            "End of Game": [
-                "Thing1",
-                "Thing2"
+                "The game ends if the Storyteller is executed. The good team wins, no matter which team the [Atheist] is on."
                 ]
            },
     "examples": [
-                "Example1",
-                "Example2"
+                "The [Fortune Teller] receives a yes on the [Lycanthrope] and the [Artist], even though neither is the Red Herring. The [Lycanthrope] fails to kill the [Moonchild], and the Storyteller kills the [Banshee] instead, announcing the [Banshee] has died. When only three players are alive, the [Tinker] is executed and the good team loses.",
+                "On the second night, the [Pit-Hag] changes the [Minstrel] into the [Atheist]. The Demon kills the [Nighwatchman] and the Storyteller kills the [Steward]. That day, the new [Atheist] nominates the Storyteller and the Storyteller is executed. The good team wins and the evil team loses."
                 ]
 },
 "balloonist":
