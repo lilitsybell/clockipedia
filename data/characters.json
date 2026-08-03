@@ -98,7 +98,7 @@
     "team": "Townsfolk",
     "image": "https://images.klutzbanana.com/characters_official/amnesiac_g.png",
     "ability": "You do not know what your ability is. Each day, privately guess what it is: you learn how accurate you are.",
-    "flavor": "Flavor",
+    "flavor": "Wait. What. Who? Oh, ok. Wait. What?",
     "purpose": "Purpose",
     "summary": [
              "Summary1",
@@ -153,7 +153,7 @@
     "team": "Townsfolk",
     "image": "https://images.klutzbanana.com/characters_official/artist_g.png",
     "ability": "Once per game, during the day, privately ask the Storyteller any yes/no question.",
-    "flavor": "Flavor",
+    "flavor": "Mon Dieu! C'est lumineux! My work, she is... how you say... Magnifique! Dieu est révélé! Oui.",
     "purpose": "Purpose",
     "summary": [
              "Summary1",
@@ -208,7 +208,7 @@
     "team": "Townsfolk",
     "image": "https://images.klutzbanana.com/characters_official/atheist_g.png",
     "ability": "The Storyteller can break the game rules, and if executed, good wins, even if you are dead. [No evil characters]",
-    "flavor": "Flavor",
+    "flavor": "Let us disperse with unnecessary conjecture and silly paranoia. There is a perfectly rational explanation for everything. Yes, a teacup may indeed be orbiting the planet, too small to see, but I shall drink my tea from the very real china in my very real hands.",
     "purpose": "Purpose",
     "summary": [
              "Summary1",
@@ -263,7 +263,7 @@
     "team": "Townsfolk",
     "image": "https://images.klutzbanana.com/characters_official/balloonist_g.png",
     "ability": "Each night, you learn a player of a different character type than last night. [+0 or +1 Outsider]",
-    "flavor": "Flavor",
+    "flavor": "More heat! Higher! Higher! Più alto! Ahhh... it is so beautiful from up here, don't you agree? Can you see the children fishing by the river, under the willow? Can you see the glint of the sun on the circus tent-poles? What's this? An old man, alone, passed out in the vineyard? Less heat! Lower! Lower! Vai più in basso!",
     "purpose": "Purpose",
     "summary": [
              "Summary1",
@@ -318,7 +318,7 @@
     "team": "Townsfolk",
     "image": "https://images.klutzbanana.com/characters_official/banshee_g.png",
     "ability": "If the Demon kills you, all players learn this. From now on, you may nominate twice per day and vote twice per nomination.",
-    "flavor": "Flavor",
+    "flavor": "Gorm do shúile, dearg do ghruaig, ní bheidh sé i bhfad, is a mbeidh tú san uaigh.",
     "purpose": "Purpose",
     "summary": [
              "Summary1",
@@ -373,7 +373,7 @@
     "team": "Townsfolk",
     "image": "https://images.klutzbanana.com/characters_official/bountyhunter_g.png",
     "ability": "You start knowing 1 evil player. If the player you know dies, you learn another evil player tonight. [1 Townsfolk is evil]",
-    "flavor": "Flavor",
+    "flavor": "Alone, I walk these streets, paved with the sick stench of corruption. Its thickness worms its way into my nostrils, unbidden, burning with revulsion. And anticipation. The illness of this wretched place grows each night. And I... I am the cure.",
     "purpose": "Purpose",
     "summary": [
              "Summary1",
@@ -428,7 +428,7 @@
     "team": "Townsfolk",
     "image": "https://images.klutzbanana.com/characters_official/cannibal_g.png",
     "ability": "You have the ability of the recently killed executee. If they are evil, you are poisoned until a good player dies by execution.",
-    "flavor": "Flavor",
+    "flavor": "I don’t like clowns. They taste funny.",
     "purpose": "Purpose",
     "summary": [
              "Summary1",
@@ -483,7 +483,7 @@
     "team": "Townsfolk",
     "image": "https://images.klutzbanana.com/characters_official/chambermaid_g.png",
     "ability": "Each night, choose 2 alive players (not yourself): you learn how many woke tonight due to their ability.",
-    "flavor": "Flavor",
+    "flavor": "I ain' t seen nothin' untoward, Milady. Begging your pardon, but if I did see somethin', it certainly weren't the master o' the house sneaking into the professor's laboratory 'round eleven o'clock and mixing up fancy potions, just like you said, Miss.",
     "purpose": "Purpose",
     "summary": [
              "Summary1",
@@ -538,7 +538,7 @@
     "team": "Townsfolk",
     "image": "https://images.klutzbanana.com/characters_official/chef_g.png",
     "ability": "You start knowing how many pairs of evil players there are.",
-    "flavor": "Flavor",
+    "flavor": "This evening's reservations seem odd. Never before has Mrs Mayweather kept company with that scamp from Hudson Lane. Yet, tonight, they have a table for two. Strange.",
     "purpose": "Purpose",
     "summary": [
              "Summary1",
@@ -593,7 +593,7 @@
     "team": "Townsfolk",
     "image": "https://images.klutzbanana.com/characters_official/choirboy_g.png",
     "ability": "If the Demon kills the King, you learn which player is the Demon. [+the King]",
-    "flavor": "Flavor",
+    "flavor": "I saw it, I did. I was in the pews, tidying the hymn books, when a dreadful tune started from the pipe organ. The organist had a long cloak, and long fingers on the keys. And a hat that looked… just like… yours.",
     "purpose": "Purpose",
     "summary": [
              "Summary1",
@@ -648,7 +648,7 @@
     "team": "Townsfolk",
     "image": "https://images.klutzbanana.com/characters_official/clockmaker_g.png",
     "ability": "You start knowing how many steps from the Demon to its nearest Minion.",
-    "flavor": "Flavor",
+    "flavor": "Do not disturb me. The tick must continue, for the circle is a symbol of life and contains all things - all answers - in its divine machinery. I must work.",
     "purpose": "Purpose",
     "summary": [
              "Summary1",
@@ -703,7 +703,7 @@
     "team": "Townsfolk",
     "image": "https://images.klutzbanana.com/characters_official/courtier_g.png",
     "ability": "Once per game, at night, choose a character: they are drunk for 3 nights & 3 days.",
-    "flavor": "Flavor",
+    "flavor": "I am more afraid of an army of one hundred sheep led by a lion than an army of one hundred lions led by a sheep.",
     "purpose": "Purpose",
     "summary": [
              "Summary1",
@@ -758,7 +758,7 @@
     "team": "Townsfolk",
     "image": "https://images.klutzbanana.com/characters_official/cultleader_g.png",
     "ability": "Each night, you become the alignment of an alive neighbor. If all good players choose to join your cult, your team wins.",
-    "flavor": "Flavor",
+    "flavor": "Thinking themselves wise, they became fools.",
     "purpose": "Purpose",
     "summary": [
              "Summary1",
@@ -813,7 +813,7 @@
     "team": "Townsfolk",
     "image": "https://images.klutzbanana.com/characters_official/dreamer_g.png",
     "ability": "Each night, choose a player (not yourself or Travellers): you learn 1 good & 1 evil character, 1 of which is correct.",
-    "flavor": "Flavor",
+    "flavor": "I remember the Clockmaker. The sky was red and it was raining fractal triangles. There was a smell of violets and a bubbling sound. A woman with glowing eyes and a scraggly beard was hissing at the sky. Then, I awoke.",
     "purpose": "Purpose",
     "summary": [
              "Summary1",
@@ -868,7 +868,7 @@
     "team": "Townsfolk",
     "image": "https://images.klutzbanana.com/characters_official/empath_g.png",
     "ability": "Each night, you learn how many of your 2 alive neighbors are evil.",
-    "flavor": "Flavor",
+    "flavor": "My skin prickles. Something is not right here. I can feel it.",
     "purpose": "Purpose",
     "summary": [
              "Summary1",
@@ -923,7 +923,7 @@
     "team": "Townsfolk",
     "image": "https://images.klutzbanana.com/characters_official/engineer_g.png",
     "ability": "Once per game, at night, choose which Minions or which Demon is in play.",
-    "flavor": "Flavor",
+    "flavor": "If it bends, great. If it breaks, well, it probably needed fixing anyway.",
     "purpose": "Purpose",
     "summary": [
              "Summary1",
@@ -978,7 +978,7 @@
     "team": "Townsfolk",
     "image": "https://images.klutzbanana.com/characters_official/exorcist_g.png",
     "ability": "Each night*, choose a player (different to last night): the Demon, if chosen, learns who you are then doesn't wake tonight.",
-    "flavor": "Flavor",
+    "flavor": "We cast you out, every unclean spirit, every satanic power, every onslaught of the infernal adversary, every legion, every diabolical group and sect, in the name and by the power of Our Lord Jesus Christ. We command you, begone and fly far from the Church of God, from the souls made by God in His image and redeemed by the precious blood of the divine Lamb.",
     "purpose": "Purpose",
     "summary": [
              "Summary1",
@@ -1033,7 +1033,7 @@
     "team": "Townsfolk",
     "image": "https://images.klutzbanana.com/characters_official/farmer_g.png",
     "ability": "When you die at night, an alive good player becomes a Farmer.",
-    "flavor": "Flavor",
+    "flavor": "Even the high and mighty need food on the table. Without us, the city starves.",
     "purpose": "Purpose",
     "summary": [
              "Summary1",
@@ -1088,7 +1088,7 @@
     "team": "Townsfolk",
     "image": "https://images.klutzbanana.com/characters_official/fisherman_g.png",
     "ability": "Once per game, during the day, visit the Storyteller for some advice to help your team win.",
-    "flavor": "Flavor",
+    "flavor": "This was my favourite part of the river... see how the sunlight makes a rainbow from the monastery to the market? This was the best place for big fish. And the older I get, the bigger they were.",
     "purpose": "Purpose",
     "summary": [
              "Summary1",
@@ -1143,7 +1143,7 @@
     "team": "Townsfolk",
     "image": "https://images.klutzbanana.com/characters_official/flowergirl_g.png",
     "ability": "Each night*, you learn if a Demon voted today.",
-    "flavor": "Flavor",
+    "flavor": "Yesterday's violets have withered and died, but today my poppies bloom.",
     "purpose": "Purpose",
     "summary": [
              "Summary1",
@@ -1198,7 +1198,7 @@
     "team": "Townsfolk",
     "image": "https://images.klutzbanana.com/characters_official/fool_g.png",
     "ability": "The 1st time you die, you don't.",
-    "flavor": "Flavor",
+    "flavor": "...and the King said 'What?! I've never even owned a pair of rubber pantaloons, let alone a custard cannon!' Ho-ho! Jolly day!",
     "purpose": "Purpose",
     "summary": [
              "Summary1",
@@ -1253,7 +1253,7 @@
     "team": "Townsfolk",
     "image": "https://images.klutzbanana.com/characters_official/fortuneteller_g.png",
     "ability": "Each night, choose 2 players: you learn if either is a Demon. There is a good player that registers as a Demon to you.",
-    "flavor": "Flavor",
+    "flavor": "I sense great evil in your soul! But... that could just be your perfume. I am allergic to Elderberry.",
     "purpose": "Purpose",
     "summary": [
              "Summary1",
@@ -1308,7 +1308,7 @@
     "team": "Townsfolk",
     "image": "https://images.klutzbanana.com/characters_official/gambler_g.png",
     "ability": "Each night*, choose a player & guess their character: if you guess wrong, you die.",
-    "flavor": "Flavor",
+    "flavor": "Heads, I win. Tails, you lose.",
     "purpose": "Purpose",
     "summary": [
              "Summary1",
@@ -1363,7 +1363,7 @@
     "team": "Townsfolk",
     "image": "https://images.klutzbanana.com/characters_official/general_g.png",
     "ability": "Each night, you learn which alignment the Storyteller believes is winning: good, evil, or neither.",
-    "flavor": "Flavor",
+    "flavor": "I don’t have time for quotes.",
     "purpose": "Purpose",
     "summary": [
              "Summary1",
@@ -1418,7 +1418,7 @@
     "team": "Townsfolk",
     "image": "https://images.klutzbanana.com/characters_official/gossip_g.png",
     "ability": "Each day, you may make a public statement. Tonight, if it was true, a player dies.",
-    "flavor": "Flavor",
+    "flavor": "Blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah. Blah.",
     "purpose": "Purpose",
     "summary": [
              "Summary1",
@@ -1473,7 +1473,7 @@
     "team": "Townsfolk",
     "image": "https://images.klutzbanana.com/characters_official/grandmother_g.png",
     "ability": "You start knowing a good player & their character. If the Demon kills them, you die too.",
-    "flavor": "Flavor",
+    "flavor": "Take a jacket if you go outside, dearie. And your thermos. And your scarf. I have a weak heart, you know. Whatever would I do if you caught cold...or worse?",
     "purpose": "Purpose",
     "summary": [
              "Summary1",
@@ -1528,7 +1528,7 @@
     "team": "Townsfolk",
     "image": "https://images.klutzbanana.com/characters_official/highpriestess_g.png",
     "ability": "Each night, learn which player the Storyteller believes you should talk to most.",
-    "flavor": "Flavor",
+    "flavor": "There is life behind the personality that uses personalities as masks. There are times when life puts off the mask and deep answers to deep.",
     "purpose": "Purpose",
     "summary": [
              "Summary1",
@@ -1583,7 +1583,7 @@
     "team": "Townsfolk",
     "image": "https://images.klutzbanana.com/characters_official/huntsman_g.png",
     "ability": "Once per game, at night, choose a living player: the Damsel, if chosen, becomes a not-in-play Townsfolk. [+the Damsel]",
-    "flavor": "Flavor",
+    "flavor": "My cabin is warm and sturdy. My axe by the door, my boots drying by the fire, and elk stew a-simmering… Hark! A scream echoes through the valley! The rain and the mud and the cold, cold wind mask the scent of the wolves, but I know the path and my pace is steady. I am coming.",
     "purpose": "Purpose",
     "summary": [
              "Summary1",
@@ -1638,7 +1638,7 @@
     "team": "Townsfolk",
     "image": "https://images.klutzbanana.com/characters_official/innkeeper_g.png",
     "ability": "Each night*, choose 2 players: they can't die tonight, but 1 is drunk until dusk.",
-    "flavor": "Flavor",
+    "flavor": "Come inside, fair traveller, and rest your weary bones. Drink and be merry, for the legions of the Dark One shall not harass thee tonight.",
     "purpose": "Purpose",
     "summary": [
              "Summary1",
@@ -1693,7 +1693,7 @@
     "team": "Townsfolk",
     "image": "https://images.klutzbanana.com/characters_official/investigator_g.png",
     "ability": "You start knowing that 1 of 2 players is a particular Minion.",
-    "flavor": "Flavor",
+    "flavor": "It is a fine night for a stroll, wouldn't you say, Mister Morozov? Or should I say... BARON Morozov?",
     "purpose": "Purpose",
     "summary": [
              "Summary1",
@@ -1748,7 +1748,7 @@
     "team": "Townsfolk",
     "image": "https://images.klutzbanana.com/characters_official/juggler_g.png",
     "ability": "On your 1st day, publicly guess up to 5 players' characters. That night, you learn how many you got correct.",
-    "flavor": "Flavor",
+    "flavor": "For my next trick, as per request, I will need a flower, a bag of beans, a toy snake, a paintbrush, and a motorized gasoline-powered hedge trimming device. I warn you, this trick may be my last. Oh dear.",
     "purpose": "Purpose",
     "summary": [
              "Summary1",
@@ -1803,7 +1803,11 @@
     "team": "Townsfolk",
     "image": "https://images.klutzbanana.com/characters_official/king_g.png",
     "ability": "Each night, if the dead equal or outnumber the living, you learn 1 alive character. The Demon knows you are the King.",
-    "flavor": "Flavor",
+    "flavor": "↑Betwixt the unknown strains of mortal strife→</br>
+And morbid night, sweet↓ with mystery and woe</br>
+←Lies unfettered joys of fate’s long and colored life</br>
+Who’s garden blooms with each painted Face to Show.
+",
     "purpose": "Purpose",
     "summary": [
              "Summary1",
