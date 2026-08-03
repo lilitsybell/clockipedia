@@ -6472,370 +6472,3359 @@
                 "Example2"
                 ]
 },
-      "alhadikhia": {
-        "name": "Al-Hadikhia",
-        "team": "Demons",
-        "image": "https://images.klutzbanana.com/characters_official/alhadikhia_e.png",
-        "ability": "Each night*, you may choose 3 players (all players learn who): each silently chooses to live or die, but if all live, all die."
-    },
-      "fanggu": {
-        "name": "Fang Gu",
-        "team": "Demons",
-        "image": "https://images.klutzbanana.com/characters_official/fanggu_e.png",
-        "ability": "Each night*, choose a player: they die. The 1st Outsider this kills becomes an evil Fang Gu & you die instead. [+1 Outsider]"
-    },
-      "imp": {
-        "name": "Imp",
-        "team": "Demons",
-        "image": "https://images.klutzbanana.com/characters_official/imp_e.png",
-        "ability": "Each night*, choose a player: they die. If you kill yourself this way, a Minion becomes the Imp."
-    },
-      "kazali": {
-        "name": "Kazali",
-        "team": "Demons",
-        "image": "https://images.klutzbanana.com/characters_official/kazali_e.png",
-        "ability": "Each night*, choose a player: they die. [You choose which players are which Minions. -? to +? Outsiders]"
-    },
-      "legion": {
-        "name": "Legion",
-        "team": "Demons",
-        "image": "https://images.klutzbanana.com/characters_official/legion_e.png",
-        "ability": "Each night*, a player might die. Executions fail if only evil voted. You register as a Minion too. [Most players are Legion]"
-    },
-      "leviathan": {
-        "name": "Leviathan",
-        "team": "Demons",
-        "image": "https://images.klutzbanana.com/characters_official/leviathan_e.png",
-        "ability": "If more than 1 good player is executed, evil wins. All players know you are in play. After day 5, evil wins."
-    },
-     "lilmonsta": {
-        "name": "Lil' Monsta",
-        "team": "Demons",
-        "image": "https://images.klutzbanana.com/characters_official/lilmonsta_e.png",
-        "ability": "Each night, Minions choose who babysits Lil' Monsta & \"is the Demon\". Each night*, a player might die. [+1 Minion]"
-    },
-      "lleech": {
-        "name": "Lleech",
-        "team": "Demons",
-        "image": "https://images.klutzbanana.com/characters_official/lleech_e.png",
-        "ability": "Each night*, choose a player: they die. You start by choosing a player: they are poisoned. You die if & only if they are dead."
-    },
-      "lordoftyphon": {
-        "name": "Lord of Typhon",
-        "team": "Demons",
-        "image": "https://images.klutzbanana.com/characters_official/lordoftyphon_e.png",
-        "ability": "Each night*, choose a player: they die. [Evil characters are in a line. You are in the middle. +1 Minion. -? to +? Outsiders]"
-    },
-      "nodashii": {
-        "name": "No Dashii",
-        "team": "Demons",
-        "image": "https://images.klutzbanana.com/characters_official/nodashii_e.png",
-        "ability": "Each night*, choose a player: they die. Your 2 Townsfolk neighbors are poisoned."
-    },
-      "ojo": {
-        "name": "Ojo",
-        "team": "Demons",
-        "image": "https://images.klutzbanana.com/characters_official/ojo_e.png",
-        "ability": "Each night*, choose a character: they die. If they are not in play, the Storyteller chooses who dies."
-    },
-      "po": {
-        "name": "Po",
-        "team": "Demons",
-        "image": "https://images.klutzbanana.com/characters_official/po_e.png",
-        "ability": "Each night*, you may choose a player: they die. If your last choice was no-one, choose 3 players tonight."
-    },
-      "pukka": {
-        "name": "Pukka",
-        "team": "Demons",
-        "image": "https://images.klutzbanana.com/characters_official/pukka_e.png",
-        "ability": "Each night, choose a player: they are poisoned. The previously poisoned player dies then becomes healthy."
-    },
-      "riot": {
-        "name": "Riot",
-        "team": "Demons",
-        "image": "https://images.klutzbanana.com/characters_official/riot_e.png",
-        "ability": "On day 3, Minions become Riot & nominees die but nominate an alive player immediately. This must happen."
-    },
-      "shabaloth": {
-        "name": "Shabaloth",
-        "team": "Demons",
-        "image": "https://images.klutzbanana.com/characters_official/shabaloth_e.png",
-        "ability": "Each night*, choose 2 players: they die. A dead player you chose last night might be regurgitated."
-    },
-      "vigormortis": {
-        "name": "Vigormortis",
-        "team": "Demons",
-        "image": "https://images.klutzbanana.com/characters_official/vigormortis_e.png",
-        "ability": "Each night*, choose a player: they die. Minions you kill keep their ability & poison 1 Townsfolk neighbor. [-1 Outsider]"
-    },
-      "vortox": {
-        "name": "Vortox",
-        "team": "Demons",
-        "image": "https://images.klutzbanana.com/characters_official/vortox_e.png",
-        "ability": "Each night*, choose a player: they die. Townsfolk abilities yield false info. Each day, if no-one is executed, evil wins."
-    },
-      "yaggababble": {
-        "name": "Yaggababble",
-        "team": "Demons",
-        "image": "https://images.klutzbanana.com/characters_official/yaggababble_e.png",
-        "ability": "You start knowing a secret phrase. For each time you said it publicly today, a player might die."
-    },
-      "zombuul": {
-        "name": "Zombuul",
-        "team": "Demons",
-        "image": "https://images.klutzbanana.com/characters_official/zombuul_e.png",
-        "ability": "Each night*, if no-one died today, choose a player: they die. The 1st time you die, you live but register as dead."
-    },
-      "apprentice": {
-        "name": "Apprentice",
-        "team": "Travellers",
-        "image": "https://images.klutzbanana.com/characters_official/apprentice.png",
-        "ability": "On your 1st night, you gain a Townsfolk ability (if good), or a Minion ability (if evil)."
-    },
-      "barista": {
-        "name": "Barista",
-        "team": "Travellers",
-        "image": "https://images.klutzbanana.com/characters_official/barista.png",
-        "ability": "Each night, until dusk, 1) a player becomes sober, healthy & gets true info, or 2) their ability works twice. They learn which."
-    },
-      "beggar": {
-        "name": "Beggar",
-        "team": "Travellers",
-        "image": "https://images.klutzbanana.com/characters_official/beggar.png",
-        "ability": "You must use a vote token to vote. If a dead player gives you theirs, you learn their alignment. You are sober & healthy."
-    },
-      "bishop": {
-        "name": "Bishop",
-        "team": "Travellers",
-        "image": "https://images.klutzbanana.com/characters_official/bishop.png",
-        "ability": "Only the Storyteller can nominate. At least 1 opposing player must be nominated each day."
-    },
-      "bonecollector": {
-        "name": "Bone Collector",
-        "team": "Travellers",
-        "image": "https://images.klutzbanana.com/characters_official/bonecollector.png",
-        "ability": "Once per game, at night*, choose a dead player: they regain their ability until dusk."
-    },
-      "bureaucrat": {
-        "name": "Bureaucrat",
-        "team": "Travellers",
-        "image": "https://images.klutzbanana.com/characters_official/bureaucrat.png",
-        "ability": "Each night, choose a player (not yourself): their vote counts as 3 votes tomorrow."
-    },
-      "butcher": {
-        "name": "Butcher",
-        "team": "Travellers",
-        "image": "https://images.klutzbanana.com/characters_official/butcher.png",
-        "ability": "Each day, after the 1st execution, you may nominate again."
-    },
-      "cacklejack": {
-        "name": "Cacklejack",
-        "team": "Travellers",
-        "image": "https://images.klutzbanana.com/characters_official/cacklejack.png",
-        "ability": "Each day, choose a player: a different player changes character tonight."
-    },
-      "deviant": {
-        "name": "Deviant",
-        "team": "Travellers",
-        "image": "https://images.klutzbanana.com/characters_official/deviant.png",
-        "ability": "If you were funny today, you cannot die by exile."
-    },
-      "gangster": {
-        "name": "Gangster",
-        "team": "Travellers",
-        "image": "https://images.klutzbanana.com/characters_official/gangster.png",
-        "ability": "Once per day, you may choose to kill an alive neighbor, if your other alive neighbor agrees."
-    },
-      "gnome": {
-        "name": "Gnome",
-        "team": "Travellers",
-        "image": "https://images.klutzbanana.com/characters_official/gnome.png",
-        "ability": "All players start knowing a player of your alignment. You may choose to kill anyone who nominates them."
-    },
-      "gunslinger": {
-        "name": "Gunslinger",
-        "team": "Travellers",
-        "image": "https://images.klutzbanana.com/characters_official/gunslinger.png",
-        "ability": "Each day, after the 1st vote has been tallied, you may choose a player that voted: they die."
-    },
-      "harlot": {
-        "name": "Harlot",
-        "team": "Travellers",
-        "image": "https://images.klutzbanana.com/characters_official/harlot.png",
-        "ability": "Each night*, choose a living player: if they agree, you learn their character, but you both might die."
-    },
-      "judge": {
-        "name": "Judge",
-        "team": "Travellers",
-        "image": "https://images.klutzbanana.com/characters_official/judge.png",
-        "ability": "Once per game, if another player nominated, you may choose to force the current execution to pass or fail."
-    },
-      "matron": {
-        "name": "Matron",
-        "team": "Travellers",
-        "image": "https://images.klutzbanana.com/characters_official/matron.png",
-        "ability": "Each day, you may choose up to 3 sets of 2 players to swap seats. Players may not leave their seats to talk in private."
-    },
-      "scapegoat": {
-        "name": "Scapegoat",
-        "team": "Travellers",
-        "image": "https://images.klutzbanana.com/characters_official/scapegoat.png",
-        "ability": "If a player of your alignment is executed, you might be executed instead."
-    },
-      "thief": {
-        "name": "Thief",
-        "team": "Travellers",
-        "image": "https://images.klutzbanana.com/characters_official/thief.png",
-        "ability": "Each night, choose a player (not yourself): their vote counts negatively tomorrow."
-    },
-      "voudon": {
-        "name": "Voudon",
-        "team": "Travellers",
-        "image": "https://images.klutzbanana.com/characters_official/voudon.png",
-        "ability": "Only you & the dead can vote. They don't need a vote token to do so. A 50% majority isn't required."
-    },
-      "angel": {
-        "name": "Angel",
-        "team": "Fabled",
-        "image": "https://images.klutzbanana.com/characters_official/angel.png",
-        "ability": "Something bad might happen to whoever is most responsible for the death of a new player."
-    },
-      "buddhist": {
-        "name": "Buddhist",
-        "team": "Fabled",
-        "image": "https://images.klutzbanana.com/characters_official/buddhist.png",
-        "ability": "For the first 2 minutes of each day, veteran players may not talk."
-    },
-      "deusexfiasco": {
-        "name": "Deus ex Fiasco",
-        "team": "Fabled",
-        "image": "https://images.klutzbanana.com/characters_official/deusexfiasco.png",
-        "ability": "At least once per game, the Storyteller will make a mistake, correct it, and publicly admit to it."
-    },
-      "djinn": {
-        "name": "Djinn",
-        "team": "Fabled",
-        "image": "https://images.klutzbanana.com/characters_official/djinn.png",
-        "ability": "Use the Djinn's special rule. All players know what it is."
-    },
-      "doomsayer": {
-        "name": "Doomsayer",
-        "team": "Fabled",
-        "image": "https://images.klutzbanana.com/characters_official/doomsayer.png",
-        "ability": "If 4 or more players live, each living player may publicly choose (once per game) that a player of their own alignment dies."
-    },
-      "duchess": {
-        "name": "Duchess",
-        "team": "Fabled",
-        "image": "https://images.klutzbanana.com/characters_official/duchess.png",
-        "ability": "Each day, 3 players may choose to visit you. At night*, each visitor learns how many visitors are evil, but 1 gets false info."
-    },
-      "ferryman": {
-        "name": "Ferryman",
-        "team": "Fabled",
-        "image": "https://images.klutzbanana.com/characters_official/ferryman.png",
-        "ability": "On the final day, all dead players regain their vote token."
-    },
-      "fibbin": {
-        "name": "Fibbin",
-        "team": "Fabled",
-        "image": "https://images.klutzbanana.com/characters_official/fibbin.png",
-        "ability": "Once per game, 1 good player might get incorrect information."
-    },
-      "fiddler": {
-        "name": "Fiddler",
-        "team": "Fabled",
-        "image": "https://images.klutzbanana.com/characters_official/fiddler.png",
-        "ability": "Once per game, the Demon secretly chooses an opposing player: all players choose which of these 2 players win."
-    },
-      "hellslibrarian": {
-        "name": "Hell's Librarian",
-        "team": "Fabled",
-        "image": "https://images.klutzbanana.com/characters_official/hellslibrarian.png",
-        "ability": "Something bad might happen to whoever talks when the Storyteller has asked for silence."
-    },
-      "revolutionary": {
-        "name": "Revolutionary",
-        "team": "Fabled",
-        "image": "https://images.klutzbanana.com/characters_official/revolutionary.png",
-        "ability": "2 neighboring players are known to be the same alignment. Once per game, 1 of them registers falsely."
-    },
-      "sentinel": {
-        "name": "Sentinel",
-        "team": "Fabled",
-        "image": "https://images.klutzbanana.com/characters_official/sentinel.png",
-        "ability": "There might be 1 extra or 1 fewer Outsider in play."
-    },
-      "spiritofivory": {
-        "name": "Spirit of Ivory",
-        "team": "Fabled",
-        "image": "https://images.klutzbanana.com/characters_official/spiritofivory.png",
-        "ability": "There can't be more than 1 extra evil player."
-    },
-      "toymaker": {
-        "name": "Toymaker",
-        "team": "Fabled",
-        "image": "https://images.klutzbanana.com/characters_official/toymaker.png",
-        "ability": "The Demon may choose not to attack & must do this at least once per game. Evil players get normal starting info."
-    },
-      "bigwig": {
-        "name": "Big Wig",
-        "team": "Loric",
-        "image": "https://images.klutzbanana.com/characters_official/bigwig.png",
-        "ability": "Each nominee chooses a player: until voting, only they may speak & they are mad the nominee is good or they might die."
-    },
-      "gardener": {
-        "name": "Gardener",
-        "team": "Loric",
-        "image": "https://images.klutzbanana.com/characters_official/gardener.png",
-        "ability": "The Storyteller assigns all players' characters."
-    },
-      "godofug": {
-        "name": "God of Ug",
-        "team": "Loric",
-        "image": "https://images.klutzbanana.com/characters_official/godofug.png",
-        "ability": "One Ug hat. When wear Ug hat, must speak one sound at a time but vote twice. If fail, pass Ug hat."
-    },
-      "hindu": {
-        "name": "Hindu",
-        "team": "Loric",
-        "image": "https://images.klutzbanana.com/characters_official/hindu.png",
-        "ability": "The first 4 players to die are immediately reincarnated as Travellers of the same alignment."
-    },
-      "knaves": {
-        "name": "Knaves",
-        "team": "Loric",
-        "image": "https://images.klutzbanana.com/characters_official/knaves.png",
-        "ability": "There are 2 Storytellers: one lies & one tells the truth. Once per game, at dusk, they might switch."
-    },
-      "pope": {
-        "name": "Pope",
-        "team": "Loric",
-        "image": "https://images.klutzbanana.com/characters_official/pope.png",
-        "ability": "There are duplicate good characters in play. They might also be bluffs."
-    },
-      "stormcatcher": {
-        "name": "Storm Catcher",
-        "team": "Loric",
-        "image": "https://images.klutzbanana.com/characters_official/stormcatcher.png",
-        "ability": "Name a good character. If in play, they can only die by execution, but evil players learn which player it is."
-    },
-      "tor": {
-        "name": "Tor",
-        "team": "Loric",
-        "image": "https://images.klutzbanana.com/characters_official/tor.png",
-        "ability": "Players don't know their character or alignment. They learn them when they die."
-    },
-      "ventriloquist": {
-        "name": "Ventriloquist",
-        "team": "Loric",
-        "image": "https://images.klutzbanana.com/characters_official/ventriloquist.png",
-        "ability": "If a player is mad as a fresh character during their nomination, they might not die if executed today."
-    },
-      "zenomancer": {
-        "name": "Zenomancer",
-        "team": "Loric",
-        "image": "https://images.klutzbanana.com/characters_official/zenomancer.png",
-        "ability": "One or more players each have a goal. When achieved, that player learns a piece of true info."
-    }
+"alhadikhia":
+{
+    "name": "Al-Hadikhia",
+    "team": "Demons",
+    "image": "https://images.klutzbanana.com/characters_official/alhadikhia_e.png",
+    "ability": "Each night*, you may choose 3 players (all players learn who): each silently chooses to live or die, but if all live, all die.",
+    "flavor": "Flavor",
+    "purpose": "Purpose",
+    "summary": [
+             "Summary1",
+             "Summary2"
+             ],
+    "run": {
+           "Setup": [
+                "Thing1",
+                "Thing2"
+                ],
+           "Anytime": [
+                "Thing1",
+                "Thing2"
+                ],
+           "First Night": [
+                "Thing1",
+                "Thing2"
+                ],
+           "Every Night": [
+                "Thing1",
+                "Thing2"
+                ],
+           "First Day": [
+                "Thing1",
+                "Thing2"
+                ],
+           "Every Day": [
+                "Thing1",
+                "Thing 2"
+                ],
+           "Other Nights": [
+                "Thing1",
+                "Thing2"
+                ],
+           "Other Days": [
+                "Thing1",
+                "Thing2"
+                ],
+           "End of Game": [
+                "Thing1",
+                "Thing2"
+                ]
+           },
+    "examples": [
+                "Example1",
+                "Example2"
+                ]
+},
+"fanggu":
+{
+    "name": "Fang Gu",
+    "team": "Demons",
+    "image": "https://images.klutzbanana.com/characters_official/fanggu_e.png",
+    "ability": "Each night*, choose a player: they die. The 1st Outsider this kills becomes an evil Fang Gu & you die instead. [+1 Outsider]",
+    "flavor": "Flavor",
+    "purpose": "Purpose",
+    "summary": [
+             "Summary1",
+             "Summary2"
+             ],
+    "run": {
+           "Setup": [
+                "Thing1",
+                "Thing2"
+                ],
+           "Anytime": [
+                "Thing1",
+                "Thing2"
+                ],
+           "First Night": [
+                "Thing1",
+                "Thing2"
+                ],
+           "Every Night": [
+                "Thing1",
+                "Thing2"
+                ],
+           "First Day": [
+                "Thing1",
+                "Thing2"
+                ],
+           "Every Day": [
+                "Thing1",
+                "Thing 2"
+                ],
+           "Other Nights": [
+                "Thing1",
+                "Thing2"
+                ],
+           "Other Days": [
+                "Thing1",
+                "Thing2"
+                ],
+           "End of Game": [
+                "Thing1",
+                "Thing2"
+                ]
+           },
+    "examples": [
+                "Example1",
+                "Example2"
+                ]
+},
+"imp":
+{
+    "name": "Imp",
+    "team": "Demons",
+    "image": "https://images.klutzbanana.com/characters_official/imp_e.png",
+    "ability": "Each night*, choose a player: they die. If you kill yourself this way, a Minion becomes the Imp.",
+    "flavor": "Flavor",
+    "purpose": "Purpose",
+    "summary": [
+             "Summary1",
+             "Summary2"
+             ],
+    "run": {
+           "Setup": [
+                "Thing1",
+                "Thing2"
+                ],
+           "Anytime": [
+                "Thing1",
+                "Thing2"
+                ],
+           "First Night": [
+                "Thing1",
+                "Thing2"
+                ],
+           "Every Night": [
+                "Thing1",
+                "Thing2"
+                ],
+           "First Day": [
+                "Thing1",
+                "Thing2"
+                ],
+           "Every Day": [
+                "Thing1",
+                "Thing 2"
+                ],
+           "Other Nights": [
+                "Thing1",
+                "Thing2"
+                ],
+           "Other Days": [
+                "Thing1",
+                "Thing2"
+                ],
+           "End of Game": [
+                "Thing1",
+                "Thing2"
+                ]
+           },
+    "examples": [
+                "Example1",
+                "Example2"
+                ]
+},
+"kazali":
+{
+    "name": "Kazali",
+    "team": "Demons",
+    "image": "https://images.klutzbanana.com/characters_official/kazali_e.png",
+    "ability": "Each night*, choose a player: they die. [You choose which players are which Minions. -? to +? Outsiders]",
+    "flavor": "Flavor",
+    "purpose": "Purpose",
+    "summary": [
+             "Summary1",
+             "Summary2"
+             ],
+    "run": {
+           "Setup": [
+                "Thing1",
+                "Thing2"
+                ],
+           "Anytime": [
+                "Thing1",
+                "Thing2"
+                ],
+           "First Night": [
+                "Thing1",
+                "Thing2"
+                ],
+           "Every Night": [
+                "Thing1",
+                "Thing2"
+                ],
+           "First Day": [
+                "Thing1",
+                "Thing2"
+                ],
+           "Every Day": [
+                "Thing1",
+                "Thing 2"
+                ],
+           "Other Nights": [
+                "Thing1",
+                "Thing2"
+                ],
+           "Other Days": [
+                "Thing1",
+                "Thing2"
+                ],
+           "End of Game": [
+                "Thing1",
+                "Thing2"
+                ]
+           },
+    "examples": [
+                "Example1",
+                "Example2"
+                ]
+},
+"legion":
+{
+    "name": "Legion",
+    "team": "Demons",
+    "image": "https://images.klutzbanana.com/characters_official/legion_e.png",
+    "ability": "Each night*, a player might die. Executions fail if only evil voted. You register as a Minion too. [Most players are Legion]",
+    "flavor": "Flavor",
+    "purpose": "Purpose",
+    "summary": [
+             "Summary1",
+             "Summary2"
+             ],
+    "run": {
+           "Setup": [
+                "Thing1",
+                "Thing2"
+                ],
+           "Anytime": [
+                "Thing1",
+                "Thing2"
+                ],
+           "First Night": [
+                "Thing1",
+                "Thing2"
+                ],
+           "Every Night": [
+                "Thing1",
+                "Thing2"
+                ],
+           "First Day": [
+                "Thing1",
+                "Thing2"
+                ],
+           "Every Day": [
+                "Thing1",
+                "Thing 2"
+                ],
+           "Other Nights": [
+                "Thing1",
+                "Thing2"
+                ],
+           "Other Days": [
+                "Thing1",
+                "Thing2"
+                ],
+           "End of Game": [
+                "Thing1",
+                "Thing2"
+                ]
+           },
+    "examples": [
+                "Example1",
+                "Example2"
+                ]
+},
+"leviathan":
+{
+    "name": "Leviathan",
+    "team": "Demons",
+    "image": "https://images.klutzbanana.com/characters_official/leviathan_e.png",
+    "ability": "If more than 1 good player is executed, evil wins. All players know you are in play. After day 5, evil wins.",
+    "flavor": "Flavor",
+    "purpose": "Purpose",
+    "summary": [
+             "Summary1",
+             "Summary2"
+             ],
+    "run": {
+           "Setup": [
+                "Thing1",
+                "Thing2"
+                ],
+           "Anytime": [
+                "Thing1",
+                "Thing2"
+                ],
+           "First Night": [
+                "Thing1",
+                "Thing2"
+                ],
+           "Every Night": [
+                "Thing1",
+                "Thing2"
+                ],
+           "First Day": [
+                "Thing1",
+                "Thing2"
+                ],
+           "Every Day": [
+                "Thing1",
+                "Thing 2"
+                ],
+           "Other Nights": [
+                "Thing1",
+                "Thing2"
+                ],
+           "Other Days": [
+                "Thing1",
+                "Thing2"
+                ],
+           "End of Game": [
+                "Thing1",
+                "Thing2"
+                ]
+           },
+    "examples": [
+                "Example1",
+                "Example2"
+                ]
+},
+"lilmonsta":
+{
+    "name": "Lil' Monsta",
+    "team": "Demons",
+    "image": "https://images.klutzbanana.com/characters_official/lilmonsta_e.png",
+    "ability": "Each night, Minions choose who babysits Lil' Monsta & \"is the Demon\". Each night*, a player might die. [+1 Minion]",
+    "flavor": "Flavor",
+    "purpose": "Purpose",
+    "summary": [
+             "Summary1",
+             "Summary2"
+             ],
+    "run": {
+           "Setup": [
+                "Thing1",
+                "Thing2"
+                ],
+           "Anytime": [
+                "Thing1",
+                "Thing2"
+                ],
+           "First Night": [
+                "Thing1",
+                "Thing2"
+                ],
+           "Every Night": [
+                "Thing1",
+                "Thing2"
+                ],
+           "First Day": [
+                "Thing1",
+                "Thing2"
+                ],
+           "Every Day": [
+                "Thing1",
+                "Thing 2"
+                ],
+           "Other Nights": [
+                "Thing1",
+                "Thing2"
+                ],
+           "Other Days": [
+                "Thing1",
+                "Thing2"
+                ],
+           "End of Game": [
+                "Thing1",
+                "Thing2"
+                ]
+           },
+    "examples": [
+                "Example1",
+                "Example2"
+                ]
+},
+"lleech":
+{
+    "name": "Lleech",
+    "team": "Demons",
+    "image": "https://images.klutzbanana.com/characters_official/lleech_e.png",
+    "ability": "Each night*, choose a player: they die. You start by choosing a player: they are poisoned. You die if & only if they are dead.",
+    "flavor": "Flavor",
+    "purpose": "Purpose",
+    "summary": [
+             "Summary1",
+             "Summary2"
+             ],
+    "run": {
+           "Setup": [
+                "Thing1",
+                "Thing2"
+                ],
+           "Anytime": [
+                "Thing1",
+                "Thing2"
+                ],
+           "First Night": [
+                "Thing1",
+                "Thing2"
+                ],
+           "Every Night": [
+                "Thing1",
+                "Thing2"
+                ],
+           "First Day": [
+                "Thing1",
+                "Thing2"
+                ],
+           "Every Day": [
+                "Thing1",
+                "Thing 2"
+                ],
+           "Other Nights": [
+                "Thing1",
+                "Thing2"
+                ],
+           "Other Days": [
+                "Thing1",
+                "Thing2"
+                ],
+           "End of Game": [
+                "Thing1",
+                "Thing2"
+                ]
+           },
+    "examples": [
+                "Example1",
+                "Example2"
+                ]
+},
+"lordoftyphon":
+{
+    "name": "Lord of Typhon",
+    "team": "Demons",
+    "image": "https://images.klutzbanana.com/characters_official/lordoftyphon_e.png",
+    "ability": "Each night*, choose a player: they die. [Evil characters are in a line. You are in the middle. +1 Minion. -? to +? Outsiders]",
+    "flavor": "Flavor",
+    "purpose": "Purpose",
+    "summary": [
+             "Summary1",
+             "Summary2"
+             ],
+    "run": {
+           "Setup": [
+                "Thing1",
+                "Thing2"
+                ],
+           "Anytime": [
+                "Thing1",
+                "Thing2"
+                ],
+           "First Night": [
+                "Thing1",
+                "Thing2"
+                ],
+           "Every Night": [
+                "Thing1",
+                "Thing2"
+                ],
+           "First Day": [
+                "Thing1",
+                "Thing2"
+                ],
+           "Every Day": [
+                "Thing1",
+                "Thing 2"
+                ],
+           "Other Nights": [
+                "Thing1",
+                "Thing2"
+                ],
+           "Other Days": [
+                "Thing1",
+                "Thing2"
+                ],
+           "End of Game": [
+                "Thing1",
+                "Thing2"
+                ]
+           },
+    "examples": [
+                "Example1",
+                "Example2"
+                ]
+},
+"nodashii":
+{
+    "name": "No Dashii",
+    "team": "Demons",
+    "image": "https://images.klutzbanana.com/characters_official/nodashii_e.png",
+    "ability": "Each night*, choose a player: they die. Your 2 Townsfolk neighbors are poisoned.",
+    "flavor": "Flavor",
+    "purpose": "Purpose",
+    "summary": [
+             "Summary1",
+             "Summary2"
+             ],
+    "run": {
+           "Setup": [
+                "Thing1",
+                "Thing2"
+                ],
+           "Anytime": [
+                "Thing1",
+                "Thing2"
+                ],
+           "First Night": [
+                "Thing1",
+                "Thing2"
+                ],
+           "Every Night": [
+                "Thing1",
+                "Thing2"
+                ],
+           "First Day": [
+                "Thing1",
+                "Thing2"
+                ],
+           "Every Day": [
+                "Thing1",
+                "Thing 2"
+                ],
+           "Other Nights": [
+                "Thing1",
+                "Thing2"
+                ],
+           "Other Days": [
+                "Thing1",
+                "Thing2"
+                ],
+           "End of Game": [
+                "Thing1",
+                "Thing2"
+                ]
+           },
+    "examples": [
+                "Example1",
+                "Example2"
+                ]
+},
+"ojo":
+{
+    "name": "Ojo",
+    "team": "Demons",
+    "image": "https://images.klutzbanana.com/characters_official/ojo_e.png",
+    "ability": "Each night*, choose a character: they die. If they are not in play, the Storyteller chooses who dies.",
+    "flavor": "Flavor",
+    "purpose": "Purpose",
+    "summary": [
+             "Summary1",
+             "Summary2"
+             ],
+    "run": {
+           "Setup": [
+                "Thing1",
+                "Thing2"
+                ],
+           "Anytime": [
+                "Thing1",
+                "Thing2"
+                ],
+           "First Night": [
+                "Thing1",
+                "Thing2"
+                ],
+           "Every Night": [
+                "Thing1",
+                "Thing2"
+                ],
+           "First Day": [
+                "Thing1",
+                "Thing2"
+                ],
+           "Every Day": [
+                "Thing1",
+                "Thing 2"
+                ],
+           "Other Nights": [
+                "Thing1",
+                "Thing2"
+                ],
+           "Other Days": [
+                "Thing1",
+                "Thing2"
+                ],
+           "End of Game": [
+                "Thing1",
+                "Thing2"
+                ]
+           },
+    "examples": [
+                "Example1",
+                "Example2"
+                ]
+},
+"po":
+{
+    "name": "Po",
+    "team": "Demons",
+    "image": "https://images.klutzbanana.com/characters_official/po_e.png",
+    "ability": "Each night*, you may choose a player: they die. If your last choice was no-one, choose 3 players tonight.",
+    "flavor": "Flavor",
+    "purpose": "Purpose",
+    "summary": [
+             "Summary1",
+             "Summary2"
+             ],
+    "run": {
+           "Setup": [
+                "Thing1",
+                "Thing2"
+                ],
+           "Anytime": [
+                "Thing1",
+                "Thing2"
+                ],
+           "First Night": [
+                "Thing1",
+                "Thing2"
+                ],
+           "Every Night": [
+                "Thing1",
+                "Thing2"
+                ],
+           "First Day": [
+                "Thing1",
+                "Thing2"
+                ],
+           "Every Day": [
+                "Thing1",
+                "Thing 2"
+                ],
+           "Other Nights": [
+                "Thing1",
+                "Thing2"
+                ],
+           "Other Days": [
+                "Thing1",
+                "Thing2"
+                ],
+           "End of Game": [
+                "Thing1",
+                "Thing2"
+                ]
+           },
+    "examples": [
+                "Example1",
+                "Example2"
+                ]
+},
+"pukka":
+{
+    "name": "Pukka",
+    "team": "Demons",
+    "image": "https://images.klutzbanana.com/characters_official/pukka_e.png",
+    "ability": "Each night, choose a player: they are poisoned. The previously poisoned player dies then becomes healthy.",
+    "flavor": "Flavor",
+    "purpose": "Purpose",
+    "summary": [
+             "Summary1",
+             "Summary2"
+             ],
+    "run": {
+           "Setup": [
+                "Thing1",
+                "Thing2"
+                ],
+           "Anytime": [
+                "Thing1",
+                "Thing2"
+                ],
+           "First Night": [
+                "Thing1",
+                "Thing2"
+                ],
+           "Every Night": [
+                "Thing1",
+                "Thing2"
+                ],
+           "First Day": [
+                "Thing1",
+                "Thing2"
+                ],
+           "Every Day": [
+                "Thing1",
+                "Thing 2"
+                ],
+           "Other Nights": [
+                "Thing1",
+                "Thing2"
+                ],
+           "Other Days": [
+                "Thing1",
+                "Thing2"
+                ],
+           "End of Game": [
+                "Thing1",
+                "Thing2"
+                ]
+           },
+    "examples": [
+                "Example1",
+                "Example2"
+                ]
+},
+"riot":
+{
+    "name": "Riot",
+    "team": "Demons",
+    "image": "https://images.klutzbanana.com/characters_official/riot_e.png",
+    "ability": "On day 3, Minions become Riot & nominees die but nominate an alive player immediately. This must happen.",
+    "flavor": "Flavor",
+    "purpose": "Purpose",
+    "summary": [
+             "Summary1",
+             "Summary2"
+             ],
+    "run": {
+           "Setup": [
+                "Thing1",
+                "Thing2"
+                ],
+           "Anytime": [
+                "Thing1",
+                "Thing2"
+                ],
+           "First Night": [
+                "Thing1",
+                "Thing2"
+                ],
+           "Every Night": [
+                "Thing1",
+                "Thing2"
+                ],
+           "First Day": [
+                "Thing1",
+                "Thing2"
+                ],
+           "Every Day": [
+                "Thing1",
+                "Thing 2"
+                ],
+           "Other Nights": [
+                "Thing1",
+                "Thing2"
+                ],
+           "Other Days": [
+                "Thing1",
+                "Thing2"
+                ],
+           "End of Game": [
+                "Thing1",
+                "Thing2"
+                ]
+           },
+    "examples": [
+                "Example1",
+                "Example2"
+                ]
+},
+"shabaloth":
+{
+    "name": "Shabaloth",
+    "team": "Demons",
+    "image": "https://images.klutzbanana.com/characters_official/shabaloth_e.png",
+    "ability": "Each night*, choose 2 players: they die. A dead player you chose last night might be regurgitated.",
+    "flavor": "Flavor",
+    "purpose": "Purpose",
+    "summary": [
+             "Summary1",
+             "Summary2"
+             ],
+    "run": {
+           "Setup": [
+                "Thing1",
+                "Thing2"
+                ],
+           "Anytime": [
+                "Thing1",
+                "Thing2"
+                ],
+           "First Night": [
+                "Thing1",
+                "Thing2"
+                ],
+           "Every Night": [
+                "Thing1",
+                "Thing2"
+                ],
+           "First Day": [
+                "Thing1",
+                "Thing2"
+                ],
+           "Every Day": [
+                "Thing1",
+                "Thing 2"
+                ],
+           "Other Nights": [
+                "Thing1",
+                "Thing2"
+                ],
+           "Other Days": [
+                "Thing1",
+                "Thing2"
+                ],
+           "End of Game": [
+                "Thing1",
+                "Thing2"
+                ]
+           },
+    "examples": [
+                "Example1",
+                "Example2"
+                ]
+},
+"vigormortis":
+{
+    "name": "Vigormortis",
+    "team": "Demons",
+    "image": "https://images.klutzbanana.com/characters_official/vigormortis_e.png",
+    "ability": "Each night*, choose a player: they die. Minions you kill keep their ability & poison 1 Townsfolk neighbor. [-1 Outsider]",
+    "flavor": "Flavor",
+    "purpose": "Purpose",
+    "summary": [
+             "Summary1",
+             "Summary2"
+             ],
+    "run": {
+           "Setup": [
+                "Thing1",
+                "Thing2"
+                ],
+           "Anytime": [
+                "Thing1",
+                "Thing2"
+                ],
+           "First Night": [
+                "Thing1",
+                "Thing2"
+                ],
+           "Every Night": [
+                "Thing1",
+                "Thing2"
+                ],
+           "First Day": [
+                "Thing1",
+                "Thing2"
+                ],
+           "Every Day": [
+                "Thing1",
+                "Thing 2"
+                ],
+           "Other Nights": [
+                "Thing1",
+                "Thing2"
+                ],
+           "Other Days": [
+                "Thing1",
+                "Thing2"
+                ],
+           "End of Game": [
+                "Thing1",
+                "Thing2"
+                ]
+           },
+    "examples": [
+                "Example1",
+                "Example2"
+                ]
+},
+"vortox":
+{
+    "name": "Vortox",
+    "team": "Demons",
+    "image": "https://images.klutzbanana.com/characters_official/vortox_e.png",
+    "ability": "Each night*, choose a player: they die. Townsfolk abilities yield false info. Each day, if no-one is executed, evil wins.",
+    "flavor": "Flavor",
+    "purpose": "Purpose",
+    "summary": [
+             "Summary1",
+             "Summary2"
+             ],
+    "run": {
+           "Setup": [
+                "Thing1",
+                "Thing2"
+                ],
+           "Anytime": [
+                "Thing1",
+                "Thing2"
+                ],
+           "First Night": [
+                "Thing1",
+                "Thing2"
+                ],
+           "Every Night": [
+                "Thing1",
+                "Thing2"
+                ],
+           "First Day": [
+                "Thing1",
+                "Thing2"
+                ],
+           "Every Day": [
+                "Thing1",
+                "Thing 2"
+                ],
+           "Other Nights": [
+                "Thing1",
+                "Thing2"
+                ],
+           "Other Days": [
+                "Thing1",
+                "Thing2"
+                ],
+           "End of Game": [
+                "Thing1",
+                "Thing2"
+                ]
+           },
+    "examples": [
+                "Example1",
+                "Example2"
+                ]
+},
+"yaggababble":
+{
+    "name": "Yaggababble",
+    "team": "Demons",
+    "image": "https://images.klutzbanana.com/characters_official/yaggababble_e.png",
+    "ability": "You start knowing a secret phrase. For each time you said it publicly today, a player might die.",
+    "flavor": "Flavor",
+    "purpose": "Purpose",
+    "summary": [
+             "Summary1",
+             "Summary2"
+             ],
+    "run": {
+           "Setup": [
+                "Thing1",
+                "Thing2"
+                ],
+           "Anytime": [
+                "Thing1",
+                "Thing2"
+                ],
+           "First Night": [
+                "Thing1",
+                "Thing2"
+                ],
+           "Every Night": [
+                "Thing1",
+                "Thing2"
+                ],
+           "First Day": [
+                "Thing1",
+                "Thing2"
+                ],
+           "Every Day": [
+                "Thing1",
+                "Thing 2"
+                ],
+           "Other Nights": [
+                "Thing1",
+                "Thing2"
+                ],
+           "Other Days": [
+                "Thing1",
+                "Thing2"
+                ],
+           "End of Game": [
+                "Thing1",
+                "Thing2"
+                ]
+           },
+    "examples": [
+                "Example1",
+                "Example2"
+                ]
+},
+"zombuul":
+{
+    "name": "Zombuul",
+    "team": "Demons",
+    "image": "https://images.klutzbanana.com/characters_official/zombuul_e.png",
+    "ability": "Each night*, if no-one died today, choose a player: they die. The 1st time you die, you live but register as dead.",
+    "flavor": "Flavor",
+    "purpose": "Purpose",
+    "summary": [
+             "Summary1",
+             "Summary2"
+             ],
+    "run": {
+           "Setup": [
+                "Thing1",
+                "Thing2"
+                ],
+           "Anytime": [
+                "Thing1",
+                "Thing2"
+                ],
+           "First Night": [
+                "Thing1",
+                "Thing2"
+                ],
+           "Every Night": [
+                "Thing1",
+                "Thing2"
+                ],
+           "First Day": [
+                "Thing1",
+                "Thing2"
+                ],
+           "Every Day": [
+                "Thing1",
+                "Thing 2"
+                ],
+           "Other Nights": [
+                "Thing1",
+                "Thing2"
+                ],
+           "Other Days": [
+                "Thing1",
+                "Thing2"
+                ],
+           "End of Game": [
+                "Thing1",
+                "Thing2"
+                ]
+           },
+    "examples": [
+                "Example1",
+                "Example2"
+                ]
+},
+"apprentice":
+{
+    "name": "Apprentice",
+    "team": "Travellers",
+    "image": "https://images.klutzbanana.com/characters_official/apprentice.png",
+    "ability": "On your 1st night, you gain a Townsfolk ability (if good), or a Minion ability (if evil)",
+    "flavor": "Flavor",
+    "purpose": "Purpose",
+    "summary": [
+             "Summary1",
+             "Summary2"
+             ],
+    "run": {
+           "Setup": [
+                "Thing1",
+                "Thing2"
+                ],
+           "Anytime": [
+                "Thing1",
+                "Thing2"
+                ],
+           "First Night": [
+                "Thing1",
+                "Thing2"
+                ],
+           "Every Night": [
+                "Thing1",
+                "Thing2"
+                ],
+           "First Day": [
+                "Thing1",
+                "Thing2"
+                ],
+           "Every Day": [
+                "Thing1",
+                "Thing 2"
+                ],
+           "Other Nights": [
+                "Thing1",
+                "Thing2"
+                ],
+           "Other Days": [
+                "Thing1",
+                "Thing2"
+                ],
+           "End of Game": [
+                "Thing1",
+                "Thing2"
+                ]
+           },
+    "examples": [
+                "Example1",
+                "Example2"
+                ]
+},
+"barista":
+{
+    "name": "Barista",
+    "team": "Travellers",
+    "image": "https://images.klutzbanana.com/characters_official/barista.png",
+    "ability": "Each night, until dusk, 1) a player becomes sober, healthy & gets true info, or 2) their ability works twice. They learn which.",
+    "flavor": "Flavor",
+    "purpose": "Purpose",
+    "summary": [
+             "Summary1",
+             "Summary2"
+             ],
+    "run": {
+           "Setup": [
+                "Thing1",
+                "Thing2"
+                ],
+           "Anytime": [
+                "Thing1",
+                "Thing2"
+                ],
+           "First Night": [
+                "Thing1",
+                "Thing2"
+                ],
+           "Every Night": [
+                "Thing1",
+                "Thing2"
+                ],
+           "First Day": [
+                "Thing1",
+                "Thing2"
+                ],
+           "Every Day": [
+                "Thing1",
+                "Thing 2"
+                ],
+           "Other Nights": [
+                "Thing1",
+                "Thing2"
+                ],
+           "Other Days": [
+                "Thing1",
+                "Thing2"
+                ],
+           "End of Game": [
+                "Thing1",
+                "Thing2"
+                ]
+           },
+    "examples": [
+                "Example1",
+                "Example2"
+                ]
+},
+"beggar":
+{
+    "name": "Beggar",
+    "team": "Travellers",
+    "image": "https://images.klutzbanana.com/characters_official/beggar.png",
+    "ability": "You must use a vote token to vote. If a dead player gives you theirs, you learn their alignment. You are sober & healthy.",
+    "flavor": "Flavor",
+    "purpose": "Purpose",
+    "summary": [
+             "Summary1",
+             "Summary2"
+             ],
+    "run": {
+           "Setup": [
+                "Thing1",
+                "Thing2"
+                ],
+           "Anytime": [
+                "Thing1",
+                "Thing2"
+                ],
+           "First Night": [
+                "Thing1",
+                "Thing2"
+                ],
+           "Every Night": [
+                "Thing1",
+                "Thing2"
+                ],
+           "First Day": [
+                "Thing1",
+                "Thing2"
+                ],
+           "Every Day": [
+                "Thing1",
+                "Thing 2"
+                ],
+           "Other Nights": [
+                "Thing1",
+                "Thing2"
+                ],
+           "Other Days": [
+                "Thing1",
+                "Thing2"
+                ],
+           "End of Game": [
+                "Thing1",
+                "Thing2"
+                ]
+           },
+    "examples": [
+                "Example1",
+                "Example2"
+                ]
+},
+"bishop":
+{
+    "name": "Bishop",
+    "team": "Travellers",
+    "image": "https://images.klutzbanana.com/characters_official/bishop.png",
+    "ability": "Only the Storyteller can nominate. At least 1 opposing player must be nominated each day.",
+    "flavor": "Flavor",
+    "purpose": "Purpose",
+    "summary": [
+             "Summary1",
+             "Summary2"
+             ],
+    "run": {
+           "Setup": [
+                "Thing1",
+                "Thing2"
+                ],
+           "Anytime": [
+                "Thing1",
+                "Thing2"
+                ],
+           "First Night": [
+                "Thing1",
+                "Thing2"
+                ],
+           "Every Night": [
+                "Thing1",
+                "Thing2"
+                ],
+           "First Day": [
+                "Thing1",
+                "Thing2"
+                ],
+           "Every Day": [
+                "Thing1",
+                "Thing 2"
+                ],
+           "Other Nights": [
+                "Thing1",
+                "Thing2"
+                ],
+           "Other Days": [
+                "Thing1",
+                "Thing2"
+                ],
+           "End of Game": [
+                "Thing1",
+                "Thing2"
+                ]
+           },
+    "examples": [
+                "Example1",
+                "Example2"
+                ]
+},
+"bonecollector":
+{
+    "name": "Bone Collector",
+    "team": "Travellers",
+    "image": "https://images.klutzbanana.com/characters_official/bonecollector.png",
+    "ability": "Once per game, at night*, choose a dead player: they regain their ability until dusk.",
+    "flavor": "Flavor",
+    "purpose": "Purpose",
+    "summary": [
+             "Summary1",
+             "Summary2"
+             ],
+    "run": {
+           "Setup": [
+                "Thing1",
+                "Thing2"
+                ],
+           "Anytime": [
+                "Thing1",
+                "Thing2"
+                ],
+           "First Night": [
+                "Thing1",
+                "Thing2"
+                ],
+           "Every Night": [
+                "Thing1",
+                "Thing2"
+                ],
+           "First Day": [
+                "Thing1",
+                "Thing2"
+                ],
+           "Every Day": [
+                "Thing1",
+                "Thing 2"
+                ],
+           "Other Nights": [
+                "Thing1",
+                "Thing2"
+                ],
+           "Other Days": [
+                "Thing1",
+                "Thing2"
+                ],
+           "End of Game": [
+                "Thing1",
+                "Thing2"
+                ]
+           },
+    "examples": [
+                "Example1",
+                "Example2"
+                ]
+},
+"bureaucrat":
+{
+    "name": "Bureaucrat",
+    "team": "Travellers",
+    "image": "https://images.klutzbanana.com/characters_official/bureaucrat.png",
+    "ability": "Each night, choose a player (not yourself): their vote counts as 3 votes tomorrow.",
+    "flavor": "Flavor",
+    "purpose": "Purpose",
+    "summary": [
+             "Summary1",
+             "Summary2"
+             ],
+    "run": {
+           "Setup": [
+                "Thing1",
+                "Thing2"
+                ],
+           "Anytime": [
+                "Thing1",
+                "Thing2"
+                ],
+           "First Night": [
+                "Thing1",
+                "Thing2"
+                ],
+           "Every Night": [
+                "Thing1",
+                "Thing2"
+                ],
+           "First Day": [
+                "Thing1",
+                "Thing2"
+                ],
+           "Every Day": [
+                "Thing1",
+                "Thing 2"
+                ],
+           "Other Nights": [
+                "Thing1",
+                "Thing2"
+                ],
+           "Other Days": [
+                "Thing1",
+                "Thing2"
+                ],
+           "End of Game": [
+                "Thing1",
+                "Thing2"
+                ]
+           },
+    "examples": [
+                "Example1",
+                "Example2"
+                ]
+},
+"butcher":
+{
+    "name": "Butcher",
+    "team": "Travellers",
+    "image": "https://images.klutzbanana.com/characters_official/butcher.png",
+    "ability": "Each day, after the 1st execution, you may nominate again.",
+    "flavor": "Flavor",
+    "purpose": "Purpose",
+    "summary": [
+             "Summary1",
+             "Summary2"
+             ],
+    "run": {
+           "Setup": [
+                "Thing1",
+                "Thing2"
+                ],
+           "Anytime": [
+                "Thing1",
+                "Thing2"
+                ],
+           "First Night": [
+                "Thing1",
+                "Thing2"
+                ],
+           "Every Night": [
+                "Thing1",
+                "Thing2"
+                ],
+           "First Day": [
+                "Thing1",
+                "Thing2"
+                ],
+           "Every Day": [
+                "Thing1",
+                "Thing 2"
+                ],
+           "Other Nights": [
+                "Thing1",
+                "Thing2"
+                ],
+           "Other Days": [
+                "Thing1",
+                "Thing2"
+                ],
+           "End of Game": [
+                "Thing1",
+                "Thing2"
+                ]
+           },
+    "examples": [
+                "Example1",
+                "Example2"
+                ]
+},
+"cacklejack":
+{
+    "name": "Cacklejack",
+    "team": "Travellers",
+    "image": "https://images.klutzbanana.com/characters_official/cacklejack.png",
+    "ability": "Each day, choose a player: a different player changes character tonight.",
+    "flavor": "Flavor",
+    "purpose": "Purpose",
+    "summary": [
+             "Summary1",
+             "Summary2"
+             ],
+    "run": {
+           "Setup": [
+                "Thing1",
+                "Thing2"
+                ],
+           "Anytime": [
+                "Thing1",
+                "Thing2"
+                ],
+           "First Night": [
+                "Thing1",
+                "Thing2"
+                ],
+           "Every Night": [
+                "Thing1",
+                "Thing2"
+                ],
+           "First Day": [
+                "Thing1",
+                "Thing2"
+                ],
+           "Every Day": [
+                "Thing1",
+                "Thing 2"
+                ],
+           "Other Nights": [
+                "Thing1",
+                "Thing2"
+                ],
+           "Other Days": [
+                "Thing1",
+                "Thing2"
+                ],
+           "End of Game": [
+                "Thing1",
+                "Thing2"
+                ]
+           },
+    "examples": [
+                "Example1",
+                "Example2"
+                ]
+},
+"deviant":
+{
+    "name": "Deviant",
+    "team": "Travellers",
+    "image": "https://images.klutzbanana.com/characters_official/deviant.png",
+    "ability": "If you were funny today, you cannot die by exile.",
+    "flavor": "Flavor",
+    "purpose": "Purpose",
+    "summary": [
+             "Summary1",
+             "Summary2"
+             ],
+    "run": {
+           "Setup": [
+                "Thing1",
+                "Thing2"
+                ],
+           "Anytime": [
+                "Thing1",
+                "Thing2"
+                ],
+           "First Night": [
+                "Thing1",
+                "Thing2"
+                ],
+           "Every Night": [
+                "Thing1",
+                "Thing2"
+                ],
+           "First Day": [
+                "Thing1",
+                "Thing2"
+                ],
+           "Every Day": [
+                "Thing1",
+                "Thing 2"
+                ],
+           "Other Nights": [
+                "Thing1",
+                "Thing2"
+                ],
+           "Other Days": [
+                "Thing1",
+                "Thing2"
+                ],
+           "End of Game": [
+                "Thing1",
+                "Thing2"
+                ]
+           },
+    "examples": [
+                "Example1",
+                "Example2"
+                ]
+},
+"gangster":
+{
+    "name": "Gangster",
+    "team": "Travellers",
+    "image": "https://images.klutzbanana.com/characters_official/gangster.png",
+    "ability": "Once per day, you may choose to kill an alive neighbor, if your other alive neighbor agrees.",
+    "flavor": "Flavor",
+    "purpose": "Purpose",
+    "summary": [
+             "Summary1",
+             "Summary2"
+             ],
+    "run": {
+           "Setup": [
+                "Thing1",
+                "Thing2"
+                ],
+           "Anytime": [
+                "Thing1",
+                "Thing2"
+                ],
+           "First Night": [
+                "Thing1",
+                "Thing2"
+                ],
+           "Every Night": [
+                "Thing1",
+                "Thing2"
+                ],
+           "First Day": [
+                "Thing1",
+                "Thing2"
+                ],
+           "Every Day": [
+                "Thing1",
+                "Thing 2"
+                ],
+           "Other Nights": [
+                "Thing1",
+                "Thing2"
+                ],
+           "Other Days": [
+                "Thing1",
+                "Thing2"
+                ],
+           "End of Game": [
+                "Thing1",
+                "Thing2"
+                ]
+           },
+    "examples": [
+                "Example1",
+                "Example2"
+                ]
+},
+"gnome":
+{
+    "name": "Gnome",
+    "team": "Travellers",
+    "image": "https://images.klutzbanana.com/characters_official/gnome.png",
+    "ability": "All players start knowing a player of your alignment. You may choose to kill anyone who nominates them.",
+    "flavor": "Flavor",
+    "purpose": "Purpose",
+    "summary": [
+             "Summary1",
+             "Summary2"
+             ],
+    "run": {
+           "Setup": [
+                "Thing1",
+                "Thing2"
+                ],
+           "Anytime": [
+                "Thing1",
+                "Thing2"
+                ],
+           "First Night": [
+                "Thing1",
+                "Thing2"
+                ],
+           "Every Night": [
+                "Thing1",
+                "Thing2"
+                ],
+           "First Day": [
+                "Thing1",
+                "Thing2"
+                ],
+           "Every Day": [
+                "Thing1",
+                "Thing 2"
+                ],
+           "Other Nights": [
+                "Thing1",
+                "Thing2"
+                ],
+           "Other Days": [
+                "Thing1",
+                "Thing2"
+                ],
+           "End of Game": [
+                "Thing1",
+                "Thing2"
+                ]
+           },
+    "examples": [
+                "Example1",
+                "Example2"
+                ]
+},
+"gunslinger":
+{
+    "name": "Gunslinger",
+    "team": "Travellers",
+    "image": "https://images.klutzbanana.com/characters_official/gunslinger.png",
+    "ability": "Each day, after the 1st vote has been tallied, you may choose a player that voted: they die.",
+    "flavor": "Flavor",
+    "purpose": "Purpose",
+    "summary": [
+             "Summary1",
+             "Summary2"
+             ],
+    "run": {
+           "Setup": [
+                "Thing1",
+                "Thing2"
+                ],
+           "Anytime": [
+                "Thing1",
+                "Thing2"
+                ],
+           "First Night": [
+                "Thing1",
+                "Thing2"
+                ],
+           "Every Night": [
+                "Thing1",
+                "Thing2"
+                ],
+           "First Day": [
+                "Thing1",
+                "Thing2"
+                ],
+           "Every Day": [
+                "Thing1",
+                "Thing 2"
+                ],
+           "Other Nights": [
+                "Thing1",
+                "Thing2"
+                ],
+           "Other Days": [
+                "Thing1",
+                "Thing2"
+                ],
+           "End of Game": [
+                "Thing1",
+                "Thing2"
+                ]
+           },
+    "examples": [
+                "Example1",
+                "Example2"
+                ]
+},
+"harlot":
+{
+    "name": "Harlot",
+    "team": "Travellers",
+    "image": "https://images.klutzbanana.com/characters_official/harlot.png",
+    "ability": "Each night*, choose a living player: if they agree, you learn their character, but you both might die.",
+    "flavor": "Flavor",
+    "purpose": "Purpose",
+    "summary": [
+             "Summary1",
+             "Summary2"
+             ],
+    "run": {
+           "Setup": [
+                "Thing1",
+                "Thing2"
+                ],
+           "Anytime": [
+                "Thing1",
+                "Thing2"
+                ],
+           "First Night": [
+                "Thing1",
+                "Thing2"
+                ],
+           "Every Night": [
+                "Thing1",
+                "Thing2"
+                ],
+           "First Day": [
+                "Thing1",
+                "Thing2"
+                ],
+           "Every Day": [
+                "Thing1",
+                "Thing 2"
+                ],
+           "Other Nights": [
+                "Thing1",
+                "Thing2"
+                ],
+           "Other Days": [
+                "Thing1",
+                "Thing2"
+                ],
+           "End of Game": [
+                "Thing1",
+                "Thing2"
+                ]
+           },
+    "examples": [
+                "Example1",
+                "Example2"
+                ]
+},
+"judge":
+{
+    "name": "Judge",
+    "team": "Travellers",
+    "image": "https://images.klutzbanana.com/characters_official/judge.png",
+    "ability": "Once per game, if another player nominated, you may choose to force the current execution to pass or fail.",
+    "flavor": "Flavor",
+    "purpose": "Purpose",
+    "summary": [
+             "Summary1",
+             "Summary2"
+             ],
+    "run": {
+           "Setup": [
+                "Thing1",
+                "Thing2"
+                ],
+           "Anytime": [
+                "Thing1",
+                "Thing2"
+                ],
+           "First Night": [
+                "Thing1",
+                "Thing2"
+                ],
+           "Every Night": [
+                "Thing1",
+                "Thing2"
+                ],
+           "First Day": [
+                "Thing1",
+                "Thing2"
+                ],
+           "Every Day": [
+                "Thing1",
+                "Thing 2"
+                ],
+           "Other Nights": [
+                "Thing1",
+                "Thing2"
+                ],
+           "Other Days": [
+                "Thing1",
+                "Thing2"
+                ],
+           "End of Game": [
+                "Thing1",
+                "Thing2"
+                ]
+           },
+    "examples": [
+                "Example1",
+                "Example2"
+                ]
+},
+"matron":
+{
+    "name": "Matron",
+    "team": "Travellers",
+    "image": "https://images.klutzbanana.com/characters_official/matron.png",
+    "ability": "Each day, you may choose up to 3 sets of 2 players to swap seats. Players may not leave their seats to talk in private.",
+    "flavor": "Flavor",
+    "purpose": "Purpose",
+    "summary": [
+             "Summary1",
+             "Summary2"
+             ],
+    "run": {
+           "Setup": [
+                "Thing1",
+                "Thing2"
+                ],
+           "Anytime": [
+                "Thing1",
+                "Thing2"
+                ],
+           "First Night": [
+                "Thing1",
+                "Thing2"
+                ],
+           "Every Night": [
+                "Thing1",
+                "Thing2"
+                ],
+           "First Day": [
+                "Thing1",
+                "Thing2"
+                ],
+           "Every Day": [
+                "Thing1",
+                "Thing 2"
+                ],
+           "Other Nights": [
+                "Thing1",
+                "Thing2"
+                ],
+           "Other Days": [
+                "Thing1",
+                "Thing2"
+                ],
+           "End of Game": [
+                "Thing1",
+                "Thing2"
+                ]
+           },
+    "examples": [
+                "Example1",
+                "Example2"
+                ]
+},
+"scapegoat":
+{
+    "name": "Scapegoat",
+    "team": "Travellers",
+    "image": "https://images.klutzbanana.com/characters_official/scapegoat.png",
+    "ability": "If a player of your alignment is executed, you might be executed instead.",
+    "flavor": "Flavor",
+    "purpose": "Purpose",
+    "summary": [
+             "Summary1",
+             "Summary2"
+             ],
+    "run": {
+           "Setup": [
+                "Thing1",
+                "Thing2"
+                ],
+           "Anytime": [
+                "Thing1",
+                "Thing2"
+                ],
+           "First Night": [
+                "Thing1",
+                "Thing2"
+                ],
+           "Every Night": [
+                "Thing1",
+                "Thing2"
+                ],
+           "First Day": [
+                "Thing1",
+                "Thing2"
+                ],
+           "Every Day": [
+                "Thing1",
+                "Thing 2"
+                ],
+           "Other Nights": [
+                "Thing1",
+                "Thing2"
+                ],
+           "Other Days": [
+                "Thing1",
+                "Thing2"
+                ],
+           "End of Game": [
+                "Thing1",
+                "Thing2"
+                ]
+           },
+    "examples": [
+                "Example1",
+                "Example2"
+                ]
+},
+"thief":
+{
+    "name": "Thief",
+    "team": "Travellers",
+    "image": "https://images.klutzbanana.com/characters_official/thief.png",
+    "ability": "Each night, choose a player (not yourself): their vote counts negatively tomorrow.",
+    "flavor": "Flavor",
+    "purpose": "Purpose",
+    "summary": [
+             "Summary1",
+             "Summary2"
+             ],
+    "run": {
+           "Setup": [
+                "Thing1",
+                "Thing2"
+                ],
+           "Anytime": [
+                "Thing1",
+                "Thing2"
+                ],
+           "First Night": [
+                "Thing1",
+                "Thing2"
+                ],
+           "Every Night": [
+                "Thing1",
+                "Thing2"
+                ],
+           "First Day": [
+                "Thing1",
+                "Thing2"
+                ],
+           "Every Day": [
+                "Thing1",
+                "Thing 2"
+                ],
+           "Other Nights": [
+                "Thing1",
+                "Thing2"
+                ],
+           "Other Days": [
+                "Thing1",
+                "Thing2"
+                ],
+           "End of Game": [
+                "Thing1",
+                "Thing2"
+                ]
+           },
+    "examples": [
+                "Example1",
+                "Example2"
+                ]
+},
+"voudon":
+{
+    "name": "Voudon",
+    "team": "Travellers",
+    "image": "https://images.klutzbanana.com/characters_official/voudon.png",
+    "ability": "Only you & the dead can vote. They don't need a vote token to do so. A 50% majority isn't required.",
+    "flavor": "Flavor",
+    "purpose": "Purpose",
+    "summary": [
+             "Summary1",
+             "Summary2"
+             ],
+    "run": {
+           "Setup": [
+                "Thing1",
+                "Thing2"
+                ],
+           "Anytime": [
+                "Thing1",
+                "Thing2"
+                ],
+           "First Night": [
+                "Thing1",
+                "Thing2"
+                ],
+           "Every Night": [
+                "Thing1",
+                "Thing2"
+                ],
+           "First Day": [
+                "Thing1",
+                "Thing2"
+                ],
+           "Every Day": [
+                "Thing1",
+                "Thing 2"
+                ],
+           "Other Nights": [
+                "Thing1",
+                "Thing2"
+                ],
+           "Other Days": [
+                "Thing1",
+                "Thing2"
+                ],
+           "End of Game": [
+                "Thing1",
+                "Thing2"
+                ]
+           },
+    "examples": [
+                "Example1",
+                "Example2"
+                ]
+},
+"angel":
+{
+    "name": "Angel",
+    "team": "Fabled",
+    "image": "https://images.klutzbanana.com/characters_official/angel.png",
+    "ability": "Something bad might happen to whoever is most responsible for the death of a new player.",
+    "flavor": "Flavor",
+    "purpose": "Purpose",
+    "summary": [
+             "Summary1",
+             "Summary2"
+             ],
+    "run": {
+           "Setup": [
+                "Thing1",
+                "Thing2"
+                ],
+           "Anytime": [
+                "Thing1",
+                "Thing2"
+                ],
+           "First Night": [
+                "Thing1",
+                "Thing2"
+                ],
+           "Every Night": [
+                "Thing1",
+                "Thing2"
+                ],
+           "First Day": [
+                "Thing1",
+                "Thing2"
+                ],
+           "Every Day": [
+                "Thing1",
+                "Thing 2"
+                ],
+           "Other Nights": [
+                "Thing1",
+                "Thing2"
+                ],
+           "Other Days": [
+                "Thing1",
+                "Thing2"
+                ],
+           "End of Game": [
+                "Thing1",
+                "Thing2"
+                ]
+           },
+    "examples": [
+                "Example1",
+                "Example2"
+                ]
+},
+"buddhist":
+{
+    "name": "Buddhist",
+    "team": "Fabled",
+    "image": "https://images.klutzbanana.com/characters_official/buddhist.png",
+    "ability": "https://images.klutzbanana.com/characters_official/buddhist.png",
+    "flavor": "Flavor",
+    "purpose": "Purpose",
+    "summary": [
+             "Summary1",
+             "Summary2"
+             ],
+    "run": {
+           "Setup": [
+                "Thing1",
+                "Thing2"
+                ],
+           "Anytime": [
+                "Thing1",
+                "Thing2"
+                ],
+           "First Night": [
+                "Thing1",
+                "Thing2"
+                ],
+           "Every Night": [
+                "Thing1",
+                "Thing2"
+                ],
+           "First Day": [
+                "Thing1",
+                "Thing2"
+                ],
+           "Every Day": [
+                "Thing1",
+                "Thing 2"
+                ],
+           "Other Nights": [
+                "Thing1",
+                "Thing2"
+                ],
+           "Other Days": [
+                "Thing1",
+                "Thing2"
+                ],
+           "End of Game": [
+                "Thing1",
+                "Thing2"
+                ]
+           },
+    "examples": [
+                "Example1",
+                "Example2"
+                ]
+},
+"deusexfiasco":
+{
+    "name": "Deus ex Fiasco",
+    "team": "Fabled",
+    "image": "https://images.klutzbanana.com/characters_official/deusexfiasco.png",
+    "ability": "At least once per game, the Storyteller will make a mistake, correct it, and publicly admit to it.",
+    "flavor": "Flavor",
+    "purpose": "Purpose",
+    "summary": [
+             "Summary1",
+             "Summary2"
+             ],
+    "run": {
+           "Setup": [
+                "Thing1",
+                "Thing2"
+                ],
+           "Anytime": [
+                "Thing1",
+                "Thing2"
+                ],
+           "First Night": [
+                "Thing1",
+                "Thing2"
+                ],
+           "Every Night": [
+                "Thing1",
+                "Thing2"
+                ],
+           "First Day": [
+                "Thing1",
+                "Thing2"
+                ],
+           "Every Day": [
+                "Thing1",
+                "Thing 2"
+                ],
+           "Other Nights": [
+                "Thing1",
+                "Thing2"
+                ],
+           "Other Days": [
+                "Thing1",
+                "Thing2"
+                ],
+           "End of Game": [
+                "Thing1",
+                "Thing2"
+                ]
+           },
+    "examples": [
+                "Example1",
+                "Example2"
+                ]
+},
+"djinn":
+{
+    "name": "Djinn",
+    "team": "Fabled",
+    "image": "https://images.klutzbanana.com/characters_official/djinn.png",
+    "ability": "Use the Djinn's special rule. All players know what it is.",
+    "flavor": "Flavor",
+    "purpose": "Purpose",
+    "summary": [
+             "Summary1",
+             "Summary2"
+             ],
+    "run": {
+           "Setup": [
+                "Thing1",
+                "Thing2"
+                ],
+           "Anytime": [
+                "Thing1",
+                "Thing2"
+                ],
+           "First Night": [
+                "Thing1",
+                "Thing2"
+                ],
+           "Every Night": [
+                "Thing1",
+                "Thing2"
+                ],
+           "First Day": [
+                "Thing1",
+                "Thing2"
+                ],
+           "Every Day": [
+                "Thing1",
+                "Thing 2"
+                ],
+           "Other Nights": [
+                "Thing1",
+                "Thing2"
+                ],
+           "Other Days": [
+                "Thing1",
+                "Thing2"
+                ],
+           "End of Game": [
+                "Thing1",
+                "Thing2"
+                ]
+           },
+    "examples": [
+                "Example1",
+                "Example2"
+                ]
+},
+"doomsayer":
+{
+    "name": "Doomsayer",
+    "team": "Fabled",
+    "image": "https://images.klutzbanana.com/characters_official/doomsayer.png",
+    "ability": "If 4 or more players live, each living player may publicly choose (once per game) that a player of their own alignment dies.",
+    "flavor": "Flavor",
+    "purpose": "Purpose",
+    "summary": [
+             "Summary1",
+             "Summary2"
+             ],
+    "run": {
+           "Setup": [
+                "Thing1",
+                "Thing2"
+                ],
+           "Anytime": [
+                "Thing1",
+                "Thing2"
+                ],
+           "First Night": [
+                "Thing1",
+                "Thing2"
+                ],
+           "Every Night": [
+                "Thing1",
+                "Thing2"
+                ],
+           "First Day": [
+                "Thing1",
+                "Thing2"
+                ],
+           "Every Day": [
+                "Thing1",
+                "Thing 2"
+                ],
+           "Other Nights": [
+                "Thing1",
+                "Thing2"
+                ],
+           "Other Days": [
+                "Thing1",
+                "Thing2"
+                ],
+           "End of Game": [
+                "Thing1",
+                "Thing2"
+                ]
+           },
+    "examples": [
+                "Example1",
+                "Example2"
+                ]
+},
+"duchess":
+{
+    "name": "Duchess",
+    "team": "Fabled",
+    "image": "https://images.klutzbanana.com/characters_official/duchess.png",
+    "ability": "Each day, 3 players may choose to visit you. At night*, each visitor learns how many visitors are evil, but 1 gets false info.",
+    "flavor": "Flavor",
+    "purpose": "Purpose",
+    "summary": [
+             "Summary1",
+             "Summary2"
+             ],
+    "run": {
+           "Setup": [
+                "Thing1",
+                "Thing2"
+                ],
+           "Anytime": [
+                "Thing1",
+                "Thing2"
+                ],
+           "First Night": [
+                "Thing1",
+                "Thing2"
+                ],
+           "Every Night": [
+                "Thing1",
+                "Thing2"
+                ],
+           "First Day": [
+                "Thing1",
+                "Thing2"
+                ],
+           "Every Day": [
+                "Thing1",
+                "Thing 2"
+                ],
+           "Other Nights": [
+                "Thing1",
+                "Thing2"
+                ],
+           "Other Days": [
+                "Thing1",
+                "Thing2"
+                ],
+           "End of Game": [
+                "Thing1",
+                "Thing2"
+                ]
+           },
+    "examples": [
+                "Example1",
+                "Example2"
+                ]
+},
+"ferryman":
+{
+    "name": "Ferryman",
+    "team": "Fabled",
+    "image": "https://images.klutzbanana.com/characters_official/ferryman.png",
+    "ability": "On the final day, all dead players regain their vote token.",
+    "flavor": "Flavor",
+    "purpose": "Purpose",
+    "summary": [
+             "Summary1",
+             "Summary2"
+             ],
+    "run": {
+           "Setup": [
+                "Thing1",
+                "Thing2"
+                ],
+           "Anytime": [
+                "Thing1",
+                "Thing2"
+                ],
+           "First Night": [
+                "Thing1",
+                "Thing2"
+                ],
+           "Every Night": [
+                "Thing1",
+                "Thing2"
+                ],
+           "First Day": [
+                "Thing1",
+                "Thing2"
+                ],
+           "Every Day": [
+                "Thing1",
+                "Thing 2"
+                ],
+           "Other Nights": [
+                "Thing1",
+                "Thing2"
+                ],
+           "Other Days": [
+                "Thing1",
+                "Thing2"
+                ],
+           "End of Game": [
+                "Thing1",
+                "Thing2"
+                ]
+           },
+    "examples": [
+                "Example1",
+                "Example2"
+                ]
+},
+"fibbin":
+{
+    "name": "Fibbin",
+    "team": "Fabled",
+    "image": "https://images.klutzbanana.com/characters_official/fibbin.png",
+    "ability": "Once per game, 1 good player might get incorrect information.",
+    "flavor": "Flavor",
+    "purpose": "Purpose",
+    "summary": [
+             "Summary1",
+             "Summary2"
+             ],
+    "run": {
+           "Setup": [
+                "Thing1",
+                "Thing2"
+                ],
+           "Anytime": [
+                "Thing1",
+                "Thing2"
+                ],
+           "First Night": [
+                "Thing1",
+                "Thing2"
+                ],
+           "Every Night": [
+                "Thing1",
+                "Thing2"
+                ],
+           "First Day": [
+                "Thing1",
+                "Thing2"
+                ],
+           "Every Day": [
+                "Thing1",
+                "Thing 2"
+                ],
+           "Other Nights": [
+                "Thing1",
+                "Thing2"
+                ],
+           "Other Days": [
+                "Thing1",
+                "Thing2"
+                ],
+           "End of Game": [
+                "Thing1",
+                "Thing2"
+                ]
+           },
+    "examples": [
+                "Example1",
+                "Example2"
+                ]
+},
+"fiddler":
+{
+    "name": "Fiddler",
+    "team": "Fabled",
+    "image": "https://images.klutzbanana.com/characters_official/fiddler.png",
+    "ability": "Once per game, the Demon secretly chooses an opposing player: all players choose which of these 2 players win.",
+    "flavor": "Flavor",
+    "purpose": "Purpose",
+    "summary": [
+             "Summary1",
+             "Summary2"
+             ],
+    "run": {
+           "Setup": [
+                "Thing1",
+                "Thing2"
+                ],
+           "Anytime": [
+                "Thing1",
+                "Thing2"
+                ],
+           "First Night": [
+                "Thing1",
+                "Thing2"
+                ],
+           "Every Night": [
+                "Thing1",
+                "Thing2"
+                ],
+           "First Day": [
+                "Thing1",
+                "Thing2"
+                ],
+           "Every Day": [
+                "Thing1",
+                "Thing 2"
+                ],
+           "Other Nights": [
+                "Thing1",
+                "Thing2"
+                ],
+           "Other Days": [
+                "Thing1",
+                "Thing2"
+                ],
+           "End of Game": [
+                "Thing1",
+                "Thing2"
+                ]
+           },
+    "examples": [
+                "Example1",
+                "Example2"
+                ]
+},
+"hellslibrarian":
+{
+    "name": "Hell's Librarian",
+    "team": "Fabled",
+    "image": "https://images.klutzbanana.com/characters_official/hellslibrarian.png",
+    "ability": "Something bad might happen to whoever talks when the Storyteller has asked for silence.",
+    "flavor": "Flavor",
+    "purpose": "Purpose",
+    "summary": [
+             "Summary1",
+             "Summary2"
+             ],
+    "run": {
+           "Setup": [
+                "Thing1",
+                "Thing2"
+                ],
+           "Anytime": [
+                "Thing1",
+                "Thing2"
+                ],
+           "First Night": [
+                "Thing1",
+                "Thing2"
+                ],
+           "Every Night": [
+                "Thing1",
+                "Thing2"
+                ],
+           "First Day": [
+                "Thing1",
+                "Thing2"
+                ],
+           "Every Day": [
+                "Thing1",
+                "Thing 2"
+                ],
+           "Other Nights": [
+                "Thing1",
+                "Thing2"
+                ],
+           "Other Days": [
+                "Thing1",
+                "Thing2"
+                ],
+           "End of Game": [
+                "Thing1",
+                "Thing2"
+                ]
+           },
+    "examples": [
+                "Example1",
+                "Example2"
+                ]
+},
+"revolutionary":
+{
+    "name": "Revolutionary",
+    "team": "Fabled",
+    "image": "https://images.klutzbanana.com/characters_official/revolutionary.png",
+    "ability": "2 neighboring players are known to be the same alignment. Once per game, 1 of them registers falsely.",
+    "flavor": "Flavor",
+    "purpose": "Purpose",
+    "summary": [
+             "Summary1",
+             "Summary2"
+             ],
+    "run": {
+           "Setup": [
+                "Thing1",
+                "Thing2"
+                ],
+           "Anytime": [
+                "Thing1",
+                "Thing2"
+                ],
+           "First Night": [
+                "Thing1",
+                "Thing2"
+                ],
+           "Every Night": [
+                "Thing1",
+                "Thing2"
+                ],
+           "First Day": [
+                "Thing1",
+                "Thing2"
+                ],
+           "Every Day": [
+                "Thing1",
+                "Thing 2"
+                ],
+           "Other Nights": [
+                "Thing1",
+                "Thing2"
+                ],
+           "Other Days": [
+                "Thing1",
+                "Thing2"
+                ],
+           "End of Game": [
+                "Thing1",
+                "Thing2"
+                ]
+           },
+    "examples": [
+                "Example1",
+                "Example2"
+                ]
+},
+"sentinel":
+{
+    "name": "Sentinel",
+    "team": "Fabled",
+    "image": "https://images.klutzbanana.com/characters_official/sentinel.png",
+    "ability": "There might be 1 extra or 1 fewer Outsider in play.",
+    "flavor": "Flavor",
+    "purpose": "Purpose",
+    "summary": [
+             "Summary1",
+             "Summary2"
+             ],
+    "run": {
+           "Setup": [
+                "Thing1",
+                "Thing2"
+                ],
+           "Anytime": [
+                "Thing1",
+                "Thing2"
+                ],
+           "First Night": [
+                "Thing1",
+                "Thing2"
+                ],
+           "Every Night": [
+                "Thing1",
+                "Thing2"
+                ],
+           "First Day": [
+                "Thing1",
+                "Thing2"
+                ],
+           "Every Day": [
+                "Thing1",
+                "Thing 2"
+                ],
+           "Other Nights": [
+                "Thing1",
+                "Thing2"
+                ],
+           "Other Days": [
+                "Thing1",
+                "Thing2"
+                ],
+           "End of Game": [
+                "Thing1",
+                "Thing2"
+                ]
+           },
+    "examples": [
+                "Example1",
+                "Example2"
+                ]
+},
+"spiritofivory":
+{
+    "name": "Spirit of Ivory",
+    "team": "Fabled",
+    "image": "https://images.klutzbanana.com/characters_official/spiritofivory.png",
+    "ability": "There can't be more than 1 extra evil player.",
+    "flavor": "Flavor",
+    "purpose": "Purpose",
+    "summary": [
+             "Summary1",
+             "Summary2"
+             ],
+    "run": {
+           "Setup": [
+                "Thing1",
+                "Thing2"
+                ],
+           "Anytime": [
+                "Thing1",
+                "Thing2"
+                ],
+           "First Night": [
+                "Thing1",
+                "Thing2"
+                ],
+           "Every Night": [
+                "Thing1",
+                "Thing2"
+                ],
+           "First Day": [
+                "Thing1",
+                "Thing2"
+                ],
+           "Every Day": [
+                "Thing1",
+                "Thing 2"
+                ],
+           "Other Nights": [
+                "Thing1",
+                "Thing2"
+                ],
+           "Other Days": [
+                "Thing1",
+                "Thing2"
+                ],
+           "End of Game": [
+                "Thing1",
+                "Thing2"
+                ]
+           },
+    "examples": [
+                "Example1",
+                "Example2"
+                ]
+},
+"toymaker":
+{
+    "name": "Toymaker",
+    "team": "Fabled",
+    "image": "https://images.klutzbanana.com/characters_official/toymaker.png",
+    "ability": "The Demon may choose not to attack & must do this at least once per game. Evil players get normal starting info.",
+    "flavor": "Flavor",
+    "purpose": "Purpose",
+    "summary": [
+             "Summary1",
+             "Summary2"
+             ],
+    "run": {
+           "Setup": [
+                "Thing1",
+                "Thing2"
+                ],
+           "Anytime": [
+                "Thing1",
+                "Thing2"
+                ],
+           "First Night": [
+                "Thing1",
+                "Thing2"
+                ],
+           "Every Night": [
+                "Thing1",
+                "Thing2"
+                ],
+           "First Day": [
+                "Thing1",
+                "Thing2"
+                ],
+           "Every Day": [
+                "Thing1",
+                "Thing 2"
+                ],
+           "Other Nights": [
+                "Thing1",
+                "Thing2"
+                ],
+           "Other Days": [
+                "Thing1",
+                "Thing2"
+                ],
+           "End of Game": [
+                "Thing1",
+                "Thing2"
+                ]
+           },
+    "examples": [
+                "Example1",
+                "Example2"
+                ]
+},
+"bigwig":
+{
+    "name": "Big Wig",
+    "team": "Loric",
+    "image": "https://images.klutzbanana.com/characters_official/bigwig.png",
+    "ability": "Each nominee chooses a player: until voting, only they may speak & they are mad the nominee is good or they might die.",
+    "flavor": "Flavor",
+    "purpose": "Purpose",
+    "summary": [
+             "Summary1",
+             "Summary2"
+             ],
+    "run": {
+           "Setup": [
+                "Thing1",
+                "Thing2"
+                ],
+           "Anytime": [
+                "Thing1",
+                "Thing2"
+                ],
+           "First Night": [
+                "Thing1",
+                "Thing2"
+                ],
+           "Every Night": [
+                "Thing1",
+                "Thing2"
+                ],
+           "First Day": [
+                "Thing1",
+                "Thing2"
+                ],
+           "Every Day": [
+                "Thing1",
+                "Thing 2"
+                ],
+           "Other Nights": [
+                "Thing1",
+                "Thing2"
+                ],
+           "Other Days": [
+                "Thing1",
+                "Thing2"
+                ],
+           "End of Game": [
+                "Thing1",
+                "Thing2"
+                ]
+           },
+    "examples": [
+                "Example1",
+                "Example2"
+                ]
+},
+"gardener":
+{
+    "name": "Gardener",
+    "team": "Loric",
+    "image": "https://images.klutzbanana.com/characters_official/gardener.png",
+    "ability": "The Storyteller assigns all players' characters.",
+    "flavor": "Flavor",
+    "purpose": "Purpose",
+    "summary": [
+             "Summary1",
+             "Summary2"
+             ],
+    "run": {
+           "Setup": [
+                "Thing1",
+                "Thing2"
+                ],
+           "Anytime": [
+                "Thing1",
+                "Thing2"
+                ],
+           "First Night": [
+                "Thing1",
+                "Thing2"
+                ],
+           "Every Night": [
+                "Thing1",
+                "Thing2"
+                ],
+           "First Day": [
+                "Thing1",
+                "Thing2"
+                ],
+           "Every Day": [
+                "Thing1",
+                "Thing 2"
+                ],
+           "Other Nights": [
+                "Thing1",
+                "Thing2"
+                ],
+           "Other Days": [
+                "Thing1",
+                "Thing2"
+                ],
+           "End of Game": [
+                "Thing1",
+                "Thing2"
+                ]
+           },
+    "examples": [
+                "Example1",
+                "Example2"
+                ]
+},
+"godofug":
+{
+    "name": "God of Ug",
+    "team": "Loric",
+    "image": "https://images.klutzbanana.com/characters_official/godofug.png",
+    "ability": "One Ug hat. When wear Ug hat, must speak one sound at a time but vote twice. If fail, pass Ug hat.",
+    "flavor": "Flavor",
+    "purpose": "Purpose",
+    "summary": [
+             "Summary1",
+             "Summary2"
+             ],
+    "run": {
+           "Setup": [
+                "Thing1",
+                "Thing2"
+                ],
+           "Anytime": [
+                "Thing1",
+                "Thing2"
+                ],
+           "First Night": [
+                "Thing1",
+                "Thing2"
+                ],
+           "Every Night": [
+                "Thing1",
+                "Thing2"
+                ],
+           "First Day": [
+                "Thing1",
+                "Thing2"
+                ],
+           "Every Day": [
+                "Thing1",
+                "Thing 2"
+                ],
+           "Other Nights": [
+                "Thing1",
+                "Thing2"
+                ],
+           "Other Days": [
+                "Thing1",
+                "Thing2"
+                ],
+           "End of Game": [
+                "Thing1",
+                "Thing2"
+                ]
+           },
+    "examples": [
+                "Example1",
+                "Example2"
+                ]
+},
+"hindu":
+{
+    "name": "Hindu",
+    "team": "Loric",
+    "image": "https://images.klutzbanana.com/characters_official/hindu.png",
+    "ability": "The first 4 players to die are immediately reincarnated as Travellers of the same alignment.",
+    "flavor": "Flavor",
+    "purpose": "Purpose",
+    "summary": [
+             "Summary1",
+             "Summary2"
+             ],
+    "run": {
+           "Setup": [
+                "Thing1",
+                "Thing2"
+                ],
+           "Anytime": [
+                "Thing1",
+                "Thing2"
+                ],
+           "First Night": [
+                "Thing1",
+                "Thing2"
+                ],
+           "Every Night": [
+                "Thing1",
+                "Thing2"
+                ],
+           "First Day": [
+                "Thing1",
+                "Thing2"
+                ],
+           "Every Day": [
+                "Thing1",
+                "Thing 2"
+                ],
+           "Other Nights": [
+                "Thing1",
+                "Thing2"
+                ],
+           "Other Days": [
+                "Thing1",
+                "Thing2"
+                ],
+           "End of Game": [
+                "Thing1",
+                "Thing2"
+                ]
+           },
+    "examples": [
+                "Example1",
+                "Example2"
+                ]
+},
+"knaves":
+{
+    "name": "Knaves",
+    "team": "Loric",
+    "image": "https://images.klutzbanana.com/characters_official/knaves.png",
+    "ability": "There are 2 Storytellers: one lies & one tells the truth. Once per game, at dusk, they might switch.",
+    "flavor": "Flavor",
+    "purpose": "Purpose",
+    "summary": [
+             "Summary1",
+             "Summary2"
+             ],
+    "run": {
+           "Setup": [
+                "Thing1",
+                "Thing2"
+                ],
+           "Anytime": [
+                "Thing1",
+                "Thing2"
+                ],
+           "First Night": [
+                "Thing1",
+                "Thing2"
+                ],
+           "Every Night": [
+                "Thing1",
+                "Thing2"
+                ],
+           "First Day": [
+                "Thing1",
+                "Thing2"
+                ],
+           "Every Day": [
+                "Thing1",
+                "Thing 2"
+                ],
+           "Other Nights": [
+                "Thing1",
+                "Thing2"
+                ],
+           "Other Days": [
+                "Thing1",
+                "Thing2"
+                ],
+           "End of Game": [
+                "Thing1",
+                "Thing2"
+                ]
+           },
+    "examples": [
+                "Example1",
+                "Example2"
+                ]
+},
+"pope":
+{
+    "name": "Pope",
+    "team": "Loric",
+    "image": "https://images.klutzbanana.com/characters_official/pope.png",
+    "ability": "There are duplicate good characters in play. They might also be bluffs.",
+    "flavor": "Flavor",
+    "purpose": "Purpose",
+    "summary": [
+             "Summary1",
+             "Summary2"
+             ],
+    "run": {
+           "Setup": [
+                "Thing1",
+                "Thing2"
+                ],
+           "Anytime": [
+                "Thing1",
+                "Thing2"
+                ],
+           "First Night": [
+                "Thing1",
+                "Thing2"
+                ],
+           "Every Night": [
+                "Thing1",
+                "Thing2"
+                ],
+           "First Day": [
+                "Thing1",
+                "Thing2"
+                ],
+           "Every Day": [
+                "Thing1",
+                "Thing 2"
+                ],
+           "Other Nights": [
+                "Thing1",
+                "Thing2"
+                ],
+           "Other Days": [
+                "Thing1",
+                "Thing2"
+                ],
+           "End of Game": [
+                "Thing1",
+                "Thing2"
+                ]
+           },
+    "examples": [
+                "Example1",
+                "Example2"
+                ]
+},
+"stormcatcher":
+{
+    "name": "Storm Catcher",
+    "team": "Loric",
+    "image": "https://images.klutzbanana.com/characters_official/stormcatcher.png",
+    "ability": "Name a good character. If in play, they can only die by execution, but evil players learn which player it is.",
+    "flavor": "Flavor",
+    "purpose": "Purpose",
+    "summary": [
+             "Summary1",
+             "Summary2"
+             ],
+    "run": {
+           "Setup": [
+                "Thing1",
+                "Thing2"
+                ],
+           "Anytime": [
+                "Thing1",
+                "Thing2"
+                ],
+           "First Night": [
+                "Thing1",
+                "Thing2"
+                ],
+           "Every Night": [
+                "Thing1",
+                "Thing2"
+                ],
+           "First Day": [
+                "Thing1",
+                "Thing2"
+                ],
+           "Every Day": [
+                "Thing1",
+                "Thing 2"
+                ],
+           "Other Nights": [
+                "Thing1",
+                "Thing2"
+                ],
+           "Other Days": [
+                "Thing1",
+                "Thing2"
+                ],
+           "End of Game": [
+                "Thing1",
+                "Thing2"
+                ]
+           },
+    "examples": [
+                "Example1",
+                "Example2"
+                ]
+},
+"tor":
+{
+    "name": "Tor",
+    "team": "Loric",
+    "image": "https://images.klutzbanana.com/characters_official/tor.png",
+    "ability": "Players don't know their character or alignment. They learn them when they die.",
+    "flavor": "Flavor",
+    "purpose": "Purpose",
+    "summary": [
+             "Summary1",
+             "Summary2"
+             ],
+    "run": {
+           "Setup": [
+                "Thing1",
+                "Thing2"
+                ],
+           "Anytime": [
+                "Thing1",
+                "Thing2"
+                ],
+           "First Night": [
+                "Thing1",
+                "Thing2"
+                ],
+           "Every Night": [
+                "Thing1",
+                "Thing2"
+                ],
+           "First Day": [
+                "Thing1",
+                "Thing2"
+                ],
+           "Every Day": [
+                "Thing1",
+                "Thing 2"
+                ],
+           "Other Nights": [
+                "Thing1",
+                "Thing2"
+                ],
+           "Other Days": [
+                "Thing1",
+                "Thing2"
+                ],
+           "End of Game": [
+                "Thing1",
+                "Thing2"
+                ]
+           },
+    "examples": [
+                "Example1",
+                "Example2"
+                ]
+},
+"ventriloquist":
+{
+    "name": "Ventriloquist",
+    "team": "Loric",
+    "image": "https://images.klutzbanana.com/characters_official/ventriloquist.png",
+    "ability": "If a player is mad as a fresh character during their nomination, they might not die if executed today.",
+    "flavor": "Flavor",
+    "purpose": "Purpose",
+    "summary": [
+             "Summary1",
+             "Summary2"
+             ],
+    "run": {
+           "Setup": [
+                "Thing1",
+                "Thing2"
+                ],
+           "Anytime": [
+                "Thing1",
+                "Thing2"
+                ],
+           "First Night": [
+                "Thing1",
+                "Thing2"
+                ],
+           "Every Night": [
+                "Thing1",
+                "Thing2"
+                ],
+           "First Day": [
+                "Thing1",
+                "Thing2"
+                ],
+           "Every Day": [
+                "Thing1",
+                "Thing 2"
+                ],
+           "Other Nights": [
+                "Thing1",
+                "Thing2"
+                ],
+           "Other Days": [
+                "Thing1",
+                "Thing2"
+                ],
+           "End of Game": [
+                "Thing1",
+                "Thing2"
+                ]
+           },
+    "examples": [
+                "Example1",
+                "Example2"
+                ]
+},
+"zenomancer":
+{
+    "name": "Zenomancer",
+    "team": "Loric",
+    "image": "https://images.klutzbanana.com/characters_official/zenomancer.png",
+    "ability": "One or more players each have a goal. When achieved, that player learns a piece of true info.",
+    "flavor": "Flavor",
+    "purpose": "Purpose",
+    "summary": [
+             "Summary1",
+             "Summary2"
+             ],
+    "run": {
+           "Setup": [
+                "Thing1",
+                "Thing2"
+                ],
+           "Anytime": [
+                "Thing1",
+                "Thing2"
+                ],
+           "First Night": [
+                "Thing1",
+                "Thing2"
+                ],
+           "Every Night": [
+                "Thing1",
+                "Thing2"
+                ],
+           "First Day": [
+                "Thing1",
+                "Thing2"
+                ],
+           "Every Day": [
+                "Thing1",
+                "Thing 2"
+                ],
+           "Other Nights": [
+                "Thing1",
+                "Thing2"
+                ],
+           "Other Days": [
+                "Thing1",
+                "Thing2"
+                ],
+           "End of Game": [
+                "Thing1",
+                "Thing2"
+                ]
+           },
+    "examples": [
+                "Example1",
+                "Example2"
+                ]
+}
 }
