@@ -1832,7 +1832,7 @@
     "team": "Townsfolk",
     "image": "https://images.klutzbanana.com/characters_official/knight_g.png",
     "ability": "You start knowing 2 players that are not the Demon.",
-    "flavor": "Flavor",
+    "flavor": "When a man lies, he murders some part of the world.",
     "purpose": "Purpose",
     "summary": [
              "Summary1",
@@ -1887,7 +1887,7 @@
     "team": "Townsfolk",
     "image": "https://images.klutzbanana.com/characters_official/librarian_g.png",
     "ability": "You start knowing that 1 of 2 players is a particular Outsider. (Or that zero are in play.)",
-    "flavor": "Flavor",
+    "flavor": "Certainly madam, under normal circumstances, you may borrow the Codex Malificarium from the library vaults. However, you do not seem to be a member.",
     "purpose": "Purpose",
     "summary": [
              "Summary1",
@@ -1942,7 +1942,7 @@
     "team": "Townsfolk",
     "image": "https://images.klutzbanana.com/characters_official/lycanthrope_g.png",
     "ability": "Each night*, choose an alive player. If good, they die & the Demon doesn’t kill tonight. One good player registers as evil.",
-    "flavor": "Flavor",
+    "flavor": "Beneath the thin veneer of civilization lies a howling madness.",
     "purpose": "Purpose",
     "summary": [
              "Summary1",
@@ -1997,7 +1997,7 @@
     "team": "Townsfolk",
     "image": "https://images.klutzbanana.com/characters_official/magician_g.png",
     "ability": "The Demon thinks you are a Minion. Minions think you are a Demon.",
-    "flavor": "Flavor",
+    "flavor": "1... 2... Abra... 3... 4... Cadabra... *poof!*</br>And, as you can see, ladies and gentlemen, Captain Farnsworth’s bag of gold has disappeared! Gone! Without a trace! Thank you, and goodnight!",
     "purpose": "Purpose",
     "summary": [
              "Summary1",
@@ -2052,7 +2052,7 @@
     "team": "Townsfolk",
     "image": "https://images.klutzbanana.com/characters_official/mathematician_g.png",
     "ability": "Each night, you learn how many players’ abilities worked abnormally (since dawn) due to another character's ability.",
-    "flavor": "Flavor",
+    "flavor": "Any consistent formal system x, within which a certain amount of elementary arithmetic can be carried out is incomplete; that is, there are statements of the language of x which can neither be proved nor disproved in x. Ergo, you are drunk.",
     "purpose": "Purpose",
     "summary": [
              "Summary1",
@@ -2107,7 +2107,7 @@
     "team": "Townsfolk",
     "image": "https://images.klutzbanana.com/characters_official/mayor_g.png",
     "ability": "If only 3 players live & no execution occurs, your team wins. If you die at night, another player might die instead.",
-    "flavor": "Flavor",
+    "flavor": "We must put our differences aside, and cease this senseless killing. We are all taxpayers after all. Well, most of us.",
     "purpose": "Purpose",
     "summary": [
              "Summary1",
@@ -2162,7 +2162,7 @@
     "team": "Townsfolk",
     "image": "https://images.klutzbanana.com/characters_official/minstrel_g.png",
     "ability": "When a Minion dies by execution, all other players (except Travellers) are drunk until dusk tomorrow.",
-    "flavor": "Flavor",
+    "flavor": "And I shall hear, tho' soft you tread above me... And all my dreams will warm and sweeter be... If you'll not fail to tell me that you love me... I simply sleep in peace until you come to me.",
     "purpose": "Purpose",
     "summary": [
              "Summary1",
@@ -2217,7 +2217,7 @@
     "team": "Townsfolk",
     "image": "https://images.klutzbanana.com/characters_official/monk_g.png",
     "ability": "Each night*, choose a player (not yourself): they are safe from the Demon tonight.",
-    "flavor": "Flavor",
+    "flavor": "Tis an ill and deathly wind that blows tonight. Come, my brother, take shelter in the abbey while the storm rages. By my word, or by my life, you will be safe.",
     "purpose": "Purpose",
     "summary": [
              "Summary1",
@@ -2272,7 +2272,7 @@
     "team": "Townsfolk",
     "image": "https://images.klutzbanana.com/characters_official/nightwatchman_g.png",
     "ability": "Once per game, at night, choose a player: they learn you are the Nightwatchman.",
-    "flavor": "Flavor",
+    "flavor": "The night is cold and lonely, but I have the moon, the stars, the crisp wind and the soft thud of leather boots on cobbled stone for company. Yonder, candlelight flickers behind a murky window...",
     "purpose": "Purpose",
     "summary": [
              "Summary1",
@@ -2327,7 +2327,7 @@
     "team": "Townsfolk",
     "image": "https://images.klutzbanana.com/characters_official/noble_g.png",
     "ability": "You start knowing 3 players, 1 and only 1 of which is evil.",
-    "flavor": "Flavor",
+    "flavor": "Sarcasm is indeed the lowest form of wit. But speaking in response to your criticism, Sir, it is, nevertheless, a form of wit.",
     "purpose": "Purpose",
     "summary": [
              "Summary1",
@@ -2382,7 +2382,7 @@
     "team": "Townsfolk",
     "image": "https://images.klutzbanana.com/characters_official/oracle_g.png",
     "ability": "Each night*, you learn how many dead players are evil.",
-    "flavor": "Flavor",
+    "flavor": "Only the chosen may gaze beyond the veil. The dead are restless, and they point in silence toward the icy north.",
     "purpose": "Purpose",
     "summary": [
              "Summary1",
@@ -2437,7 +2437,7 @@
     "team": "Townsfolk",
     "image": "https://images.klutzbanana.com/characters_official/pacifist_g.png",
     "ability": "Executed good players might not die.",
-    "flavor": "Flavor",
+    "flavor": "Distrust all in whom the impulse to punish is powerful.",
     "purpose": "Purpose",
     "summary": [
              "Summary1",
@@ -2492,7 +2492,7 @@
     "team": "Townsfolk",
     "image": "https://images.klutzbanana.com/characters_official/philosopher_g.png",
     "ability": "Once per game, at night, choose a good character: gain that ability. If this character is in play, they are drunk.",
-    "flavor": "Flavor",
+    "flavor": "If anything is real, beer is real. Drink, for tomorrow we may die.",
     "purpose": "Purpose",
     "summary": [
              "Summary1",
@@ -2547,7 +2547,7 @@
     "team": "Townsfolk",
     "image": "https://images.klutzbanana.com/characters_official/pixie_g.png",
     "ability": "You start knowing 1 in-play Townsfolk. If you were mad that you were this character, you gain their ability when they die.",
-    "flavor": "Flavor",
+    "flavor": "Round and round the garden, go.<br>Little girls run to and fro.<br>Little boys climb up the tree.<br>Which of these should Pixie be?<br>Ladies smile and go to town. <br>Lords with axe chop forest down.<br>What’s yours is mine. What’s mine, divine.<br>Silly little Pixie, me.",
     "purpose": "Purpose",
     "summary": [
              "Summary1",
@@ -2602,7 +2602,7 @@
     "team": "Townsfolk",
     "image": "https://images.klutzbanana.com/characters_official/poppygrower_g.png",
     "ability": "Minions & Demons do not know each other. If you die, they learn who each other are that night.",
-    "flavor": "Flavor",
+    "flavor": "In the hidden groves of the deep forest, the black poppy dwells. To see its revelry is to be enchanted. To smell its thick aroma is to be lost forever, a slave to the gods of light and dark.",
     "purpose": "Purpose",
     "summary": [
              "Summary1",
@@ -2657,7 +2657,7 @@
     "team": "Townsfolk",
     "image": "https://images.klutzbanana.com/characters_official/preacher_g.png",
     "ability": "Each night, choose a player: a Minion, if chosen, learns this. All chosen Minions have no ability.",
-    "flavor": "Flavor",
+    "flavor": "It is better to be rich and healthy than poor and sick.",
     "purpose": "Purpose",
     "summary": [
              "Summary1",
@@ -2712,7 +2712,7 @@
     "team": "Townsfolk",
     "image": "https://images.klutzbanana.com/characters_official/princess_g.png",
     "ability": "On your 1st day, if you nominated & executed a player, the Demon doesn't kill tonight.",
-    "flavor": "Flavor",
+    "flavor": "Our words are hounds, bound by silken threads, dear lords. Let kindness weave them true, lest the reigns unravel and rend our court.",
     "purpose": "Purpose",
     "summary": [
              "Summary1",
@@ -2767,7 +2767,7 @@
     "team": "Townsfolk",
     "image": "https://images.klutzbanana.com/characters_official/professor_g.png",
     "ability": "Once per game, at night*, choose a dead player: if they are a Townsfolk, they are resurrected.",
-    "flavor": "Flavor",
+    "flavor": "The process is simple. Attach the hydraulic confabulator to the modified chi matrix amplifier, add 20 CCs of pseudodorafine, keep his Z levels above 20%, and your husband will be fine. Now, all we need is a lightning strike.",
     "purpose": "Purpose",
     "summary": [
              "Summary1",
@@ -2822,7 +2822,7 @@
     "team": "Townsfolk",
     "image": "https://images.klutzbanana.com/characters_official/ravenkeeper_g.png",
     "ability": "If you die at night, you are woken to choose a player: you learn their character.",
-    "flavor": "Flavor",
+    "flavor": "My birds will avenge me! Fly! Fly, my sweet and dutiful pets! To the manor and to the river! To the alleys and to the salons! Fly!",
     "purpose": "Purpose",
     "summary": [
              "Summary1",
@@ -2877,7 +2877,7 @@
     "team": "Townsfolk",
     "image": "https://images.klutzbanana.com/characters_official/sage_g.png",
     "ability": "If the Demon kills you, you learn that it is 1 of 2 players.",
-    "flavor": "Flavor",
+    "flavor": "These mountainous tomes guard the secret, I am sure of it! Twixt word and word, it lies in wait. More candles, boy! More ink! These notes may look arcane, but the infernal puzzle is revealing itself.",
     "purpose": "Purpose",
     "summary": [
              "Summary1",
@@ -2932,7 +2932,7 @@
     "team": "Townsfolk",
     "image": "https://images.klutzbanana.com/characters_official/sailor_g.png",
     "ability": "Each night, choose an alive player: either you or they are drunk until dusk. You can't die.",
-    "flavor": "Flavor",
+    "flavor": "I'll drink any one of yer under the table! You! The chatterbox! Reckon you can take me? No? Howza 'bout you, Grandma? You ever tried Old McKillys Extra Spiced Rum before? Guaranteed to put hairs on yer chest! Step aboard, aye!",
     "purpose": "Purpose",
     "summary": [
              "Summary1",
@@ -2987,7 +2987,7 @@
     "team": "Townsfolk",
     "image": "https://images.klutzbanana.com/characters_official/savant_g.png",
     "ability": "Each day, you may visit the Storyteller to learn 2 things in private: 1 is true & 1 is false.",
-    "flavor": "Flavor",
+    "flavor": "Seventy-two matchsticks on the floor... the sun sets early but the moon is unchanged... a torn piece of cloth... evil in the manor house... three by three... the one we trusted is not what he seems... green light means magnesium... residue, but the pattern is wrong... Seventy-two matchsticks on the floor...",
     "purpose": "Purpose",
     "summary": [
              "Summary1",
@@ -3042,7 +3042,7 @@
     "team": "Townsfolk",
     "image": "https://images.klutzbanana.com/characters_official/seamstress_g.png",
     "ability": "Once per game, at night, choose 2 players (not yourself): you learn if they are the same alignment.",
-    "flavor": "Flavor",
+    "flavor": "Did you hear that stranger in the cashmere coat put the word on our young Belle? And she said yes? Well, that's nothing compared to what Harry and that juggler got up to at the fair! The things I could say if I was a tattletale... my, yes.",
     "purpose": "Purpose",
     "summary": [
              "Summary1",
@@ -3097,7 +3097,7 @@
     "team": "Townsfolk",
     "image": "https://images.klutzbanana.com/characters_official/shugenja_g.png",
     "ability": "You start knowing if your closest evil player is clockwise or anti-clockwise. If equidistant, this info is arbitrary.",
-    "flavor": "Flavor",
+    "flavor": "これは夢。それも夢。すべて夢です。",
     "purpose": "Purpose",
     "summary": [
              "Summary1",
@@ -3152,7 +3152,7 @@
     "team": "Townsfolk",
     "image": "https://images.klutzbanana.com/characters_official/slayer_g.png",
     "ability": "Once per game, during the day, publicly choose a player: if they are the Demon, they die.",
-    "flavor": "Flavor",
+    "flavor": "Die.",
     "purpose": "Purpose",
     "summary": [
              "Summary1",
@@ -3207,7 +3207,7 @@
     "team": "Townsfolk",
     "image": "https://images.klutzbanana.com/characters_official/snakecharmer_g.png",
     "ability": "Each night, choose an alive player: a chosen Demon swaps characters & alignments with you & is then poisoned.",
-    "flavor": "Flavor",
+    "flavor": "Effendi... I am but a humble man, but my pipe is golden and a single tune will tame the wildest djinn, Inshallah. They say that greed hangs more men than rope. But not I, Effendi... not I.",
     "purpose": "Purpose",
     "summary": [
              "Summary1",
@@ -3262,7 +3262,7 @@
     "team": "Townsfolk",
     "image": "https://images.klutzbanana.com/characters_official/soldier_g.png",
     "ability": "You are safe from the Demon.",
-    "flavor": "Flavor",
+    "flavor": "As David said to Goliath, as Theseus said to the Minotaur, as Arjuna said to Bhagadatta... No.",
     "purpose": "Purpose",
     "summary": [
              "Summary1",
@@ -3317,7 +3317,7 @@
     "team": "Townsfolk",
     "image": "https://images.klutzbanana.com/characters_official/steward_g.png",
     "ability": "You start knowing 1 good player.",
-    "flavor": "Flavor",
+    "flavor": "How DARE you accuse Her Ladyship of wrongdoing? I’ve known her my entire life! All nine years!",
     "purpose": "Purpose",
     "summary": [
              "Summary1",
@@ -3372,7 +3372,7 @@
     "team": "Townsfolk",
     "image": "https://images.klutzbanana.com/characters_official/tealady_g.png",
     "ability": "If both your alive neighbors are good, they can't die.",
-    "flavor": "Flavor",
+    "flavor": "If you are cold, tea will warm you. If you are too heated, tea will cool you. If you are depressed, tea will cheer you. If you are excited, tea will calm you.",
     "purpose": "Purpose",
     "summary": [
              "Summary1",
@@ -3427,7 +3427,7 @@
     "team": "Townsfolk",
     "image": "https://images.klutzbanana.com/characters_official/towncrier_g.png",
     "ability": "Each night*, you learn if a Minion nominated today.",
-    "flavor": "Flavor",
+    "flavor": "Hear ye! Hear ye! Witchcraft in the labyrinth! Genius savant reveals all! Town in danger! Hear Ye!",
     "purpose": "Purpose",
     "summary": [
              "Summary1",
@@ -3482,7 +3482,7 @@
     "team": "Townsfolk",
     "image": "https://images.klutzbanana.com/characters_official/undertaker_g.png",
     "ability": "Each night*, you learn which character died by execution today.",
-    "flavor": "Flavor",
+    "flavor": "Hmmm....what have we here? The left boot is worn down to the heel, with flint shavings under the tongue. This is the garb of a Military man.",
     "purpose": "Purpose",
     "summary": [
              "Summary1",
@@ -3537,7 +3537,7 @@
     "team": "Townsfolk",
     "image": "https://images.klutzbanana.com/characters_official/villageidiot_g.png",
     "ability": "Each night, choose a player: you learn their alignment. [+0 to +2 Village Idiots. 1 of the extras is drunk]",
-    "flavor": "Flavor",
+    "flavor": "Roses are blue, and violets are red, Please reverse what I just said.",
     "purpose": "Purpose",
     "summary": [
              "Summary1",
@@ -3592,7 +3592,7 @@
     "team": "Townsfolk",
     "image": "https://images.klutzbanana.com/characters_official/virgin_g.png",
     "ability": "The 1st time you are nominated, if the nominator is a Townsfolk, they are executed immediately.",
-    "flavor": "Flavor",
+    "flavor": "I am pure. Let those who are without sin cast themselves down and suffer in my stead. My reputation shall not be stained with your venomous accusations.",
     "purpose": "Purpose",
     "summary": [
              "Summary1",
@@ -3647,7 +3647,7 @@
     "team": "Townsfolk",
     "image": "https://images.klutzbanana.com/characters_official/washerwoman_g.png",
     "ability": "You start knowing that 1 of 2 players is a particular Townsfolk.",
-    "flavor": "Flavor",
+    "flavor": "Bloodstains on a dinner jacket? No, this is cooking sherry. How careless.",
     "purpose": "Purpose",
     "summary": [
              "Summary1",
@@ -3702,7 +3702,7 @@
     "team": "Outsider",
     "image": "https://images.klutzbanana.com/characters_official/barber_g.png",
     "ability": "If you died today or tonight, the Demon may choose 2 players (not another Demon) to swap characters.",
-    "flavor": "Flavor",
+    "flavor": "Did you know that barbery and surgery were once the same profession? No? Well, now you do.",
     "purpose": "Purpose",
     "summary": [
              "Summary1",
@@ -3757,7 +3757,7 @@
     "team": "Outsider",
     "image": "https://images.klutzbanana.com/characters_official/butler_g.png",
     "ability": "Each night, choose a player (not yourself): tomorrow, you may only vote if they are voting too.",
-    "flavor": "Flavor",
+    "flavor": "Yes, sir…<br>No, sir…<br>Certainly, sir.",
     "purpose": "Purpose",
     "summary": [
              "Summary1",
@@ -3812,7 +3812,7 @@
     "team": "Outsider",
     "image": "https://images.klutzbanana.com/characters_official/damsel_g.png",
     "ability": "All Minions know a Damsel is in play. If a Minion publicly guesses you (once), your team loses.",
-    "flavor": "Flavor",
+    "flavor": "Don't touch ze hair, honey.",
     "purpose": "Purpose",
     "summary": [
              "Summary1",
@@ -3867,7 +3867,7 @@
     "team": "Outsider",
     "image": "https://images.klutzbanana.com/characters_official/drunk_g.png",
     "ability": "You do not know you are the Drunk. You think you are a Townsfolk character, but you are not.",
-    "flavor": "Flavor",
+    "flavor": "I’m only a *hic* social drinker, my dear. Admittedly, I am a heavy *burp* socializer.",
     "purpose": "Purpose",
     "summary": [
              "Summary1",
@@ -3922,7 +3922,7 @@
     "team": "Outsider",
     "image": "https://images.klutzbanana.com/characters_official/golem_g.png",
     "ability": "You may only nominate once per game. When you do, if the nominee is not the Demon, they die.",
-    "flavor": "Flavor",
+    "flavor": "Golem help? Golem smash! Golem help.",
     "purpose": "Purpose",
     "summary": [
              "Summary1",
@@ -3977,7 +3977,7 @@
     "team": "Outsider",
     "image": "https://images.klutzbanana.com/characters_official/goon_g.png",
     "ability": "Each night, the 1st player to choose you with their ability is drunk until dusk. You become their alignment.",
-    "flavor": "Flavor",
+    "flavor": "Yes boss. I explained fings real good to dat geezer. He don't want me explain it again. Nah boss, I don't need no doctor - it's only a knife wound. Be right come mornin'",
     "purpose": "Purpose",
     "summary": [
              "Summary1",
@@ -4032,7 +4032,7 @@
     "team": "Outsider",
     "image": "https://images.klutzbanana.com/characters_official/hatter_g.png",
     "ability": "If you died today or tonight, the Minion & Demon players may choose new Minion & Demon characters to be.",
-    "flavor": "Flavor",
+    "flavor": "One Hat. Too Hat. Three Hat. Tea Hat. Fore Hat. Thrive Hat. Six Hat. Sticks Hat.",
     "purpose": "Purpose",
     "summary": [
              "Summary1",
@@ -4087,7 +4087,7 @@
     "team": "Outsider",
     "image": "https://images.klutzbanana.com/characters_official/heretic_g.png",
     "ability": "Whoever wins, loses & whoever loses, wins, even if you are dead.",
-    "flavor": "Flavor",
+    "flavor": "After the hail has smashed the roof and splintered the glass of the Cathedral windows, it melts again into the earth, like a dying lamb in the desert sun. Such is the parable of the madman.",
     "purpose": "Purpose",
     "summary": [
              "Summary1",
@@ -4142,7 +4142,7 @@
     "team": "Outsider",
     "image": "https://images.klutzbanana.com/characters_official/hermit_g.png",
     "ability": "You have all Outsider abilities. [-0 or -1 Outsider]",
-    "flavor": "Flavor",
+    "flavor": "In the lost and forgotten places of the earth, the soul’s light beckons.",
     "purpose": "Purpose",
     "summary": [
              "Summary1",
@@ -4197,7 +4197,7 @@
     "team": "Outsider",
     "image": "https://images.klutzbanana.com/characters_official/klutz_g.png",
     "ability": "When you learn that you died, publicly choose 1 alive player: if they are evil, your team loses.",
-    "flavor": "Flavor",
+    "flavor": "Oops.",
     "purpose": "Purpose",
     "summary": [
              "Summary1",
@@ -4252,7 +4252,7 @@
     "team": "Outsider",
     "image": "https://images.klutzbanana.com/characters_official/lunatic_g.png",
     "ability": "You think you are a Demon, but you are not. The Demon knows who you are & who you choose at night.",
-    "flavor": "Flavor",
+    "flavor": "I am the night... I think.",
     "purpose": "Purpose",
     "summary": [
              "Summary1",
@@ -4307,7 +4307,7 @@
     "team": "Outsider",
     "image": "https://images.klutzbanana.com/characters_official/moonchild_g.png",
     "ability": "When you learn that you died, publicly choose 1 alive player. Tonight, if it was a good player, they die.",
-    "flavor": "Flavor",
+    "flavor": "Scorpio looks sideways at the lovers, and you have a choice to make. With silver cross my palm, and your fate shall be revealed. With steel cross my throat, and by the stars you shall regret it.",
     "purpose": "Purpose",
     "summary": [
              "Summary1",
@@ -4362,7 +4362,7 @@
     "team": "Outsider",
     "image": "https://images.klutzbanana.com/characters_official/mutant_g.png",
     "ability": "If you are \"mad\" about being an Outsider, you might be executed.",
-    "flavor": "Flavor",
+    "flavor": "I am not a freak! I am a human being! Have mercy!",
     "purpose": "Purpose",
     "summary": [
              "Summary1",
@@ -4417,7 +4417,7 @@
     "team": "Outsider",
     "image": "https://images.klutzbanana.com/characters_official/ogre_g.png",
     "ability": "On your 1st night, choose a player (not yourself): you become their alignment (you don't know which) even if drunk or poisoned.",
-    "flavor": "Flavor",
+    "flavor": "&lt;grunt&gt;&lt;grin&gt;&lt;/grunt&gt;",
     "purpose": "Purpose",
     "summary": [
              "Summary1",
@@ -4472,7 +4472,7 @@
     "team": "Outsider",
     "image": "https://images.klutzbanana.com/characters_official/plaguedoctor_g.png",
     "ability": "When you die, the Storyteller gains a Minion ability.",
-    "flavor": "Flavor",
+    "flavor": "Pleauze shtay shtill. Thinks nid tiime for hillink. Myrhh-myrhh.",
     "purpose": "Purpose",
     "summary": [
              "Summary1",
@@ -4527,7 +4527,7 @@
     "team": "Outsider",
     "image": "https://images.klutzbanana.com/characters_official/politician_g.png",
     "ability": "If you were the player most responsible for your team losing, you change alignment & win, even if dead.",
-    "flavor": "Flavor",
+    "flavor": "I'm glad you asked that question. Truly, I am. But I think the REAL question here is...",
     "purpose": "Purpose",
     "summary": [
              "Summary1",
@@ -4582,7 +4582,7 @@
     "team": "Outsider",
     "image": "https://images.klutzbanana.com/characters_official/puzzlemaster_g.png",
     "ability": "1 player is drunk, even if you die. If you guess (once) who it is, learn the Demon player, but guess wrong & get false info.",
-    "flavor": "Flavor",
+    "flavor": "When one begins to think that some thing is merely some other thing, one is usually on the brink of an error. Patience, patience. Don’t confuse <b>just</b> and <b>should</b> with <b>is</b> and <b>isn’t</b>.",
     "purpose": "Purpose",
     "summary": [
              "Summary1",
@@ -4637,7 +4637,7 @@
     "team": "Outsider",
     "image": "https://images.klutzbanana.com/characters_official/recluse_g.png",
     "ability": "You might register as evil & as a Minion or Demon, even if dead.",
-    "flavor": "Flavor",
+    "flavor": "Garn git ya darn grub ya mitts ofma lorn yasee. Grr. Natsy pikkins yonder southwise ye begittin afta ya! Git! Me harvy no so widda licks and demmons no be fightin' hadsup ne'er ma kin. Git, assay!",
     "purpose": "Purpose",
     "summary": [
              "Summary1",
@@ -4692,7 +4692,7 @@
     "team": "Outsider",
     "image": "https://images.klutzbanana.com/characters_official/saint_g.png",
     "ability": "If you die by execution, your team loses.",
-    "flavor": "Flavor",
+    "flavor": "Wisdom begets peace. Patience begets wisdom. Fear not, for the time shall come when fear too shall pass. Let us pray, and may the unity of our vision make saints of us all.",
     "purpose": "Purpose",
     "summary": [
              "Summary1",
@@ -4747,7 +4747,7 @@
     "team": "Outsider",
     "image": "https://images.klutzbanana.com/characters_official/snitch_g.png",
     "ability": "Each Minion gets 3 bluffs.",
-    "flavor": "Flavor",
+    "flavor": "It was John.",
     "purpose": "Purpose",
     "summary": [
              "Summary1",
@@ -4802,7 +4802,7 @@
     "team": "Outsider",
     "image": "https://images.klutzbanana.com/characters_official/sweetheart_g.png",
     "ability": "When you die, 1 player is drunk from now on.",
-    "flavor": "Flavor",
+    "flavor": "I will never forget her. Never.",
     "purpose": "Purpose",
     "summary": [
              "Summary1",
@@ -4857,7 +4857,7 @@
     "team": "Outsider",
     "image": "https://images.klutzbanana.com/characters_official/tinker_g.png",
     "ability": "You might die at any time.",
-    "flavor": "Flavor",
+    "flavor": "I think I see the problem. Luckily, I have an idea! This catapult will shoot twice as far with just a minor adjustment...",
     "purpose": "Purpose",
     "summary": [
              "Summary1",
@@ -4912,7 +4912,7 @@
     "team": "Outsider",
     "image": "https://images.klutzbanana.com/characters_official/zealot_g.png",
     "ability": "If there are 5 or more players alive, you must vote for every nomination.",
-    "flavor": "Flavor",
+    "flavor": "I enjoy talking to you. Your mind appeals to me. It resembles my own mind except that you happen to be insane.",
     "purpose": "Purpose",
     "summary": [
              "Summary1",
@@ -4967,7 +4967,7 @@
     "team": "Minions",
     "image": "https://images.klutzbanana.com/characters_official/assassin_e.png",
     "ability": "Once per game, at night*, choose a player: they die, even if for some reason they could not.",
-    "flavor": "Flavor",
+    "flavor": "...",
     "purpose": "Purpose",
     "summary": [
              "Summary1",
@@ -5022,7 +5022,7 @@
     "team": "Minions",
     "image": "https://images.klutzbanana.com/characters_official/baron_e.png",
     "ability": "There are extra Outsiders in play. [+2 Outsiders]",
-    "flavor": "Flavor",
+    "flavor": "This town has gone to the dogs, what? Cheap foreign labor... that's the ticket. Stuff them in the mine, I say. A bit of hard work never hurt anyone, and a clip'o'the ears to any brigand who says otherwise. It's all about the bottom line, what?",
     "purpose": "Purpose",
     "summary": [
              "Summary1",
@@ -5077,7 +5077,7 @@
     "team": "Minions",
     "image": "https://images.klutzbanana.com/characters_official/boffin_e.png",
     "ability": "The Demon (even if drunk or poisoned) has a not-in-play good character’s ability. You both know which.",
-    "flavor": "Flavor",
+    "flavor": "Stellar hydrogen, vast, inert; carbon, oxygen, neon gases, all ruined. Molecular chaos, entropy, yields new cosmic phenomena, rebirth from atomic chaos, dense matter collapsing. All in a teeny little bottle.",
     "purpose": "Purpose",
     "summary": [
              "Summary1",
@@ -5132,7 +5132,7 @@
     "team": "Minions",
     "image": "https://images.klutzbanana.com/characters_official/boomdandy_e.png",
     "ability": "If you are executed, all but 3 players die. After a 10 to 1 countdown, the player with the most players pointing at them, dies.",
-    "flavor": "Flavor",
+    "flavor": "Tick... Tick... Tick... TOCK.",
     "purpose": "Purpose",
     "summary": [
              "Summary1",
@@ -5187,7 +5187,7 @@
     "team": "Minions",
     "image": "https://images.klutzbanana.com/characters_official/cerenovus_e.png",
     "ability": "Each night, choose a player & a good character: they are \"mad\" they are this character tomorrow, or might be executed.",
-    "flavor": "Flavor",
+    "flavor": "Reality is merely an opinion. Specifically, my opinion.",
     "purpose": "Purpose",
     "summary": [
              "Summary1",
@@ -5242,7 +5242,7 @@
     "team": "Minions",
     "image": "https://images.klutzbanana.com/characters_official/devilsadvocate_e.png",
     "ability": "Each night, choose a living player (different to last night): if executed tomorrow, they don't die.",
-    "flavor": "Flavor",
+    "flavor": "My client, should the objection be overruled, pleads innocent by virtue of the prosecution's non-observance of statute 27.B - incorrect or misleading conjugation of a verb. The fact that nine of the jury died last night is simply prima facie, which is, as Wills vs Thule set precedent for, further reason to acquit.",
     "purpose": "Purpose",
     "summary": [
              "Summary1",
@@ -5297,7 +5297,7 @@
     "team": "Minions",
     "image": "https://images.klutzbanana.com/characters_official/eviltwin_e.png",
     "ability": "You & an opposing player know each other. If the good player is executed, evil wins. Good can't win if you both live.",
-    "flavor": "Flavor",
+    "flavor": "I'm not Sara! I'm Clara! SHE is Sara! Sara is the evil one! Not me!",
     "purpose": "Purpose",
     "summary": [
              "Summary1",
@@ -5352,7 +5352,7 @@
     "team": "Minions",
     "image": "https://images.klutzbanana.com/characters_official/fearmonger_e.png",
     "ability": "Each night, choose a player: if you nominate & execute them, their team loses. All players know if you choose a new player.",
-    "flavor": "Flavor",
+    "flavor": "Beware of gazing long into the Abyss, lest the Abyss also gaze into you.",
     "purpose": "Purpose",
     "summary": [
              "Summary1",
@@ -5407,7 +5407,7 @@
     "team": "Minions",
     "image": "https://images.klutzbanana.com/characters_official/goblin_e.png",
     "ability": "If you publicly claim to be the Goblin when nominated & are executed that day, your team wins.",
-    "flavor": "Flavor",
+    "flavor": "You don’t want to insult the goblins. You really, really don’t. On a completely different note… can I have another piece of cake?",
     "purpose": "Purpose",
     "summary": [
              "Summary1",
@@ -5462,7 +5462,7 @@
     "team": "Minions",
     "image": "https://images.klutzbanana.com/characters_official/godfather_e.png",
     "ability": "You start knowing which Outsiders are in play. If 1 died today, choose a player tonight: they die. [-1 or +1 Outsider]",
-    "flavor": "Flavor",
+    "flavor": "Normally, it's just business. But when you insult my daughter, you insult me. And when you insult me, you insult my family. You really should be more careful - it would be a shame if you had an unfortunate accident.",
     "purpose": "Purpose",
     "summary": [
              "Summary1",
@@ -5517,7 +5517,7 @@
     "team": "Minions",
     "image": "https://images.klutzbanana.com/characters_official/harpy_e.png",
     "ability": "Each night, choose 2 players: tomorrow, the 1st player is mad that the 2nd is evil, or one or both might die.",
-    "flavor": "Flavor",
+    "flavor": "So fair a day I never did see, nor so fowl a presence hanging over me.",
     "purpose": "Purpose",
     "summary": [
              "Summary1",
@@ -5572,7 +5572,7 @@
     "team": "Minions",
     "image": "https://images.klutzbanana.com/characters_official/marionette_e.png",
     "ability": "You think you are a good character, but you are not. The Demon knows who you are. [You neighbor the Demon]",
-    "flavor": "Flavor",
+    "flavor": "Words, words. They're all we have to go on.",
     "purpose": "Purpose",
     "summary": [
              "Summary1",
@@ -5627,7 +5627,7 @@
     "team": "Minions",
     "image": "https://images.klutzbanana.com/characters_official/mastermind_e.png",
     "ability": "If the Demon dies by execution (ending the game), play for 1 more day. If a player is then executed, their team loses.",
-    "flavor": "Flavor",
+    "flavor": "The tentacles of that monster are nailed to the doors of the church. Mothers and children are dancing in the street. Excellent. Everything is proceeding exactly as I have planned.",
     "purpose": "Purpose",
     "summary": [
              "Summary1",
@@ -5682,7 +5682,7 @@
     "team": "Minions",
     "image": "https://images.klutzbanana.com/characters_official/mezepheles_e.png",
     "ability": "You start knowing a secret word. The 1st good player to say this word becomes evil that night.",
-    "flavor": "Flavor",
+    "flavor": "That which issues from the heart alone, will bend the hearts of others to your own.",
     "purpose": "Purpose",
     "summary": [
              "Summary1",
@@ -5737,7 +5737,7 @@
     "team": "Minions",
     "image": "https://images.klutzbanana.com/characters_official/organgrinder_e.png",
     "ability": "All players keep their eyes closed when voting and the vote tally is secret. Each night, choose if you are drunk until dusk.",
-    "flavor": "Flavor",
+    "flavor": "Round and round the handles go. The more you dance the less you know.",
     "purpose": "Purpose",
     "summary": [
              "Summary1",
@@ -5792,7 +5792,7 @@
     "team": "Minions",
     "image": "https://images.klutzbanana.com/characters_official/pithag_e.png",
     "ability": "Each night*, choose a player & a character they become (if not in play). If a Demon is made, deaths tonight are arbitrary.",
-    "flavor": "Flavor",
+    "flavor": "Round about the cauldron go; In the poison'd entrails throw; Toad, that under cold stone; Days and nights has thirty-one; Sweated venom sleeping got; Boil thou first in the charmed pot.",
     "purpose": "Purpose",
     "summary": [
              "Summary1",
@@ -5847,7 +5847,7 @@
     "team": "Minions",
     "image": "https://images.klutzbanana.com/characters_official/poisoner_e.png",
     "ability": "Each night, choose a player: they are poisoned tonight and tomorrow day.",
-    "flavor": "Flavor",
+    "flavor": "Add compound Alpha to compound Beta... NOT TOO MUCH!",
     "purpose": "Purpose",
     "summary": [
              "Summary1",
@@ -5902,7 +5902,7 @@
     "team": "Minions",
     "image": "https://images.klutzbanana.com/characters_official/psychopath_e.png",
     "ability": "Each day, before nominations, you may publicly choose a player: they die. If executed, you only die if you lose roshambo.",
-    "flavor": "Flavor",
+    "flavor": "Surprise!",
     "purpose": "Purpose",
     "summary": [
              "Summary1",
@@ -5957,7 +5957,7 @@
     "team": "Minions",
     "image": "https://images.klutzbanana.com/characters_official/scarletwoman_e.png",
     "ability": "If there are 5 or more players alive & the Demon dies, you become the Demon. (Travellers don't count.)",
-    "flavor": "Flavor",
+    "flavor": "You have shown me the secrets of the Council of the Purple Flame. We have lain together in fire and in lust and in beastly commune, and I am forever your servant. But tonight, my dear, I am your master.",
     "purpose": "Purpose",
     "summary": [
              "Summary1",
@@ -6012,7 +6012,7 @@
     "team": "Minions",
     "image": "https://images.klutzbanana.com/characters_official/spy_e.png",
     "ability": "Each night, you see the Grimoire. You might register as good & as a Townsfolk or Outsider, even if dead.",
-    "flavor": "Flavor",
+    "flavor": "Any brewmaster worth their liquor, knows no concoction pours trouble quicker, than one where spies seem double.",
     "purpose": "Purpose",
     "summary": [
              "Summary1",
@@ -6067,7 +6067,7 @@
     "team": "Minions",
     "image": "https://images.klutzbanana.com/characters_official/summoner_e.png",
     "ability": "You get 3 bluffs. On the 3rd night, choose a player: they become an evil Demon of your choice. [No Demon]",
-    "flavor": "Flavor",
+    "flavor": "Hail the guardians of the north; by my intellect, thou art cut. Hail the guardians of the east; by my will, thou art dominated. Hail the guardians of the south; by that which lies beyond, the mystery is revealed. Hail the guardians of the west; a shield in the darkness",
     "purpose": "Purpose",
     "summary": [
              "Summary1",
@@ -6122,7 +6122,7 @@
     "team": "Minions",
     "image": "https://images.klutzbanana.com/characters_official/vizier_e.png",
     "ability": "All players know you are the Vizier. You cannot die during the day. If good voted, you may choose to execute immediately.",
-    "flavor": "Flavor",
+    "flavor": "An excellent decision, as always, sire. Such a petty crime as bumping into the Bishop indeed deserves your ‘justice’ and ‘mercy’. Take a stroll in the gardens. Visit the gallery and peruse the sculptures of Von Strauf. Relax, sire. Leave everything… to me.",
     "purpose": "Purpose",
     "summary": [
              "Summary1",
@@ -6177,7 +6177,7 @@
     "team": "Minions",
     "image": "https://images.klutzbanana.com/characters_official/widow_e.png",
     "ability": "On your 1st night, look at the Grimoire & choose a player: they are poisoned. 1 good player knows a Widow is in play.",
-    "flavor": "Flavor",
+    "flavor": "More wine? Château d’Ergot ’07 is a very special vintage. My yes, very special indeed.",
     "purpose": "Purpose",
     "summary": [
              "Summary1",
@@ -6232,7 +6232,7 @@
     "team": "Minions",
     "image": "https://images.klutzbanana.com/characters_official/witch_e.png",
     "ability": "Each night, choose a player: if they nominate tomorrow, they die. If just 3 players live, you lose this ability.",
-    "flavor": "Flavor",
+    "flavor": "Three drops of goat's blood. A lock of hair, torn in anger. The name is spoken, the shadow cast. Walk left foot first down that brambled path, and don't look back.",
     "purpose": "Purpose",
     "summary": [
              "Summary1",
@@ -6287,7 +6287,7 @@
     "team": "Minions",
     "image": "https://images.klutzbanana.com/characters_official/wizard_e.png",
     "ability": "Once per game, choose to make a wish. If granted, it might have a price & leave a clue as to its nature.",
-    "flavor": "Flavor",
+    "flavor": "Every man and every woman is a star. Love is the law, love under will.",
     "purpose": "Purpose",
     "summary": [
              "Summary1",
@@ -6342,7 +6342,7 @@
     "team": "Minions",
     "image": "https://images.klutzbanana.com/characters_official/wraith_e.png",
     "ability": "You may choose to open your eyes at night. You wake when other evil players do.",
-    "flavor": "Flavor",
+    "flavor": "Ra'āb ina pān ṣilli ša dāri. Rigim qallu ina šūri, šītu ša šunātīka iredde, u napšutka idlul ina pān maṣṣartī dāriti.",
     "purpose": "Purpose",
     "summary": [
              "Summary1",
@@ -6397,7 +6397,7 @@
     "team": "Minions",
     "image": "https://images.klutzbanana.com/characters_official/xaan_e.png",
     "ability": "On night X, all Townsfolk are poisoned until dusk. [X Outsiders]",
-    "flavor": "Flavor",
+    "flavor": "Down they fall. One by one. By two, by three, by five.",
     "purpose": "Purpose",
     "summary": [
              "Summary1",
@@ -6452,7 +6452,7 @@
     "team": "Demons",
     "image": "https://images.klutzbanana.com/characters_official/alhadikhia_e.png",
     "ability": "Each night*, you may choose 3 players (all players learn who): each silently chooses to live or die, but if all live, all die.",
-    "flavor": "Flavor",
+    "flavor": "Alsukut min dhahab.",
     "purpose": "Purpose",
     "summary": [
              "Summary1",
@@ -6507,7 +6507,7 @@
     "team": "Demons",
     "image": "https://images.klutzbanana.com/characters_official/fanggu_e.png",
     "ability": "Each night*, choose a player: they die. The 1st Outsider this kills becomes an evil Fang Gu & you die instead. [+1 Outsider]",
-    "flavor": "Flavor",
+    "flavor": "Your walls and your weapons are but smoke in dreams.",
     "purpose": "Purpose",
     "summary": [
              "Summary1",
@@ -6562,7 +6562,7 @@
     "team": "Demons",
     "image": "https://images.klutzbanana.com/characters_official/imp_e.png",
     "ability": "Each night*, choose a player: they die. If you kill yourself this way, a Minion becomes the Imp.",
-    "flavor": "Flavor",
+    "flavor": "We must keep our wits sharp and our sword sharper. Evil walks among us, and will stop at nothing to destroy us good, simple folk, bringing our fine town to ruin. Trust no-one. But, if you must trust someone, trust me.",
     "purpose": "Purpose",
     "summary": [
              "Summary1",
@@ -6617,7 +6617,7 @@
     "team": "Demons",
     "image": "https://images.klutzbanana.com/characters_official/kazali_e.png",
     "ability": "Each night*, choose a player: they die. [You choose which players are which Minions. -? to +? Outsiders]",
-    "flavor": "Flavor",
+    "flavor": "Gon(z)a7les6. Take cau8tun. The mech4an4ion is iNvert10d. E99ors insy6tum. Reco{7}fig.",
     "purpose": "Purpose",
     "summary": [
              "Summary1",
@@ -6672,7 +6672,7 @@
     "team": "Demons",
     "image": "https://images.klutzbanana.com/characters_official/legion_e.png",
     "ability": "Each night*, a player might die. Executions fail if only evil voted. You register as a Minion too. [Most players are Legion]",
-    "flavor": "Flavor",
+    "flavor": "We are the chill wind on a winter’s day. We are the shadow in the moonless night. We are the poison in your tea and the whisper in your ear. We are everywhere.",
     "purpose": "Purpose",
     "summary": [
              "Summary1",
@@ -6727,7 +6727,7 @@
     "team": "Demons",
     "image": "https://images.klutzbanana.com/characters_official/leviathan_e.png",
     "ability": "If more than 1 good player is executed, evil wins. All players know you are in play. After day 5, evil wins.",
-    "flavor": "Flavor",
+    "flavor": "To the last, I grapple with thee. From Hell’s heart, I stab at thee. For hate’s sake, I spit my last breath at thee.",
     "purpose": "Purpose",
     "summary": [
              "Summary1",
@@ -6782,7 +6782,7 @@
     "team": "Demons",
     "image": "https://images.klutzbanana.com/characters_official/lilmonsta_e.png",
     "ability": "Each night, Minions choose who babysits Lil' Monsta & \"is the Demon\". Each night*, a player might die. [+1 Minion]",
-    "flavor": "Flavor",
+    "flavor": "Step 1: Be cute.<br>Step 2: World domination.<br>Step 3: Bweakfast.",
     "purpose": "Purpose",
     "summary": [
              "Summary1",
@@ -6837,7 +6837,7 @@
     "team": "Demons",
     "image": "https://images.klutzbanana.com/characters_official/lleech_e.png",
     "ability": "Each night*, choose a player: they die. You start by choosing a player: they are poisoned. You die if & only if they are dead.",
-    "flavor": "Flavor",
+    "flavor": "Tasty, tasty, tasty, tasty, tasty, tasty, tasty, tasty brai- I mean pie! Yes. Tasty pie. That’s what I meant to say.",
     "purpose": "Purpose",
     "summary": [
              "Summary1",
@@ -6892,7 +6892,7 @@
     "team": "Demons",
     "image": "https://images.klutzbanana.com/characters_official/lordoftyphon_e.png",
     "ability": "Each night*, choose a player: they die. [Evil characters are in a line. You are in the middle. +1 Minion. -? to +? Outsiders]",
-    "flavor": "Flavor",
+    "flavor": "In the shadowed and forgotten corners of the cosmos, where the stars whisper secrets to the void, lies a truth so profound that the merest glimpse of it unravels the sanity of mortal minds.",
     "purpose": "Purpose",
     "summary": [
              "Summary1",
@@ -6947,7 +6947,7 @@
     "team": "Demons",
     "image": "https://images.klutzbanana.com/characters_official/nodashii_e.png",
     "ability": "Each night*, choose a player: they die. Your 2 Townsfolk neighbors are poisoned.",
-    "flavor": "Flavor",
+    "flavor": "By the sins of Arnoch, I feel thy laden stench. By the curs-ed sun and her foul legion of tiny grinning gods, I corrupt thee. By the blessed night and the hidden depths of the horrid and unholy sea, I end thy squalid life upon this plane.",
     "purpose": "Purpose",
     "summary": [
              "Summary1",
@@ -7002,7 +7002,7 @@
     "team": "Demons",
     "image": "https://images.klutzbanana.com/characters_official/ojo_e.png",
     "ability": "Each night*, choose a character: they die. If they are not in play, the Storyteller chooses who dies.",
-    "flavor": "Flavor",
+    "flavor": "Like a bonfire on a moonless night... I see you, mortal.",
     "purpose": "Purpose",
     "summary": [
              "Summary1",
@@ -7057,7 +7057,7 @@
     "team": "Demons",
     "image": "https://images.klutzbanana.com/characters_official/po_e.png",
     "ability": "Each night*, you may choose a player: they die. If your last choice was no-one, choose 3 players tonight.",
-    "flavor": "Flavor",
+    "flavor": "Would you like a flower? I'm so lonely.",
     "purpose": "Purpose",
     "summary": [
              "Summary1",
@@ -7112,7 +7112,7 @@
     "team": "Demons",
     "image": "https://images.klutzbanana.com/characters_official/pukka_e.png",
     "ability": "Each night, choose a player: they are poisoned. The previously poisoned player dies then becomes healthy.",
-    "flavor": "Flavor",
+    "flavor": "You truly have been kind welcoming me into your beautiful home. I am so sorry I accidentally scratched you. A little thing. No matter. But please, take this golden toothpick as a humble token of my regret.",
     "purpose": "Purpose",
     "summary": [
              "Summary1",
@@ -7167,7 +7167,7 @@
     "team": "Demons",
     "image": "https://images.klutzbanana.com/characters_official/riot_e.png",
     "ability": "On day 3, Minions become Riot & nominees die but nominate an alive player immediately. This must happen.",
-    "flavor": "Flavor",
+    "flavor": "Larga vida a la revolución! Mi revolucion!",
     "purpose": "Purpose",
     "summary": [
              "Summary1",
@@ -7222,7 +7222,7 @@
     "team": "Demons",
     "image": "https://images.klutzbanana.com/characters_official/shabaloth_e.png",
     "ability": "Each night*, choose 2 players: they die. A dead player you chose last night might be regurgitated.",
-    "flavor": "Flavor",
+    "flavor": "Blarg f'taag nm mataan! No sho gumtha m'sik na yuuu. Fluuuuuuuuurg h-sikkkh.",
     "purpose": "Purpose",
     "summary": [
              "Summary1",
@@ -7277,7 +7277,7 @@
     "team": "Demons",
     "image": "https://images.klutzbanana.com/characters_official/vigormortis_e.png",
     "ability": "Each night*, choose a player: they die. Minions you kill keep their ability & poison 1 Townsfolk neighbor. [-1 Outsider]",
-    "flavor": "Flavor",
+    "flavor": "All doors are one door. All keys are one key. All cups are one cup, but whosoever drinketh of the water that I give shall never thirst, but the water shall be in him a well springing up into everlasting life.",
     "purpose": "Purpose",
     "summary": [
              "Summary1",
@@ -7332,7 +7332,7 @@
     "team": "Demons",
     "image": "https://images.klutzbanana.com/characters_official/vortox_e.png",
     "ability": "Each night*, choose a player: they die. Townsfolk abilities yield false info. Each day, if no-one is executed, evil wins.",
-    "flavor": "Flavor",
+    "flavor": "Black is White. Right is Wrong. Left is Right. Up is Long. Down is Sight. Short is Blind. Follow me. Answers find.",
     "purpose": "Purpose",
     "summary": [
              "Summary1",
@@ -7387,7 +7387,7 @@
     "team": "Demons",
     "image": "https://images.klutzbanana.com/characters_official/yaggababble_e.png",
     "ability": "You start knowing a secret phrase. For each time you said it publicly today, a player might die.",
-    "flavor": "Flavor",
+    "flavor": "Murders inside the Rue Morgue? Фальшивые новости! Hounds on the Baskerville moor? Фальшивые новости! Death while sailing the Nile? Фальшивые новости!",
     "purpose": "Purpose",
     "summary": [
              "Summary1",
@@ -7442,7 +7442,7 @@
     "team": "Demons",
     "image": "https://images.klutzbanana.com/characters_official/zombuul_e.png",
     "ability": "Each night*, if no-one died today, choose a player: they die. The 1st time you die, you live but register as dead.",
-    "flavor": "Flavor",
+    "flavor": "I do not. Understand. Your ways. Fellow human. Show me. The dirt. Where the holy. Lay. Sleeping. I too. Must sleep. Soon.",
     "purpose": "Purpose",
     "summary": [
              "Summary1",
