@@ -1,12 +1,5 @@
 console.log("interaction-finder Updated 8/03/26 23:02");
 let interactions = [];
-function getCharacters(text){
-    const matches=text.match(/\[(.*?)\]/g);
-    if(!matches) return [];
-    return matches.map(match=>
-        match.slice(1,-1)
-    );
-}
 function getInteractionCharacters(){
     const set = new Set();
     interactions.forEach(interaction=>{
