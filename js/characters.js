@@ -33,6 +33,7 @@ const slugExceptions = {
     "Hell's Librarian":"hellslibrarian",
     "Al-Hadikhia":"alhadikhia",
     "Bounty Hunter":"bountyhunter",
+    "Bone Collector":"bonecollector",
     "Cult Leader":"cultleader",
     "Evil Twin":"eviltwin",
     "Fang Gu":"fanggu",
