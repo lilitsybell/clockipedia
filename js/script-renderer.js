@@ -1,0 +1,71 @@
+console.log(
+    "script-renderer.js updated 8/04/26 10:29"
+);
+function renderScriptCharacters(script){
+    const container =
+        document.getElementById(
+            "characterContainer"
+        );
+    container.innerHTML = "";
+    const teams = [
+        "townsfolk",
+        "outsiders",
+        "minions",
+        "demons"
+    ];
+    teams.forEach(team=>{
+        const section =
+            document.createElement("div");
+        section.className =
+            "team-section";
+        const title =
+            document.createElement("div");
+        title.className =
+            "team-title";
+        title.textContent =
+            team
+            .charAt(0)
+            .toUpperCase()
+            +
+            team.slice(1);
+        section.appendChild(title);
+        script.characters
+            .filter(character=>{
+                const id =
+                    typeof character === "string"
+                    ? character
+                    : character.id;
+                const data =
+                    ScriptGenerator
+                    .characterLookup
+                    .get(id);
+                return data &&
+                       data.team.toLowerCase() === team;
+            })
+            .forEach(character=>{
+                const id =
+                    typeof character === "string"
+                    ? character
+                    : character.id;
+                const data =
+                    ScriptGenerator
+                    .characterLookup
+                    .get(id);
+                const card =
+                    document.createElement("div");
+                card.className =
+                    "script-character";
+                card.innerHTML = `
+                    <img src="${data.image}">
+                    <div>
+                        <h3>${data.name}</h3>
+                        <p>
+                        ${data.ability}
+                        </p>
+                    </div>
+                `;
+                section.appendChild(card);
+            });
+        container.appendChild(section);
+    });
+}
