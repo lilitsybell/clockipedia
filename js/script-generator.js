@@ -28,6 +28,7 @@ async function generateScript() {
     // Load BOTC JSON
     const loadedScript =
         await loadScript(script.file);
+    ScriptGenerator.currentScript = loadedScript;
     // Build character database
     buildCharacterLookup(loadedScript);
 // Render characters
