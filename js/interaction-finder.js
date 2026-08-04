@@ -1,39 +1,5 @@
 console.log("interaction-finder Updated 8/03/26 23:02");
 let interactions = [];
-function getInteractionCharacters(){
-    const set = new Set();
-    interactions.forEach(interaction=>{
-        getCharacters(interaction.text)
-        .forEach(character=>{
-            set.add(character);
-        });
-    });
-    return [...set].sort((a,b)=>a.localeCompare(b));
-}
-function getInteractionColor(interaction){
-    const chars = getCharacters(interaction.text);
-    let colors = [];
-    chars.forEach(character=>{
-        const slug = getSlug(character);
-        const data = characters[slug];
-        if(data){
-            const color = teamColors[data.team] || "default";
-            if(color && !colors.includes(color)){
-                colors.push(color);
-            }
-        }
-    });
-    // Traveller gets priority
-    if(colors.includes("traveller")){
-        return "traveller";
-    }
-    // If all same color, use it
-    if(colors.length === 1){
-        return colors[0];
-    }
-    // Mixed teams default purple
-    return "purple";
-}
 document.addEventListener("DOMContentLoaded", async()=>{
     try{
         await loadCharacters();
