@@ -1035,8 +1035,12 @@ font-size:22px;
     display:flex;
     justify-content:space-between;
     align-items:flex-end;
+    gap:20px;
+}
+.generator-left-controls {
+    display:flex;
+    align-items:flex-end;
     gap:15px;
-    flex-wrap:wrap;
 }
 .generator-setting {
     display:flex;
@@ -1048,7 +1052,7 @@ font-size:22px;
 }
 .generator-setting input,
 .generator-setting select {
-    width:260px;
+    width:220px;
     height:42px;
     padding:0 12px;
     border:1px solid #aaa;
