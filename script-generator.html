@@ -1,69 +1,152 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<link rel="icon" type="image/png" href="../images/favicon.png">
-<meta charset="UTF-8">
-<title>Script Generator</title>
-<link rel="stylesheet" href="/css/style.css">
+    <link rel="icon" type="image/png" href="../images/favicon.png">
+    <meta charset="UTF-8">
+    <title>Script Generator</title>
+    <link rel="stylesheet" href="/css/style.css">
 </head>
+
 <body>
+
 <div id="sidebar"></div>
+
 <div id="content">
-<div class="script-generator">
-    <!-- TITLE -->
-    <div class="generator-header">
-        Script Generator
-    </div>
-    <!-- SETTINGS PANEL -->
-<div class="generator-panel script-results">
 
-    <div class="script-header" id="scriptHeader">
+    <div class="script-generator">
 
-        <div class="script-logo-container">
-            <img id="scriptLogo" class="script-logo">
+        <!-- ===================================== -->
+        <!-- PAGE HEADER -->
+        <!-- ===================================== -->
+
+        <div class="generator-header">
+            Script Generator
         </div>
 
-        <div class="script-header-info">
-            <div class="script-heading">
-                <h2 id="scriptTitle">Unknown Script</h2>
-                <span id="scriptAuthor">by Unknown</span>
+        <!-- ===================================== -->
+        <!-- SETTINGS PANEL -->
+        <!-- ===================================== -->
+
+        <div class="generator-panel">
+
+            <div class="generator-controls">
+
+                <div class="generator-setting">
+                    <label>Include Character</label>
+                    <input id="characterSearch" placeholder="Search characters...">
+                </div>
+
+                <div class="generator-setting">
+                    <label>Homebrew</label>
+                    <button id="homebrewButton" class="generator-button">
+                        Maybe
+                    </button>
+                </div>
+
+                <div class="generator-setting">
+                    <label>Script Size</label>
+                    <button id="scriptSizeButton" class="generator-button">
+                        Any
+                    </button>
+                </div>
+
+                <button
+                    id="generateScriptButton"
+                    class="generator-button">
+                    Generate Script
+                </button>
+
             </div>
 
-            <div id="scriptTags"></div>
         </div>
 
-        <div class="json-buttons">
-            <button class="generator-button">
-                Copy JSON
-            </button>
+        <!-- ===================================== -->
+        <!-- RESULTS PANEL -->
+        <!-- ===================================== -->
 
-            <button class="generator-button">
-                Download JSON
-            </button>
+        <div class="generator-panel script-results">
 
-            <a
-                id="scriptAlmanac"
-                class="generator-button"
-                target="_blank"
-                style="display:none;">
-                View Almanac
-            </a>
+            <!-- Script Header -->
+
+            <div
+                id="scriptHeader"
+                class="script-header">
+
+                <!-- Logo -->
+
+                <div class="script-logo-container">
+                    <img
+                        id="scriptLogo"
+                        class="script-logo"
+                        alt="Script Logo">
+                </div>
+
+                <!-- Title -->
+
+                <div class="script-header-info">
+
+                    <div class="script-heading">
+
+                        <h2 id="scriptTitle">
+                            Unknown Script
+                        </h2>
+
+                        <span id="scriptAuthor">
+                            by Unknown
+                        </span>
+
+                    </div>
+
+                    <div id="scriptTags"></div>
+
+                </div>
+
+                <!-- Action Buttons -->
+
+                <div class="json-buttons">
+
+                    <button
+                        id="copyJsonButton"
+                        class="generator-button">
+                        Copy JSON
+                    </button>
+
+                    <button
+                        id="downloadJsonButton"
+                        class="generator-button">
+                        Download JSON
+                    </button>
+
+                    <a
+                        id="scriptAlmanac"
+                        class="generator-button"
+                        target="_blank"
+                        style="display:none;">
+                        View Almanac
+                    </a>
+
+                </div>
+
+            </div>
+
+            <!-- Characters -->
+
+            <div id="characterContainer"></div>
+
         </div>
 
-    </div> <!-- END script-header -->
+    </div>
 
-    <!-- CHARACTERS -->
-    <div id="characterContainer"></div>
-
-</div> <!-- END generator-panel -->
 </div>
+
 <script src="/js/characters.js"></script>
 <script src="/js/interaction-card.js"></script>
 <script src="/js/tooltip.js"></script>
-<script src="../js/search.js"></script>
-<script src="../js/sidebar.js"></script>
+<script src="/js/search.js"></script>
+<script src="/js/sidebar.js"></script>
 <script src="/js/script-loader.js"></script>
 <script src="/js/script-renderer.js"></script>
 <script src="/js/script-generator.js"></script>
+
 </body>
 </html>
