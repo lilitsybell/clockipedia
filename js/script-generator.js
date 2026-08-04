@@ -19,6 +19,23 @@ async function generateScript() {
     // Pick random script
 const availableScripts =
     ScriptGenerator.scripts.filter(script=>{
+        // Character filter
+if(
+    ScriptGenerator.characterFilter
+){
+    if(
+        !script.characters ||
+        !script.characters.some(character =>
+            character
+            .toLowerCase()
+            .includes(
+                ScriptGenerator.characterFilter
+            )
+        )
+    ){
+        return false;
+    }
+}
         // Homebrew filter
         if(
             ScriptGenerator.homebrewFilter === "Yes" &&
