@@ -374,16 +374,6 @@ font-size:22px;
 .character-link.traveller{
     color:var(--traveller);
 }
-.wiki.traveller .content{
-    border-color:var(--blue);
-}
-.wiki.traveller .content::after{
-    background:linear-gradient(
-        0deg,
-        var(--blue) 50%,
-        var(--red) 50%
-    );
-}
 .wiki.blue h2{
     color:var(--blue);
 }
@@ -397,7 +387,7 @@ font-size:22px;
     color:#8ea742;
 }
 .wiki.traveller h2{
-    color:var(--purple);
+    color:var(--traveller);
 }
 .character-link.default{
     color:var(--purple);
@@ -418,11 +408,6 @@ font-size:22px;
 .content.purple,
 .wiki.purple {
     --team-color:var(--purple);
-}
-.content.traveller h1,
-.content.traveller h2,
-.content.traveller h3{
-    color:var(--traveller);
 }
 
 /* Wiki Container */
@@ -464,8 +449,6 @@ font-size:22px;
 }
 .wiki.green .tab.active{
     background:#8ea742;
-.wiki.traveller .tab.active{
-    color:var(--traveller);
 }
 .page {
     display: none;
@@ -518,7 +501,7 @@ font-size:22px;
     --team-color:var(--traveller);
 }
 .wiki.traveller .content::after{
-    color:var(--traveller);
+    background:var(--traveller);
 }
 
 /* Example Cards */
@@ -546,7 +529,7 @@ font-size:22px;
     border-left-color:#8ea742;
 }
 .wiki.traveller .example{
-    color:var(--traveller);
+    border-left-color:var(--traveller);
 }
 
 /* ===========================
