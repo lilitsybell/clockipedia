@@ -1,9 +1,15 @@
 [
     {
-        "name": "Trouble Brewing",
-        "path": "/data/scripts/trouble-brewing.json",
+        "name": "Opium Den",
+        "author": "Corey and Bell",
+        "file": "/data/scripts/opium-den.json",
         "size": "full",
-        "homebrewCharacters": false,
-        "homebrewRules": false
+        "homebrew": true,
+        "homebrewRules": true,
+        "tags": [
+            "Full",
+            "Homebrew Characters",
+            "Homebrew Rules"
+        ]
     }
 ]
