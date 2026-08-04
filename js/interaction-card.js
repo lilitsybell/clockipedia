@@ -40,3 +40,12 @@ function getInteractionColor(interaction){
     // Mixed teams default purple
     return "purple";
 }
+function createInteractionCard(interaction){
+
+    const li = document.createElement("li");
+
+    ...
+    ...
+
+    return li;
+}
