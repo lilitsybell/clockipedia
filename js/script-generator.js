@@ -9,10 +9,11 @@ async function initializeGenerator() {
         // Load Script of the Day
         const daily =
             await loadDailyScript();
-        const script =
-            await loadScript(
-                daily.file
-            );
+const script =
+    await loadScript(
+        daily.file
+    );
+script.isDaily = true;
         ScriptGenerator.currentScript =
             script;
         buildCharacterLookup(
