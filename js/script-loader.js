@@ -15,11 +15,18 @@ function normalizeCharacter(character){
     if(Array.isArray(character.image)){
         character.image = character.image[0];
     }
-    if(character.team){
-        character.team =
-            character.team.charAt(0).toUpperCase() +
-            character.team.slice(1).toLowerCase();
-    }
+if(character.team){
+    character.team =
+        character.team
+        .replace(/s$/, "")
+        .charAt(0)
+        .toUpperCase()
+        +
+        character.team
+        .replace(/s$/, "")
+        .slice(1)
+        .toLowerCase();
+}
     return character;
 }
 /* ======================================================
@@ -93,21 +100,24 @@ async function loadScript(path) {
 ====================================================== */
 function extractScriptCharacters(script) {
     const characters = [];
+    let meta = null;
     if (!Array.isArray(script)) {
         console.error("Script is not an array:", script);
         return characters;
     }
     script.forEach(entry => {
-        // Ignore metadata
+        // Metadata
         if (
             typeof entry === "object" &&
             entry.id === "_meta"
         ) {
+            meta = entry;
             return;
         }
         // Official character ID
         if (typeof entry === "string") {
-            const character = ScriptGenerator.officialCharacters.get(entry);
+            const character =
+                ScriptGenerator.officialCharacters.get(entry);
             if (character) {
                 characters.push({
                     id: entry,
@@ -135,6 +145,31 @@ function extractScriptCharacters(script) {
             });
         }
     });
+    // Add Bootlegger automatically
+    if(
+        meta &&
+        (
+            meta.bootlegger ||
+            characters.some(c => c.homebrew)
+        )
+    ){
+        const bootlegger =
+            ScriptGenerator.officialCharacters.get(
+                "bootlegger"
+            );
+        if(bootlegger){
+            characters.unshift({
+                id:"bootlegger",
+                ...bootlegger,
+                ability:
+                    meta.bootlegger
+                    ? meta.bootlegger.join("\n")
+                    : bootlegger.ability,
+                official:true,
+                homebrew:false
+            });
+        }
+    }
     console.log(
         "Extracted",
         characters.length,
