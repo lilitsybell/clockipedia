@@ -29,9 +29,52 @@ function renderScriptHeader(script){
             "scriptHeader"
         );
     if(!container) return;
-    container.innerHTML = "";
-    const meta =
-        script.meta;
+    const meta = script.meta;
+    if(!meta) {
+        console.warn("No script metadata found");
+        return;
+    }
+    const title =
+        document.getElementById("scriptTitle");
+    const author =
+        document.getElementById("scriptAuthor");
+    const logo =
+        document.getElementById("scriptLogo");
+    const almanac =
+        document.getElementById("scriptAlmanac");
+    // Title
+    if(title){
+        title.textContent =
+            meta.name || "Unknown Script";
+    }
+    // Author
+    if(author){
+        author.textContent =
+            meta.author
+            ? "by " + meta.author
+            : "";
+    }
+    // Logo
+    if(logo && meta.logo){
+        logo.src = meta.logo;
+        logo.style.display = "block";
+    }
+    // Almanac
+    if(almanac){
+        if(meta.almanac){
+            almanac.href = meta.almanac;
+            almanac.style.display = "inline-block";
+        }
+        else{
+            almanac.style.display = "none";
+        }
+    }
+    // Background
+    if(meta.background){
+        container.style.backgroundImage =
+            `url("${meta.background}")`;
+    }
+}
     if(!meta) return;
     // Background
     if(meta.background){
@@ -127,7 +170,12 @@ const teams = [
                     ScriptGenerator
                     .characterLookup
                     .get(id);
-return data &&
+console.log(
+    "Rendering:",
+    id,
+    data
+);
+        return data &&
        normalizeTeam(data.team) === team;
             })
             .forEach(character=>{
