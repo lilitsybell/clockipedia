@@ -1,0 +1,90 @@
+[
+  {
+    "id": "_meta",
+    "author": "Broom",
+    "name": "Replication Error",
+    "firstNight": [
+      "dusk",
+      "philosopher",
+      "minioninfo",
+      "demoninfo",
+      "godfather",
+      "cerenovus",
+      "librarian",
+      "grandmother",
+      "noble",
+      "balloonist",
+      "highpriestess",
+      "general",
+      "dawn"
+    ],
+    "otherNight": [
+      "dusk",
+      "philosopher",
+      "cerenovus",
+      "scarletwoman",
+      "fanggu",
+      "vigormortis",
+      "assassin",
+      "godfather",
+      "grandmother",
+      "undertaker",
+      "towncrier",
+      "oracle",
+      "juggler",
+      "balloonist",
+      "highpriestess",
+      "general",
+      "dawn"
+    ],
+    "bootlegger": [
+      "If more than one Mutant is executed from being \"mad\" about being an Outsider, good loses."
+    ]
+  },
+  "noble",
+  "juggler",
+  "grandmother",
+  "librarian",
+  "balloonist",
+  "towncrier",
+  "savant",
+  "artist",
+  "undertaker",
+  "highpriestess",
+  "philosopher",
+  "oracle",
+  "general",
+  {
+    "id": "mutant1",
+    "name": "Mutant",
+    "image": [
+      "https://wiki.bloodontheclocktower.com/images/2/2e/Icon_mutant.png"
+    ],
+    "team": "outsider",
+    "edition": "snv",
+    "ability": "If you are \"Mad\" about being an Outsider, you might be executed.",
+    "flavor": "I am not a freak! I am a human being! Have mercy!",
+    "firstNight": 0,
+    "otherNight": 0,
+    "jinxes": [
+      {
+        "id": "cerenovus",
+        "reason": "The Cerenovus cannot make people \"Mad\" as the Mutant."
+      }
+    ],
+    "special": [
+      {
+        "name": "bag-duplicate",
+        "type": "selection"
+      }
+    ]
+  },
+  "godfather",
+  "cerenovus",
+  "assassin",
+  "scarletwoman",
+  "baron",
+  "fanggu",
+  "vigormortis",
+  "bootlegger"
+]
