@@ -17,13 +17,43 @@ async function generateScript() {
         return;
     }
     // Pick random script
-    const script =
-        ScriptGenerator.scripts[
-            Math.floor(
-                Math.random() *
-                ScriptGenerator.scripts.length
-            )
-        ];
+const availableScripts =
+    ScriptGenerator.scripts.filter(script=>{
+        // Homebrew filter
+        if(
+            ScriptGenerator.homebrewFilter === "Yes" &&
+            !script.homebrew
+        ){
+            return false;
+        }
+        if(
+            ScriptGenerator.homebrewFilter === "No" &&
+            script.homebrew
+        ){
+            return false;
+        }
+        // Size filter
+        if(
+            ScriptGenerator.sizeFilter !== "Any" &&
+            script.size !== ScriptGenerator.sizeFilter.toLowerCase()
+        ){
+            return false;
+        }
+        return true;
+    });
+if(!availableScripts.length){
+    console.warn(
+        "No scripts match filters"
+    );
+    return;
+}
+const script =
+    availableScripts[
+        Math.floor(
+            Math.random() *
+            availableScripts.length
+        )
+    ];
     console.log("Selected script:", script);
     // Load BOTC JSON
     const loadedScript =
