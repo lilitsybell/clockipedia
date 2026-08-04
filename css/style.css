@@ -1012,7 +1012,7 @@ font-size:22px;
     margin:auto;
 }
 /* ===========================
-   Main Generator Header
+   Main Title
 =========================== */
 .generator-header {
     background:var(--purple);
@@ -1023,24 +1023,25 @@ font-size:22px;
     font-weight:bold;
     text-align:center;
 }
-.generator-header h1,
-.generator-header h2 {
-    color:white;
-    margin:0;
+/* ===========================
+   Panels
+=========================== */
+.generator-panel {
+    background:white;
+    border:3px solid var(--purple);
+    border-radius:0 0 14px 14px;
+    padding:25px;
+    margin-bottom:25px;
+    box-shadow:0 10px 24px rgba(0,0,0,.12);
 }
 /* ===========================
-   Controls Area
+   Controls
 =========================== */
 .generator-controls {
     display:flex;
     gap:20px;
     flex-wrap:wrap;
     align-items:flex-end;
-    background:white;
-    padding:25px;
-    border-left:3px solid var(--purple);
-    border-right:3px solid var(--purple);
-    box-shadow:0 10px 24px rgba(0,0,0,.12);
 }
 .generator-setting {
     display:flex;
@@ -1058,7 +1059,6 @@ font-size:22px;
     border:2px solid var(--purple);
     border-radius:8px;
     font-size:16px;
-    font-family:"Roboto",sans-serif;
 }
 /* Buttons */
 .generator-button {
@@ -1075,60 +1075,41 @@ font-size:22px;
     opacity:.85;
 }
 /* ===========================
-   Script Results Box
+   Script Results Header
 =========================== */
-.generator-panel {
-    background:white;
-    border:3px solid var(--purple);
+.script-results {
     border-radius:14px;
-    padding:25px;
-    margin-top:25px;
-    box-shadow:0 10px 24px rgba(0,0,0,.12);
-    overflow:hidden;
 }
-/* Script Name Header */
 .script-header {
     background:var(--purple);
     color:white;
     display:flex;
     justify-content:space-between;
     align-items:center;
+    gap:20px;
     padding:20px;
     margin:-25px -25px 25px;
     border-radius:12px 12px 0 0;
 }
-.script-header h1,
 .script-header h2 {
     color:white;
     margin:0;
+    font-size:32px;
 }
 .script-heading {
     display:flex;
-    align-items:center;
+    align-items:baseline;
     gap:15px;
 }
-.script-heading h2 {
-    font-size:32px;
-    color:white;
-}
-/* Script Tags */
-.script-tag {
-    background:white;
-    color:var(--purple);
-    padding:5px 12px;
-    border-radius:15px;
-    font-size:14px;
-    font-weight:bold;
-}
-/* Author */
 #scriptAuthor {
     color:white;
-    font-size:16px;
     font-style:italic;
-    margin-top:8px;
     opacity:.9;
 }
-/* JSON Buttons */
+#scriptTags {
+    margin-top:8px;
+}
+/* JSON buttons */
 .json-buttons {
     display:flex;
     flex-direction:column;
