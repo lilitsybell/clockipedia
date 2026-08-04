@@ -1,3 +1,5 @@
+/* backup 8/03/26 22:48 */
+
 @font-face {
     font-family: "Droid Sans";
     src: url("/fonts/DroidSans.ttf") format("truetype");
@@ -373,13 +375,23 @@ font-size:22px;
 
 .character-link.traveller{
     background:linear-gradient(
-        90deg,
+        0deg,
         var(--blue) 50%,
         var(--red) 50%
     );
     -webkit-background-clip:text;
     background-clip:text;
     color:transparent;
+}
+.wiki.traveller .content{
+    border-color:var(--blue);
+}
+.wiki.traveller .content::after{
+    background:linear-gradient(
+        0deg,
+        var(--blue) 50%,
+        var(--red) 50%
+    );
 }
 .wiki.blue h2{
     color:var(--blue);
@@ -395,7 +407,7 @@ font-size:22px;
 }
 .wiki.traveller h2{
     background:linear-gradient(
-        90deg,
+        0deg,
         var(--blue) 50%,
         var(--red) 50%
     );
@@ -427,7 +439,7 @@ font-size:22px;
 .content.traveller h2,
 .content.traveller h3{
     background:linear-gradient(
-        90deg,
+        0deg,
         var(--blue) 50%,
         var(--red) 50%
     );
@@ -478,7 +490,7 @@ font-size:22px;
 }
 .wiki.traveller .tab.active{
     background:linear-gradient(
-        90deg,
+        0deg,
         var(--blue) 50%,
         var(--red) 50%
     );
@@ -504,23 +516,6 @@ font-size:22px;
 .wiki .content {
     border:3px solid var(--team-color);
     border-top:5px solid var(--team-color);
-}
-.wiki.traveller .content {
-    border-color:var(--blue);
-}
-.wiki.traveller .content::before {
-    content:"";
-    position:absolute;
-    top:0;
-    left:0;
-    right:0;
-    height:5px;
-
-    background:linear-gradient(
-        90deg,
-        var(--blue) 50%,
-        var(--red) 50%
-    );
 }
 .content::after{
     content:"";
@@ -549,8 +544,10 @@ font-size:22px;
 }
 .wiki.traveller {
     --team-color:var(--blue);
-    --traveller-gradient:linear-gradient(
-        90deg,
+}
+.wiki.traveller .content::after{
+    background:linear-gradient(
+        0deg,
         var(--blue) 50%,
         var(--red) 50%
     );
@@ -583,7 +580,7 @@ font-size:22px;
 .wiki.traveller .example{
     border-left:5px solid;
     border-image:linear-gradient(
-        90deg,
+        0deg,
         var(--blue) 50%,
         var(--red) 50%
     ) 1;
@@ -1032,11 +1029,7 @@ font-size:22px;
     border-color:var(--copper);
 }
 .ability-tooltip.traveller {
-    border-image:linear-gradient(
-        90deg,
-        var(--blue) 50%,
-        var(--red) 50%
-    ) 1;
+    border-color:var(--traveller);
 }
 .ability-tooltip.blue .tooltip-title strong,
 .ability-tooltip.blue .tooltip-title span {
