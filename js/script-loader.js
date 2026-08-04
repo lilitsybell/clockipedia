@@ -14,6 +14,23 @@ const ScriptGenerator = {
         character:null
     }
 };
+/* ======================================================
+   Load Script of the Day
+====================================================== */
+
+async function loadDailyScript(){
+
+    const response =
+        await fetch("/data/daily-script.json");
+
+    if(!response.ok){
+        throw new Error(
+            "Failed to load daily-script.json"
+        );
+    }
+
+    return await response.json();
+}
 function updateRecentScripts(script){
     const index =
         ScriptGenerator.recentScripts.indexOf(
