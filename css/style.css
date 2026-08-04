@@ -488,12 +488,11 @@ font-size:22px;
 .wiki.green .tab.active{
     background:#8ea742;
 }
-.wiki.traveller .tab.active{
-    background:linear-gradient(
-        0deg,
-        var(--blue) 50%,
-        var(--red) 50%
-    );
+.wiki.traveller .tab:nth-child(odd).active{
+    background:var(--blue);
+}
+.wiki.traveller .tab:nth-child(even).active{
+    background:var(--red);
 }
 .page {
     display: none;
