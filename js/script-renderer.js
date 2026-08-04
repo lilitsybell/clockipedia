@@ -154,7 +154,9 @@ const abilityHTML =
 card.innerHTML = `
     <img src="${data.image}">
     <div>
-        <h3>${data.name}</h3>
+        <h3 class="script-character-name ${normalizeTeam(data.team)}">
+    ${data.name}
+</h3>
         ${abilityHTML}
     </div>
 `;
