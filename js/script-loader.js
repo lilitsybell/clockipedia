@@ -24,9 +24,14 @@ async function loadOfficialCharacters() {
     );
     console.log(
         "Loaded",
-        ScriptGenerator.officialCharacters.size,
-        "official characters"
+ScriptGenerator.officialCharacters = new Map();
+Object.entries(data).forEach(([id, character]) => {
+    character.id = id;
+    ScriptGenerator.officialCharacters.set(
+        id,
+        character
     );
+});
 }
 /* ======================================================
    Load Script Index
