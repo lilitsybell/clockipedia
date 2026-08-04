@@ -1259,3 +1259,22 @@ font-size:22px;
 #clearCharacterSearch{
     display:flex;
 }
+#scriptTags{
+    display:flex;
+    justify-content:center;
+    flex-wrap:wrap;
+    gap:8px;
+    margin-top:12px;
+}
+.script-tag{
+    display:inline-flex;
+    align-items:center;
+    background:white;
+    color:var(--purple);
+    border:2px solid var(--purple);
+    border-radius:999px;
+    padding:5px 14px;
+    font-size:14px;
+    font-weight:bold;
+    line-height:1;
+}
