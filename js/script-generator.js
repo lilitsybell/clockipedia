@@ -13,13 +13,13 @@ const script =
     await loadScript(
         daily.file
     );
-applyScriptIndexData(
-    script,
-    {
-        ...daily,
-        isDaily:true
-    }
-);
+script.isDaily = true;
+script.size =
+    daily.size;
+script.homebrew =
+    daily.homebrew;
+script.logo =
+    daily.logo;
         ScriptGenerator.currentScript =
             script;
         buildCharacterLookup(
