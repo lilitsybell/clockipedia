@@ -138,15 +138,26 @@ const teams = [
                     document.createElement("div");
                 card.className =
                     "script-character";
-                card.innerHTML = `
-                    <img src="${data.image}">
-                    <div>
-                        <h3>${data.name}</h3>
-                        <p>
-                        ${data.ability}
-                        </p>
-                    </div>
-                `;
+const abilityHTML =
+    Array.isArray(data.ability)
+    ? `
+        <ul>
+            ${data.ability
+                .map(rule => `<li>${rule}</li>`)
+                .join("")}
+        </ul>
+      `
+    : `
+        <p>${data.ability}</p>
+      `;
+
+card.innerHTML = `
+    <img src="${data.image}">
+    <div>
+        <h3>${data.name}</h3>
+        ${abilityHTML}
+    </div>
+`;
                 section.appendChild(card);
             });
         container.appendChild(section);
