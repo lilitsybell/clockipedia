@@ -18,8 +18,10 @@ async function loadOfficialCharacters() {
     }
     const data = await response.json();
     ScriptGenerator.characters.clear();
-    data.forEach(character => {
-        ScriptGenerator.characters.set(character.id, character);
+    Object.entries(data).forEach(([id, character]) => {
+        // Save the id onto the character object
+        character.id = id;
+        ScriptGenerator.characters.set(id, character);
     });
     console.log(
         "Loaded",
