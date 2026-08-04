@@ -6,7 +6,9 @@ const ScriptGenerator = {
     scripts: [],
     officialCharacters: new Map(),
     characterLookup: new Map(),
-    currentScript: null
+    currentScript: null,
+    homebrewFilter: "Maybe",
+    sizeFilter: "Any"
 };
 /* ======================================================
    Normalize Character Data
@@ -212,5 +214,60 @@ function buildCharacterLookup(script){
         "Lookup contains",
         ScriptGenerator.characterLookup.size,
         "characters"
+    );
+}
+/* ======================================================
+   Generator Filters
+====================================================== */
+const homebrewButton =
+    document.getElementById("homebrewButton");
+const scriptSizeButton =
+    document.getElementById("scriptSizeButton");
+if(homebrewButton){
+    homebrewButton.addEventListener(
+        "click",
+        ()=>{
+            const options =
+            [
+                "Maybe",
+                "No",
+                "Yes"
+            ];
+            let index =
+                options.indexOf(
+                    ScriptGenerator.homebrewFilter
+                );
+            index =
+                (index + 1) %
+                options.length;
+            ScriptGenerator.homebrewFilter =
+                options[index];
+            homebrewButton.textContent =
+                ScriptGenerator.homebrewFilter;
+        }
+    );
+}
+if(scriptSizeButton){
+    scriptSizeButton.addEventListener(
+        "click",
+        ()=>{
+            const options =
+            [
+                "Any",
+                "Full",
+                "Teensy"
+            ];
+            let index =
+                options.indexOf(
+                    ScriptGenerator.sizeFilter
+                );
+            index =
+                (index + 1) %
+                options.length;
+            ScriptGenerator.sizeFilter =
+                options[index];
+            scriptSizeButton.textContent =
+                ScriptGenerator.sizeFilter;
+        }
     );
 }
