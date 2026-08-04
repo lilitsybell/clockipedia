@@ -37,21 +37,18 @@ const characterData = JSON.parse(
         "utf8"
     )
 );
-
 const characterLookup = new Map();
-
-for(const character of characterData){
-
+// Handle official characters.json object
+for(const [id, character] of Object.entries(characterData)){
     if(
-        character.id &&
+        character &&
         character.name
     ){
         characterLookup.set(
-            character.id,
+            id,
             character.name
         );
     }
-
 }
 // Process every script
 
@@ -74,36 +71,24 @@ try {
         );
 characters = script
     .map(entry => {
-
-        let id = null;
-
-        // Official character stored as string
+        // Official character ID
         if(typeof entry === "string"){
-            id = entry;
+            return (
+                characterLookup.get(entry) ||
+                entry
+                    .replace(/_/g," ")
+                    .replace(/\b\w/g,c=>c.toUpperCase())
+            );
         }
-
         // Homebrew character object
-        else if(
+        if(
             typeof entry === "object" &&
             entry.id &&
             entry.id !== "_meta"
         ){
-            id = entry.id;
+            return entry.name || entry.id;
         }
-
-
-        if(!id){
-            return null;
-        }
-
-
-        // Use stored character name
-        return (
-            characterLookup.get(id) ||
-            entry.name ||
-            id
-        );
-
+        return null;
     })
     .filter(Boolean);
         const foundMeta = script.find(
