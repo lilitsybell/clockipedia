@@ -1143,3 +1143,9 @@ font-size:22px;
     align-items:baseline;
     gap:15px;
 }
+.json-buttons{
+    display:flex;
+    justify-content:center;
+    gap:15px;
+    margin-top:25px;
+}
