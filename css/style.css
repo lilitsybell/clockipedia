@@ -14,11 +14,11 @@
 --lime:#8EA742;
 --copper:#B77102;
 --traveller:#915271;
---blue-soft:#dbe8f7;
---red-soft:#f1d9d9;
---lime-soft:#e6edcf;
---copper-soft:#f3e2c5;
---traveller-soft:#eadbe4;
+--blue-soft:#e4edf8;
+--red-soft:#f4e1e1;
+--lime-soft:#edf2dc;
+--copper-soft:#f5e8d2;
+--traveller-soft:#eee1e8;
 --purple:#666699;
 --gray:#959799;
 --light-gray:#fafafa;
@@ -1029,10 +1029,11 @@ font-size:22px;
 .generator-panel{
     background:white;
     border:3px solid var(--purple);
-    border-radius:0 0 14px 14px;
+    border-radius:14px;
     padding:25px;
     margin-bottom:25px;
     box-shadow:0 10px 24px rgba(0,0,0,.12);
+    overflow:hidden;
 }
 /* Controls */
 .generator-controls{
@@ -1125,6 +1126,7 @@ font-size:22px;
     font-weight:bold;
     margin-bottom:10px;
     color:#333;
+    border:1px solid rgba(0,0,0,.08);
 }
 .team-section:nth-child(1) .team-title,
 .team-section:nth-child(2) .team-title{
@@ -1158,12 +1160,11 @@ font-size:22px;
     background:var(--purple);
     color:white;
     padding:20px;
-    border-radius:14px 14px 0 0;
+    border-radius:11px 11px 0 0;
     display:flex;
     justify-content:space-between;
     align-items:center;
     margin:-25px -25px 25px;
-    overflow:hidden;
 }
 .script-results{
     overflow:hidden;
