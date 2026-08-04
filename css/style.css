@@ -1008,16 +1008,6 @@ font-size:22px;
    Script Generator
 =========================== */
 
-.generator-header{
-    background:var(--purple);
-    color:white;
-    font-size:32px;
-    padding:20px;
-    text-align:center;
-    border-radius:14px 14px 0 0;
-    font-weight:bold;
-}
-
 /* Controls */
 .generator-controls{
     display:flex;
@@ -1153,7 +1143,7 @@ font-size:22px;
 .generator-panel{
     background:white;
     border:3px solid var(--purple);
-    border-radius:14px;
+    border-radius:0 0 14px 14px;
     padding:25px;
     margin-bottom:25px;
     box-shadow:0 10px 24px rgba(0,0,0,.12);
@@ -1204,4 +1194,9 @@ font-size:22px;
     font-size:22px;
     font-weight:bold;
     margin-bottom:10px;
+}
+.script-title {
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
 }
