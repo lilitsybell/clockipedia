@@ -17,12 +17,7 @@ async function loadOfficialCharacters() {
         throw new Error("Failed to load characters.json");
     }
     const data = await response.json();
-    ScriptGenerator.characters.clear();
-    Object.entries(data).forEach(([id, character]) => {
-        // Save the id onto the character object
-        character.id = id;
-        ScriptGenerator.characters.set(id, character);
-    });
+    ScriptGenerator.characters = new Map(Object.entries(data));
     console.log(
         "Loaded",
         ScriptGenerator.characters.size,
