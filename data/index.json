@@ -1,7 +1,7 @@
 [
     {
         "name": "Trouble Brewing",
-        "path": "/scripts/trouble-brewing.json",
+        "path": "/data/scripts/trouble-brewing.json",
         "size": "full",
         "homebrewCharacters": false,
         "homebrewRules": false
