@@ -1007,59 +1007,68 @@ font-size:22px;
 /* ===========================
    Script Generator
 =========================== */
+
 .script-generator {
-    width:min(1100px,95%);
+    width:min(1000px,95%);
     margin:auto;
 }
-/* ===========================
-   Main Title
-=========================== */
+
+/* Main Purple Header */
 .generator-header {
     background:var(--purple);
     color:white;
-    padding:20px;
-    border-radius:12px 12px 0 0;
-    font-size:32px;
+    font-size:30px;
     font-weight:bold;
     text-align:center;
+    padding:20px;
+    letter-spacing:.5px;
+    border-radius:14px 14px 0 0;
 }
-/* ===========================
-   Panels
-=========================== */
+
+
+/* Main Panels */
 .generator-panel {
     background:white;
-    border:3px solid var(--purple);
+    border:1px solid var(--border);
     border-radius:0 0 14px 14px;
     padding:25px;
     margin-bottom:25px;
     box-shadow:0 10px 24px rgba(0,0,0,.12);
 }
-/* ===========================
-   Controls
-=========================== */
+
+
+/* Controls */
 .generator-controls {
     display:flex;
-    gap:20px;
-    flex-wrap:wrap;
+    justify-content:center;
     align-items:flex-end;
+    gap:15px;
+    flex-wrap:wrap;
 }
+
 .generator-setting {
     display:flex;
     flex-direction:column;
     gap:8px;
 }
+
 .generator-setting label {
     font-weight:bold;
 }
+
+
 .generator-setting input,
 .generator-setting select {
     width:260px;
     height:42px;
     padding:0 12px;
-    border:2px solid var(--purple);
+    border:1px solid #aaa;
     border-radius:8px;
     font-size:16px;
+    background:white;
 }
+
+
 /* Buttons */
 .generator-button {
     background:var(--purple);
@@ -1071,15 +1080,18 @@ font-size:22px;
     font-size:16px;
     font-weight:bold;
 }
+
 .generator-button:hover {
     opacity:.85;
 }
-/* ===========================
-   Script Results Header
-=========================== */
+
+
+/* Script Results Header */
 .script-results {
     border-radius:14px;
+    overflow:hidden;
 }
+
 .script-header {
     background:var(--purple);
     color:white;
@@ -1089,69 +1101,78 @@ font-size:22px;
     gap:20px;
     padding:20px;
     margin:-25px -25px 25px;
-    border-radius:12px 12px 0 0;
 }
+
+
 .script-header h2 {
     color:white;
     margin:0;
-    font-size:32px;
+    font-size:30px;
 }
+
 .script-heading {
     display:flex;
     align-items:baseline;
     gap:15px;
 }
+
+
 #scriptAuthor {
     color:white;
     font-style:italic;
     opacity:.9;
 }
-#scriptTags {
-    margin-top:8px;
-}
-/* JSON buttons */
+
+
+/* JSON Buttons */
 .json-buttons {
     display:flex;
     flex-direction:column;
     gap:10px;
 }
+
 .json-buttons .generator-button {
     background:white;
     color:var(--purple);
-    padding:8px 18px;
 }
-/* ===========================
-   Description
-=========================== */
+
+
+/* Description */
 #descriptionBox {
-    background:var(--light-gray);
+    background:#f7f7f7;
     border-left:5px solid var(--purple);
     padding:20px;
     margin:25px 0;
     border-radius:8px;
 }
+
 #descriptionBox h3 {
     color:var(--purple);
-    margin-bottom:8px;
 }
-/* ===========================
-   Characters
-=========================== */
+
+
+/* Character Sections */
 #characterContainer {
-    padding:0 10px;
+    padding:0;
 }
+
+
 .team-section {
     margin-bottom:25px;
 }
+
+
 .team-title {
-    background:#e8e8e8;
+    background:#f7f7f7;
+    border:1px solid #ddd;
     color:#444;
     padding:12px 18px;
     border-radius:8px;
     font-size:22px;
     font-weight:bold;
-    margin-bottom:10px;
 }
+
+
 .script-character {
     display:flex;
     align-items:center;
@@ -1159,982 +1180,10 @@ font-size:22px;
     padding:15px;
     border-bottom:1px solid #ddd;
 }
+
+
 .script-character img {
     width:70px;
     height:70px;
     object-fit:contain;
-}
-.script-character h3 {
-    margin:0 0 5px;
-}
-.script-character p {
-    margin:0;
-}
-.hidden{
-    display:none;
-}
-.center{
-    text-align:center;
-}
-
-/* =========================
-   Typography
-========================= */
-
-h1,h2,h3,h4,h5,h6 {
-    font-family:"Droid Sans", Arial, sans-serif;
-    font-weight:400;
-}
-h1 {
-    font-size:42px;
-    margin-bottom:25px;
-    color:var(--team-color);
-}
-h2 {
-    font-size:28px;
-    margin:35px 0 18px;
-    color:var(--team-color);
-}
-p,li {
-    line-height:1.6;
-}
-body {
-    margin:0;
-    background:white;
-    color:#333;
-    font-family:"Roboto", Arial, sans-serif;
-    font-size:16px;
-    font-weight:400;
-    min-height:100%;
-    -webkit-font-smoothing:antialiased;
-    -moz-osx-font-smoothing:grayscale;
-    overscroll-behavior:none;
-}
-.content {
-    font-size:17px;
-    line-height:1.6;
-}
-.content p,
-.content li {
-    font-size:17px;
-    line-height:1.6;
-}
-
-/* =========================
-   SIDEBAR
-========================= */
-
-#sidebar {
-    position:fixed;
-    left:0;
-    top:0;
-    width:260px;
-    height:100vh;
-    background:white;
-    border-right:none;
-    padding:25px;
-    overflow-y:auto;
-    overscroll-behavior-y: contain;
-    font-family: "Roboto", sans-serif;
-}
-
-/* LOGO */
-
-.logo {
-    text-align:center;
-    margin-bottom:25px;
-}
-.logo img {
-    width:210px;
-}
-
-/* SEARCH */
-
-.search-box{
-    position:relative;
-    margin-bottom:25px;
-}
-.search-box input{
-    width:100%;
-    padding:10px 14px;
-    border-radius:10px;
-    border:2px solid var(--purple);
-    background:white;
-    font-size:15px;
-    box-sizing:border-box;
-    font-family:"Roboto", sans-serif;
-}
-.search-results{
-    position:absolute;
-    left:0;
-    top:100%;
-    width:100%;
-    margin-top:6px;
-    background:white;
-    border-radius:10px;
-    box-shadow:0 8px 20px rgba(0,0,0,.08);
-    overflow:hidden;
-    display:none;
-    z-index:9999;
-}
-.search-item {
-    display:flex;
-    align-items:center;
-    gap:10px;
-}
-.search-icon {
-    width:40px;
-    height:40px;
-    object-fit:contain;
-}
-.search-item:hover{
-    background:var(--purple);
-    color:white;
-}
-.search-text {
-    display:flex;
-    flex-direction:column;
-    line-height:1.1;
-}
-.search-text strong {
-    font-size:16px;
-}
-.search-text small {
-    font-size:13px;
-    margin-top:2px;
-}
-
-/* LINKS */
-
-.sidebar-nav {
-    display:flex;
-    flex-direction:column;
-}
-.nav-link {
-    display:block;
-    padding:10px 12px;
-    margin:3px 0;
-    border-radius:8px;
-    text-decoration:none;
-    color:var(--black);
-    font-size:18px;
-    cursor:pointer;
-    transition:.2s;
-}
-.nav-link:hover {
-    background:#e7f3f8;
-    text-decoration:none;
-}
-.nav-link.active {
-    background:white;
-    color:var(--black);
-}
-
-/* CHARACTER MENU */
-
-.character-toggle {
-    display:flex;
-    justify-content:space-between;
-    align-items:center;
-    padding:10px 12px;
-    margin:3px 0;
-    border-radius:8px;
-    color:var(--black);
-    font-size:18px;
-    cursor:pointer;
-}
-.character-toggle:hover {
-    background:#e7f3f8;
-}
-.arrow {
-    font-size:12px;
-    transition:transform .3s ease;
-}
-
-
-/* Hide character choices by default */
-
-.character-dropdown {
-    display:block;
-    max-height:0;
-    overflow:hidden;
-    opacity:0;
-    transition:
-        max-height .35s ease,
-        opacity .25s ease;
-}
-
-
-/* Show character choices when opened */
-
-.character-section.open .character-dropdown {
-    max-height:500px;
-    opacity:1;
-}
-
-
-/* Rotate arrow */
-
-.character-section.open .arrow {
-    transform:rotate(180deg);
-}
-
-
-/* Indented character links */
-
-.sub-link {
-    padding-left:35px;
-    font-size:16px;
-}
-
-/* MAIN CONTENT */
-
-#content {
-    margin-left:260px;
-    padding:40px;
-    min-height:100vh;
-}
-
-/* HOMEPAGE STUFF */
-
-.home-hero {
-    max-width:900px;
-    margin:40px auto;
-    background:white;
-    border-radius:18px;
-    padding:40px;
-    text-align:center;
-    box-shadow:0 3px 12px rgba(0,0,0,.08);
-}
-.home-logo {
-    width:350px;
-    max-width:80%;
-    margin-bottom:20px;
-}
-.home-hero h1 {
-    font-size:42px;
-    margin:10px 0;
-    color:var(--black);
-}
-.home-hero p {
-    font-size:22px;
-    max-width:650px;
-    margin:0 auto 30px;
-}
-.hero-buttons {
-    display:flex;
-    justify-content:center;
-    gap:20px;
-}
-.hero-buttons a {
-    background:var(--purple);
-    color:white;
-    padding:12px 25px;
-    border-radius:10px;
-    text-decoration:none;
-    font-size:18px;
-}
-.hero-buttons a:hover {
-    opacity:.85;
-}
-
-/* ===========================
-   Character Pages
-=========================== */
-
-#character {
-    margin-left:260px;
-    padding:40px;
-    min-height:100vh;
-    box-sizing:border-box;
-}
-.character-page img {
-width:220px;
-}
-.character-page h1 {
-font-size:42px;
-margin:20px 0 5px;
-}
-.character-page h3 {
-color:var(--team-color);
-font-size:22px;
-}
-.character-header {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 60px;
-    margin-bottom: 30px;
-    background: none;
-}
-.character-title {
-    width: 500px;
-}
-.character-header img {
-    width: 180px;
-    height: 180px;
-    object-fit: contain;
-}
-.character-header h1 {
-    font-size: 34px;
-    margin: 0 0 12px 0;
-    font-family:"Droid Sans", Arial, sans-serif;
-}
-.character-team {
-    color: #959799;
-    font-size: 18px;
-    font-weight: normal;
-}
-.character-ability {
-    font-size: 18px;
-    font-style: normal;
-    line-height: 1.5;
-    max-width: 650px;
-    margin-top: 20px;
-}
-
-
-/* Character links */
-
-.character-link{
-    font-weight:bold;
-    text-decoration:none;
-    position:relative;
-}
-.character-link.blue{
-    color:var(--blue);
-}
-.character-link.red{
-    color:var(--red);
-}
-.character-link.purple{
-    color:var(--purple);
-}
-.character-link.gold{
-    color:#b77102;
-}
-.character-link.green{
-    color:#8ea742;
-}
-.character-link.traveller{
-    color:var(--traveller);
-}
-.wiki.blue h2{
-    color:var(--blue);
-}
-.wiki.red h2{
-    color:#a41618;
-}
-.wiki.gold h2{
-    color:#b77102;
-}
-.wiki.green h2{
-    color:#8ea742;
-}
-.wiki.traveller h2{
-    color:var(--traveller);
-}
-.character-link.default{
-    color:var(--purple);
-}
-.content h1,
-.content h2,
-.content h3 {
-    color:var(--team-color);
-}
-.content.blue,
-.wiki.blue {
-    --team-color:var(--blue);
-}
-.content.red,
-.wiki.red {
-    --team-color:var(--red);
-}
-.content.purple,
-.wiki.purple {
-    --team-color:var(--purple);
-}
-
-/* Wiki Container */
-
-.wiki{
-    width:min(1100px,95%);
-    margin:auto;
-}
-
-/* Tabs */
-
-.tabs{
-    display:flex;
-    gap:8px;
-    margin-bottom:0;
-}
-.tab{
-    background:#959799;
-    color:white;
-    padding:15px 32px;
-    font-size:16px;
-    font-weight:bold;
-    cursor:pointer;
-    user-select:none;
-    border-radius:12px 12px 0 0;
-    transition:.2s;
-}
-.tab:hover{
-    background:#858789;
-}
-.tab.active{
-    background:var(--team-color);
-}
-.wiki.red .tab.active{
-    background:#a41618;
-}
-.wiki.gold .tab.active{
-    background:#b77102;
-}
-.wiki.green .tab.active{
-    background:#8ea742;
-}
-.page {
-    display: none;
-}
-.page.active {
-    display: block;
-}
-.content{
-    position:relative;
-    background:white;
-    border:3px solid var(--team-color);
-    border-top:5px solid var(--team-color);
-    border-radius:0 12px 12px 12px;
-    padding:25px 55px 70px;
-    box-shadow:0 10px 24px rgba(0,0,0,.12);
-}
-
-/* Team colored character boxes */
-
-.wiki .content {
-    border:3px solid var(--team-color);
-    border-top:5px solid var(--team-color);
-}
-.content::after{
-    content:"";
-    position:absolute;
-    left:0;
-    right:0;
-    bottom:0;
-    height:12px;
-    background:var(--team-color);
-    border-radius:0 0 9px 9px;
-}
-.wiki.blue {
-    --team-color:var(--blue);
-}
-.wiki.red {
-    --team-color:var(--red);
-}
-.wiki.gold {
-    --team-color:var(--copper);
-}
-.wiki.green {
-    --team-color:var(--lime);
-}
-.wiki.purple {
-    --team-color:var(--purple);
-}
-.wiki.traveller {
-    --team-color:var(--traveller);
-}
-.wiki.traveller .content::after{
-    background:var(--traveller);
-}
-
-/* Example Cards */
-
-.example{
-    background:#fafafa;
-    border:1px solid #d8d8d8;
-    border-left:5px solid var(--team-color);
-    border-radius:8px;
-    padding:22px 24px;
-    margin:25px 0;
-    line-height:1.7;
-}
-
-
-/* Team colored examples */
-
-.wiki.red .example{
-    border-left-color:#a41618;
-}
-.wiki.gold .example{
-    border-left-color:#b77102;
-}
-.wiki.green .example{
-    border-left-color:#8ea742;
-}
-.wiki.traveller .example{
-    border-left-color:var(--traveller);
-}
-
-/* ===========================
-   Interaction Finder Page
-=========================== */
-
-.info-button{
-    display:inline-flex;
-    justify-content:center;
-    align-items:center;
-    width:22px;
-    height:22px;
-    margin-left:0px;
-    border-radius:50%;
-    background:var(--purple);
-    color:white;
-    font-size:13px;
-    cursor:help;
-    font-weight:bold;
-    position:relative;
-}
-.info-button::after{
-    content:attr(data-info);
-    position:absolute;
-    right:120%;
-    top:50%;
-    transform:translateY(-50%);
-    width:260px;
-    padding:12px 15px;
-    background:#333;
-    color:white;
-    font-size:14px;
-    line-height:1.4;
-    border-radius:8px;
-    opacity:0;
-    pointer-events:none;
-    transition:.2s;
-    z-index:9999;
-    text-align:left;
-}
-.info-button:hover::after{
-    opacity:1;
-}
-/* ===========================
-   TomSelect Dropdowns
-=========================== */
-
-.finder-container .ts-wrapper{
-    width:260px;
-}
-.finder-container .ts-control{
-    min-height:48px;
-    padding:8px 12px;
-    border:2px solid var(--purple);
-    border-radius:10px;
-    background:white;
-    box-shadow:none;
-    font-size:16px;
-    font-family:"Roboto", sans-serif;
-    display:flex;
-    align-items:center;
-}
-.finder-container .ts-control.focus{
-    border-color:var(--purple);
-    box-shadow:0 0 0 2px rgba(120,81,169,.15);
-}
-/* Dropdown arrow */
-.finder-container .ts-control::after{
-    border-color:var(--purple) transparent transparent transparent;
-}
-/* Dropdown menu */
-.finder-container .ts-dropdown{
-    border:2px solid var(--purple);
-    border-radius:10px;
-    overflow:visible;
-    box-shadow:0 8px 20px rgba(0,0,0,.12);
-}
-/* Dropdown options */
-.finder-container .ts-dropdown .option{
-    padding:10px 14px;
-    font-size:16px;
-}
-.finder-container .ts-dropdown .active{
-    background:#eee;
-    color:#333;
-}
-/* Selected text */
-.finder-container .item{
-    color:#333;
-}
-#clearButton{
-    padding:12px 24px;
-    border:none;
-    border-radius:8px;
-    background:var(--purple);
-    color:white;
-    font-size:16px;
-    cursor:pointer;
-}
-#clearButton:hover{
-    background:var(--purple);
-}
-#results{
-    margin:0 25px 25px;
-    background:var(--light-gray);
-    padding:20px;
-    border-radius:8px;
-    border:1px solid var(--border);
-}
-#result-count{
-    font-size:18px;
-    font-weight:bold;
-    color:var(--purple);
-    margin-bottom:15px;
-    text-align:center;
-}
-#list{
-    list-style:none;
-    padding:0;
-}
-#list li{
-    background:white;
-    border-left:5px solid var(--purple);
-    padding:15px;
-    margin-bottom:12px;
-    border-radius:8px;
-    line-height:1.6;
-}
-#interaction-finder{
-    margin-left:260px;
-    padding:40px;
-    display:flex;
-    justify-content:center;
-}
-.selector-container{
-    display:flex;
-    justify-content:center;
-    align-items:center;
-    gap:15px;
-    flex-wrap:wrap;
-    padding:25px;
-    background:white;
-}
-.selector-container button{
-    background:var(--team-color);
-    color:white;
-    border:none;
-    padding:12px 25px;
-    border-radius:8px;
-    cursor:pointer;
-    font-size:16px;
-}
-.selector-container button:hover{
-    opacity:.85;
-}
-.legend{
-    margin:0 25px 20px;
-    padding:15px;
-    background:var(--light-gray);
-    border-radius:8px;
-    border:1px solid var(--border);
-    text-align:center;
-    display:flex;
-    justify-content:center;
-    gap:25px;
-    flex-wrap:wrap;
-}
-.legend-item{
-    display:flex;
-    align-items:center;
-    gap:8px;
-    font-size:15px;
-}
-.interaction-card{
-    list-style:none;
-    background:#fafafa;
-    border:1px solid #ddd;
-    border-left:5px solid var(--team-color);
-    border-radius:10px;
-    padding:18px 22px;
-    margin:15px 0;
-    font-size:inherit;
-    line-height:inherit;
-    transition:.2s;
-    display:flex;
-    align-items:center;
-    justify-content:space-between;
-    gap:20px;
-}
-.interaction-text{
-    flex:1;
-    display:block;
-    align-items:center;
-}
-.interaction-icons{
-    display:flex;
-    flex-direction:column;
-    align-items:center;
-    justify-content:center;
-    gap:8px;
-    flex-shrink:0;
-}
-.interaction-card:hover{
-    transform:translateX(5px);
-    box-shadow:0 5px 15px rgba(0,0,0,.1);
-}
-.finder-container{
-    width:min(1000px,95%);
-    margin:auto;
-    background:white;
-    border-radius:14px;
-    border:1px solid var(--border);
-    overflow:visible;
-    box-shadow:0 10px 24px rgba(0,0,0,.12);
-}
-.finder-header{
-    background:var(--purple);
-    color:white;
-    font-size:30px;
-    font-weight:bold;
-    text-align:center;
-    padding:20px;
-    border-radius:14px 14px 0 0;
-}
-.triangle{
-    display:inline-block;
-    margin-left:10px;
-    font-size:15px;
-}
-.triangle.green{
-    color:#2e9d3f;
-}
-.triangle.red{
-    color:#b22222;
-}
-.math-triangle{
-    display:inline-flex;
-    align-items:center;
-    justify-content:center;
-    width:24px;
-    height:24px;
-    margin-left:0px;
-    vertical-align:middle;
-    cursor:help;
-    position:relative;
-    color:white;
-    font-size:18px;
-    font-weight:bold;
-}
-.math-triangle::before{
-    content:"";
-    position:absolute;
-    inset:0;
-    background:currentColor;
-    clip-path:polygon(
-        50% 0%,
-        100% 100%,
-        0% 100%
-    );
-}
-.math-triangle::after{
-    content:attr(data-info);
-    position:absolute;
-    right:120%;
-    top:50%;
-    transform:translateY(-50%);
-    width:240px;
-    padding:10px 12px;
-    background:#333;
-    color:white;
-    border-radius:8px;
-    font-size:14px;
-    line-height:1.4;
-    text-align:left;
-    opacity:0;
-    pointer-events:none;
-    transition:.2s;
-    z-index:9999;
-}
-.math-triangle:hover::after{
-    opacity:1;
-}
-.math-triangle.green{
-    color:#2e9d3f;
-}
-.math-triangle.red{
-    color:#b22222;
-}
-/* ===========================
-   Interaction Finder Layout
-=========================== */
-
-.page-card{
-    width:min(1000px,95%);
-    margin:auto;
-}
-.finder-header{
-    background:var(--purple);
-    color:white;
-    font-size:30px;
-    font-weight:bold;
-    text-align:center;
-    padding:20px;
-    letter-spacing:.5px;
-}
-.finder-container .selector-container{
-    justify-content:center;
-    padding:25px;
-}
-.finder-container select{
-    width:260px;
-    padding:12px;
-    font-size:16px;
-    border-radius:8px;
-    border:1px solid #aaa;
-    background:white;
-}
-.finder-container .legend{
-    margin:0 25px 20px;
-    padding:15px;
-    background:#f7f7f7;
-    border-radius:8px;
-    border:1px solid #ddd;
-    text-align:center;
-}
-.finder-container #results{
-    margin:0 25px 25px;
-    background:#f7f7f7;
-    padding:20px;
-    border-radius:8px;
-    border:1px solid #ddd;
-}
-.character-selector{
-    position:relative;
-    width:260px;
-}
-.character-search{
-    width:100%;
-    padding:12px 14px;
-    border-radius:10px;
-    border:2px solid var(--purple);
-    font-size:16px;
-    font-family:"Roboto",sans-serif;
-    background:white;
-}
-.character-results{
-    position:absolute;
-    top:105%;
-    left:0;
-    width:100%;
-    background:white;
-    border-radius:10px;
-    box-shadow:0 8px 20px rgba(0,0,0,.12);
-    overflow:hidden;
-    display:none;
-    z-index:9999;
-}
-.character-results .search-item{
-    padding:8px;
-    cursor:pointer;
-}
-.character-results .search-item:hover{
-    background:var(--purple);
-}
-.character-search-wrapper{
-    position:relative;
-}
-.clear-character{
-    position:absolute;
-    right:10px;
-    top:50%;
-    transform:translateY(-50%);
-    width:22px;
-    height:22px;
-    display:flex;
-    align-items:center;
-    justify-content:center;
-    border-radius:50%;
-    cursor:pointer;
-    user-select:none;
-    color:var(--purple);
-    font-size:20px;
-    font-weight:400;
-    line-height:1;
-    padding:0;
-}
-.clear-character:hover{
-    background:var(--purple);
-    color:white;
-}
-/* =========================
-   Tooltip
-========================= */
-
-.ability-tooltip{
-    position:fixed;
-    display:none;
-    width:300px;
-    background:white;
-    border:3px solid #7851A9;
-    border-radius:12px;
-    z-index:99999;
-    pointer-events:none;
-    box-shadow:0 6px 18px rgba(0,0,0,.25);
-    overflow:hidden;
-}
-.tooltip-header {
-    display:flex;
-    align-items:center;
-    gap:10px;
-    padding:8px 12px;
-    background:white;
-}
-.tooltip-header img {
-    width:45px;
-    height:45px;
-    object-fit:contain;
-}
-.tooltip-title strong {
-    display:block;
-    font-size:18px;
-}
-.tooltip-title span {
-    display:block;
-    font-size:14px;
-}
-.tooltip-ability {
-    padding:12px;
-    font-size:14px;
-    line-height:1.4;
-    border-top:1px solid #ddd;
-}
-.ability-tooltip.blue {
-    border-color:var(--blue);
-}
-.ability-tooltip.red {
-    border-color:var(--red);
-}
-.ability-tooltip.green {
-    border-color:var(--lime);
-}
-.ability-tooltip.gold {
-    border-color:var(--copper);
-}
-.ability-tooltip.traveller {
-    border-color:var(--traveller);
-}
-.ability-tooltip.blue .tooltip-title strong,
-.ability-tooltip.blue .tooltip-title span {
-    color:var(--blue);
-}
-.ability-tooltip.red .tooltip-title strong,
-.ability-tooltip.red .tooltip-title span {
-    color:var(--red);
-}
-.ability-tooltip.green .tooltip-title strong,
-.ability-tooltip.green .tooltip-title span {
-    color:var(--lime);
-}
-.ability-tooltip.gold .tooltip-title strong,
-.ability-tooltip.gold .tooltip-title span {
-    color:var(--copper);
 }
