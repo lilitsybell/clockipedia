@@ -31,12 +31,14 @@ function renderScriptCharacters(script){
             "characterContainer"
         );
     container.innerHTML = "";
-    const teams = [
-        "townsfolk",
-        "outsiders",
-        "minions",
-        "demons"
-    ];
+const teams = [
+    "loric",
+    "fabled",
+    "townsfolk",
+    "outsiders",
+    "minions",
+    "demons"
+];
     teams.forEach(team=>{
         const section =
             document.createElement("div");
