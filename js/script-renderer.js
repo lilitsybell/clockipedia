@@ -125,11 +125,6 @@ const teams = [
                     ScriptGenerator
                     .characterLookup
                     .get(id);
-console.log(
-    "Rendering:",
-    id,
-    data
-);
         return data &&
        normalizeTeam(data.team) === team;
             })
