@@ -1074,6 +1074,10 @@ font-size:22px;
 .generator-button:hover {
     opacity:.85;
 }
+#homebrewButton,
+#scriptSizeButton {
+    width:120px;
+}
 /* Script Results Header */
 .script-results {
     border-radius:14px;
