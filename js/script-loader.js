@@ -103,6 +103,14 @@ function extractScriptCharacters(script) {
         characters.length,
         "script characters"
     );
+   console.log("Extracted character list:");
+characters.forEach(character => {
+    console.log(
+        character.id,
+        character.name,
+        character.team
+    );
+});
     return characters;
 }
 /* ======================================================
