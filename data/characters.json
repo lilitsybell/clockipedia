@@ -9037,12 +9037,12 @@
                 "Example2"
                 ]
 },
-"bigwig":
+"bootlegger":
 {
-    "name": "Big Wig",
+    "name": "Bootlegger",
     "team": "Loric",
-    "image": "https://images.klutzbanana.com/characters_official/bigwig.png",
-    "ability": "Each nominee chooses a player: until voting, only they may speak & they are mad the nominee is good or they might die.",
+    "image": "https://images.klutzbanana.com/characters_official/bootlegger.png",
+    "ability": "This script has homebrew characters or rules.",
     "flavor": "Flavor",
     "purpose": "Purpose",
     "summary": [
