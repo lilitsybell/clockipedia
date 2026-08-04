@@ -1114,16 +1114,29 @@ font-size:22px;
     margin-bottom:25px;
 }
 .team-title{
-    background:var(--gray);
     color:white;
-    padding:10px 15px;
+    padding:12px 18px;
     border-radius:8px;
-    font-size:20px;
+    font-size:22px;
     font-weight:bold;
+    margin-bottom:10px;
+}
+.team-section:nth-child(1) .team-title{
+    background:var(--blue);
+}
+.team-section:nth-child(2) .team-title{
+    background:var(--blue);
+}
+.team-section:nth-child(3) .team-title{
+    background:var(--red);
+}
+.team-section:nth-child(4) .team-title{
+    background:var(--red);
 }
 .script-character{
     display:flex;
-    gap:15px;
+    align-items:center;
+    gap:18px;
     padding:15px;
     border-bottom:1px solid #ddd;
 }
@@ -1133,7 +1146,7 @@ font-size:22px;
     object-fit:contain;
 }
 .script-character h3{
-    margin-bottom:5px;
+    margin:0 0 5px;
 }
 .script-character p{
     margin:0;
