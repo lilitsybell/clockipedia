@@ -1101,14 +1101,16 @@ font-size:22px;
     opacity:.9;
 }
 /* JSON Buttons */
-.json-buttons {
+.json-buttons{
     display:flex;
     flex-direction:column;
     gap:10px;
 }
-.json-buttons .generator-button {
+.json-buttons .generator-button{
     background:white;
     color:var(--purple);
+    text-decoration:none;
+    text-align:center;
 }
 /* Description */
 #descriptionBox {
@@ -1166,15 +1168,4 @@ font-size:22px;
 }
 .script-author{
     font-style:italic;
-}
-.json-actions{
-    display:flex;
-    flex-direction:column;
-    align-items:flex-end;
-    gap:10px;
-}
-
-.json-buttons{
-    display:flex;
-    gap:10px;
 }
