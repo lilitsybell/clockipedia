@@ -13,6 +13,7 @@
 --red:#b52323;
 --lime:#8EA742;
 --copper:#B77102;
+--traveller#915271;
 --purple:#666699;
 --gray:#959799;
 --light-gray:#fafafa;
@@ -370,18 +371,8 @@ font-size:22px;
 .character-link.green{
     color:#8ea742;
 }
-
-/* Travellers are half Townsfolk blue and half Minion red */
-
 .character-link.traveller{
-    background:linear-gradient(
-        0deg,
-        var(--blue) 50%,
-        var(--red) 50%
-    );
-    -webkit-background-clip:text;
-    background-clip:text;
-    color:transparent;
+    color:var(--traveller);
 }
 .wiki.traveller .content{
     border-color:var(--blue);
@@ -406,14 +397,7 @@ font-size:22px;
     color:#8ea742;
 }
 .wiki.traveller h2{
-    background:linear-gradient(
-        0deg,
-        var(--blue) 50%,
-        var(--red) 50%
-    );
-    -webkit-background-clip:text;
-    background-clip:text;
-    color:transparent;
+    color:var(--purple);
 }
 .character-link.default{
     color:var(--purple);
@@ -438,14 +422,7 @@ font-size:22px;
 .content.traveller h1,
 .content.traveller h2,
 .content.traveller h3{
-    background:linear-gradient(
-        0deg,
-        var(--blue) 50%,
-        var(--red) 50%
-    );
-    -webkit-background-clip:text;
-    background-clip:text;
-    color:transparent;
+    color:var(--traveller);
 }
 
 /* Wiki Container */
@@ -487,12 +464,8 @@ font-size:22px;
 }
 .wiki.green .tab.active{
     background:#8ea742;
-}
-.wiki.traveller .tab:nth-child(odd).active{
-    background:var(--blue);
-}
-.wiki.traveller .tab:nth-child(even).active{
-    background:var(--red);
+.wiki.traveller .tab.active{
+    color:var(--traveller);
 }
 .page {
     display: none;
@@ -542,14 +515,10 @@ font-size:22px;
     --team-color:var(--purple);
 }
 .wiki.traveller {
-    --team-color:var(--blue);
+    --team-color:var(--traveller);
 }
 .wiki.traveller .content::after{
-    background:linear-gradient(
-        0deg,
-        var(--blue) 50%,
-        var(--red) 50%
-    );
+    color:var(--traveller);
 }
 
 /* Example Cards */
@@ -577,12 +546,7 @@ font-size:22px;
     border-left-color:#8ea742;
 }
 .wiki.traveller .example{
-    border-left:5px solid;
-    border-image:linear-gradient(
-        0deg,
-        var(--blue) 50%,
-        var(--red) 50%
-    ) 1;
+    color:var(--traveller);
 }
 
 /* ===========================
