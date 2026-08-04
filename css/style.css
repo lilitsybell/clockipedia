@@ -1048,18 +1048,6 @@ font-size:22px;
     color:white;
     margin:0;
 }
-#scriptAuthor{
-    display:block;
-    margin-top:8px;
-    color:white;
-    font-style:italic;
-    opacity:.9;
-}
-#scriptTags{
-    display:flex;
-    gap:8px;
-    margin-top:10px;
-}
 .script-tag{
     background:white;
     color:var(--purple);
@@ -1212,4 +1200,15 @@ font-size:22px;
 #scriptTags{
     font-size:14px;
     font-weight:400;
+}
+.generator-controls{
+    display:flex;
+    gap:20px;
+    flex-wrap:wrap;
+    align-items:flex-end;
+    padding:25px;
+    background:white;
+    border:3px solid var(--purple);
+    border-bottom:none;
+    border-radius:14px 14px 0 0;
 }
