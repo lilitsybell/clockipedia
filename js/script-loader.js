@@ -11,6 +11,23 @@ const ScriptGenerator = {
     currentScript: null
 };
 /* ======================================================
+   Normalize Character Data
+====================================================== */
+function normalizeCharacter(character){
+    // Homebrew characters can have multiple images.
+    // Website uses only the first image.
+    if(Array.isArray(character.image)){
+        character.image = character.image[0];
+    }
+    // Normalize team capitalization
+    if(character.team){
+        character.team =
+            character.team.charAt(0).toUpperCase() +
+            character.team.slice(1).toLowerCase();
+    }
+    return character;
+}
+/* ======================================================
    Load Official Characters
 ====================================================== */
 async function loadOfficialCharacters() {
@@ -19,8 +36,8 @@ async function loadOfficialCharacters() {
         throw new Error("Failed to load characters.json");
     }
     const data = await response.json();
-    ScriptGenerator.characters =
-        new Map(Object.entries(data));
+ScriptGenerator.officialCharacters =
+    new Map(Object.entries(data));
     console.log(
         "Loaded",
         ScriptGenerator.characters.size,
@@ -78,7 +95,7 @@ function extractScriptCharacters(script) {
         }
         // Official character ID
         if (typeof entry === "string") {
-            const character = ScriptGenerator.characters.get(entry);
+            const character = ScriptGenerator.officialCharacters.get(entry);
             if (character) {
                 characters.push({
                     id: entry,
@@ -118,19 +135,6 @@ function extractScriptCharacters(script) {
             character.team
         );
     });
-function normalizeCharacter(character){
-    // Fix image arrays
-    if(Array.isArray(character.image)){
-        character.image = character.image[0];
-    }
-    // Normalize team capitalization
-    if(character.team){
-        character.team =
-            character.team.charAt(0).toUpperCase() +
-            character.team.slice(1).toLowerCase();
-    }
-    return normalizeCharacter(character);
-}
     return characters;
 }
 /* ======================================================
@@ -139,7 +143,7 @@ function normalizeCharacter(character){
 function buildCharacterLookup(script){
     ScriptGenerator.characterLookup = new Map();
     // Add all official characters first
-    ScriptGenerator.characters.forEach((character,id)=>{
+    ScriptGenerator.officialCharacters.forEach((character,id)=>{
         ScriptGenerator.characterLookup.set(id, character);
     });
     // Add homebrew characters from script
