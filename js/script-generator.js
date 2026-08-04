@@ -30,9 +30,9 @@ async function generateScript() {
         await loadScript(script.file);
     // Build character database
     buildCharacterLookup(loadedScript);
-    // Render characters
+// Render characters
 renderScriptHeader(script);
-renderScriptCharacters(script);
+renderScriptCharacters(loadedScript);
 }
 document
     .getElementById("generateScriptButton")
