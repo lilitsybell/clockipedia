@@ -68,40 +68,31 @@ console.log(
 /* ======================================================
    Build Character Lookup
 ====================================================== */
-function buildCharacterLookup(script) {
-    ScriptGenerator.characterLookup = new Map();
-    // Add official characters
-    ScriptGenerator.officialCharacters.forEach((character,id)=>{
+function buildCharacterLookup(script){
+    ScriptGenerator.characterLookup =
+        new Map();
+    // official characters
+    ScriptGenerator.officialCharacters
+    .forEach((character,id)=>{
         ScriptGenerator.characterLookup.set(
             id,
             character
         );
     });
-    // Add homebrew characters from script
-    if(script.characters){
-        script.characters.forEach(character=>{
-            if(typeof character === "object"){
-                ScriptGenerator.characterLookup.set(
-                    character.id,
-                    character
-                );
-            }
-        });
-    }
+    // homebrew characters
+    const characters =
+        extractScriptCharacters(script);
+    characters.forEach(character=>{
+        if(typeof character === "object"){
+            ScriptGenerator.characterLookup.set(
+                character.id,
+                character
+            );
+        }
+    });
     console.log(
         "Lookup contains",
         ScriptGenerator.characterLookup.size,
         "characters"
     );
-}
-function extractScriptCharacters(script){
-    return script.filter(entry=>{
-        // Remove metadata objects
-        return typeof entry === "string"
-        || (
-            typeof entry === "object"
-            && entry.id
-            && entry.id !== "_meta"
-        );
-    });
 }
