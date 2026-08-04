@@ -57,15 +57,16 @@ function renderScriptHeader(script){
         logo.src = meta.logo;
         logo.style.display = "block";
     }
-    if(almanac){
-        if(meta.almanac){
-            almanac.href = meta.almanac;
-            almanac.style.display = "inline-block";
-        }
-        else{
-            almanac.style.display = "none";
-        }
+if(almanac){
+    if(meta.almanac){
+        almanac.href = meta.almanac;
+        almanac.style.display = "inline-block";
     }
+    else{
+        almanac.removeAttribute("href");
+        almanac.style.display = "none";
+    }
+}
     const header =
         document.getElementById("scriptHeader");
     if(header && meta.background){
