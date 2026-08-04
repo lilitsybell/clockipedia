@@ -1,547 +1,16 @@
 [
     {
-        "file": "scripts/a-grimm-chorus.json",
-        "name": "A Grimm Chorus",
-        "author": "Zets",
+        "file": "data/scripts/a-grimm-chorus.json",
+        "name": "Unknown Script",
+        "author": "Unknown",
         "size": "full",
         "homebrew": false,
         "tags": [],
         "logo": null
     },
     {
-        "file": "scripts/a-lleech-of-distrust.json",
-        "name": "A Lleech of Distrust",
-        "author": "OJ",
-        "size": "teensy",
-        "homebrew": false,
-        "tags": [],
-        "logo": null
-    },
-    {
-        "file": "scripts/buyers-remorse.json",
-        "name": "Buyer's Remorse",
-        "author": "mist",
-        "size": "full",
-        "homebrew": true,
-        "tags": [],
-        "logo": "https://release.botc.app/wc25/buyersremorse/logo.webp"
-    },
-    {
-        "file": "scripts/catfishing.json",
-        "name": "Catfishing",
-        "author": "Emily",
-        "size": "full",
-        "homebrew": false,
-        "tags": [],
-        "logo": null
-    },
-    {
-        "file": "scripts/clockwork-cyborg.json",
-        "name": "Clockwork Cyborg",
-        "author": "vaticidalprophet",
-        "size": "full",
-        "homebrew": false,
-        "tags": [],
-        "logo": null
-    },
-    {
-        "file": "scripts/damsel-of-distress.json",
-        "name": "Damsel of Distress",
-        "author": "BBBence1111",
-        "size": "full",
-        "homebrew": false,
-        "tags": [],
-        "logo": null
-    },
-    {
-        "file": "scripts/erratanomicon.json",
-        "name": "Erratanomicon",
-        "author": "Corey and Bell",
-        "size": "full",
-        "homebrew": false,
-        "tags": [],
-        "logo": "https://i.ibb.co/Z6Sg4cDt/image.png"
-    },
-    {
-        "file": "scripts/everyone-can-play.json",
-        "name": "Everyone Can Play",
-        "author": "Ben Burns",
-        "size": "full",
-        "homebrew": false,
-        "tags": [],
-        "logo": null
-    },
-    {
-        "file": "scripts/extension-cord.json",
-        "name": "Extension Cord",
-        "author": "Viva La Sam",
-        "size": "full",
-        "homebrew": false,
-        "tags": [],
-        "logo": "https://i.imgur.com/OAs1fvK.png"
-    },
-    {
-        "file": "scripts/frankensteins-mayor.json",
-        "name": "Frankenstein's Mayor",
-        "author": "Ted",
-        "size": "teensy",
-        "homebrew": false,
-        "tags": [],
-        "logo": null
-    },
-    {
-        "file": "scripts/from-the-depths.json",
-        "name": "From the Depths",
-        "author": "Amir (Swolemate)",
-        "size": "full",
-        "homebrew": true,
-        "tags": [],
-        "logo": null
-    },
-    {
-        "file": "scripts/gaslight-gatekeep-giggle.json",
-        "name": "Gaslight, Gatekeep, Giggle",
-        "author": "McGiggles",
-        "size": "teensy",
-        "homebrew": false,
-        "tags": [],
-        "logo": null
-    },
-    {
-        "file": "scripts/getting-picked-in-kickball.json",
-        "name": "getting picked in kickball",
-        "author": "Alexis",
-        "size": "full",
-        "homebrew": false,
-        "tags": [],
-        "logo": null
-    },
-    {
-        "file": "scripts/good-moon-rising.json",
-        "name": "Good Moon Rising",
-        "author": "Urban Minotaur",
-        "size": "full",
-        "homebrew": true,
-        "tags": [],
-        "logo": null
-    },
-    {
-        "file": "scripts/half-of-the-108.json",
-        "name": "Half of the 108",
-        "author": "Jack Broome",
-        "size": "full",
-        "homebrew": false,
-        "tags": [],
-        "logo": null
-    },
-    {
-        "file": "scripts/harold-holts-revenge.json",
-        "name": "Harold Holt's Revenge",
-        "author": "Theo",
-        "size": "full",
-        "homebrew": false,
-        "tags": [],
-        "logo": null
-    },
-    {
-        "file": "scripts/hells-chili-cookoff.json",
-        "name": "Hell's Chili Cookoff",
-        "author": "Urban Minotaur",
-        "size": "full",
-        "homebrew": false,
-        "tags": [],
-        "logo": null
-    },
-    {
-        "file": "scripts/hermit-buffet.json",
-        "name": "Hermit Buffet",
-        "author": "Kenni",
-        "size": "full",
-        "homebrew": true,
-        "tags": [],
-        "logo": null
-    },
-    {
-        "file": "scripts/hide-and-seek.json",
-        "name": "Hide and Seek",
-        "author": "Narninian & Zaba",
-        "size": "full",
-        "homebrew": false,
-        "tags": [],
-        "logo": "https://i.imgur.com/fI4906v.png"
-    },
-    {
-        "file": "scripts/i-claim-slayer-and-shoot-myself.json",
-        "name": "I Claim Slayer And Shoot Myself",
-        "author": "R.O.B.",
-        "size": "teensy",
-        "homebrew": true,
-        "tags": [],
-        "logo": null
-    },
-    {
-        "file": "scripts/im-your-demon-now.json",
-        "name": "I'm your demon now.",
-        "author": "Simon",
-        "size": "teensy",
-        "homebrew": false,
-        "tags": [],
-        "logo": null
-    },
-    {
-        "file": "scripts/immortal-dance-party.json",
-        "name": "Immortal Dance Party",
-        "author": "Urban Minotaur",
-        "size": "full",
-        "homebrew": false,
-        "tags": [],
-        "logo": null
-    },
-    {
-        "file": "scripts/kingdom-come.json",
-        "name": "Kingdom Come",
-        "author": "Urban Minotaur",
-        "size": "full",
-        "homebrew": true,
-        "tags": [],
-        "logo": null
-    },
-    {
-        "file": "scripts/laissez-un-faire.json",
-        "name": "Laissez un Faire",
-        "author": "Steven Medway",
-        "size": "teensy",
-        "homebrew": false,
-        "tags": [],
-        "logo": null
-    },
-    {
-        "file": "scripts/late-night-drive-by.json",
-        "name": "Late Night Drive By",
-        "author": "Aero",
-        "size": "teensy",
-        "homebrew": false,
-        "tags": [],
-        "logo": null
-    },
-    {
-        "file": "scripts/loose-lips-beginner-script.json",
-        "name": "Loose Lips (Beginner Script)",
-        "author": "Quizoid",
-        "size": "teensy",
-        "homebrew": false,
-        "tags": [],
-        "logo": null
-    },
-    {
-        "file": "scripts/lunar-eclipse.json",
-        "name": "Lunar Eclipse v1.6",
-        "author": "Ekin",
-        "size": "full",
-        "homebrew": false,
-        "tags": [],
-        "logo": null
-    },
-    {
-        "file": "scripts/muppets-on-a-clocktower.json",
-        "name": "Muppets on a Clocktower v1.0",
-        "author": "Patrick and Josie",
-        "size": "full",
-        "homebrew": false,
-        "tags": [],
-        "logo": "https://i.imgur.com/gIAmv2r.png"
-    },
-    {
-        "file": "scripts/no-greater-joy.json",
-        "name": "No Greater Joy",
-        "author": "Steven Medway",
-        "size": "teensy",
-        "homebrew": false,
-        "tags": [],
-        "logo": null
-    },
-    {
-        "file": "scripts/no-roles-barred.json",
-        "name": "No Roles Barred",
-        "author": "Andrew Pichot",
-        "size": "full",
-        "homebrew": false,
-        "tags": [],
-        "logo": null
-    },
-    {
-        "file": "scripts/nobody-fucking-move.json",
-        "name": "Nobody Fucking Move",
-        "author": "Brockwell",
-        "size": "teensy",
-        "homebrew": true,
-        "tags": [],
-        "logo": null
-    },
-    {
-        "file": "scripts/oops-all-outsiders.json",
-        "name": "Oops! All Outsiders",
-        "author": "Urban Minotaur",
-        "size": "full",
-        "homebrew": true,
-        "tags": [],
-        "logo": null
-    },
-    {
-        "file": "scripts/opium-den.json",
-        "name": "Opium Den",
-        "author": "Corey and Bell",
-        "size": "full",
-        "homebrew": true,
-        "tags": [],
-        "logo": "https://i.ibb.co/60ysv29j/OD-Logo.png"
-    },
-    {
-        "file": "scripts/outed-evil.json",
-        "name": "Outed Evil",
-        "author": "Manny",
-        "size": "full",
-        "homebrew": false,
-        "tags": [],
-        "logo": null
-    },
-    {
-        "file": "scripts/over-the-river.json",
-        "name": "Over the River",
-        "author": "Andrew Nathenson",
-        "size": "teensy",
-        "homebrew": false,
-        "tags": [],
-        "logo": null
-    },
-    {
-        "file": "scripts/pies-baking.json",
-        "name": "Pies Baking",
-        "author": "Ryback",
-        "size": "full",
-        "homebrew": false,
-        "tags": [],
-        "logo": null
-    },
-    {
-        "file": "scripts/poppyganda.json",
-        "name": "Poppyganda",
-        "author": "Dan",
-        "size": "full",
-        "homebrew": false,
-        "tags": [],
-        "logo": "https://i.imgur.com/zHqn8x0.png"
-    },
-    {
-        "file": "scripts/race-to-the-bottom.json",
-        "name": "Race to the Bottom",
-        "author": "Evin Donohoe",
-        "size": "teensy",
-        "homebrew": false,
-        "tags": [],
-        "logo": null
-    },
-    {
-        "file": "scripts/replication-error.json",
-        "name": "Replication Error",
-        "author": "Broom",
-        "size": "full",
-        "homebrew": true,
-        "tags": [],
-        "logo": null
-    },
-    {
-        "file": "scripts/ride-the-cyclone.json",
-        "name": "Ride the Cyclone",
-        "author": "Paradox",
-        "size": "full",
-        "homebrew": false,
-        "tags": [],
-        "logo": null
-    },
-    {
-        "file": "scripts/sects-dungeon.json",
-        "name": "Sects Dungeon",
-        "author": "Urban Minotaur",
-        "size": "full",
-        "homebrew": false,
-        "tags": [],
-        "logo": null
-    },
-    {
-        "file": "scripts/separation-of-church-and-state.json",
-        "name": "Separation Of Church and State",
-        "author": "Aero",
-        "size": "full",
-        "homebrew": false,
-        "tags": [],
-        "logo": null
-    },
-    {
-        "file": "scripts/show-of-hands.json",
-        "name": "Show of Hands",
-        "author": "seaplus",
-        "size": "full",
-        "homebrew": false,
-        "tags": [],
-        "logo": null
-    },
-    {
-        "file": "scripts/social-strings.json",
-        "name": "Social Strings V2.2",
-        "author": "McGiggles",
-        "size": "full",
-        "homebrew": false,
-        "tags": [],
-        "logo": null
-    },
-    {
-        "file": "scripts/spooky-tea.json",
-        "name": "Spooky Tea",
-        "author": "Zets",
-        "size": "teensy",
-        "homebrew": false,
-        "tags": [],
-        "logo": "https://cdn-icons-png.flaticon.com/512/673/673607.png"
-    },
-    {
-        "file": "scripts/strings-pulling.json",
-        "name": "Strings Pulling",
-        "author": "Ben Burns",
-        "size": "full",
-        "homebrew": false,
-        "tags": [],
-        "logo": null
-    },
-    {
-        "file": "scripts/sushi-buffet.json",
-        "name": "Sushi Buffet",
-        "author": "Grimbits.com",
-        "size": "full",
-        "homebrew": true,
-        "tags": [],
-        "logo": "https://i.ibb.co/bM4B894D/Untitled-Artwork.png"
-    },
-    {
-        "file": "scripts/the-autopsy.json",
-        "name": "The Autopsy",
-        "author": "DrC",
-        "size": "full",
-        "homebrew": true,
-        "tags": [],
-        "logo": "https://mathieu-motin.com/autopsy-logo.png"
-    },
-    {
-        "file": "scripts/the-ballad-of-seat-7.json",
-        "name": "The Ballad of Seat 7",
-        "author": "TrashWarlock",
-        "size": "full",
-        "homebrew": false,
-        "tags": [],
-        "logo": null
-    },
-    {
-        "file": "scripts/the-midnight-oasis.json",
-        "name": "The Midnight Oasis",
-        "author": "Zets",
-        "size": "full",
-        "homebrew": false,
-        "tags": [],
-        "logo": "https://cdn-icons-png.flaticon.com/512/6421/6421037.png"
-    },
-    {
-        "file": "scripts/the-minotaurs-labyrinth.json",
-        "name": "The Minotaur's Labyrinth",
-        "author": "Urban Minotaur",
-        "size": "full",
-        "homebrew": false,
-        "tags": [],
-        "logo": null
-    },
-    {
-        "file": "scripts/the-passage-of-time.json",
-        "name": "The Passage of Time",
-        "author": "Delta",
-        "size": "full",
-        "homebrew": false,
-        "tags": [],
-        "logo": "https://deltaclocktower.neocities.org/owl_skull.png"
-    },
-    {
-        "file": "scripts/tour.json",
-        "name": "Tour",
-        "author": "Axolator",
-        "size": "full",
-        "homebrew": false,
-        "tags": [],
-        "logo": null
-    },
-    {
-        "file": "scripts/trouble-with-violets.json",
-        "name": "Trouble with Violets",
-        "author": "Ben Burns",
-        "size": "full",
-        "homebrew": false,
-        "tags": [],
-        "logo": null
-    },
-    {
-        "file": "scripts/trust.json",
-        "name": "Trust",
-        "author": "Milk",
-        "size": "full",
-        "homebrew": false,
-        "tags": [],
-        "logo": null
-    },
-    {
-        "file": "scripts/turbulence-boiling.json",
-        "name": "Turbulence Boiling",
-        "author": "Urban Minotaur",
-        "size": "full",
-        "homebrew": false,
-        "tags": [],
-        "logo": null
-    },
-    {
-        "file": "scripts/twinning-nadinesyville.json",
-        "name": "Twinning / Nadinesyville",
-        "author": "Nadine",
-        "size": "teensy",
-        "homebrew": false,
-        "tags": [],
-        "logo": null
-    },
-    {
-        "file": "scripts/uncertain-death.json",
-        "name": "Uncertain Death",
-        "author": "Matt",
-        "size": "full",
-        "homebrew": false,
-        "tags": [],
-        "logo": null
-    },
-    {
-        "file": "scripts/unholier-than-thou.json",
-        "name": "Unholier Than Thou",
-        "author": "Urban Minotaur",
-        "size": "full",
-        "homebrew": false,
-        "tags": [],
-        "logo": null
-    },
-    {
-        "file": "scripts/veiled-threats.json",
-        "name": "Veiled Threats",
-        "author": "Urban Minotaur",
-        "size": "full",
-        "homebrew": true,
-        "tags": [],
-        "logo": null
-    },
-    {
-        "file": "scripts/vigormortis-high-school.json",
-        "name": "Vigormortis High School",
+        "file": "data/scripts/a-lleech-of-distrust.json",
+        "name": "Unknown Script",
         "author": "Unknown",
         "size": "teensy",
         "homebrew": false,
@@ -549,21 +18,552 @@
         "logo": null
     },
     {
-        "file": "scripts/whose-cult-is-it-anyway.json",
-        "name": "Whose Cult Is It Anyway?",
-        "author": "Aero",
+        "file": "data/scripts/buyers-remorse.json",
+        "name": "Unknown Script",
+        "author": "Unknown",
         "size": "full",
         "homebrew": false,
         "tags": [],
         "logo": null
     },
     {
-        "file": "scripts/witchcraft.json",
-        "name": "Witchcraft",
-        "author": "Doomduck",
+        "file": "data/scripts/catfishing.json",
+        "name": "Unknown Script",
+        "author": "Unknown",
         "size": "full",
         "homebrew": false,
         "tags": [],
-        "logo": "https://i.imgur.com/4wjmDbH.png"
+        "logo": null
+    },
+    {
+        "file": "data/scripts/clockwork-cyborg.json",
+        "name": "Unknown Script",
+        "author": "Unknown",
+        "size": "full",
+        "homebrew": false,
+        "tags": [],
+        "logo": null
+    },
+    {
+        "file": "data/scripts/damsel-of-distress.json",
+        "name": "Unknown Script",
+        "author": "Unknown",
+        "size": "full",
+        "homebrew": false,
+        "tags": [],
+        "logo": null
+    },
+    {
+        "file": "data/scripts/erratanomicon.json",
+        "name": "Unknown Script",
+        "author": "Unknown",
+        "size": "full",
+        "homebrew": false,
+        "tags": [],
+        "logo": null
+    },
+    {
+        "file": "data/scripts/everyone-can-play.json",
+        "name": "Unknown Script",
+        "author": "Unknown",
+        "size": "full",
+        "homebrew": false,
+        "tags": [],
+        "logo": null
+    },
+    {
+        "file": "data/scripts/extension-cord.json",
+        "name": "Unknown Script",
+        "author": "Unknown",
+        "size": "full",
+        "homebrew": false,
+        "tags": [],
+        "logo": null
+    },
+    {
+        "file": "data/scripts/frankensteins-mayor.json",
+        "name": "Unknown Script",
+        "author": "Unknown",
+        "size": "teensy",
+        "homebrew": false,
+        "tags": [],
+        "logo": null
+    },
+    {
+        "file": "data/scripts/from-the-depths.json",
+        "name": "Unknown Script",
+        "author": "Unknown",
+        "size": "full",
+        "homebrew": false,
+        "tags": [],
+        "logo": null
+    },
+    {
+        "file": "data/scripts/gaslight-gatekeep-giggle.json",
+        "name": "Unknown Script",
+        "author": "Unknown",
+        "size": "teensy",
+        "homebrew": false,
+        "tags": [],
+        "logo": null
+    },
+    {
+        "file": "data/scripts/getting-picked-in-kickball.json",
+        "name": "Unknown Script",
+        "author": "Unknown",
+        "size": "full",
+        "homebrew": false,
+        "tags": [],
+        "logo": null
+    },
+    {
+        "file": "data/scripts/good-moon-rising.json",
+        "name": "Unknown Script",
+        "author": "Unknown",
+        "size": "full",
+        "homebrew": false,
+        "tags": [],
+        "logo": null
+    },
+    {
+        "file": "data/scripts/half-of-the-108.json",
+        "name": "Unknown Script",
+        "author": "Unknown",
+        "size": "full",
+        "homebrew": false,
+        "tags": [],
+        "logo": null
+    },
+    {
+        "file": "data/scripts/harold-holts-revenge.json",
+        "name": "Unknown Script",
+        "author": "Unknown",
+        "size": "full",
+        "homebrew": false,
+        "tags": [],
+        "logo": null
+    },
+    {
+        "file": "data/scripts/hells-chili-cookoff.json",
+        "name": "Unknown Script",
+        "author": "Unknown",
+        "size": "full",
+        "homebrew": false,
+        "tags": [],
+        "logo": null
+    },
+    {
+        "file": "data/scripts/hermit-buffet.json",
+        "name": "Unknown Script",
+        "author": "Unknown",
+        "size": "full",
+        "homebrew": false,
+        "tags": [],
+        "logo": null
+    },
+    {
+        "file": "data/scripts/hide-and-seek.json",
+        "name": "Unknown Script",
+        "author": "Unknown",
+        "size": "full",
+        "homebrew": false,
+        "tags": [],
+        "logo": null
+    },
+    {
+        "file": "data/scripts/i-claim-slayer-and-shoot-myself.json",
+        "name": "Unknown Script",
+        "author": "Unknown",
+        "size": "teensy",
+        "homebrew": false,
+        "tags": [],
+        "logo": null
+    },
+    {
+        "file": "data/scripts/im-your-demon-now.json",
+        "name": "Unknown Script",
+        "author": "Unknown",
+        "size": "teensy",
+        "homebrew": false,
+        "tags": [],
+        "logo": null
+    },
+    {
+        "file": "data/scripts/immortal-dance-party.json",
+        "name": "Unknown Script",
+        "author": "Unknown",
+        "size": "full",
+        "homebrew": false,
+        "tags": [],
+        "logo": null
+    },
+    {
+        "file": "data/scripts/kingdom-come.json",
+        "name": "Unknown Script",
+        "author": "Unknown",
+        "size": "full",
+        "homebrew": false,
+        "tags": [],
+        "logo": null
+    },
+    {
+        "file": "data/scripts/laissez-un-faire.json",
+        "name": "Unknown Script",
+        "author": "Unknown",
+        "size": "teensy",
+        "homebrew": false,
+        "tags": [],
+        "logo": null
+    },
+    {
+        "file": "data/scripts/late-night-drive-by.json",
+        "name": "Unknown Script",
+        "author": "Unknown",
+        "size": "teensy",
+        "homebrew": false,
+        "tags": [],
+        "logo": null
+    },
+    {
+        "file": "data/scripts/loose-lips-beginner-script.json",
+        "name": "Unknown Script",
+        "author": "Unknown",
+        "size": "teensy",
+        "homebrew": false,
+        "tags": [],
+        "logo": null
+    },
+    {
+        "file": "data/scripts/lunar-eclipse.json",
+        "name": "Unknown Script",
+        "author": "Unknown",
+        "size": "full",
+        "homebrew": false,
+        "tags": [],
+        "logo": null
+    },
+    {
+        "file": "data/scripts/muppets-on-a-clocktower.json",
+        "name": "Unknown Script",
+        "author": "Unknown",
+        "size": "full",
+        "homebrew": false,
+        "tags": [],
+        "logo": null
+    },
+    {
+        "file": "data/scripts/no-greater-joy.json",
+        "name": "Unknown Script",
+        "author": "Unknown",
+        "size": "teensy",
+        "homebrew": false,
+        "tags": [],
+        "logo": null
+    },
+    {
+        "file": "data/scripts/no-roles-barred.json",
+        "name": "Unknown Script",
+        "author": "Unknown",
+        "size": "full",
+        "homebrew": false,
+        "tags": [],
+        "logo": null
+    },
+    {
+        "file": "data/scripts/nobody-fucking-move.json",
+        "name": "Unknown Script",
+        "author": "Unknown",
+        "size": "teensy",
+        "homebrew": false,
+        "tags": [],
+        "logo": null
+    },
+    {
+        "file": "data/scripts/oops-all-outsiders.json",
+        "name": "Unknown Script",
+        "author": "Unknown",
+        "size": "full",
+        "homebrew": false,
+        "tags": [],
+        "logo": null
+    },
+    {
+        "file": "data/scripts/opium-den.json",
+        "name": "Unknown Script",
+        "author": "Unknown",
+        "size": "full",
+        "homebrew": false,
+        "tags": [],
+        "logo": null
+    },
+    {
+        "file": "data/scripts/outed-evil.json",
+        "name": "Unknown Script",
+        "author": "Unknown",
+        "size": "full",
+        "homebrew": false,
+        "tags": [],
+        "logo": null
+    },
+    {
+        "file": "data/scripts/over-the-river.json",
+        "name": "Unknown Script",
+        "author": "Unknown",
+        "size": "teensy",
+        "homebrew": false,
+        "tags": [],
+        "logo": null
+    },
+    {
+        "file": "data/scripts/pies-baking.json",
+        "name": "Unknown Script",
+        "author": "Unknown",
+        "size": "full",
+        "homebrew": false,
+        "tags": [],
+        "logo": null
+    },
+    {
+        "file": "data/scripts/poppyganda.json",
+        "name": "Unknown Script",
+        "author": "Unknown",
+        "size": "full",
+        "homebrew": false,
+        "tags": [],
+        "logo": null
+    },
+    {
+        "file": "data/scripts/race-to-the-bottom.json",
+        "name": "Unknown Script",
+        "author": "Unknown",
+        "size": "teensy",
+        "homebrew": false,
+        "tags": [],
+        "logo": null
+    },
+    {
+        "file": "data/scripts/replication-error.json",
+        "name": "Unknown Script",
+        "author": "Unknown",
+        "size": "full",
+        "homebrew": false,
+        "tags": [],
+        "logo": null
+    },
+    {
+        "file": "data/scripts/ride-the-cyclone.json",
+        "name": "Unknown Script",
+        "author": "Unknown",
+        "size": "full",
+        "homebrew": false,
+        "tags": [],
+        "logo": null
+    },
+    {
+        "file": "data/scripts/sects-dungeon.json",
+        "name": "Unknown Script",
+        "author": "Unknown",
+        "size": "full",
+        "homebrew": false,
+        "tags": [],
+        "logo": null
+    },
+    {
+        "file": "data/scripts/separation-of-church-and-state.json",
+        "name": "Unknown Script",
+        "author": "Unknown",
+        "size": "full",
+        "homebrew": false,
+        "tags": [],
+        "logo": null
+    },
+    {
+        "file": "data/scripts/show-of-hands.json",
+        "name": "Unknown Script",
+        "author": "Unknown",
+        "size": "full",
+        "homebrew": false,
+        "tags": [],
+        "logo": null
+    },
+    {
+        "file": "data/scripts/social-strings.json",
+        "name": "Unknown Script",
+        "author": "Unknown",
+        "size": "full",
+        "homebrew": false,
+        "tags": [],
+        "logo": null
+    },
+    {
+        "file": "data/scripts/spooky-tea.json",
+        "name": "Unknown Script",
+        "author": "Unknown",
+        "size": "teensy",
+        "homebrew": false,
+        "tags": [],
+        "logo": null
+    },
+    {
+        "file": "data/scripts/strings-pulling.json",
+        "name": "Unknown Script",
+        "author": "Unknown",
+        "size": "full",
+        "homebrew": false,
+        "tags": [],
+        "logo": null
+    },
+    {
+        "file": "data/scripts/sushi-buffet.json",
+        "name": "Unknown Script",
+        "author": "Unknown",
+        "size": "full",
+        "homebrew": false,
+        "tags": [],
+        "logo": null
+    },
+    {
+        "file": "data/scripts/the-autopsy.json",
+        "name": "Unknown Script",
+        "author": "Unknown",
+        "size": "full",
+        "homebrew": false,
+        "tags": [],
+        "logo": null
+    },
+    {
+        "file": "data/scripts/the-ballad-of-seat-7.json",
+        "name": "Unknown Script",
+        "author": "Unknown",
+        "size": "full",
+        "homebrew": false,
+        "tags": [],
+        "logo": null
+    },
+    {
+        "file": "data/scripts/the-midnight-oasis.json",
+        "name": "Unknown Script",
+        "author": "Unknown",
+        "size": "full",
+        "homebrew": false,
+        "tags": [],
+        "logo": null
+    },
+    {
+        "file": "data/scripts/the-minotaurs-labyrinth.json",
+        "name": "Unknown Script",
+        "author": "Unknown",
+        "size": "full",
+        "homebrew": false,
+        "tags": [],
+        "logo": null
+    },
+    {
+        "file": "data/scripts/the-passage-of-time.json",
+        "name": "Unknown Script",
+        "author": "Unknown",
+        "size": "full",
+        "homebrew": false,
+        "tags": [],
+        "logo": null
+    },
+    {
+        "file": "data/scripts/tour.json",
+        "name": "Unknown Script",
+        "author": "Unknown",
+        "size": "full",
+        "homebrew": false,
+        "tags": [],
+        "logo": null
+    },
+    {
+        "file": "data/scripts/trouble-with-violets.json",
+        "name": "Unknown Script",
+        "author": "Unknown",
+        "size": "full",
+        "homebrew": false,
+        "tags": [],
+        "logo": null
+    },
+    {
+        "file": "data/scripts/trust.json",
+        "name": "Unknown Script",
+        "author": "Unknown",
+        "size": "full",
+        "homebrew": false,
+        "tags": [],
+        "logo": null
+    },
+    {
+        "file": "data/scripts/turbulence-boiling.json",
+        "name": "Unknown Script",
+        "author": "Unknown",
+        "size": "full",
+        "homebrew": false,
+        "tags": [],
+        "logo": null
+    },
+    {
+        "file": "data/scripts/twinning-nadinesyville.json",
+        "name": "Unknown Script",
+        "author": "Unknown",
+        "size": "teensy",
+        "homebrew": false,
+        "tags": [],
+        "logo": null
+    },
+    {
+        "file": "data/scripts/uncertain-death.json",
+        "name": "Unknown Script",
+        "author": "Unknown",
+        "size": "full",
+        "homebrew": false,
+        "tags": [],
+        "logo": null
+    },
+    {
+        "file": "data/scripts/unholier-than-thou.json",
+        "name": "Unknown Script",
+        "author": "Unknown",
+        "size": "full",
+        "homebrew": false,
+        "tags": [],
+        "logo": null
+    },
+    {
+        "file": "data/scripts/veiled-threats.json",
+        "name": "Unknown Script",
+        "author": "Unknown",
+        "size": "full",
+        "homebrew": false,
+        "tags": [],
+        "logo": null
+    },
+    {
+        "file": "data/scripts/vigormortis-high-school.json",
+        "name": "Unknown Script",
+        "author": "Unknown",
+        "size": "teensy",
+        "homebrew": false,
+        "tags": [],
+        "logo": null
+    },
+    {
+        "file": "data/scripts/whose-cult-is-it-anyway.json",
+        "name": "Unknown Script",
+        "author": "Unknown",
+        "size": "full",
+        "homebrew": false,
+        "tags": [],
+        "logo": null
+    },
+    {
+        "file": "data/scripts/witchcraft.json",
+        "name": "Unknown Script",
+        "author": "Unknown",
+        "size": "full",
+        "homebrew": false,
+        "tags": [],
+        "logo": null
     }
 ]
