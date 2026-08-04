@@ -96,11 +96,28 @@ const teams = [
     "minions",
     "demons"
 ];
-    teams.forEach(team=>{
-        const section =
-            document.createElement("div");
-        section.className =
-            "team-section";
+teams.forEach(team=>{
+    const teamCharacters =
+        characters.filter(character=>{
+            const id =
+                typeof character === "string"
+                ? character
+                : character.id;
+            const data =
+                ScriptGenerator
+                .characterLookup
+                .get(id);
+            return data &&
+                normalizeTeam(data.team) === team;
+        });
+    // Skip empty teams
+    if(!teamCharacters.length){
+        return;
+    }
+    const section =
+        document.createElement("div");
+    section.className =
+        "team-section";
         const title =
             document.createElement("div");
         title.className =
