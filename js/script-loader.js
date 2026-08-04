@@ -31,7 +31,7 @@ async function loadOfficialCharacters() {
    Load Script Index
 ====================================================== */
 async function loadScriptIndex() {
-    const response = await fetch("/scripts/index.json");
+    const response = await fetch("/data/index.json");
     if (!response.ok) {
         throw new Error("Failed to load index.json");
     }
