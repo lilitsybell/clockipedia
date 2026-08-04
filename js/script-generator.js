@@ -11,3 +11,6 @@ async function initializeGenerator() {
     }
 }
 initializeGenerator();
+document
+    .getElementById("generateScriptButton")
+    .addEventListener("click", generateScript);
