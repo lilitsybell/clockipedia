@@ -1003,16 +1003,13 @@ font-size:22px;
 .ability-tooltip.gold .tooltip-title span {
     color:var(--copper);
 }
-
 /* ===========================
    Script Generator
 =========================== */
-
 .script-generator {
     width:min(1000px,95%);
     margin:auto;
 }
-
 /* Main Purple Header */
 .generator-header {
     background:var(--purple);
@@ -1024,8 +1021,6 @@ font-size:22px;
     letter-spacing:.5px;
     border-radius:14px 14px 0 0;
 }
-
-
 /* Main Panels */
 .generator-panel {
     background:white;
@@ -1035,8 +1030,6 @@ font-size:22px;
     margin-bottom:25px;
     box-shadow:0 10px 24px rgba(0,0,0,.12);
 }
-
-
 /* Controls */
 .generator-controls {
     display:flex;
@@ -1045,18 +1038,14 @@ font-size:22px;
     gap:15px;
     flex-wrap:wrap;
 }
-
 .generator-setting {
     display:flex;
     flex-direction:column;
     gap:8px;
 }
-
 .generator-setting label {
     font-weight:bold;
 }
-
-
 .generator-setting input,
 .generator-setting select {
     width:260px;
@@ -1067,8 +1056,6 @@ font-size:22px;
     font-size:16px;
     background:white;
 }
-
-
 /* Buttons */
 .generator-button {
     background:var(--purple);
@@ -1080,18 +1067,14 @@ font-size:22px;
     font-size:16px;
     font-weight:bold;
 }
-
 .generator-button:hover {
     opacity:.85;
 }
-
-
 /* Script Results Header */
 .script-results {
     border-radius:14px;
     overflow:hidden;
 }
-
 .script-header {
     background:var(--purple);
     color:white;
@@ -1102,41 +1085,31 @@ font-size:22px;
     padding:20px;
     margin:-25px -25px 25px;
 }
-
-
 .script-header h2 {
     color:white;
     margin:0;
     font-size:30px;
 }
-
 .script-heading {
     display:flex;
     align-items:baseline;
     gap:15px;
 }
-
-
 #scriptAuthor {
     color:white;
     font-style:italic;
     opacity:.9;
 }
-
-
 /* JSON Buttons */
 .json-buttons {
     display:flex;
     flex-direction:column;
     gap:10px;
 }
-
 .json-buttons .generator-button {
     background:white;
     color:var(--purple);
 }
-
-
 /* Description */
 #descriptionBox {
     background:#f7f7f7;
@@ -1145,23 +1118,16 @@ font-size:22px;
     margin:25px 0;
     border-radius:8px;
 }
-
 #descriptionBox h3 {
     color:var(--purple);
 }
-
-
 /* Character Sections */
 #characterContainer {
     padding:0;
 }
-
-
 .team-section {
     margin-bottom:25px;
 }
-
-
 .team-title {
     background:#f7f7f7;
     border:1px solid #ddd;
@@ -1171,8 +1137,6 @@ font-size:22px;
     font-size:22px;
     font-weight:bold;
 }
-
-
 .script-character {
     display:flex;
     align-items:center;
@@ -1180,10 +1144,30 @@ font-size:22px;
     padding:15px;
     border-bottom:1px solid #ddd;
 }
-
-
 .script-character img {
     width:70px;
     height:70px;
     object-fit:contain;
+}
+#scriptHeader{
+    text-align:center;
+    padding:30px;
+    margin-bottom:25px;
+    border-radius:20px;
+    background-size:cover;
+    background-position:center;
+    overflow:hidden;
+}
+.script-logo{
+    max-width:300px;
+    max-height:200px;
+    margin:auto;
+    display:block;
+}
+.script-author{
+    font-style:italic;
+}
+.script-almanac{
+    display:inline-block;
+    margin-top:10px;
 }
