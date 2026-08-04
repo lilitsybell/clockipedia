@@ -36,9 +36,10 @@ for (const scriptEntry of scriptsList) {
         scriptEntry.file
     );
 
-    let meta = {};
+let meta = {};
+let hasHomebrew = false;
 
-    try {
+try {
 
         const script = JSON.parse(
             fs.readFileSync(
@@ -53,7 +54,6 @@ for (const scriptEntry of scriptsList) {
                 typeof entry === "object" &&
                 entry.id === "_meta"
         );
-        let hasHomebrew = false;
 
 for (const entry of script) {
 
