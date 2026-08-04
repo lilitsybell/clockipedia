@@ -7,12 +7,31 @@ const ScriptGenerator = {
     officialCharacters: new Map(),
     characterLookup: new Map(),
     currentScript: null,
+    recentScripts: [],
     filters:{
         homebrew:"maybe",
         size:"any",
         character:null
     }
 };
+function updateRecentScripts(script){
+    const index =
+        ScriptGenerator.recentScripts.indexOf(
+            script.file
+        );
+    // Remove if already seen
+    if(index !== -1){
+        ScriptGenerator.recentScripts.splice(index,1);
+    }
+    // Add newest to front
+    ScriptGenerator.recentScripts.unshift(
+        script.file
+    );
+    // Keep only last 10
+    if(ScriptGenerator.recentScripts.length > 10){
+        ScriptGenerator.recentScripts.pop();
+    }
+}
 /* ======================================================
    Normalize Character Data
 ====================================================== */
