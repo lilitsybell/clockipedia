@@ -2,6 +2,8 @@ console.log(
     "script-renderer.js updated 8/04/26 10:29"
 );
 function renderScriptCharacters(script){
+    const characters =
+    extractScriptCharacters(script);
     const container =
         document.getElementById(
             "characterContainer"
@@ -29,7 +31,7 @@ function renderScriptCharacters(script){
             +
             team.slice(1);
         section.appendChild(title);
-        script.characters
+        characters
             .filter(character=>{
                 const id =
                     typeof character === "string"
