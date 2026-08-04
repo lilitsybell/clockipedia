@@ -2,69 +2,122 @@
 <html lang="en">
 
 <head>
+
 <link rel="icon" type="image/png" href="../images/favicon.png">
 
 <meta charset="UTF-8">
+
 <title>Script Generator</title>
 
 <link rel="stylesheet" href="/css/style.css">
 
 </head>
+
+
 <body>
-<div class="generator-panel">
 
-<div class="generator-controls">
-
-
-<div class="generator-setting">
-
-<label>
-Include Character
-</label>
-
-<input placeholder="Search characters...">
-
-</div>
-
-
-<div class="generator-setting">
-
-<label>
-Homebrew
-</label>
-
-<button class="generator-button">
-Maybe
-</button>
-
-</div>
-
-
-<div class="generator-setting">
-
-<label>
-Script Size
-</label>
-
-<button class="generator-button">
-Any
-</button>
-
-</div>
-
-
-<button class="generator-button">
-Generate Script
-</button>
-
-
-</div>
-
-</div>
 
 <div id="sidebar"></div>
 
-<div id="interaction-finder"></div>
+
+<div id="content">
+
+
+<div class="script-generator">
+
+
+    <!-- TITLE -->
+
+    <div class="generator-header">
+        Script Generator
+    </div>
+
+
+    <!-- SETTINGS PANEL -->
+
+    <div class="generator-panel">
+
+
+        <div class="generator-controls">
+
+
+            <div class="generator-setting">
+
+                <label>
+                Include Character
+                </label>
+
+                <input placeholder="Search characters...">
+
+            </div>
+
+
+
+            <div class="generator-setting">
+
+                <label>
+                Homebrew
+                </label>
+
+                <button class="generator-button">
+                Maybe
+                </button>
+
+            </div>
+
+
+
+            <div class="generator-setting">
+
+                <label>
+                Script Size
+                </label>
+
+                <button class="generator-button">
+                Any
+                </button>
+
+            </div>
+
+
+
+            <button class="generator-button">
+            Generate Script
+            </button>
+
+
+        </div>
+
+
+    </div>
+
+
+    <!-- RESULTS PANEL -->
+
+    <div class="generator-panel">
+
+
+        <h2>
+        Random Script
+        </h2>
+
+
+        <div id="characterContainer">
+
+            Loading random script...
+
+        </div>
+
+
+    </div>
+
+
+</div>
+
+
+</div>
+
+
 
 <script src="/js/characters.js"></script>
 <script src="/js/interaction-card.js"></script>
@@ -72,10 +125,7 @@ Generate Script
 <script src="../js/search.js"></script>
 <script src="../js/sidebar.js"></script>
 
+
 </body>
 
-</html>    </div>
-
-</div>
-
-</div>
+</html>
