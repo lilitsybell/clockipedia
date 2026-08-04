@@ -72,3 +72,49 @@ async function copyCurrentScript(){
         );
     }
 }
+const downloadButton =
+    document.getElementById("downloadJsonButton");
+if(downloadButton){
+    downloadButton.addEventListener(
+        "click",
+        downloadCurrentScript
+    );
+}
+function downloadCurrentScript(){
+    if(!ScriptGenerator.currentScript){
+        return;
+    }
+    const json =
+        JSON.stringify(
+            ScriptGenerator.currentScript,
+            null,
+            4
+        );
+    const blob =
+        new Blob(
+            [json],
+            {
+                type:"application/json"
+            }
+        );
+    const url =
+        URL.createObjectURL(blob);
+    const link =
+        document.createElement("a");
+    link.href = url;
+    // Use script name if available
+    const meta =
+        ScriptGenerator.currentScript.meta;
+    const filename =
+        meta?.name
+        ? meta.name
+            .toLowerCase()
+            .replace(/[^a-z0-9]+/g,"-")
+            + ".json"
+        : "script.json";
+    link.download = filename;
+    document.body.appendChild(link);
+    link.click();
+    document.body.removeChild(link);
+    URL.revokeObjectURL(url);
+}
