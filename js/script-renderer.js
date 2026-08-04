@@ -28,8 +28,6 @@ function renderScriptHeader(script){
         document.getElementById("scriptTitle");
     const author =
         document.getElementById("scriptAuthor");
-    const logo =
-        document.getElementById("scriptLogo");
     const almanac =
         document.getElementById("scriptAlmanac");
     const meta =
@@ -53,10 +51,6 @@ function renderScriptHeader(script){
             ? "by " + meta.author
             : "";
     }
-    if(logo && meta.logo){
-        logo.src = meta.logo;
-        logo.style.display = "block";
-    }
 if(almanac){
     if(meta.almanac){
         almanac.href = meta.almanac;
@@ -69,10 +63,6 @@ if(almanac){
 }
     const header =
         document.getElementById("scriptHeader");
-    if(header && meta.background){
-        header.style.backgroundImage =
-            `url("${meta.background}")`;
-    }
 }
 function renderScriptCharacters(script){
     const characters =
