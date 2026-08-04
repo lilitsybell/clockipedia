@@ -1078,18 +1078,22 @@ font-size:22px;
    Script Results Header
 =========================== */
 .script-results {
+    background:white;
+    border:3px solid var(--purple);
     border-radius:14px;
+    padding:0;
+    overflow:hidden;
+    box-shadow:0 10px 24px rgba(0,0,0,.12);
 }
 .script-header {
-    background:var(--purple);
-    color:white;
     display:flex;
     justify-content:space-between;
     align-items:center;
-    gap:20px;
-    padding:20px;
-    margin:-25px -25px 25px;
-    border-radius:12px 12px 0 0;
+    background:var(--purple);
+    color:white;
+    padding:20px 25px;
+    border-radius:0;
+    margin:0;
 }
 .script-header h2 {
     color:white;
