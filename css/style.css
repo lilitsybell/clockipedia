@@ -1189,3 +1189,35 @@ font-size:22px;
 .script-author{
     font-style:italic;
 }
+.character-search-wrapper{
+    position:relative;
+}
+.character-search-results{
+    position:absolute;
+    top:105%;
+    left:0;
+    width:220px;
+    background:white;
+    border:2px solid var(--purple);
+    border-radius:10px;
+    box-shadow:0 8px 20px rgba(0,0,0,.12);
+    overflow:hidden;
+    display:none;
+    z-index:9999;
+}
+.character-search-option{
+    display:flex;
+    align-items:center;
+    gap:10px;
+    padding:8px 12px;
+    cursor:pointer;
+}
+.character-search-option img{
+    width:35px;
+    height:35px;
+    object-fit:contain;
+}
+.character-search-option:hover{
+    background:var(--purple);
+    color:white;
+}
