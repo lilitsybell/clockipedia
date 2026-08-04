@@ -1082,11 +1082,11 @@ font-size:22px;
     gap:30px;
     padding:25px;
     margin:-25px -25px 25px;
-    background:white;
+    background:var(--purple);
     border-bottom:3px solid var(--purple);
 }
 .script-header h2 {
-    color:var(--purple);
+    color:var(--white);
     margin:0;
     font-size:30px;
 }
@@ -1096,7 +1096,7 @@ font-size:22px;
     gap:15px;
 }
 #scriptAuthor {
-    color:#777;
+    color:white;
     font-style:italic;
 }
 /* JSON Buttons */
