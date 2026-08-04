@@ -6,55 +6,45 @@
     <title>Script Generator</title>
     <link rel="stylesheet" href="/css/style.css">
 </head>
-
 <body>
-
 <div id="sidebar"></div>
-
 <div id="content">
-
     <div class="script-generator">
-
         <!-- ===================================== -->
         <!-- PAGE HEADER -->
         <!-- ===================================== -->
-
         <div class="generator-header">
             Script Generator
         </div>
-
         <!-- ===================================== -->
         <!-- SETTINGS PANEL -->
         <!-- ===================================== -->
-
         <div class="generator-panel">
-
-            <div class="generator-controls">
-
-                <div class="generator-setting">
-                    <label>Include Character</label>
-                    <input id="characterSearch" placeholder="Search characters...">
-                </div>
-
-                <div class="generator-setting">
-                    <label>Homebrew</label>
-                    <button id="homebrewButton" class="generator-button">
-                        Maybe
-                    </button>
-                </div>
-
-                <div class="generator-setting">
-                    <label>Script Size</label>
-                    <button id="scriptSizeButton" class="generator-button">
-                        Any
-                    </button>
-                </div>
-                <button
-                    id="generateScriptButton"
-                    class="generator-button">
-                    Generate Script
-                </button>
-            </div>
+<div class="generator-controls">
+    <div class="generator-left-controls">
+        <div class="generator-setting">
+            <label>Include Character</label>
+            <input id="characterSearch" placeholder="Search characters...">
+        </div>
+        <div class="generator-setting">
+            <label>Homebrew</label>
+            <button id="homebrewButton" class="generator-button">
+                Maybe
+            </button>
+        </div>
+        <div class="generator-setting">
+            <label>Script Size</label>
+            <button id="scriptSizeButton" class="generator-button">
+                Any
+            </button>
+        </div>
+    </div>
+    <button
+        id="generateScriptButton"
+        class="generator-button">
+        Generate Script
+    </button>
+</div>
         </div>
         <!-- ===================================== -->
         <!-- RESULTS PANEL -->
