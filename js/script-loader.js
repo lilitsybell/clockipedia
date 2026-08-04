@@ -69,19 +69,23 @@ function extractScriptCharacters(script) {
         return characters;
     }
     script.forEach(entry => {
+        // Ignore metadata
+        if (
+            typeof entry === "object" &&
+            entry.id === "_meta"
+        ) {
+            return;
+        }
         // Official character ID
         if (typeof entry === "string") {
-            let character;
-            // Map format
-            if (ScriptGenerator.characters instanceof Map) {
-                character = ScriptGenerator.characters.get(entry);
-            }
-            // Object format fallback
-            else {
-                character = ScriptGenerator.characters[entry];
-            }
+            const character = ScriptGenerator.characters.get(entry);
             if (character) {
-                characters.push(character);
+                characters.push({
+                    id: entry,
+                    ...character,
+                    official: true,
+                    homebrew: false
+                });
             }
             else {
                 console.warn(
@@ -90,12 +94,16 @@ function extractScriptCharacters(script) {
                 );
             }
         }
-        // Homebrew character object
+        // Homebrew character
         else if (
             typeof entry === "object" &&
             entry.id
         ) {
-            characters.push(entry);
+            characters.push({
+                ...entry,
+                official: false,
+                homebrew: true
+            });
         }
     });
     console.log(
@@ -103,14 +111,13 @@ function extractScriptCharacters(script) {
         characters.length,
         "script characters"
     );
-   console.log("Extracted character list:");
-characters.forEach(character => {
-    console.log(
-        character.id,
-        character.name,
-        character.team
-    );
-});
+    characters.forEach(character => {
+        console.log(
+            character.id,
+            character.name,
+            character.team
+        );
+    });
     return characters;
 }
 /* ======================================================
