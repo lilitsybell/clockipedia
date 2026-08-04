@@ -1,4 +1,4 @@
-console.log("script-generator.js updated 8/04/26 09:55");
+console.log("script-generator.js updated 8/04/26 11:46");
 async function initializeGenerator() {
     try {
         await loadOfficialCharacters();
@@ -31,9 +31,8 @@ async function generateScript() {
     // Build character database
     buildCharacterLookup(loadedScript);
     // Render characters
-    renderScriptCharacters(
-        loadedScript
-    );
+renderScriptHeader(script);
+renderScriptCharacters(script);
 }
 document
     .getElementById("generateScriptButton")
