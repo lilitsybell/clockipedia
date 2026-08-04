@@ -1260,11 +1260,15 @@ font-size:22px;
     display:flex;
 }
 #scriptTags{
-    display:flex;
-    justify-content:center;
-    flex-wrap:wrap;
-    gap:8px;
-    margin-top:12px;
+    display:inline-flex;
+    align-items:center;
+    padding:4px 12px;
+    border-radius:20px;
+    background:var(--purple);
+    color:white;
+    font-size:0.85rem;
+    font-weight:bold;
+    white-space:nowrap;
 }
 .script-tag{
     display:inline-flex;
