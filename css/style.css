@@ -1253,3 +1253,9 @@ font-size:22px;
 .script-character-name.fabled {
     color:var(--copper);
 }
+#characterSearch{
+    padding-right:35px;
+}
+#clearCharacterSearch{
+    display:flex;
+}
