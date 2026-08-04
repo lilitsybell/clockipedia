@@ -2,11 +2,37 @@ console.log("script-generator.js updated 8/04/26 18:57");
 async function initializeGenerator() {
     try {
         await loadOfficialCharacters();
-        console.log(ScriptGenerator.officialCharacters);
+        console.log(
+            ScriptGenerator.officialCharacters
+        );
         await loadScriptIndex();
-        console.log("Generator ready.");
+        // Load Script of the Day
+        const daily =
+            await loadDailyScript();
+        const script =
+            await loadScript(
+                daily.file
+            );
+        ScriptGenerator.currentScript =
+            script;
+        buildCharacterLookup(
+            script
+        );
+        renderScriptHeader(
+            script
+        );
+        renderScriptCharacters(
+            script
+        );
+        console.log(
+            "Loaded Script of the Day:",
+            daily.name
+        );
+        console.log(
+            "Generator ready."
+        );
     }
-    catch (error) {
+    catch(error){
         console.error(error);
     }
 }
