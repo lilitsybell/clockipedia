@@ -1,4 +1,4 @@
-console.log("script-generator.js updated 8/04/26 11:46");
+console.log("script-generator.js updated 8/04/26 18:57");
 async function initializeGenerator() {
     try {
         await loadOfficialCharacters();
