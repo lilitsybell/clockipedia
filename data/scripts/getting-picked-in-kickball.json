@@ -1,0 +1,56 @@
+[
+  {
+    "id": "_meta",
+    "author": "Alexis",
+    "name": "getting picked in kickball"
+  },
+  "steward",
+  "chef",
+  "empath",
+  "balloonist",
+  "fortune_teller",
+  "dreamer",
+  "undertaker",
+  "savant",
+  "nightwatchman",
+  "seamstress",
+  "juggler",
+  "alchemist",
+  "ravenkeeper",
+  "recluse",
+  "barber",
+  "snitch",
+  "puzzlemaster",
+  "poisoner",
+  "cerenovus",
+  "fearmonger",
+  "xaan",
+  {
+    "id": "gpik-hDjf54",
+    "name": "Special Djinn",
+    "image": [
+      "https://i.imgur.com/FeAZtjP.png"
+    ],
+    "ability": "Minions and Demons do not know each other. If a player publicly guesses (once per player) which players are Minion(s) and which is the Demon, their team wins.",
+    "flavor": "Aw beans picked last again.",
+    "reminders": [
+      "Guessed",
+      "Guessed",
+      "Guessed",
+      "Guessed",
+      "Guessed",
+      "Guessed",
+      "Guessed",
+      "Guessed",
+      "Guessed",
+      "Guessed",
+      "Guessed",
+      "Guessed"
+    ],
+    "team": "fabled"
+  },
+  "no_dashii",
+  "ojo",
+  "vigormortis",
+  "vortox"
+]
