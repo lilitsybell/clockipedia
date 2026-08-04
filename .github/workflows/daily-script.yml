@@ -1,0 +1,32 @@
+name: Update Script of the Day
+
+on:
+  schedule:
+    - cron: "0 4 * * *"
+
+  workflow_dispatch:
+
+jobs:
+  update:
+    runs-on: ubuntu-latest
+
+    steps:
+
+    - uses: actions/checkout@v4
+
+    - uses: actions/setup-node@v4
+      with:
+        node-version: 20
+
+    - run: node tools/pick-daily-script.js
+
+    - name: Commit daily script
+      run: |
+        git config user.name "github-actions"
+        git config user.email "actions@github.com"
+
+        git add data/daily-script.json
+
+        git commit -m "Update Script of the Day" || exit 0
+
+        git push
