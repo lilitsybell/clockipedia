@@ -1122,7 +1122,7 @@ font-size:22px;
     padding:8px;
     border:none;
     border-radius:10px;
-    background:white;
+    background:transparent;
     cursor:pointer;
     display:flex;
     align-items:center;
