@@ -1,4 +1,4 @@
-/* backup 8/03/26 22:48 */
+/* backup 8/03/26 22:51 */
 
 @font-face {
     font-family: "Droid Sans";
@@ -353,7 +353,7 @@ font-size:22px;
 .character-link{
     font-weight:bold;
     text-decoration:none;
-    position-relative;
+    position:relative;
 }
 .character-link.blue{
     color:var(--blue);
@@ -488,12 +488,11 @@ font-size:22px;
 .wiki.green .tab.active{
     background:#8ea742;
 }
-.wiki.traveller .tab.active{
-    background:linear-gradient(
-        0deg,
-        var(--blue) 50%,
-        var(--red) 50%
-    );
+.wiki.traveller .tab:nth-child(odd).active{
+    background:var(--blue);
+}
+.wiki.traveller .tab:nth-child(even).active{
+    background:var(--red);
 }
 .page {
     display: none;
