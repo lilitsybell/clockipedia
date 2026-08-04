@@ -170,6 +170,8 @@ function downloadCurrentScript(){
 }
 const characterSearch =
     document.getElementById("characterSearch");
+const clearCharacterSearch =
+    document.getElementById("clearCharacterSearch");
 const characterSearchResults =
     document.getElementById("characterSearchResults");
 if(characterSearch){
@@ -211,12 +213,16 @@ if(characterSearch){
                 option.addEventListener(
                     "click",
                     ()=>{
-                        characterSearch.value =
-                            character.name;
-                        ScriptGenerator.filters.character =
-                            character.name
-                            .toLowerCase();
-                        characterSearchResults.style.display="none";
+characterSearch.value =
+    character.name;
+ScriptGenerator.filters.character =
+    character.name
+    .toLowerCase();
+if(clearCharacterSearch){
+    clearCharacterSearch.style.display =
+        "flex";
+}
+characterSearchResults.style.display="none";
                     }
                 );
                 characterSearchResults.appendChild(option);
@@ -272,7 +278,24 @@ if(homebrewButton){
     );
 }
 
+if(clearCharacterSearch){
 
+    clearCharacterSearch.addEventListener(
+        "click",
+        ()=>{
+
+            characterSearch.value = "";
+
+            ScriptGenerator.filters.character =
+                null;
+
+            clearCharacterSearch.style.display =
+                "none";
+
+        }
+    );
+
+}
 const scriptSizeButton =
     document.getElementById("scriptSizeButton");
 
