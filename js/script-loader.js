@@ -118,6 +118,19 @@ function extractScriptCharacters(script) {
             character.team
         );
     });
+function normalizeCharacter(character){
+    // Fix image arrays
+    if(Array.isArray(character.image)){
+        character.image = character.image[0];
+    }
+    // Normalize team capitalization
+    if(character.team){
+        character.team =
+            character.team.charAt(0).toUpperCase() +
+            character.team.slice(1).toLowerCase();
+    }
+    return character;
+}
     return characters;
 }
 /* ======================================================
