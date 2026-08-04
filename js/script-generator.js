@@ -148,3 +148,16 @@ function downloadCurrentScript(){
     document.body.removeChild(link);
     URL.revokeObjectURL(url);
 }
+const characterSearch =
+    document.getElementById("characterSearch");
+if(characterSearch){
+    characterSearch.addEventListener(
+        "input",
+        ()=>{
+            ScriptGenerator.characterFilter =
+                characterSearch.value
+                .trim()
+                .toLowerCase();
+        }
+    );
+}
