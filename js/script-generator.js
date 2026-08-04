@@ -31,7 +31,7 @@ async function generateScript() {
     // Build character database
     buildCharacterLookup(loadedScript);
 // Render characters
-renderScriptHeader(script);
+renderScriptHeader(loadedScript);
 renderScriptCharacters(loadedScript);
 }
 document
