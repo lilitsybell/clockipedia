@@ -1,4 +1,4 @@
-console.log("interaction-finder Updated 7/31/26 18:20");
+console.log("interaction-finder Updated 8/03/26 23:02");
 let interactions = [];
 function getCharacters(text){
     const matches=text.match(/\[(.*?)\]/g);
@@ -157,7 +157,40 @@ matchingInteractions
     return a.text.length - b.text.length;
 })
 .forEach(interaction=>{
-list.appendChild(createInteractionCard(interaction));
+    const li = document.createElement("li");
+    const interactionColor = getInteractionColor(interaction);
+    li.className = `interaction-card ${interactionColor}`;
+    let infoButtons = "";
+    let mathTriangle = "";
+    if(interaction.math){
+        let mathText = interaction.mathInfo ||
+            (interaction.math === "green"
+                ? "Mathematician registers this as normal."
+                : "Mathematician registers this as abnormal.");
+        mathTriangle = `
+        <span class="math-triangle ${interaction.math}"
+        data-info="${mathText.replace(/"/g, '&quot;')}">
+        </span>
+        `;
+    }
+    if(interaction.reason){
+        infoButtons += `
+        <span class="info-button info-popup"
+        data-info="${interaction.reason.replace(/"/g, '&quot;')}">
+            ?
+        </span>
+        `;
+    }
+li.innerHTML = `
+    <div class="interaction-text">
+        ${formatCharacters(interaction.text)}
+    </div>
+    <div class="interaction-icons">
+        ${infoButtons}
+        ${mathTriangle}
+    </div>
+`;
+    list.appendChild(li);
 });
     resultCount.textContent =
     `Interaction${list.children.length === 1 ? "" : "s"}: ${list.children.length}`;
