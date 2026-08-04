@@ -1,5 +1,9 @@
 console.log("interactions Updated 8/03/26 22:55");
 let interactions = [];
+async function loadInteractions(){
+    const response = await fetch("/data/interactions.json");
+    interactions = await response.json();
+}
 function getCharacters(text){
     const matches=text.match(/\[(.*?)\]/g);
     if(!matches) return [];
