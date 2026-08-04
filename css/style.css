@@ -1200,3 +1200,16 @@ font-size:22px;
     justify-content:space-between;
     align-items:center;
 }
+#scriptAuthor{
+    display:block;
+    margin-top:8px;
+    color:white;
+    font-style:italic;
+    font-size:16px;
+    font-weight:400;
+    opacity:.9;
+}
+#scriptTags{
+    font-size:14px;
+    font-weight:400;
+}
