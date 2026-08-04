@@ -37,12 +37,11 @@ async function loadOfficialCharacters() {
     }
     const data = await response.json();
 ScriptGenerator.officialCharacters =
-    new Map(Object.entries(data));
-    console.log(
-        "Loaded",
-        ScriptGenerator.characters.size,
-        "official characters"
-    );
+console.log(
+    "Loaded",
+    ScriptGenerator.officialCharacters.size,
+    "official characters"
+);
 }
 /* ======================================================
    Load Script Index
