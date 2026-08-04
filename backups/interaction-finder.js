@@ -1,4 +1,4 @@
-console.log("interaction-finder Updated 7/31/26 18:20");
+console.log("interaction-finder Updated 8/03/26 10:47");
 let interactions = [];
 function getCharacters(text){
     const matches=text.match(/\[(.*?)\]/g);
