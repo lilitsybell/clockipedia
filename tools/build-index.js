@@ -34,6 +34,7 @@ for (const scriptEntry of scriptsList) {
 const scriptPath = scriptEntry.file.startsWith("data/")
     ? path.join(__dirname, "../", scriptEntry.file)
     : path.join(dataFolder, scriptEntry.file);
+let characters = [];
 let meta = {};
 let hasHomebrew = false;
 
@@ -45,8 +46,14 @@ try {
                 "utf8"
             )
         );
-
-
+characters = script
+    .map(entry =>
+        typeof entry === "string"
+            ? entry
+            : entry.id
+    )
+    .filter(Boolean)
+    .filter(id => id !== "_meta");
         const foundMeta = script.find(
             entry =>
                 typeof entry === "object" &&
@@ -111,7 +118,7 @@ catch(error){
         meta.bootlegger ||
         meta.homebrew
     ),
-
+characters: characters,
         tags:
             meta.tags ||
             [],
