@@ -19,19 +19,19 @@ async function loadOfficialCharacters() {
         throw new Error("Failed to load characters.json");
     }
     const data = await response.json();
-    ScriptGenerator.officialCharacters = new Map(
-        Object.entries(data)
-    );
+    ScriptGenerator.officialCharacters = new Map();
+    Object.entries(data).forEach(([id, character]) => {
+        character.id = id;
+        ScriptGenerator.officialCharacters.set(
+            id,
+            character
+        );
+    });
     console.log(
         "Loaded",
-ScriptGenerator.officialCharacters = new Map();
-Object.entries(data).forEach(([id, character]) => {
-    character.id = id;
-    ScriptGenerator.officialCharacters.set(
-        id,
-        character
+        ScriptGenerator.officialCharacters.size,
+        "official characters"
     );
-});
 }
 /* ======================================================
    Load Script Index
