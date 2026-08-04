@@ -26,7 +26,33 @@ const scriptsList = JSON.parse(
 
 const index = [];
 
+const charactersPath = path.join(
+    dataFolder,
+    "characters.json"
+);
 
+const characterData = JSON.parse(
+    fs.readFileSync(
+        charactersPath,
+        "utf8"
+    )
+);
+
+const characterLookup = new Map();
+
+for(const character of characterData){
+
+    if(
+        character.id &&
+        character.name
+    ){
+        characterLookup.set(
+            character.id,
+            character.name
+        );
+    }
+
+}
 // Process every script
 
 for (const scriptEntry of scriptsList) {
@@ -48,22 +74,36 @@ try {
         );
 characters = script
     .map(entry => {
+
+        let id = null;
+
+        // Official character stored as string
         if(typeof entry === "string"){
-            return entry
-                .replace(/_/g," ")
-                .replace(/\b\w/g, c => c.toUpperCase());
+            id = entry;
         }
-        if(
+
+        // Homebrew character object
+        else if(
             typeof entry === "object" &&
             entry.id &&
             entry.id !== "_meta"
         ){
-            return entry.name ||
-                entry.id
-                .replace(/_/g," ")
-                .replace(/\b\w/g, c => c.toUpperCase());
+            id = entry.id;
         }
-        return null;
+
+
+        if(!id){
+            return null;
+        }
+
+
+        // Use stored character name
+        return (
+            characterLookup.get(id) ||
+            entry.name ||
+            id
+        );
+
     })
     .filter(Boolean);
         const foundMeta = script.find(
