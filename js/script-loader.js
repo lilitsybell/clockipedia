@@ -77,7 +77,15 @@ function extractScriptCharacters(script) {
     script.forEach(entry => {
         // Official character ID
         if (typeof entry === "string") {
-            const character = ScriptGenerator.characters.get(entry);
+            let character;
+            // Map format
+            if (ScriptGenerator.characters instanceof Map) {
+                character = ScriptGenerator.characters.get(entry);
+            }
+            // Object format fallback
+            else {
+                character = ScriptGenerator.characters[entry];
+            }
             if (character) {
                 characters.push(character);
             }
