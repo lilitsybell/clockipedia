@@ -205,6 +205,7 @@ function buildCharacterLookup(script){
     });
     // Add homebrew characters
     const scriptCharacters = extractScriptCharacters(script);
+   preloadCharacterImages(scriptCharacters);
     scriptCharacters.forEach(character=>{
         if(character.id){
             ScriptGenerator.characterLookup.set(
@@ -218,4 +219,18 @@ function buildCharacterLookup(script){
         ScriptGenerator.characterLookup.size,
         "characters"
     );
+}
+function preloadCharacterImages(characters){
+    characters.forEach(character=>{
+        if(!character.image) return;
+
+        const images = Array.isArray(character.image)
+            ? character.image
+            : [character.image];
+
+        images.forEach(src=>{
+            const img = new Image();
+            img.src = src;
+        });
+    });
 }
