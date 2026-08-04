@@ -1,66 +1,121 @@
 const fs = require("fs");
 const path = require("path");
+
 const dataFolder = path.join(__dirname, "../data");
-const scriptsFolder = path.join(dataFolder, "scripts");
+
+const scriptsListPath = path.join(
+    dataFolder,
+    "scripts.json"
+);
+
+const outputPath = path.join(
+    dataFolder,
+    "index.json"
+);
+
+
+// Load scripts.json
+
 const scriptsList = JSON.parse(
     fs.readFileSync(
-        path.join(dataFolder, "scripts.json"),
+        scriptsListPath,
         "utf8"
     )
 );
+
+
 const index = [];
+
+
+// Process every script
+
 for (const scriptEntry of scriptsList) {
-    const filePath = path.join(
+
+    const scriptPath = path.join(
         dataFolder,
         scriptEntry.file
     );
+
     let meta = {};
+
     try {
+
         const script = JSON.parse(
-            fs.readFileSync(filePath, "utf8")
+            fs.readFileSync(
+                scriptPath,
+                "utf8"
+            )
         );
-        const metadata = script.find(
+
+
+        const foundMeta = script.find(
             entry =>
                 typeof entry === "object" &&
                 entry.id === "_meta"
         );
-        if(metadata){
-            meta = metadata;
+
+
+        if(foundMeta){
+            meta = foundMeta;
         }
+
     }
     catch(error){
+
         console.error(
-            "Failed loading:",
+            "Could not load:",
             scriptEntry.file
         );
+
     }
-index.push({
-    file: scriptEntry.file,
-    name:
-        meta.name ||
-        "Unknown Script",
-    author:
-        meta.author ||
-        "Unknown",
-    size:
-        scriptEntry.size ||
-        "full",
-    homebrew:
-        meta.bootlegger ||
-        meta.homebrew ||
-        false,
-    tags:
-        meta.tags ||
-        [],
-    logo:
-        meta.logo ||
-        null
-});
+
+
+    index.push({
+
+        file:
+            scriptEntry.file,
+
+        name:
+            meta.name ||
+            "Unknown Script",
+
+        author:
+            meta.author ||
+            "Unknown",
+
+        size:
+            scriptEntry.size ||
+            "full",
+
+        homebrew:
+            Boolean(
+                meta.bootlegger ||
+                meta.homebrew
+            ),
+
+        tags:
+            meta.tags ||
+            [],
+
+        logo:
+            meta.logo ||
+            null
+
+    });
+
 }
+
+
 fs.writeFileSync(
-    path.join(dataFolder, "index.json"),
-    JSON.stringify(index, null, 4)
+    outputPath,
+    JSON.stringify(
+        index,
+        null,
+        4
+    )
 );
+
+
 console.log(
-    `Generated index.json (${index.length} scripts)`
+    `Created index.json with ${index.length} scripts`
 );
