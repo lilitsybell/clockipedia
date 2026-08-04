@@ -87,9 +87,9 @@ function renderScriptHeader(script){
         addTag("Custom Art");
     }
     // Script of the Day
-    if(script.isDaily){
-        addTag("Script of the Day");
-    }
+if(isDailyScript(script)){
+    addTag("Script of the Day");
+}
 }
 if(almanac){
     if(meta.almanac){
@@ -208,4 +208,17 @@ card.innerHTML = `
             });
         container.appendChild(section);
     });
+}
+function isDailyScript(script){
+    const daily =
+        localStorage.getItem("dailyScript");
+    if(!daily) return false;
+    const meta =
+        script.meta ||
+        script.find(
+            entry =>
+                typeof entry === "object" &&
+                entry.id === "_meta"
+        );
+    return meta?.name === daily;
 }
