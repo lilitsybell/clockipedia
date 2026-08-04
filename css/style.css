@@ -1,4 +1,4 @@
-/* backup 8/03/26 22:48 */
+/* backup 8/04/26 00:10 */
 
 @font-face {
     font-family: "Droid Sans";
@@ -73,6 +73,15 @@ body {
     -webkit-font-smoothing:antialiased;
     -moz-osx-font-smoothing:grayscale;
     overscroll-behavior:none;
+}
+.content {
+    font-size:17px;
+    line-height:1.6;
+}
+.content p,
+.content li {
+    font-size:17px;
+    line-height:1.6;
 }
 
 /* =========================
@@ -711,8 +720,8 @@ font-size:22px;
     border-radius:10px;
     padding:18px 22px;
     margin:15px 0;
-    font-size:17px;
-    line-height:1.6;
+    font-size:inherit;
+    line-height:inherit;
     transition:.2s;
     display:flex;
     align-items:center;
