@@ -3,10 +3,8 @@ console.log("Character ID:", characterID);
 document.addEventListener("DOMContentLoaded", async () => {
     try {
 await loadCharacters();
-                console.log("Characters loaded:", characters);
+await loadInteractions();
         const character = characters[characterID];
-        console.log("Character team:", character.team);
-console.log("Color class:", teamColors[character.team]);
         if (!character) {
             document.getElementById("character").innerHTML = "<h1>Character not found</h1>";
             return;
@@ -130,10 +128,8 @@ return `
 </a>`;
     });
 }
-async function loadCharacterInteractions(id){
+function loadCharacterInteractions(id){
     try{
-        const response = await fetch("/data/interactions.json");
-        const interactions = await response.json();
         const list = document.getElementById("character-interactions");
         if(!list) return;
         const characterName = characters[id].name;
@@ -148,16 +144,9 @@ async function loadCharacterInteractions(id){
             return;
         }
         list.innerHTML = "";
-        results.forEach(interaction => {
-            const li = document.createElement("li");
-            li.className = 
-                "interaction-card " + 
-                getInteractionColor(interaction);
-            li.innerHTML = `
-                ${formatCharacters(interaction.text)}
-            `;
-            list.appendChild(li);
-        });
+results.forEach(interaction=>{
+    list.appendChild(createInteractionCard(interaction));
+});
     }catch(error){
         console.error(
             "Failed loading interactions:",
