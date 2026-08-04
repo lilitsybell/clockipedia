@@ -181,7 +181,7 @@ if (needsBootlegger) {
         meta.bootlegger
     ) {
         bootlegger.ability =
-            meta.bootlegger.join("\n");
+    meta.bootlegger;
     }
 }
 console.log(
