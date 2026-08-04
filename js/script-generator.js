@@ -65,14 +65,27 @@ if(!availableScripts.length){
     );
     return;
 }
+let possibleScripts =
+    availableScripts.filter(
+        script =>
+            !ScriptGenerator.recentScripts.includes(
+                script.file
+            )
+    );
+// If every script has been recently seen,
+// allow repeats
+if(!possibleScripts.length){
+    possibleScripts = availableScripts;
+}
 const script =
-    availableScripts[
+    possibleScripts[
         Math.floor(
             Math.random() *
-            availableScripts.length
+            possibleScripts.length
         )
     ];
     console.log("Selected script:", script);
+    updateRecentScripts(script);
     // Load BOTC JSON
     const loadedScript =
         await loadScript(script.file);
