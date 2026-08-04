@@ -46,73 +46,52 @@ Generate Script
     </div>
 <!-- RESULTS PANEL -->
 <div class="generator-panel script-results">
-    <div class="script-header">
-        <div class="script-header-info">
-            <div class="script-heading">
-                <h2 id="scriptTitle">
-                    Unknown Script
-                </h2>
-                <span id="scriptAuthor">
-                    by Unknown
-                </span>
-            </div>
-            <div id="scriptTags"></div>
-        </div>
-        <div class="json-buttons">
-            <button class="generator-button">
-                Copy JSON
-            </button>
-            <button class="generator-button">
-                Download JSON
-            </button>
-        </div>
-    </div>
-    <!-- SCRIPT DESCRIPTION -->
-    <div id="descriptionBox" style="display:none;">
-        <h3>
-            Description
-        </h3>
-        <p id="scriptDescription"></p>
-    </div>
-    <!-- CHARACTERS -->
-<div id="characterContainer">
+<!-- SCRIPT HEADER -->
+<div class="script-header" id="scriptHeader">
 
-    <div class="team-section">
+    <div class="script-logo-container">
+        <img id="scriptLogo" class="script-logo">
+    </div>
 
-        <div class="team-title">
-            Townsfolk
+    <div class="script-header-info">
+
+        <div class="script-heading">
+
+            <h2 id="scriptTitle">
+                Unknown Script
+            </h2>
+
+            <span id="scriptAuthor">
+                by Unknown
+            </span>
+
         </div>
 
-        <div class="script-character">
-            <img src="/images/characters/example.png">
+        <div id="scriptTags"></div>
 
-            <div>
-                <h3>
-                    Character Name
-                </h3>
+        <a 
+            id="scriptAlmanac"
+            class="script-almanac"
+            target="_blank"
+            style="display:none;">
+            View Almanac
+        </a>
 
-                <p>
-                    Character ability text goes here.
-                </p>
-            </div>
-        </div>
     </div>
-    <div class="team-section">
-        <div class="team-title">
-            Outsiders
-        </div>
+
+    <div class="json-buttons">
+        <button class="generator-button">
+            Copy JSON
+        </button>
+
+        <button class="generator-button">
+            Download JSON
+        </button>
     </div>
-    <div class="team-section">
-        <div class="team-title">
-            Minions
-        </div>
-    </div>
-    <div class="team-section">
-        <div class="team-title">
-            Demons
-        </div>
-    </div>
+
 </div>
+<!-- CHARACTERS -->
+<div id="characterContainer"></div>
 </div>
 </div>
 </div>
