@@ -38,3 +38,37 @@ renderScriptCharacters(loadedScript);
 document
     .getElementById("generateScriptButton")
     .addEventListener("click", generateScript);
+document
+    .getElementById("copyJsonButton")
+    .addEventListener("click", copyCurrentScript);
+async function copyCurrentScript(){
+    if(!ScriptGenerator.currentScript){
+        return;
+    }
+    const json = JSON.stringify(
+        ScriptGenerator.currentScript,
+        null,
+        4
+    );
+    try{
+        await navigator.clipboard.writeText(json);
+        const button =
+            document.getElementById(
+                "copyJsonButton"
+            );
+        const original =
+            button.textContent;
+        button.textContent =
+            "✓ Copied!";
+        setTimeout(()=>{
+            button.textContent =
+                original;
+        },2000);
+    }
+    catch(error){
+        console.error(
+            "Copy failed:",
+            error
+        );
+    }
+}
