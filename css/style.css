@@ -1179,6 +1179,13 @@ font-size:22px;
     height:70px;
     object-fit:contain;
 }
+.script-character ul {
+    margin:10px 0 0 20px;
+    padding:0;
+}
+.script-character li {
+    margin-bottom:5px;
+}
 #scriptHeader{
     text-align:center;
     padding:18px 25px;
