@@ -178,3 +178,55 @@ if(characterSearch){
         }
     );
 }
+const homebrewButton =
+    document.getElementById("homebrewButton");
+if(homebrewButton){
+    homebrewButton.addEventListener(
+        "click",
+        ()=>{
+            const states = [
+                "Maybe",
+                "No",
+                "Yes"
+            ];
+            let index =
+                states.indexOf(
+                    ScriptGenerator.homebrewFilter
+                );
+            index++;
+            if(index >= states.length){
+                index = 0;
+            }
+            ScriptGenerator.homebrewFilter =
+                states[index];
+            homebrewButton.textContent =
+                ScriptGenerator.homebrewFilter;
+        }
+    );
+}
+const scriptSizeButton =
+    document.getElementById("scriptSizeButton");
+if(scriptSizeButton){
+    scriptSizeButton.addEventListener(
+        "click",
+        ()=>{
+            const states = [
+                "Any",
+                "Full",
+                "Teensy"
+            ];
+            let index =
+                states.indexOf(
+                    ScriptGenerator.sizeFilter
+                );
+            index++;
+            if(index >= states.length){
+                index = 0;
+            }
+            ScriptGenerator.sizeFilter =
+                states[index];
+            scriptSizeButton.textContent =
+                ScriptGenerator.sizeFilter;
+        }
+    );
+}
