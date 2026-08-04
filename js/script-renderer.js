@@ -1,6 +1,28 @@
 console.log(
     "script-renderer.js updated 8/04/26 10:29"
 );
+console.log(
+    "script-renderer.js updated 8/04/26 10:29"
+);
+function normalizeTeam(team){
+    if(!team) return "";
+    team = team.toLowerCase();
+    if(team === "townsfolk")
+        return "townsfolk";
+    if(team === "outsider")
+        return "outsiders";
+    if(team === "minion" || team === "minions")
+        return "minions";
+    if(team === "demon" || team === "demons")
+        return "demons";
+    if(team === "traveller" || team === "travellers")
+        return "travellers";
+    if(team === "loric")
+        return "loric";
+    if(team === "fabled")
+        return "fabled";
+    return team;
+}
 function renderScriptCharacters(script){
     const characters =
     extractScriptCharacters(script);
