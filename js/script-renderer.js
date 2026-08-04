@@ -63,8 +63,8 @@ function renderScriptCharacters(script){
                     ScriptGenerator
                     .characterLookup
                     .get(id);
-                return data &&
-                       data.team.toLowerCase() === team;
+return data &&
+       normalizeTeam(data.team) === team;
             })
             .forEach(character=>{
                 const id =
