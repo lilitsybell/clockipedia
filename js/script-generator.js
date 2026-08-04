@@ -21,39 +21,39 @@ const availableScripts =
     ScriptGenerator.scripts.filter(script=>{
         // Character filter
 if(
-    ScriptGenerator.characterFilter
+    ScriptGenerator.filters.character
 ){
     if(
         !script.characters ||
         !script.characters.some(character =>
             character
             .toLowerCase()
-            .includes(
-                ScriptGenerator.characterFilter
-            )
+.includes(
+    ScriptGenerator.filters.character
+)
         )
     ){
         return false;
     }
 }
         // Homebrew filter
-        if(
-            ScriptGenerator.homebrewFilter === "Yes" &&
-            !script.homebrew
-        ){
+if(
+    ScriptGenerator.filters.homebrew === "yes" &&
+    !script.homebrew
+){
             return false;
         }
-        if(
-            ScriptGenerator.homebrewFilter === "No" &&
-            script.homebrew
-        ){
+if(
+    ScriptGenerator.filters.homebrew === "no" &&
+    script.homebrew
+){
             return false;
         }
         // Size filter
-        if(
-            ScriptGenerator.sizeFilter !== "Any" &&
-            script.size !== ScriptGenerator.sizeFilter.toLowerCase()
-        ){
+if(
+    ScriptGenerator.filters.size !== "any" &&
+    script.size !== ScriptGenerator.filters.size
+){
             return false;
         }
         return true;
@@ -171,7 +171,7 @@ if(characterSearch){
     characterSearch.addEventListener(
         "input",
         ()=>{
-            ScriptGenerator.characterFilter =
+            ScriptGenerator.filters.character =
                 characterSearch.value
                 .trim()
                 .toLowerCase();
@@ -180,53 +180,73 @@ if(characterSearch){
 }
 const homebrewButton =
     document.getElementById("homebrewButton");
+
 if(homebrewButton){
     homebrewButton.addEventListener(
         "click",
         ()=>{
-            const states = [
-                "Maybe",
-                "No",
-                "Yes"
+            const options = [
+                "maybe",
+                "no",
+                "yes"
             ];
+
             let index =
-                states.indexOf(
-                    ScriptGenerator.homebrewFilter
+                options.indexOf(
+                    ScriptGenerator.filters.homebrew
                 );
-            index++;
-            if(index >= states.length){
-                index = 0;
-            }
-            ScriptGenerator.homebrewFilter =
-                states[index];
+
+            index =
+                (index + 1) %
+                options.length;
+
+            ScriptGenerator.filters.homebrew =
+                options[index];
+
             homebrewButton.textContent =
-                ScriptGenerator.homebrewFilter;
+                ScriptGenerator.filters.homebrew
+                .charAt(0)
+                .toUpperCase()
+                +
+                ScriptGenerator.filters.homebrew
+                .slice(1);
         }
     );
 }
+
+
 const scriptSizeButton =
     document.getElementById("scriptSizeButton");
+
 if(scriptSizeButton){
     scriptSizeButton.addEventListener(
         "click",
         ()=>{
-            const states = [
-                "Any",
-                "Full",
-                "Teensy"
+            const options = [
+                "any",
+                "full",
+                "teensy"
             ];
+
             let index =
-                states.indexOf(
-                    ScriptGenerator.sizeFilter
+                options.indexOf(
+                    ScriptGenerator.filters.size
                 );
-            index++;
-            if(index >= states.length){
-                index = 0;
-            }
-            ScriptGenerator.sizeFilter =
-                states[index];
+
+            index =
+                (index + 1) %
+                options.length;
+
+            ScriptGenerator.filters.size =
+                options[index];
+
             scriptSizeButton.textContent =
-                ScriptGenerator.sizeFilter;
+                ScriptGenerator.filters.size
+                .charAt(0)
+                .toUpperCase()
+                +
+                ScriptGenerator.filters.size
+                .slice(1);
         }
     );
 }
