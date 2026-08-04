@@ -1009,13 +1009,6 @@ font-size:22px;
 =========================== */
 
 /* Controls */
-.generator-controls{
-    display:flex;
-    gap:20px;
-    flex-wrap:wrap;
-    align-items:flex-end;
-    padding:25px;
-}
 .generator-setting{
     display:flex;
     flex-direction:column;
@@ -1128,20 +1121,10 @@ font-size:22px;
     width:min(1100px,95%);
     margin:auto;
 }
-.generator-panel{
-    background:white;
-    border:3px solid var(--purple);
-    border-radius:0 0 14px 14px;
-    padding:25px;
-    margin-bottom:25px;
-    box-shadow:0 10px 24px rgba(0,0,0,.12);
-    overflow:hidden;
-}
 /* Universal purple header */
 .section-header,
 .generator-header,
 .finder-header,
-.script-header,
 .script-title {
     background:var(--purple);
     color:white;
@@ -1171,7 +1154,7 @@ font-size:22px;
     justify-content:space-between;
     align-items:center;
     margin:-25px -25px 25px;
-    border-radius:0;
+    border-radius:12px 12px 0 0;
 }
 /* Character section headers */
 .team-title {
@@ -1208,7 +1191,15 @@ font-size:22px;
     align-items:flex-end;
     padding:25px;
     background:white;
-    border:3px solid var(--purple);
-    border-bottom:none;
+    border:none;
     border-radius:14px 14px 0 0;
+}
+.generator-panel{
+    background:white;
+    border:3px solid var(--purple);
+    border-radius:14px;
+    padding:25px;
+    margin-bottom:25px;
+    box-shadow:0 10px 24px rgba(0,0,0,.12);
+    overflow:hidden;
 }
