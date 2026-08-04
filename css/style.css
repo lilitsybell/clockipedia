@@ -1078,6 +1078,7 @@ font-size:22px;
     display:block;
     margin-top:8px;
     font-style:italic;
+    opacity:.9;
 }
 #scriptTags{
     display:flex;
@@ -1136,4 +1137,9 @@ font-size:22px;
 }
 .script-character p{
     margin:0;
+}
+.script-heading{
+    display:flex;
+    align-items:baseline;
+    gap:15px;
 }
