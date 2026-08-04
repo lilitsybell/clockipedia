@@ -1,4 +1,4 @@
-console.log("script-loader.js updated 8/04/26 10:39");
+console.log("script-loader.js updated 8/04/26 11:07");
 /* ======================================================
    Script Generator Data
 ====================================================== */
@@ -36,12 +36,18 @@ async function loadOfficialCharacters() {
         throw new Error("Failed to load characters.json");
     }
     const data = await response.json();
-ScriptGenerator.officialCharacters =
-console.log(
-    "Loaded",
-    ScriptGenerator.officialCharacters.size,
-    "official characters"
-);
+    ScriptGenerator.officialCharacters = new Map();
+    data.forEach(character => {
+        ScriptGenerator.officialCharacters.set(
+            character.id,
+            character
+        );
+    });
+    console.log(
+        "Loaded",
+        ScriptGenerator.officialCharacters.size,
+        "official characters"
+    );
 }
 /* ======================================================
    Load Script Index
