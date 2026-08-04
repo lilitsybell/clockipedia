@@ -1,4 +1,5 @@
 console.log("interactions Updated 8/03/26 22:55");
+let interactions = [];
 function getCharacters(text){
     const matches=text.match(/\[(.*?)\]/g);
     if(!matches) return [];
