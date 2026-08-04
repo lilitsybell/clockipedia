@@ -1228,3 +1228,28 @@ font-size:22px;
     background:var(--purple);
     color:white;
 }
+.script-character-name {
+    font-weight:bold;
+}
+
+.script-character-name.townsfolk,
+.script-character-name.outsiders {
+    color:var(--blue);
+}
+
+.script-character-name.minions,
+.script-character-name.demons {
+    color:var(--red);
+}
+
+.script-character-name.travellers {
+    color:var(--traveller);
+}
+
+.script-character-name.loric {
+    color:var(--copper);
+}
+
+.script-character-name.fabled {
+    color:var(--lime);
+}
