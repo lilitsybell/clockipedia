@@ -56,8 +56,12 @@ async function loadScript(path) {
     if (!response.ok) {
         throw new Error("Failed to load " + path);
     }
-    const script = await response.json();
-    ScriptGenerator.currentScript = script;
+const script = await response.json();
+ScriptGenerator.currentScript = script;
+console.log(
+    "Script entries:",
+    script.length
+);
     console.log("Loaded script:", script.name || path);
     return script;
 }
@@ -89,4 +93,15 @@ function buildCharacterLookup(script) {
         ScriptGenerator.characterLookup.size,
         "characters"
     );
+}
+function extractScriptCharacters(script){
+    return script.filter(entry=>{
+        // Remove metadata objects
+        return typeof entry === "string"
+        || (
+            typeof entry === "object"
+            && entry.id
+            && entry.id !== "_meta"
+        );
+    });
 }
