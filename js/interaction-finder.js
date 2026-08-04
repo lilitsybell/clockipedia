@@ -1,9 +1,7 @@
-console.log("interaction-finder Updated 8/03/26 23:02");
+console.log("interaction-finder Updated 8/03/26 23:18");
 document.addEventListener("DOMContentLoaded", async()=>{
     try{
-        await loadCharacters();
-        const interactionResponse = await fetch("/data/interactions.json");
-        interactions = await interactionResponse.json();
+await loadInteractions();
 buildPage();
 loadURLCharacters();
     }
