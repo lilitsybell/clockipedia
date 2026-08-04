@@ -1,5 +1,4 @@
 console.log("interaction-finder Updated 8/03/26 23:02");
-let interactions = [];
 document.addEventListener("DOMContentLoaded", async()=>{
     try{
         await loadCharacters();
