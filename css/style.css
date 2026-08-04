@@ -14,11 +14,6 @@
 --lime:#8EA742;
 --copper:#B77102;
 --traveller:#915271;
---blue-soft:#e4edf8;
---red-soft:#f4e1e1;
---lime-soft:#edf2dc;
---copper-soft:#f5e8d2;
---traveller-soft:#eee1e8;
 --purple:#666699;
 --gray:#959799;
 --light-gray:#fafafa;
@@ -1013,10 +1008,6 @@ font-size:22px;
    Script Generator
 =========================== */
 
-.script-generator{
-    width:min(1100px,95%);
-    margin:auto;
-}
 .generator-header{
     background:var(--purple);
     color:white;
@@ -1026,15 +1017,7 @@ font-size:22px;
     border-radius:14px 14px 0 0;
     font-weight:bold;
 }
-.generator-panel{
-    background:white;
-    border:3px solid var(--purple);
-    border-radius:14px;
-    padding:25px;
-    margin-bottom:25px;
-    box-shadow:0 10px 24px rgba(0,0,0,.12);
-    overflow:hidden;
-}
+
 /* Controls */
 .generator-controls{
     display:flex;
@@ -1114,16 +1097,6 @@ font-size:22px;
 .team-section{
     margin-bottom:25px;
 }
-.team-title{
-    background:#eeeeee;
-    color:#444;
-    padding:12px 18px;
-    border-radius:8px;
-    font-size:22px;
-    font-weight:bold;
-    margin-bottom:10px;
-    border:1px solid #d5d5d5;
-}
 .script-character{
     display:flex;
     align-items:center;
@@ -1141,16 +1114,6 @@ font-size:22px;
 }
 .script-character p{
     margin:0;
-}
-.script-header{
-    background:var(--purple);
-    color:white;
-    padding:20px;
-    display:flex;
-    justify-content:space-between;
-    align-items:center;
-    margin:-25px -25px 25px;
-    border-radius:0;
 }
 .script-results{
     overflow:hidden;
@@ -1178,9 +1141,25 @@ font-size:22px;
 .json-buttons .generator-button:hover{
     opacity:.85;
 }
+
 /* ===========================
-   Universal Section Headers
+   Script Generator
 =========================== */
+
+.script-generator{
+    width:min(1100px,95%);
+    margin:auto;
+}
+.generator-panel{
+    background:white;
+    border:3px solid var(--purple);
+    border-radius:14px;
+    padding:25px;
+    margin-bottom:25px;
+    box-shadow:0 10px 24px rgba(0,0,0,.12);
+    overflow:hidden;
+}
+/* Universal purple header */
 .section-header,
 .generator-header,
 .finder-header,
@@ -1189,11 +1168,10 @@ font-size:22px;
     background:var(--purple);
     color:white;
     padding:20px;
-    border-radius:14px 14px 0 0;
+    border-radius:12px 12px 0 0;
     font-size:32px;
     font-weight:bold;
     text-align:center;
-    overflow:hidden;
 }
 /* Header text */
 .section-header h1,
@@ -1209,21 +1187,15 @@ font-size:22px;
     color:white;
     margin:0;
 }
-/* Anything directly below a header connects cleanly */
-.generator-header + .generator-panel,
-.script-header + .generator-panel,
-.script-title + .generator-panel,
-.finder-header + .generator-panel {
-    border-radius:0 0 14px 14px;
-}
-/* Script area */
+/* Script results header inside panel */
 .script-header {
-    justify-content:space-between;
     display:flex;
+    justify-content:space-between;
     align-items:center;
     margin:-25px -25px 25px;
+    border-radius:0;
 }
-/* Character team sections */
+/* Character section headers */
 .team-title {
     background:#e8e8e8;
     color:#444;
