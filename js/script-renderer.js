@@ -32,7 +32,13 @@ function renderScriptHeader(script){
         document.getElementById("scriptLogo");
     const almanac =
         document.getElementById("scriptAlmanac");
-    const meta = script.meta;
+    const meta =
+    script.meta ||
+    script.find(
+        entry =>
+            typeof entry === "object" &&
+            entry.id === "_meta"
+    );
     if(!meta){
         console.warn("No metadata found");
         return;
