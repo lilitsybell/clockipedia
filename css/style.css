@@ -1178,3 +1178,58 @@ font-size:22px;
 .json-buttons .generator-button:hover{
     opacity:.85;
 }
+/* ===========================
+   Universal Section Headers
+=========================== */
+.section-header,
+.generator-header,
+.finder-header,
+.script-header,
+.script-title {
+    background:var(--purple);
+    color:white;
+    padding:20px;
+    border-radius:14px 14px 0 0;
+    font-size:32px;
+    font-weight:bold;
+    text-align:center;
+    overflow:hidden;
+}
+/* Header text */
+.section-header h1,
+.section-header h2,
+.generator-header h1,
+.generator-header h2,
+.script-header h1,
+.script-header h2,
+.script-title h1,
+.script-title h2,
+.finder-header h1,
+.finder-header h2 {
+    color:white;
+    margin:0;
+}
+/* Anything directly below a header connects cleanly */
+.generator-header + .generator-panel,
+.script-header + .generator-panel,
+.script-title + .generator-panel,
+.finder-header + .generator-panel {
+    border-radius:0 0 14px 14px;
+}
+/* Script area */
+.script-header {
+    justify-content:space-between;
+    display:flex;
+    align-items:center;
+    margin:-25px -25px 25px;
+}
+/* Character team sections */
+.team-title {
+    background:#e8e8e8;
+    color:#444;
+    padding:12px 18px;
+    border-radius:8px;
+    font-size:22px;
+    font-weight:bold;
+    margin-bottom:10px;
+}
