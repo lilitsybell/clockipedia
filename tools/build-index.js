@@ -53,6 +53,27 @@ for (const scriptEntry of scriptsList) {
                 typeof entry === "object" &&
                 entry.id === "_meta"
         );
+        let hasHomebrew = false;
+
+for (const entry of script) {
+
+    // Custom character object
+    if (
+        typeof entry === "object" &&
+        entry.id &&
+        entry.id !== "_meta"
+    ) {
+        hasHomebrew = true;
+    }
+
+    // Unknown character IDs
+    if (
+        typeof entry === "string"
+    ) {
+        // Optional: handled later if you load characters.json
+    }
+
+}
 
 
         if(foundMeta){
@@ -88,10 +109,11 @@ for (const scriptEntry of scriptsList) {
             "full",
 
         homebrew:
-            Boolean(
-                meta.bootlegger ||
-                meta.homebrew
-            ),
+    Boolean(
+        hasHomebrew ||
+        meta.bootlegger ||
+        meta.homebrew
+    ),
 
         tags:
             meta.tags ||
