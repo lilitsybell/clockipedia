@@ -129,20 +129,7 @@ teams.forEach(team=>{
             +
             team.slice(1);
         section.appendChild(title);
-        characters
-            .filter(character=>{
-                const id =
-                    typeof character === "string"
-                    ? character
-                    : character.id;
-                const data =
-                    ScriptGenerator
-                    .characterLookup
-                    .get(id);
-        return data &&
-       normalizeTeam(data.team) === team;
-            })
-            .forEach(character=>{
+teamCharacters.forEach(character=>{
                 const id =
                     typeof character === "string"
                     ? character
