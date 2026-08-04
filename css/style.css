@@ -1171,3 +1171,19 @@ font-size:22px;
     display:inline-block;
     margin-top:10px;
 }
+.json-actions{
+    display:flex;
+    flex-direction:column;
+    align-items:flex-end;
+    gap:10px;
+}
+
+.json-buttons{
+    display:flex;
+    gap:10px;
+}
+
+.script-almanac{
+    text-decoration:none;
+    text-align:center;
+}
