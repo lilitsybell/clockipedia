@@ -18,6 +18,7 @@
 --gray:#959799;
 --light-gray:#fafafa;
 --border:#ddd;
+--script:#D8C7A3;
 }
 html, body {
     overscroll-behavior: none;
@@ -1001,4 +1002,53 @@ font-size:22px;
 .ability-tooltip.gold .tooltip-title strong,
 .ability-tooltip.gold .tooltip-title span {
     color:var(--copper);
+}
+
+/* ===========================
+   Script Generator
+=========================== */
+
+.script-generator{
+    width:min(1100px,95%);
+    margin:auto;
+}
+.generator-header{
+    background:var(--purple);
+    color:white;
+    font-size:32px;
+    padding:20px;
+    text-align:center;
+    border-radius:14px 14px 0 0;
+    font-weight:bold;
+}
+.generator-panel{
+    background:white;
+    border:3px solid var(--purple);
+    border-radius:0 0 14px 14px;
+    padding:25px;
+    margin-bottom:25px;
+    box-shadow:0 10px 24px rgba(0,0,0,.12);
+}
+.generator-controls{
+    display:flex;
+    gap:20px;
+    flex-wrap:wrap;
+    align-items:end;
+}
+.generator-setting{
+    display:flex;
+    flex-direction:column;
+    gap:8px;
+}
+.generator-setting label{
+    font-weight:bold;
+}
+.generator-button{
+    background:var(--purple);
+    color:white;
+    border:none;
+    padding:12px 25px;
+    border-radius:8px;
+    cursor:pointer;
+    font-size:16px;
 }
