@@ -10,8 +10,12 @@ const indexPath =
 const outputPath =
     path.join(dataFolder, "daily-script.json");
 
+const historyPath =
+    path.join(dataFolder, "daily-history.json");
+
 
 // Load scripts
+
 const scripts =
     JSON.parse(
         fs.readFileSync(
@@ -21,17 +25,81 @@ const scripts =
     );
 
 
+// Load history
+
+let history = [];
+
+if(fs.existsSync(historyPath)){
+    history =
+        JSON.parse(
+            fs.readFileSync(
+                historyPath,
+                "utf8"
+            )
+        );
+}
+
+
+// Remove recently used scripts
+
+let availableScripts =
+    scripts.filter(
+        script =>
+            !history.includes(
+                script.file
+            )
+    );
+
+
+// If every script was recently used,
+// allow repeats
+
+if(!availableScripts.length){
+    availableScripts = scripts;
+}
+
+
 // Pick random script
+
 const script =
-    scripts[
+    availableScripts[
         Math.floor(
             Math.random() *
-            scripts.length
+            availableScripts.length
         )
     ];
 
 
-// Create daily file
+// Update history
+
+history.unshift(
+    script.file
+);
+
+
+// Keep only last 100
+
+history =
+    history.slice(
+        0,
+        100
+    );
+
+
+// Save history
+
+fs.writeFileSync(
+    historyPath,
+    JSON.stringify(
+        history,
+        null,
+        4
+    )
+);
+
+
+// Save today's script
+
 const dailyScript = {
 
     file:
