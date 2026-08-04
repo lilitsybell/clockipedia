@@ -129,26 +129,32 @@ function normalizeCharacter(character){
             character.team.charAt(0).toUpperCase() +
             character.team.slice(1).toLowerCase();
     }
-    return character;
+    return normalizeCharacter(character);
 }
     return characters;
 }
 /* ======================================================
    Build Character Lookup
 ====================================================== */
-function buildCharacterLookup(script) {
+function buildCharacterLookup(script){
     ScriptGenerator.characterLookup = new Map();
-    const characters = extractScriptCharacters(script);
-    characters.forEach(character => {
-        ScriptGenerator.characterLookup.set(
-            character.id,
-            character
-        );
+    // Add all official characters first
+    ScriptGenerator.characters.forEach((character,id)=>{
+        ScriptGenerator.characterLookup.set(id, character);
+    });
+    // Add homebrew characters from script
+    const scriptCharacters = extractScriptCharacters(script);
+    scriptCharacters.forEach(character=>{
+        if(character.id){
+            ScriptGenerator.characterLookup.set(
+                character.id,
+                normalizeCharacter(character)
+            );
+        }
     });
     console.log(
         "Lookup contains",
         ScriptGenerator.characterLookup.size,
         "characters"
     );
-    return characters;
 }
