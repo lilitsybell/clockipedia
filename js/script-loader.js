@@ -8,7 +8,8 @@ const ScriptGenerator = {
     characterLookup: new Map(),
     currentScript: null,
     homebrewFilter: "Maybe",
-    sizeFilter: "Any"
+    sizeFilter: "Any",
+    characterFilter: ""
 };
 /* ======================================================
    Normalize Character Data
