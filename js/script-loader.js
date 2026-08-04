@@ -145,44 +145,47 @@ function extractScriptCharacters(script) {
             });
         }
     });
-    // Add Bootlegger automatically
-    if(
-        meta &&
-        (
-            meta.bootlegger ||
-            characters.some(c => c.homebrew)
-        )
-    ){
-        const bootlegger =
+// Add or update Bootlegger automatically
+const hasBootlegger =
+    characters.some(
+        character => character.id === "bootlegger"
+    );
+const needsBootlegger =
+    meta &&
+    (
+        meta.bootlegger ||
+        characters.some(c => c.homebrew)
+    );
+if(needsBootlegger){
+    let bootlegger =
+        characters.find(
+            character =>
+                character.id === "bootlegger"
+        );
+    // If script doesn't include Bootlegger, add it
+    if(!bootlegger){
+        const officialBootlegger =
             ScriptGenerator.officialCharacters.get(
                 "bootlegger"
             );
-        if(bootlegger){
-            characters.unshift({
+        if(officialBootlegger){
+            bootlegger = {
                 id:"bootlegger",
-                ...bootlegger,
-                ability:
-                    meta.bootlegger
-                    ? meta.bootlegger.join("\n")
-                    : bootlegger.ability,
+                ...officialBootlegger,
                 official:true,
                 homebrew:false
-            });
+            };
+            characters.unshift(bootlegger);
         }
     }
-    console.log(
-        "Extracted",
-        characters.length,
-        "script characters"
-    );
-    characters.forEach(character => {
-        console.log(
-            character.id,
-            character.name,
-            character.team
-        );
-    });
-    return characters;
+    // Apply custom Bootlegger rule
+    if(
+        bootlegger &&
+        meta.bootlegger
+    ){
+        bootlegger.ability =
+            meta.bootlegger.join("\n");
+    }
 }
 /* ======================================================
    Build Character Lookup
