@@ -4,9 +4,7 @@ console.log("script-loader.js updated 8/04/26 11:07");
 ====================================================== */
 const ScriptGenerator = {
     scripts: [],
-    // Official characters only
     officialCharacters: new Map(),
-    // Official + homebrew characters
     characterLookup: new Map(),
     currentScript: null
 };
@@ -14,12 +12,9 @@ const ScriptGenerator = {
    Normalize Character Data
 ====================================================== */
 function normalizeCharacter(character){
-    // Homebrew characters can have multiple images.
-    // Website uses only the first image.
     if(Array.isArray(character.image)){
         character.image = character.image[0];
     }
-    // Normalize team capitalization
     if(character.team){
         character.team =
             character.team.charAt(0).toUpperCase() +
@@ -37,10 +32,15 @@ async function loadOfficialCharacters() {
     }
     const data = await response.json();
     ScriptGenerator.officialCharacters = new Map();
-    data.forEach(character => {
+    Object.entries(data).forEach(([id, character]) => {
         ScriptGenerator.officialCharacters.set(
-            character.id,
-            character
+            id,
+            {
+                id,
+                ...character,
+                official: true,
+                homebrew: false
+            }
         );
     });
     console.log(
@@ -147,11 +147,14 @@ function extractScriptCharacters(script) {
 ====================================================== */
 function buildCharacterLookup(script){
     ScriptGenerator.characterLookup = new Map();
-    // Add all official characters first
+    // Add official characters
     ScriptGenerator.officialCharacters.forEach((character,id)=>{
-        ScriptGenerator.characterLookup.set(id, character);
+        ScriptGenerator.characterLookup.set(
+            id,
+            character
+        );
     });
-    // Add homebrew characters from script
+    // Add homebrew characters
     const scriptCharacters = extractScriptCharacters(script);
     scriptCharacters.forEach(character=>{
         if(character.id){
