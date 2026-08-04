@@ -26,8 +26,9 @@ if(
     if(
         !script.characters ||
         !script.characters.some(character =>
-            character
-            .toLowerCase()
+character
+.toLowerCase()
+.replace(/_/g," ")
 .includes(
     ScriptGenerator.filters.character
 )
