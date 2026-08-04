@@ -4,9 +4,11 @@ console.log("script-loader.js updated 8/04/26 10:05");
 ====================================================== */
 const ScriptGenerator = {
     scripts: [],
-    characters: new Map(),
-    currentScript: null,
-    characterLookup: new Map()
+    // Official characters only
+    officialCharacters: new Map(),
+    // Official + homebrew characters
+    characterLookup: new Map(),
+    currentScript: null
 };
 /* ======================================================
    Load Official Characters
@@ -17,10 +19,12 @@ async function loadOfficialCharacters() {
         throw new Error("Failed to load characters.json");
     }
     const data = await response.json();
-    ScriptGenerator.characters = new Map(Object.entries(data));
+    ScriptGenerator.officialCharacters = new Map(
+        Object.entries(data)
+    );
     console.log(
         "Loaded",
-        ScriptGenerator.characters.size,
+        ScriptGenerator.officialCharacters.size,
         "official characters"
     );
 }
@@ -57,14 +61,17 @@ async function loadScript(path) {
 ====================================================== */
 function buildCharacterLookup(script) {
     ScriptGenerator.characterLookup = new Map();
-    // Start with official characters
-    ScriptGenerator.characters.forEach((character, id) => {
-        ScriptGenerator.characterLookup.set(id, character);
+    // Add official characters
+    ScriptGenerator.officialCharacters.forEach((character,id)=>{
+        ScriptGenerator.characterLookup.set(
+            id,
+            character
+        );
     });
-    // Add embedded homebrew characters
-    if (script.characters) {
-        script.characters.forEach(character => {
-            if (typeof character === "object") {
+    // Add homebrew characters from script
+    if(script.characters){
+        script.characters.forEach(character=>{
+            if(typeof character === "object"){
                 ScriptGenerator.characterLookup.set(
                     character.id,
                     character
