@@ -13,7 +13,13 @@ const script =
     await loadScript(
         daily.file
     );
-script.isDaily = true;
+applyScriptIndexData(
+    script,
+    {
+        ...daily,
+        isDaily:true
+    }
+);
         ScriptGenerator.currentScript =
             script;
         buildCharacterLookup(
@@ -114,8 +120,12 @@ const script =
     console.log("Selected script:", script);
     updateRecentScripts(script);
     // Load BOTC JSON
-    const loadedScript =
-        await loadScript(script.file);
+const loadedScript =
+    await loadScript(script.file);
+applyScriptIndexData(
+    loadedScript,
+    script
+);
     ScriptGenerator.currentScript = loadedScript;
     // Build character database
     buildCharacterLookup(loadedScript);
@@ -370,4 +380,14 @@ if(scriptSizeButton){
                 .slice(1);
         }
     );
+}
+function applyScriptIndexData(loadedScript, indexScript){
+    loadedScript.size =
+        indexScript.size;
+    loadedScript.homebrew =
+        indexScript.homebrew;
+    loadedScript.logo =
+        indexScript.logo;
+    loadedScript.isDaily =
+        indexScript.isDaily || false;
 }
