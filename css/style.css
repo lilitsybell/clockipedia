@@ -1154,7 +1154,7 @@ font-size:22px;
     justify-content:space-between;
     align-items:center;
     margin:-25px -25px 25px;
-    border-radius:12px 12px 0 0;
+    border-radius:0;
 }
 /* Character section headers */
 .team-title {
@@ -1192,12 +1192,59 @@ font-size:22px;
     padding:25px;
     background:white;
     border:none;
-    border-radius:14px 14px 0 0;
+    border-radius:0;
 }
 .generator-panel{
     background:white;
     border:3px solid var(--purple);
-    border-radius:14px;
+    border-radius:0 0 14px 14px;
+    padding:25px;
+    margin-bottom:25px;
+    box-shadow:0 10px 24px rgba(0,0,0,.12);
+    overflow:hidden;
+}
+.script-generator{
+    width:min(1100px,95%);
+    margin:auto;
+}
+.section-header,
+.generator-header,
+.finder-header,
+.script-title {
+    background:var(--purple);
+    color:white;
+    padding:20px;
+    border-radius:12px 12px 0 0;
+    font-size:32px;
+    font-weight:bold;
+    text-align:center;
+}
+.script-title {
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+}
+.script-header {
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    margin:-25px -25px 25px;
+    border-radius:0;
+}
+.generator-controls{
+    display:flex;
+    gap:20px;
+    flex-wrap:wrap;
+    align-items:flex-end;
+    padding:25px;
+    background:white;
+    border:none;
+    border-radius:0;
+}
+.generator-panel{
+    background:white;
+    border:3px solid var(--purple);
+    border-radius:0 0 14px 14px;
     padding:25px;
     margin-bottom:25px;
     box-shadow:0 10px 24px rgba(0,0,0,.12);
