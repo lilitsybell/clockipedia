@@ -1024,7 +1024,7 @@ font-size:22px;
 .generator-panel{
     background:white;
     border:3px solid var(--purple);
-    border-radius:0 0 14px 14px;
+    border-radius:14px;
     padding:25px;
     margin-bottom:25px;
     box-shadow:0 10px 24px rgba(0,0,0,.12);
@@ -1077,13 +1077,13 @@ font-size:22px;
 #scriptAuthor{
     display:block;
     margin-top:8px;
+    color:white;
     font-style:italic;
     opacity:.9;
 }
 #scriptTags{
     display:flex;
     gap:8px;
-    flex-wrap:wrap;
     margin-top:10px;
 }
 .script-tag{
@@ -1138,14 +1138,36 @@ font-size:22px;
 .script-character p{
     margin:0;
 }
+.script-header{
+    background:var(--purple);
+    color:white;
+    padding:20px;
+    border-radius:10px 10px 0 0;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    margin:-25px -25px 25px;
+}
 .script-heading{
     display:flex;
     align-items:baseline;
     gap:15px;
 }
+.script-heading h2{
+    color:white;
+    margin:0;
+    font-size:32px;
+}
 .json-buttons{
     display:flex;
-    justify-content:center;
-    gap:15px;
-    margin-top:25px;
+    flex-direction:column;
+    gap:10px;
+}
+.json-buttons .generator-button{
+    background:white;
+    color:var(--purple);
+    padding:8px 18px;
+}
+.json-buttons .generator-button:hover{
+    opacity:.85;
 }
