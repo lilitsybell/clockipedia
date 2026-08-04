@@ -47,13 +47,25 @@ try {
             )
         );
 characters = script
-    .map(entry =>
-        typeof entry === "string"
-            ? entry
-            : entry.id
-    )
-    .filter(Boolean)
-    .filter(id => id !== "_meta");
+    .map(entry => {
+        if(typeof entry === "string"){
+            return entry
+                .replace(/_/g," ")
+                .replace(/\b\w/g, c => c.toUpperCase());
+        }
+        if(
+            typeof entry === "object" &&
+            entry.id &&
+            entry.id !== "_meta"
+        ){
+            return entry.name ||
+                entry.id
+                .replace(/_/g," ")
+                .replace(/\b\w/g, c => c.toUpperCase());
+        }
+        return null;
+    })
+    .filter(Boolean);
         const foundMeta = script.find(
             entry =>
                 typeof entry === "object" &&
