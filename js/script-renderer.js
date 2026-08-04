@@ -1,8 +1,5 @@
 console.log(
-    "script-renderer.js updated 8/04/26 10:29"
-);
-console.log(
-    "script-renderer.js updated 8/04/26 10:29"
+    "script-renderer.js updated 8/04/26 11:45"
 );
 function normalizeTeam(team){
     if(!team) return "";
@@ -22,6 +19,65 @@ function normalizeTeam(team){
     if(team === "fabled")
         return "fabled";
     return team;
+}
+/* ======================================================
+   Render Script Header
+====================================================== */
+function renderScriptHeader(script){
+    const container =
+        document.getElementById(
+            "scriptHeader"
+        );
+    if(!container) return;
+    container.innerHTML = "";
+    const meta =
+        script.meta;
+    if(!meta) return;
+    // Background
+    if(meta.background){
+        container.style.backgroundImage =
+            `url("${meta.background}")`;
+    }
+    // Logo
+    if(meta.logo){
+        const logo =
+            document.createElement("img");
+        logo.src = meta.logo;
+        logo.className = "script-logo";
+        container.appendChild(logo);
+    }
+    // Title
+    if(!meta.hideTitle){
+        const title =
+            document.createElement("h1");
+        title.textContent =
+            meta.name;
+        container.appendChild(title);
+    }
+    // Author
+    if(meta.author){
+        const author =
+            document.createElement("p");
+        author.textContent =
+            "Created by " + meta.author;
+        author.className =
+            "script-author";
+        container.appendChild(author);
+    }
+    // Almanac
+    if(meta.almanac){
+        const link =
+            document.createElement("a");
+        link.href =
+            meta.almanac;
+        link.target =
+            "_blank";
+        link.textContent =
+            "View Almanac";
+        link.className =
+            "script-almanac";
+        container.appendChild(link);
+    }
 }
 function renderScriptCharacters(script){
     const characters =
