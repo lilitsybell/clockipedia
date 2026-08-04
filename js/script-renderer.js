@@ -24,16 +24,6 @@ function normalizeTeam(team){
    Render Script Header
 ====================================================== */
 function renderScriptHeader(script){
-    const container =
-        document.getElementById(
-            "scriptHeader"
-        );
-    if(!container) return;
-    const meta = script.meta;
-    if(!meta) {
-        console.warn("No script metadata found");
-        return;
-    }
     const title =
         document.getElementById("scriptTitle");
     const author =
@@ -42,24 +32,25 @@ function renderScriptHeader(script){
         document.getElementById("scriptLogo");
     const almanac =
         document.getElementById("scriptAlmanac");
-    // Title
+    const meta = script.meta;
+    if(!meta){
+        console.warn("No metadata found");
+        return;
+    }
     if(title){
         title.textContent =
             meta.name || "Unknown Script";
     }
-    // Author
     if(author){
         author.textContent =
             meta.author
             ? "by " + meta.author
             : "";
     }
-    // Logo
     if(logo && meta.logo){
         logo.src = meta.logo;
         logo.style.display = "block";
     }
-    // Almanac
     if(almanac){
         if(meta.almanac){
             almanac.href = meta.almanac;
@@ -69,68 +60,32 @@ function renderScriptHeader(script){
             almanac.style.display = "none";
         }
     }
-    // Background
-    if(meta.background){
-        container.style.backgroundImage =
+    const header =
+        document.getElementById("scriptHeader");
+    if(header && meta.background){
+        header.style.backgroundImage =
             `url("${meta.background}")`;
-    }
-}
-    if(!meta) return;
-    // Background
-    if(meta.background){
-        container.style.backgroundImage =
-            `url("${meta.background}")`;
-    }
-    // Logo
-    if(meta.logo){
-        const logo =
-            document.createElement("img");
-        logo.src = meta.logo;
-        logo.className = "script-logo";
-        container.appendChild(logo);
-    }
-    // Title
-    if(!meta.hideTitle){
-        const title =
-            document.createElement("h1");
-        title.textContent =
-            meta.name;
-        container.appendChild(title);
-    }
-    // Author
-    if(meta.author){
-        const author =
-            document.createElement("p");
-        author.textContent =
-            "Created by " + meta.author;
-        author.className =
-            "script-author";
-        container.appendChild(author);
-    }
-    // Almanac
-    if(meta.almanac){
-        const link =
-            document.createElement("a");
-        link.href =
-            meta.almanac;
-        link.target =
-            "_blank";
-        link.textContent =
-            "View Almanac";
-        link.className =
-            "script-almanac";
-        container.appendChild(link);
     }
 }
 function renderScriptCharacters(script){
     const characters =
     extractScriptCharacters(script);
-    characters.sort((a,b)=>{
-    // Bootlegger always first
-    if(a.id === "bootlegger") return -1;
-    if(b.id === "bootlegger") return 1;
-    return a.name.localeCompare(b.name);
-});
+// Keep script order
+// Move Bootlegger to the front if present
+const bootleggerIndex =
+    characters.findIndex(
+        c => c.id === "bootlegger"
+    );
+if(bootleggerIndex > -1){
+    const bootlegger =
+        characters.splice(
+            bootleggerIndex,
+            1
+        )[0];
+    characters.unshift(
+        bootlegger
+    );
+}
     const container =
         document.getElementById(
             "characterContainer"
