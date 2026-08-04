@@ -169,14 +169,69 @@ function downloadCurrentScript(){
 }
 const characterSearch =
     document.getElementById("characterSearch");
+const characterSearchResults =
+    document.getElementById("characterSearchResults");
 if(characterSearch){
     characterSearch.addEventListener(
         "input",
         ()=>{
-            ScriptGenerator.filters.character =
+            const value =
                 characterSearch.value
                 .trim()
                 .toLowerCase();
+            ScriptGenerator.filters.character =
+                value;
+            characterSearchResults.innerHTML="";
+            if(!value){
+                characterSearchResults.style.display="none";
+                return;
+            }
+            const matches =
+                [...ScriptGenerator.officialCharacters.values()]
+                .filter(character =>
+                    character.name
+                    .toLowerCase()
+                    .includes(value)
+                )
+                .slice(0,8);
+            if(!matches.length){
+                characterSearchResults.style.display="none";
+                return;
+            }
+            matches.forEach(character=>{
+                const option =
+                    document.createElement("div");
+                option.className =
+                    "character-search-option";
+                option.innerHTML = `
+                    <img src="${character.image}">
+                    <span>${character.name}</span>
+                `;
+                option.addEventListener(
+                    "click",
+                    ()=>{
+                        characterSearch.value =
+                            character.name;
+                        ScriptGenerator.filters.character =
+                            character.name
+                            .toLowerCase();
+                        characterSearchResults.style.display="none";
+                    }
+                );
+                characterSearchResults.appendChild(option);
+            });
+            characterSearchResults.style.display="block";
+        }
+    );
+    document.addEventListener(
+        "click",
+        e=>{
+            if(
+                !characterSearch.contains(e.target) &&
+                !characterSearchResults.contains(e.target)
+            ){
+                characterSearchResults.style.display="none";
+            }
         }
     );
 }
