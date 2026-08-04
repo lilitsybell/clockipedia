@@ -30,6 +30,8 @@ function renderScriptHeader(script){
         document.getElementById("scriptAuthor");
     const almanac =
         document.getElementById("scriptAlmanac");
+    const tags =
+    document.getElementById("scriptTags");
     const meta =
     script.meta ||
     script.find(
@@ -51,6 +53,44 @@ function renderScriptHeader(script){
             ? "by " + meta.author
             : "";
     }
+    if(tags){
+
+    tags.innerHTML = "";
+
+    const addTag = (text) => {
+
+        const tag =
+            document.createElement("span");
+
+        tag.className =
+            "script-tag";
+
+        tag.textContent =
+            text;
+
+        tags.appendChild(tag);
+
+    };
+    // Homebrew
+    if(script.homebrew){
+        addTag("Homebrew");
+    }
+    // Script size
+    if(script.size === "teensy"){
+        addTag("Teensy");
+    }
+    if(script.size === "full"){
+        addTag("Full");
+    }
+    // Custom Art
+    if(script.logo){
+        addTag("Custom Art");
+    }
+    // Script of the Day
+    if(script.isDaily){
+        addTag("Script of the Day");
+    }
+}
 if(almanac){
     if(meta.almanac){
         almanac.href = meta.almanac;
