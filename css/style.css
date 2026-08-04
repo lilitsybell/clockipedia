@@ -1247,9 +1247,9 @@ font-size:22px;
 }
 
 .script-character-name.loric {
-    color:var(--copper);
+    color:var(--lime);
 }
 
 .script-character-name.fabled {
-    color:var(--lime);
+    color:var(--copper);
 }
