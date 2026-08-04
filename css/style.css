@@ -1083,7 +1083,7 @@ font-size:22px;
 /* Script Results Header */
 .script-results {
     border-radius:14px;
-    overflow:hidden;
+    overflow:visible;
 }
 .script-header {
     display:flex;
@@ -1091,9 +1091,11 @@ font-size:22px;
     align-items:center;
     gap:20px;
     padding:18px 25px;
-    margin:-25px -25px 20px;
+    margin:-25px -25px 25px;
     background:var(--purple);
     border-bottom:3px solid var(--purple);
+    position:relative;
+    z-index:2;
 }
 .script-header h2 {
     color:white;
@@ -1181,7 +1183,7 @@ font-size:22px;
     text-align:center;
     padding:18px 25px;
     margin-bottom:20px;
-    border-radius:20px;
+    border-radius:14px 14px 0 0;
     overflow:hidden;
 }
 .script-author{
