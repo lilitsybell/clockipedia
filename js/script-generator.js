@@ -99,18 +99,20 @@ async function copyCurrentScript(){
     );
     try{
         await navigator.clipboard.writeText(json);
-        const button =
-            document.getElementById(
-                "copyJsonButton"
-            );
-        const original =
-            button.textContent;
-        button.textContent =
-            "✓ Copied!";
-        setTimeout(()=>{
-            button.textContent =
-                original;
-        },2000);
+const button =
+    document.getElementById(
+        "copyJsonButton"
+    );
+const img =
+    button.querySelector("img");
+const original =
+    img.src;
+img.src =
+    "/images/check.png";
+setTimeout(()=>{
+    img.src =
+        original;
+},2000);
     }
     catch(error){
         console.error(
