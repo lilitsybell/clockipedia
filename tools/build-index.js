@@ -34,25 +34,28 @@ for (const scriptEntry of scriptsList) {
             scriptEntry.file
         );
     }
-    index.push({
-        file: scriptEntry.file,
-        size:
-            scriptEntry.size ||
-            meta.size ||
-            "full",
-        name:
-            meta.name ||
-            "Unknown Script",
-        author:
-            meta.author ||
-            "Unknown",
-        tags:
-            meta.tags ||
-            [],
-        homebrew:
-            meta.homebrew ||
-            false
-    });
+index.push({
+    file: scriptEntry.file,
+    name:
+        meta.name ||
+        "Unknown Script",
+    author:
+        meta.author ||
+        "Unknown",
+    size:
+        scriptEntry.size ||
+        "full",
+    homebrew:
+        meta.bootlegger ||
+        meta.homebrew ||
+        false,
+    tags:
+        meta.tags ||
+        [],
+    logo:
+        meta.logo ||
+        null
+});
 }
 fs.writeFileSync(
     path.join(dataFolder, "index.json"),
