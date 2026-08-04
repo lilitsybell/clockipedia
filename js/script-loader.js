@@ -66,6 +66,44 @@ console.log(
     return script;
 }
 /* ======================================================
+   Extract Characters From Script
+====================================================== */
+function extractScriptCharacters(script) {
+    const characters = [];
+    if (!Array.isArray(script)) {
+        console.error("Script is not an array:", script);
+        return characters;
+    }
+    script.forEach(entry => {
+        // Official character ID
+        if (typeof entry === "string") {
+            const character = ScriptGenerator.characters.get(entry);
+            if (character) {
+                characters.push(character);
+            }
+            else {
+                console.warn(
+                    "Missing official character:",
+                    entry
+                );
+            }
+        }
+        // Homebrew character object
+        else if (
+            typeof entry === "object" &&
+            entry.id
+        ) {
+            characters.push(entry);
+        }
+    });
+    console.log(
+        "Extracted",
+        characters.length,
+        "script characters"
+    );
+    return characters;
+}
+/* ======================================================
    Build Character Lookup
 ====================================================== */
 function buildCharacterLookup(script){
