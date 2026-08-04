@@ -1,0 +1,545 @@
+[
+  {
+    "id": "_meta",
+    "name": "Erratanomicon",
+    "author": "Corey and Bell",
+    "logo": "https://i.ibb.co/Z6Sg4cDt/image.png",
+    "hideTitle": true,
+    "background": "https://i.ibb.co/HDYWh00K/Untitled-Artwork-80.png",
+    "almanac": "https://coreyandbell.weebly.com/erratanomicon.html"
+  },
+  {
+    "id": "green_chef",
+    "name": "Chef",
+    "image": [
+      "https://i.ibb.co/v4hHv228/Green-Chef.png",
+      "https://i.ibb.co/4ZFdNhJR/Green-Chef.png"
+    ],
+    "team": "townsfolk",
+    "edition": "green",
+    "ability": "You start knowing how many pairs of evil players there are.",
+    "flavor": "This evening's reservations seem odd. Never before has Mrs. Mayweather kept company with that scamp from Hudson Lane. Yet, tonight, they have a table for two. Strange.",
+    "firstNight": 55,
+    "firstNightReminder": "Give a finger signal.",
+    "setup": false
+  },
+  {
+    "id": "green_noble",
+    "name": "Noble",
+    "image": [
+      "https://i.ibb.co/Gv4mckKD/Green-Noble.png",
+      "https://i.ibb.co/sdtc52GS/Green-Noble.png"
+    ],
+    "team": "townsfolk",
+    "edition": "green",
+    "ability": "You start knowing 3 players, 1 and only 1 of which is evil.",
+    "flavor": "Sarcasm is indeed the lowest form of wit. But speaking in response to your criticism, Sir, it is, nevertheless, a form of wit.",
+    "firstNight": 65,
+    "firstNightReminder": "Point to the 3 players marked *KNOW*.",
+    "reminders": [
+      "Know",
+      "Know",
+      "Know"
+    ],
+    "setup": false
+  },
+  {
+    "id": "green_grandmother",
+    "name": "Grandmother",
+    "image": [
+      "https://i.ibb.co/GvTV0JwN/Green-Grandmother.png",
+      "https://i.ibb.co/CyHpkDr/Green-Grandmother.png"
+    ],
+    "team": "townsfolk",
+    "edition": "green",
+    "ability": "You start knowing a good player & their character. If the Demon kills them, you die too.",
+    "flavor": "Take a jacket if you go outside, dearie. And your thermos. And your scarf. I have a weak heart, you know. Whatever would I do if you caught cold...or worse?",
+    "firstNight": 59,
+    "firstNightReminder": "Point to the grandchild player & show their character token.",
+    "otherNight": 73,
+    "otherNightReminder": "If the grandchild was killed by the Demon, the Grandmother dies too. :reminder:",
+    "reminders": [
+      "Grandchild",
+      "Dead"
+    ],
+    "setup": false
+  },
+  {
+    "id": "green_librarian",
+    "name": "Librarian",
+    "image": [
+      "https://i.ibb.co/97ZVpkB/Green-Librarian.png",
+      "https://i.ibb.co/gLQKvqY0/Green-Librarian.png"
+    ],
+    "team": "townsfolk",
+    "edition": "green",
+    "ability": "You start knowing that 1 of 2 players is a particular Outsider. (Or that zero are in play.)",
+    "flavor": "Certainly madam, under normal circumstances, you may borrow the Codex Malificarium from the library vaults. However, you do not seem to be a member.",
+    "firstNight": 53,
+    "firstNightReminder": "Show the Outsider character token. Point to both the *OUTSIDER* and *WRONG* players.",
+    "reminders": [
+      "Outsider",
+      "Wrong"
+    ],
+    "setup": false
+  },
+  {
+    "id": "green_chambermaid",
+    "name": "Chambermaid",
+    "image": [
+      "https://i.ibb.co/0VMStFXx/Green-Chambermaid.png",
+      "https://i.ibb.co/fY3mnbKf/Green-Chambermaid.png"
+    ],
+    "team": "townsfolk",
+    "edition": "green",
+    "ability": "Each night, choose 2 alive players (not yourself): you learn how many woke tonight due to their ability.",
+    "flavor": "I aint seen nothin' untoward, Milady. Begging your pardon, but if I did see somethin', it certainly weren't the master o' the house sneaking into the professor's laboratory 'round eleven o'clock and mixing up fancy potions, just like you said, Miss.",
+    "firstNight": 76,
+    "firstNightReminder": "The Chambermaid chooses 2 living players. Give a finger signal.",
+    "otherNight": 95,
+    "otherNightReminder": "The Chambermaid chooses 2 living players. Give a finger signal.",
+    "setup": false
+  },
+  {
+    "id": "green_monk",
+    "name": "Monk",
+    "image": [
+      "https://i.ibb.co/d0ryfbMJ/Green-Monk.png",
+      "https://i.ibb.co/HDTGRhSZ/Green-Monk.png"
+    ],
+    "team": "townsfolk",
+    "edition": "green",
+    "ability": "Each night*, choose a player (not yourself): they are safe from the Demon tonight.",
+    "flavor": "'Tis an ill and deathly wind that blows tonight. Come, my brother, take shelter in the abbey while the storm rages. By my word, or by my life, you will be safe.",
+    "otherNight": 24,
+    "otherNightReminder": "The Monk chooses a player. :reminder:",
+    "reminders": [
+      "Safe"
+    ],
+    "setup": false
+  },
+  {
+    "id": "green_gambler",
+    "name": "Gambler",
+    "image": [
+      "https://i.ibb.co/6cBhD0p5/Green-Gambler.png",
+      "https://i.ibb.co/qL5Dp3nQ/Green-Gambler.png"
+    ],
+    "team": "townsfolk",
+    "edition": "green",
+    "ability": "Each night*, choose a player & guess their character: if you guess wrong, you die.",
+    "flavor": "Heads, I win. Tails, you lose.",
+    "otherNight": 21,
+    "otherNightReminder": "The Gambler chooses a player & a character. :reminder:",
+    "reminders": [
+      "Dead"
+    ],
+    "setup": false
+  },
+  {
+    "id": "green_exorcist",
+    "name": "Exorcist",
+    "image": [
+      "https://i.ibb.co/BVGxZj42/Green-Exorcist.png",
+      "https://i.ibb.co/PGgH9jPt/Green-Exorcist.png"
+    ],
+    "team": "townsfolk",
+    "edition": "green",
+    "ability": "Each night*, choose a player (different to last night): the Demon, if chosen, learns who you are then doesn't wake tonight.",
+    "flavor": "We cast you out, every unclean spirit, every satanic power, every onslaught of the infernal adversary, every legion, every diabolical group and sect, in the name and by the power of Our Lord Jesus Christ. We command you, begone and fly far from the Church of God, from the souls made by God in His image and redeemed by the precious blood of the divine Lamb.",
+    "otherNight": 36,
+    "otherNightReminder": "The Exorcist chooses a player. :reminder: Put the Exorcist to sleep. If the Exorcist chose the Demon: Wake the Demon. Show the *THIS CHARACTER SELECTED YOU* & Exorcist tokens. Point to the Exorcist.",
+    "reminders": [
+      "Chosen"
+    ],
+    "setup": false
+  },
+  {
+    "id": "green_gossip",
+    "name": "Gossip",
+    "image": [
+      "https://i.ibb.co/xKNMnYmW/Green-Gossip.png",
+      "https://i.ibb.co/WpcWk8wM/Green-Gossip.png"
+    ],
+    "team": "townsfolk",
+    "edition": "green",
+    "ability": "Each day, you may make a public statement. Tonight, if it was true, a player dies.",
+    "flavor": "Blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah. Blah.",
+    "otherNight": 58,
+    "otherNightReminder": "If the Gossip is due to kill a player, they die. :reminder:",
+    "reminders": [
+      "Dead"
+    ],
+    "setup": false
+  },
+  {
+    "id": "green_savant",
+    "name": "Savant",
+    "image": [
+      "https://i.ibb.co/VRMTmxH/Green-Savant.png",
+      "https://i.ibb.co/jPLnsZwv/Green-Savant.png"
+    ],
+    "team": "townsfolk",
+    "edition": "green",
+    "ability": "Each day, you may visit the Storyteller to learn 2 things in private: 1 is true & 1 is false.",
+    "flavor": "Seventy-two matchsticks on the floor... the sun sets early but the moon is unchanged... a torn piece of cloth... evil in the manor house... three by three... the one we trusted is not what he seems... green light means magnesium... residue, but the pattern is wrong... Seventy-two matchsticks on the floor...",
+    "setup": false
+  },
+  {
+    "id": "green_fisherman",
+    "name": "Fisherman",
+    "image": [
+      "https://i.ibb.co/RfZ6Y1M/Green-Fisherman.png",
+      "https://i.ibb.co/0pjxMFnM/Green-Fisherman.png"
+    ],
+    "team": "townsfolk",
+    "edition": "green",
+    "ability": "Once per game, during the day, visit the Storyteller for some advice to help your team win.",
+    "flavor": "This was my favourite part of the river... see how the sunlight makes a rainbow from the monastery to the market? This was the best place for big fish. And the older I get, the bigger they were.",
+    "reminders": [
+      "No Ability"
+    ],
+    "setup": false
+  },
+  {
+    "id": "green_soldier",
+    "name": "Soldier",
+    "image": [
+      "https://i.ibb.co/HfknHGT0/Green-Soldier.png",
+      "https://i.ibb.co/tg57cpc/Green-Soldier.png"
+    ],
+    "team": "townsfolk",
+    "edition": "green",
+    "ability": "You are safe from the Demon.",
+    "flavor": "As David said to Goliath, as Theseus said to the Minotaur, as Arjuna said to Bhagadatta... No.",
+    "setup": false
+  },
+  {
+    "id": "green_cannibal",
+    "name": "Cannibal",
+    "image": [
+      "https://i.ibb.co/spkf5y34/Green-Cannibal.png",
+      "https://i.ibb.co/MDjZKYzk/Green-Cannibal.png"
+    ],
+    "team": "townsfolk",
+    "edition": "green",
+    "ability": "You have the ability of the recently killed executee. If they are evil, you are poisoned until a good player dies by execution.",
+    "flavor": "I don’t like clowns. They taste funny.",
+    "reminders": [
+      "Poisoned",
+      "Lunch"
+    ],
+    "setup": false,
+    "jinxes": [
+      {
+        "id": "butler",
+        "reason": "If the Cannibal gains the Butler ability, the Cannibal learns this."
+      },
+      {
+        "id": "juggler",
+        "reason": "If the Juggler guesses on their first day and dies by execution, tonight the living Cannibal learns how many guesses the Juggler got correct."
+      },
+      {
+        "id": "princess",
+        "reason": "If the Cannibal nominated, executed, & killed the Princess today, the Demon doesn’t kill tonight."
+      },
+      {
+        "id": "zealot",
+        "reason": "If the Cannibal gains the Zealot ability, the Cannibal learns this."
+      }
+    ]
+  },
+  {
+    "id": "green_drunk",
+    "name": "Drunk",
+    "image": [
+      "https://i.ibb.co/JL4XdNt/Green-Drunk.png",
+      "https://i.ibb.co/HfcNZMFx/Green-Drunk.png"
+    ],
+    "team": "outsider",
+    "edition": "green",
+    "ability": "You do not know you are the Drunk. You think you are a Townsfolk character, but you are not.",
+    "flavor": "I’m only a *hic* social drinker, my dear. Admittedly, I am a heavy *burp* socializer.",
+    "remindersGlobal": [
+      "Is The Drunk"
+    ],
+    "setup": true,
+    "special": [
+      {
+        "type": "selection",
+        "name": "bag-disabled"
+      },
+      {
+        "type": "reveal",
+        "name": "replace-character"
+      }
+    ]
+  },
+  {
+    "id": "green_tinker",
+    "name": "Tinker",
+    "image": [
+      "https://i.ibb.co/LhBNw3rP/Green-Tinker.png",
+      "https://i.ibb.co/4Z8TkJ6B/Green-Tinker.png"
+    ],
+    "team": "outsider",
+    "edition": "green",
+    "ability": "You might die at any time.",
+    "flavor": "I think I see the problem. Luckily, I have an idea! This catapult will shoot twice as far with just a minor adjustment...",
+    "otherNight": 71,
+    "otherNightReminder": "The Tinker might die. :reminder:",
+    "reminders": [
+      "Dead"
+    ],
+    "setup": false
+  },
+  {
+    "id": "green_sweetheart",
+    "name": "Sweetheart",
+    "image": [
+      "https://i.ibb.co/ynFtC5W9/Green-Sweetheart.png",
+      "https://i.ibb.co/mV8PzXkP/Green-Sweetheart.png"
+    ],
+    "team": "outsider",
+    "edition": "green",
+    "ability": "When you die, 1 player is drunk from now on.",
+    "flavor": "I will never forget her. Never.",
+    "otherNight": 61,
+    "otherNightReminder": "If the Sweetheart died, a player became drunk immediately. If you haven't done this yet, do so now. :reminder:",
+    "reminders": [
+      "Drunk"
+    ],
+    "setup": false
+  },
+  {
+    "id": "green_mutant",
+    "name": "Mutant",
+    "image": [
+      "https://i.ibb.co/JRTDhSg2/Green-Mutant.png",
+      "https://i.ibb.co/VWBbtbQB/Green-Mutant.png"
+    ],
+    "team": "outsider",
+    "edition": "green",
+    "ability": "If you are ''mad'' about being an Outsider, you might be executed.",
+    "flavor": "I am not a freak! I am a human being! Have mercy!",
+    "setup": false
+  },
+  {
+    "id": "green_godfather",
+    "name": "Godfather",
+    "image": [
+      "https://i.ibb.co/Hc39yNn/Green-Godfather.png",
+      "https://i.ibb.co/7J1ZvNLY/Green-Godfather.png"
+    ],
+    "team": "minion",
+    "edition": "green",
+    "ability": "You start knowing which Outsiders are in play. If 1 died today, choose a player tonight: they die. [-1 or +1 Outsider]",
+    "flavor": "Normally, it's just business. But when you insult my daughter, you insult me. And when you insult me, you insult my family. You really should be more careful - it would be a shame if you had an unfortunate accident.",
+    "firstNight": 38,
+    "firstNightReminder": "Show the character tokens of all in-play Outsiders.",
+    "otherNight": 57,
+    "otherNightReminder": "If an Outsider died today, the Godfather chooses a player. :reminder:",
+    "reminders": [
+      "Died Today",
+      "Dead"
+    ],
+    "setup": true
+  },
+  {
+    "id": "green_spy",
+    "name": "Spy",
+    "image": [
+      "https://i.ibb.co/4RhJSpk9/Green-Spy.png",
+      "https://i.ibb.co/dqKTKxT/Green-Spy.png"
+    ],
+    "team": "minion",
+    "edition": "green",
+    "ability": "Each night, you see the Grimoire. You might register as good & as a Townsfolk or Outsider, even if dead.",
+    "flavor": "Any brewmaster worth their liquor, knows no concoction pours trouble quicker, than one where spies seem double.",
+    "firstNight": 72,
+    "firstNightReminder": "Show the Grimoire for as long as the Spy needs.",
+    "otherNight": 92,
+    "otherNightReminder": "Show the Grimoire for as long as the Spy needs.",
+    "setup": false,
+    "jinxes": [
+      {
+        "id": "damsel",
+        "reason": "If the Spy is (or has been) in play, the Damsel is poisoned."
+      },
+      {
+        "id": "ogre",
+        "reason": "The Spy registers as evil to the Ogre."
+      },
+      {
+        "id": "poppygrower",
+        "reason": "If the Poppy Grower has their ability, the Spy does not see the Grimoire."
+      }
+    ],
+    "special": [
+      {
+        "type": "signal",
+        "name": "grimoire",
+        "time": "night"
+      }
+    ]
+  },
+  {
+    "id": "green_cerenovus",
+    "name": "Cerenovus",
+    "image": [
+      "https://i.ibb.co/MxGTVZ5B/Green-Cerenovus.png",
+      "https://i.ibb.co/vbbsQgK/Green-Cerenovus.png"
+    ],
+    "team": "minion",
+    "edition": "green",
+    "ability": "Each night, choose a player & a good character: they are “mad” they are this character tomorrow, or might be executed.",
+    "flavor": "Reality is merely an opinion. Specifically, my opinion.",
+    "firstNight": 43,
+    "firstNightReminder": "The Cerenovus chooses a player & a character. :reminder: Put the Cerenovus to sleep. Wake the target. Show the *THIS CHARACTER SELECTED YOU* token, the Cerenovus token, then the madness-character token.",
+    "otherNight": 28,
+    "otherNightReminder": "The Cerenovus chooses a player & a character. :reminder: Put the Cerenovus to sleep. Wake the target. Show the *THIS CHARACTER SELECTED YOU* token, the Cerenovus token, then the madness-character token.",
+    "reminders": [
+      "Mad"
+    ],
+    "setup": false,
+    "jinxes": [
+      {
+        "id": "goblin",
+        "reason": "The Cerenovus may choose to make a player mad that they are the Goblin."
+      }
+    ]
+  },
+  {
+    "id": "green_assassin",
+    "name": "Assassin",
+    "image": [
+      "https://i.ibb.co/VY5kFgs2/Green-Assassin.png",
+      "https://i.ibb.co/dw20d3t5/Green-Assassin.png"
+    ],
+    "team": "minion",
+    "edition": "green",
+    "ability": "Once per game, at night*, choose a player: they die, even if for some reason they could not.",
+    "flavor": "...",
+    "otherNight": 56,
+    "otherNightReminder": "The Assassin might choose a player. :reminder: :reminder:",
+    "reminders": [
+      "Dead",
+      "No Ability"
+    ],
+    "setup": false
+  },
+  "spiritofivory",
+  {
+    "id": "erratanomicon",
+    "name": "Erratanomicon",
+    "image": [
+      "https://i.ibb.co/0VBL0wMp/image.png"
+    ],
+    "team": "loric",
+    "ability": "Each night, the Demon may select a good character and change 1 word of their ability. If accepted, the Demon does not wake tonight. If in play, the player learns this. This may happen as many times as the number of Minions in the player count.",
+    "flavor": "The Demon __ cha(nges) __ abilit_(ies) to  __ cause __the ultimate __ good team ___ defeat.",
+    "firstNight": 1,
+    "firstNightReminder": "Wake the Demon. Show the *EDIT AN ABILITY?* token. The Demon might choose a character and change one word of the ability. If you accept it, nod. Put the Demon to sleep. :reminder: If in play, wake the edited player and tell them the new edit. :reminder:",
+    "otherNight": 1,
+    "otherNightReminder": "Wake the Demon. Show the *EDIT AN ABILITY?* token. The Demon might choose a character and change one word of the ability. If you accept it, nod. Put the Demon to sleep. :reminder: If in play, wake the edited player and tell them the new edit. :reminder:",
+    "remindersGlobal": [
+      "Does Not Wake",
+      "Edited",
+      "Edited",
+      "Edited",
+      "Edited"
+    ],
+    "special": [
+      {
+        "type": "signal",
+        "name": "card",
+        "value": "Edit an ability?",
+        "time": "night",
+        "global": "demon"
+      }
+    ]
+  },
+  {
+    "id": "green_imp",
+    "name": "Imp",
+    "image": [
+      "https://i.ibb.co/MkzFJ98p/Green-Imp.png",
+      "https://i.ibb.co/4RFMjNTR/Green-Imp.png"
+    ],
+    "team": "demon",
+    "edition": "green",
+    "ability": "Each night*, choose a player: they die. If you kill yourself this way, a Minion becomes the Imp.",
+    "flavor": "We must keep our wits sharp and our sword sharper. Evil walks among us, and will stop at nothing to destroy us good, simple folk, bringing our fine town to ruin. Trust no-one. But, if you must trust someone, trust me.",
+    "otherNight": 40,
+    "otherNightReminder": "The Imp chooses a player. :reminder: If the Imp chose themselves: Replace 1 alive Minion token with a spare Imp token. Put the old Imp to sleep. Wake the new Imp. Show the *YOU ARE* token, then show the Imp token.",
+    "reminders": [
+      "Dead"
+    ],
+    "setup": false
+  },
+  {
+    "id": "green_shabaloth",
+    "name": "Shabaloth",
+    "image": [
+      "https://i.ibb.co/C3JhZ2jf/Green-Shabaloth.png",
+      "https://i.ibb.co/yF81TqF7/Green-Shabaloth.png"
+    ],
+    "team": "demon",
+    "edition": "green",
+    "ability": "Each night*, choose 2 players: they die. A dead player you chose last night might be regurgitated.",
+    "flavor": "Blarg f'taag nm mataan! No sho gumtha m'sik na yuuu. Fluuuuuuuuurg h-sikkkh.",
+    "otherNight": 43,
+    "otherNightReminder": "A previously chosen player might be resurrected. :reminder: The Shabaloth chooses 2 players. :reminder: :reminder:",
+    "reminders": [
+      "Dead",
+      "Dead",
+      "Alive"
+    ],
+    "setup": false
+  },
+  {
+    "id": "green_po",
+    "name": "Po",
+    "image": [
+      "https://i.ibb.co/KcrKQN2T/Green-Po.png",
+      "https://i.ibb.co/ZzDgnZCC/Green-Po.png"
+    ],
+    "team": "demon",
+    "edition": "green",
+    "ability": "Each night*, you may choose a player: they die. If your last choice was no-one, choose 3 players tonight.",
+    "flavor": "Would you like a flower? I'm so lonely.",
+    "otherNight": 44,
+    "otherNightReminder": "The Po may choose a player OR chooses 3 players if they chose no-one last night. :reminder: or :reminder: :reminder: :reminder:",
+    "reminders": [
+      "Dead",
+      "Dead",
+      "Dead",
+      "3 Attacks"
+    ],
+    "setup": false
+  },
+  {
+    "id": "green_vigormortis",
+    "name": "Vigormortis",
+    "image": [
+      "https://i.ibb.co/YFQkQj2N/Green-Vigormortis.png",
+      "https://i.ibb.co/nFtrVRz/Green-Vigormortis.png"
+    ],
+    "team": "demon",
+    "edition": "green",
+    "ability": "Each night*, choose a player: they die. Minions you kill keep their ability & poison 1 Townsfolk neighbor. [-1 Outsider]",
+    "flavor": "All doors are one door. All keys are one key. All cups are one cup, but whosoever drinketh of the water that I give shall never thirst, but the water shall be in him a well springing up into everlasting life.",
+    "otherNight": 49,
+    "otherNightReminder": "The Vigormortis chooses a player. :reminder: If that player is a Minion, poison a neighboring Townsfolk. :reminder: :reminder:",
+    "reminders": [
+      "Dead",
+      "Has Ability",
+      "Has Ability",
+      "Has Ability",
+      "Poisoned",
+      "Poisoned",
+      "Poisoned"
+    ],
+    "setup": true
+  }
+]
