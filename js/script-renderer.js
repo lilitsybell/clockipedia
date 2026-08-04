@@ -26,6 +26,12 @@ function normalizeTeam(team){
 function renderScriptCharacters(script){
     const characters =
     extractScriptCharacters(script);
+    characters.sort((a,b)=>{
+    // Bootlegger always first
+    if(a.id === "bootlegger") return -1;
+    if(b.id === "bootlegger") return 1;
+    return a.name.localeCompare(b.name);
+});
     const container =
         document.getElementById(
             "characterContainer"
