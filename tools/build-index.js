@@ -31,11 +31,9 @@ const index = [];
 
 for (const scriptEntry of scriptsList) {
 
-    const scriptPath = path.join(
-        dataFolder,
-        scriptEntry.file
-    );
-
+const scriptPath = scriptEntry.file.startsWith("data/")
+    ? path.join(__dirname, "../", scriptEntry.file)
+    : path.join(dataFolder, scriptEntry.file);
 let meta = {};
 let hasHomebrew = false;
 
@@ -81,14 +79,13 @@ for (const entry of script) {
         }
 
     }
-    catch(error){
-
-        console.error(
-            "Could not load:",
-            scriptEntry.file
-        );
-
-    }
+catch(error){
+    console.error(
+        "Could not load:",
+        scriptEntry.file,
+        error
+    );
+}
 
 
     index.push({
