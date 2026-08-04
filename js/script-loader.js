@@ -72,13 +72,20 @@ async function loadScript(path) {
     if (!response.ok) {
         throw new Error("Failed to load " + path);
     }
-const script = await response.json();
-ScriptGenerator.currentScript = script;
-console.log(
-    "Script entries:",
-    script.length
-);
-    console.log("Loaded script:", script.name || path);
+    const script = await response.json();
+    ScriptGenerator.currentScript = script;
+    const meta = script.find(
+        entry => 
+            typeof entry === "object" &&
+            entry.id === "_meta"
+    );
+    if(meta){
+        script.meta = meta;
+    }
+    console.log(
+        "Loaded script:",
+        meta?.name || path
+    );
     return script;
 }
 /* ======================================================
