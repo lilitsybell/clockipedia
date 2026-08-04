@@ -1,4 +1,4 @@
-console.log("script-loader.js updated 8/04/26 10:05");
+console.log("script-loader.js updated 8/04/26 10:39");
 /* ======================================================
    Script Generator Data
 ====================================================== */
@@ -106,31 +106,19 @@ function extractScriptCharacters(script) {
 /* ======================================================
    Build Character Lookup
 ====================================================== */
-function buildCharacterLookup(script){
-    ScriptGenerator.characterLookup =
-        new Map();
-    // official characters
-    ScriptGenerator.officialCharacters
-    .forEach((character,id)=>{
+function buildCharacterLookup(script) {
+    ScriptGenerator.characterLookup = new Map();
+    const characters = extractScriptCharacters(script);
+    characters.forEach(character => {
         ScriptGenerator.characterLookup.set(
-            id,
+            character.id,
             character
         );
-    });
-    // homebrew characters
-    const characters =
-        extractScriptCharacters(script);
-    characters.forEach(character=>{
-        if(typeof character === "object"){
-            ScriptGenerator.characterLookup.set(
-                character.id,
-                character
-            );
-        }
     });
     console.log(
         "Lookup contains",
         ScriptGenerator.characterLookup.size,
         "characters"
     );
+    return characters;
 }
