@@ -1,6 +1,6 @@
 console.log("homepage.js updated 8/05/26 11:49");
 let homepageCharacters = [];
-let currentCharacter = null;
+let recentCharacters = [];
 /* ==========================================
    Load Characters
 ========================================== */
@@ -28,22 +28,30 @@ function showRandomCharacter(){
     if(!homepageCharacters.length){
         return;
     }
-    let character;
-    // Keep rolling until it's different
-    do{
-        character =
-            homepageCharacters[
-                Math.floor(
-                    Math.random() *
-                    homepageCharacters.length
-                )
-            ];
-    } while(
-        homepageCharacters.length > 1 &&
-        currentCharacter &&
-        character.name === currentCharacter.name
-    );
-    currentCharacter = character;
+    const historySize =
+        Math.min(10, homepageCharacters.length - 1);
+    let available =
+        homepageCharacters.filter(character =>
+            !recentCharacters.includes(character.name)
+        );
+    if(available.length === 0){
+        recentCharacters.shift();
+        available =
+            homepageCharacters.filter(character =>
+                !recentCharacters.includes(character.name)
+            );
+    }
+    const character =
+        available[
+            Math.floor(
+                Math.random() *
+                available.length
+            )
+        ];
+    recentCharacters.push(character.name);
+    if(recentCharacters.length > historySize){
+        recentCharacters.shift();
+    }
     const token =
         document.getElementById(
             "characterToken"
