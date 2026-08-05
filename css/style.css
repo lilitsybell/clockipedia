@@ -316,34 +316,27 @@ body {
     gap:25px;
 }
 /* =========================
-   Hero
+   Hero Section
 ========================= */
 .hero-section{
     background:white;
-    border-radius:20px;
-    padding:40px;
     text-align:center;
+    padding:20px 40px 35px;
 }
 .hero-logo{
-    max-width:350px;
+    width:100%;
+    max-width:900px;
+    height:auto;
 }
 .hero-description{
-    font-size:1.2rem;
-    margin:15px;
+    margin-top:15px;
+    font-size:22px;
+    color:#555;
+    font-weight:400;
 }
-.hero-links{
-    display:flex;
-    justify-content:center;
-    gap:15px;
-}
-.hero-links a{
-    background:var(--purple);
-    color:white;
-    padding:10px 20px;
-    border-radius:999px;
-    text-decoration:none;
-    font-weight:bold;
-}
+/* =========================
+  Spinning Character Token
+========================= */
 .character-feature{
     width:100%;
     display:flex;
