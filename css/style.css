@@ -430,6 +430,21 @@ body {
 .interaction-fact p{
     margin-top:5px;
 }
+.interaction-fact.blue strong{
+    color:var(--blue);
+}
+.interaction-fact.red strong{
+    color:var(--red);
+}
+.interaction-fact.traveller strong{
+    color:var(--traveller);
+}
+.interaction-fact.lime strong{
+    color:var(--lime);
+}
+.interaction-fact.copper strong{
+    color:var(--copper);
+}
 /* ===========================
    Character Pages
 =========================== */
