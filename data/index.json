@@ -1649,6 +1649,38 @@
         "logo": "https://i.imgur.com/zHqn8x0.png"
     },
     {
+        "file": "data/scripts/psycho-babble.json",
+        "name": "PSYCHO-BABBLE!",
+        "author": "Corey and Bell",
+        "size": "full",
+        "homebrew": true,
+        "characters": [
+            "Steward",
+            "Knight",
+            "Noble",
+            "Sailor",
+            "Preacher",
+            "Alsaahir",
+            "Seamstress",
+            "Slayer",
+            "Alchemist",
+            "Tea Lady",
+            "Fool",
+            "Magician",
+            "Pacifist",
+            "Lunatic",
+            "Drunk",
+            "Tinker",
+            "Golem",
+            "Psychopath",
+            "Yaggababble",
+            "YaggaMadness",
+            "Bootlegger"
+        ],
+        "tags": [],
+        "logo": "https://i.ibb.co/nqYFXnJ8/IMG-3407.png"
+    },
+    {
         "file": "data/scripts/race-to-the-bottom.json",
         "name": "Race to the Bottom",
         "author": "Evin Donohoe",
