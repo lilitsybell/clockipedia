@@ -313,7 +313,7 @@ body {
 .homepage{
     display:flex;
     flex-direction:column;
-    gap:10px;
+    gap:30px;
 }
 /* =========================
    Hero Section
@@ -342,6 +342,8 @@ body {
     display:flex;
     align-items:center;
     margin-top:20px;
+    max-width:1100px;
+    margin:20px auto 0;
 }
 #characterToken{
     width:220px;
@@ -437,6 +439,9 @@ body {
     border-radius:14px;
     padding:20px 25px;
     box-shadow:0 8px 20px rgba(0,0,0,.12);
+    max-width:1100px;
+    width:100%;
+    margin:auto;
 }
 .daily-script h2{
     margin:0 0 15px;
