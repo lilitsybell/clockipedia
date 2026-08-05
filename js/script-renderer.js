@@ -1,5 +1,5 @@
 console.log(
-    "script-renderer.js updated 8/04/26 11:45"
+    "script-renderer.js updated 8/04/26 20:20"
 );
 function normalizeTeam(team){
     if(!team) return "";
@@ -89,7 +89,7 @@ console.log("isDaily:", script.isDaily);
         addTag("Custom Art");
     }
     // Script of the Day
-if(isDailyScript(script)){
+if(script.isDaily){
     addTag("Script of the Day");
 }
 }
@@ -210,17 +210,4 @@ card.innerHTML = `
             });
         container.appendChild(section);
     });
-}
-function isDailyScript(script){
-    const daily =
-        localStorage.getItem("dailyScript");
-    if(!daily) return false;
-    const meta =
-        script.meta ||
-        script.find(
-            entry =>
-                typeof entry === "object" &&
-                entry.id === "_meta"
-        );
-    return meta?.name === daily;
 }
