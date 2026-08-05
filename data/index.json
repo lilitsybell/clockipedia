@@ -2626,6 +2626,38 @@
         "logo": "https://wiki.bloodontheclocktower.com/images/4/44/Icon_hatter.png"
     },
     {
+        "file": "data/scripts/the-academy.json",
+        "name": "The Academy",
+        "author": "patters",
+        "size": "full",
+        "homebrew": false,
+        "characters": [
+            "Chef",
+            "Noble",
+            "Pixie",
+            "Empath",
+            "High Priestess",
+            "Town Crier",
+            "Oracle",
+            "Savant",
+            "Artist",
+            "Fisherman",
+            "Alchemist",
+            "Cannibal",
+            "Amnesiac",
+            "Plague Doctor",
+            "Mutant",
+            "Politician",
+            "Snitch",
+            "Wizard",
+            "Lil' Monsta",
+            "Bootlegger",
+            "Sentinel"
+        ],
+        "tags": [],
+        "logo": null
+    },
+    {
         "file": "data/scripts/the-autopsy.json",
         "name": "The Autopsy",
         "author": "DrC",
