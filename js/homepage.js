@@ -50,6 +50,13 @@ document.querySelector(
     character.name;
     updateInteractionCard(character);
 }
+const token =
+    document.getElementById(
+        "characterToken"
+    );
+token.classList.remove("token-spin");
+void token.offsetWidth;
+token.classList.add("token-spin");
 function updateInteractionCard(character){
     const teamColors = {
         "Townsfolk":"blue",
