@@ -422,7 +422,7 @@ body {
 .interaction-fact{
     margin-top:8px;
     padding-top:8px;
-    border-top:1px solid var(--team-color);
+    border-top:none;
 }
 .interaction-fact strong{
     display:block;
