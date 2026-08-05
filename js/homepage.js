@@ -1,9 +1,28 @@
-console.log("homepage.js updated 8/05/26 11:49");
+console.log("homepage.js updated 8/05/26 17:43");
 let homepageCharacters = [];
 let recentCharacters = [];
+let dailyScript = null;
 /* ==========================================
    Load Characters
 ========================================== */
+/* ==========================================
+   Load Daily Script
+========================================== */
+async function loadDailyScript(){
+    const response =
+        await fetch("/data/daily-script.json");
+    if(!response.ok){
+        throw new Error(
+            "Failed to load daily-script.json"
+        );
+    }
+    dailyScript =
+        await response.json();
+    console.log(
+        "Loaded daily script:",
+        dailyScript
+    );
+}
 async function loadHomepageCharacters(){
     const response =
         await fetch("/data/characters.json");
@@ -22,6 +41,141 @@ async function loadHomepageCharacters(){
     );
 }
 /* ==========================================
+   Display Daily Script
+========================================== */
+
+function showDailyScript(){
+
+    if(!dailyScript){
+        return;
+    }
+
+
+    const name =
+        document.getElementById(
+            "dailyScriptName"
+        );
+
+    const author =
+        document.getElementById(
+            "dailyScriptAuthor"
+        );
+
+    const tags =
+        document.getElementById(
+            "dailyScriptTags"
+        );
+
+
+    if(name){
+        name.textContent =
+            dailyScript.name || "Unknown Script";
+    }
+
+
+    if(author){
+        author.textContent =
+            dailyScript.author
+                ? `by ${dailyScript.author}`
+                : "";
+    }
+
+
+    if(tags){
+
+        tags.innerHTML = "";
+
+        if(dailyScript.tags){
+
+            dailyScript.tags.forEach(tag => {
+
+                const element =
+                    document.createElement(
+                        "span"
+                    );
+
+                element.className =
+                    "daily-script-tag";
+
+                element.textContent =
+                    tag;
+
+                tags.appendChild(element);
+
+            });
+
+        }
+
+    }
+
+
+    buildDailyCharacterWheel();
+
+}
+/* ==========================================
+   Daily Script Character Wheel
+========================================== */
+
+function buildDailyCharacterWheel(){
+
+    const wheel =
+        document.getElementById(
+            "dailyCharacterWheel"
+        );
+
+    if(!wheel || !dailyScript){
+        return;
+    }
+
+
+    wheel.innerHTML = "";
+
+
+    const characters =
+        dailyScript.characters || [];
+
+
+    characters.forEach(characterID => {
+
+
+        const character =
+            homepageCharacters.find(
+                c =>
+                c.id === characterID ||
+                c.name === characterID
+            );
+
+
+        if(!character){
+            return;
+        }
+
+
+        const img =
+            document.createElement(
+                "img"
+            );
+
+
+        img.src =
+            character.image;
+
+        img.alt =
+            character.name;
+
+        img.title =
+            character.name;
+
+        img.className =
+            "daily-character-icon";
+
+
+        wheel.appendChild(img);
+
+    });
+
+}
+/* ==========================================
    Random Character
 ========================================== */
 function showRandomCharacter(){
@@ -29,7 +183,7 @@ function showRandomCharacter(){
         return;
     }
     const historySize =
-        Math.min(10, homepageCharacters.length - 1);
+    Math.min(10, Math.max(1, homepageCharacters.length - 1));
     let available =
         homepageCharacters.filter(character =>
             !recentCharacters.includes(character.name)
@@ -194,7 +348,9 @@ async function initializeHomepage(){
     try{
 await loadHomepageCharacters();
 await loadInteractions();
-        showRandomCharacter();
+await loadDailyScript();
+showRandomCharacter();
+showDailyScript();
 const token =
     document.getElementById(
         "characterToken"
