@@ -1,23 +1,6 @@
-console.log("homepage.js updated 8/04/26 22:01");
+console.log("homepage.js updated 8/05/26 11:49");
 let homepageCharacters = [];
-let homepageInteractions = [];
 let currentCharacter = null;
-async function loadHomepageInteractions(){
-    const response =
-        await fetch("/data/interactions.json");
-    if(!response.ok){
-        throw new Error(
-            "Failed to load interactions.json"
-        );
-
-    }
-    homepageInteractions =
-        await response.json();
-    console.log(
-        "Loaded homepage interactions:",
-        homepageInteractions.length
-    );
-}
 /* ==========================================
    Load Characters
 ========================================== */
@@ -45,14 +28,14 @@ function showRandomCharacter(){
     if(!homepageCharacters.length){
         return;
     }
-const character =
-    homepageCharacters[
-        Math.floor(
-            Math.random() *
-            homepageCharacters.length
-        )
-    ];
-currentCharacter = character;
+    const character =
+        homepageCharacters[
+            Math.floor(
+                Math.random() *
+                homepageCharacters.length
+            )
+        ];
+    currentCharacter = character;
     document.getElementById(
         "tokenImage"
     ).src =
@@ -65,37 +48,41 @@ currentCharacter = character;
         "tokenName"
     ).textContent =
         character.name;
-    document.getElementById(
-        "interactionCharacter"
-    ).textContent =
-        character.name;
-    document.getElementById(
-        "interactionTeam"
-    ).textContent =
-        character.team || "";
-    document.getElementById(
-        "interactionAbility"
-    ).textContent =
-        character.ability || "";
-updateInteractionCard(character);
+    updateInteractionCard(character);
 }
 function updateInteractionCard(character){
+
     document.getElementById(
         "interactionCharacter"
     ).textContent =
         character.name;
+
     document.getElementById(
         "interactionTeam"
     ).textContent =
         character.team || "";
+
     document.getElementById(
         "interactionAbility"
     ).textContent =
         character.ability || "";
-    document.getElementById(
-        "interactionFact"
-    ).textContent =
-        "Loading interaction...";
+    const interaction =
+        getRandomInteractionForCharacter(
+            character.name
+        );
+    const fact =
+        document.getElementById(
+            "interactionFact"
+        );
+    if(!interaction){
+        fact.textContent =
+            "No interactions found.";
+        return;
+    }
+    fact.innerHTML =
+        formatCharacters(
+            interaction.text
+        );
 }
 /* ==========================================
    Start Homepage
@@ -103,7 +90,7 @@ function updateInteractionCard(character){
 async function initializeHomepage(){
     try{
 await loadHomepageCharacters();
-await loadHomepageInteractions();
+await loadInteractions();
         showRandomCharacter();
 const token =
     document.getElementById(
