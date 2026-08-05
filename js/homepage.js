@@ -66,8 +66,8 @@ function updateInteractionCard(character){
         document.getElementById(
             "interactionTeam"
         );
-    team.textContent =
-        character.team || "";
+team.textContent =
+    character.team ? `(${character.team})` : "";
     team.className =
         teamClass;
     const name =
