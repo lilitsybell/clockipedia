@@ -8,72 +8,26 @@ let dailyScript = null;
 /* ==========================================
    Load Daily Script
 ========================================== */
-
 async function loadDailyScript(){
-
-    // Load daily script pointer
     const response =
         await fetch("/data/daily-script.json");
-
     if(!response.ok){
         throw new Error(
             "Failed to load daily-script.json"
         );
     }
-
     const dailyInfo =
         await response.json();
-
-
-    // Load actual script file
     const scriptResponse =
         await fetch("/" + dailyInfo.file);
-
     if(!scriptResponse.ok){
         throw new Error(
             "Failed to load daily script file"
         );
     }
-
-
-    const script =
+    dailyScript =
         await scriptResponse.json();
-
-
-    // Find metadata object
-    const meta =
-        script.find(
-            item =>
-            item.id === "_meta"
-        );
-
-
-    dailyScript = {
-
-        name:
-            meta?.name ||
-            "Unknown Script",
-
-        author:
-            meta?.author ||
-            "",
-
-        logo:
-            meta?.logo ||
-            "",
-
-        date:
-            dailyInfo.date,
-
-        characters:
-            script.filter(
-                item =>
-                typeof item === "string"
-            )
-
-    };
-
-
+    dailyScript.isDaily = true;
     console.log(
         "Loaded daily script:",
         dailyScript
@@ -99,137 +53,97 @@ async function loadHomepageCharacters(){
 /* ==========================================
    Display Daily Script
 ========================================== */
-
 function showDailyScript(){
-
     if(!dailyScript){
         return;
     }
-
-
+    const meta =
+        dailyScript.meta ||
+        dailyScript.find(
+            entry =>
+                typeof entry === "object" &&
+                entry.id === "_meta"
+        );
+    if(!meta){
+        console.warn(
+            "No daily script metadata"
+        );
+        return;
+    }
     const name =
         document.getElementById(
             "dailyScriptName"
         );
-
     const author =
         document.getElementById(
             "dailyScriptAuthor"
         );
-
-    const tags =
-        document.getElementById(
-            "dailyScriptTags"
-        );
-
-
     if(name){
         name.textContent =
-            dailyScript.name || "Unknown Script";
+            meta.name || "Unknown Script";
     }
-
-
     if(author){
         author.textContent =
-            dailyScript.author
-                ? `by ${dailyScript.author}`
-                : "";
+            meta.author
+            ? "by " + meta.author
+            : "";
     }
-
-
-    if(tags){
-
-        tags.innerHTML = "";
-
-        if(dailyScript.tags){
-
-            dailyScript.tags.forEach(tag => {
-
-                const element =
-                    document.createElement(
-                        "span"
-                    );
-
-                element.className =
-                    "daily-script-tag";
-
-                element.textContent =
-                    tag;
-
-                tags.appendChild(element);
-
-            });
-
-        }
-
-    }
-
-
     buildDailyCharacterWheel();
-
+}
+function extractDailyCharacters(script){
+    return script.filter(
+        entry =>
+        typeof entry === "string" ||
+        (
+            typeof entry === "object" &&
+            entry.id !== "_meta"
+        )
+    );
 }
 /* ==========================================
    Daily Script Character Wheel
 ========================================== */
-
 function buildDailyCharacterWheel(){
-
     const wheel =
         document.getElementById(
             "dailyCharacterWheel"
         );
-
     if(!wheel || !dailyScript){
         return;
     }
-
-
     wheel.innerHTML = "";
-
-
     const characters =
-        dailyScript.characters || [];
-console.log("Daily script character IDs:", characters);
-console.log("Available homepage characters:", homepageCharacters.slice(0,5));
-    characters.forEach(characterID => {
-
-
-        const character =
-            homepageCharacters.find(
-                c =>
-                c.id === characterID ||
-                c.name === characterID
+        extractDailyCharacters(
+            dailyScript
+        );
+    characters.forEach(character=>{
+        const id =
+            typeof character === "string"
+            ? character
+            : character.id;
+        const data =
+            ScriptGenerator
+            .characterLookup
+            .get(id);
+        if(!data){
+            console.warn(
+                "Missing daily character:",
+                id
             );
-
-
-        if(!character){
             return;
         }
-
-
         const img =
-            document.createElement(
-                "img"
-            );
-
-
+            document.createElement("img");
         img.src =
-            character.image;
-
+            data.image;
         img.alt =
-            character.name;
-
+            data.name;
         img.title =
-            character.name;
-
+            data.name;
         img.className =
             "daily-character-icon";
-
-
         wheel.appendChild(img);
-
     });
-
 }
 /* ==========================================
    Random Character
