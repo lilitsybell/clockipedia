@@ -16,13 +16,13 @@ async function loadDailyScript(){
             "Failed to load daily-script.json"
         );
     }
-    const daily =
+    const dailyInfo =
         await response.json();
     const scriptResponse =
-        await fetch("/" + daily.file);
+        await fetch("/" + dailyInfo.file);
     if(!scriptResponse.ok){
         throw new Error(
-            "Failed to load daily script file"
+            "Failed to load script file"
         );
     }
     const script =
@@ -33,6 +33,11 @@ async function loadDailyScript(){
                 typeof entry === "object" &&
                 entry.id === "_meta"
         );
+    if(!meta){
+        throw new Error(
+            "Script has no metadata"
+        );
+    }
     dailyScript = {
         ...meta,
         characters:
@@ -41,7 +46,7 @@ async function loadDailyScript(){
                     typeof entry === "string"
             ),
         date:
-            daily.date
+            dailyInfo.date
     };
     console.log(
         "Loaded daily script:",
