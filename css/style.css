@@ -415,11 +415,11 @@ body {
 }
 .interaction-title h2{
     margin:0;
-    font-size:28px;
+    font-size:26px;
 }
 .interaction-ability{
-    margin-top:8px;
-    font-size:18px;
+    margin-top:6px;
+    font-size:16px;
     padding-bottom:12px;
     border-bottom:1px solid var(--team-color);
 }
