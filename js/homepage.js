@@ -8,16 +8,72 @@ let dailyScript = null;
 /* ==========================================
    Load Daily Script
 ========================================== */
+
 async function loadDailyScript(){
+
+    // Load daily script pointer
     const response =
         await fetch("/data/daily-script.json");
+
     if(!response.ok){
         throw new Error(
             "Failed to load daily-script.json"
         );
     }
-    dailyScript =
+
+    const dailyInfo =
         await response.json();
+
+
+    // Load actual script file
+    const scriptResponse =
+        await fetch("/" + dailyInfo.file);
+
+    if(!scriptResponse.ok){
+        throw new Error(
+            "Failed to load daily script file"
+        );
+    }
+
+
+    const script =
+        await scriptResponse.json();
+
+
+    // Find metadata object
+    const meta =
+        script.find(
+            item =>
+            item.id === "_meta"
+        );
+
+
+    dailyScript = {
+
+        name:
+            meta?.name ||
+            "Unknown Script",
+
+        author:
+            meta?.author ||
+            "",
+
+        logo:
+            meta?.logo ||
+            "",
+
+        date:
+            dailyInfo.date,
+
+        characters:
+            script.filter(
+                item =>
+                typeof item === "string"
+            )
+
+    };
+
+
     console.log(
         "Loaded daily script:",
         dailyScript
