@@ -265,6 +265,25 @@ body {
     font-weight:bold;
     letter-spacing:1px;
 }
+#interactionTeam{
+    font-size:20px;
+    font-weight:bold;
+}
+#interactionTeam.blue{
+    color:var(--blue);
+}
+#interactionTeam.red{
+    color:var(--red);
+}
+#interactionTeam.traveller{
+    color:var(--traveller);
+}
+#interactionTeam.lime{
+    color:var(--lime);
+}
+#interactionTeam.copper{
+    color:var(--copper);
+}
 /* Hover */
 .character-token:hover .token-circle{
     transform:
@@ -364,9 +383,20 @@ body {
     box-shadow:0 8px 25px rgba(0,0,0,.12);
     border-right:5px solid var(--purple);
 }
-.home-interaction-card h2{
-    margin-top:0;
-    color:var(--purple);
+#interactionCharacter.blue{
+    color:var(--blue);
+}
+#interactionCharacter.red{
+    color:var(--red);
+}
+#interactionCharacter.traveller{
+    color:var(--traveller);
+}
+#interactionCharacter.lime{
+    color:var(--lime);
+}
+#interactionCharacter.copper{
+    color:var(--copper);
 }
 .interaction-title{
     display:flex;
