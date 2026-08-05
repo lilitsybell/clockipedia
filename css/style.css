@@ -307,13 +307,13 @@ body {
 /* MAIN CONTENT */
 #content {
     margin-left:260px;
-    padding:40px;
+    padding:20px 40px 40px;
     min-height:100vh;
 }
 .homepage{
     display:flex;
     flex-direction:column;
-    gap:25px;
+    gap:10px;
 }
 /* =========================
    Hero Section
@@ -323,10 +323,9 @@ body {
     text-align:center;
     padding:20px 40px 35px;
 }
-.hero-logo{
-    width:100%;
-    max-width:900px;
-    height:auto;
+.hero-section{
+    text-align:center;
+    padding:0 40px 15px;
 }
 .hero-description{
     margin-top:15px;
