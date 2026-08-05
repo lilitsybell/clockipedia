@@ -38,16 +38,18 @@ async function loadDailyScript(){
             "Script has no metadata"
         );
     }
-    dailyScript = {
-        ...meta,
-        characters:
-            script.filter(
-                entry =>
-                    typeof entry === "string"
-            ),
-        date:
-            dailyInfo.date
-    };
+dailyScript = {
+    name: meta.name,
+    author: meta.author,
+    logo: meta.logo,
+    characters:
+        script.filter(
+            entry =>
+                typeof entry === "string"
+        ),
+    date:
+        dailyInfo.date
+};
     console.log(
         "Loaded daily script:",
         dailyScript
@@ -77,19 +79,6 @@ function showDailyScript(){
     if(!dailyScript){
         return;
     }
-    const meta =
-        dailyScript.meta ||
-        dailyScript.find(
-            entry =>
-                typeof entry === "object" &&
-                entry.id === "_meta"
-        );
-    if(!meta){
-        console.warn(
-            "No daily script metadata"
-        );
-        return;
-    }
     const name =
         document.getElementById(
             "dailyScriptName"
@@ -98,15 +87,32 @@ function showDailyScript(){
         document.getElementById(
             "dailyScriptAuthor"
         );
+    const tags =
+        document.getElementById(
+            "dailyScriptTags"
+        );
     if(name){
         name.textContent =
-            meta.name || "Unknown Script";
+            dailyScript.name || "Unknown Script";
     }
     if(author){
         author.textContent =
-            meta.author
-            ? "by " + meta.author
+            dailyScript.author
+            ? "by " + dailyScript.author
             : "";
+    }
+    if(tags){
+        tags.innerHTML = "";
+        // Temporary tags from available data
+        if(dailyScript.logo){
+            const tag =
+                document.createElement("span");
+            tag.className =
+                "daily-script-tag";
+            tag.textContent =
+                "Custom Art";
+            tags.appendChild(tag);
+        }
     }
     buildDailyCharacterWheel();
 }
