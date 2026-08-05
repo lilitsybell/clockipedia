@@ -28,13 +28,21 @@ function showRandomCharacter(){
     if(!homepageCharacters.length){
         return;
     }
-    const character =
-        homepageCharacters[
-            Math.floor(
-                Math.random() *
-                homepageCharacters.length
-            )
-        ];
+    let character;
+    // Keep rolling until it's different
+    do{
+        character =
+            homepageCharacters[
+                Math.floor(
+                    Math.random() *
+                    homepageCharacters.length
+                )
+            ];
+    } while(
+        homepageCharacters.length > 1 &&
+        currentCharacter &&
+        character.name === currentCharacter.name
+    );
     currentCharacter = character;
     const token =
         document.getElementById(
