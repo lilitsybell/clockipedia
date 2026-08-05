@@ -44,10 +44,10 @@ function showRandomCharacter(){
         "tokenImage"
     ).alt =
         character.name;
-    document.getElementById(
-        "tokenName"
-    ).textContent =
-        character.name;
+document.querySelector(
+    "#tokenName textPath"
+).textContent =
+    character.name;
     updateInteractionCard(character);
 }
 function updateInteractionCard(character){
