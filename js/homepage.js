@@ -44,38 +44,43 @@ function showRandomCharacter(){
         "tokenImage"
     ).alt =
         character.name;
-document.querySelector(
-    "#tokenName textPath"
-).textContent =
-    character.name;
-    updateInteractionCard(character);
-}
-const token =
-    document.getElementById(
-        "characterToken"
+    document.querySelector(
+        "#tokenName textPath"
+    ).textContent =
+        character.name;
+    // Flip token animation
+    const token =
+        document.getElementById(
+            "characterToken"
+        );
+    token.classList.remove(
+        "token-spin"
     );
-const token =
-    document.getElementById(
-        "characterToken"
-    );
-token.classList.remove(
-    "token-spin"
-);
-requestAnimationFrame(() => {
+    void token.offsetWidth;
     token.classList.add(
         "token-spin"
     );
-});
+    updateInteractionCard(character);
+}
 function updateInteractionCard(character){
-    const teamColors = {
-        "Townsfolk":"blue",
-        "Outsiders":"blue",
-        "Minions":"red",
-        "Demons":"red",
-        "Travellers":"traveller",
-        "Loric":"lime",
-        "Fabled":"copper"
-    };
+const teamColors = {
+    "Townsfolk":"blue",
+    "Outsiders":"blue",
+    "Minions":"red",
+    "Demons":"red",
+    "Travellers":"traveller",
+    "Loric":"lime",
+    "Fabled":"copper"
+};
+const teamNames = {
+    "Townsfolk":"Townsfolk",
+    "Outsiders":"Outsider",
+    "Minions":"Minion",
+    "Demons":"Demon",
+    "Travellers":"Traveller",
+    "Loric":"Loric",
+    "Fabled":"Fabled"
+};
     const teamClass =
         teamColors[character.team] || "";
     const team =
@@ -83,7 +88,9 @@ function updateInteractionCard(character){
             "interactionTeam"
         );
 team.textContent =
-    character.team ? `(${character.team})` : "";
+    character.team
+        ? `(${teamNames[character.team] || character.team})`
+        : "";
     team.className =
         teamClass;
     const name =
