@@ -2953,5 +2953,20 @@
         ],
         "tags": [],
         "logo": "https://i.imgur.com/4wjmDbH.png"
+    },
+    {
+        "file": "data/scripts/xaviers-school-for-gifted-youngsters.json",
+        "name": "Xavier's School for Gifted Youngsters",
+        "author": "seaplus",
+        "size": "teensy",
+        "homebrew": false,
+        "characters": [
+            "Mutant",
+            "Marionette",
+            "Ojo",
+            "Pope"
+        ],
+        "tags": [],
+        "logo": null
     }
 ]
