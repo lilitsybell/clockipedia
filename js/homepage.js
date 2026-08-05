@@ -2,6 +2,7 @@ console.log("homepage.js updated 8/05/26 17:43");
 let homepageCharacters = [];
 let recentCharacters = [];
 let dailyScript = null;
+let dailyWheelAnimation = null;
 /* ==========================================
    Load Characters
 ========================================== */
@@ -140,24 +141,14 @@ function buildDailyCharacterWheel(){
     wheel.innerHTML = "";
     const scriptCharacters =
         dailyScript.characters || [];
-    console.log(
-        "Daily script character IDs:",
-        scriptCharacters
-    );
     scriptCharacters.forEach(characterID => {
         const character =
             getCharacter(characterID);
         if(!character){
-            console.warn(
-                "Missing character:",
-                characterID
-            );
             return;
         }
         const img =
-            document.createElement(
-                "img"
-            );
+            document.createElement("img");
         img.src =
             character.image;
         img.alt =
@@ -168,6 +159,54 @@ function buildDailyCharacterWheel(){
             "daily-character-icon";
         wheel.appendChild(img);
     });
+    // Duplicate characters for seamless loop
+    const originals =
+        [...wheel.children];
+    originals.forEach(img => {
+        const clone =
+            img.cloneNode(true);
+        wheel.appendChild(clone);
+    });
+    startDailyWheel();
+}
+function startDailyWheel(){
+    const wheel =
+        document.getElementById(
+            "dailyCharacterWheel"
+        );
+    if(!wheel){
+        return;
+    }
+    let position = 0;
+    let paused = false;
+    wheel.onmouseenter = () => {
+        paused = true;
+    };
+    wheel.onmouseleave = () => {
+        paused = false;
+    };
+    function animate(){
+        if(!paused){
+            position -= 0.5;
+            const resetPoint =
+                wheel.scrollWidth / 2;
+            if(Math.abs(position) >= resetPoint){
+                position = 0;
+            }
+            wheel.style.transform =
+                `translateX(${position}px)`;
+        }
+        dailyWheelAnimation =
+            requestAnimationFrame(
+                animate
+            );
+    }
+    if(dailyWheelAnimation){
+        cancelAnimationFrame(
+            dailyWheelAnimation
+        );
+    }
+    animate();
 }
 /* ==========================================
    Random Character
