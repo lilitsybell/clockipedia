@@ -364,14 +364,7 @@ body {
     padding:20px 30px 20px 70px;
     margin-left:-55px;
     box-shadow:0 8px 25px rgba(0,0,0,.12);
-    border-right:5px solid var(--team-color);
-    transform-origin:left center;
-    transition:
-        transform .35s ease,
-        opacity .35s ease;
-}
-.home-interaction-card{
-    --team-color:var(--purple);
+    border-right:5px solid var(--purple);
 }
 .home-interaction-card.card-spin{
     transform:
@@ -1401,4 +1394,11 @@ font-size:22px;
     font-size:14px;
     font-weight:bold;
     line-height:1;
+}
+.hero-section,
+.character-feature,
+.daily-script,
+.homepage-card {
+    border:none !important;
+    box-shadow:none !important;
 }
