@@ -1,0 +1,376 @@
+[
+  {
+    "id": "_meta",
+    "name": "Trouble Butlering",
+    "author": "The Butlermonium Institute.",
+    "logo": "https://user-images.klutzbanana.com/zkwdg5omjqnzi9a4rg6q4l4n.png",
+    "hideTitle": true
+  },
+  {
+    "id": "butef",
+    "name": "Chutler",
+    "image": [
+      "https://i.ibb.co/Z6dfCdQ1/image.png",
+      "https://user-images.klutzbanana.com/d48w6v53d10yirm2b2nefs4u.png"
+    ],
+    "team": "townsfolk",
+    "edition": "TButler",
+    "ability": "You start knowing how many pairs of evil players there are. You may only vote if a pair of people vote too.",
+    "firstNight": 55,
+    "firstNightReminder": "Give a finger signal."
+  },
+  {
+    "id": "butwomen",
+    "name": "Washerbutler",
+    "image": [
+      "https://i.ibb.co/WpY1h25D/image.png",
+      "https://user-images.klutzbanana.com/d48w6v53d10yirm2b2nefs4u.png"
+    ],
+    "team": "townsfolk",
+    "edition": "TButler",
+    "ability": "You start knowing that 1 of 2 players is a particular Townsfolk. You may only vote if none of them votes.",
+    "firstNight": 52,
+    "firstNightReminder": "Show the Townsfolk character token. Point to both the *TOWNSFOLK* and *WRONG* players.",
+    "reminders": [
+      "Townsfolk",
+      "Wrong"
+    ]
+  },
+  {
+    "id": "Buttlergator",
+    "name": "Butinvestigator",
+    "image": [
+      "https://i.ibb.co/0pmT6Z5H/image.png",
+      "https://user-images.klutzbanana.com/d48w6v53d10yirm2b2nefs4u.png"
+    ],
+    "team": "townsfolk",
+    "edition": "TButler",
+    "ability": "You start knowing that 1 of 2 players is a particular Minion. You can only vote if one of them is voting too.",
+    "firstNight": 54,
+    "firstNightReminder": "Show the Minion character token. Point to both the *MINION* and *WRONG* players.",
+    "reminders": [
+      "Minion",
+      "Wrong"
+    ]
+  },
+  {
+    "id": "butarian",
+    "name": "Butarian",
+    "image": [
+      "https://i.ibb.co/LhhMyZXQ/image.png",
+      "https://user-images.klutzbanana.com/d48w6v53d10yirm2b2nefs4u.png"
+    ],
+    "team": "townsfolk",
+    "edition": "TButler",
+    "ability": "You start knowing that 1 of 2 players is a particular Outsider. You may only vote if at least one of them is voting too.",
+    "firstNight": 53,
+    "firstNightReminder": "Show the Outsider character token. Point to both the *OUTSIDER* and *WRONG* players.",
+    "reminders": [
+      "Outsider",
+      "Wrong"
+    ]
+  },
+  {
+    "id": "butteller",
+    "name": "Butler Teller",
+    "image": [
+      "https://i.ibb.co/SD3C4Dw4/image.png",
+      "https://user-images.klutzbanana.com/d48w6v53d10yirm2b2nefs4u.png"
+    ],
+    "team": "townsfolk",
+    "edition": "TButler",
+    "ability": "Each night, choose 2 players: you learn if either is a Demon. There is a good player that registers as a Demon to you. You may only vote if you learn no.",
+    "firstNight": 57,
+    "firstNightReminder": "The Fortune Teller chooses 2 players. Nod if either is the Demon (or the *RED HERRING*).",
+    "otherNight": 77,
+    "otherNightReminder": "The Fortune Teller chooses 2 players. Nod if either is the Demon (or the *RED HERRING*).",
+    "reminders": [
+      "Red herring"
+    ]
+  },
+  {
+    "id": "butpath",
+    "name": "Butpath",
+    "image": [
+      "https://i.ibb.co/ccjXVKcP/image.png",
+      "https://user-images.klutzbanana.com/d48w6v53d10yirm2b2nefs4u.png"
+    ],
+    "team": "townsfolk",
+    "edition": "TButler",
+    "ability": "Each night, you learn how many of your 2 alive neighbors are evil. You can only vote if both of them are voting too.",
+    "firstNight": 56,
+    "firstNightReminder": "Give a finger signal.",
+    "otherNight": 76,
+    "otherNightReminder": "Give a finger signal."
+  },
+  {
+    "id": "Buttaker",
+    "name": "Buttaker",
+    "image": [
+      "https://i.ibb.co/2bQHCSQ/image.png",
+      "https://user-images.klutzbanana.com/d48w6v53d10yirm2b2nefs4u.png"
+    ],
+    "team": "townsfolk",
+    "edition": "TButler",
+    "ability": "Each night*, you learn which character died by execution today. You may only vote if a ghost is voting too.",
+    "otherNight": 78,
+    "otherNightReminder": "If a player was executed today, show their character token.",
+    "reminders": [
+      "Died today"
+    ]
+  },
+  {
+    "id": "butonk",
+    "name": "Bunk",
+    "image": [
+      "https://i.ibb.co/ksxKFwJF/image.png",
+      "https://user-images.klutzbanana.com/d48w6v53d10yirm2b2nefs4u.png"
+    ],
+    "team": "townsfolk",
+    "edition": "TButler",
+    "ability": "Each night*, choose a player (not yourself): they are safe from the Demon tonight. You may only vote if the protected player is voting too.",
+    "otherNight": 24,
+    "otherNightReminder": "The Monk chooses a player. :reminder:",
+    "reminders": [
+      "Safe"
+    ]
+  },
+  {
+    "id": "butayer",
+    "name": "Butlayer",
+    "image": [
+      "https://i.ibb.co/DfJZ0Yr1/image.png",
+      "https://user-images.klutzbanana.com/d48w6v53d10yirm2b2nefs4u.png"
+    ],
+    "team": "townsfolk",
+    "edition": "TButler",
+    "ability": "Once per game, during the day, publicly choose a player: if they are the Demon, they die. You may only vote if you have used your ability.",
+    "reminders": [
+      "No ability."
+    ]
+  },
+  {
+    "id": "butdier",
+    "name": "Boldier",
+    "image": [
+      "https://i.ibb.co/vvsjBW2g/image.png",
+      "https://user-images.klutzbanana.com/d48w6v53d10yirm2b2nefs4u.png"
+    ],
+    "team": "townsfolk",
+    "edition": "TButler",
+    "ability": "You are safe from the demon. You can only vote if nobody is on the block."
+  },
+  {
+    "id": "butkeeper",
+    "name": "Buttkeeper",
+    "image": [
+      "https://i.ibb.co/q2zVswC/image.png",
+      "https://user-images.klutzbanana.com/d48w6v53d10yirm2b2nefs4u.png"
+    ],
+    "team": "townsfolk",
+    "edition": "TButler",
+    "ability": "If you die at night, you are woken to choose a player: you learn their character. You may only vote if someone died yesterday.",
+    "otherNight": 75,
+    "otherNightReminder": "If the Butler keeper died tonight, the Butler keeper chooses a player. Show that player's character token."
+  },
+  {
+    "id": "butyor",
+    "name": "Bayor",
+    "image": [
+      "https://i.ibb.co/4RLxxLSD/image.png",
+      "https://user-images.klutzbanana.com/d48w6v53d10yirm2b2nefs4u.png"
+    ],
+    "team": "townsfolk",
+    "edition": "TButler",
+    "ability": "If only 3 players live & no execution occurs, your team wins. If you die at night, another player might die instead. You may only vote if there are more than 3 players alive."
+  },
+  {
+    "id": "butgin",
+    "name": "Burgin",
+    "image": [
+      "https://i.ibb.co/qFkh7RT8/image.png",
+      "https://user-images.klutzbanana.com/d48w6v53d10yirm2b2nefs4u.png"
+    ],
+    "team": "townsfolk",
+    "edition": "TButler",
+    "ability": "The 1st time you are nominated, if the nominator is a Townsfolk, they are executed immediately. You may only vote if someone nominated you today.",
+    "reminders": [
+      "No ability"
+    ]
+  },
+  {
+    "id": "qutler",
+    "name": "Butlerler",
+    "image": [
+      "https://i.ibb.co/FbwH57SX/image.png",
+      "https://user-images.klutzbanana.com/agqnpfr0i40ysn0ciwbd3p6n.png"
+    ],
+    "team": "outsider",
+    "ability": "Each night, choose a player (not yourself): tomorrow, you may only vote if they are voting too",
+    "flavor": "Yes, sir... No, sir... Certainly, sir.",
+    "firstNight": 58,
+    "firstNightReminder": "The Butler chooses a player. :reminder:",
+    "otherNight": 91,
+    "otherNightReminder": "The Butler chooses a player. :reminder:",
+    "reminders": [
+      "Master"
+    ],
+    "jinxes": [
+      {
+        "id": "cannibal",
+        "reason": "If the Cannibal gains the Qutler ability, the Cannibal learns this."
+      },
+      {
+        "id": "organgrinder",
+        "reason": "If the Organ Grinder is causing eyes closed voting, the Qutler may raise their hand to vote but their vote is only counted if their master voted too."
+      }
+    ]
+  },
+  {
+    "id": "butunk",
+    "name": "Drunkler",
+    "image": [
+      "https://i.ibb.co/6RKV2Z9x/image.png",
+      "https://user-images.klutzbanana.com/d48w6v53d10yirm2b2nefs4u.png"
+    ],
+    "team": "outsider",
+    "edition": "TButler",
+    "ability": "You think you're a townsfolk but you're not, you are the drunk. You don't have any restrictions but(ler) you think you do.",
+    "remindersGlobal": [
+      "Is the Drunkler"
+    ],
+    "setup": true,
+    "special": [
+      {
+        "type": "reveal",
+        "name": "replace-character"
+      }
+    ]
+  },
+  {
+    "id": "butcluse",
+    "name": "Butcluse",
+    "image": [
+      "https://i.ibb.co/8DpBfNHL/image.png",
+      "https://user-images.klutzbanana.com/d48w6v53d10yirm2b2nefs4u.png"
+    ],
+    "team": "outsider",
+    "edition": "TButler",
+    "ability": "You might register as evil & as a Minion or Demon, even if dead. You may only vote if 2 or more people are voting."
+  },
+  {
+    "id": "butaint",
+    "name": "Baint",
+    "image": [
+      "https://i.ibb.co/NgZchTqt/image.png",
+      "https://user-images.klutzbanana.com/d48w6v53d10yirm2b2nefs4u.png"
+    ],
+    "team": "outsider",
+    "edition": "TButler",
+    "ability": "If you die by execution, your team loses. You may only vote once per day."
+  },
+  {
+    "id": "butoiner",
+    "name": "Butoisoner",
+    "image": [
+      "https://i.ibb.co/S7cLzzrf/image.png",
+      "https://user-images.klutzbanana.com/bbx1k2rvwqtc54h4jg918yvi.png"
+    ],
+    "team": "minion",
+    "edition": "TButler",
+    "ability": "Each night, choose a player: they are poisoned tonight and tomorrow day. You may only vote if your target voted too.",
+    "firstNight": 33,
+    "firstNightReminder": "The Poisoner chooses a player. :reminder:",
+    "otherNight": 17,
+    "otherNightReminder": "The Poisoner chooses a player. :reminder:",
+    "reminders": [
+      "Poisoned"
+    ]
+  },
+  {
+    "id": "buty",
+    "name": "Sby",
+    "image": [
+      "https://i.ibb.co/tpxsKrPv/image.png",
+      "https://user-images.klutzbanana.com/bbx1k2rvwqtc54h4jg918yvi.png"
+    ],
+    "team": "minion",
+    "edition": "TButler",
+    "ability": "Each night, you see the Grimoire. You might register as good & as a Townsfolk or Outsider, even if dead. You may only vote if an evil player is also voting.",
+    "firstNight": 72,
+    "firstNightReminder": "Show the Grimoire for as long as the Spy needs.",
+    "otherNight": 92,
+    "otherNightReminder": "Show the Grimoire for as long as the Spy needs.",
+    "special": [
+      {
+        "type": "signal",
+        "name": "grimoire"
+      }
+    ]
+  },
+  {
+    "id": "butlerwoman",
+    "name": "Butlerwoman",
+    "image": [
+      "https://i.ibb.co/N6RrRdKX/image.png",
+      "https://user-images.klutzbanana.com/bbx1k2rvwqtc54h4jg918yvi.png"
+    ],
+    "team": "minion",
+    "edition": "TButler",
+    "ability": "If there are 5 or more players alive & the Demon dies, you become the Demon. (Travellers don't count). You may only vote if the demon votes or when they demon is dead.",
+    "otherNight": 33,
+    "otherNightReminder": "If the Scarlet Woman became the Demon today, show them the *YOU ARE* token, then the Demon token.",
+    "reminders": [
+      "Is the demon"
+    ]
+  },
+  {
+    "id": "buton",
+    "name": "Buton",
+    "image": [
+      "https://i.ibb.co/N6dXSJ83/image.png",
+      "https://user-images.klutzbanana.com/bbx1k2rvwqtc54h4jg918yvi.png"
+    ],
+    "team": "minion",
+    "edition": "TButler",
+    "ability": "There are extra Outsiders in play. You may only vote if 2 or more players are voting too. [+2 Outsiders]"
+  },
+  {
+    "id": "butimp",
+    "name": "Bimp",
+    "image": [
+      "https://i.ibb.co/39WfNZjF/image.png",
+      "https://user-images.klutzbanana.com/bbx1k2rvwqtc54h4jg918yvi.png"
+    ],
+    "team": "demon",
+    "edition": "TButler",
+    "ability": "Each night*, choose a player: they die. If you kill yourself this way, a Minion becomes the Imp. You don't have any voting restrictions.",
+    "otherNight": 40,
+    "otherNightReminder": "The Imp chooses a player. :reminder: If the Imp chose themselves: Replace 1 alive Minion token with a spare Imp token. Put the old Imp to sleep. Wake the new Imp. Show the *YOU ARE* token, then show the Imp token.",
+    "reminders": [
+      "Dead"
+    ]
+  },
+  {
+    "id": "masterbutler",
+    "name": "Master Butler (optional)",
+    "image": [
+      "https://user-images.klutzbanana.com/fev4x7cbo257ohb6enfpwesy.png"
+    ],
+    "team": "loric",
+    "edition": "TButler",
+    "ability": "Each night* an alive player is the Master. They have no voting restriction today.",
+    "flavor": "One master butler to rule them all",
+    "otherNight": 67,
+    "otherNightReminder": "Tell the player they are the new master.",
+    "reminders": [
+      "Master"
+    ],
+    "special": [
+      {
+        "type": "reminder",
+        "name": "public"
+      }
+    ]
+  }
+]
