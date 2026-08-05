@@ -44,8 +44,8 @@ function updateRecentScripts(script){
     ScriptGenerator.recentScripts.unshift(
         script.file
     );
-    // Keep only last 10
-    if(ScriptGenerator.recentScripts.length > 10){
+    // Keep only last 100
+    if(ScriptGenerator.recentScripts.length > 100){
         ScriptGenerator.recentScripts.pop();
     }
 }
