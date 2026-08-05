@@ -1,0 +1,82 @@
+[
+  {
+    "name": "PSYCHO-BABBLE!",
+    "author": "Corey and Bell",
+    "id": "_meta",
+    "background": "https://i.ibb.co/LXfbQhfL/Psycho-Babble-background.png",
+    "almanac": "https://coreyandbell.weebly.com/psycho-babble.html",
+    "bootlegger": [
+      "All Minions are Psychopaths. Psychopaths can only kill after private chats have ended and before nominations have begun. All deaths happen during the day. The Pacifist has changed."
+    ],
+    "hideTitle": true,
+    "logo": "https://i.ibb.co/nqYFXnJ8/IMG-3407.png"
+  },
+  "steward",
+  "knight",
+  "noble",
+  "sailor",
+  "preacher",
+  "alsaahir",
+  "seamstress",
+  "slayer",
+  "alchemist",
+  "tealady",
+  "fool",
+  "magician",
+  {
+    "id": "psychopacifist",
+    "name": "Pacifist",
+    "team": "townsfolk",
+    "ability": "Nominated and executed good players are prompted to play roshambo. They only die if they lose.",
+    "flavor": "Distrust all in whom the impulse to punish is powerful.",
+    "firstNight": 0,
+    "otherNight": 0,
+    "image": [
+      "https://i.ibb.co/TMsgkGPc/Pacifist.png",
+      "https://i.ibb.co/yngTVR75/Pacifist-evil.png"
+    ]
+  },
+  "lunatic",
+  "drunk",
+  "tinker",
+  "golem",
+  {
+    "id": "psychobabblepath",
+    "name": "Psychopath",
+    "team": "minion",
+    "ability": "Each day, before nominations, you may publicly choose a player: they die. If executed, you only die if you lose roshambo.",
+    "flavor": "Surprise!",
+    "firstNight": 0,
+    "otherNight": 0,
+    "image": [
+      "https://i.ibb.co/KpCJSzpT/Icon-psychopath.png",
+      "https://i.ibb.co/kVQpp0gY/Icon-psychopath-good.png"
+    ],
+    "special": [
+      {
+        "type": "selection",
+        "name": "bag-duplicate"
+      }
+    ]
+  },
+  "yaggababble",
+  {
+    "id": "yaggamadness",
+    "name": "YaggaMadness",
+    "team": "fabled",
+    "ability": "Each night, the demon chooses a player: they are \"mad\" they are the Psychopath tomorrow, or might be executed.",
+    "flavor": "The defendant pleads innocent on account of temporary insanity.",
+    "firstNightReminder": "Wake the Lunatic up. The Lunatic chooses a player. Put the Lunatic to sleep.\n\nWake the Yaggababble up. Show them the Lunatic token, then the player with the Lunatic *chosen* reminder token. The Yaggababble chooses a player. Put the Yaggababble to sleep. Wake the target. Show the *THIS CHARACTER SELECTED YOU* token, the Yaggababble token, then the YaggaMadness token.",
+    "firstNight": 1,
+    "otherNightReminder": "Wake the Lunatic up. The Lunatic chooses a player. Put the Lunatic to sleep.\n\nWake the Yaggababble up. Show them the Lunatic token, then the player with the Lunatic *chosen* reminder token. The Yaggababble chooses a player. Put the Yaggababble to sleep. Wake the target. Show the *THIS CHARACTER SELECTED YOU* token, the Yaggababble token, then the YaggaMadness token.",
+    "otherNight": 1,
+    "remindersGlobal": [
+      "Mad"
+    ],
+    "image": [
+      "https://i.ibb.co/ZRNZGRN5/Psycho-Babble.png"
+    ],
+    "setup": false
+  },
+  "bootlegger"
+]
