@@ -1,4 +1,4 @@
-console.log("interactions Updated 8/03/26 22:55");
+console.log("interactions Updated 8/05/26 11:49");
 let interactions = [];
 async function loadInteractions(){
     const response = await fetch("/data/interactions.json");
@@ -80,4 +80,23 @@ li.innerHTML = `
     </div>
 `;
     return li;
+}
+function getInteractionsForCharacter(characterName){
+    return interactions.filter(interaction =>
+        getCharacters(interaction.text)
+            .includes(characterName)
+    );
+}
+function getRandomInteractionForCharacter(characterName){
+    const matches =
+        getInteractionsForCharacter(characterName);
+    if(!matches.length){
+        return null;
+    }
+    return matches[
+        Math.floor(
+            Math.random() *
+            matches.length
+        )
+    ];
 }
