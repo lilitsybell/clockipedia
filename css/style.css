@@ -361,7 +361,7 @@ body {
     border-radius:25px;
     height:220px;
     overflow:hidden;
-    padding:20px 30px 20px 70px;
+    padding:15px 30px 20px 70px;
     margin-left:-55px;
     box-shadow:0 8px 25px rgba(0,0,0,.12);
     border-right:5px solid var(--team-color);
