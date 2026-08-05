@@ -1,0 +1,107 @@
+[
+  {
+    "id": "_meta",
+    "author": "seaplus",
+    "name": "Off Script Damsel",
+    "logo": "https://i.ibb.co/SDPVhCPK/Off-Script2.png",
+    "hideTitle": true,
+    "firstNight": [
+      "dusk",
+      "philosopher",
+      "offscriptdamsel",
+      "minioninfo",
+      "demoninfo",
+      "xaan",
+      "cerenovus",
+      "losthuntsman",
+      "washerwoman",
+      "librarian",
+      "chef",
+      "fortuneteller",
+      "dreamer",
+      "balloonist",
+      "villageidiot",
+      "dawn"
+    ],
+    "otherNight": [
+      "dusk",
+      "philosopher",
+      "xaan",
+      "monk",
+      "cerenovus",
+      "scarletwoman",
+      "imp",
+      "ojo",
+      "losthuntsman",
+      "assassin",
+      "ravenkeeper",
+      "fortuneteller",
+      "dreamer",
+      "juggler",
+      "balloonist",
+      "villageidiot",
+      "dawn"
+    ]
+  },
+  "chef",
+  "washerwoman",
+  "librarian",
+  "balloonist",
+  "villageidiot",
+  "dreamer",
+  "fortuneteller",
+  "monk",
+  "philosopher",
+  "fisherman",
+  "juggler",
+  "minstrel",
+  "ravenkeeper",
+  {
+    "id": "losthuntsman",
+    "name": "Lost Huntsman",
+    "image": [
+      "https://wiki.bloodontheclocktower.com/images/a/a1/Icon_huntsman.png"
+    ],
+    "team": "outsider",
+    "ability": "Once per game, at night, choose a player: the Off Script Damsel, if chosen, becomes a Townsfolk character. This ability works even if dead. [+the Off Script Damsel]",
+    "firstNight": 1,
+    "otherNight": 1,
+    "firstNightReminder": "The Huntsman might choose a player. If they chose the Off Script Damsel: put the Huntsman to sleep. Wake the target. Show the *YOU ARE* card and a Townsfolk token.",
+    "otherNightReminder": "The Huntsman might choose a player. If they chose the Off Script Damsel: put the Huntsman to sleep. Wake the target. Show the *YOU ARE* card and a Townsfolk token.",
+    "reminders": [
+      "No Ability"
+    ],
+    "setup": true
+  },
+  "recluse",
+  "mutant",
+  "zealot",
+  "cerenovus",
+  "assassin",
+  "xaan",
+  "scarletwoman",
+  "imp",
+  "ojo",
+  {
+    "id": "offscriptdamsel",
+    "name": "Off Script Damsel",
+    "image": [
+      "https://i.ibb.co/wrYM5SBX/osdamsel.png"
+    ],
+    "team": "loric",
+    "ability": "The Off Script Damsel is a drunk good player that registers as an Outsider. All Minions know when an Off Script Damsel is in play. Their team loses if a Minion publicly guesses them (once).",
+    "firstNight": 1,
+    "otherNight": 0,
+    "firstNightReminder": "During Minion Info, show the Minions the Off Script Damsel token if it is in play.",
+    "remindersGlobal": [
+      "Off Script Damsel"
+    ],
+    "special": [
+      {
+        "name": "replace-character",
+        "type": "reveal"
+      }
+    ]
+  },
+  "bootlegger"
+]
