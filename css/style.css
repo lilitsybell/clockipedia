@@ -435,21 +435,27 @@ body {
    Script of the Day
 =========================== */
 .daily-script{
+    width:min(1100px,95%);
+    margin:20px auto;
     background:white;
-    border-radius:14px;
-    padding:20px 25px;
-    box-shadow:0 8px 20px rgba(0,0,0,.12);
-    max-width:1100px;
-    width:100%;
-    margin:auto;
+    border-radius:25px;
+    padding:25px 35px;
+    box-shadow:0 8px 25px rgba(0,0,0,.12);
+    border-left:5px solid var(--purple);
+}
+.daily-script-header{
+    display:flex;
+    align-items:center;
 }
 .daily-script h2{
-    margin:0 0 15px;
+    margin:0 0 10px;
     color:var(--purple);
+    font-size:26px;
 }
 .daily-script-info h3{
-    font-size:26px;
+    font-size:30px;
     margin:0;
+    color:#333;
 }
 #dailyScriptAuthor{
     margin-top:3px;
@@ -461,7 +467,7 @@ body {
     display:flex;
     flex-wrap:wrap;
     gap:8px;
-    margin-top:12px;
+    margin-top:18px;
 }
 .daily-script-tag{
     display:inline-flex;
@@ -474,48 +480,30 @@ body {
     font-size:14px;
     font-weight:bold;
 }
-/* Character Wheel */
+/* Character Carousel */
 .daily-character-wheel-wrapper{
-    margin-top:20px;
+    margin-top:25px;
     overflow:hidden;
 }
 .daily-character-wheel{
     display:flex;
     gap:15px;
-    cursor:grab;
-    user-select:none;
-    white-space:nowrap;
-    will-change:transform;
+    overflow-x:auto;
+    scrollbar-width:none;
+    padding-bottom:5px;
 }
-.daily-character-wheel:active{
-    cursor:grabbing;
+.daily-character-wheel::-webkit-scrollbar{
+    display:none;
 }
 .daily-character-icon{
-    width:65px;
-    height:65px;
+    width:75px;
+    height:75px;
     object-fit:contain;
     flex-shrink:0;
+    transition:.2s;
 }
-.daily-character-wheel-wrapper{
-    margin-top:20px;
-    overflow:hidden;
-    position:relative;
-}
-.daily-character-wheel-wrapper::before,
-.daily-character-wheel-wrapper::after{
-    content:"";
-    position:absolute;
-    top:0;
-    width:40px;
-    height:100%;
-    z-index:2;
-    pointer-events:none;
-}
-.daily-character-wheel-wrapper::before{
-    left:0;
-}
-.daily-character-wheel-wrapper::after{
-    right:0;
+.daily-character-icon:hover{
+    transform:translateY(-5px);
 }
 /* ===========================
    Character Pages
