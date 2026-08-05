@@ -1,0 +1,409 @@
+[
+  {
+    "id": "_meta",
+    "name": "Pedagogic Pits and Pendulums",
+    "author": "Gordon",
+    "almanac": "https://www.bloodstar.xyz/p/DaveBKazali/Pedagogic/almanac.html"
+  },
+  {
+    "id": "demone_pedagogic-ryqsh3",
+    "name": "Demone",
+    "image": [
+      "https://www.bloodstar.xyz/p/DaveBKazali/Pedagogic/demone_pedagogic.png"
+    ],
+    "team": "townsfolk",
+    "ability": "You start knowing which Demon is in play. If there are 3 Demons in-play, good wins.",
+    "firstNight": 11,
+    "firstNightReminder": "Wake the Demone and tell them which Demon is in play."
+  },
+  {
+    "id": "minion_pedagogic-FTUS5o",
+    "name": "Minion",
+    "image": [
+      "https://www.bloodstar.xyz/p/DaveBKazali/Pedagogic/minion_pedagogic.png"
+    ],
+    "team": "townsfolk",
+    "ability": "If you are executed, a Townsfolk gains a not-in-play minion ability & changes alignment [-1 Minion]",
+    "otherNight": 2,
+    "otherNightReminder": "If executed today, wake and turn a Townsfolk player into a minion opposite their original alignment.",
+    "setup": true
+  },
+  {
+    "id": "notanoutsider_pedagogic-IgNovo",
+    "name": "Not-an-outsider",
+    "image": [
+      "https://www.bloodstar.xyz/p/DaveBKazali/Pedagogic/notanoutsider_pedagogic.png"
+    ],
+    "team": "townsfolk",
+    "ability": "You start knowing 3 true statements. 1 of them, if said publicly, will cause you to join the losing team even if dead.",
+    "firstNight": 12,
+    "firstNightReminder": "Wake the player and tell them 3 true statements.",
+    "reminders": [
+      "statement said"
+    ]
+  },
+  {
+    "id": "evil_pedagogic-WVC9Zy",
+    "name": "Evil",
+    "image": [
+      "https://www.bloodstar.xyz/p/DaveBKazali/Pedagogic/evil_pedagogic.png"
+    ],
+    "team": "townsfolk",
+    "ability": "Each night, choose 2 players; learn how many are evil. You must choose new players each night.",
+    "firstNight": 13,
+    "firstNightReminder": "Wake Evil and have them point to two players. Tell them how many are evil.",
+    "otherNight": 3,
+    "otherNightReminder": "Wake Evil and have them point to two new players. Tell them how many are evil."
+  },
+  {
+    "id": "acharacter_pedagogic-IyKW0c",
+    "name": "A Character",
+    "image": [
+      "https://www.bloodstar.xyz/p/DaveBKazali/Pedagogic/acharacter_pedagogic.png"
+    ],
+    "team": "townsfolk",
+    "ability": "You think you are a good character not-on-script & might have their ability. Each night you might become a good character not-on-script.",
+    "firstNight": 14,
+    "firstNightReminder": "Wake player if the off script character wakes",
+    "otherNight": 4,
+    "otherNightReminder": "Wake player if the off script character wakes",
+    "reminders": [
+      "reminder"
+    ]
+  },
+  {
+    "id": "poisioned_pedagogic-anHqb_",
+    "name": "Poisioned",
+    "image": [
+      "https://www.bloodstar.xyz/p/DaveBKazali/Pedagogic/poisioned_pedagogic.png"
+    ],
+    "team": "townsfolk",
+    "ability": "Each night*, choose an alive player; either you are they are poisioned till dusk. You learn their alignment.",
+    "otherNight": 5,
+    "otherNightReminder": "Wake Poisioned and have them select a player. Mark a player as poisioned, then tell Poisioned the selected players alignment.",
+    "reminders": [
+      "Poisioned"
+    ]
+  },
+  {
+    "id": "townsfolk_pedagogic-JRV_Yz",
+    "name": "Townsfolk",
+    "image": [
+      "https://www.bloodstar.xyz/p/DaveBKazali/Pedagogic/townsfolk_pedagogic.png"
+    ],
+    "team": "townsfolk",
+    "ability": "Each day, you may visit the storyteller to learn if you become a townsfolk."
+  },
+  {
+    "id": "storyteller_pedagogic-LcxATB",
+    "name": "Storyteller",
+    "image": [
+      "https://www.bloodstar.xyz/p/DaveBKazali/Pedagogic/storyteller_pedagogic.png"
+    ],
+    "team": "townsfolk",
+    "ability": "Each day you may visit the storyteller & choose the outcome of the next \"might\" ability.",
+    "reminders": [
+      "Yes"
+    ],
+    "remindersGlobal": [
+      "no"
+    ]
+  },
+  {
+    "id": "hardclaiming_pedagogic-hPrj14",
+    "name": "Hard Claiming",
+    "image": [
+      "https://www.bloodstar.xyz/p/DaveBKazali/Pedagogic/hardclaiming_pedagogic.png"
+    ],
+    "team": "townsfolk",
+    "ability": "Once per game, during thet day, publicly choose a character, if that character dies tonight, good wins.",
+    "otherNight": 6,
+    "otherNightReminder": "If the chosen player dies, good wins.",
+    "reminders": [
+      "chosen"
+    ]
+  },
+  {
+    "id": "outsider_pedagogic-pFTa-c",
+    "name": "Outsider",
+    "image": [
+      "https://www.bloodstar.xyz/p/DaveBKazali/Pedagogic/outsider_pedagogic.png"
+    ],
+    "team": "townsfolk",
+    "ability": "If the demon kills you, the Storyteller will flash the Grimoire at you but with characters out of order.",
+    "otherNight": 7,
+    "otherNightReminder": "If killed by the demon, flash the grim at the player."
+  },
+  {
+    "id": "executed_pedagogic-QJlHwz",
+    "name": "Executed",
+    "image": [
+      "https://www.bloodstar.xyz/p/DaveBKazali/Pedagogic/executed_pedagogic.png"
+    ],
+    "team": "townsfolk",
+    "ability": "If you are executed, tonight learn 2 characters of the players that voted today.",
+    "otherNight": 8,
+    "otherNightReminder": "If executed today, wake and tell Executed 2 characters that voted on them today.",
+    "reminders": [
+      "Learn"
+    ],
+    "remindersGlobal": [
+      "Learn"
+    ]
+  },
+  {
+    "id": "notdead_pedagogic-OO_1bX",
+    "name": "Not dead",
+    "image": [
+      "https://www.bloodstar.xyz/p/DaveBKazali/Pedagogic/notdead_pedagogic.png"
+    ],
+    "team": "townsfolk",
+    "ability": "If you die, learn a dead character; If you are executed twice, you might be resurrected tonight.",
+    "otherNight": 9,
+    "otherNightReminder": "If Not Dead dies, show them a dead characters token. If executed today for the 2nd time, Not dead might be resurrected.",
+    "reminders": [
+      "Learn"
+    ],
+    "remindersGlobal": [
+      "Resurrected"
+    ]
+  },
+  {
+    "id": "aiyamdrunk_pedagogic-SZE0e_",
+    "name": "Aiyamdrunk",
+    "image": [
+      "https://www.bloodstar.xyz/p/DaveBKazali/Pedagogic/aiyamdrunk_pedagogic.png"
+    ],
+    "team": "townsfolk",
+    "ability": "All other players are sobor & healthy. If you are \"mad\" about your character, townsfolk abilities yield false info, even if dead.",
+    "reminders": [
+      "mad"
+    ]
+  },
+  {
+    "id": "notgood_pedagogic-ToW74V",
+    "name": "Not good",
+    "image": [
+      "https://www.bloodstar.xyz/p/DaveBKazali/Pedagogic/notgood_pedagogic.png"
+    ],
+    "team": "outsider",
+    "ability": "Once per game, the Storyteller will announce that a mistake has been made, but it shouldn't affect the game's outcome."
+  },
+  {
+    "id": "nominatingmyself_pedagogic-0t_UFH",
+    "name": "Nominating Myself",
+    "image": [
+      "https://www.bloodstar.xyz/p/DaveBKazali/Pedagogic/nominatingmyself_pedagogic.png"
+    ],
+    "team": "outsider",
+    "ability": "You might be resurrected at any time. You might die & might not die at any time."
+  },
+  {
+    "id": "oneofthesethree_pedagogic-zl_52g",
+    "name": "Oneofthese Three",
+    "image": [
+      "https://www.bloodstar.xyz/p/DaveBKazali/Pedagogic/oneofthesethree_pedagogic.png"
+    ],
+    "team": "outsider",
+    "ability": "You might register as your living neighbors characters & as an evil minion."
+  },
+  {
+    "id": "mad_pedagogic-GJl_fS",
+    "name": "Mad",
+    "image": [
+      "https://www.bloodstar.xyz/p/DaveBKazali/Pedagogic/mad_pedagogic.png"
+    ],
+    "team": "outsider",
+    "ability": "You think you are a character not on this script but you are not. Your ability might work, if your team is losing."
+  },
+  {
+    "id": "newplayer_pedagogic-j0z_Qp",
+    "name": "New Player",
+    "image": [
+      "https://www.bloodstar.xyz/p/DaveBKazali/Pedagogic/newplayer_pedagogic.png"
+    ],
+    "team": "minion",
+    "ability": "Each night choose a player; they are drunk tonight and tomorrow day.",
+    "firstNight": 15,
+    "firstNightReminder": "Wake the player and have them choose a player. mark them as drunk for tonight and tomomrrow",
+    "otherNight": 10,
+    "otherNightReminder": "Wake the player and have them choose a player. mark them as drunk for tonight and tomomrrow",
+    "reminders": [
+      "drunk"
+    ]
+  },
+  {
+    "id": "lying_pedagogic-gLqqfH",
+    "name": "Lying",
+    "image": [
+      "https://www.bloodstar.xyz/p/DaveBKazali/Pedagogic/lying_pedagogic.png"
+    ],
+    "team": "minion",
+    "ability": "Players publicly 'mad' they are a character they are not might be executed. You register as good [+1 or -1 outsider]",
+    "setup": true
+  },
+  {
+    "id": "anything_pedagogic-tsq9vJ",
+    "name": "Anything",
+    "image": [
+      "https://www.bloodstar.xyz/p/DaveBKazali/Pedagogic/anything_pedagogic.png"
+    ],
+    "team": "minion",
+    "ability": "Each day you may visit the Storyteller to learn and gain a new ability and lose the previous."
+  },
+  {
+    "id": "inplay_pedagogic-4n_C8x",
+    "name": "In-Play",
+    "image": [
+      "https://www.bloodstar.xyz/p/DaveBKazali/Pedagogic/inplay_pedagogic.png"
+    ],
+    "team": "minion",
+    "ability": "Once per game you may publicly guess all players characters, if all good players characters are correct, your team wins."
+  },
+  {
+    "id": "impish_pedagogic-HnVl41",
+    "name": "Impish",
+    "image": [
+      "https://www.bloodstar.xyz/p/DaveBKazali/Pedagogic/impish_pedagogic.png"
+    ],
+    "team": "demon",
+    "ability": "Each night* choose a player, they die. The first \"new player\" this kills becomes an evil Imp! and you die instead.",
+    "otherNight": 11,
+    "otherNightReminder": "Wake the Impish and have them select a player. they die. If a \"new player\" was killed, the Impish dies instead and the new player becomes an evil \"imp\"",
+    "reminders": [
+      "dead"
+    ],
+    "remindersGlobal": [
+      "New Imp!"
+    ]
+  },
+  {
+    "id": "regularimp_pedagogic-8csjNr",
+    "name": "Regular Imp",
+    "image": [
+      "https://www.bloodstar.xyz/p/DaveBKazali/Pedagogic/regularimp_pedagogic.png"
+    ],
+    "team": "demon",
+    "ability": "Each night* choose a player, they might die. The first time you die, a minion becomes Impish.",
+    "firstNight": 16,
+    "firstNightReminder": "Wake the Regular Imp and have them select a player. the chosen player dies.",
+    "reminders": [
+      "dies"
+    ]
+  },
+  {
+    "id": "notanimpgame_pedagogic-kX5wR_",
+    "name": "Not an Imp game",
+    "image": [
+      "https://www.bloodstar.xyz/p/DaveBKazali/Pedagogic/notanimpgame_pedagogic.png"
+    ],
+    "team": "demon",
+    "ability": "Each night choose a player, they are poisioned. The previously poisioned player dies then becomes healthy.",
+    "firstNight": 17,
+    "firstNightReminder": "Wake the player and have them select a player, They are poisioned.",
+    "otherNight": 12,
+    "otherNightReminder": "Wake the player and have them select a player, they are poisioned. The previously poisioned player dies.",
+    "reminders": [
+      "poisioned"
+    ],
+    "remindersGlobal": [
+      "dies"
+    ]
+  },
+  {
+    "id": "imp_pedagogic--U-OP5",
+    "name": "Imp!",
+    "image": [
+      "https://www.bloodstar.xyz/p/DaveBKazali/Pedagogic/imp_pedagogic.png"
+    ],
+    "team": "demon",
+    "ability": "Each night* choose a player, they die. If you kill yourself this way, a minion becomes Regular Imp",
+    "otherNight": 13,
+    "otherNightReminder": "Each night* select a player, they die. If the player kills themself, a minion becomes a Regular Imp.",
+    "reminders": [
+      "dies"
+    ]
+  },
+  {
+    "id": "offscript_pedagogic-_t4TMY",
+    "name": "Off Script",
+    "image": [
+      "https://www.bloodstar.xyz/p/DaveBKazali/Pedagogic/offscript_pedagogic.png"
+    ],
+    "team": "townsfolk",
+    "ability": "You are an off-script character. You will learn which tonight.",
+    "reminders": [
+      "reminder"
+    ],
+    "remindersGlobal": [
+      "reminder"
+    ]
+  },
+  {
+    "id": "notonscript_pedagogic-y_HsDD",
+    "name": "Not on script",
+    "image": [
+      "https://www.bloodstar.xyz/p/DaveBKazali/Pedagogic/notonscript_pedagogic.png"
+    ],
+    "team": "townsfolk",
+    "ability": "You are a not on script character. You learn which tonight.",
+    "reminders": [
+      "reminder"
+    ],
+    "remindersGlobal": [
+      "reminder"
+    ]
+  },
+  {
+    "id": "doubleclaim_pedagogic-RyRf_L",
+    "name": "Double Claim",
+    "image": [
+      "https://www.bloodstar.xyz/p/DaveBKazali/Pedagogic/doubleclaim_pedagogic.png"
+    ],
+    "team": "traveller",
+    "ability": "You start knowing 2 secret words you cannot share. The first player of your alignment to publicly say a word you know, becomes a new traveler and you become their character.",
+    "firstNight": 18,
+    "firstNightReminder": "Show Double Claim 2 separate words.",
+    "otherNight": 14,
+    "otherNightReminder": "If a word was spoken today, switch characters with the player who said a chosen word.",
+    "reminders": [
+      "swap"
+    ]
+  },
+  {
+    "id": "makinthisup_pedagogic-hRWWy-",
+    "name": "Makin' this up",
+    "image": [
+      "https://www.bloodstar.xyz/p/DaveBKazali/Pedagogic/makinthisup_pedagogic.png"
+    ],
+    "team": "traveller",
+    "ability": "You don't know your ability or your task. Each day, privately ask 1 question about the task & receive a hint. If you completed your task, tonight you learn your ability.",
+    "otherNight": 15,
+    "otherNightReminder": "If their task was completed. Makin' this up learns their ability.",
+    "reminders": [
+      "learns"
+    ]
+  },
+  {
+    "id": "noone_pedagogic-WRYv4v",
+    "name": "No One",
+    "image": [
+      "https://www.bloodstar.xyz/p/DaveBKazali/Pedagogic/noone_pedagogic.png"
+    ],
+    "team": "traveller",
+    "ability": "Each night, gain a new traveler ability. A player of the same alignment learns which.",
+    "firstNight": 19,
+    "firstNightReminder": "No One gains a new traveler ability of the Storytellers choice. Wake a player of their aglinment and show them which traveler they gain the ability of.",
+    "otherNight": 16,
+    "otherNightReminder": "No One gains a new traveler ability of the Storytellers choice. Wake a player of their aglinment and show them which traveler they gain the ability of."
+  },
+  {
+    "id": "leavingshortly_pedagogic-pRbUny",
+    "name": "Leaving Shortly",
+    "image": [
+      "https://www.bloodstar.xyz/p/DaveBKazali/Pedagogic/leavingshortly_pedagogic.png"
+    ],
+    "team": "traveller",
+    "ability": "Players (not yourself) that call for your exile, die."
+  }
+]
