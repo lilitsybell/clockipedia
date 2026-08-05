@@ -121,6 +121,16 @@ const teamClass =
     teamColors[
         character.team?.trim()
     ] || "blue";
+
+const card =
+    document.querySelector(
+        ".home-interaction-card"
+    );
+
+if(card){
+    card.className =
+        "home-interaction-card " + teamClass;
+}
     const team =
         document.getElementById(
             "interactionTeam"
@@ -129,16 +139,14 @@ team.textContent =
     character.team
         ? `(${teamNames[character.team] || character.team})`
         : "";
-team.className =
-    "interaction-team " + teamClass;
+team.className = teamClass;
     const name =
         document.getElementById(
             "interactionCharacter"
         );
     name.textContent =
         character.name;
-name.className =
-    "interaction-character " + teamClass;
+name.className = teamClass;
     document.getElementById(
         "interactionAbility"
     ).textContent =
