@@ -80,6 +80,24 @@ function showRandomCharacter(){
         }
     },350);
 }
+function getShortInteractionForCharacter(characterName){
+    const maxLength = 220;
+    const possible =
+        interactions.filter(interaction =>
+            interaction.text.includes(
+                `[${characterName}]`
+            ) &&
+            interaction.text.length <= maxLength
+        );
+    if(!possible.length){
+        return null;
+    }
+    return possible[
+        Math.floor(
+            Math.random() * possible.length
+        )
+    ];
+}
 function updateInteractionCard(character){
 const teamColors = {
     "Townsfolk":"blue",
@@ -126,7 +144,7 @@ name.className =
     ).textContent =
         character.ability || "";
     const interaction =
-        getRandomInteractionForCharacter(
+        getShortInteractionForCharacter(
             character.name
         );
     const fact =
