@@ -1402,3 +1402,11 @@ font-size:22px;
     font-weight:bold;
     line-height:1;
 }
+.interaction-fact,
+.interaction-fact strong {
+    border-top:none !important;
+}
+
+.interaction-fact {
+    border-top:1px solid var(--team-color) !important;
+}
