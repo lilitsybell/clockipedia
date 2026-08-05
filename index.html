@@ -1,42 +1,65 @@
 <link rel="stylesheet" href="../css/style.css">
 <link rel="icon" type="image/png" href="../images/favicon.png">
-
 <body>
-
 <div id="sidebar"></div>
-
 <main id="content">
-<div class="home-hero">
-
-    <img 
-        src="/images/clockipedia-logo.png"
-        class="home-logo"
-    >
-
-    <h1>
-        Clockipedia
-    </h1>
-
-    <p>
-        A fan-made resource for Blood on the Clocktower characters,
-        scripts, and Storyteller tools.
-    </p>
-
-
-    <div class="hero-buttons">
-
-        <a href="/characters/townsfolk.html">
-            Explore Characters
-        </a>
-
-        <a href="/tools/script-generator.html">
-            View Tools
-        </a>
-
-    </div>
-
+<div class="homepage">
+    <!-- HERO SECTION -->
+    <section class="hero-section">
+        <img 
+            class="hero-logo"
+            src="/images/logo.png"
+            alt="Clockipedia"
+        >
+        <p class="hero-description">
+            A fan-made Blood on the Clocktower resource
+        </p>
+        <div class="hero-links">
+            <a href="/characters.html">
+                Characters
+            </a>
+            <a href="/scripts.html">
+                Scripts
+            </a>
+            <a href="/interactions.html">
+                Interactions
+            </a>
+        </div>
+    </section>
+    <!-- DID YOU KNOW -->
+    <section class="did-you-know">
+        <h2>
+            Did You Know?
+        </h2>
+        <div id="factContainer">
+            <!-- Facts load here -->
+        </div>
+    </section>
+    <!-- FEATURED AREA -->
+    <section class="featured-grid">
+        <!-- RANDOM CHARACTER -->
+        <div class="homepage-card random-character">
+            <h2>
+                Random Character
+            </h2>
+            <div id="randomCharacter">
+                <!-- Character loads here -->
+            </div>
+            <button id="randomCharacterButton">
+                Randomize
+            </button>
+        </div>
+        <!-- SCRIPT OF THE DAY -->
+        <div class="homepage-card daily-script">
+            <h2>
+                Script of the Day
+            </h2>
+            <div id="dailyScript">
+                <!-- Script loads here -->
+            </div>
+        </div>
+    </section>
 </div>
-
 </main>
 
 <script src="/js/characters.js"></script>
