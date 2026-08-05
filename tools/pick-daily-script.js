@@ -101,24 +101,8 @@ fs.writeFileSync(
 // Save today's script
 
 const dailyScript = {
-
-    file:
-        script.file,
-
-    name:
-        script.name,
-
-    author:
-        script.author,
-
-    logo:
-        script.logo || null,
-
-    date:
-        new Date()
-        .toISOString()
-        .split("T")[0]
-
+    file: script.file,
+    date: today
 };
 
 
