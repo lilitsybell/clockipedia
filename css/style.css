@@ -380,7 +380,8 @@ body {
     flex:1;
     background:white;
     border-radius:25px;
-    min-height:130px;
+    height:220px;
+    overflow:hidden;
     padding:20px 30px 20px 70px;
     margin-left:-55px;
     box-shadow:0 8px 25px rgba(0,0,0,.12);
@@ -412,11 +413,14 @@ body {
 }
 .interaction-ability{
     margin-top:15px;
-    font-size:18px;
+    height:60px;
+    overflow:hidden;
 }
 .interaction-fact{
     margin-top:20px;
     padding-top:15px;
+    height:80px;
+    overflow:hidden;
     border-top:1px solid #ddd;
 }
 .interaction-fact strong{
