@@ -189,8 +189,8 @@ function buildDailyCharacterWheel(){
 
     const characters =
         dailyScript.characters || [];
-
-
+console.log("Daily script character IDs:", characters);
+console.log("Available homepage characters:", homepageCharacters.slice(0,5));
     characters.forEach(characterID => {
 
 
