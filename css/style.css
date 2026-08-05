@@ -427,11 +427,12 @@ body {
     font-size:18px;
 }
 .interaction-fact{
-    margin-top:5px;
-    padding-top:10px;
-    border-top:1px solid #ddd;
+    margin-top:8px;
+    padding-top:8px;
+    border-top:1px solid var(--team-color);
 }
 .interaction-fact strong{
+    display:block;
     color:var(--team-color);
     font-size:18px;
 }
