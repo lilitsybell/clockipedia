@@ -482,10 +482,10 @@ body {
 .daily-character-wheel{
     display:flex;
     gap:15px;
-    overflow:hidden;
     cursor:grab;
     user-select:none;
     white-space:nowrap;
+    will-change:transform;
 }
 .daily-character-wheel:active{
     cursor:grabbing;
