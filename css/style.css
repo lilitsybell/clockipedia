@@ -364,11 +364,14 @@ body {
     padding:20px 30px 20px 70px;
     margin-left:-55px;
     box-shadow:0 8px 25px rgba(0,0,0,.12);
-    border-right:5px solid var(--purple);
+    border-right:5px solid var(--team-color);
+    transform-origin:left center;
     transition:
         transform .35s ease,
-        opacity .35s ease,
-        border-color .3s ease;
+        opacity .35s ease;
+}
+.home-interaction-card{
+    --team-color:var(--purple);
 }
 .home-interaction-card.card-spin{
     transform:
@@ -377,19 +380,23 @@ body {
     opacity:0;
 }
 .home-interaction-card.blue{
-    border-right-color:var(--blue);
+    --team-color:var(--blue);
 }
+
 .home-interaction-card.red{
-    border-right-color:var(--red);
+    --team-color:var(--red);
 }
+
 .home-interaction-card.traveller{
-    border-right-color:var(--traveller);
+    --team-color:var(--traveller);
 }
+
 .home-interaction-card.lime{
-    border-right-color:var(--lime);
+    --team-color:var(--lime);
 }
+
 .home-interaction-card.copper{
-    border-right-color:var(--copper);
+    --team-color:var(--copper);
 }
 #interactionCharacter.blue{
     color:var(--blue);
@@ -422,28 +429,13 @@ body {
 .interaction-fact{
     margin-top:10px;
     padding-top:10px;
-    border-top:1px solid #ddd;
 }
 .interaction-fact strong{
+    color:var(--team-color);
     font-size:18px;
 }
 .interaction-fact p{
     margin-top:5px;
-}
-.interaction-fact.blue strong{
-    color:var(--blue);
-}
-.interaction-fact.red strong{
-    color:var(--red);
-}
-.interaction-fact.traveller strong{
-    color:var(--traveller);
-}
-.interaction-fact.lime strong{
-    color:var(--lime);
-}
-.interaction-fact.copper strong{
-    color:var(--copper);
 }
 /* ===========================
    Character Pages
