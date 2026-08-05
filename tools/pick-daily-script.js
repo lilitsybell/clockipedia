@@ -99,7 +99,9 @@ fs.writeFileSync(
 
 
 // Save today's script
-
+const today = new Date()
+    .toISOString()
+    .split("T")[0];
 const dailyScript = {
     file: script.file,
     date: today
