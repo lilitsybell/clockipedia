@@ -427,15 +427,16 @@ body {
     font-size:18px;
 }
 .interaction-fact{
-    margin-top:10px;
+    margin-top:5px;
     padding-top:10px;
+    border-top:1px solid #ddd;
 }
 .interaction-fact strong{
     color:var(--team-color);
     font-size:18px;
 }
 .interaction-fact p{
-    margin-top:5px;
+    margin-top:2px;
 }
 /* ===========================
    Character Pages
