@@ -365,16 +365,31 @@ body {
     margin-left:-55px;
     box-shadow:0 8px 25px rgba(0,0,0,.12);
     border-right:5px solid var(--purple);
-    transform-origin:left center;
     transition:
         transform .35s ease,
-        opacity .35s ease;
+        opacity .35s ease,
+        border-color .3s ease;
 }
 .home-interaction-card.card-spin{
     transform:
         scale(.1)
         translateX(-120px);
     opacity:0;
+}
+.home-interaction-card.blue{
+    border-right-color:var(--blue);
+}
+.home-interaction-card.red{
+    border-right-color:var(--red);
+}
+.home-interaction-card.traveller{
+    border-right-color:var(--traveller);
+}
+.home-interaction-card.lime{
+    border-right-color:var(--lime);
+}
+.home-interaction-card.copper{
+    border-right-color:var(--copper);
 }
 #interactionCharacter.blue{
     color:var(--blue);
@@ -410,7 +425,6 @@ body {
     border-top:1px solid #ddd;
 }
 .interaction-fact strong{
-    color:var(--purple);
     font-size:18px;
 }
 .interaction-fact p{
