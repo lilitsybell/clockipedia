@@ -266,60 +266,49 @@ body {
     text-decoration:none;
     font-weight:bold;
 }
-/* =========================
-   Did You Know
-========================= */
-.did-you-know{
+.character-feature{
+    display:flex;
+    align-items:center;
+    gap:0;
+}
+#characterToken{
+    width:220px;
+    position:relative;
+    z-index:2;
+}
+.token-circle{
+    width:190px;
+    height:190px;
+    margin:auto;
+    border-radius:50%;
     background:white;
-    border-radius:20px;
-    padding:30px;
+    border:10px solid var(--purple);
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    overflow:hidden;
 }
-.did-you-know h2{
-    margin-top:0;
+.token-circle img{
+    width:120px;
 }
-.fact-card{
-    border-left:6px solid var(--purple);
-    background:#fafafa;
-    padding:15px;
-    margin-bottom:12px;
-    border-radius:10px;
-}
-/* =========================
-   Bottom Grid
-========================= */
-.featured-grid{
-    display:grid;
-    grid-template-columns:
-        1fr 2fr;
-    gap:25px;
-}
-.homepage-card{
-    background:white;
-    border-radius:20px;
-    padding:25px;
-}
-.homepage-card h2{
-    margin-top:0;
-}
-/* random character */
-.random-character{
-    text-align:center;
-}
-.random-character img{
+.token-name{
     width:180px;
-}
-/* script */
-.daily-script img{
-    max-width:250px;
-}
-#randomCharacterButton{
-    margin-top:15px;
+    margin:-20px auto 0;
+    padding:12px;
+    text-align:center;
+    font-weight:bold;
     background:var(--purple);
     color:white;
-    border:none;
-    border-radius:999px;
-    padding:10px 20px;
-    cursor:pointer;
+    border-radius:0 0 30px 30px;
+}
+.interaction-card{
+    flex:1;
+    margin-left:-40px;
+    padding:30px 30px 30px 70px;
+    background:white;
+    border-radius:25px;
+    min-height:220px;
+    box-shadow:0 4px 15px rgba(0,0,0,.08);
 }
 
 /* ===========================
