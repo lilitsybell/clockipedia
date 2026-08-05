@@ -53,6 +53,8 @@ function renderScriptHeader(script){
             ? "by " + meta.author
             : "";
     }
+    console.log(script);
+console.log("isDaily:", script.isDaily);
     if(tags){
 
     tags.innerHTML = "";
