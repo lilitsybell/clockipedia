@@ -425,6 +425,16 @@
         "logo": null
     },
     {
+        "file": "data/scripts/contact-tracing-ii.json",
+        "name": "Unknown Script",
+        "author": "Unknown",
+        "size": "full",
+        "homebrew": false,
+        "characters": [],
+        "tags": [],
+        "logo": null
+    },
+    {
         "file": "data/scripts/damsel-of-distress.json",
         "name": "Damsel of Distress",
         "author": "BBBence1111",
