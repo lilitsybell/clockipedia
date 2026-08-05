@@ -9,23 +9,28 @@ async function initializeGenerator() {
         // Load Script of the Day
 const daily =
     await loadDailyScript();
-const script =
-    await loadScript(daily.file);
-// Find this script in the index
+// Find the matching script in the index
 const indexScript =
     ScriptGenerator.scripts.find(
-        s => s.file === daily.file
+        script => script.file === daily.file
     );
-// Copy the index data
+if(!indexScript){
+    throw new Error(
+        "Daily script not found in index.json"
+    );
+}
+// Load the actual BOTC JSON
+const script =
+    await loadScript(indexScript.file);
+// Copy all metadata from the index
+indexScript.isDaily = true;
 applyScriptIndexData(
     script,
-    {
-        ...indexScript,
-        isDaily: true
-    }
+    indexScript
 );
         ScriptGenerator.currentScript =
             script;
+        updateRecentScripts(indexScript);
         buildCharacterLookup(
             script
         );
@@ -35,13 +40,10 @@ applyScriptIndexData(
         renderScriptCharacters(
             script
         );
-        console.log(
-            "Loaded Script of the Day:",
-            daily.name
-        );
-        console.log(
-            "Generator ready."
-        );
+console.log(
+    "Loaded Script of the Day:",
+    indexScript.name
+);
     }
     catch(error){
         console.error(error);
@@ -385,7 +387,10 @@ if(scriptSizeButton){
         }
     );
 }
-function applyScriptIndexData(loadedScript, indexScript){
+function applyScriptIndexData(
+    loadedScript,
+    indexScript
+){
     loadedScript.size =
         indexScript.size;
     loadedScript.homebrew =
@@ -393,5 +398,5 @@ function applyScriptIndexData(loadedScript, indexScript){
     loadedScript.logo =
         indexScript.logo;
     loadedScript.isDaily =
-        indexScript.isDaily || false;
+        Boolean(indexScript.isDaily);
 }
