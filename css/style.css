@@ -212,6 +212,81 @@ body {
         max-height .35s ease,
         opacity .25s ease;
 }
+/* ==========================================
+   Homepage Character Token
+========================================== */
+.character-token{
+    cursor:pointer;
+    perspective:800px;
+}
+.token-circle{
+    width:220px;
+    height:220px;
+    background:
+        url("/images/token.png")
+        center center
+        / contain
+        no-repeat;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    position:relative;
+}
+.token-background{
+    position:absolute;
+    width:100%;
+    height:100%;
+    left:0;
+    top:0;
+}
+.token-face{
+    position:absolute;
+    width:100%;
+    height:100%;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+}
+.token-face img{
+    width:120px;
+    height:120px;
+    object-fit:contain;
+}
+.token-name{
+    position:absolute;
+    bottom:18px;
+    width:100%;
+    text-align:center;
+    font-size:20px;
+    font-weight:bold;
+    color:white;
+    text-shadow:
+        0 2px 3px black;
+}
+/* Hover */
+.character-token:hover .token-circle{
+    transform:
+        scale(1.05);
+}
+/* Spin */
+.token-spin{
+    animation:
+        tokenSpin .8s ease;
+}
+@keyframes tokenSpin{
+    0%{
+        transform:
+            rotateY(0deg);
+    }
+    50%{
+        transform:
+            rotateY(90deg);
+    }
+    100%{
+        transform:
+            rotateY(360deg);
+    }
+}
 /* Show character choices when opened */
 .character-section.open .character-dropdown {
     max-height:500px;
@@ -267,27 +342,15 @@ body {
     font-weight:bold;
 }
 .character-feature{
+    width:100%;
     display:flex;
     align-items:center;
-    gap:0;
+    margin-top:20px;
 }
 #characterToken{
     width:220px;
     position:relative;
     z-index:2;
-}
-.token-circle{
-    width:220px;
-    height:220px;
-    background:
-        url("/images/token.png")
-        center center
-        / contain
-        no-repeat;
-    display:flex;
-    justify-content:center;
-    align-items:center;
-    position:relative;
 }
 .token-circle img{
     width:120px;
@@ -311,14 +374,15 @@ body {
     font-size:18px;
     color:white;
 }
-.interaction-card{
+.home-interaction-card{
     flex:1;
-    margin-left:-40px;
-    padding:30px 30px 30px 70px;
+    margin-left:-45px;
+    padding:30px 40px 30px 80px;
     background:white;
     border-radius:25px;
     min-height:220px;
-    box-shadow:0 4px 15px rgba(0,0,0,.08);
+    box-shadow:0 8px 25px rgba(0,0,0,.12);
+    border-left:5px solid var(--purple);
 }
 
 /* ===========================
