@@ -7,19 +7,23 @@ async function initializeGenerator() {
         );
         await loadScriptIndex();
         // Load Script of the Day
-        const daily =
-            await loadDailyScript();
+const daily =
+    await loadDailyScript();
 const script =
-    await loadScript(
-        daily.file
+    await loadScript(daily.file);
+// Find this script in the index
+const indexScript =
+    ScriptGenerator.scripts.find(
+        s => s.file === daily.file
     );
-script.isDaily = true;
-script.size =
-    daily.size;
-script.homebrew =
-    daily.homebrew;
-script.logo =
-    daily.logo;
+// Copy the index data
+applyScriptIndexData(
+    script,
+    {
+        ...indexScript,
+        isDaily: true
+    }
+);
         ScriptGenerator.currentScript =
             script;
         buildCharacterLookup(
