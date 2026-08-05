@@ -68,6 +68,7 @@
 {"file": "data/scripts/spooky-tea.json","size": "teensy"},
 {"file": "data/scripts/strings-pulling.json","size": "full"},
 {"file": "data/scripts/sushi-buffet.json","size": "full"},
+{"file": "data/scripts/switchcraft.json","size": "full"},
 {"file": "data/scripts/the-autopsy.json","size": "full"},
 {"file": "data/scripts/the-ballad-of-seat-7.json","size": "full"},
 {"file": "data/scripts/the-forest-from-the-trees.json","size": "full"},
