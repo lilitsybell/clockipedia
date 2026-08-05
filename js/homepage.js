@@ -36,31 +36,53 @@ function showRandomCharacter(){
             )
         ];
     currentCharacter = character;
-    document.getElementById(
-        "tokenImage"
-    ).src =
-        character.image;
-    document.getElementById(
-        "tokenImage"
-    ).alt =
-        character.name;
-    document.querySelector(
-        "#tokenName textPath"
-    ).textContent =
-        character.name;
-    // Flip token animation
     const token =
         document.getElementById(
             "characterToken"
         );
-    token.classList.remove(
-        "token-spin"
-    );
-    void token.offsetWidth;
-    token.classList.add(
-        "token-spin"
-    );
-    updateInteractionCard(character);
+    const card =
+        document.querySelector(
+            ".home-interaction-card"
+        );
+    // Collapse card toward token
+    if(card){
+        card.classList.add(
+            "card-spin"
+        );
+    }
+    // Spin token
+    if(token){
+        token.classList.remove(
+            "token-spin"
+        );
+        void token.offsetWidth;
+        token.classList.add(
+            "token-spin"
+        );
+    }
+    // Wait for animation, then update
+    setTimeout(() => {
+        document.getElementById(
+            "tokenImage"
+        ).src =
+            character.image;
+        document.getElementById(
+            "tokenImage"
+        ).alt =
+            character.name;
+        document.querySelector(
+            "#tokenName textPath"
+        ).textContent =
+            character.name;
+        updateInteractionCard(
+            character
+        );
+        if(card){
+            card.classList.remove(
+                "card-spin"
+            );
+        }
+    },350);
 }
 function updateInteractionCard(character){
 const teamColors = {
@@ -81,8 +103,10 @@ const teamNames = {
     "Loric":"Loric",
     "Fabled":"Fabled"
 };
-    const teamClass =
-        teamColors[character.team] || "";
+const teamClass =
+    teamColors[
+        character.team?.trim()
+    ] || "blue";
     const team =
         document.getElementById(
             "interactionTeam"
@@ -91,16 +115,16 @@ team.textContent =
     character.team
         ? `(${teamNames[character.team] || character.team})`
         : "";
-    team.className =
-        teamClass;
+team.className =
+    "interaction-team " + teamClass;
     const name =
         document.getElementById(
             "interactionCharacter"
         );
     name.textContent =
         character.name;
-    name.className =
-        teamClass;
+name.className =
+    "interaction-character " + teamClass;
     document.getElementById(
         "interactionAbility"
     ).textContent =
