@@ -34,25 +34,34 @@ function showRandomCharacter(){
                 homepageCharacters.length
             )
         ];
-    const container =
-        document.getElementById(
-            "randomCharacter"
-        );
-    if(!container){
-        return;
-    }
-    container.innerHTML = `
-        <img src="${character.image}">
-        <h3>
-            ${character.name}
-        </h3>
-        <p>
-            ${character.team || ""}
-        </p>
-        <p>
-            ${character.ability || ""}
-        </p>
-    `;
+    document.getElementById(
+        "tokenImage"
+    ).src =
+        character.image;
+    document.getElementById(
+        "tokenImage"
+    ).alt =
+        character.name;
+    document.getElementById(
+        "tokenName"
+    ).textContent =
+        character.name;
+    document.getElementById(
+        "interactionCharacter"
+    ).textContent =
+        character.name;
+    document.getElementById(
+        "interactionTeam"
+    ).textContent =
+        character.team || "";
+    document.getElementById(
+        "interactionAbility"
+    ).textContent =
+        character.ability || "";
+    document.getElementById(
+        "interactionFact"
+    ).textContent =
+        "Loading interaction...";
 }
 /* ==========================================
    Start Homepage
@@ -61,16 +70,16 @@ async function initializeHomepage(){
     try{
         await loadHomepageCharacters();
         showRandomCharacter();
-        const button =
-            document.getElementById(
-                "randomCharacterButton"
-            );
-        if(button){
-            button.addEventListener(
-                "click",
-                showRandomCharacter
-            );
-        }
+const token =
+    document.getElementById(
+        "characterToken"
+    );
+if(token){
+    token.addEventListener(
+        "click",
+        showRandomCharacter
+    );
+}
     }
     catch(error){
         console.error(
