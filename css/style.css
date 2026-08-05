@@ -219,8 +219,8 @@ body {
     perspective:800px;
 }
 .token-circle{
-    width:220px;
-    height:220px;
+    width:280px;
+    height:280px;
     background:
         url("/images/token.png")
         center center
@@ -253,14 +253,17 @@ body {
 }
 .token-name{
     position:absolute;
-    bottom:18px;
+    inset:0;
     width:100%;
-    text-align:center;
-    font-size:20px;
+    height:100%;
+    pointer-events:none;
+}
+.token-name text{
+    fill:black;
+    font-size:18px;
+    font-family:"Droid Sans", Arial, sans-serif;
     font-weight:bold;
-    color:white;
-    text-shadow:
-        0 2px 3px black;
+    letter-spacing:1px;
 }
 /* Hover */
 .character-token:hover .token-circle{
@@ -347,30 +350,52 @@ body {
     margin-top:20px;
 }
 #characterToken{
-    width:220px;
+    width:280px;
     position:relative;
     z-index:2;
 }
-.token-name{
-    margin-top:-28px;
-    text-align:center;
-    font-weight:bold;
-    font-size:18px;
-    color:white;
-}
 .home-interaction-card{
     flex:1;
-    margin-left:-45px;
-    padding:30px 40px 30px 80px;
     background:white;
     border-radius:25px;
-    min-height:220px;
+    min-height:160px;
+    padding:25px 35px 25px 90px;
+    margin-left:-70px;
     box-shadow:0 8px 25px rgba(0,0,0,.12);
-    border-left:5px solid var(--purple);
+    border-right:5px solid var(--purple);
 }
 .home-interaction-card h2{
     margin-top:0;
     color:var(--purple);
+}
+.interaction-title{
+    display:flex;
+    align-items:baseline;
+    gap:10px;
+}
+.interaction-title h2{
+    margin:0;
+    font-size:28px;
+}
+#interactionTeam{
+    font-size:20px;
+    font-weight:bold;
+}
+.interaction-ability{
+    margin-top:15px;
+    font-size:18px;
+}
+.interaction-fact{
+    margin-top:20px;
+    padding-top:15px;
+    border-top:1px solid #ddd;
+}
+.interaction-fact strong{
+    color:var(--purple);
+    font-size:18px;
+}
+.interaction-fact p{
+    margin-top:5px;
 }
 /* ===========================
    Character Pages
