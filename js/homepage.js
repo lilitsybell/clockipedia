@@ -81,7 +81,7 @@ function showRandomCharacter(){
     },350);
 }
 function getShortInteractionForCharacter(characterName){
-    const maxLength = 220;
+    const maxLength = 200;
     const possible =
         interactions.filter(interaction =>
             interaction.text.includes(
