@@ -151,6 +151,8 @@ name.className =
         document.getElementById(
             "interactionFact"
         );
+   fact.className =
+    "interaction-fact " + teamClass;
     if(!interaction){
         fact.textContent =
             "No interactions found.";
