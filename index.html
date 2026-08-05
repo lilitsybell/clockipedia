@@ -42,16 +42,36 @@
                     alt=""
                 >
             </div>
-            <div id="tokenName" class="token-name">
-                Character
-            </div>
+            <svg id="tokenName" class="token-name" viewBox="0 0 220 220">
+                <defs>
+                    <path 
+                        id="tokenTextCurve"
+                        d="M35,150 A85,85 0 0,0 185,150"
+                    />
+                </defs>
+                <text>
+                    <textPath 
+                        href="#tokenTextCurve"
+                        startOffset="50%"
+                    >
+                        Character
+                    </textPath>
+                </text>
+            </svg>
         </div>
     </div>
     <div id="interactionCard" class="home-interaction-card">
-        <h2 id="interactionCharacter"></h2>
-        <div id="interactionTeam"></div>
-        <p id="interactionAbility"></p>
-        <div id="interactionFact"></div>
+        <div class="interaction-title">
+            <h2 id="interactionCharacter"></h2>
+            <span id="interactionTeam"></span>
+        </div>
+        <div class="interaction-ability">
+            <p id="interactionAbility"></p>
+        </div>
+        <div class="interaction-fact">
+            <strong>Did you know?</strong>
+            <p id="interactionFact"></p>
+        </div>
     </div>
 </section>
 <section class="homepage-card daily-script">
