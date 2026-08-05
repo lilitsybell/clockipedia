@@ -16,18 +16,33 @@ async function loadDailyScript(){
             "Failed to load daily-script.json"
         );
     }
-    const dailyInfo =
+    const daily =
         await response.json();
     const scriptResponse =
-        await fetch("/" + dailyInfo.file);
+        await fetch("/" + daily.file);
     if(!scriptResponse.ok){
         throw new Error(
             "Failed to load daily script file"
         );
     }
-    dailyScript =
+    const script =
         await scriptResponse.json();
-    dailyScript.isDaily = true;
+    const meta =
+        script.find(
+            entry =>
+                typeof entry === "object" &&
+                entry.id === "_meta"
+        );
+    dailyScript = {
+        ...meta,
+        characters:
+            script.filter(
+                entry =>
+                    typeof entry === "string"
+            ),
+        date:
+            daily.date
+    };
     console.log(
         "Loaded daily script:",
         dailyScript
@@ -112,34 +127,32 @@ function buildDailyCharacterWheel(){
         return;
     }
     wheel.innerHTML = "";
-    const characters =
-        extractDailyCharacters(
-            dailyScript
-        );
-    characters.forEach(character=>{
-        const id =
-            typeof character === "string"
-            ? character
-            : character.id;
-        const data =
-            ScriptGenerator
-            .characterLookup
-            .get(id);
-        if(!data){
+    const scriptCharacters =
+        dailyScript.characters || [];
+    console.log(
+        "Daily script character IDs:",
+        scriptCharacters
+    );
+    scriptCharacters.forEach(characterID => {
+        const character =
+            getCharacter(characterID);
+        if(!character){
             console.warn(
-                "Missing daily character:",
-                id
+                "Missing character:",
+                characterID
             );
             return;
         }
         const img =
-            document.createElement("img");
+            document.createElement(
+                "img"
+            );
         img.src =
-            data.image;
+            character.image;
         img.alt =
-            data.name;
+            character.name;
         img.title =
-            data.name;
+            character.name;
         img.className =
             "daily-character-icon";
         wheel.appendChild(img);
@@ -316,6 +329,7 @@ name.className = teamClass;
 ========================================== */
 async function initializeHomepage(){
     try{
+await loadCharacters();
 await loadHomepageCharacters();
 await loadInteractions();
 await loadDailyScript();
