@@ -240,15 +240,15 @@ body {
 }
 .token-face{
     position:absolute;
-    width:120px;
-    height:120px;
+    width:140px;
+    height:140px;
     display:flex;
     justify-content:center;
     align-items:center;
 }
 .token-face img{
-    width:120px;
-    height:120px;
+    width:140px;
+    height:140px;
     object-fit:contain;
 }
 .token-name{
