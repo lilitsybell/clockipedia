@@ -51,17 +51,33 @@ document.querySelector(
     updateInteractionCard(character);
 }
 function updateInteractionCard(character){
-
-    document.getElementById(
-        "interactionCharacter"
-    ).textContent =
-        character.name;
-
-    document.getElementById(
-        "interactionTeam"
-    ).textContent =
+    const teamColors = {
+        "Townsfolk":"blue",
+        "Outsiders":"blue",
+        "Minions":"red",
+        "Demons":"red",
+        "Travellers":"traveller",
+        "Loric":"lime",
+        "Fabled":"copper"
+    };
+    const teamClass =
+        teamColors[character.team] || "";
+    const team =
+        document.getElementById(
+            "interactionTeam"
+        );
+    team.textContent =
         character.team || "";
-
+    team.className =
+        teamClass;
+    const name =
+        document.getElementById(
+            "interactionCharacter"
+        );
+    name.textContent =
+        character.name;
+    name.className =
+        teamClass;
     document.getElementById(
         "interactionAbility"
     ).textContent =
