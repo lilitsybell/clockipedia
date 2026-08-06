@@ -150,7 +150,7 @@ function buildDailyCharacterWheel(){
         .filter(Boolean);
 
 
-    const visibleCount = 10;
+    const visibleCount = 8;
 
 
     const radius = 400;
