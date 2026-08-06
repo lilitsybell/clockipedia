@@ -159,27 +159,32 @@ function buildDailyCharacterWheel(){
             "daily-character-icon";
         wheel.appendChild(img);
     });
-    // wait for images to load
     const images =
         [...wheel.querySelectorAll("img")];
-    Promise.all(
-        images.map(img =>
-            img.complete
-            ? Promise.resolve()
-            : new Promise(resolve=>{
-                img.onload = resolve;
-            })
-        )
-    ).then(()=>{
-        // clone once for infinite loop
-        images.forEach(img=>{
-            wheel.appendChild(
-                img.cloneNode(true)
-            );
-        });
-        startDailyWheel();
+    const radius = 360;
+    images.forEach((img,index)=>{
+        const angle =
+            Math.PI +
+            (Math.PI * index)/(images.length-1);
+        const x =
+            Math.cos(angle) * radius;
+        const y =
+            Math.sin(angle) * radius;
+        img.dataset.x = x;
+        img.dataset.y = y;
+        img.style.transform =
+            `
+            translate(
+                ${x}px,
+                ${y}px
+            )
+            `;
     });
+    startDailyWheel();
 }
+/* ==========================================
+   Rotate Character Wheel
+========================================== */
 function startDailyWheel(){
     const wheel =
         document.getElementById(
@@ -193,24 +198,29 @@ function startDailyWheel(){
             dailyWheelAnimation
         );
     }
-    let position = 0;
+    let rotation = 0;
     let paused = false;
-    wheel.onmouseenter = () =>{
+    wheel.onmouseenter = ()=>{
         paused = true;
     };
-    wheel.onmouseleave = () =>{
+    wheel.onmouseleave = ()=>{
         paused = false;
     };
     function animate(){
         if(!paused){
-            position -= 0.2;
-            const reset =
-                wheel.scrollWidth / 2;
-            if(Math.abs(position) >= reset){
-                position = 0;
-            }
+            rotation -= 0.03;
             wheel.style.transform =
-                `translateX(${position}px)`;
+                `
+                rotate(${rotation}deg)
+                `;
+            const icons =
+                wheel.querySelectorAll(
+                    ".daily-character-icon"
+                );
+            icons.forEach(icon=>{
+                icon.style.rotate =
+                    `${-rotation}deg`;
+            });
         }
         dailyWheelAnimation =
             requestAnimationFrame(
