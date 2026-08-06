@@ -475,39 +475,25 @@ body {
 }
 .daily-character-wheel{
     position:absolute;
-    width:700px;
-    height:350px;
-    left:50%;
+    width:1400px;
+    height:400px;
+    left:0;
     top:0;
-    transform:translateX(-50%);
 }
 .daily-character-icon{
     position:absolute;
-    width:100px;
-    height:100px;
+    width:90px;
+    height:90px;
     background-image:url("/images/token.png");
     background-size:contain;
     background-repeat:no-repeat;
     background-position:center;
-    padding:14px;
     object-fit:contain;
-    transition:transform .3s ease;
-}
-@keyframes arcScroll {
-    from{
-        transform:
-        translateX(-50%)
-        rotate(0deg);
-    }
-    to{
-        transform:
-        translateX(-50%)
-        rotate(360deg);
-    }
+    transform:
+        translate(-50%,-50%);
 }
 .daily-character-wheel{
-    animation:
-        arcScroll 90s linear infinite;
+    width:1400px;
 }
 /* ===========================
    Character Pages
