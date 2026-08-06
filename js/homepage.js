@@ -160,8 +160,10 @@ const visibleCount = 7;
     const centerX = 400;
     const centerY = 625;
 
-const arcStart = Math.PI * 1.15;
-const arcEnd = Math.PI * 1.85;
+const arcStart = Math.PI;
+const arcEnd = Math.PI;
+/*const arcStart = Math.PI * 1.15;
+const arcEnd = Math.PI * 1.85;*/
 
     const tokens = [];
 
