@@ -245,28 +245,32 @@
     "image": "https://images.klutzbanana.com/characters_official/bountyhunter_g.png",
     "ability": "You start knowing 1 evil player. If the player you know dies, you learn another evil player tonight. [1 Townsfolk is evil]",
     "flavor": "Alone, I walk these streets, paved with the sick stench of corruption. Its thickness worms its way into my nostrils, unbidden, burning with revulsion. And anticipation. The illness of this wretched place grows each night. And I... I am the cure.",
-    "purpose": "Purpose",
+    "purpose": "The [Bounty Hunter] learns exactly who the evil players are, but also creates an evil Townsfolk.",
     "summary": [
-             "Summary1",
-             "Summary2"
+             "The [Bounty Hunter] starts knowing the name of one evil player. When that player dies, they learn a new name that night.",
+             "It does not matter how the player dies. As long as the player dies and is dead, the [Bounty Hunter] learns a new name.",
+             "The [Bounty Hunter] only learns the player's name, not their character or character type.",
+             "The [Bounty Hunter] can learn any character type, even Travellers, as long as the player is evil.",
+             "The [Bounty Hunter] cannot learn the same name twice.",
+             "If there are no more evil players to learn, the [Bounty Hunter] learns a \"0\".",
+             "During setup, one Townsfolk player is evil. That player knows they are evil."
              ],
     "run": {
            "Setup": [
-                "Thing1",
-                "Thing2"
+                "One Townsfolk is made evil, even if the [Bounty Hunter] is drunk or poisoned. The Townsfolk becomes the evil version of their character (eg. evil Seamstress).",
+                "The evil player learns that they are evil on the first night, even if they are drunk, poisoned, or dead."
                 ],
            "First Night": [
-                "Thing1",
-                "Thing2"
+                "The [Bounty Hunter] learns any evil player."
                 ],
            "Every Night": [
-                "Thing1",
-                "Thing2"
+                "If the player the [Bounty Hunter] learned has died, the [Bounty Hunter] learns the name of another evil player."
                 ]
            },
     "examples": [
-                "Example1",
-                "Example2"
+                "During setup, the Storyteller chooses the [Monk] will be evil. On the first night, the [Monk] wakes to learn they are the evil [Monk]. The [Bounty Hunter] wakes and learns the [Mezepheles] player.",
+                "On the third day, the [Zombuul], who was learned by the [Bounty Hunter], is executed and dies. The [Bounty Hunter] learns the [Baron] player that night.",
+                "The [Bounty Hunter] neighbors the [No Dashii]. The Storyteller chooses for the [Balloonist] to be evil, and tells the [Balloonist] they are the evil [Balloonist]. The poisoned [Bounty Hunter] learns the [Barber] player.
                 ]
 },
 "cannibal":
