@@ -141,7 +141,6 @@ function buildDailyCharacterWheel(){
     wheel.innerHTML = "";
     const scriptCharacters =
         dailyScript.characters || [];
-function addCharacterIcons(){
     scriptCharacters.forEach(characterID => {
         const character =
             getCharacter(characterID);
@@ -160,20 +159,26 @@ function addCharacterIcons(){
             "daily-character-icon";
         wheel.appendChild(img);
     });
-}
-// first copy
-addCharacterIcons();
-// duplicate for seamless loop
-addCharacterIcons();
-    // Duplicate characters for seamless loop
-    const originals =
-        [...wheel.children];
-    originals.forEach(img => {
-        const clone =
-            img.cloneNode(true);
-        wheel.appendChild(clone);
+    // wait for images to load
+    const images =
+        [...wheel.querySelectorAll("img")];
+    Promise.all(
+        images.map(img =>
+            img.complete
+            ? Promise.resolve()
+            : new Promise(resolve=>{
+                img.onload = resolve;
+            })
+        )
+    ).then(()=>{
+        // clone once for infinite loop
+        images.forEach(img=>{
+            wheel.appendChild(
+                img.cloneNode(true)
+            );
+        });
+        startDailyWheel();
     });
-    startDailyWheel();
 }
 function startDailyWheel(){
     const wheel =
@@ -183,20 +188,25 @@ function startDailyWheel(){
     if(!wheel){
         return;
     }
+    if(dailyWheelAnimation){
+        cancelAnimationFrame(
+            dailyWheelAnimation
+        );
+    }
     let position = 0;
     let paused = false;
-    wheel.onmouseenter = () => {
+    wheel.onmouseenter = () =>{
         paused = true;
     };
-    wheel.onmouseleave = () => {
+    wheel.onmouseleave = () =>{
         paused = false;
     };
     function animate(){
         if(!paused){
-            position -= 0.5;
-            const resetPoint =
+            position -= 0.2;
+            const reset =
                 wheel.scrollWidth / 2;
-            if(Math.abs(position) >= resetPoint){
+            if(Math.abs(position) >= reset){
                 position = 0;
             }
             wheel.style.transform =
@@ -206,11 +216,6 @@ function startDailyWheel(){
             requestAnimationFrame(
                 animate
             );
-    }
-    if(dailyWheelAnimation){
-        cancelAnimationFrame(
-            dailyWheelAnimation
-        );
     }
     animate();
 }
