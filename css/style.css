@@ -480,6 +480,9 @@ body {
     left:0;
     top:-250px;
 }
+.daily-character-wheel{
+    background:rgba(255,0,0,.1);
+}
 .daily-character-icon{
     position:absolute;
     width:140px;
