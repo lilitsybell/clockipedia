@@ -177,18 +177,25 @@ function animate(){
             character.progress = 0;
         }
 const angle =
-    Math.PI -
-    (Math.PI * character.progress);
-        const x =
-            400 +
-            Math.cos(angle) * radiusX;
+    Math.PI * character.progress;
+const x =
+    20 +
+    (760 * character.progress);
 const y =
-    420 -
+    350 -
     Math.sin(angle) * radiusY;
-        character.img.style.left =
-            `${x}px`;
-        character.img.style.top =
-            `${y}px`;
+// rotate token to follow the curve
+const rotation =
+    (character.progress - 0.5) * 180;
+character.img.style.left =
+    `${x}px`;
+character.img.style.top =
+    `${y}px`;
+character.img.style.transform =
+    `
+    translate(-50%,-50%)
+    rotate(${rotation}deg)
+    `;
     });
     requestAnimationFrame(
         animate
