@@ -473,25 +473,12 @@ body {
 .daily-character-wheel{
     display:flex;
     width:max-content;
-    gap:15px;
-    animation:
-        dailyScroll 35s linear infinite;
+    gap:18px;
 }
 .daily-character-icon{
     width:82px;
     height:82px;
     flex-shrink:0;
-}
-.daily-character-wheel:hover{
-    animation-play-state:paused;
-}
-@keyframes dailyScroll{
-    from{
-        transform:translateX(0);
-    }
-    to{
-        transform:translateX(-50%);
-    }
 }
 /* ===========================
    Character Pages
