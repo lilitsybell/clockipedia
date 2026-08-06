@@ -156,11 +156,11 @@ function buildDailyCharacterWheel(){
     const radius = 400;
 
     const centerX = 400;
-    const centerY = 650;
+    const centerY = 550;
 
 
-    const arcStart = Math.PI * 1.15;
-    const arcEnd = Math.PI * 1.85;
+const arcStart = Math.PI * 1.20;
+const arcEnd = Math.PI * 1.80;
 
 
     const tokens = [];
