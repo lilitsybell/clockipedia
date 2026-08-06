@@ -58,7 +58,7 @@ dailyScript = {
 }
 async function loadHomepageCharacters(){
     const response =
-        await fetch("/data/characters.json");
+        await fetch("./data/characters.json");
     if(!response.ok){
         throw new Error(
             "Failed to load characters.json"
