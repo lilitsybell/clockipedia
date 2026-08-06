@@ -476,15 +476,13 @@ body {
 }
 .daily-character-wheel{
     position:absolute;
-    width:720px;
-    height:720px;
+    width:700px;
+    height:700px;
     border-radius:50%;
     left:50%;
     top:50%;
     transform:
-        translate(-50%,-50%)
-        rotate(0deg);
-    transform-origin:center;
+        translate(-50%,-50%);
 }
 .daily-character-icon{
     position:absolute;
