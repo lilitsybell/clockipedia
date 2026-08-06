@@ -1,4 +1,4 @@
-console.log("homepage.js updated 8/05/26 17:43");
+console.log("homepage.js updated 8/05/26 22:31");
 let homepageCharacters = [];
 let recentCharacters = [];
 let dailyScript = null;
@@ -163,9 +163,8 @@ function buildDailyCharacterWheel(){
         [...wheel.querySelectorAll("img")];
 const radius = 300;
 images.forEach((img,index)=>{
-    const angle =
-        Math.PI -
-        (Math.PI * index)/(images.length-1);
+const angle =
+    Math.PI * index/(images.length-1);
     const x =
         Math.cos(angle) * radius;
     const y =
@@ -214,20 +213,6 @@ wheel.style.transform =
 translate(-50%,-50%)
 rotate(${rotation}deg)
 `;
-            const icons =
-                wheel.querySelectorAll(
-                    ".daily-character-icon"
-                );
-            icons.forEach(icon=>{
-icon.style.transform =
-`
-translate(
-${icon.dataset.x}px,
-${icon.dataset.y}px
-)
-rotate(${-rotation}deg)
-`;
-            });
         }
         dailyWheelAnimation =
             requestAnimationFrame(
