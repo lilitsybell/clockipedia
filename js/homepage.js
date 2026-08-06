@@ -150,8 +150,7 @@ function buildDailyCharacterWheel(){
         .filter(Boolean);
 
 
-const visibleCount = 8;
-const spacingCount = 12;
+const visibleCount = 5;
 
 
     const radius = 450;
@@ -159,10 +158,8 @@ const spacingCount = 12;
     const centerX = 400;
     const centerY = 550;
 
-
-const arcStart = Math.PI * 1.20;
-const arcEnd = Math.PI * 1.80;
-
+const arcStart = Math.PI * 1.15;
+const arcEnd = Math.PI * 1.85;
 
     const tokens = [];
 
@@ -187,7 +184,7 @@ tokens.push({
     element: img,
 
 progress:
-    i / spacingCount,
+    i / (visibleCount - 1),
 
     characterIndex:
         i,
@@ -204,7 +201,7 @@ progress:
 
     function animate(){
 
-        movement -= 0.00035;
+       movement -= 0.00015;
 
 
         if(movement <= -1){
