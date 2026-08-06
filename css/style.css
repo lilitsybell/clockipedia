@@ -436,26 +436,25 @@ body {
 =========================== */
 .daily-script{
     display:flex;
-    width:min(1100px,95%);
-    height:190px;
-    margin:20px auto;
-    border-radius:25px;
+    align-items:stretch;
     overflow:hidden;
-    box-shadow:0 8px 25px rgba(0,0,0,.12);
+    padding:0;
+    border-radius:20px;
+    background:var(--purple);
+    box-shadow:0 8px 20px rgba(0,0,0,.12);
 }
 .daily-script-info{
     width:320px;
-    background:var(--purple);
+    padding:30px;
     color:white;
-    padding:28px;
-    z-index:2;
+    flex-shrink:0;
 }
 .daily-script-carousel{
     flex:1;
     background:white;
-    border-radius:35px 0 0 35px;
-    margin-left:-18px;
-    padding-left:45px;
+    margin-left:-45px;
+    padding:20px 25px 20px 80px;
+    border-radius:100px 0 0 100px;
     display:flex;
     align-items:center;
     overflow:hidden;
@@ -465,20 +464,15 @@ body {
     background:white;
     padding:25px 30px;
 }
-.daily-script-right::before{
-    content:"";
-    position:absolute;
-    left:-55px;
-    top:0;
-    bottom:0;
-    width:110px;
-    background:white;
-    border-radius:55px;
-}
 .daily-character-wheel-wrapper{
     flex:1;
+    background:white;
+    border-top-left-radius:80px;
+    border-bottom-left-radius:80px;
+    padding:20px 10px 20px 40px;
     overflow:hidden;
-    position:relative;
+    display:flex;
+    align-items:center;
 }
 .daily-character-wheel{
     display:flex;
