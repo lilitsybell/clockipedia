@@ -7300,30 +7300,6 @@
                 "Thing1",
                 "Thing2"
                 ],
-           "First Night": [
-                "Thing1",
-                "Thing2"
-                ],
-           "Every Night": [
-                "Thing1",
-                "Thing2"
-                ],
-           "First Day": [
-                "Thing1",
-                "Thing2"
-                ],
-           "Every Day": [
-                "Thing1",
-                "Thing 2"
-                ],
-           "Other Nights": [
-                "Thing1",
-                "Thing2"
-                ],
-           "Other Days": [
-                "Thing1",
-                "Thing2"
-                ],
            "End of Game": [
                 "Thing1",
                 "Thing2"
@@ -7340,7 +7316,7 @@
     "team": "Travellers",
     "image": "https://images.klutzbanana.com/characters_official/barista.png",
     "ability": "Each night, until dusk, 1) a player becomes sober, healthy & gets true info, or 2) their ability works twice. They learn which.",
-    "flavor": "Flavor",
+    "flavor": "A cup of coffee with no cream, Monsieur? I’m terribly sorry, but we’re fresh out of cream — how about with no milk?",
     "purpose": "Purpose",
     "summary": [
              "Summary1",
@@ -7355,31 +7331,7 @@
                 "Thing1",
                 "Thing2"
                 ],
-           "First Night": [
-                "Thing1",
-                "Thing2"
-                ],
            "Every Night": [
-                "Thing1",
-                "Thing2"
-                ],
-           "First Day": [
-                "Thing1",
-                "Thing2"
-                ],
-           "Every Day": [
-                "Thing1",
-                "Thing 2"
-                ],
-           "Other Nights": [
-                "Thing1",
-                "Thing2"
-                ],
-           "Other Days": [
-                "Thing1",
-                "Thing2"
-                ],
-           "End of Game": [
                 "Thing1",
                 "Thing2"
                 ]
@@ -7395,7 +7347,7 @@
     "team": "Travellers",
     "image": "https://images.klutzbanana.com/characters_official/beggar.png",
     "ability": "You must use a vote token to vote. If a dead player gives you theirs, you learn their alignment. You are sober & healthy.",
-    "flavor": "Flavor",
+    "flavor": "Alms for the poor, good Sir? Spare a coin, Madam? Thank you. God bless! You're a right kind soul and no mistake! I'll have some swanky nosh tonight, I will!",
     "purpose": "Purpose",
     "summary": [
              "Summary1",
@@ -7410,33 +7362,9 @@
                 "Thing1",
                 "Thing2"
                 ],
-           "First Night": [
-                "Thing1",
-                "Thing2"
-                ],
-           "Every Night": [
-                "Thing1",
-                "Thing2"
-                ],
-           "First Day": [
-                "Thing1",
-                "Thing2"
-                ],
            "Every Day": [
                 "Thing1",
                 "Thing 2"
-                ],
-           "Other Nights": [
-                "Thing1",
-                "Thing2"
-                ],
-           "Other Days": [
-                "Thing1",
-                "Thing2"
-                ],
-           "End of Game": [
-                "Thing1",
-                "Thing2"
                 ]
            },
     "examples": [
@@ -7450,7 +7378,7 @@
     "team": "Travellers",
     "image": "https://images.klutzbanana.com/characters_official/bishop.png",
     "ability": "Only the Storyteller can nominate. At least 1 opposing player must be nominated each day.",
-    "flavor": "Flavor",
+    "flavor": "In nomine Patris, et Filii, et Spiritus Sancti… Nos mos Dei. Deus vult de nobis.",
     "purpose": "Purpose",
     "summary": [
              "Summary1",
@@ -7461,37 +7389,9 @@
                 "Thing1",
                 "Thing2"
                 ],
-           "Anytime": [
-                "Thing1",
-                "Thing2"
-                ],
-           "First Night": [
-                "Thing1",
-                "Thing2"
-                ],
-           "Every Night": [
-                "Thing1",
-                "Thing2"
-                ],
-           "First Day": [
-                "Thing1",
-                "Thing2"
-                ],
            "Every Day": [
                 "Thing1",
                 "Thing 2"
-                ],
-           "Other Nights": [
-                "Thing1",
-                "Thing2"
-                ],
-           "Other Days": [
-                "Thing1",
-                "Thing2"
-                ],
-           "End of Game": [
-                "Thing1",
-                "Thing2"
                 ]
            },
     "examples": [
@@ -7505,7 +7405,7 @@
     "team": "Travellers",
     "image": "https://images.klutzbanana.com/characters_official/bonecollector.png",
     "ability": "Once per game, at night*, choose a dead player: they regain their ability until dusk.",
-    "flavor": "Flavor",
+    "flavor": "I collect many things. Hair. Teeth. Clothes. Fragments of poems. The dreams of lost lovers. My secret arts are not for you to know but my fee is a mere pittance. Bring me the blood of a noblewoman who died of heartbreak under a full moon, and you shall have your answers.",
     "purpose": "Purpose",
     "summary": [
              "Summary1",
@@ -7520,31 +7420,7 @@
                 "Thing1",
                 "Thing2"
                 ],
-           "First Night": [
-                "Thing1",
-                "Thing2"
-                ],
-           "Every Night": [
-                "Thing1",
-                "Thing2"
-                ],
-           "First Day": [
-                "Thing1",
-                "Thing2"
-                ],
-           "Every Day": [
-                "Thing1",
-                "Thing 2"
-                ],
            "Other Nights": [
-                "Thing1",
-                "Thing2"
-                ],
-           "Other Days": [
-                "Thing1",
-                "Thing2"
-                ],
-           "End of Game": [
                 "Thing1",
                 "Thing2"
                 ]
@@ -7560,7 +7436,7 @@
     "team": "Travellers",
     "image": "https://images.klutzbanana.com/characters_official/bureaucrat.png",
     "ability": "Each night, choose a player (not yourself): their vote counts as 3 votes tomorrow.",
-    "flavor": "Flavor",
+    "flavor": "Sign here please. And here. And here. Aaaaaaaaand here. This should all be sorted and tallied by the end of the day, assuming everyone's signatures are legible. We haven't had a mix-up in the paperwork for ages. Yesterday noon, if memory serves...",
     "purpose": "Purpose",
     "summary": [
              "Summary1",
@@ -7571,37 +7447,13 @@
                 "Thing1",
                 "Thing2"
                 ],
-           "Anytime": [
-                "Thing1",
-                "Thing2"
-                ],
-           "First Night": [
-                "Thing1",
-                "Thing2"
-                ],
            "Every Night": [
-                "Thing1",
-                "Thing2"
-                ],
-           "First Day": [
                 "Thing1",
                 "Thing2"
                 ],
            "Every Day": [
                 "Thing1",
                 "Thing 2"
-                ],
-           "Other Nights": [
-                "Thing1",
-                "Thing2"
-                ],
-           "Other Days": [
-                "Thing1",
-                "Thing2"
-                ],
-           "End of Game": [
-                "Thing1",
-                "Thing2"
                 ]
            },
     "examples": [
@@ -7615,7 +7467,7 @@
     "team": "Travellers",
     "image": "https://images.klutzbanana.com/characters_official/butcher.png",
     "ability": "Each day, after the 1st execution, you may nominate again.",
-    "flavor": "Flavor",
+    "flavor": "It tastes like chicken. More please.",
     "purpose": "Purpose",
     "summary": [
              "Summary1",
@@ -7626,37 +7478,9 @@
                 "Thing1",
                 "Thing2"
                 ],
-           "Anytime": [
-                "Thing1",
-                "Thing2"
-                ],
-           "First Night": [
-                "Thing1",
-                "Thing2"
-                ],
-           "Every Night": [
-                "Thing1",
-                "Thing2"
-                ],
-           "First Day": [
-                "Thing1",
-                "Thing2"
-                ],
            "Every Day": [
                 "Thing1",
                 "Thing 2"
-                ],
-           "Other Nights": [
-                "Thing1",
-                "Thing2"
-                ],
-           "Other Days": [
-                "Thing1",
-                "Thing2"
-                ],
-           "End of Game": [
-                "Thing1",
-                "Thing2"
                 ]
            },
     "examples": [
@@ -7670,7 +7494,7 @@
     "team": "Travellers",
     "image": "https://images.klutzbanana.com/characters_official/cacklejack.png",
     "ability": "Each day, choose a player: a different player changes character tonight.",
-    "flavor": "Flavor",
+    "flavor": "Wire α To wire β. LigHt oN. BuZZer off. GAzOinks! Arms STra1ght. FingER 2 nose. hOooLd stiLL. BoiNgo-banGo! Ha-ha-ha!",
     "purpose": "Purpose",
     "summary": [
              "Summary1",
@@ -7681,35 +7505,11 @@
                 "Thing1",
                 "Thing2"
                 ],
-           "Anytime": [
-                "Thing1",
-                "Thing2"
-                ],
-           "First Night": [
-                "Thing1",
-                "Thing2"
-                ],
-           "Every Night": [
-                "Thing1",
-                "Thing2"
-                ],
-           "First Day": [
-                "Thing1",
-                "Thing2"
-                ],
            "Every Day": [
                 "Thing1",
                 "Thing 2"
                 ],
            "Other Nights": [
-                "Thing1",
-                "Thing2"
-                ],
-           "Other Days": [
-                "Thing1",
-                "Thing2"
-                ],
-           "End of Game": [
                 "Thing1",
                 "Thing2"
                 ]
@@ -7725,7 +7525,7 @@
     "team": "Travellers",
     "image": "https://images.klutzbanana.com/characters_official/deviant.png",
     "ability": "If you were funny today, you cannot die by exile.",
-    "flavor": "Flavor",
+    "flavor": "Twas the lady's quip, forsooth.",
     "purpose": "Purpose",
     "summary": [
              "Summary1",
@@ -7736,37 +7536,9 @@
                 "Thing1",
                 "Thing2"
                 ],
-           "Anytime": [
-                "Thing1",
-                "Thing2"
-                ],
-           "First Night": [
-                "Thing1",
-                "Thing2"
-                ],
-           "Every Night": [
-                "Thing1",
-                "Thing2"
-                ],
-           "First Day": [
-                "Thing1",
-                "Thing2"
-                ],
            "Every Day": [
                 "Thing1",
                 "Thing 2"
-                ],
-           "Other Nights": [
-                "Thing1",
-                "Thing2"
-                ],
-           "Other Days": [
-                "Thing1",
-                "Thing2"
-                ],
-           "End of Game": [
-                "Thing1",
-                "Thing2"
                 ]
            },
     "examples": [
@@ -7780,7 +7552,7 @@
     "team": "Travellers",
     "image": "https://images.klutzbanana.com/characters_official/gangster.png",
     "ability": "Once per day, you may choose to kill an alive neighbor, if your other alive neighbor agrees.",
-    "flavor": "Flavor",
+    "flavor": "I like your shoes. It would be such a shame if you had a little accident, and they got ruined. Now that you mention it, I like your cufflinks too.",
     "purpose": "Purpose",
     "summary": [
              "Summary1",
@@ -7791,37 +7563,9 @@
                 "Thing1",
                 "Thing2"
                 ],
-           "Anytime": [
-                "Thing1",
-                "Thing2"
-                ],
-           "First Night": [
-                "Thing1",
-                "Thing2"
-                ],
-           "Every Night": [
-                "Thing1",
-                "Thing2"
-                ],
-           "First Day": [
-                "Thing1",
-                "Thing2"
-                ],
            "Every Day": [
                 "Thing1",
                 "Thing 2"
-                ],
-           "Other Nights": [
-                "Thing1",
-                "Thing2"
-                ],
-           "Other Days": [
-                "Thing1",
-                "Thing2"
-                ],
-           "End of Game": [
-                "Thing1",
-                "Thing2"
                 ]
            },
     "examples": [
@@ -7835,7 +7579,7 @@
     "team": "Travellers",
     "image": "https://images.klutzbanana.com/characters_official/gnome.png",
     "ability": "All players start knowing a player of your alignment. You may choose to kill anyone who nominates them.",
-    "flavor": "Flavor",
+    "flavor": "Four the score or seven beers, no shows are goes for me and my. A prank to crack the cranks and planks o' the floor foundation length, so incontravertabubbilly mini. The large essays down streams of joyce, no greater than is scene, not inherdt, Ha-urrumph.o.",
     "purpose": "Purpose",
     "summary": [
              "Summary1",
@@ -7846,37 +7590,9 @@
                 "Thing1",
                 "Thing2"
                 ],
-           "Anytime": [
-                "Thing1",
-                "Thing2"
-                ],
-           "First Night": [
-                "Thing1",
-                "Thing2"
-                ],
-           "Every Night": [
-                "Thing1",
-                "Thing2"
-                ],
-           "First Day": [
-                "Thing1",
-                "Thing2"
-                ],
            "Every Day": [
                 "Thing1",
                 "Thing 2"
-                ],
-           "Other Nights": [
-                "Thing1",
-                "Thing2"
-                ],
-           "Other Days": [
-                "Thing1",
-                "Thing2"
-                ],
-           "End of Game": [
-                "Thing1",
-                "Thing2"
                 ]
            },
     "examples": [
@@ -7890,7 +7606,7 @@
     "team": "Travellers",
     "image": "https://images.klutzbanana.com/characters_official/gunslinger.png",
     "ability": "Each day, after the 1st vote has been tallied, you may choose a player that voted: they die.",
-    "flavor": "Flavor",
+    "flavor": "It's time someone took matters into their own hands. That someone... is me.",
     "purpose": "Purpose",
     "summary": [
              "Summary1",
@@ -7901,37 +7617,9 @@
                 "Thing1",
                 "Thing2"
                 ],
-           "Anytime": [
-                "Thing1",
-                "Thing2"
-                ],
-           "First Night": [
-                "Thing1",
-                "Thing2"
-                ],
-           "Every Night": [
-                "Thing1",
-                "Thing2"
-                ],
-           "First Day": [
-                "Thing1",
-                "Thing2"
-                ],
            "Every Day": [
                 "Thing1",
                 "Thing 2"
-                ],
-           "Other Nights": [
-                "Thing1",
-                "Thing2"
-                ],
-           "Other Days": [
-                "Thing1",
-                "Thing2"
-                ],
-           "End of Game": [
-                "Thing1",
-                "Thing2"
                 ]
            },
     "examples": [
@@ -7945,7 +7633,7 @@
     "team": "Travellers",
     "image": "https://images.klutzbanana.com/characters_official/harlot.png",
     "ability": "Each night*, choose a living player: if they agree, you learn their character, but you both might die.",
-    "flavor": "Flavor",
+    "flavor": "Enchanté, Sailor. You look like you need someone to really listen to your troubles. I'm a good listener. Very, very good.",
     "purpose": "Purpose",
     "summary": [
              "Summary1",
@@ -7956,35 +7644,7 @@
                 "Thing1",
                 "Thing2"
                 ],
-           "Anytime": [
-                "Thing1",
-                "Thing2"
-                ],
-           "First Night": [
-                "Thing1",
-                "Thing2"
-                ],
-           "Every Night": [
-                "Thing1",
-                "Thing2"
-                ],
-           "First Day": [
-                "Thing1",
-                "Thing2"
-                ],
-           "Every Day": [
-                "Thing1",
-                "Thing 2"
-                ],
            "Other Nights": [
-                "Thing1",
-                "Thing2"
-                ],
-           "Other Days": [
-                "Thing1",
-                "Thing2"
-                ],
-           "End of Game": [
                 "Thing1",
                 "Thing2"
                 ]
@@ -8000,7 +7660,7 @@
     "team": "Travellers",
     "image": "https://images.klutzbanana.com/characters_official/judge.png",
     "ability": "Once per game, if another player nominated, you may choose to force the current execution to pass or fail.",
-    "flavor": "Flavor",
+    "flavor": "I find the defendant guilty of the crimes of murder, fraud, arson, larceny, impersonating an officer of the law, practicing medicine without a license, slander, regicide, and littering.",
     "purpose": "Purpose",
     "summary": [
              "Summary1",
@@ -8011,37 +7671,9 @@
                 "Thing1",
                 "Thing2"
                 ],
-           "Anytime": [
-                "Thing1",
-                "Thing2"
-                ],
-           "First Night": [
-                "Thing1",
-                "Thing2"
-                ],
-           "Every Night": [
-                "Thing1",
-                "Thing2"
-                ],
-           "First Day": [
-                "Thing1",
-                "Thing2"
-                ],
            "Every Day": [
                 "Thing1",
                 "Thing 2"
-                ],
-           "Other Nights": [
-                "Thing1",
-                "Thing2"
-                ],
-           "Other Days": [
-                "Thing1",
-                "Thing2"
-                ],
-           "End of Game": [
-                "Thing1",
-                "Thing2"
                 ]
            },
     "examples": [
@@ -8055,7 +7687,7 @@
     "team": "Travellers",
     "image": "https://images.klutzbanana.com/characters_official/matron.png",
     "ability": "Each day, you may choose up to 3 sets of 2 players to swap seats. Players may not leave their seats to talk in private.",
-    "flavor": "Flavor",
+    "flavor": "Miss Featherbottom, be quiet. Master Rutherford, a teacup needs just the four fingers, please. I know you are a father of nine, but age, or lack there-of as the case may be, is never an excuse for poor manners.",
     "purpose": "Purpose",
     "summary": [
              "Summary1",
@@ -8066,37 +7698,9 @@
                 "Thing1",
                 "Thing2"
                 ],
-           "Anytime": [
-                "Thing1",
-                "Thing2"
-                ],
-           "First Night": [
-                "Thing1",
-                "Thing2"
-                ],
-           "Every Night": [
-                "Thing1",
-                "Thing2"
-                ],
-           "First Day": [
-                "Thing1",
-                "Thing2"
-                ],
            "Every Day": [
                 "Thing1",
                 "Thing 2"
-                ],
-           "Other Nights": [
-                "Thing1",
-                "Thing2"
-                ],
-           "Other Days": [
-                "Thing1",
-                "Thing2"
-                ],
-           "End of Game": [
-                "Thing1",
-                "Thing2"
                 ]
            },
     "examples": [
@@ -8110,7 +7714,7 @@
     "team": "Travellers",
     "image": "https://images.klutzbanana.com/characters_official/scapegoat.png",
     "ability": "If a player of your alignment is executed, you might be executed instead.",
-    "flavor": "Flavor",
+    "flavor": "Good evening! Thank you for inviting me to the ball. I'm not from around here, but you sure seem like a friendly bunch, by golly. I'm sure we'll get along just dandy. What's all that rope for?",
     "purpose": "Purpose",
     "summary": [
              "Summary1",
@@ -8122,34 +7726,6 @@
                 "Thing2"
                 ],
            "Anytime": [
-                "Thing1",
-                "Thing2"
-                ],
-           "First Night": [
-                "Thing1",
-                "Thing2"
-                ],
-           "Every Night": [
-                "Thing1",
-                "Thing2"
-                ],
-           "First Day": [
-                "Thing1",
-                "Thing2"
-                ],
-           "Every Day": [
-                "Thing1",
-                "Thing 2"
-                ],
-           "Other Nights": [
-                "Thing1",
-                "Thing2"
-                ],
-           "Other Days": [
-                "Thing1",
-                "Thing2"
-                ],
-           "End of Game": [
                 "Thing1",
                 "Thing2"
                 ]
@@ -8165,7 +7741,7 @@
     "team": "Travellers",
     "image": "https://images.klutzbanana.com/characters_official/thief.png",
     "ability": "Each night, choose a player (not yourself): their vote counts negatively tomorrow.",
-    "flavor": "Flavor",
+    "flavor": "I aint done nuffink. I weren't even in dat alley last night! It weren't me what stole Mayor Bruno's briefcase wiv all dem fancy dockoments innit. Besides, it was too 'eavy to carry far.",
     "purpose": "Purpose",
     "summary": [
              "Summary1",
@@ -8176,37 +7752,13 @@
                 "Thing1",
                 "Thing2"
                 ],
-           "Anytime": [
-                "Thing1",
-                "Thing2"
-                ],
-           "First Night": [
-                "Thing1",
-                "Thing2"
-                ],
            "Every Night": [
-                "Thing1",
-                "Thing2"
-                ],
-           "First Day": [
                 "Thing1",
                 "Thing2"
                 ],
            "Every Day": [
                 "Thing1",
                 "Thing 2"
-                ],
-           "Other Nights": [
-                "Thing1",
-                "Thing2"
-                ],
-           "Other Days": [
-                "Thing1",
-                "Thing2"
-                ],
-           "End of Game": [
-                "Thing1",
-                "Thing2"
                 ]
            },
     "examples": [
@@ -8220,7 +7772,7 @@
     "team": "Travellers",
     "image": "https://images.klutzbanana.com/characters_official/voudon.png",
     "ability": "Only you & the dead can vote. They don't need a vote token to do so. A 50% majority isn't required.",
-    "flavor": "Flavor",
+    "flavor": "Bien venu. Sit down. Breathe deep. Enter the land of the dead. See with their eyes. Speak with their voice. Yon sel lang se janm ase.",
     "purpose": "Purpose",
     "summary": [
              "Summary1",
@@ -8231,37 +7783,9 @@
                 "Thing1",
                 "Thing2"
                 ],
-           "Anytime": [
-                "Thing1",
-                "Thing2"
-                ],
-           "First Night": [
-                "Thing1",
-                "Thing2"
-                ],
-           "Every Night": [
-                "Thing1",
-                "Thing2"
-                ],
-           "First Day": [
-                "Thing1",
-                "Thing2"
-                ],
            "Every Day": [
                 "Thing1",
                 "Thing 2"
-                ],
-           "Other Nights": [
-                "Thing1",
-                "Thing2"
-                ],
-           "Other Days": [
-                "Thing1",
-                "Thing2"
-                ],
-           "End of Game": [
-                "Thing1",
-                "Thing2"
                 ]
            },
     "examples": [
