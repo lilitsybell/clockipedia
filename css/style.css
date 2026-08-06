@@ -464,14 +464,25 @@ body {
     background:white;
     padding:25px 30px;
 }
-.daily-character-wheel-wrapper{
+.daily-character-wheel-wrapper::before{
+    content:"";
     position:absolute;
-    width:800px;
-    height:300px;
     left:50%;
-    bottom:0;
+    bottom:-120px;
+    width:900px;
+    height:900px;
     transform:translateX(-50%);
-    overflow:hidden;
+    border-radius:50%;
+    background:
+        radial-gradient(
+            circle,
+            rgba(102,102,153,.25) 0%,
+            rgba(102,102,153,.12) 35%,
+            rgba(102,102,153,.04) 55%,
+            transparent 70%
+        );
+    filter:blur(45px);
+    pointer-events:none;
 }
 .daily-character-wheel{
     position:absolute;
