@@ -493,6 +493,22 @@ body {
     object-fit:contain;
     transition:transform .3s ease;
 }
+@keyframes arcScroll {
+    from{
+        transform:
+        translateX(-50%)
+        rotate(0deg);
+    }
+    to{
+        transform:
+        translateX(-50%)
+        rotate(360deg);
+    }
+}
+.daily-character-wheel{
+    animation:
+        arcScroll 90s linear infinite;
+}
 /* ===========================
    Character Pages
 =========================== */
