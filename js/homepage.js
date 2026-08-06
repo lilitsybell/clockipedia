@@ -201,14 +201,15 @@ let movement = 0;
 let lastTime = null;
 function animate(timestamp){
 
-    if(!lastTime){
-        lastTime = timestamp;
-    }
-
-    const delta =
-        timestamp - lastTime;
-
+if(!lastTime){
     lastTime = timestamp;
+    requestAnimationFrame(animate);
+    return;
+}
+
+const delta = timestamp - lastTime;
+
+lastTime = timestamp;
 
     movement -= 0.0000008 * delta;
 
@@ -294,9 +295,7 @@ dailyWheelAnimation =
     requestAnimationFrame(animate);
 
     }
-
-
-    animate();
+requestAnimationFrame(animate);
 
 }
 /* ==========================================
