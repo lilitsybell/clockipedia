@@ -156,7 +156,7 @@ function buildDailyCharacterWheel(){
     const radius = 400;
 
     const centerX = 400;
-    const centerY = 500;
+    const centerY = 650;
 
 
     const arcStart = Math.PI * 1.15;
@@ -181,17 +181,19 @@ function buildDailyCharacterWheel(){
         wheel.appendChild(img);
 
 
-        tokens.push({
+tokens.push({
 
-            element: img,
+    element: img,
 
-            progress:
-                i / visibleCount,
+    progress:
+        i / visibleCount,
 
-            characterIndex:
-                i
+    characterIndex:
+        i,
 
-        });
+    passed:false
+
+});
 
     }
 
@@ -259,19 +261,26 @@ function buildDailyCharacterWheel(){
 
 
             // change character only when completing a loop
-            if(progress < 0.05){
+if(progress < 0.02 && !token.passed){
 
-                token.characterIndex++;
+    token.characterIndex++;
 
-                if(token.characterIndex >= characterObjects.length){
-                    token.characterIndex = 0;
-                }
+    if(token.characterIndex >= characterObjects.length){
+        token.characterIndex = 0;
+    }
 
-                token.element.src =
-                    characterObjects[
-                        token.characterIndex
-                    ].image;
-            }
+    token.element.src =
+        characterObjects[
+            token.characterIndex
+        ].image;
+
+    token.passed = true;
+}
+
+
+if(progress > 0.5){
+    token.passed = false;
+}
 
 
         });
