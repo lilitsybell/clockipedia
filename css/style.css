@@ -466,9 +466,11 @@ body {
 }
 .daily-character-wheel-wrapper{
     position:absolute;
-    width:900px;
-    height:900px;
-    bottom:-620px;
+    width:700px;
+    height:700px;
+    left:50%;
+    top:50%;
+    transform:translate(-50%, -15%);
     display:flex;
     justify-content:center;
     align-items:center;
@@ -476,8 +478,8 @@ body {
 }
 .daily-character-wheel{
     position:absolute;
-    width:700px;
-    height:700px;
+    width:600px;
+    height:600px;
     border-radius:50%;
     left:50%;
     top:50%;
