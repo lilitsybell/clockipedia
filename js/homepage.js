@@ -243,19 +243,12 @@ progress:
                 radius;
 
 
-
-            token.element.style.left =
-                `${x}px`;
-
-            token.element.style.top =
-                `${y}px`;
-
-
-            token.element.style.transform =
-            `
-            translate(-50%,-50%)
-            rotate(${angle * 180 / Math.PI + 90}deg)
-            `;
+token.element.style.transform =
+`
+translate(${x}px, ${y}px)
+translate(-50%, -50%)
+rotate(${angle * 180 / Math.PI + 90}deg)
+`;
 
 
             // change character only when completing a loop
