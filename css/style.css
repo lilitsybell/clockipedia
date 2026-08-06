@@ -452,12 +452,12 @@ body {
     flex:1;
     background:white;
     margin-left:-25px;
-    padding:20px 0;
     border-radius:50px 0 0 50px;
-    display:flex;
-    align-items:center;
     overflow:hidden;
     position:relative;
+    display:flex;
+    justify-content:center;
+    align-items:flex-end;
 }
 .daily-script-right{
     position:relative;
@@ -465,38 +465,35 @@ body {
     padding:25px 30px;
 }
 .daily-character-wheel-wrapper{
-    flex:1;
-    overflow:hidden;
+    position:absolute;
+    width:900px;
+    height:900px;
+    bottom:-620px;
     display:flex;
+    justify-content:center;
     align-items:center;
-    padding:20px 0;
-    mask-image:
-        linear-gradient(
-            to right,
-            transparent,
-            black 8%,
-            black 92%,
-            transparent
-        );
-        -webkit-mask-image:
-        linear-gradient(
-            to right,
-            transparent,
-            black 8%,
-            black 92%,
-            transparent
-        );
+    overflow:visible;
 }
 .daily-character-wheel{
+    position:absolute;
+    width:900px;
+    height:900px;
+    border-radius:50%;
     display:flex;
-    width:max-content;
-    gap:18px;
-    padding-left:40px;
+    justify-content:center;
+    align-items:center;
+    transform-origin:center;
 }
 .daily-character-icon{
-    width:82px;
-    height:82px;
-    flex-shrink:0;
+    position:absolute;
+    width:120px;
+    height:120px;
+    background-image:url("/images/token.png");
+    background-size:contain;
+    background-position:center;
+    background-repeat:no-repeat;
+    padding:12px;
+    object-fit:contain;
     border-radius:50%;
 }
 /* ===========================
