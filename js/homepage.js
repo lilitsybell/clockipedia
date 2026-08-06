@@ -143,7 +143,9 @@ function buildDailyCharacterWheel(){
 
     wheel.innerHTML = "";
 
-
+if(dailyWheelAnimation){
+    cancelAnimationFrame(dailyWheelAnimation);
+}
     const characterObjects =
         dailyScript.characters
         .map(id => getCharacter(id))
@@ -250,10 +252,15 @@ function animate(timestamp){
                 radius;
 
 
+token.element.style.left =
+    `${x}px`;
+
+token.element.style.top =
+    `${y}px`;
+
 token.element.style.transform =
 `
-translate(${x}px, ${y}px)
-translate(-50%, -50%)
+translate(-50%,-50%)
 rotate(${angle * 180 / Math.PI + 90}deg)
 `;
 
@@ -283,10 +290,8 @@ if(progress > 0.5){
 
         });
 
-
-        requestAnimationFrame(
-            animate
-        );
+dailyWheelAnimation =
+    requestAnimationFrame(animate);
 
     }
 
