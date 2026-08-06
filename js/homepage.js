@@ -141,6 +141,7 @@ function buildDailyCharacterWheel(){
     wheel.innerHTML = "";
     const scriptCharacters =
         dailyScript.characters || [];
+function addCharacterIcons(){
     scriptCharacters.forEach(characterID => {
         const character =
             getCharacter(characterID);
@@ -159,6 +160,11 @@ function buildDailyCharacterWheel(){
             "daily-character-icon";
         wheel.appendChild(img);
     });
+}
+// first copy
+addCharacterIcons();
+// duplicate for seamless loop
+addCharacterIcons();
     // Duplicate characters for seamless loop
     const originals =
         [...wheel.children];
