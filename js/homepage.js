@@ -161,37 +161,49 @@ function buildDailyCharacterWheel(){
     });
 const images =
     [...wheel.querySelectorAll("img")];
-const trackWidth = 1400;
-const spacing = trackWidth / images.length;
-function placeOnArch(img,index,offset=0){
-    const x =
-        index * spacing + offset;
-    const normalized =
-        (index * spacing / trackWidth) * 2 - 1;
-    const y =
-        250 -
-        Math.sqrt(
-            1 - normalized * normalized
-        ) * 220;
-    img.style.left =
-        `${x}px`;
-    img.style.top =
-        `${y}px`;
-}
+const radiusX = 350;
+const radiusY = 260;
 images.forEach((img,index)=>{
-    placeOnArch(img,index);
-});
-// duplicate for infinite loop
-images.forEach((img,index)=>{
-    const clone =
-        img.cloneNode(true);
-    wheel.appendChild(clone);
-    placeOnArch(
-        clone,
-        index,
-        trackWidth
+    const start =
+        index / images.length;
+    img.dataset.progress =
+        start;
+    animateCharacter(
+        img
     );
 });
+function animateCharacter(img){
+    let progress =
+        parseFloat(
+            img.dataset.progress
+        );
+    function move(){
+        progress += 0.0008;
+        if(progress > 1){
+            progress = 0;
+        }
+        const angle =
+            Math.PI +
+            (Math.PI * progress);
+        const x =
+            400 +
+            Math.cos(angle) *
+            radiusX;
+        const y =
+            300 -
+            Math.sin(angle) *
+            radiusY;
+        img.style.left =
+            `${x}px`;
+        img.style.top =
+            `${y}px`;
+        img.dataset.progress =
+            progress;
+        requestAnimationFrame(
+            move
+        );
+    }
+    move();
 }
 /* ==========================================
    Random Character
