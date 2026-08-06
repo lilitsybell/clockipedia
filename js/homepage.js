@@ -164,42 +164,40 @@ const visibleCharacters =
     });
 const images =
     [...wheel.querySelectorAll("img")];
-const radiusX = 380;
-const radiusY = 220;
+const radius = 260;
+
 const characters = images.map((img,index)=>({
     img,
-    progress:index / images.length
+    angle:
+        Math.PI +
+        (Math.PI * index / images.length)
 }));
+let offset = 0;
 function animate(){
+    offset -= 0.0025;
     characters.forEach(character=>{
-        character.progress += 0.00035;
-        if(character.progress > 1){
-            character.progress = 0;
-        }
-const angle =
-    Math.PI * character.progress;
-const x =
-    20 +
-    (760 * character.progress);
-const y =
-    350 -
-    Math.sin(angle) * radiusY;
-// rotate token to follow the curve
-const rotation =
-    (character.progress - 0.5) * 180;
-character.img.style.left =
-    `${x}px`;
-character.img.style.top =
-    `${y}px`;
-character.img.style.transform =
-    `
-    translate(-50%,-50%)
-    rotate(${rotation}deg)
-    `;
+        const angle =
+            character.angle + offset;
+        const x =
+            400 +
+            Math.cos(angle) * radius;
+        const y =
+            250 +
+            Math.sin(angle) * radius;
+        character.img.style.left =
+            `${x}px`;
+        character.img.style.top =
+            `${y}px`;
+        // rotate token with wheel
+        const rotation =
+            (angle * 180 / Math.PI) + 90;
+        character.img.style.transform =
+        `
+        translate(-50%,-50%)
+        rotate(${rotation}deg)
+        `;
     });
-    requestAnimationFrame(
-        animate
-    );
+    requestAnimationFrame(animate);
 }
 animate();
 }
