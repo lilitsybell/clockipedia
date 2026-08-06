@@ -11,7 +11,7 @@ let dailyWheelAnimation = null;
 ========================================== */
 async function loadDailyScript(){
     const response =
-        await fetch("/data/daily-script.json");
+        await fetch("./data/daily-script.json");
     if(!response.ok){
         throw new Error(
             "Failed to load daily-script.json"
@@ -20,7 +20,7 @@ async function loadDailyScript(){
     const dailyInfo =
         await response.json();
     const scriptResponse =
-        await fetch("/" + dailyInfo.file);
+        await fetch("./" + dailyInfo.file);
     if(!scriptResponse.ok){
         throw new Error(
             "Failed to load script file"
