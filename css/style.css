@@ -478,7 +478,7 @@ body {
     width:800px;
     height:800px;
     left:0;
-    top:-100px;
+    top:100px;
 }
 .daily-character-icon{
     position:absolute;
