@@ -139,9 +139,12 @@ function buildDailyCharacterWheel(){
         return;
     }
     wheel.innerHTML = "";
-    const scriptCharacters =
-        dailyScript.characters || [];
-    scriptCharacters.forEach(characterID => {
+const scriptCharacters =
+    dailyScript.characters || [];
+// only display a manageable number
+const visibleCharacters =
+    scriptCharacters.slice(0,8);
+    visibleCharacters.forEach(characterID => {
         const character =
             getCharacter(characterID);
         if(!character){
@@ -161,15 +164,15 @@ function buildDailyCharacterWheel(){
     });
 const images =
     [...wheel.querySelectorAll("img")];
-const radiusX = 350;
-const radiusY = 260;
+const radiusX = 380;
+const radiusY = 300;
 const characters = images.map((img,index)=>({
     img,
     progress:index / images.length
 }));
 function animate(){
     characters.forEach(character=>{
-        character.progress += 0.0008;
+        character.progress += 0.00035;
         if(character.progress > 1){
             character.progress = 0;
         }
@@ -180,7 +183,7 @@ const angle =
             400 +
             Math.cos(angle) * radiusX;
 const y =
-    300 +
+    300 -
     Math.sin(angle) * radiusY;
         character.img.style.left =
             `${x}px`;
