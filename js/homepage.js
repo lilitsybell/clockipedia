@@ -142,7 +142,7 @@ function buildDailyCharacterWheel(){
 const scriptCharacters =
     dailyScript.characters || [];
 
-const visibleCount = 8;
+const visibleCount = 10;
 
 const characterObjects =
     scriptCharacters
