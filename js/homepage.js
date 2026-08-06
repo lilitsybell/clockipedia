@@ -160,7 +160,7 @@ function renderArc(){
     const radius = 320;
 
     const centerX = 400;
-    const centerY = 500;
+    const centerY = 320;
 
     const arcStart = Math.PI;
     const arcEnd = Math.PI * 2;
