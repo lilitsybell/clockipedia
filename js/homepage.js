@@ -161,15 +161,15 @@ function buildDailyCharacterWheel(){
     });
     const images =
         [...wheel.querySelectorAll("img")];
-    const radius = 360;
-    images.forEach((img,index)=>{
-        const angle =
-            Math.PI +
-            (Math.PI * index)/(images.length-1);
-        const x =
-            Math.cos(angle) * radius;
-        const y =
-            Math.sin(angle) * radius;
+const radius = 300;
+images.forEach((img,index)=>{
+    const angle =
+        Math.PI -
+        (Math.PI * index)/(images.length-1);
+    const x =
+        Math.cos(angle) * radius;
+    const y =
+        Math.sin(angle) * radius;
         img.dataset.x = x;
         img.dataset.y = y;
         img.style.transform =
@@ -209,17 +209,24 @@ function startDailyWheel(){
     function animate(){
         if(!paused){
             rotation -= 0.03;
-            wheel.style.transform =
-                `
-                rotate(${rotation}deg)
-                `;
+wheel.style.transform =
+`
+translate(-50%,-50%)
+rotate(${rotation}deg)
+`;
             const icons =
                 wheel.querySelectorAll(
                     ".daily-character-icon"
                 );
             icons.forEach(icon=>{
-                icon.style.rotate =
-                    `${-rotation}deg`;
+icon.style.transform =
+`
+translate(
+${icon.dataset.x}px,
+${icon.dataset.y}px
+)
+rotate(${-rotation}deg)
+`;
             });
         }
         dailyWheelAnimation =
