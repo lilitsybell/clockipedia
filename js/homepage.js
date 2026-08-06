@@ -143,6 +143,7 @@ function buildDailyCharacterWheel(){
 
     wheel.innerHTML = "";
 
+
     const characterObjects =
         dailyScript.characters
         .map(id => getCharacter(id))
@@ -151,10 +152,15 @@ function buildDailyCharacterWheel(){
 
     const visibleCount = 10;
 
+
     const radius = 400;
 
     const centerX = 400;
     const centerY = 500;
+
+
+    const arcStart = Math.PI * 1.15;
+    const arcEnd = Math.PI * 1.85;
 
 
     const tokens = [];
@@ -168,37 +174,47 @@ function buildDailyCharacterWheel(){
         img.className =
             "daily-character-icon";
 
+        img.src =
+            characterObjects[i].image;
+
 
         wheel.appendChild(img);
 
 
         tokens.push({
+
             element: img,
-            position: i / visibleCount,
-            characterIndex: i
+
+            progress:
+                i / visibleCount,
+
+            characterIndex:
+                i
+
         });
+
     }
 
 
-    let offset = 0;
+    let movement = 0;
 
 
     function animate(){
 
-        offset -= 0.0008; // right to left
+        movement -= 0.00035;
 
 
-        if(offset <= -1){
-            offset += 1;
+        if(movement <= -1){
+            movement += 1;
         }
 
 
-        tokens.forEach((token)=>{
+        tokens.forEach(token=>{
 
 
             let progress =
-                token.position +
-                offset;
+                token.progress +
+                movement;
 
 
             if(progress < 0){
@@ -207,9 +223,10 @@ function buildDailyCharacterWheel(){
 
 
             const angle =
-                Math.PI +
+                arcStart +
                 (
-                    Math.PI *
+                    (arcEnd - arcStart)
+                    *
                     progress
                 );
 
@@ -241,18 +258,21 @@ function buildDailyCharacterWheel(){
             `;
 
 
-            // assign character based on position
-            const index =
-                Math.floor(
-                    progress *
-                    characterObjects.length
-                )
-                %
-                characterObjects.length;
+            // change character only when completing a loop
+            if(progress < 0.05){
 
+                token.characterIndex++;
 
-            token.element.src =
-                characterObjects[index].image;
+                if(token.characterIndex >= characterObjects.length){
+                    token.characterIndex = 0;
+                }
+
+                token.element.src =
+                    characterObjects[
+                        token.characterIndex
+                    ].image;
+            }
+
 
         });
 
@@ -260,10 +280,12 @@ function buildDailyCharacterWheel(){
         requestAnimationFrame(
             animate
         );
+
     }
 
 
     animate();
+
 }
 /* ==========================================
    Random Character
