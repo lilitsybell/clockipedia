@@ -458,23 +458,10 @@ name.className = teamClass;
 ========================================== */
 async function initializeHomepage(){
     try{
-
-        console.log("Loading characters...");
         await loadCharacters();
-        console.log("Characters loaded");
-
-        console.log("Loading homepage characters...");
         await loadHomepageCharacters();
-        console.log("Homepage characters loaded");
-
-        console.log("Loading interactions...");
         await loadInteractions();
-        console.log("Interactions loaded");
-
-        console.log("Loading daily script...");
         await loadDailyScript();
-        console.log("Daily script loaded");
-
         showRandomCharacter();
         showDailyScript();
 
