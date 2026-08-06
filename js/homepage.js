@@ -164,11 +164,12 @@ function buildDailyCharacterWheel(){
 const radius = 300;
 images.forEach((img,index)=>{
 const angle =
-    Math.PI * index/(images.length-1);
+    Math.PI +
+    (Math.PI * index)/(images.length-1);
     const x =
         Math.cos(angle) * radius;
-    const y =
-        Math.sin(angle) * radius;
+const y =
+    Math.sin(angle) * radius * -1;
         img.dataset.x = x;
         img.dataset.y = y;
         img.style.transform =
@@ -183,7 +184,7 @@ const angle =
 }
 /* ==========================================
    Rotate Character Wheel
-========================================== */
+========================================== 
 function startDailyWheel(){
     const wheel =
         document.getElementById(
@@ -220,7 +221,7 @@ rotate(${rotation}deg)
             );
     }
     animate();
-}
+}*/
 /* ==========================================
    Random Character
 ========================================== */
