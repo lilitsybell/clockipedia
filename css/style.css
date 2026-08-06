@@ -478,10 +478,7 @@ body {
     width:800px;
     height:800px;
     left:0;
-    top:-250px;
-}
-.daily-character-wheel{
-    background:rgba(255,0,0,.1);
+    top:-100px;
 }
 .daily-character-icon{
     position:absolute;
