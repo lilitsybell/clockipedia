@@ -150,7 +150,7 @@ function buildDailyCharacterWheel(){
         .filter(Boolean);
 
 
-    const visibleCount = 8;
+    const visibleCount = 10;
 
 
     const radius = 400;
@@ -159,8 +159,8 @@ function buildDailyCharacterWheel(){
     const centerY = 500;
 
 
-    const arcStart = Math.PI * 1.35;
-    const arcEnd = Math.PI * 2.00;
+    const arcStart = Math.PI * 1.15;
+    const arcEnd = Math.PI * 1.85;
 
 
     const tokens = [];
