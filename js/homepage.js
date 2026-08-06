@@ -159,27 +159,25 @@ function buildDailyCharacterWheel(){
             "daily-character-icon";
         wheel.appendChild(img);
     });
-    const images =
-        [...wheel.querySelectorAll("img")];
-const radius = 300;
+const images =
+    [...wheel.querySelectorAll("img")];
+const radiusX = 300;
+const radiusY = 250;
 images.forEach((img,index)=>{
-const angle =
-    Math.PI +
-    (Math.PI * index)/(images.length-1);
+    const angle =
+        Math.PI +
+        (Math.PI * index)/(images.length-1);
     const x =
-        Math.cos(angle) * radius;
-const y =
-    Math.sin(angle) * radius * -1;
-        img.dataset.x = x;
-        img.dataset.y = y;
-        img.style.transform =
-            `
-            translate(
-                ${x}px,
-                ${y}px
-            )
-            `;
-    });
+        Math.cos(angle) * radiusX;
+    const y =
+        Math.sin(angle) * radiusY * -1;
+    img.style.left =
+        `calc(50% + ${x}px)`;
+    img.style.top =
+        `${y + 220}px`;
+    img.style.transform =
+        "translate(-50%,-50%)";
+});
     startDailyWheel();
 }
 /* ==========================================
