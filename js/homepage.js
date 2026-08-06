@@ -198,20 +198,14 @@ progress:
     }
 
 let movement = 0;
-let lastTime = null;
-function animate(timestamp){
 
-if(!lastTime){
-    lastTime = timestamp;
-    requestAnimationFrame(animate);
-    return;
-}
+function animate(){
 
-const delta = timestamp - lastTime;
+    movement -= 0.00015;
 
-lastTime = timestamp;
-
-   movement -= 0.0000025 * delta;
+    if(movement <= -1){
+        movement += 1;
+    }
 
 
         if(movement <= -1){
@@ -253,15 +247,10 @@ lastTime = timestamp;
                 radius;
 
 
-token.element.style.left =
-    `${x}px`;
-
-token.element.style.top =
-    `${y}px`;
-
 token.element.style.transform =
 `
-translate(-50%,-50%)
+translate(${x}px, ${y}px)
+translate(-50%, -50%)
 rotate(${angle * 180 / Math.PI + 90}deg)
 `;
 
