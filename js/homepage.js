@@ -211,7 +211,7 @@ const delta = timestamp - lastTime;
 
 lastTime = timestamp;
 
-    movement -= 0.0000008 * delta;
+   movement -= 0.0000025 * delta;
 
 
         if(movement <= -1){
