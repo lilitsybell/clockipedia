@@ -211,24 +211,31 @@
     "image": "https://images.klutzbanana.com/characters_official/banshee_g.png",
     "ability": "If the Demon kills you, all players learn this. From now on, you may nominate twice per day and vote twice per nomination.",
     "flavor": "Gorm do shúile, dearg do ghruaig, ní bheidh sé i bhfad, is a mbeidh tú san uaigh.",
-    "purpose": "The [Banshee] becomes very powerful when killed by the Demon.",
+    "purpose": "The [Banshee] becomes very powerful when killed by the Demon, nominating and voting twice while dead.",
     "summary": [
-             "Summary1",
-             "Summary2"
+             "If the Demon kills the [Banshee], the [Banshee] is able to nominate twice per day, and their vote may count as two votes.",
+             "If the Demon kills the [Banshee], the Storyteller announces the [Banshee] has died immediately.",
+             "The Storyteller does not announce which player the Banshee is.",
+             "While dead, the [Banshee] may vote once by raising one hand, or twice by raising two hands.",
+             "The [Banshee] does not need a vote token to vote if they were killed by the Demon.",
+             "While alive, the [Banshee] nominates and votes as normal. If the [Banshee] dies, and it wasn't due to the Demon, the [Banshee] does not gain this ability."
              ],
     "run": {
            "Anytime": [
-                "Thing1",
-                "Thing2"
+                "If the Demon kills the [Banshee], the Storyteller announces the [Banshee] has died. The [Banshee] may now nominate twice per day and vote twice per nomination."
                 ],
            "Every Day": [
-                "Thing1",
-                "Thing 2"
+                "If the dead [Banshee] has their ability and wishes to nominate, the Storyteller allows this. The [Banshee] may do this twice per day.",
+                "If the dead [Banshee] has their ability, they may vote on any nomination without using a dead vote. They may raise one hand to cast one vote, or two hands to cast two votes. There is no limit to which nominations they may vote on.",
+                "The [Banshee] may only vote once during the exile of a Traveller, no matter if they have their ability or not."
                 ]
            },
     "examples": [
-                "Example1",
-                "Example2"
+                "The [Banshee] is killed by the [Imp]. The Storyteller immediately announces the [Banshee] has died, but does not say which player. The next day, the dead [Banshee] nominates the [Virgin], who has their ability. The [Banshee] is executed, and nominates the [Widow] the next day.",
+                "There are two Outsiders and a [Xaan] in play. On the second night, the [Lord of Typhon] kills the [Banshee]. No announcement is made. A few days later, the [Banshee] attempts to nominate the [Lord of Typhon]. The Storyteller reminds them that dead players cannot nominate.",
+                "The [Godfather] kills the [Banshee]. There is no announcement and the [Banshee] does not use their ability.",
+                "The [Ojo] kills the [Banshee]. The Storyteller announces the [Banshee] has died. The next night, the [Poisoner] chooses the dead [Banshee]. That day, the [Banshee] tries to vote twice, but the Storyteller only counts one vote and removes the [Banshee]'s vote token.",
+                "The Demon with the [Boffin] [Golem] ability nominates the [Banshee] and the [Banshee] dies. The Storyteller announces the [Banshee] has died.",
                 ]
 },
 "bountyhunter":
