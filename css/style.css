@@ -481,6 +481,7 @@ body {
     top:0;
 }
 .daily-character-icon{
+    position:absolute;
     width:140px;
     height:140px;
     background-image:url("/images/token.png");
@@ -488,10 +489,6 @@ body {
     background-repeat:no-repeat;
     background-position:center;
     object-fit:contain;
-    transform:
-        translate(-50%,-50%);
-    position:absolute;
-    will-change:transform;
 }
 /* ===========================
    Character Pages
