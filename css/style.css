@@ -471,7 +471,8 @@ body {
     left:50%;
     top:120px;
     transform:translateX(-50%);
-    overflow:hidden;
+    overflow:visible;
+    border:2px solid red;
 }
 .daily-character-wheel{
     position:absolute;
