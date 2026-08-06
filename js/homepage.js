@@ -165,7 +165,7 @@ const visibleCharacters =
 const images =
     [...wheel.querySelectorAll("img")];
 const radiusX = 380;
-const radiusY = 300;
+const radiusY = 220;
 const characters = images.map((img,index)=>({
     img,
     progress:index / images.length
