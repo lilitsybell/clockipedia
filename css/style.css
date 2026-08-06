@@ -489,11 +489,6 @@ body {
     background-repeat:no-repeat;
     background-position:center;
     object-fit:contain;
-    filter:
-        drop-shadow(
-            0 0 30px
-            rgba(102,102,153,.18)
-        );
 }
 /* ===========================
    Character Pages
