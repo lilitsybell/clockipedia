@@ -479,11 +479,6 @@ body {
     height:800px;
     left:0;
     top:0;
-    filter:
-        drop-shadow(
-            0 0 30px
-            rgba(102,102,153,.18)
-        );
 }
 .daily-character-icon{
     position:absolute;
@@ -494,6 +489,11 @@ body {
     background-repeat:no-repeat;
     background-position:center;
     object-fit:contain;
+    filter:
+        drop-shadow(
+            0 0 30px
+            rgba(102,102,153,.18)
+        );
 }
 /* ===========================
    Character Pages
