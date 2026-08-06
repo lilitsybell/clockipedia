@@ -183,7 +183,7 @@ const angle =
             400 +
             Math.cos(angle) * radiusX;
 const y =
-    300 -
+    420 -
     Math.sin(angle) * radiusY;
         character.img.style.left =
             `${x}px`;
