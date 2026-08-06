@@ -257,7 +257,7 @@
              ],
     "run": {
            "Setup": [
-                "One Townsfolk is made evil, even if the [Bounty Hunter] is drunk or poisoned. The Townsfolk becomes the evil version of their character (eg. evil Seamstress).",
+                "One Townsfolk is made evil, even if the [Bounty Hunter] is drunk or poisoned. The Townsfolk becomes the evil version of their character (eg. evil [Seamstress]).",
                 "The evil player learns that they are evil on the first night, even if they are drunk, poisoned, or dead."
                 ],
            "First Night": [
@@ -280,36 +280,27 @@
     "image": "https://images.klutzbanana.com/characters_official/cannibal_g.png",
     "ability": "You have the ability of the recently killed executee. If they are evil, you are poisoned until a good player dies by execution.",
     "flavor": "I don’t like clowns. They taste funny.",
-    "purpose": "Purpose",
+    "purpose": "The [Cannibal] gains the abilities of executed good players.",
     "summary": [
-             "Summary1",
-             "Summary2"
+             "If a good player dies by execution, the [Cannibal] immediately gains their ability.",
+             "If an evil player dies by execution, the [Cannibal] is poisoned until another player dies by execution, and does not gain any ability. The Storyteller may simulate the [Cannibal] gaining an ability.",
+             "If a good player with an evil ability (eg. good Cerenovus) is executed, the [Cannibal] gains that ability.",
+             "The [Cannibal] does not learn which ability they have.",
+             "Whenever a new player dies by execution, the [Cannibal] gains the new ability and loses the old one.",
+             "In order to gain an ability, the player must be good and die to execution. Players who died in other ways, or survived an execution, will not grant the [Cannibal] any ability.",
+             "If no player dies by execution, the [Cannibal] continues to have the ability they most recently gained.",
+             "If the [Cannibal] has an ability that works on death (eg. [Ravenkeeper], [Recluse], [Banshee]) and the [Cannibal] dies, they keep that ability after death, even if a new player is executed."
              ],
     "run": {
            "Anytime": [
-                "Thing1",
-                "Thing2"
-                ],
-           "First Night": [
-                "Thing1",
-                "Thing2"
-                ],
-           "Every Night": [
-                "Thing1",
-                "Thing2"
-                ],
-           "First Day": [
-                "Thing1",
-                "Thing2"
-                ],
-           "Every Day": [
-                "Thing1",
-                "Thing 2"
+                "If a good player is executed, the [Cannibal] gains their ability immediately. If an evil player is executed, the [Cannibal] is poisoned until another player is executed.",
+                "The [Cannibal]'s ability works the same as if they were that character. The Storyteller does whatever they need to do to satisfy the [Cannibal]'s ability."
                 ]
            },
     "examples": [
-                "Example1",
-                "Example2"
+                "The [Shugenja] is executed and dies. The [Cannibal] wakes that night to learn their closest evil neighbor is clockwise.",
+                "The [Poppy Grower] is executed, but does not die due to neighboring the [Tea Lady]. The [Cannibal] does not gain their ability and continues to have the previous ability they gained.",
+                "The [Boffin] is claiming they are the [Village Idiot]. They are executed and die. That night, the [Cannibal] is asked to choose a player. The [Cannibal] chooses the [Tinker] and learns the [Tinker] is evil.
                 ]
 },
 "chambermaid":
