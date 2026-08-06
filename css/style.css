@@ -460,6 +460,21 @@ body {
     align-items:center;
     overflow:hidden;
 }
+.daily-script-right{
+    position:relative;
+    background:white;
+    padding:25px 30px;
+}
+.daily-script-right::before{
+    content:"";
+    position:absolute;
+    left:-55px;
+    top:0;
+    bottom:0;
+    width:110px;
+    background:white;
+    border-radius:55px;
+}
 .daily-character-wheel-wrapper{
     flex:1;
     overflow:hidden;
