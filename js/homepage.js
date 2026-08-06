@@ -131,91 +131,138 @@ function extractDailyCharacters(script){
    Daily Script Character Wheel
 ========================================== */
 function buildDailyCharacterWheel(){
+
     const wheel =
         document.getElementById(
             "dailyCharacterWheel"
         );
+
     if(!wheel || !dailyScript){
         return;
     }
+
     wheel.innerHTML = "";
-    const scriptCharacters =
-        dailyScript.characters || [];
+
     const characterObjects =
-        scriptCharacters
+        dailyScript.characters
         .map(id => getCharacter(id))
         .filter(Boolean);
+
+
     const visibleCount = 10;
+
     const radius = 400;
+
     const centerX = 400;
     const centerY = 500;
+
+
     const tokens = [];
+
+
     for(let i = 0; i < visibleCount; i++){
+
         const img =
             document.createElement("img");
+
         img.className =
             "daily-character-icon";
+
+
         wheel.appendChild(img);
+
+
         tokens.push({
             element: img,
-            offset:
-                i / visibleCount
+            position: i / visibleCount,
+            characterIndex: i
         });
     }
-    let rotation = 0;
+
+
+    let offset = 0;
+
+
     function animate(){
-        rotation += 0.0025;
-        tokens.forEach((token,index)=>{
+
+        offset -= 0.0008; // right to left
+
+
+        if(offset <= -1){
+            offset += 1;
+        }
+
+
+        tokens.forEach((token)=>{
+
+
+            let progress =
+                token.position +
+                offset;
+
+
+            if(progress < 0){
+                progress += 1;
+            }
+
+
             const angle =
                 Math.PI +
                 (
                     Math.PI *
-                    (
-                        token.offset +
-                        rotation
-                    )
+                    progress
                 );
+
+
             const x =
                 centerX +
                 Math.cos(angle) *
                 radius;
+
+
             const y =
                 centerY +
                 Math.sin(angle) *
                 radius;
-            const characterIndex =
-                Math.floor(
-                    (
-                        token.offset +
-                        rotation / Math.PI
-                    )
-                    *
-                    characterObjects.length
-                )
-                %
-                characterObjects.length;
-            const character =
-                characterObjects[
-                    characterIndex
-                ];
-            token.element.src =
-                character.image;
-            token.element.alt =
-                character.name;
+
+
+
             token.element.style.left =
                 `${x}px`;
+
             token.element.style.top =
                 `${y}px`;
+
+
             token.element.style.transform =
             `
             translate(-50%,-50%)
             rotate(${angle * 180 / Math.PI + 90}deg)
             `;
+
+
+            // assign character based on position
+            const index =
+                Math.floor(
+                    progress *
+                    characterObjects.length
+                )
+                %
+                characterObjects.length;
+
+
+            token.element.src =
+                characterObjects[index].image;
+
         });
+
+
         requestAnimationFrame(
             animate
         );
     }
+
+
     animate();
 }
 /* ==========================================
