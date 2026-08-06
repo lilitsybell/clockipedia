@@ -163,47 +163,35 @@ const images =
     [...wheel.querySelectorAll("img")];
 const radiusX = 350;
 const radiusY = 260;
-images.forEach((img,index)=>{
-    const start =
-        index / images.length;
-    img.dataset.progress =
-        start;
-    animateCharacter(
-        img
-    );
-});
-function animateCharacter(img){
-    let progress =
-        parseFloat(
-            img.dataset.progress
-        );
-    function move(){
-        progress += 0.0008;
-        if(progress > 1){
-            progress = 0;
+const characters = images.map((img,index)=>({
+    img,
+    progress:index / images.length
+}));
+function animate(){
+    characters.forEach(character=>{
+        character.progress += 0.0008;
+        if(character.progress > 1){
+            character.progress = 0;
         }
-        const angle =
-            Math.PI +
-            (Math.PI * progress);
+const angle =
+    Math.PI -
+    (Math.PI * character.progress);
         const x =
             400 +
-            Math.cos(angle) *
-            radiusX;
-        const y =
-            300 -
-            Math.sin(angle) *
-            radiusY;
-        img.style.left =
+            Math.cos(angle) * radiusX;
+const y =
+    300 +
+    Math.sin(angle) * radiusY;
+        character.img.style.left =
             `${x}px`;
-        img.style.top =
+        character.img.style.top =
             `${y}px`;
-        img.dataset.progress =
-            progress;
-        requestAnimationFrame(
-            move
-        );
-    }
-    move();
+    });
+    requestAnimationFrame(
+        animate
+    );
+}
+animate();
 }
 /* ==========================================
    Random Character
