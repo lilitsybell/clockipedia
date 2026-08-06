@@ -161,14 +161,13 @@ function buildDailyCharacterWheel(){
     });
 const images =
     [...wheel.querySelectorAll("img")];
-const spacing =
-    1400 / images.length;
-images.forEach((img,index)=>{
+const trackWidth = 1400;
+const spacing = trackWidth / images.length;
+function placeOnArch(img,index,offset=0){
     const x =
-        index * spacing;
-    // create the arch
+        index * spacing + offset;
     const normalized =
-        (x / 1400) * 2 - 1;
+        (index * spacing / trackWidth) * 2 - 1;
     const y =
         250 -
         Math.sqrt(
@@ -178,49 +177,22 @@ images.forEach((img,index)=>{
         `${x}px`;
     img.style.top =
         `${y}px`;
-});
-    startDailyWheel();
 }
-/* ==========================================
-   Rotate Character Wheel
-========================================== 
-function startDailyWheel(){
-    const wheel =
-        document.getElementById(
-            "dailyCharacterWheel"
-        );
-    if(!wheel){
-        return;
-    }
-    if(dailyWheelAnimation){
-        cancelAnimationFrame(
-            dailyWheelAnimation
-        );
-    }
-    let rotation = 0;
-    let paused = false;
-    wheel.onmouseenter = ()=>{
-        paused = true;
-    };
-    wheel.onmouseleave = ()=>{
-        paused = false;
-    };
-    function animate(){
-        if(!paused){
-            rotation -= 0.03;
-wheel.style.transform =
-`
-translate(-50%,-50%)
-rotate(${rotation}deg)
-`;
-        }
-        dailyWheelAnimation =
-            requestAnimationFrame(
-                animate
-            );
-    }
-    animate();
-}*/
+images.forEach((img,index)=>{
+    placeOnArch(img,index);
+});
+// duplicate for infinite loop
+images.forEach((img,index)=>{
+    const clone =
+        img.cloneNode(true);
+    wheel.appendChild(clone);
+    placeOnArch(
+        clone,
+        index,
+        trackWidth
+    );
+});
+}
 /* ==========================================
    Random Character
 ========================================== */
