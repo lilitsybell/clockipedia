@@ -458,22 +458,38 @@ name.className = teamClass;
 ========================================== */
 async function initializeHomepage(){
     try{
-await loadCharacters();
-await loadHomepageCharacters();
-await loadInteractions();
-await loadDailyScript();
-showRandomCharacter();
-showDailyScript();
-const token =
-    document.getElementById(
-        "characterToken"
-    );
-if(token){
-    token.addEventListener(
-        "click",
-        showRandomCharacter
-    );
-}
+
+        console.log("Loading characters...");
+        await loadCharacters();
+        console.log("Characters loaded");
+
+        console.log("Loading homepage characters...");
+        await loadHomepageCharacters();
+        console.log("Homepage characters loaded");
+
+        console.log("Loading interactions...");
+        await loadInteractions();
+        console.log("Interactions loaded");
+
+        console.log("Loading daily script...");
+        await loadDailyScript();
+        console.log("Daily script loaded");
+
+        showRandomCharacter();
+        showDailyScript();
+
+        const token =
+            document.getElementById(
+                "characterToken"
+            );
+
+        if(token){
+            token.addEventListener(
+                "click",
+                showRandomCharacter
+            );
+        }
+
     }
     catch(error){
         console.error(
