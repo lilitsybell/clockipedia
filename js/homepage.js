@@ -157,13 +157,11 @@ const visibleCount = 7;
 
     const radius = 450;
 
-    const centerX = 400;
-    const centerY = 625;
+    const centerX = 410;
+    const centerY = 650;
 
 const arcStart = Math.PI;
 const arcEnd = Math.PI;
-/*const arcStart = Math.PI * 1.15;
-const arcEnd = Math.PI * 1.85;*/
 
     const tokens = [];
 
