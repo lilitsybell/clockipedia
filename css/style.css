@@ -467,18 +467,18 @@ body {
 .daily-character-wheel-wrapper{
     position:absolute;
     width:800px;
-    height:600px;
+    height:300px;
     left:50%;
-    bottom:-375px;
+    bottom:-80px;
     transform:translateX(-50%);
     overflow:hidden;
 }
 .daily-character-wheel{
     position:absolute;
     width:800px;
-    height:400px;
+    height:600px;
     left:0;
-    top:0;
+    top:150px;
 }
 .daily-character-icon{
     position:absolute;
