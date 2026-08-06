@@ -444,17 +444,17 @@ body {
     box-shadow:0 8px 20px rgba(0,0,0,.12);
 }
 .daily-script-info{
-    width:320px;
-    padding:30px;
+    width:370px;
+    padding:30px 35px;
     color:white;
     flex-shrink:0;
 }
 .daily-script-carousel{
     flex:1;
     background:white;
-    margin-left:-45px;
-    padding:20px 25px 20px 80px;
-    border-radius:100px 0 0 100px;
+    margin-left:-25px;
+    padding:20px 25px 20px 60px;
+    border-radius:50px 0 0 50px;
     display:flex;
     align-items:center;
     overflow:hidden;
@@ -466,10 +466,7 @@ body {
 }
 .daily-character-wheel-wrapper{
     flex:1;
-    background:white;
-    border-top-left-radius:80px;
-    border-bottom-left-radius:80px;
-    padding:20px 10px 20px 40px;
+    padding:20px 10px 20px 20px;
     overflow:hidden;
     display:flex;
     align-items:center;
