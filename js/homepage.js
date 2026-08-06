@@ -161,7 +161,7 @@ const visibleCount = 7;
     const centerY = 650;
 
 const arcStart = Math.PI;
-const arcEnd = Math.PI;
+const arcEnd = Math.PI *2.00;
 
     const tokens = [];
 
