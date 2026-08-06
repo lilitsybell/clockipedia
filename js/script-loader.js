@@ -21,7 +21,7 @@ const ScriptGenerator = {
 async function loadDailyScript(){
 
     const response =
-        await fetch("/data/daily-script.json");
+        await fetch("./data/daily-script.json");
 
     if(!response.ok){
         throw new Error(
@@ -74,7 +74,7 @@ if(character.team){
    Load Official Characters
 ====================================================== */
 async function loadOfficialCharacters() {
-    const response = await fetch("/data/characters.json");
+    const response = await fetch("./data/characters.json");
     if (!response.ok) {
         throw new Error("Failed to load characters.json");
     }
@@ -101,7 +101,7 @@ async function loadOfficialCharacters() {
    Load Script Index
 ====================================================== */
 async function loadScriptIndex() {
-    const response = await fetch("/data/index.json");
+    const response = await fetch("./data/index.json");
     if (!response.ok) {
         throw new Error("Failed to load index.json");
     }
