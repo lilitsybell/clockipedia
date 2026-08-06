@@ -442,61 +442,43 @@ body {
     padding:25px 35px;
     box-shadow:0 8px 25px rgba(0,0,0,.12);
     border-left:5px solid var(--purple);
+
     display:flex;
     align-items:center;
-    gap:35px;
+    gap:25px;
 }
-/* LEFT SIDE */
 .daily-script-info{
-    flex:1;
+    width:35%;
+    flex-shrink:0;
 }
-.daily-script h2{
-    margin:0 0 10px;
-    color:var(--purple);
-    font-size:26px;
-}
-.daily-script-info h3{
-    font-size:30px;
-    margin:0;
-}
-#dailyScriptAuthor{
-    color:#777;
-    font-style:italic;
-}
-/* TAGS */
-.daily-script-tags{
-    display:flex;
-    flex-wrap:wrap;
-    gap:8px;
-    margin-top:18px;
-}
-.daily-script-tag{
-    border:2px solid var(--purple);
-    color:var(--purple);
-    border-radius:999px;
-    padding:5px 14px;
-    font-size:14px;
-    font-weight:bold;
-}
-/* RIGHT SIDE */
 .daily-character-wheel-wrapper{
-    width:430px;
+    flex:1;
     overflow:hidden;
+    position:relative;
 }
 .daily-character-wheel{
     display:flex;
-    flex-wrap:wrap;
-    gap:10px;
-    justify-content:center;
+    width:max-content;
+    gap:15px;
+    animation:
+        dailyScroll 35s linear infinite;
 }
 .daily-character-icon{
-    width:55px;
-    height:55px;
+    width:65px;
+    height:65px;
     object-fit:contain;
-    transition:.2s;
+    flex-shrink:0;
 }
-.daily-character-icon:hover{
-    transform:scale(1.1);
+.daily-character-wheel:hover{
+    animation-play-state:paused;
+}
+@keyframes dailyScroll{
+    from{
+        transform:translateX(0);
+    }
+    to{
+        transform:translateX(-50%);
+    }
 }
 /* ===========================
    Character Pages
