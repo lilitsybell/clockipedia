@@ -195,13 +195,20 @@ progress:
 
     }
 
+let movement = 0;
+let lastTime = null;
+function animate(timestamp){
 
-    let movement = 0;
+    if(!lastTime){
+        lastTime = timestamp;
+    }
 
+    const delta =
+        timestamp - lastTime;
 
-    function animate(){
+    lastTime = timestamp;
 
-       movement -= 0.00015;
+    movement -= 0.0000008 * delta;
 
 
         if(movement <= -1){
