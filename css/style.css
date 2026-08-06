@@ -467,9 +467,9 @@ body {
 .daily-character-wheel-wrapper{
     position:absolute;
     width:800px;
-    height:300px;
+    height:350px;
     left:50%;
-    bottom:-80px;
+    top:120px;
     transform:translateX(-50%);
     overflow:hidden;
 }
