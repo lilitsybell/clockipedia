@@ -157,7 +157,7 @@ function renderArc(){
 
     wheel.innerHTML = "";
 
-    const radius = 260;
+    const radius = 400;
 
     const centerX = 400;
     const centerY = 500;
