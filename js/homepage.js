@@ -141,65 +141,106 @@ function buildDailyCharacterWheel(){
     wheel.innerHTML = "";
 const scriptCharacters =
     dailyScript.characters || [];
-// only display a manageable number
-const visibleCharacters =
-    scriptCharacters.slice(0,8);
-    visibleCharacters.forEach(characterID => {
+
+const visibleCount = 8;
+
+const characterObjects =
+    scriptCharacters
+    .map(id => getCharacter(id))
+    .filter(Boolean);
+
+
+let startIndex = 0;
+
+
+function renderArc(){
+
+    wheel.innerHTML = "";
+
+    const radius = 320;
+
+    const centerX = 400;
+    const centerY = 320;
+
+    const arcStart = Math.PI;
+    const arcEnd = Math.PI * 2;
+
+
+    for(let i = 0; i < visibleCount; i++){
+
         const character =
-            getCharacter(characterID);
-        if(!character){
-            return;
-        }
+            characterObjects[
+                (startIndex + i) %
+                characterObjects.length
+            ];
+
         const img =
             document.createElement("img");
+
         img.src =
             character.image;
+
         img.alt =
             character.name;
-        img.title =
-            character.name;
+
         img.className =
             "daily-character-icon";
-        wheel.appendChild(img);
-    });
-const images =
-    [...wheel.querySelectorAll("img")];
-const radius = 260;
 
-const characters = images.map((img,index)=>({
-    img,
-    angle:
-        Math.PI +
-        (Math.PI * index / images.length)
-}));
-let offset = 0;
-function animate(){
-    offset -= 0.0025;
-    characters.forEach(character=>{
+
+        const progress =
+            i /
+            (visibleCount - 1);
+
+
         const angle =
-            character.angle + offset;
+            arcStart +
+            (
+                (arcEnd - arcStart)
+                *
+                progress
+            );
+
+
         const x =
-            400 +
-            Math.cos(angle) * radius;
+            centerX +
+            Math.cos(angle) *
+            radius;
+
+
         const y =
-            250 +
-            Math.sin(angle) * radius;
-        character.img.style.left =
+            centerY +
+            Math.sin(angle) *
+            radius;
+
+
+        img.style.left =
             `${x}px`;
-        character.img.style.top =
+
+        img.style.top =
             `${y}px`;
-        // rotate token with wheel
-        const rotation =
-            (angle * 180 / Math.PI) + 90;
-        character.img.style.transform =
+
+
+        img.style.transform =
         `
         translate(-50%,-50%)
-        rotate(${rotation}deg)
+        rotate(${angle * 180 / Math.PI + 90}deg)
         `;
-    });
-    requestAnimationFrame(animate);
+
+
+        wheel.appendChild(img);
+    }
 }
-animate();
+
+// initial render
+renderArc();
+// move carousel
+setInterval(()=>{
+    startIndex++;
+    if(startIndex >= characterObjects.length){
+        startIndex = 0;
+    }
+    renderArc();
+},3000);
 }
 /* ==========================================
    Random Character
