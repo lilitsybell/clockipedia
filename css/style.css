@@ -475,7 +475,7 @@ body {
 }
 .daily-character-wheel{
     position:absolute;
-    width:1400px;
+    width:800px;
     height:400px;
     left:0;
     top:0;
@@ -491,21 +491,6 @@ body {
     object-fit:contain;
     transform:
         translate(-50%,-50%);
-}
-.daily-character-wheel{
-    width:1400px;
-}
-@keyframes dailyArcMove{
-    from{
-        left:0;
-    }
-    to{
-        left:-700px;
-    }
-}
-.daily-character-wheel{
-    animation:
-        dailyArcMove 40s linear infinite;
 }
 /* ===========================
    Character Pages
