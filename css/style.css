@@ -477,7 +477,7 @@ body {
     position:absolute;
     width:800px;
     height:800px;
-    left:0;
+    left:-100;
     top:0px;
 }
 .daily-character-icon{
