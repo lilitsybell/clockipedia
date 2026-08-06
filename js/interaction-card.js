@@ -1,7 +1,7 @@
 console.log("interactions Updated 8/05/26 11:49");
 let interactions = [];
 async function loadInteractions(){
-    const response = await fetch("/data/interactions.json");
+    const response = await fetch("./data/interactions.json");
     interactions = await response.json();
 }
 function getCharacters(text){
