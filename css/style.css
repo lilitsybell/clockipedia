@@ -1,4 +1,4 @@
-/* 8/05/26 11:29*/
+/* 8/06/26 19:42 */
 @import url('https://fonts.googleapis.com/css2?family=Heebo:wght@400;500;700&family=Roboto:wght@400;500;700&display=swap');
 @font-face {
     font-family: "Droid Sans";
@@ -464,25 +464,14 @@ body {
     background:white;
     padding:25px 30px;
 }
-.daily-character-wheel-wrapper::before{
-    content:"";
+.daily-character-wheel-wrapper{
     position:absolute;
+    width:800px;
+    height:300px;
     left:50%;
-    bottom:-120px;
-    width:900px;
-    height:900px;
+    bottom:0;
     transform:translateX(-50%);
-    border-radius:50%;
-    background:
-        radial-gradient(
-            circle,
-            rgba(102,102,153,.25) 0%,
-            rgba(102,102,153,.12) 35%,
-            rgba(102,102,153,.04) 55%,
-            transparent 70%
-        );
-    filter:blur(45px);
-    pointer-events:none;
+    overflow:hidden;
 }
 .daily-character-wheel{
     position:absolute;
@@ -490,6 +479,11 @@ body {
     height:800px;
     left:0;
     top:0;
+    filter:
+        drop-shadow(
+            0 0 30px
+            rgba(102,102,153,.18)
+        );
 }
 .daily-character-icon{
     position:absolute;
