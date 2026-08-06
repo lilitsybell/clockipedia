@@ -90,7 +90,7 @@
         "reason":"The Monk only protects players from dying, turning evil, or becoming drunk or poisoned due to the Demon.",
         "mathInfo":"No ability has malfunctioned."},
     {
-        "text":"A player protected by the [Monk] can be protected due to the Demon with the [Boffin] [Alchemist] [Devil's Advocate] ability.",
+        "text":"A player protected by the [Monk] can still be safe from execution due the Demon with the [Boffin] [Alchemist] [Devil's Advocate] ability.",
         "math":"green",
         "reason":"The Monk only protects players from dying, turning evil, or becoming drunk or poisoned due to the Demon.",
         "mathInfo":"No ability has malfunctioned."},
