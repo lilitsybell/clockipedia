@@ -161,22 +161,23 @@ function buildDailyCharacterWheel(){
     });
 const images =
     [...wheel.querySelectorAll("img")];
-const radiusX = 300;
-const radiusY = 250;
+const spacing =
+    1400 / images.length;
 images.forEach((img,index)=>{
-    const angle =
-        Math.PI +
-        (Math.PI * index)/(images.length-1);
     const x =
-        Math.cos(angle) * radiusX;
+        index * spacing;
+    // create the arch
+    const normalized =
+        (x / 1400) * 2 - 1;
     const y =
-        Math.sin(angle) * radiusY * -1;
+        250 -
+        Math.sqrt(
+            1 - normalized * normalized
+        ) * 220;
     img.style.left =
-        `calc(50% + ${x}px)`;
+        `${x}px`;
     img.style.top =
-        `${y + 220}px`;
-    img.style.transform =
-        "translate(-50%,-50%)";
+        `${y}px`;
 });
     startDailyWheel();
 }
