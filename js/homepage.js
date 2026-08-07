@@ -67,8 +67,11 @@ async function loadHomepageCharacters(){
     }
     const data =
         await response.json();
-    homepageCharacters =
-        Object.values(data);
+homepageCharacters =
+    Object.entries(data).map(([id, character]) => ({
+        id:id,
+        ...character
+    }));
     console.log(
         "Loaded homepage characters:",
         homepageCharacters.length
@@ -496,10 +499,13 @@ const name =
     document.getElementById(
         "interactionCharacter"
     );
+
 name.textContent =
     character.name;
+
 name.className =
     teamClass;
+
 name.onclick = () => {
     window.location.href =
         `character.html?id=${character.id}`;
