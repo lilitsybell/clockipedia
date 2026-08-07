@@ -142,6 +142,7 @@ const particles = [];
 for(let i = 0; i < 30; i++){
 const dot = document.createElement("div");
 dot.className = "daily-particle";
+console.log("creating particle", dot);
 const size = 1 + Math.random() * 7;
 dot.style.width = `${size}px`;
 dot.style.height = `${size}px`;
