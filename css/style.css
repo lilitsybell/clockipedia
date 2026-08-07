@@ -501,6 +501,43 @@ body {
     font-size:13px;
     backdrop-filter:blur(5px);
 }
+.daily-script-info::before{
+    content:"";
+
+    position:absolute;
+
+    width:250px;
+    height:250px;
+
+    left:-80px;
+    top:50%;
+
+    transform:
+        translateY(-50%);
+
+    background:
+        radial-gradient(
+            circle,
+            rgba(255,255,255,.18),
+            transparent 70%
+        );
+    pointer-events:none;
+}
+.daily-script-label{
+    animation:
+        labelGlow 4s ease-in-out infinite;
+}
+@keyframes labelGlow{
+
+    0%,100%{
+        opacity:.7;
+    }
+
+    50%{
+        opacity:1;
+    }
+
+}
 .daily-script-carousel{
     flex:1;
     background:white;
