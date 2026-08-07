@@ -131,18 +131,35 @@ function extractDailyCharacters(script){
    Daily Script Character Wheel
 ========================================== */
 function buildDailyCharacterWheel(){
-
+const particleWheel =
+    document.getElementById("dailyParticleWheel");
+   if(!particleWheel){
+    console.log("Particle wheel not found!");
+    return;
+}
+particleWheel.innerHTML = "";
+const particles = [];
+for(let i = 0; i < 30; i++){
+    const dot = document.createElement("div");
+    dot.className = "daily-particle";
+    const size = 2 + Math.random()*6;
+    dot.style.width = `${size}px`;
+    dot.style.height = `${size}px`;
+    particleWheel.appendChild(dot);
+    particles.push({
+        element: dot,
+        progress: Math.random(),
+        speed: 0.00005 + Math.random()*0.00015
+    });
+}
     const wheel =
         document.getElementById(
             "dailyCharacterWheel"
         );
-
     if(!wheel || !dailyScript){
         return;
     }
-
     wheel.innerHTML = "";
-
 if(dailyWheelAnimation){
     cancelAnimationFrame(dailyWheelAnimation);
 }
@@ -150,82 +167,47 @@ if(dailyWheelAnimation){
         dailyScript.characters
         .map(id => getCharacter(id))
         .filter(Boolean);
-
-
 const visibleCount = 9;
-
-
     const radius = 450;
-
     const centerX = 410;
     const centerY = 650;
-
 const arcStart = Math.PI;
 const arcEnd = Math.PI *2.00;
-
     const tokens = [];
-
-
     for(let i = 0; i < visibleCount; i++){
-
         const img =
             document.createElement("img");
-
         img.className =
             "daily-character-icon";
-
         img.src =
             characterObjects[i].image;
-
-
         wheel.appendChild(img);
-
-
 tokens.push({
-
     element: img,
-
 progress:
     i / (visibleCount - 1),
-
     characterIndex:
         i,
-
     passed:false
-
 });
 
     }
-
 let movement = 0;
-
 function animate(){
-
     movement -= 0.00015;
-
     if(movement <= -1){
         movement += 1;
     }
-
-
         if(movement <= -1){
             movement += 1;
         }
-
-
         tokens.forEach(token=>{
-
-
             let progress =
                 token.progress +
                 movement;
-
-
             if(progress < 0){
                 progress += 1;
             }
-
-
             const angle =
                 arcStart +
                 (
@@ -233,28 +215,20 @@ function animate(){
                     *
                     progress
                 );
-
-
             const x =
                 centerX +
                 Math.cos(angle) *
                 radius;
-
-
             const y =
                 centerY +
                 Math.sin(angle) *
                 radius;
-
-
 token.element.style.transform =
 `
 translate(${x}px, ${y}px)
 translate(-50%, -50%)
 rotate(${angle * 180 / Math.PI + 90}deg)
 `;
-
-
             // change character only when completing a loop
 if(progress < 0.02 && !token.passed){
 
@@ -263,23 +237,45 @@ if(progress < 0.02 && !token.passed){
     if(token.characterIndex >= characterObjects.length){
         token.characterIndex = 0;
     }
-
     token.element.src =
         characterObjects[
             token.characterIndex
         ].image;
-
     token.passed = true;
 }
-
-
 if(progress > 0.5){
     token.passed = false;
 }
-
-
         });
+   particles.forEach(particle => {
 
+    particle.progress -= particle.speed;
+
+    if(particle.progress < 0){
+        particle.progress += 1;
+    }
+
+    const angle =
+        arcStart +
+        (arcEnd - arcStart) *
+        particle.progress;
+
+    const x =
+        centerX +
+        Math.cos(angle) *
+        radius;
+
+    const y =
+        centerY +
+        Math.sin(angle) *
+        radius;
+
+    particle.element.style.transform = `
+        translate(${x}px, ${y}px)
+        translate(-50%, -50%)
+    `;
+
+});
 dailyWheelAnimation =
     requestAnimationFrame(animate);
 
@@ -403,7 +399,6 @@ const teamClass =
     teamColors[
         character.team?.trim()
     ] || "blue";
-
 const card =
     document.querySelector(
         ".home-interaction-card"
@@ -464,18 +459,15 @@ async function initializeHomepage(){
         await loadDailyScript();
         showRandomCharacter();
         showDailyScript();
-
         const token =
             document.getElementById(
                 "characterToken"
             );
-
         if(token){
             token.addEventListener(
                 "click",
                 showRandomCharacter
-            );
-        }
+            );        }
 
     }
     catch(error){
