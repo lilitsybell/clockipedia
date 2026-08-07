@@ -73,11 +73,9 @@ function getSlug(name){
         .replace(/^-|-$/g,"");
 }
 async function loadCharacters(){
-    console.log("Loading characters.json");
     if(Object.keys(characters).length){
         return characters;
     }
-    console.log("./data/characters.json");
     const response = await fetch("./data/characters.json");
     characters = await response.json();
     return characters;
