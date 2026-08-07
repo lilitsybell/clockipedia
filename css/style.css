@@ -14,6 +14,7 @@
 --copper:#B77102;
 --traveller:#915271;
 --purple:#666699;
+--purple-light:#8A87C2;
 --gray:#959799;
 --light-gray:#fafafa;
 --border:#ddd;
@@ -180,13 +181,15 @@ body {
     cursor:pointer;
     transition:.2s;
 }
-.nav-link:hover {
-    background:#e7f3f8;
-    text-decoration:none;
+.nav-link:hover,
+.nav-link.active:hover{
+    color:var(--purple-light);
+    transform:translateX(6px);
 }
 .nav-link.active {
     background:white;
     color:var(--black);
+    font-weight:600;
 }
 /* CHARACTER MENU */
 .character-toggle {
