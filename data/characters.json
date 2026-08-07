@@ -7011,7 +7011,7 @@
     "team": "Fabled",
     "image": "https://images.klutzbanana.com/characters_official/angel.png",
     "ability": "Something bad might happen to whoever is most responsible for the death of a new player.",
-    "flavor": "Flavor",
+    "flavor": "Let those who are without sin dare to raise their hand to my chosen, for I shall strike such fools down with the fury and righteousness of a thousand storms.",
     "purpose": "Purpose",
     "summary": [
              "Summary1",
@@ -7023,34 +7023,6 @@
                 "Thing2"
                 ],
            "Anytime": [
-                "Thing1",
-                "Thing2"
-                ],
-           "First Night": [
-                "Thing1",
-                "Thing2"
-                ],
-           "Every Night": [
-                "Thing1",
-                "Thing2"
-                ],
-           "First Day": [
-                "Thing1",
-                "Thing2"
-                ],
-           "Every Day": [
-                "Thing1",
-                "Thing 2"
-                ],
-           "Other Nights": [
-                "Thing1",
-                "Thing2"
-                ],
-           "Other Days": [
-                "Thing1",
-                "Thing2"
-                ],
-           "End of Game": [
                 "Thing1",
                 "Thing2"
                 ]
@@ -7065,8 +7037,8 @@
     "name": "Buddhist",
     "team": "Fabled",
     "image": "https://images.klutzbanana.com/characters_official/buddhist.png",
-    "ability": "https://images.klutzbanana.com/characters_official/buddhist.png",
-    "flavor": "Flavor",
+    "ability": "For the first 2 minutes of each day, veteran players may not talk.",
+    "flavor": "You throw thorns. Falling in my silence, they become flowers.",
     "purpose": "Purpose",
     "summary": [
              "Summary1",
@@ -7077,37 +7049,9 @@
                 "Thing1",
                 "Thing2"
                 ],
-           "Anytime": [
-                "Thing1",
-                "Thing2"
-                ],
-           "First Night": [
-                "Thing1",
-                "Thing2"
-                ],
-           "Every Night": [
-                "Thing1",
-                "Thing2"
-                ],
-           "First Day": [
-                "Thing1",
-                "Thing2"
-                ],
            "Every Day": [
                 "Thing1",
                 "Thing 2"
-                ],
-           "Other Nights": [
-                "Thing1",
-                "Thing2"
-                ],
-           "Other Days": [
-                "Thing1",
-                "Thing2"
-                ],
-           "End of Game": [
-                "Thing1",
-                "Thing2"
                 ]
            },
     "examples": [
@@ -7121,7 +7065,7 @@
     "team": "Fabled",
     "image": "https://images.klutzbanana.com/characters_official/deusexfiasco.png",
     "ability": "At least once per game, the Storyteller will make a mistake, correct it, and publicly admit to it.",
-    "flavor": "Flavor",
+    "flavor": "It’s not a bug, it’s a feature. It’s not an error, it’s a tweak. It’s not broken, it’s quirky.",
     "purpose": "Purpose",
     "summary": [
              "Summary1",
@@ -7133,34 +7077,6 @@
                 "Thing2"
                 ],
            "Anytime": [
-                "Thing1",
-                "Thing2"
-                ],
-           "First Night": [
-                "Thing1",
-                "Thing2"
-                ],
-           "Every Night": [
-                "Thing1",
-                "Thing2"
-                ],
-           "First Day": [
-                "Thing1",
-                "Thing2"
-                ],
-           "Every Day": [
-                "Thing1",
-                "Thing 2"
-                ],
-           "Other Nights": [
-                "Thing1",
-                "Thing2"
-                ],
-           "Other Days": [
-                "Thing1",
-                "Thing2"
-                ],
-           "End of Game": [
                 "Thing1",
                 "Thing2"
                 ]
@@ -7176,7 +7092,7 @@
     "team": "Fabled",
     "image": "https://images.klutzbanana.com/characters_official/djinn.png",
     "ability": "Use the Djinn's special rule. All players know what it is.",
-    "flavor": "Flavor",
+    "flavor": "نحن لسنا هنا.<br>انت لست حقيقي.<br>كل شيء هو وهم.<br>أسئلتك هي جبل نار في يوم صافٍ.",
     "purpose": "Purpose",
     "summary": [
              "Summary1",
@@ -7188,34 +7104,6 @@
                 "Thing2"
                 ],
            "Anytime": [
-                "Thing1",
-                "Thing2"
-                ],
-           "First Night": [
-                "Thing1",
-                "Thing2"
-                ],
-           "Every Night": [
-                "Thing1",
-                "Thing2"
-                ],
-           "First Day": [
-                "Thing1",
-                "Thing2"
-                ],
-           "Every Day": [
-                "Thing1",
-                "Thing 2"
-                ],
-           "Other Nights": [
-                "Thing1",
-                "Thing2"
-                ],
-           "Other Days": [
-                "Thing1",
-                "Thing2"
-                ],
-           "End of Game": [
                 "Thing1",
                 "Thing2"
                 ]
@@ -7231,7 +7119,7 @@
     "team": "Fabled",
     "image": "https://images.klutzbanana.com/characters_official/doomsayer.png",
     "ability": "If 4 or more players live, each living player may publicly choose (once per game) that a player of their own alignment dies.",
-    "flavor": "Flavor",
+    "flavor": "And on the Seventh Day, there shall be a great flood and a pestilence upon the People of the Village of the Ravens! The dead shall rise and the living shall repent! O Woe! O Unholy day! Only by great sacrifice shall they prevail! So sayeth the Sages of Nostros and so sayeth I.",
     "purpose": "Purpose",
     "summary": [
              "Summary1",
@@ -7243,34 +7131,6 @@
                 "Thing2"
                 ],
            "Anytime": [
-                "Thing1",
-                "Thing2"
-                ],
-           "First Night": [
-                "Thing1",
-                "Thing2"
-                ],
-           "Every Night": [
-                "Thing1",
-                "Thing2"
-                ],
-           "First Day": [
-                "Thing1",
-                "Thing2"
-                ],
-           "Every Day": [
-                "Thing1",
-                "Thing 2"
-                ],
-           "Other Nights": [
-                "Thing1",
-                "Thing2"
-                ],
-           "Other Days": [
-                "Thing1",
-                "Thing2"
-                ],
-           "End of Game": [
                 "Thing1",
                 "Thing2"
                 ]
@@ -7286,7 +7146,7 @@
     "team": "Fabled",
     "image": "https://images.klutzbanana.com/characters_official/duchess.png",
     "ability": "Each day, 3 players may choose to visit you. At night*, each visitor learns how many visitors are evil, but 1 gets false info.",
-    "flavor": "Flavor",
+    "flavor": "We shall entertain between the hours of 6 and 7 precisely. Tea at 6:15. Scones at 6:45. Do not be late. Formal wear applies, as always.",
     "purpose": "Purpose",
     "summary": [
              "Summary1",
@@ -7297,35 +7157,11 @@
                 "Thing1",
                 "Thing2"
                 ],
-           "Anytime": [
-                "Thing1",
-                "Thing2"
-                ],
-           "First Night": [
-                "Thing1",
-                "Thing2"
-                ],
-           "Every Night": [
-                "Thing1",
-                "Thing2"
-                ],
-           "First Day": [
-                "Thing1",
-                "Thing2"
-                ],
            "Every Day": [
                 "Thing1",
                 "Thing 2"
                 ],
            "Other Nights": [
-                "Thing1",
-                "Thing2"
-                ],
-           "Other Days": [
-                "Thing1",
-                "Thing2"
-                ],
-           "End of Game": [
                 "Thing1",
                 "Thing2"
                 ]
@@ -7341,7 +7177,7 @@
     "team": "Fabled",
     "image": "https://images.klutzbanana.com/characters_official/ferryman.png",
     "ability": "On the final day, all dead players regain their vote token.",
-    "flavor": "Flavor",
+    "flavor": "When righteous dreams come, they have the weight of truth.",
     "purpose": "Purpose",
     "summary": [
              "Summary1",
@@ -7352,35 +7188,7 @@
                 "Thing1",
                 "Thing2"
                 ],
-           "Anytime": [
-                "Thing1",
-                "Thing2"
-                ],
-           "First Night": [
-                "Thing1",
-                "Thing2"
-                ],
-           "Every Night": [
-                "Thing1",
-                "Thing2"
-                ],
-           "First Day": [
-                "Thing1",
-                "Thing2"
-                ],
-           "Every Day": [
-                "Thing1",
-                "Thing 2"
-                ],
-           "Other Nights": [
-                "Thing1",
-                "Thing2"
-                ],
            "Other Days": [
-                "Thing1",
-                "Thing2"
-                ],
-           "End of Game": [
                 "Thing1",
                 "Thing2"
                 ]
@@ -7396,7 +7204,7 @@
     "team": "Fabled",
     "image": "https://images.klutzbanana.com/characters_official/fibbin.png",
     "ability": "Once per game, 1 good player might get incorrect information.",
-    "flavor": "Flavor",
+    "flavor": "Tee-hee-hee.<br>Tee. Hee. Hee.",
     "purpose": "Purpose",
     "summary": [
              "Summary1",
@@ -7408,34 +7216,6 @@
                 "Thing2"
                 ],
            "Anytime": [
-                "Thing1",
-                "Thing2"
-                ],
-           "First Night": [
-                "Thing1",
-                "Thing2"
-                ],
-           "Every Night": [
-                "Thing1",
-                "Thing2"
-                ],
-           "First Day": [
-                "Thing1",
-                "Thing2"
-                ],
-           "Every Day": [
-                "Thing1",
-                "Thing 2"
-                ],
-           "Other Nights": [
-                "Thing1",
-                "Thing2"
-                ],
-           "Other Days": [
-                "Thing1",
-                "Thing2"
-                ],
-           "End of Game": [
                 "Thing1",
                 "Thing2"
                 ]
@@ -7451,7 +7231,7 @@
     "team": "Fabled",
     "image": "https://images.klutzbanana.com/characters_official/fiddler.png",
     "ability": "Once per game, the Demon secretly chooses an opposing player: all players choose which of these 2 players win.",
-    "flavor": "Flavor",
+    "flavor": "I'll wager mi lyef ye cannae best me in a fiddle contest, ye boss-eyed snook! We'll go out on the lash, get the pub jammers an' have a right craic. I'll be layin' ma boots into ya come mornin' ye rumbly muppet.",
     "purpose": "Purpose",
     "summary": [
              "Summary1",
@@ -7463,30 +7243,6 @@
                 "Thing2"
                 ],
            "Anytime": [
-                "Thing1",
-                "Thing2"
-                ],
-           "First Night": [
-                "Thing1",
-                "Thing2"
-                ],
-           "Every Night": [
-                "Thing1",
-                "Thing2"
-                ],
-           "First Day": [
-                "Thing1",
-                "Thing2"
-                ],
-           "Every Day": [
-                "Thing1",
-                "Thing 2"
-                ],
-           "Other Nights": [
-                "Thing1",
-                "Thing2"
-                ],
-           "Other Days": [
                 "Thing1",
                 "Thing2"
                 ],
@@ -7506,7 +7262,7 @@
     "team": "Fabled",
     "image": "https://images.klutzbanana.com/characters_official/hellslibrarian.png",
     "ability": "Something bad might happen to whoever talks when the Storyteller has asked for silence.",
-    "flavor": "Flavor",
+    "flavor": "Shhhhhh. Please be quiet. It is best not to disturb the Librarian. I've heard it has a temper.",
     "purpose": "Purpose",
     "summary": [
              "Summary1",
@@ -7518,34 +7274,6 @@
                 "Thing2"
                 ],
            "Anytime": [
-                "Thing1",
-                "Thing2"
-                ],
-           "First Night": [
-                "Thing1",
-                "Thing2"
-                ],
-           "Every Night": [
-                "Thing1",
-                "Thing2"
-                ],
-           "First Day": [
-                "Thing1",
-                "Thing2"
-                ],
-           "Every Day": [
-                "Thing1",
-                "Thing 2"
-                ],
-           "Other Nights": [
-                "Thing1",
-                "Thing2"
-                ],
-           "Other Days": [
-                "Thing1",
-                "Thing2"
-                ],
-           "End of Game": [
                 "Thing1",
                 "Thing2"
                 ]
@@ -7561,7 +7289,7 @@
     "team": "Fabled",
     "image": "https://images.klutzbanana.com/characters_official/revolutionary.png",
     "ability": "2 neighboring players are known to be the same alignment. Once per game, 1 of them registers falsely.",
-    "flavor": "Flavor",
+    "flavor": "United we feigned.<br>Divided, we stalled.",
     "purpose": "Purpose",
     "summary": [
              "Summary1",
@@ -7573,34 +7301,6 @@
                 "Thing2"
                 ],
            "Anytime": [
-                "Thing1",
-                "Thing2"
-                ],
-           "First Night": [
-                "Thing1",
-                "Thing2"
-                ],
-           "Every Night": [
-                "Thing1",
-                "Thing2"
-                ],
-           "First Day": [
-                "Thing1",
-                "Thing2"
-                ],
-           "Every Day": [
-                "Thing1",
-                "Thing 2"
-                ],
-           "Other Nights": [
-                "Thing1",
-                "Thing2"
-                ],
-           "Other Days": [
-                "Thing1",
-                "Thing2"
-                ],
-           "End of Game": [
                 "Thing1",
                 "Thing2"
                 ]
@@ -7616,7 +7316,7 @@
     "team": "Fabled",
     "image": "https://images.klutzbanana.com/characters_official/sentinel.png",
     "ability": "There might be 1 extra or 1 fewer Outsider in play.",
-    "flavor": "Flavor",
+    "flavor": "Name, please.<br>Papers, please.<br>Weapons, please.",
     "purpose": "Purpose",
     "summary": [
              "Summary1",
@@ -7624,38 +7324,6 @@
              ],
     "run": {
            "Setup": [
-                "Thing1",
-                "Thing2"
-                ],
-           "Anytime": [
-                "Thing1",
-                "Thing2"
-                ],
-           "First Night": [
-                "Thing1",
-                "Thing2"
-                ],
-           "Every Night": [
-                "Thing1",
-                "Thing2"
-                ],
-           "First Day": [
-                "Thing1",
-                "Thing2"
-                ],
-           "Every Day": [
-                "Thing1",
-                "Thing 2"
-                ],
-           "Other Nights": [
-                "Thing1",
-                "Thing2"
-                ],
-           "Other Days": [
-                "Thing1",
-                "Thing2"
-                ],
-           "End of Game": [
                 "Thing1",
                 "Thing2"
                 ]
@@ -7671,7 +7339,7 @@
     "team": "Fabled",
     "image": "https://images.klutzbanana.com/characters_official/spiritofivory.png",
     "ability": "There can't be more than 1 extra evil player.",
-    "flavor": "Flavor",
+    "flavor": "The Wasteland calls. Bones rise to flesh, then fall to dust. The great spirit grows. The great spirit watches. The great spirit guides. The human listens, or the human is no more.",
     "purpose": "Purpose",
     "summary": [
              "Summary1",
@@ -7683,34 +7351,6 @@
                 "Thing2"
                 ],
            "Anytime": [
-                "Thing1",
-                "Thing2"
-                ],
-           "First Night": [
-                "Thing1",
-                "Thing2"
-                ],
-           "Every Night": [
-                "Thing1",
-                "Thing2"
-                ],
-           "First Day": [
-                "Thing1",
-                "Thing2"
-                ],
-           "Every Day": [
-                "Thing1",
-                "Thing 2"
-                ],
-           "Other Nights": [
-                "Thing1",
-                "Thing2"
-                ],
-           "Other Days": [
-                "Thing1",
-                "Thing2"
-                ],
-           "End of Game": [
                 "Thing1",
                 "Thing2"
                 ]
@@ -7726,7 +7366,7 @@
     "team": "Fabled",
     "image": "https://images.klutzbanana.com/characters_official/toymaker.png",
     "ability": "The Demon may choose not to attack & must do this at least once per game. Evil players get normal starting info.",
-    "flavor": "Flavor",
+    "flavor": "It buzzes! It walks down stairs! It keeps you warm at night! It tastes like sugar! The kiddies love it! Introducing... the brand new… Warm'o-buzzy-wuzzy-walk'a'bot-thingy-contraption! Fun for all ages!",
     "purpose": "Purpose",
     "summary": [
              "Summary1",
@@ -7740,34 +7380,33 @@
            "Anytime": [
                 "Thing1",
                 "Thing2"
-                ],
-           "First Night": [
-                "Thing1",
-                "Thing2"
-                ],
-           "Every Night": [
-                "Thing1",
-                "Thing2"
-                ],
-           "First Day": [
+                ]
+           },
+    "examples": [
+                "Example1",
+                "Example2"
+                ]
+},
+"bigwig":
+{
+    "name": "Big Wig",
+    "team": "Loric",
+    "image": "https://images.klutzbanana.com/characters_official/bigwig.png",
+    "ability": "Each nominee chooses a player: until voting, only they may speak & they are mad the nominee is good or they might die.",
+    "flavor": "Vanity asks ‘Is it popular?’<br>Cowardice asks ‘Is it safe?’<br>Conscience asks ‘Is it right?’<br>Who among us will ask:<br>‘Is it true?’",
+    "purpose": "Purpose",
+    "summary": [
+             "Summary1",
+             "Summary2"
+             ],
+    "run": {
+           "Setup": [
                 "Thing1",
                 "Thing2"
                 ],
            "Every Day": [
                 "Thing1",
                 "Thing 2"
-                ],
-           "Other Nights": [
-                "Thing1",
-                "Thing2"
-                ],
-           "Other Days": [
-                "Thing1",
-                "Thing2"
-                ],
-           "End of Game": [
-                "Thing1",
-                "Thing2"
                 ]
            },
     "examples": [
@@ -7781,7 +7420,7 @@
     "team": "Loric",
     "image": "https://images.klutzbanana.com/characters_official/bootlegger.png",
     "ability": "This script has homebrew characters or rules.",
-    "flavor": "Flavor",
+    "flavor": "I've got the latest shipment from home, a brew I'd like to call 'Barrowfog'. Wanna try?",
     "purpose": "Purpose",
     "summary": [
              "Summary1",
@@ -7789,38 +7428,6 @@
              ],
     "run": {
            "Setup": [
-                "Thing1",
-                "Thing2"
-                ],
-           "Anytime": [
-                "Thing1",
-                "Thing2"
-                ],
-           "First Night": [
-                "Thing1",
-                "Thing2"
-                ],
-           "Every Night": [
-                "Thing1",
-                "Thing2"
-                ],
-           "First Day": [
-                "Thing1",
-                "Thing2"
-                ],
-           "Every Day": [
-                "Thing1",
-                "Thing 2"
-                ],
-           "Other Nights": [
-                "Thing1",
-                "Thing2"
-                ],
-           "Other Days": [
-                "Thing1",
-                "Thing2"
-                ],
-           "End of Game": [
                 "Thing1",
                 "Thing2"
                 ]
@@ -7836,7 +7443,7 @@
     "team": "Loric",
     "image": "https://images.klutzbanana.com/characters_official/gardener.png",
     "ability": "The Storyteller assigns all players' characters.",
-    "flavor": "Flavor",
+    "flavor": "Oh now, this won't do. We've got the monkshood mixed in with the wolfsbane and the hemlock is smothering the hellebore! Oh dear me, we'd better start over. Fetch my shears.",
     "purpose": "Purpose",
     "summary": [
              "Summary1",
@@ -7844,38 +7451,6 @@
              ],
     "run": {
            "Setup": [
-                "Thing1",
-                "Thing2"
-                ],
-           "Anytime": [
-                "Thing1",
-                "Thing2"
-                ],
-           "First Night": [
-                "Thing1",
-                "Thing2"
-                ],
-           "Every Night": [
-                "Thing1",
-                "Thing2"
-                ],
-           "First Day": [
-                "Thing1",
-                "Thing2"
-                ],
-           "Every Day": [
-                "Thing1",
-                "Thing 2"
-                ],
-           "Other Nights": [
-                "Thing1",
-                "Thing2"
-                ],
-           "Other Days": [
-                "Thing1",
-                "Thing2"
-                ],
-           "End of Game": [
                 "Thing1",
                 "Thing2"
                 ]
@@ -7891,7 +7466,7 @@
     "team": "Loric",
     "image": "https://images.klutzbanana.com/characters_official/godofug.png",
     "ability": "One Ug hat. When wear Ug hat, must speak one sound at a time but vote twice. If fail, pass Ug hat.",
-    "flavor": "Flavor",
+    "flavor": "Blessed are my children, for they see the beauty in simple things.",
     "purpose": "Purpose",
     "summary": [
              "Summary1",
@@ -7902,37 +7477,9 @@
                 "Thing1",
                 "Thing2"
                 ],
-           "Anytime": [
-                "Thing1",
-                "Thing2"
-                ],
-           "First Night": [
-                "Thing1",
-                "Thing2"
-                ],
-           "Every Night": [
-                "Thing1",
-                "Thing2"
-                ],
-           "First Day": [
-                "Thing1",
-                "Thing2"
-                ],
            "Every Day": [
                 "Thing1",
                 "Thing 2"
-                ],
-           "Other Nights": [
-                "Thing1",
-                "Thing2"
-                ],
-           "Other Days": [
-                "Thing1",
-                "Thing2"
-                ],
-           "End of Game": [
-                "Thing1",
-                "Thing2"
                 ]
            },
     "examples": [
@@ -7946,7 +7493,7 @@
     "team": "Loric",
     "image": "https://images.klutzbanana.com/characters_official/hindu.png",
     "ability": "The first 4 players to die are immediately reincarnated as Travellers of the same alignment.",
-    "flavor": "Flavor",
+    "flavor": "चत्वारो मृत्युमध्ये पतन्ति,<br>चत्वारो यात्री पुनरुद्गताः।<br>चत्वारो धर्मे स्थितचित्तवृत्तेः,<br>चत्वार एषां न पुनः क्षयः॥",
     "purpose": "Purpose",
     "summary": [
              "Summary1",
@@ -7958,30 +7505,6 @@
                 "Thing2"
                 ],
            "Anytime": [
-                "Thing1",
-                "Thing2"
-                ],
-           "First Night": [
-                "Thing1",
-                "Thing2"
-                ],
-           "Every Night": [
-                "Thing1",
-                "Thing2"
-                ],
-           "First Day": [
-                "Thing1",
-                "Thing2"
-                ],
-           "Every Day": [
-                "Thing1",
-                "Thing 2"
-                ],
-           "Other Nights": [
-                "Thing1",
-                "Thing2"
-                ],
-           "Other Days": [
                 "Thing1",
                 "Thing2"
                 ],
@@ -8001,7 +7524,7 @@
     "team": "Loric",
     "image": "https://images.klutzbanana.com/characters_official/knaves.png",
     "ability": "There are 2 Storytellers: one lies & one tells the truth. Once per game, at dusk, they might switch.",
-    "flavor": "Flavor",
+    "flavor": "Every wall is a door. Every meal is a feast.",
     "purpose": "Purpose",
     "summary": [
              "Summary1",
@@ -8016,31 +7539,7 @@
                 "Thing1",
                 "Thing2"
                 ],
-           "First Night": [
-                "Thing1",
-                "Thing2"
-                ],
            "Every Night": [
-                "Thing1",
-                "Thing2"
-                ],
-           "First Day": [
-                "Thing1",
-                "Thing2"
-                ],
-           "Every Day": [
-                "Thing1",
-                "Thing 2"
-                ],
-           "Other Nights": [
-                "Thing1",
-                "Thing2"
-                ],
-           "Other Days": [
-                "Thing1",
-                "Thing2"
-                ],
-           "End of Game": [
                 "Thing1",
                 "Thing2"
                 ]
@@ -8056,7 +7555,7 @@
     "team": "Loric",
     "image": "https://images.klutzbanana.com/characters_official/pope.png",
     "ability": "There are duplicate good characters in play. They might also be bluffs.",
-    "flavor": "Flavor",
+    "flavor": "...Pulcherrimae.",
     "purpose": "Purpose",
     "summary": [
              "Summary1",
@@ -8067,35 +7566,7 @@
                 "Thing1",
                 "Thing2"
                 ],
-           "Anytime": [
-                "Thing1",
-                "Thing2"
-                ],
            "First Night": [
-                "Thing1",
-                "Thing2"
-                ],
-           "Every Night": [
-                "Thing1",
-                "Thing2"
-                ],
-           "First Day": [
-                "Thing1",
-                "Thing2"
-                ],
-           "Every Day": [
-                "Thing1",
-                "Thing 2"
-                ],
-           "Other Nights": [
-                "Thing1",
-                "Thing2"
-                ],
-           "Other Days": [
-                "Thing1",
-                "Thing2"
-                ],
-           "End of Game": [
                 "Thing1",
                 "Thing2"
                 ]
@@ -8111,7 +7582,7 @@
     "team": "Loric",
     "image": "https://images.klutzbanana.com/characters_official/stormcatcher.png",
     "ability": "Name a good character. If in play, they can only die by execution, but evil players learn which player it is.",
-    "flavor": "Flavor",
+    "flavor": "At dawn, the temple’s long shadow creeps to the fountain. At dusk, the obelisk blocks the red glare, cooling warm water under the archway. All lines converge here. A storm is coming, and this, this pebbled and lush and holy place between the apple trees, is the eye.",
     "purpose": "Purpose",
     "summary": [
              "Summary1",
@@ -8127,30 +7598,6 @@
                 "Thing2"
                 ],
            "First Night": [
-                "Thing1",
-                "Thing2"
-                ],
-           "Every Night": [
-                "Thing1",
-                "Thing2"
-                ],
-           "First Day": [
-                "Thing1",
-                "Thing2"
-                ],
-           "Every Day": [
-                "Thing1",
-                "Thing 2"
-                ],
-           "Other Nights": [
-                "Thing1",
-                "Thing2"
-                ],
-           "Other Days": [
-                "Thing1",
-                "Thing2"
-                ],
-           "End of Game": [
                 "Thing1",
                 "Thing2"
                 ]
@@ -8166,7 +7613,7 @@
     "team": "Loric",
     "image": "https://images.klutzbanana.com/characters_official/tor.png",
     "ability": "Players don't know their character or alignment. They learn them when they die.",
-    "flavor": "Flavor",
+    "flavor": "With thunder as my voice and lightning as my blade, I, the eternal guardian, feast upon the fools who dare approach the forbidden gate. Behold, my sacred goal! To purge the beetle from the belly of the rocky earth, to ensnare it in a net of stars on the hilltop where heaven meets earth.",
     "purpose": "Purpose",
     "summary": [
              "Summary1",
@@ -8181,31 +7628,7 @@
                 "Thing1",
                 "Thing2"
                 ],
-           "First Night": [
-                "Thing1",
-                "Thing2"
-                ],
            "Every Night": [
-                "Thing1",
-                "Thing2"
-                ],
-           "First Day": [
-                "Thing1",
-                "Thing2"
-                ],
-           "Every Day": [
-                "Thing1",
-                "Thing 2"
-                ],
-           "Other Nights": [
-                "Thing1",
-                "Thing2"
-                ],
-           "Other Days": [
-                "Thing1",
-                "Thing2"
-                ],
-           "End of Game": [
                 "Thing1",
                 "Thing2"
                 ]
@@ -8221,7 +7644,7 @@
     "team": "Loric",
     "image": "https://images.klutzbanana.com/characters_official/ventriloquist.png",
     "ability": "If a player is mad as a fresh character during their nomination, they might not die if executed today.",
-    "flavor": "Flavor",
+    "flavor": "Well, folks, gather ‘round! This here’s my pal Charlie, and he’s got a mouth on him that’d make a mule blush. But don’t worry folks, I do all the talkin’... or do I?",
     "purpose": "Purpose",
     "summary": [
              "Summary1",
@@ -8232,37 +7655,9 @@
                 "Thing1",
                 "Thing2"
                 ],
-           "Anytime": [
-                "Thing1",
-                "Thing2"
-                ],
-           "First Night": [
-                "Thing1",
-                "Thing2"
-                ],
-           "Every Night": [
-                "Thing1",
-                "Thing2"
-                ],
-           "First Day": [
-                "Thing1",
-                "Thing2"
-                ],
            "Every Day": [
                 "Thing1",
                 "Thing 2"
-                ],
-           "Other Nights": [
-                "Thing1",
-                "Thing2"
-                ],
-           "Other Days": [
-                "Thing1",
-                "Thing2"
-                ],
-           "End of Game": [
-                "Thing1",
-                "Thing2"
                 ]
            },
     "examples": [
@@ -8276,7 +7671,7 @@
     "team": "Loric",
     "image": "https://images.klutzbanana.com/characters_official/zenomancer.png",
     "ability": "One or more players each have a goal. When achieved, that player learns a piece of true info.",
-    "flavor": "Flavor",
+    "flavor": "The universe is a verb not a noun, they say, and it is turtles, turtles all the way down. Turtles all the way down, my friend, turtles all the way down.",
     "purpose": "Purpose",
     "summary": [
              "Summary1",
@@ -8291,31 +7686,7 @@
                 "Thing1",
                 "Thing2"
                 ],
-           "First Night": [
-                "Thing1",
-                "Thing2"
-                ],
            "Every Night": [
-                "Thing1",
-                "Thing2"
-                ],
-           "First Day": [
-                "Thing1",
-                "Thing2"
-                ],
-           "Every Day": [
-                "Thing1",
-                "Thing 2"
-                ],
-           "Other Nights": [
-                "Thing1",
-                "Thing2"
-                ],
-           "Other Days": [
-                "Thing1",
-                "Thing2"
-                ],
-           "End of Game": [
                 "Thing1",
                 "Thing2"
                 ]
