@@ -1,4 +1,4 @@
-console.log("script-generator.js updated 8/04/26 18:57");
+console.log("script-generator.js updated 8/07/26 11:09");
 function getScriptSlug(script){
     return script.file
         .replace(/^data\/scripts\//, "")
