@@ -156,8 +156,8 @@ particles.push({
     element: dot,
     progress: Math.random(),
     speed: 0.00005 + Math.random()*0.00015,
-    radiusOffset: (Math.random()-0.5)*40,
-    wobble: 10 + Math.random()*20,
+radiusOffset: (Math.random()-0.5)*25,
+wobble: 5 + Math.random()*10,
     wobbleSpeed: 0.001 + Math.random()*0.003,
     wobblePhase: Math.random()*Math.PI*2,
     opacity: 0.25 + Math.random()*0.6
@@ -262,7 +262,7 @@ if(progress > 0.5){
         });
 particles.forEach(p => {
 
-    p.progress -= p.speed;
+ p.progress += p.speed;
 
     if(p.progress < 0){
         p.progress += 1;
@@ -275,7 +275,7 @@ particles.forEach(p => {
     // Radius gently expands/contracts
 const r =
     radius +
-    80 +
+    60 +
     p.radiusOffset +
         Math.sin(
             performance.now() *
