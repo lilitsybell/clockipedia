@@ -3,11 +3,9 @@ document.addEventListener("DOMContentLoaded", () => {
     const sidebar = document.getElementById("sidebar");
 
     sidebar.innerHTML = `
-
-        <div class="logo">
-            <img src="/images/clockipedia-logo.png">
-        </div>
-
+<a href="/index.html" class="logo">
+    <img src="/images/clockipedia-logo.png" alt="Clockipedia">
+</a>
 <div class="search-box">
 
     <input
@@ -23,27 +21,16 @@ document.addEventListener("DOMContentLoaded", () => {
     </div>
 
 </div>
-
-
         <nav class="sidebar-nav">
 
-
-            <a href="/index.html" class="nav-link">
-                Home
-            </a>
-
-
             <a href="/interaction-finder.html" class="nav-link">
-                Interaction Finder
+                Interactions
             </a>
 
 
             <a href="/script-generator.html" class="nav-link">
-                Random Script Generator
+                Scripts
             </a>
-
-
-
             <div class="character-section">
 
                 <div class="character-toggle">
