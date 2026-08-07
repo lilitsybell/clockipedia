@@ -140,25 +140,29 @@ const particleWheel =
 particleWheel.innerHTML = "";
 const particles = [];
 for(let i = 0; i < 30; i++){
-    const dot = document.createElement("div");
-    dot.className = "daily-particle";
-    const size = 2 + Math.random()*6;
-    dot.style.width = `${size}px`;
-    dot.style.height = `${size}px`;
-    particleWheel.appendChild(dot);
+const dot = document.createElement("div");
+dot.className = "daily-particle";
+const size = 1 + Math.random() * 7;
+dot.style.width = `${size}px`;
+dot.style.height = `${size}px`;
+dot.style.background =
+    Math.random() < 0.25
+        ? "#ffffff"
+        : "#8b84d8";
+dot.style.animationDelay =
+    `${Math.random() * 2}s`;
+particleWheel.appendChild(dot);
 particles.push({
     element: dot,
     progress: Math.random(),
-    speed: 0.00005 + Math.random() * 0.00015,
-
-    radiusOffset: (Math.random() - 0.5) * 40,
-    wobble: 10 + Math.random() * 20,
-    wobbleSpeed: 0.001 + Math.random() * 0.003,
-    wobblePhase: Math.random() * Math.PI * 2,
-
-    opacity: 0.25 + Math.random() * 0.6
+    speed: 0.00005 + Math.random()*0.00015,
+    radiusOffset: (Math.random()-0.5)*40,
+    wobble: 10 + Math.random()*20,
+    wobbleSpeed: 0.001 + Math.random()*0.003,
+    wobblePhase: Math.random()*Math.PI*2,
+    opacity: 0.25 + Math.random()*0.6
 });
-
+dot.style.opacity = particles.at(-1).opacity;
 dot.style.opacity = particles.at(-1).opacity;
 }
     const wheel =
