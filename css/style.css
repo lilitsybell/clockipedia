@@ -436,7 +436,7 @@ body {
 .daily-script{
     display:flex;
     align-items:stretch;
-    overflow:hidden;
+    overflow:visible;
     padding:0;
     border-radius:20px;
     background:var(--purple);
