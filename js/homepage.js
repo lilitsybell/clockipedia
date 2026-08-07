@@ -152,7 +152,7 @@ if(dailyWheelAnimation){
         .filter(Boolean);
 
 
-const visibleCount = 7;
+const visibleCount = 9;
 
 
     const radius = 450;
