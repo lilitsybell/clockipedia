@@ -273,9 +273,10 @@ particles.forEach(p => {
         (arcEnd - arcStart) * p.progress;
 
     // Radius gently expands/contracts
-    const r =
-        radius +
-        p.radiusOffset +
+const r =
+    radius +
+    80 +
+    p.radiusOffset +
         Math.sin(
             performance.now() *
             p.wobbleSpeed +
@@ -299,9 +300,11 @@ particles.forEach(p => {
         centerY +
         Math.sin(angle) * r +
         Math.sin(angle + Math.PI/2) * drift;
-
-    p.element.style.transform =
-        `translate(${x}px, ${y}px)`;
+p.element.style.transform =
+    `
+    translate(${x}px, ${y}px)
+    translate(-50%, -50%)
+    `;
 });
 dailyWheelAnimation =
     requestAnimationFrame(animate);
