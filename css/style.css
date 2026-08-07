@@ -515,6 +515,36 @@ body {
 .daily-character-icon{
     animation: tokenGlow 4s ease-in-out infinite;
 }
+.daily-particle-wheel{
+    position:absolute;
+    inset:0;
+    pointer-events:none;
+    z-index:0;
+}
+.daily-character-wheel{
+    position:absolute;
+    inset:0;
+    z-index:1;
+}
+.daily-character-wheel-wrapper::before{
+    content:"";
+    position:absolute;
+    left:50%;
+    bottom:-20px;
+    width:700px;
+    height:420px;
+    transform:translateX(-50%);
+    border-radius:50%;
+    background:radial-gradient(
+        ellipse,
+        rgba(102,102,153,.35) 0%,
+        rgba(102,102,153,.15) 40%,
+        transparent 75%
+    );
+    filter:blur(35px);
+    pointer-events:none;
+    z-index:0;
+}
 /* ===========================
    Character Pages
 =========================== */
