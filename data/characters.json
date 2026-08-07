@@ -128,7 +128,7 @@
     "image": "https://images.klutzbanana.com/characters_official/artist_g.png",
     "ability": "Once per game, during the day, privately ask the Storyteller any yes/no question.",
     "flavor": "Mon Dieu! C'est lumineux! My work, she is... how you say... Magnifique! Dieu est révélé! Oui.",
-    "purpose": "The [Artist] can know the answer to any one question.",
+    "purpose": "The [Artist] can learn the answer to any one question.",
     "summary": [
              "The [Artist] may ask any question they'd like. It does not need to be related to the game.",
              "The Storyteller may only answer with \"yes\", \"no\", or \"I don't know\".",
@@ -310,7 +310,7 @@
     "image": "https://images.klutzbanana.com/characters_official/chambermaid_g.png",
     "ability": "Each night, choose 2 alive players (not yourself): you learn how many woke tonight due to their ability.",
     "flavor": "I ain' t seen nothin' untoward, Milady. Begging your pardon, but if I did see somethin', it certainly weren't the master o' the house sneaking into the professor's laboratory 'round eleven o'clock and mixing up fancy potions, just like you said, Miss.",
-    "purpose": "Purpose",
+    "purpose": "The [Chambermaid] learns who wakes at night.",
     "summary": [
              "Summary1",
              "Summary2"
@@ -333,7 +333,7 @@
     "image": "https://images.klutzbanana.com/characters_official/chef_g.png",
     "ability": "You start knowing how many pairs of evil players there are.",
     "flavor": "This evening's reservations seem odd. Never before has Mrs Mayweather kept company with that scamp from Hudson Lane. Yet, tonight, they have a table for two. Strange.",
-    "purpose": "Purpose",
+    "purpose": "The [Chef] learns how many evil players are sitting next to each other.",
     "summary": [
              "Summary1",
              "Summary2"
@@ -356,7 +356,7 @@
     "image": "https://images.klutzbanana.com/characters_official/choirboy_g.png",
     "ability": "If the Demon kills the King, you learn which player is the Demon. [+the King]",
     "flavor": "I saw it, I did. I was in the pews, tidying the hymn books, when a dreadful tune started from the pipe organ. The organist had a long cloak, and long fingers on the keys. And a hat that looked… just like… yours.",
-    "purpose": "Purpose",
+    "purpose": "The [Choirboy] learns who the Demon is if the Demon kills the [King].",
     "summary": [
              "Summary1",
              "Summary2"
@@ -383,7 +383,7 @@
     "image": "https://images.klutzbanana.com/characters_official/clockmaker_g.png",
     "ability": "You start knowing how many steps from the Demon to its nearest Minion.",
     "flavor": "Do not disturb me. The tick must continue, for the circle is a symbol of life and contains all things - all answers - in its divine machinery. I must work.",
-    "purpose": "Purpose",
+    "purpose": "The [Clockmaker] learns how close the Demon is to their closest Minion.",
     "summary": [
              "Summary1",
              "Summary2"
@@ -406,7 +406,7 @@
     "image": "https://images.klutzbanana.com/characters_official/courtier_g.png",
     "ability": "Once per game, at night, choose a character: they are drunk for 3 nights & 3 days.",
     "flavor": "I am more afraid of an army of one hundred sheep led by a lion than an army of one hundred lions led by a sheep.",
-    "purpose": "Purpose",
+    "purpose": "The [Courtier] may drunk any character, even if they don't know which player it is.",
     "summary": [
              "Summary1",
              "Summary2"
@@ -429,7 +429,7 @@
     "image": "https://images.klutzbanana.com/characters_official/cultleader_g.png",
     "ability": "Each night, you become the alignment of an alive neighbor. If all good players choose to join your cult, your team wins.",
     "flavor": "Thinking themselves wise, they became fools.",
-    "purpose": "Purpose",
+    "purpose": "The [Cult Leader]'s team is able to win if they get everyone to agree they should.",
     "summary": [
              "Summary1",
              "Summary2"
@@ -456,7 +456,7 @@
     "image": "https://images.klutzbanana.com/characters_official/dreamer_g.png",
     "ability": "Each night, choose a player (not yourself or Travellers): you learn 1 good & 1 evil character, 1 of which is correct.",
     "flavor": "I remember the Clockmaker. The sky was red and it was raining fractal triangles. There was a smell of violets and a bubbling sound. A woman with glowing eyes and a scraggly beard was hissing at the sky. Then, I awoke.",
-    "purpose": "Purpose",
+    "purpose": "The [Dreamer] learns two characters a player might be.",
     "summary": [
              "Summary1",
              "Summary2"
@@ -479,7 +479,7 @@
     "image": "https://images.klutzbanana.com/characters_official/empath_g.png",
     "ability": "Each night, you learn how many of your 2 alive neighbors are evil.",
     "flavor": "My skin prickles. Something is not right here. I can feel it.",
-    "purpose": "Purpose",
+    "purpose": "The [Empath] learns how many of their alive neighbors are evil.",
     "summary": [
              "Summary1",
              "Summary2"
@@ -502,7 +502,7 @@
     "image": "https://images.klutzbanana.com/characters_official/engineer_g.png",
     "ability": "Once per game, at night, choose which Minions or which Demon is in play.",
     "flavor": "If it bends, great. If it breaks, well, it probably needed fixing anyway.",
-    "purpose": "Purpose",
+    "purpose": "The [Engineer] decides which evil characters are in play.",
     "summary": [
              "Summary1",
              "Summary2"
@@ -525,7 +525,7 @@
     "image": "https://images.klutzbanana.com/characters_official/exorcist_g.png",
     "ability": "Each night*, choose a player (different to last night): the Demon, if chosen, learns who you are then doesn't wake tonight.",
     "flavor": "We cast you out, every unclean spirit, every satanic power, every onslaught of the infernal adversary, every legion, every diabolical group and sect, in the name and by the power of Our Lord Jesus Christ. We command you, begone and fly far from the Church of God, from the souls made by God in His image and redeemed by the precious blood of the divine Lamb.",
-    "purpose": "Purpose",
+    "purpose": "The [Exorcist] might stop a Demon attack.",
     "summary": [
              "Summary1",
              "Summary2"
@@ -548,7 +548,7 @@
     "image": "https://images.klutzbanana.com/characters_official/farmer_g.png",
     "ability": "When you die at night, an alive good player becomes a Farmer.",
     "flavor": "Even the high and mighty need food on the table. Without us, the city starves.",
-    "purpose": "Purpose",
+    "purpose": "The [Farmer] turns other players into [Farmer]s.",
     "summary": [
              "Summary1",
              "Summary2"
@@ -571,7 +571,7 @@
     "image": "https://images.klutzbanana.com/characters_official/fisherman_g.png",
     "ability": "Once per game, during the day, visit the Storyteller for some advice to help your team win.",
     "flavor": "This was my favourite part of the river... see how the sunlight makes a rainbow from the monastery to the market? This was the best place for big fish. And the older I get, the bigger they were.",
-    "purpose": "Purpose",
+    "purpose": "The [Fisherman] learns what to do from the Storyteller.",
     "summary": [
              "Summary1",
              "Summary2"
@@ -594,7 +594,7 @@
     "image": "https://images.klutzbanana.com/characters_official/flowergirl_g.png",
     "ability": "Each night*, you learn if a Demon voted today.",
     "flavor": "Yesterday's violets have withered and died, but today my poppies bloom.",
-    "purpose": "Purpose",
+    "purpose": "The [Flowergirl] learns if the Demon voted.",
     "summary": [
              "Summary1",
              "Summary2"
@@ -621,7 +621,7 @@
     "image": "https://images.klutzbanana.com/characters_official/fool_g.png",
     "ability": "The 1st time you die, you don't.",
     "flavor": "...and the King said 'What?! I've never even owned a pair of rubber pantaloons, let alone a custard cannon!' Ho-ho! Jolly day!",
-    "purpose": "Purpose",
+    "purpose": "The [Fool] has two lives.",
     "summary": [
              "Summary1",
              "Summary2"
@@ -644,7 +644,7 @@
     "image": "https://images.klutzbanana.com/characters_official/fortuneteller_g.png",
     "ability": "Each night, choose 2 players: you learn if either is a Demon. There is a good player that registers as a Demon to you.",
     "flavor": "I sense great evil in your soul! But... that could just be your perfume. I am allergic to Elderberry.",
-    "purpose": "Purpose",
+    "purpose": "The [Fortune Teller] learns who may and may not be the Demon.",
     "summary": [
              "Summary1",
              "Summary2"
@@ -671,7 +671,7 @@
     "image": "https://images.klutzbanana.com/characters_official/gambler_g.png",
     "ability": "Each night*, choose a player & guess their character: if you guess wrong, you die.",
     "flavor": "Heads, I win. Tails, you lose.",
-    "purpose": "Purpose",
+    "purpose": "The [Gambler] learns who is telling the truth about their character.",
     "summary": [
              "Summary1",
              "Summary2"
@@ -694,7 +694,7 @@
     "image": "https://images.klutzbanana.com/characters_official/general_g.png",
     "ability": "Each night, you learn which alignment the Storyteller believes is winning: good, evil, or neither.",
     "flavor": "I don’t have time for quotes.",
-    "purpose": "Purpose",
+    "purpose": "The [General] learns which team is winning.",
     "summary": [
              "Summary1",
              "Summary2"
@@ -717,7 +717,7 @@
     "image": "https://images.klutzbanana.com/characters_official/gossip_g.png",
     "ability": "Each day, you may make a public statement. Tonight, if it was true, a player dies.",
     "flavor": "Blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah. Blah.",
-    "purpose": "Purpose",
+    "purpose": "The [Gossip] kills players to learn information.",
     "summary": [
              "Summary1",
              "Summary2"
@@ -744,7 +744,7 @@
     "image": "https://images.klutzbanana.com/characters_official/grandmother_g.png",
     "ability": "You start knowing a good player & their character. If the Demon kills them, you die too.",
     "flavor": "Take a jacket if you go outside, dearie. And your thermos. And your scarf. I have a weak heart, you know. Whatever would I do if you caught cold...or worse?",
-    "purpose": "Purpose",
+    "purpose": "The [Grandmother] learns exactly which character one player is, but dies if the Demon kills them.",
     "summary": [
              "Summary1",
              "Summary2"
@@ -771,7 +771,7 @@
     "image": "https://images.klutzbanana.com/characters_official/highpriestess_g.png",
     "ability": "Each night, learn which player the Storyteller believes you should talk to most.",
     "flavor": "There is life behind the personality that uses personalities as masks. There are times when life puts off the mask and deep answers to deep.",
-    "purpose": "Purpose",
+    "purpose": "The [High Priestess] learns who to talk to from the Storyteller.",
     "summary": [
              "Summary1",
              "Summary2"
@@ -794,7 +794,7 @@
     "image": "https://images.klutzbanana.com/characters_official/huntsman_g.png",
     "ability": "Once per game, at night, choose a living player: the Damsel, if chosen, becomes a not-in-play Townsfolk. [+the Damsel]",
     "flavor": "My cabin is warm and sturdy. My axe by the door, my boots drying by the fire, and elk stew a-simmering… Hark! A scream echoes through the valley! The rain and the mud and the cold, cold wind mask the scent of the wolves, but I know the path and my pace is steady. I am coming.",
-    "purpose": "Purpose",
+    "purpose": "The [Huntsman] may turn the [Damsel] into a Townsfolk.",
     "summary": [
              "Summary1",
              "Summary2"
@@ -821,7 +821,7 @@
     "image": "https://images.klutzbanana.com/characters_official/innkeeper_g.png",
     "ability": "Each night*, choose 2 players: they can't die tonight, but 1 is drunk until dusk.",
     "flavor": "Come inside, fair traveller, and rest your weary bones. Drink and be merry, for the legions of the Dark One shall not harass thee tonight.",
-    "purpose": "Purpose",
+    "purpose": "The [Innkeeper] protects two players from death every night, but causes one of them to be drunk.",
     "summary": [
              "Summary1",
              "Summary2"
@@ -844,7 +844,7 @@
     "image": "https://images.klutzbanana.com/characters_official/investigator_g.png",
     "ability": "You start knowing that 1 of 2 players is a particular Minion.",
     "flavor": "It is a fine night for a stroll, wouldn't you say, Mister Morozov? Or should I say... BARON Morozov?",
-    "purpose": "Purpose",
+    "purpose": "The [Investigator] learns an in play Minion, and who it might be.",
     "summary": [
              "Summary1",
              "Summary2"
@@ -867,7 +867,7 @@
     "image": "https://images.klutzbanana.com/characters_official/juggler_g.png",
     "ability": "On your 1st day, publicly guess up to 5 players' characters. That night, you learn how many you got correct.",
     "flavor": "For my next trick, as per request, I will need a flower, a bag of beans, a toy snake, a paintbrush, and a motorized gasoline-powered hedge trimming device. I warn you, this trick may be my last. Oh dear.",
-    "purpose": "Purpose",
+    "purpose": "The [Juggler] learns if they guessed up to 5 players' characters correctly.",
     "summary": [
              "Summary1",
              "Summary2"
@@ -894,7 +894,7 @@
     "image": "https://images.klutzbanana.com/characters_official/king_g.png",
     "ability": "Each night, if the dead equal or outnumber the living, you learn 1 alive character. The Demon knows you are the King.",
     "flavor": "↑Betwixt the unknown strains of mortal strife→</br>And morbid night, sweet↓ with mystery and woe</br>←Lies unfettered joys of fate’s long and colored life</br>Who’s garden blooms with each painted Face to Show.",
-    "purpose": "Purpose",
+    "purpose": "The [King] learns exactly which characters are still alive.",
     "summary": [
              "Summary1",
              "Summary2"
@@ -921,7 +921,7 @@
     "image": "https://images.klutzbanana.com/characters_official/knight_g.png",
     "ability": "You start knowing 2 players that are not the Demon.",
     "flavor": "When a man lies, he murders some part of the world.",
-    "purpose": "Purpose",
+    "purpose": "The [Knight] learns two players that are not the Demon.",
     "summary": [
              "Summary1",
              "Summary2"
@@ -944,7 +944,7 @@
     "image": "https://images.klutzbanana.com/characters_official/librarian_g.png",
     "ability": "You start knowing that 1 of 2 players is a particular Outsider. (Or that zero are in play.)",
     "flavor": "Certainly madam, under normal circumstances, you may borrow the Codex Malificarium from the library vaults. However, you do not seem to be a member.",
-    "purpose": "Purpose",
+    "purpose": "The [Librarian] knows an in play Outsider and who it might be.",
     "summary": [
              "Summary1",
              "Summary2"
@@ -967,7 +967,7 @@
     "image": "https://images.klutzbanana.com/characters_official/lycanthrope_g.png",
     "ability": "Each night*, choose an alive player. If good, they die & the Demon doesn’t kill tonight. One good player registers as evil.",
     "flavor": "Beneath the thin veneer of civilization lies a howling madness.",
-    "purpose": "Purpose",
+    "purpose": "The [Lycanthrope] controls who dies at night.",
     "summary": [
              "Summary1",
              "Summary2"
@@ -998,7 +998,7 @@
     "image": "https://images.klutzbanana.com/characters_official/magician_g.png",
     "ability": "The Demon thinks you are a Minion. Minions think you are a Demon.",
     "flavor": "1... 2... Abra... 3... 4... Cadabra... *poof!*</br>And, as you can see, ladies and gentlemen, Captain Farnsworth’s bag of gold has disappeared! Gone! Without a trace! Thank you, and goodnight!",
-    "purpose": "Purpose",
+    "purpose": "The [Magician] tricks Minions and Demons into thinking they are one of them.",
     "summary": [
              "Summary1",
              "Summary2"
@@ -1053,7 +1053,7 @@
     "image": "https://images.klutzbanana.com/characters_official/mathematician_g.png",
     "ability": "Each night, you learn how many players’ abilities worked abnormally (since dawn) due to another character's ability.",
     "flavor": "Any consistent formal system x, within which a certain amount of elementary arithmetic can be carried out is incomplete; that is, there are statements of the language of x which can neither be proved nor disproved in x. Ergo, you are drunk.",
-    "purpose": "Purpose",
+    "purpose": "The [Mathematician] learns how many players abilities are not working as intended.",
     "summary": [
              "Summary1",
              "Summary2"
@@ -1108,7 +1108,7 @@
     "image": "https://images.klutzbanana.com/characters_official/mayor_g.png",
     "ability": "If only 3 players live & no execution occurs, your team wins. If you die at night, another player might die instead.",
     "flavor": "We must put our differences aside, and cease this senseless killing. We are all taxpayers after all. Well, most of us.",
-    "purpose": "Purpose",
+    "purpose": "The [Mayor] can win without killing the Demon and has extra protection.",
     "summary": [
              "Summary1",
              "Summary2"
@@ -1163,7 +1163,7 @@
     "image": "https://images.klutzbanana.com/characters_official/minstrel_g.png",
     "ability": "When a Minion dies by execution, all other players (except Travellers) are drunk until dusk tomorrow.",
     "flavor": "And I shall hear, tho' soft you tread above me... And all my dreams will warm and sweeter be... If you'll not fail to tell me that you love me... I simply sleep in peace until you come to me.",
-    "purpose": "Purpose",
+    "purpose": "The [Minstrel] makes everyone drunk, even evil players, if a Minion is executed.",
     "summary": [
              "Summary1",
              "Summary2"
@@ -1218,7 +1218,7 @@
     "image": "https://images.klutzbanana.com/characters_official/monk_g.png",
     "ability": "Each night*, choose a player (not yourself): they are safe from the Demon tonight.",
     "flavor": "Tis an ill and deathly wind that blows tonight. Come, my brother, take shelter in the abbey while the storm rages. By my word, or by my life, you will be safe.",
-    "purpose": "Purpose",
+    "purpose": "The [Monk] protects players from ill effects of the Demon.",
     "summary": [
              "Summary1",
              "Summary2"
@@ -1273,7 +1273,7 @@
     "image": "https://images.klutzbanana.com/characters_official/nightwatchman_g.png",
     "ability": "Once per game, at night, choose a player: they learn you are the Nightwatchman.",
     "flavor": "The night is cold and lonely, but I have the moon, the stars, the crisp wind and the soft thud of leather boots on cobbled stone for company. Yonder, candlelight flickers behind a murky window...",
-    "purpose": "Purpose",
+    "purpose": "The [Nightwatchman] tells one player exactly who they are.",
     "summary": [
              "Summary1",
              "Summary2"
@@ -1328,7 +1328,7 @@
     "image": "https://images.klutzbanana.com/characters_official/noble_g.png",
     "ability": "You start knowing 3 players, 1 and only 1 of which is evil.",
     "flavor": "Sarcasm is indeed the lowest form of wit. But speaking in response to your criticism, Sir, it is, nevertheless, a form of wit.",
-    "purpose": "Purpose",
+    "purpose": "The [Noble] learns one evil player and two good players, but does not learn which is which.",
     "summary": [
              "Summary1",
              "Summary2"
@@ -1383,7 +1383,7 @@
     "image": "https://images.klutzbanana.com/characters_official/oracle_g.png",
     "ability": "Each night*, you learn how many dead players are evil.",
     "flavor": "Only the chosen may gaze beyond the veil. The dead are restless, and they point in silence toward the icy north.",
-    "purpose": "Purpose",
+    "purpose": "The [Oracle] learns how many evil players are dead.",
     "summary": [
              "Summary1",
              "Summary2"
@@ -1438,7 +1438,7 @@
     "image": "https://images.klutzbanana.com/characters_official/pacifist_g.png",
     "ability": "Executed good players might not die.",
     "flavor": "Distrust all in whom the impulse to punish is powerful.",
-    "purpose": "Purpose",
+    "purpose": "The [Pacifist] saves good players from execution.",
     "summary": [
              "Summary1",
              "Summary2"
@@ -1493,7 +1493,7 @@
     "image": "https://images.klutzbanana.com/characters_official/philosopher_g.png",
     "ability": "Once per game, at night, choose a good character: gain that ability. If this character is in play, they are drunk.",
     "flavor": "If anything is real, beer is real. Drink, for tomorrow we may die.",
-    "purpose": "Purpose",
+    "purpose": "The [Philosopher] chooses which ability they have.",
     "summary": [
              "Summary1",
              "Summary2"
@@ -1548,7 +1548,7 @@
     "image": "https://images.klutzbanana.com/characters_official/pixie_g.png",
     "ability": "You start knowing 1 in-play Townsfolk. If you were mad that you were this character, you gain their ability when they die.",
     "flavor": "Round and round the garden, go.<br>Little girls run to and fro.<br>Little boys climb up the tree.<br>Which of these should Pixie be?<br>Ladies smile and go to town. <br>Lords with axe chop forest down.<br>What’s yours is mine. What’s mine, divine.<br>Silly little Pixie, me.",
-    "purpose": "Purpose",
+    "purpose": "The [Pixie] learns and in play character and gains their ability.",
     "summary": [
              "Summary1",
              "Summary2"
@@ -1603,45 +1603,17 @@
     "image": "https://images.klutzbanana.com/characters_official/poppygrower_g.png",
     "ability": "Minions & Demons do not know each other. If you die, they learn who each other are that night.",
     "flavor": "In the hidden groves of the deep forest, the black poppy dwells. To see its revelry is to be enchanted. To smell its thick aroma is to be lost forever, a slave to the gods of light and dark.",
-    "purpose": "Purpose",
+    "purpose": "The [Poppy Grower] keeps the Minions and Demons from learning each other.",
     "summary": [
              "Summary1",
              "Summary2"
              ],
     "run": {
-           "Setup": [
-                "Thing1",
-                "Thing2"
-                ],
-           "Anytime": [
-                "Thing1",
-                "Thing2"
-                ],
            "First Night": [
                 "Thing1",
                 "Thing2"
                 ],
-           "Every Night": [
-                "Thing1",
-                "Thing2"
-                ],
-           "First Day": [
-                "Thing1",
-                "Thing2"
-                ],
-           "Every Day": [
-                "Thing1",
-                "Thing 2"
-                ],
            "Other Nights": [
-                "Thing1",
-                "Thing2"
-                ],
-           "Other Days": [
-                "Thing1",
-                "Thing2"
-                ],
-           "End of Game": [
                 "Thing1",
                 "Thing2"
                 ]
@@ -1658,45 +1630,13 @@
     "image": "https://images.klutzbanana.com/characters_official/preacher_g.png",
     "ability": "Each night, choose a player: a Minion, if chosen, learns this. All chosen Minions have no ability.",
     "flavor": "It is better to be rich and healthy than poor and sick.",
-    "purpose": "Purpose",
+    "purpose": "The [Preacher] stops Minions from having an ability.",
     "summary": [
              "Summary1",
              "Summary2"
              ],
     "run": {
-           "Setup": [
-                "Thing1",
-                "Thing2"
-                ],
-           "Anytime": [
-                "Thing1",
-                "Thing2"
-                ],
-           "First Night": [
-                "Thing1",
-                "Thing2"
-                ],
            "Every Night": [
-                "Thing1",
-                "Thing2"
-                ],
-           "First Day": [
-                "Thing1",
-                "Thing2"
-                ],
-           "Every Day": [
-                "Thing1",
-                "Thing 2"
-                ],
-           "Other Nights": [
-                "Thing1",
-                "Thing2"
-                ],
-           "Other Days": [
-                "Thing1",
-                "Thing2"
-                ],
-           "End of Game": [
                 "Thing1",
                 "Thing2"
                 ]
@@ -1713,45 +1653,17 @@
     "image": "https://images.klutzbanana.com/characters_official/princess_g.png",
     "ability": "On your 1st day, if you nominated & executed a player, the Demon doesn't kill tonight.",
     "flavor": "Our words are hounds, bound by silken threads, dear lords. Let kindness weave them true, lest the reigns unravel and rend our court.",
-    "purpose": "Purpose",
+    "purpose": "The [Princess] stops the Demon from killing for one night.",
     "summary": [
              "Summary1",
              "Summary2"
              ],
     "run": {
-           "Setup": [
-                "Thing1",
-                "Thing2"
-                ],
-           "Anytime": [
-                "Thing1",
-                "Thing2"
-                ],
-           "First Night": [
-                "Thing1",
-                "Thing2"
-                ],
-           "Every Night": [
-                "Thing1",
-                "Thing2"
-                ],
            "First Day": [
                 "Thing1",
                 "Thing2"
                 ],
-           "Every Day": [
-                "Thing1",
-                "Thing 2"
-                ],
            "Other Nights": [
-                "Thing1",
-                "Thing2"
-                ],
-           "Other Days": [
-                "Thing1",
-                "Thing2"
-                ],
-           "End of Game": [
                 "Thing1",
                 "Thing2"
                 ]
@@ -1768,45 +1680,13 @@
     "image": "https://images.klutzbanana.com/characters_official/professor_g.png",
     "ability": "Once per game, at night*, choose a dead player: if they are a Townsfolk, they are resurrected.",
     "flavor": "The process is simple. Attach the hydraulic confabulator to the modified chi matrix amplifier, add 20 CCs of pseudodorafine, keep his Z levels above 20%, and your husband will be fine. Now, all we need is a lightning strike.",
-    "purpose": "Purpose",
+    "purpose": "The [Professor] may resurrect one player.",
     "summary": [
              "Summary1",
              "Summary2"
              ],
     "run": {
-           "Setup": [
-                "Thing1",
-                "Thing2"
-                ],
-           "Anytime": [
-                "Thing1",
-                "Thing2"
-                ],
-           "First Night": [
-                "Thing1",
-                "Thing2"
-                ],
-           "Every Night": [
-                "Thing1",
-                "Thing2"
-                ],
-           "First Day": [
-                "Thing1",
-                "Thing2"
-                ],
-           "Every Day": [
-                "Thing1",
-                "Thing 2"
-                ],
            "Other Nights": [
-                "Thing1",
-                "Thing2"
-                ],
-           "Other Days": [
-                "Thing1",
-                "Thing2"
-                ],
-           "End of Game": [
                 "Thing1",
                 "Thing2"
                 ]
@@ -1823,7 +1703,7 @@
     "image": "https://images.klutzbanana.com/characters_official/ravenkeeper_g.png",
     "ability": "If you die at night, you are woken to choose a player: you learn their character.",
     "flavor": "My birds will avenge me! Fly! Fly, my sweet and dutiful pets! To the manor and to the river! To the alleys and to the salons! Fly!",
-    "purpose": "Purpose",
+    "purpose": "When the [Ravenkeeper] dies, they learn one player's character.",
     "summary": [
              "Summary1",
              "Summary2"
@@ -1878,7 +1758,7 @@
     "image": "https://images.klutzbanana.com/characters_official/sage_g.png",
     "ability": "If the Demon kills you, you learn that it is 1 of 2 players.",
     "flavor": "These mountainous tomes guard the secret, I am sure of it! Twixt word and word, it lies in wait. More candles, boy! More ink! These notes may look arcane, but the infernal puzzle is revealing itself.",
-    "purpose": "Purpose",
+    "purpose": "If the Demon kills the [Sage], the [Sage] learns who the Demon may be.",
     "summary": [
              "Summary1",
              "Summary2"
@@ -1933,7 +1813,7 @@
     "image": "https://images.klutzbanana.com/characters_official/sailor_g.png",
     "ability": "Each night, choose an alive player: either you or they are drunk until dusk. You can't die.",
     "flavor": "I'll drink any one of yer under the table! You! The chatterbox! Reckon you can take me? No? Howza 'bout you, Grandma? You ever tried Old McKillys Extra Spiced Rum before? Guaranteed to put hairs on yer chest! Step aboard, aye!",
-    "purpose": "Purpose",
+    "purpose": "The [Sailor] cannot die.",
     "summary": [
              "Summary1",
              "Summary2"
@@ -1988,7 +1868,7 @@
     "image": "https://images.klutzbanana.com/characters_official/savant_g.png",
     "ability": "Each day, you may visit the Storyteller to learn 2 things in private: 1 is true & 1 is false.",
     "flavor": "Seventy-two matchsticks on the floor... the sun sets early but the moon is unchanged... a torn piece of cloth... evil in the manor house... three by three... the one we trusted is not what he seems... green light means magnesium... residue, but the pattern is wrong... Seventy-two matchsticks on the floor...",
-    "purpose": "Purpose",
+    "purpose": "The [Savant] learns true and false information from the Storyteller, but must figure out which is which.",
     "summary": [
              "Summary1",
              "Summary2"
@@ -2043,7 +1923,7 @@
     "image": "https://images.klutzbanana.com/characters_official/seamstress_g.png",
     "ability": "Once per game, at night, choose 2 players (not yourself): you learn if they are the same alignment.",
     "flavor": "Did you hear that stranger in the cashmere coat put the word on our young Belle? And she said yes? Well, that's nothing compared to what Harry and that juggler got up to at the fair! The things I could say if I was a tattletale... my, yes.",
-    "purpose": "Purpose",
+    "purpose": "The [Seamstress] learns if two players are on the same team.",
     "summary": [
              "Summary1",
              "Summary2"
@@ -2098,45 +1978,13 @@
     "image": "https://images.klutzbanana.com/characters_official/shugenja_g.png",
     "ability": "You start knowing if your closest evil player is clockwise or anti-clockwise. If equidistant, this info is arbitrary.",
     "flavor": "これは夢。それも夢。すべて夢です。",
-    "purpose": "Purpose",
+    "purpose": "The [Shugenja] learns which way to look for evil players.",
     "summary": [
              "Summary1",
              "Summary2"
              ],
     "run": {
-           "Setup": [
-                "Thing1",
-                "Thing2"
-                ],
-           "Anytime": [
-                "Thing1",
-                "Thing2"
-                ],
            "First Night": [
-                "Thing1",
-                "Thing2"
-                ],
-           "Every Night": [
-                "Thing1",
-                "Thing2"
-                ],
-           "First Day": [
-                "Thing1",
-                "Thing2"
-                ],
-           "Every Day": [
-                "Thing1",
-                "Thing 2"
-                ],
-           "Other Nights": [
-                "Thing1",
-                "Thing2"
-                ],
-           "Other Days": [
-                "Thing1",
-                "Thing2"
-                ],
-           "End of Game": [
                 "Thing1",
                 "Thing2"
                 ]
@@ -2153,47 +2001,15 @@
     "image": "https://images.klutzbanana.com/characters_official/slayer_g.png",
     "ability": "Once per game, during the day, publicly choose a player: if they are the Demon, they die.",
     "flavor": "Die.",
-    "purpose": "Purpose",
+    "purpose": "The [Slayer] may kill the Demon.",
     "summary": [
              "Summary1",
              "Summary2"
              ],
     "run": {
-           "Setup": [
-                "Thing1",
-                "Thing2"
-                ],
-           "Anytime": [
-                "Thing1",
-                "Thing2"
-                ],
-           "First Night": [
-                "Thing1",
-                "Thing2"
-                ],
-           "Every Night": [
-                "Thing1",
-                "Thing2"
-                ],
-           "First Day": [
-                "Thing1",
-                "Thing2"
-                ],
            "Every Day": [
                 "Thing1",
                 "Thing 2"
-                ],
-           "Other Nights": [
-                "Thing1",
-                "Thing2"
-                ],
-           "Other Days": [
-                "Thing1",
-                "Thing2"
-                ],
-           "End of Game": [
-                "Thing1",
-                "Thing2"
                 ]
            },
     "examples": [
@@ -2208,7 +2024,7 @@
     "image": "https://images.klutzbanana.com/characters_official/snakecharmer_g.png",
     "ability": "Each night, choose an alive player: a chosen Demon swaps characters & alignments with you & is then poisoned.",
     "flavor": "Effendi... I am but a humble man, but my pipe is golden and a single tune will tame the wildest djinn, Inshallah. They say that greed hangs more men than rope. But not I, Effendi... not I.",
-    "purpose": "Purpose",
+    "purpose": "The [Snake Charmer] learns exactly who isn't the Demon.",
     "summary": [
              "Summary1",
              "Summary2"
@@ -2263,45 +2079,13 @@
     "image": "https://images.klutzbanana.com/characters_official/soldier_g.png",
     "ability": "You are safe from the Demon.",
     "flavor": "As David said to Goliath, as Theseus said to the Minotaur, as Arjuna said to Bhagadatta... No.",
-    "purpose": "Purpose",
+    "purpose": "The [Soldier] is safe from all ill effects of the Demon.",
     "summary": [
              "Summary1",
              "Summary2"
              ],
     "run": {
-           "Setup": [
-                "Thing1",
-                "Thing2"
-                ],
            "Anytime": [
-                "Thing1",
-                "Thing2"
-                ],
-           "First Night": [
-                "Thing1",
-                "Thing2"
-                ],
-           "Every Night": [
-                "Thing1",
-                "Thing2"
-                ],
-           "First Day": [
-                "Thing1",
-                "Thing2"
-                ],
-           "Every Day": [
-                "Thing1",
-                "Thing 2"
-                ],
-           "Other Nights": [
-                "Thing1",
-                "Thing2"
-                ],
-           "Other Days": [
-                "Thing1",
-                "Thing2"
-                ],
-           "End of Game": [
                 "Thing1",
                 "Thing2"
                 ]
@@ -2318,7 +2102,7 @@
     "image": "https://images.klutzbanana.com/characters_official/steward_g.png",
     "ability": "You start knowing 1 good player.",
     "flavor": "How DARE you accuse Her Ladyship of wrongdoing? I’ve known her my entire life! All nine years!",
-    "purpose": "Purpose",
+    "purpose": "The [Steward] learns 1 good player.",
     "summary": [
              "Summary1",
              "Summary2"
@@ -2373,7 +2157,7 @@
     "image": "https://images.klutzbanana.com/characters_official/tealady_g.png",
     "ability": "If both your alive neighbors are good, they can't die.",
     "flavor": "If you are cold, tea will warm you. If you are too heated, tea will cool you. If you are depressed, tea will cheer you. If you are excited, tea will calm you.",
-    "purpose": "Purpose",
+    "purpose": "The [Tea Lady] protects their neighbors from death, but only if they are both good.",
     "summary": [
              "Summary1",
              "Summary2"
@@ -2428,45 +2212,17 @@
     "image": "https://images.klutzbanana.com/characters_official/towncrier_g.png",
     "ability": "Each night*, you learn if a Minion nominated today.",
     "flavor": "Hear ye! Hear ye! Witchcraft in the labyrinth! Genius savant reveals all! Town in danger! Hear Ye!",
-    "purpose": "Purpose",
+    "purpose": "The [Town Crier] learns if Minions nominate.",
     "summary": [
              "Summary1",
              "Summary2"
              ],
     "run": {
-           "Setup": [
-                "Thing1",
-                "Thing2"
-                ],
-           "Anytime": [
-                "Thing1",
-                "Thing2"
-                ],
-           "First Night": [
-                "Thing1",
-                "Thing2"
-                ],
-           "Every Night": [
-                "Thing1",
-                "Thing2"
-                ],
-           "First Day": [
-                "Thing1",
-                "Thing2"
-                ],
            "Every Day": [
                 "Thing1",
                 "Thing 2"
                 ],
            "Other Nights": [
-                "Thing1",
-                "Thing2"
-                ],
-           "Other Days": [
-                "Thing1",
-                "Thing2"
-                ],
-           "End of Game": [
                 "Thing1",
                 "Thing2"
                 ]
@@ -2483,45 +2239,13 @@
     "image": "https://images.klutzbanana.com/characters_official/undertaker_g.png",
     "ability": "Each night*, you learn which character died by execution today.",
     "flavor": "Hmmm....what have we here? The left boot is worn down to the heel, with flint shavings under the tongue. This is the garb of a Military man.",
-    "purpose": "Purpose",
+    "purpose": "The [Undertaker] learns exactly which character died from execution today.",
     "summary": [
              "Summary1",
              "Summary2"
              ],
     "run": {
-           "Setup": [
-                "Thing1",
-                "Thing2"
-                ],
-           "Anytime": [
-                "Thing1",
-                "Thing2"
-                ],
-           "First Night": [
-                "Thing1",
-                "Thing2"
-                ],
-           "Every Night": [
-                "Thing1",
-                "Thing2"
-                ],
-           "First Day": [
-                "Thing1",
-                "Thing2"
-                ],
-           "Every Day": [
-                "Thing1",
-                "Thing 2"
-                ],
            "Other Nights": [
-                "Thing1",
-                "Thing2"
-                ],
-           "Other Days": [
-                "Thing1",
-                "Thing2"
-                ],
-           "End of Game": [
                 "Thing1",
                 "Thing2"
                 ]
@@ -2538,7 +2262,7 @@
     "image": "https://images.klutzbanana.com/characters_official/villageidiot_g.png",
     "ability": "Each night, choose a player: you learn their alignment. [+0 to +2 Village Idiots. 1 of the extras is drunk]",
     "flavor": "Roses are blue, and violets are red, Please reverse what I just said.",
-    "purpose": "Purpose",
+    "purpose": "The [Village Idiot]s learn exactly which team a player is on, but one is drunk.",
     "summary": [
              "Summary1",
              "Summary2"
@@ -2548,35 +2272,7 @@
                 "Thing1",
                 "Thing2"
                 ],
-           "Anytime": [
-                "Thing1",
-                "Thing2"
-                ],
-           "First Night": [
-                "Thing1",
-                "Thing2"
-                ],
            "Every Night": [
-                "Thing1",
-                "Thing2"
-                ],
-           "First Day": [
-                "Thing1",
-                "Thing2"
-                ],
-           "Every Day": [
-                "Thing1",
-                "Thing 2"
-                ],
-           "Other Nights": [
-                "Thing1",
-                "Thing2"
-                ],
-           "Other Days": [
-                "Thing1",
-                "Thing2"
-                ],
-           "End of Game": [
                 "Thing1",
                 "Thing2"
                 ]
@@ -2593,47 +2289,15 @@
     "image": "https://images.klutzbanana.com/characters_official/virgin_g.png",
     "ability": "The 1st time you are nominated, if the nominator is a Townsfolk, they are executed immediately.",
     "flavor": "I am pure. Let those who are without sin cast themselves down and suffer in my stead. My reputation shall not be stained with your venomous accusations.",
-    "purpose": "Purpose",
+    "purpose": "The [Virgin] may confirm one player as a [Townsfolk].",
     "summary": [
              "Summary1",
              "Summary2"
              ],
     "run": {
-           "Setup": [
-                "Thing1",
-                "Thing2"
-                ],
-           "Anytime": [
-                "Thing1",
-                "Thing2"
-                ],
-           "First Night": [
-                "Thing1",
-                "Thing2"
-                ],
-           "Every Night": [
-                "Thing1",
-                "Thing2"
-                ],
-           "First Day": [
-                "Thing1",
-                "Thing2"
-                ],
            "Every Day": [
                 "Thing1",
                 "Thing 2"
-                ],
-           "Other Nights": [
-                "Thing1",
-                "Thing2"
-                ],
-           "Other Days": [
-                "Thing1",
-                "Thing2"
-                ],
-           "End of Game": [
-                "Thing1",
-                "Thing2"
                 ]
            },
     "examples": [
@@ -2648,45 +2312,13 @@
     "image": "https://images.klutzbanana.com/characters_official/washerwoman_g.png",
     "ability": "You start knowing that 1 of 2 players is a particular Townsfolk.",
     "flavor": "Bloodstains on a dinner jacket? No, this is cooking sherry. How careless.",
-    "purpose": "Purpose",
+    "purpose": "The [Washerwoman] learns 1 in play Townsfolk, and who it might be.",
     "summary": [
              "Summary1",
              "Summary2"
              ],
     "run": {
-           "Setup": [
-                "Thing1",
-                "Thing2"
-                ],
-           "Anytime": [
-                "Thing1",
-                "Thing2"
-                ],
            "First Night": [
-                "Thing1",
-                "Thing2"
-                ],
-           "Every Night": [
-                "Thing1",
-                "Thing2"
-                ],
-           "First Day": [
-                "Thing1",
-                "Thing2"
-                ],
-           "Every Day": [
-                "Thing1",
-                "Thing 2"
-                ],
-           "Other Nights": [
-                "Thing1",
-                "Thing2"
-                ],
-           "Other Days": [
-                "Thing1",
-                "Thing2"
-                ],
-           "End of Game": [
                 "Thing1",
                 "Thing2"
                 ]
