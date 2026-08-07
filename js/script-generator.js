@@ -51,31 +51,6 @@ updateRecentScripts(indexScript);
 buildCharacterLookup(script);
 renderScriptHeader(script);
 renderScriptCharacters(script);
-// Load the actual BOTC JSON
-const script =
-    await loadScript(indexScript.file);
-// Copy all metadata from the index
-indexScript.isDaily = true;
-applyScriptIndexData(
-    script,
-    indexScript
-);
-        ScriptGenerator.currentScript =
-            script;
-        updateRecentScripts(indexScript);
-        buildCharacterLookup(
-            script
-        );
-        renderScriptHeader(
-            script
-        );
-        renderScriptCharacters(
-            script
-        );
-console.log(
-    "Loaded Script of the Day:",
-    indexScript.name
-);
     }
     catch(error){
         console.error(error);
