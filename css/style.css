@@ -414,6 +414,7 @@ body {
     display:flex;
     align-items:baseline;
     gap:10px;
+    font-size:26px;
 }
 .interaction-title h2{
     margin:0;
