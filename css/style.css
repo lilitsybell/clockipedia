@@ -460,11 +460,6 @@ body {
     align-items:flex-end;
     border-right:5px solid var(--purple);
 }
-.daily-script-right{
-    position:relative;
-    background:white;
-    padding:25px 30px;
-}
 .daily-character-wheel-wrapper{
     position:absolute;
     width:800px;
@@ -498,6 +493,7 @@ body {
     filter:
         drop-shadow(0 0 6px rgba(102,102,153,.45))
         drop-shadow(0 0 12px rgba(102,102,153,.30));
+    animation:tokenGlow 4s ease-in-out infinite;
 }
 @keyframes tokenGlow{
     0%,100%{
@@ -511,9 +507,6 @@ body {
             drop-shadow(0 0 10px rgba(102,102,153,.60))
             drop-shadow(0 0 18px rgba(102,102,153,.35));
     }
-}
-.daily-character-icon{
-    animation: tokenGlow 4s ease-in-out infinite;
 }
 .daily-particle-wheel{
     position:absolute;
@@ -529,24 +522,13 @@ body {
     inset:0;
     z-index:1;
 }
-.daily-character-wheel-wrapper::before{
-    content:"";
-    position:absolute;
-    left:50%;
-    bottom:-20px;
-    width:700px;
-    height:420px;
-    transform:translateX(-50%);
-    border-radius:50%;
-    pointer-events:none;
-    z-index:0;
-}
 .daily-particle{
     position:absolute;
     border-radius:50%;
     background:#666699;
     filter:blur(.4px);
     opacity:.5;
+    animation:particlePulse 2s ease-in-out infinite;
 }
 @keyframes particlePulse{
     0%,100%{
@@ -555,9 +537,6 @@ body {
     50%{
         opacity:1;
     }
-}
-.daily-particle{
-    animation:particlePulse 2s ease-in-out infinite;
 }
 /* ===========================
    Character Pages
