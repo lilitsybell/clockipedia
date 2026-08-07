@@ -1,6 +1,7 @@
 console.log("script-generator.js updated 8/04/26 18:57");
 function getScriptSlug(script){
     return script.file
+        .replace(/^data\/scripts\//, "")
         .replace(/^scripts\//, "")
         .replace(/\.json$/, "");
 }
