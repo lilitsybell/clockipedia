@@ -16,9 +16,6 @@ function updateScriptUrl(script){
 async function initializeGenerator() {
     try {
         await loadOfficialCharacters();
-        console.log(
-            ScriptGenerator.officialCharacters
-        );
         await loadScriptIndex();
         const params =
     new URLSearchParams(window.location.search);
