@@ -455,7 +455,7 @@ body {
         radial-gradient(
             circle,
             rgba(255,255,255,.25),
-            transparent 70%
+            transparent 40%
         );
     pointer-events:none;
 }
