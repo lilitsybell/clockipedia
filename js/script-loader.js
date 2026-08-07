@@ -91,11 +91,6 @@ async function loadOfficialCharacters() {
             }
         );
     });
-    console.log(
-        "Loaded",
-        ScriptGenerator.officialCharacters.size,
-        "official characters"
-    );
 }
 /* ======================================================
    Load Script Index
@@ -106,11 +101,6 @@ async function loadScriptIndex() {
         throw new Error("Failed to load index.json");
     }
     ScriptGenerator.scripts = await response.json();
-    console.log(
-        "Loaded",
-        ScriptGenerator.scripts.length,
-        "scripts"
-    );
 }
 /* ======================================================
    Load One Script
@@ -130,10 +120,6 @@ async function loadScript(path) {
     if(meta){
         script.meta = meta;
     }
-    console.log(
-        "Loaded script:",
-        meta?.name || path
-    );
     return script;
 }
 /* ======================================================
@@ -220,11 +206,6 @@ if (needsBootlegger) {
     meta.bootlegger;
     }
 }
-console.log(
-    "Extracted",
-    characters.length,
-    "script characters"
-);
 return characters;
 }
 /* ======================================================
@@ -250,11 +231,6 @@ function buildCharacterLookup(script){
             );
         }
     });
-    console.log(
-        "Lookup contains",
-        ScriptGenerator.characterLookup.size,
-        "characters"
-    );
 }
 function preloadCharacterImages(characters){
     characters.forEach(character=>{
