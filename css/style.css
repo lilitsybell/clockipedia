@@ -664,6 +664,7 @@ font-size:22px;
 }
 .character-title {
     width: 500px;
+    font-weight: 400px;
 }
 .character-header img {
     width: 180px;
