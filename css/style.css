@@ -458,6 +458,7 @@ body {
     display:flex;
     justify-content:center;
     align-items:flex-end;
+    border-right:5px solid var(--purple);
 }
 .daily-script-right{
     position:relative;
