@@ -183,7 +183,7 @@ if(dailyWheelAnimation){
 const visibleCount = 9;
     const radius = 450;
     const centerX = 410;
-    const centerY = 650;
+    const centerY = 630;
 const arcStart = Math.PI;
 const arcEnd = Math.PI *2.00;
     const tokens = [];
