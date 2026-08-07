@@ -86,18 +86,12 @@ document.addEventListener("DOMContentLoaded", () => {
 
 
 // Highlight current page
-
 const currentPage = window.location.pathname;
-
-document.querySelectorAll("a.nav-link").forEach(link => {
-
-    if (link.href && link.href.includes(currentPage)) {
+document.querySelectorAll(".nav-link").forEach(link => {
+    if (new URL(link.href).pathname === currentPage) {
         link.classList.add("active");
     }
-
 });
-
-
 
     // Character dropdown
 
