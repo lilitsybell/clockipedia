@@ -180,27 +180,67 @@ if(dailyWheelAnimation){
         dailyScript.characters
         .map(id => getCharacter(id))
         .filter(Boolean);
-const visibleCount = 9;
+const visibleCount = Math.min(9, characterObjects.length);
     const radius = 450;
     const centerX = 410;
     const centerY = 630;
 const arcStart = Math.PI;
 const arcEnd = Math.PI *2.00;
     const tokens = [];
+function getRandomAvailableCharacter(currentToken){
+
+    const currentlyShown =
+        tokens
+        .filter(token => token !== currentToken)
+        .map(token =>
+            token.characterIndex
+        );
+
+    const available =
+        characterObjects
+        .map((character,index)=>index)
+        .filter(index =>
+            !currentlyShown.includes(index)
+        );
+
+    if(available.length === 0){
+        return null;
+    }
+
+    return available[
+        Math.floor(
+            Math.random() * available.length
+        )
+    ];
+}
     for(let i = 0; i < visibleCount; i++){
         const img =
             document.createElement("img");
         img.className =
             "daily-character-icon";
-        img.src =
-            characterObjects[i].image;
+let startingIndex;
+
+do{
+    startingIndex =
+        Math.floor(
+            Math.random() *
+            characterObjects.length
+        );
+
+} while(
+    tokens.some(token =>
+        token.characterIndex === startingIndex
+    )
+);
+img.src =
+    characterObjects[startingIndex].image;
         wheel.appendChild(img);
 tokens.push({
     element: img,
 progress:
     i / (visibleCount - 1),
-    characterIndex:
-        i,
+characterIndex:
+    startingIndex,
     passed:false
 });
 
@@ -244,16 +284,19 @@ rotate(${angle * 180 / Math.PI + 90}deg)
 `;
             // change character only when completing a loop
 if(progress < 0.02 && !token.passed){
+const newCharacter =
+    getRandomAvailableCharacter(token);
+    if(newCharacter !== null){
 
-    token.characterIndex++;
+        token.characterIndex =
+            newCharacter;
 
-    if(token.characterIndex >= characterObjects.length){
-        token.characterIndex = 0;
+        token.element.src =
+            characterObjects[
+                newCharacter
+            ].image;
     }
-    token.element.src =
-        characterObjects[
-            token.characterIndex
-        ].image;
+
     token.passed = true;
 }
 if(progress > 0.5){
