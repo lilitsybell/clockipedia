@@ -262,7 +262,7 @@ if(progress > 0.5){
         });
 particles.forEach(p => {
 
- p.progress += p.speed;
+ p.progress -= p.speed;
 
     if(p.progress < 0){
         p.progress += 1;
