@@ -4,6 +4,14 @@ function getScriptSlug(script){
         .replace(/^scripts\//, "")
         .replace(/\.json$/, "");
 }
+function updateScriptUrl(script){
+    const slug = getScriptSlug(script);
+    history.replaceState(
+        {},
+        "",
+        `/scripts.html?script=${slug}`
+    );
+}
 async function initializeGenerator() {
     try {
         await loadOfficialCharacters();
@@ -47,6 +55,7 @@ applyScriptIndexData(
 );
 ScriptGenerator.currentScript =
     script;
+updateScriptUrl(indexScript);
 updateRecentScripts(indexScript);
 buildCharacterLookup(script);
 renderScriptHeader(script);
@@ -140,6 +149,7 @@ applyScriptIndexData(
     script
 );
     ScriptGenerator.currentScript = loadedScript;
+    updateScriptUrl(script);
     // Build character database
     buildCharacterLookup(loadedScript);
 // Render characters
