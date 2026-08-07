@@ -515,10 +515,9 @@ body {
         0 4px 15px rgba(0,0,0,.25);
     transition:.2s ease;
 }
-#dailyScriptName:hover{
-    transform:translateX(5px);
-    text-shadow:
-        0 4px 20px rgba(255,255,255,.35);
+#dailyScriptName:hover,
+#dailyScriptName:visited{
+    text-decoration:none;
 }
 /* Author */
 #dailyScriptAuthor{
