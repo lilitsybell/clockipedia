@@ -146,11 +146,20 @@ for(let i = 0; i < 30; i++){
     dot.style.width = `${size}px`;
     dot.style.height = `${size}px`;
     particleWheel.appendChild(dot);
-    particles.push({
-        element: dot,
-        progress: Math.random(),
-        speed: 0.00005 + Math.random()*0.00015
-    });
+particles.push({
+    element: dot,
+    progress: Math.random(),
+    speed: 0.00005 + Math.random() * 0.00015,
+
+    radiusOffset: (Math.random() - 0.5) * 40,
+    wobble: 10 + Math.random() * 20,
+    wobbleSpeed: 0.001 + Math.random() * 0.003,
+    wobblePhase: Math.random() * Math.PI * 2,
+
+    opacity: 0.25 + Math.random() * 0.6
+});
+
+dot.style.opacity = particles.at(-1).opacity;
 }
     const wheel =
         document.getElementById(
@@ -247,34 +256,48 @@ if(progress > 0.5){
     token.passed = false;
 }
         });
-   particles.forEach(particle => {
+particles.forEach(p => {
 
-    particle.progress -= particle.speed;
+    p.progress -= p.speed;
 
-    if(particle.progress < 0){
-        particle.progress += 1;
+    if(p.progress < 0){
+        p.progress += 1;
     }
 
     const angle =
         arcStart +
-        (arcEnd - arcStart) *
-        particle.progress;
+        (arcEnd - arcStart) * p.progress;
+
+    // Radius gently expands/contracts
+    const r =
+        radius +
+        p.radiusOffset +
+        Math.sin(
+            performance.now() *
+            p.wobbleSpeed +
+            p.wobblePhase
+        ) * p.wobble;
+
+    // Tiny sideways drift
+    const drift =
+        Math.cos(
+            performance.now() *
+            p.wobbleSpeed * 0.7 +
+            p.wobblePhase
+        ) * 8;
 
     const x =
         centerX +
-        Math.cos(angle) *
-        radius;
+        Math.cos(angle) * r +
+        Math.cos(angle + Math.PI/2) * drift;
 
     const y =
         centerY +
-        Math.sin(angle) *
-        radius;
+        Math.sin(angle) * r +
+        Math.sin(angle + Math.PI/2) * drift;
 
-    particle.element.style.transform = `
-        translate(${x}px, ${y}px)
-        translate(-50%, -50%)
-    `;
-
+    p.element.style.transform =
+        `translate(${x}px, ${y}px)`;
 });
 dailyWheelAnimation =
     requestAnimationFrame(animate);
