@@ -250,8 +250,9 @@ body {
     object-fit:contain;
 }
 #interactionTeam{
-    font-size:28px;
+    font-size:20px;
     font-weight:normal;
+    opacity:.8;
 }
 #interactionTeam.blue,
 #interactionCharacter.blue{
