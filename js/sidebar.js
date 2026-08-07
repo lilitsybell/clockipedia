@@ -25,7 +25,7 @@ document.addEventListener("DOMContentLoaded", () => {
             <a href="/interaction-finder.html" class="nav-link">
                 Interactions
             </a>
-            <a href="/script-generator.html" class="nav-link">
+            <a href="/scripts.html" class="nav-link">
                 Scripts
             </a>
             <a href="/characters.html" class="nav-link">
