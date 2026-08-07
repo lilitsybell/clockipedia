@@ -28,12 +28,12 @@ document.addEventListener("DOMContentLoaded", () => {
             <a href="/script-generator.html" class="nav-link">
                 Scripts
             </a>
-   //         <a href="/characters.html" class="nav-link">
-   //             Characters
-   //         </a>
-   //         <a href="/contact.html" class="nav-link">
-   //             Contact
-   //         </a>
+            <a href="/characters.html" class="nav-link">
+                Characters
+            </a>
+            <a href="/contact.html" class="nav-link">
+                Contact
+            </a>
         </nav>
     `;
 
