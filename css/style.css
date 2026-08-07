@@ -437,7 +437,6 @@ body {
     display:flex;
     align-items:stretch;
     overflow:visible;
-    padding:0;
     border-radius:20px;
     background:var(--purple);
     box-shadow:0 8px 20px rgba(0,0,0,.12);
@@ -469,17 +468,20 @@ body {
     transform:translateX(-50%);
     overflow:hidden;
 }
-.daily-character-wheel{
+.daily-character-wheel,
+.daily-particle-wheel{
     position:absolute;
     width:800px;
     height:800px;
     left:0;
     top:0;
-    filter:
-        drop-shadow(
-            0 0 30px
-            rgba(102,102,153,.18)
-        );
+}
+.daily-character-wheel{
+    z-index:1;
+}
+.daily-particle-wheel{
+    z-index:0;
+    pointer-events:none;
 }
 .daily-character-icon{
     position:absolute;
@@ -501,35 +503,21 @@ body {
             drop-shadow(0 0 6px rgba(102,102,153,.45))
             drop-shadow(0 0 12px rgba(102,102,153,.30));
     }
-
     50%{
         filter:
             drop-shadow(0 0 10px rgba(102,102,153,.60))
             drop-shadow(0 0 18px rgba(102,102,153,.35));
     }
 }
-.daily-particle-wheel{
-    position:absolute;
-    width:800px;
-    height:800px;
-    left:0;
-    top:0;
-    z-index:0;
-    pointer-events:none;
-}
-.daily-character-wheel{
-    position:absolute;
-    inset:0;
-    z-index:1;
-}
 .daily-particle{
     position:absolute;
     border-radius:50%;
-    background:#666699;
+    background:var(--purple);
     filter:blur(.4px);
     opacity:.5;
     animation:particlePulse 2s ease-in-out infinite;
 }
+
 @keyframes particlePulse{
     0%,100%{
         opacity:.3;
