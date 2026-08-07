@@ -536,7 +536,10 @@ body {
 }
 .daily-script-carousel{
     flex:1;
-    background:white;
+    background-image:url("/images/botcbackground-white.png");
+    background-size:cover;
+    background-position:center;
+    background-repeat:no-repeat;
     margin-left:-25px;
     border-radius:50px 20px 20px 50px;
     overflow:hidden;
