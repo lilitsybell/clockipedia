@@ -537,13 +537,6 @@ body {
     height:420px;
     transform:translateX(-50%);
     border-radius:50%;
-    background:radial-gradient(
-        ellipse,
-        rgba(102,102,153,.35) 0%,
-        rgba(102,102,153,.15) 40%,
-        transparent 75%
-    );
-    filter:blur(35px);
     pointer-events:none;
     z-index:0;
 }
