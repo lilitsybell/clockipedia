@@ -568,14 +568,6 @@ body {
 .daily-particle{
     animation:particlePulse 2s ease-in-out infinite;
 }
-.daily-particle{
-    position:absolute;
-    width:15px !important;
-    height:15px !important;
-    background:red !important;
-    opacity:1 !important;
-    z-index:10;
-}
 /* ===========================
    Character Pages
 =========================== */
