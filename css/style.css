@@ -320,7 +320,7 @@ body {
 .homepage{
     display:flex;
     flex-direction:column;
-    gap:25px;
+    gap:35px;
 }
 /* =========================
    Hero Section
