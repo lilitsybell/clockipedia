@@ -463,8 +463,8 @@ body {
 .daily-script-info{
     position:relative;
     width:400px;
-    min-height:300px;
-    padding:45px;
+    min-height:220px;
+    padding:30px 40px;
     color:white;
     flex-shrink:0;
     display:flex;
@@ -493,7 +493,7 @@ body {
     letter-spacing:3px;
     font-weight:700;
     text-transform:uppercase;
-    margin-bottom:25px;
+    margin-bottom:15px;
     opacity:.95;
 }
 .daily-script-label::before,
@@ -505,7 +505,7 @@ body {
 #dailyScriptName{
     font-size:clamp(28px,3vw,46px);
     line-height:1;
-    margin:0 0 15px;
+    margin:0 0 10px;
     font-weight:700;
     color:white;
     text-shadow:
@@ -513,7 +513,7 @@ body {
 }
 /* Author */
 #dailyScriptAuthor{
-    margin:0 0 25px;
+    margin:0 0 15px;
     font-size:16px;
     opacity:.85;
 }
