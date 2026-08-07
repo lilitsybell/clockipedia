@@ -249,6 +249,13 @@ body {
     height:155px;
     object-fit:contain;
 }
+#interactionCharacter{
+    cursor:pointer;
+    text-decoration:none;
+}
+#interactionCharacter:hover{
+    text-decoration:none;
+}
 #interactionTeam{
     font-size:20px;
     font-weight:normal;
@@ -313,7 +320,7 @@ body {
 .homepage{
     display:flex;
     flex-direction:column;
-    gap:30px;
+    gap:15px;
 }
 /* =========================
    Hero Section
@@ -339,11 +346,11 @@ body {
 ========================= */
 .character-feature{
     width:100%;
+    max-width:1100px;
     display:flex;
     align-items:center;
-    margin-top:20px;
-    max-width:1100px;
-    margin:20px auto 0;
+    justify-content:center;
+    margin:-10px auto 0;
 }
 #characterToken{
     width:220px;
