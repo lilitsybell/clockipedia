@@ -447,6 +447,60 @@ body {
     color:white;
     flex-shrink:0;
 }
+.daily-script-info{
+    position:relative;
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+}
+/* Small featured badge */
+.daily-script-label{
+    display:inline-flex;
+    align-items:center;
+    gap:8px;
+    font-size:12px;
+    letter-spacing:2px;
+    font-weight:700;
+    opacity:.8;
+    margin-bottom:20px;
+}
+.daily-script-label::before,
+.daily-script-label::after{
+    content:"✦";
+    font-size:10px;
+}
+/* Script title */
+#dailyScriptName{
+    font-size:38px;
+    line-height:1.1;
+    margin:0 0 12px;
+    color:white;
+    text-shadow:
+        0 3px 10px rgba(0,0,0,.25);
+}
+/* Author */
+#dailyScriptAuthor{
+    margin:0 0 25px;
+    font-size:16px;
+    opacity:.85;
+}
+/* Tags */
+.daily-script-tags{
+    display:flex;
+    gap:10px;
+    flex-wrap:wrap;
+}
+.daily-script-tag{
+    background:
+        rgba(255,255,255,.18);
+    border:
+        1px solid rgba(255,255,255,.35);
+    padding:
+        6px 12px;
+    border-radius:20px;
+    font-size:13px;
+    backdrop-filter:blur(5px);
+}
 .daily-script-carousel{
     flex:1;
     background:white;
