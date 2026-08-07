@@ -189,7 +189,6 @@ body {
 .nav-link.active {
     background:white;
     color:var(--black);
-    font-weight:600;
 }
 /* CHARACTER MENU */
 .character-toggle {
