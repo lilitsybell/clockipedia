@@ -945,31 +945,6 @@
         "reason":"Gaining an ability does not mean you are that character.",
         "mathInfo":"No ability has malfunctioned."},
     {
-        "text":"A Minion who gains the [Fearmonger] ability due to the [Plague Doctor] cannot register as the [Fearmonger] to the [Evil Twin].",
-        "math":"green",
-        "reason":"Gaining an ability does not mean you are that character.",
-        "mathInfo":"No ability has malfunctioned."},
-    {
-        "text":"A Minion who gains the [Goblin] ability due to the [Plague Doctor] cannot register as the [Goblin] to the [Evil Twin].",
-        "math":"green",
-        "reason":"Gaining an ability does not mean you are that character.",
-        "mathInfo":"No ability has malfunctioned."},
-    {
-        "text":"A Minion who gains the [Scarlet Woman] ability due to the [Plague Doctor] cannot register as the [Scarlet Woman] to the [Evil Twin].",
-        "math":"green",
-        "reason":"Gaining an ability does not mean you are that character.",
-        "mathInfo":"No ability has malfunctioned."},
-    {
-        "text":"A Minion who gains the [Spy] ability due to the [Plague Doctor] cannot register as the [Spy] to the [Evil Twin].",
-        "math":"green",
-        "reason":"Gaining an ability does not mean you are that character.",
-        "mathInfo":"No ability has malfunctioned."},
-    {
-        "text":"A Minion who gains the [Wraith] ability due to the [Plague Doctor] cannot register as the [Wraith] to the [Evil Twin].",
-        "math":"green",
-        "reason":"Gaining an ability does not mean you are that character.",
-        "mathInfo":"No ability has malfunctioned."},
-    {
         "text":"A Minion who gains the [Fearmonger] ability due to the [Plague Doctor] cannot register as the [Fearmonger] to the [Spy].",
         "math":"green",
         "reason":"Gaining an ability does not mean you are that character.",
