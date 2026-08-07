@@ -3,6 +3,7 @@ let homepageCharacters = [];
 let recentCharacters = [];
 let dailyScript = null;
 let dailyWheelAnimation = null;
+let currentHomepageCharacter = null;
 /* ==========================================
    Load Characters
 ========================================== */
@@ -383,6 +384,7 @@ function showRandomCharacter(){
                 available.length
             )
         ];
+   currentHomepageCharacter = character;
     recentCharacters.push(character.name);
     if(recentCharacters.length > historySize){
         recentCharacters.shift();
@@ -490,13 +492,18 @@ team.textContent =
         ? `(${teamNames[character.team] || character.team})`
         : "";
 team.className = teamClass;
-    const name =
-        document.getElementById(
-            "interactionCharacter"
-        );
-    name.textContent =
-        character.name;
-name.className = teamClass;
+const name =
+    document.getElementById(
+        "interactionCharacter"
+    );
+name.textContent =
+    character.name;
+name.className =
+    teamClass;
+name.onclick = () => {
+    window.location.href =
+        `character.html?id=${character.id}`;
+};
     document.getElementById(
         "interactionAbility"
     ).textContent =
