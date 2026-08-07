@@ -1,4 +1,9 @@
 console.log("script-generator.js updated 8/04/26 18:57");
+function getScriptSlug(script){
+    return script.file
+        .replace(/^scripts\//, "")
+        .replace(/\.json$/, "");
+}
 async function initializeGenerator() {
     try {
         await loadOfficialCharacters();
@@ -6,19 +11,46 @@ async function initializeGenerator() {
             ScriptGenerator.officialCharacters
         );
         await loadScriptIndex();
-        // Load Script of the Day
-const daily =
-    await loadDailyScript();
-// Find the matching script in the index
-const indexScript =
-    ScriptGenerator.scripts.find(
-        script => script.file === daily.file
-    );
+        const params =
+    new URLSearchParams(window.location.search);
+const scriptSlug =
+    params.get("script");
+let indexScript;
+if(scriptSlug){
+    indexScript =
+        ScriptGenerator.scripts.find(
+            script =>
+                getScriptSlug(script) === scriptSlug
+        );
+}
+if(!indexScript){
+    const daily =
+        await loadDailyScript();
+    indexScript =
+        ScriptGenerator.scripts.find(
+            script =>
+                script.file === daily.file
+        );
+}
 if(!indexScript){
     throw new Error(
-        "Daily script not found in index.json"
+        "Script not found."
     );
 }
+const script =
+    await loadScript(indexScript.file);
+indexScript.isDaily =
+    !scriptSlug;
+applyScriptIndexData(
+    script,
+    indexScript
+);
+ScriptGenerator.currentScript =
+    script;
+updateRecentScripts(indexScript);
+buildCharacterLookup(script);
+renderScriptHeader(script);
+renderScriptCharacters(script);
 // Load the actual BOTC JSON
 const script =
     await loadScript(indexScript.file);
