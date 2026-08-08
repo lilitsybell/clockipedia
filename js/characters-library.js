@@ -7,6 +7,7 @@ const teamOrder = [
     "Outsiders",
     "Minions",
     "Demons",
+    "Travellers",
     "Loric",
     "Fabled"
 ];
@@ -144,13 +145,11 @@ function renderCharacterLibrary(){
 
     characterLibrary.forEach(
         character => {
-
             /*
              * Team sorting gets section headings.
              * Alphabetical and Edition are one
              * continuous grid.
              */
-
             if(
                 characterSort === "team" &&
                 character.team !== currentTeam
