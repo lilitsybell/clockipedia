@@ -28,6 +28,9 @@ document.addEventListener("DOMContentLoaded", () => {
             <a href="/scripts.html" class="nav-link">
                 Scripts
             </a>
+<a href="/characters.html" class="nav-link">
+    Characters
+</a>
         </nav>
     `;
 
