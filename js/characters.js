@@ -10,8 +10,8 @@ const teamColors = {
     "Demons":"red",
     "Traveller":"traveller",
     "Travellers":"traveller",
-    "Loric":"green",
-    "Fabled":"gold"
+    "Loric":"lime",
+    "Fabled":"copper"
 };
 const singularTeams = {
     "Townsfolk":"Townsfolk",
