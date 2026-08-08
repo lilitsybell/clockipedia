@@ -1719,3 +1719,94 @@ font-size:22px;
     line-height:1.4;
     color:#555;
 }
+/* =========================
+Character Directory
+========================= */
+.character-team-section{
+margin-bottom:45px;
+}
+.character-team-heading{
+margin:0 0 20px;
+font-size:30px;
+font-weight:700;
+color:var(--black);
+border-bottom:3px solid var(--purple);
+padding-bottom:8px;
+}
+.character-directory-grid{
+display:grid;
+grid-template-columns:
+repeat(5, minmax(0, 1fr));
+gap:20px;
+}
+.character-directory-card{
+display:flex;
+flex-direction:column;
+background:white;
+border-radius:20px;
+padding:20px;
+text-decoration:none;
+color:var(--black);
+box-shadow:
+0 5px 18px rgba(0,0,0,.10);
+border-top:5px solid var(--team-color);
+transition:
+transform .2s ease,
+box-shadow .2s ease;
+min-width:0;
+}
+.character-directory-card:hover{
+transform:translateY(-5px);
+box-shadow:
+0 10px 25px rgba(0,0,0,.16);
+}
+.character-directory-card.blue{
+--team-color:var(--blue);
+}
+.character-directory-card.red{
+--team-color:var(--red);
+}
+.character-directory-card.lime{
+--team-color:var(--lime);
+}
+.character-directory-card.copper{
+--team-color:var(--copper);
+}
+.character-directory-icon{
+width:120px;
+height:120px;
+object-fit:contain;
+align-self:center;
+margin-bottom:12px;
+}
+.character-directory-content{
+display:flex;
+flex-direction:column;
+flex:1;
+}
+.character-directory-card h2{
+margin:0 0 8px;
+font-size:21px;
+line-height:1.1;
+color:var(--team-color);
+}
+.character-directory-ability{
+margin:0 0 15px;
+font-size:14px;
+line-height:1.45;
+color:#444;
+}
+.character-directory-tags{
+display:flex;
+flex-wrap:wrap;
+gap:5px;
+margin-top:auto;
+}
+.character-directory-tag{
+background:#f1f1f4;
+color:#555;
+border-radius:12px;
+padding:4px 8px;
+font-size:11px;
+line-height:1;
+}
