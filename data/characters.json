@@ -20,7 +20,10 @@
                  "The [Acrobat] chooses the sober and healthy [Princess]. Nothing happens.",
                  "The [Acrobat] chooses the sober and healthy [Fortune Teller]. The [Fortune Teller] chooses the [Goon]. The [Fortune Teller] is now drunk so the [Acrobat] dies.",
                  "The [Organ Grinder] chooses to be drunk. The [Acrobat] chooses the [Organ Grinder] and dies.",
-                 "The [Acrobat] chooses the [Soldier]. The [No Dashii] neighbors the [Soldier], but since the [Soldier] is safe from the Demon, the [Soldier] is not poisoned and the [Acrobat] does not die."]
+                 "The [Acrobat] chooses the [Soldier]. The [No Dashii] neighbors the [Soldier], but since the [Soldier] is safe from the Demon, the [Soldier] is not poisoned and the [Acrobat] does not die."
+                ],
+    "tags": ["Droisoning", "Death"],
+    "edition": "Carousel"
 },
 "alchemist":
 {
@@ -61,7 +64,9 @@
     "examples": [
                 "The [Alchemist] has the [Godfather] ability. During setup, the Storyteller removes one Outsider and adds one Townsfolk. The [Alchemist] learns which Outsiders are in-play. If an Outsider dies during the day, the [Alchemist] wakes and chooses a player to kill. The Storyteller may ask them to kill a different player.",
                 "The [Alchemist] is poisoned on the first night and learns they have the [Psychopath] ability. When they attempt to kill a player during the day, nothing happens. That night, when they are healthy, the [Alchemist] wakes to make a choice. They actually have the [Organ Grinder] ability."
-                ]
+                ],
+    "tags": ["Mechanical"],
+    "edition": "Carousel"
 },
 "alsaahir":
 {
@@ -90,7 +95,9 @@
                 "The [Alsaahir] guesses that the [Po] is the Demon and that the [Minstrel] and the [Fortune Teller] are the Minions. Nothing happens.",
                 "The [Alsaahir] guesses that the [Lleech] is the Demon and that the [Widow] is the Minion. The game immediately ends and the [Alsaahir]'s team wins.",
                 "The [Fang Gu] jumps to the [Hatter]. The [Alsaahir] guesses that the new [Fang Gu] is the Demon, and the [Wraith] and [Poisoner] are the Minions. The [Alsaahir] did not also guess the original [Fang Gu], so nothing happens."
-                ]
+                ],
+    "tags": ["Mechanical", "Public"],
+    "edition": "Carousel"
 },
 "amnesiac":
 {
@@ -119,7 +126,9 @@
     "examples": [
                 "The [Amnesiac] has the ability \"Each night, choose a player. They cannot die tonight or tomorrow.\". The [Amnesiac] wakes and chooses a player. That day, the [Amnesiac] asks if they have a protective ability. The Storyteller gives them a \"hot\".",
                 "The [Amnesiac] has the ability \"Each night, learn which characters selected you.\" The first night, the [Village Idiot] chooses the [Amnesiac]. The [Amnesiac] is woken and shown the [Village Idiot] token. The [Amnesiac] asks if they learn which characters chose them at night and the Storyteller gives them a \"bingo\"."
-                ]
+                ],
+    "tags": [],
+    "edition": "Carousel"
 },
 "artist":
 {
@@ -142,7 +151,9 @@
     "examples": [
                 "The [Artist] asks if the Demon is on the top half of the Grimoire. The Storyteller specifies which players that includes, then answers honestly with \"yes\".",
                 "The [Artist] asks if any Minion is a Dodgers fan. The [Storyteller] answers honestly with \"I don't know\"."
-                ]
+                ],
+    "tags": ["Information"],
+    "edition": "Sects and Violets"
 },
 "atheist":
 {
@@ -173,7 +184,9 @@
     "examples": [
                 "The [Fortune Teller] receives a yes on the [Lycanthrope] and the [Artist], even though neither is the Red Herring. The [Lycanthrope] fails to kill the [Moonchild], and the Storyteller kills the [Banshee] instead, announcing the [Banshee] has died. When only three players are alive, the [Tinker] is executed and the good team loses.",
                 "On the second night, the [Pit-Hag] changes the [Minstrel] into the [Atheist]. The Demon kills the [Nighwatchman] and the Storyteller kills the [Steward]. That day, the new [Atheist] nominates the Storyteller and the Storyteller is executed. The good team wins and the evil team loses."
-                ]
+                ],
+    "tags": ["Mechanical"],
+    "edition": "Carousel"
 },
 "balloonist":
 {
@@ -202,7 +215,9 @@
                 "On the first night, the [Balloonist] is learns the [Alchemist]. The next night, they learn the [Ogre]. The night after that, they learn the [Chambermaid].",
                 "On the third night, the [Balloonist] learns the [Leviathan]. The next night, the [Leviathan] was chosen by the [Snake Charmer], and is now the new [Snake Charmer]. The [Balloonist] learns the new [Snake Charmer], even though they learned the same player the night before.",
                 "On the first night, the [Balloonist] learns the [Courtier]. The next night, the [Poisoner] chooses the [Balloonist]. The poisoned [Balloonist] learns the [Preacher]. The next night, the healthy [Balloonist] learns the [Witch]."
-                ]
+                ],
+    "tags": ["Information"],
+    "edition": "Carousel"
 },
 "banshee":
 {
@@ -236,7 +251,9 @@
                 "The [Godfather] kills the [Banshee]. There is no announcement and the [Banshee] does not use their ability.",
                 "The [Ojo] kills the [Banshee]. The Storyteller announces the [Banshee] has died. The next night, the [Poisoner] chooses the dead [Banshee]. That day, the [Banshee] tries to vote twice, but the Storyteller only counts one vote and removes the [Banshee]'s vote token.",
                 "The Demon with the [Boffin] [Golem] ability nominates the [Banshee] and the [Banshee] dies. The Storyteller announces the [Banshee] has died."
-                ]
+                ],
+    "tags": ["Mechanical", "Death", "Public"],
+    "edition": "Carousel"
 },
 "bountyhunter":
 {
@@ -271,7 +288,9 @@
                 "During setup, the Storyteller chooses the [Monk] will be evil. On the first night, the [Monk] wakes to learn they are the evil [Monk]. The [Bounty Hunter] wakes and learns the [Mezepheles] player.",
                 "On the third day, the [Zombuul], who was learned by the [Bounty Hunter], is executed and dies. The [Bounty Hunter] learns the [Baron] player that night.",
                 "The [Bounty Hunter] neighbors the [No Dashii]. The Storyteller chooses for the [Balloonist] to be evil, and tells the [Balloonist] they are the evil [Balloonist]. The poisoned [Bounty Hunter] learns the [Barber] player."
-                ]
+                ],
+    "tags": ["Information", "Death"],
+    "edition": "Carousel"
 },
 "cannibal":
 {
@@ -301,7 +320,9 @@
                 "The [Shugenja] is executed and dies. The [Cannibal] wakes that night to learn their closest evil neighbor is clockwise.",
                 "The [Poppy Grower] is executed, but does not die due to neighboring the [Tea Lady]. The [Cannibal] does not gain their ability and continues to have the previous ability they gained.",
                 "The [Boffin] is claiming they are the [Village Idiot]. They are executed and die. That night, the [Cannibal] is asked to choose a player. The [Cannibal] chooses the [Tinker] and learns the [Tinker] is evil."
-                ]
+                ],
+    "tags": ["Mechanical", "Droisoning", "Death"],
+    "edition": "Carousel"
 },
 "chambermaid":
 {
@@ -324,7 +345,9 @@
     "examples": [
                 "ComingSoon",
                 "ComingSoon"
-                ]
+                ],
+    "tags": ["Information"],
+    "edition": "Bad Moon Rising"
 },
 "chef":
 {
@@ -347,7 +370,9 @@
     "examples": [
                 "ComingSoon",
                 "ComingSoon"
-                ]
+                ],
+    "tags": ["Information"],
+    "edition": "Trouble Brewing"
 },
 "choirboy":
 {
@@ -374,7 +399,9 @@
     "examples": [
                 "ComingSoon",
                 "ComingSoon"
-                ]
+                ],
+    "tags": ["Information", "Death"],
+    "edition": "Carousel"
 },
 "clockmaker":
 {
@@ -397,7 +424,9 @@
     "examples": [
                 "ComingSoon",
                 "ComingSoon"
-                ]
+                ],
+    "tags": ["Information"],
+    "edition": "Sects and Violets"
 },
 "courtier":
 {
@@ -420,7 +449,9 @@
     "examples": [
                 "ComingSoon",
                 "ComingSoon"
-                ]
+                ],
+    "tags": ["Droisoning"],
+    "edition": "Bad Moon Rising"
 },
 "cultleader":
 {
@@ -447,7 +478,9 @@
     "examples": [
                 "ComingSoon",
                 "ComingSoon"
-                ]
+                ],
+    "tags": ["Mechanical", "Public"],
+    "edition": "Carousel"
 },
 "dreamer":
 {
@@ -470,7 +503,9 @@
     "examples": [
                 "ComingSoon",
                 "ComingSoon"
-                ]
+                ],
+    "tags": ["Information"],
+    "edition": "Sects and Violets"
 },
 "empath":
 {
@@ -493,7 +528,9 @@
     "examples": [
                 "ComingSoon",
                 "ComingSoon"
-                ]
+                ],
+    "tags": ["Information"],
+    "edition": "Trouble Brewing"
 },
 "engineer":
 {
@@ -516,7 +553,9 @@
     "examples": [
                 "ComingSoon",
                 "ComingSoon"
-                ]
+                ],
+    "tags": ["Mechanical"],
+    "edition": "Carousel"
 },
 "exorcist":
 {
@@ -539,7 +578,9 @@
     "examples": [
                 "ComingSoon",
                 "ComingSoon"
-                ]
+                ],
+    "tags": ["Mechanical", "Death"],
+    "edition": "Bad Moon Rising"
 },
 "farmer":
 {
@@ -562,7 +603,9 @@
     "examples": [
                 "ComingSoon",
                 "ComingSoon"
-                ]
+                ],
+    "tags": ["Mechanical", "Death"],
+    "edition": "Carousel"
 },
 "fisherman":
 {
@@ -585,7 +628,9 @@
     "examples": [
                 "ComingSoon",
                 "ComingSoon"
-                ]
+                ],
+    "tags": ["Information"],
+    "edition": "Carousel"
 },
 "flowergirl":
 {
@@ -612,7 +657,9 @@
     "examples": [
                 "ComingSoon",
                 "ComingSoon"
-                ]
+                ],
+    "tags": ["Information"],
+    "edition": "Sects and Violets"
 },
 "fool":
 {
@@ -635,7 +682,9 @@
     "examples": [
                 "ComingSoon",
                 "ComingSoon"
-                ]
+                ],
+    "tags": ["Mechanical", "Death"],
+    "edition": "Bad Moon Rising"
 },
 "fortuneteller":
 {
@@ -662,7 +711,9 @@
     "examples": [
                 "ComingSoon",
                 "ComingSoon"
-                ]
+                ],
+    "tags": ["Information"],
+    "edition": "Trouble Brewing"
 },
 "gambler":
 {
@@ -685,7 +736,9 @@
     "examples": [
                 "ComingSoon",
                 "ComingSoon"
-                ]
+                ],
+    "tags": ["Death"],
+    "edition": "Bad Moon Rising"
 },
 "general":
 {
@@ -708,7 +761,9 @@
     "examples": [
                 "ComingSoon",
                 "ComingSoon"
-                ]
+                ],
+    "tags": ["Information"],
+    "edition": "Carousel"
 },
 "gossip":
 {
@@ -735,7 +790,9 @@
     "examples": [
                 "ComingSoon",
                 "ComingSoon"
-                ]
+                ],
+    "tags": ["Information", "Death"],
+    "edition": "Bad Moon Rising"
 },
 "grandmother":
 {
@@ -762,7 +819,9 @@
     "examples": [
                 "ComingSoon",
                 "ComingSoon"
-                ]
+                ],
+    "tags": ["Information", "Death"],
+    "edition": "Bad Moon Rising"
 },
 "highpriestess":
 {
@@ -785,7 +844,9 @@
     "examples": [
                 "ComingSoon",
                 "ComingSoon"
-                ]
+                ],
+    "tags": ["Information"],
+    "edition": "Carousel"
 },
 "huntsman":
 {
@@ -812,7 +873,9 @@
     "examples": [
                 "ComingSoon",
                 "ComingSoon"
-                ]
+                ],
+    "tags": ["Mechanical"],
+    "edition": "Carousel"
 },
 "innkeeper":
 {
@@ -835,7 +898,9 @@
     "examples": [
                 "ComingSoon",
                 "ComingSoon"
-                ]
+                ],
+    "tags": ["Droisoning", "Death"],
+    "edition": "Bad Moon Rising"
 },
 "investigator":
 {
@@ -858,7 +923,9 @@
     "examples": [
                 "ComingSoon",
                 "ComingSoon"
-                ]
+                ],
+    "tags": ["Information"],
+    "edition": "Trouble Brewing"
 },
 "juggler":
 {
@@ -885,7 +952,9 @@
     "examples": [
                 "ComingSoon",
                 "ComingSoon"
-                ]
+                ],
+    "tags": ["Information"],
+    "edition": "Sects and Violets"
 },
 "king":
 {
@@ -912,7 +981,9 @@
     "examples": [
                 "ComingSoon",
                 "ComingSoon"
-                ]
+                ],
+    "tags": ["Information"],
+    "edition": "Carousel"
 },
 "knight":
 {
@@ -935,7 +1006,9 @@
     "examples": [
                 "ComingSoon",
                 "ComingSoon"
-                ]
+                ],
+    "tags": ["Information"],
+    "edition": "Carousel"
 },
 "librarian":
 {
@@ -958,7 +1031,9 @@
     "examples": [
                 "ComingSoon",
                 "ComingSoon"
-                ]
+                ],
+    "tags": ["Information"],
+    "edition": "Trouble Brewing"
 },
 "lycanthrope":
 {
@@ -989,7 +1064,9 @@
     "examples": [
                 "ComingSoon",
                 "ComingSoon"
-                ]
+                ],
+    "tags": ["Death"],
+    "edition": "Carousel"
 },
 "magician":
 {
@@ -1004,39 +1081,7 @@
              "ComingSoon"
              ],
     "run": {
-           "Setup": [
-                "ComingSoon",
-                "ComingSoon"
-                ],
-           "Anytime": [
-                "ComingSoon",
-                "ComingSoon"
-                ],
            "First Night": [
-                "ComingSoon",
-                "ComingSoon"
-                ],
-           "Every Night": [
-                "ComingSoon",
-                "ComingSoon"
-                ],
-           "First Day": [
-                "ComingSoon",
-                "ComingSoon"
-                ],
-           "Every Day": [
-                "ComingSoon",
-                "Thing 2"
-                ],
-           "Other Nights": [
-                "ComingSoon",
-                "ComingSoon"
-                ],
-           "Other Days": [
-                "ComingSoon",
-                "ComingSoon"
-                ],
-           "End of Game": [
                 "ComingSoon",
                 "ComingSoon"
                 ]
@@ -1044,7 +1089,9 @@
     "examples": [
                 "ComingSoon",
                 "ComingSoon"
-                ]
+                ],
+    "tags": ["Mechanical"],
+    "edition": "Carousel"
 },
 "mathematician":
 {
@@ -1099,7 +1146,9 @@
     "examples": [
                 "ComingSoon",
                 "ComingSoon"
-                ]
+                ],
+    "tags": ["Information", "Droisoning"],
+    "edition": "Sects and Violets"
 },
 "mayor":
 {
@@ -1114,47 +1163,21 @@
              "ComingSoon"
              ],
     "run": {
-           "Setup": [
-                "ComingSoon",
-                "ComingSoon"
-                ],
-           "Anytime": [
-                "ComingSoon",
-                "ComingSoon"
-                ],
-           "First Night": [
-                "ComingSoon",
-                "ComingSoon"
-                ],
            "Every Night": [
-                "ComingSoon",
-                "ComingSoon"
-                ],
-           "First Day": [
                 "ComingSoon",
                 "ComingSoon"
                 ],
            "Every Day": [
                 "ComingSoon",
                 "Thing 2"
-                ],
-           "Other Nights": [
-                "ComingSoon",
-                "ComingSoon"
-                ],
-           "Other Days": [
-                "ComingSoon",
-                "ComingSoon"
-                ],
-           "End of Game": [
-                "ComingSoon",
-                "ComingSoon"
                 ]
            },
     "examples": [
                 "ComingSoon",
                 "ComingSoon"
-                ]
+                ],
+    "tags": ["Mechanical", "Death"],
+    "edition": "Trouble Brewing"
 },
 "minstrel":
 {
@@ -1169,39 +1192,11 @@
              "ComingSoon"
              ],
     "run": {
-           "Setup": [
-                "ComingSoon",
-                "ComingSoon"
-                ],
            "Anytime": [
                 "ComingSoon",
                 "ComingSoon"
                 ],
-           "First Night": [
-                "ComingSoon",
-                "ComingSoon"
-                ],
-           "Every Night": [
-                "ComingSoon",
-                "ComingSoon"
-                ],
-           "First Day": [
-                "ComingSoon",
-                "ComingSoon"
-                ],
-           "Every Day": [
-                "ComingSoon",
-                "Thing 2"
-                ],
            "Other Nights": [
-                "ComingSoon",
-                "ComingSoon"
-                ],
-           "Other Days": [
-                "ComingSoon",
-                "ComingSoon"
-                ],
-           "End of Game": [
                 "ComingSoon",
                 "ComingSoon"
                 ]
@@ -1209,7 +1204,9 @@
     "examples": [
                 "ComingSoon",
                 "ComingSoon"
-                ]
+                ],
+    "tags": ["Droisoning", "Death"],
+    "edition": "Bad Moon Rising"
 },
 "monk":
 {
@@ -1224,39 +1221,7 @@
              "ComingSoon"
              ],
     "run": {
-           "Setup": [
-                "ComingSoon",
-                "ComingSoon"
-                ],
-           "Anytime": [
-                "ComingSoon",
-                "ComingSoon"
-                ],
-           "First Night": [
-                "ComingSoon",
-                "ComingSoon"
-                ],
-           "Every Night": [
-                "ComingSoon",
-                "ComingSoon"
-                ],
-           "First Day": [
-                "ComingSoon",
-                "ComingSoon"
-                ],
-           "Every Day": [
-                "ComingSoon",
-                "Thing 2"
-                ],
            "Other Nights": [
-                "ComingSoon",
-                "ComingSoon"
-                ],
-           "Other Days": [
-                "ComingSoon",
-                "ComingSoon"
-                ],
-           "End of Game": [
                 "ComingSoon",
                 "ComingSoon"
                 ]
@@ -1264,7 +1229,9 @@
     "examples": [
                 "ComingSoon",
                 "ComingSoon"
-                ]
+                ],
+    "tags": ["Mechanical", "Death"],
+    "edition": "Trouble Brewing"
 },
 "nightwatchman":
 {
@@ -1279,39 +1246,7 @@
              "ComingSoon"
              ],
     "run": {
-           "Setup": [
-                "ComingSoon",
-                "ComingSoon"
-                ],
-           "Anytime": [
-                "ComingSoon",
-                "ComingSoon"
-                ],
-           "First Night": [
-                "ComingSoon",
-                "ComingSoon"
-                ],
            "Every Night": [
-                "ComingSoon",
-                "ComingSoon"
-                ],
-           "First Day": [
-                "ComingSoon",
-                "ComingSoon"
-                ],
-           "Every Day": [
-                "ComingSoon",
-                "Thing 2"
-                ],
-           "Other Nights": [
-                "ComingSoon",
-                "ComingSoon"
-                ],
-           "Other Days": [
-                "ComingSoon",
-                "ComingSoon"
-                ],
-           "End of Game": [
                 "ComingSoon",
                 "ComingSoon"
                 ]
@@ -1319,7 +1254,9 @@
     "examples": [
                 "ComingSoon",
                 "ComingSoon"
-                ]
+                ],
+    "tags": ["Information"],
+    "edition": "Carousel"
 },
 "noble":
 {
@@ -1334,39 +1271,7 @@
              "ComingSoon"
              ],
     "run": {
-           "Setup": [
-                "ComingSoon",
-                "ComingSoon"
-                ],
-           "Anytime": [
-                "ComingSoon",
-                "ComingSoon"
-                ],
            "First Night": [
-                "ComingSoon",
-                "ComingSoon"
-                ],
-           "Every Night": [
-                "ComingSoon",
-                "ComingSoon"
-                ],
-           "First Day": [
-                "ComingSoon",
-                "ComingSoon"
-                ],
-           "Every Day": [
-                "ComingSoon",
-                "Thing 2"
-                ],
-           "Other Nights": [
-                "ComingSoon",
-                "ComingSoon"
-                ],
-           "Other Days": [
-                "ComingSoon",
-                "ComingSoon"
-                ],
-           "End of Game": [
                 "ComingSoon",
                 "ComingSoon"
                 ]
@@ -1374,7 +1279,9 @@
     "examples": [
                 "ComingSoon",
                 "ComingSoon"
-                ]
+                ],
+    "tags": ["Information"],
+    "edition": "Carousel"
 },
 "oracle":
 {
@@ -1389,39 +1296,7 @@
              "ComingSoon"
              ],
     "run": {
-           "Setup": [
-                "ComingSoon",
-                "ComingSoon"
-                ],
-           "Anytime": [
-                "ComingSoon",
-                "ComingSoon"
-                ],
-           "First Night": [
-                "ComingSoon",
-                "ComingSoon"
-                ],
-           "Every Night": [
-                "ComingSoon",
-                "ComingSoon"
-                ],
-           "First Day": [
-                "ComingSoon",
-                "ComingSoon"
-                ],
-           "Every Day": [
-                "ComingSoon",
-                "Thing 2"
-                ],
            "Other Nights": [
-                "ComingSoon",
-                "ComingSoon"
-                ],
-           "Other Days": [
-                "ComingSoon",
-                "ComingSoon"
-                ],
-           "End of Game": [
                 "ComingSoon",
                 "ComingSoon"
                 ]
@@ -1429,7 +1304,9 @@
     "examples": [
                 "ComingSoon",
                 "ComingSoon"
-                ]
+                ],
+    "tags": ["Information", "Death"],
+    "edition": "Sects and Violets"
 },
 "pacifist":
 {
@@ -1444,39 +1321,7 @@
              "ComingSoon"
              ],
     "run": {
-           "Setup": [
-                "ComingSoon",
-                "ComingSoon"
-                ],
            "Anytime": [
-                "ComingSoon",
-                "ComingSoon"
-                ],
-           "First Night": [
-                "ComingSoon",
-                "ComingSoon"
-                ],
-           "Every Night": [
-                "ComingSoon",
-                "ComingSoon"
-                ],
-           "First Day": [
-                "ComingSoon",
-                "ComingSoon"
-                ],
-           "Every Day": [
-                "ComingSoon",
-                "Thing 2"
-                ],
-           "Other Nights": [
-                "ComingSoon",
-                "ComingSoon"
-                ],
-           "Other Days": [
-                "ComingSoon",
-                "ComingSoon"
-                ],
-           "End of Game": [
                 "ComingSoon",
                 "ComingSoon"
                 ]
@@ -1484,7 +1329,9 @@
     "examples": [
                 "ComingSoon",
                 "ComingSoon"
-                ]
+                ],
+    "tags": ["Mechanical", "Death"],
+    "edition": "Bad Moon Rising"
 },
 "philosopher":
 {
@@ -1499,35 +1346,7 @@
              "ComingSoon"
              ],
     "run": {
-           "Setup": [
-                "ComingSoon",
-                "ComingSoon"
-                ],
-           "Anytime": [
-                "ComingSoon",
-                "ComingSoon"
-                ],
-           "First Night": [
-                "ComingSoon",
-                "ComingSoon"
-                ],
            "Every Night": [
-                "ComingSoon",
-                "ComingSoon"
-                ],
-           "First Day": [
-                "ComingSoon",
-                "ComingSoon"
-                ],
-           "Every Day": [
-                "ComingSoon",
-                "Thing 2"
-                ],
-           "Other Nights": [
-                "ComingSoon",
-                "ComingSoon"
-                ],
-           "Other Days": [
                 "ComingSoon",
                 "ComingSoon"
                 ],
@@ -1539,7 +1358,9 @@
     "examples": [
                 "ComingSoon",
                 "ComingSoon"
-                ]
+                ],
+    "tags": ["Mechanical", "Droisoning"],
+    "edition": "Sects and Violets"
 },
 "pixie":
 {
@@ -1554,35 +1375,11 @@
              "ComingSoon"
              ],
     "run": {
-           "Setup": [
-                "ComingSoon",
-                "ComingSoon"
-                ],
            "Anytime": [
                 "ComingSoon",
                 "ComingSoon"
                 ],
            "First Night": [
-                "ComingSoon",
-                "ComingSoon"
-                ],
-           "Every Night": [
-                "ComingSoon",
-                "ComingSoon"
-                ],
-           "First Day": [
-                "ComingSoon",
-                "ComingSoon"
-                ],
-           "Every Day": [
-                "ComingSoon",
-                "Thing 2"
-                ],
-           "Other Nights": [
-                "ComingSoon",
-                "ComingSoon"
-                ],
-           "Other Days": [
                 "ComingSoon",
                 "ComingSoon"
                 ],
@@ -1594,7 +1391,9 @@
     "examples": [
                 "ComingSoon",
                 "ComingSoon"
-                ]
+                ],
+    "tags": ["Information", "Mechanical", "Death"],
+    "edition": "Carousel"
 },
 "poppygrower":
 {
@@ -1621,7 +1420,9 @@
     "examples": [
                 "ComingSoon",
                 "ComingSoon"
-                ]
+                ],
+    "tags": ["Mechanical", "Death"],
+    "edition": "Carousel"
 },
 "preacher":
 {
@@ -1644,7 +1445,9 @@
     "examples": [
                 "ComingSoon",
                 "ComingSoon"
-                ]
+                ],
+    "tags": ["Mechanical"],
+    "edition": "Carousel"
 },
 "princess":
 {
@@ -1671,7 +1474,9 @@
     "examples": [
                 "ComingSoon",
                 "ComingSoon"
-                ]
+                ],
+    "tags": ["Mechanical", "Death"],
+    "edition": "Carousel"
 },
 "professor":
 {
@@ -1694,7 +1499,9 @@
     "examples": [
                 "ComingSoon",
                 "ComingSoon"
-                ]
+                ],
+    "tags": ["Resurrection"],
+    "edition": "Bad Moon Rising"
 },
 "ravenkeeper":
 {
@@ -1749,7 +1556,9 @@
     "examples": [
                 "ComingSoon",
                 "ComingSoon"
-                ]
+                ],
+    "tags": ["Information", "Death"],
+    "edition": "Trouble Brewing"
 },
 "sage":
 {
@@ -1764,39 +1573,7 @@
              "ComingSoon"
              ],
     "run": {
-           "Setup": [
-                "ComingSoon",
-                "ComingSoon"
-                ],
-           "Anytime": [
-                "ComingSoon",
-                "ComingSoon"
-                ],
-           "First Night": [
-                "ComingSoon",
-                "ComingSoon"
-                ],
            "Every Night": [
-                "ComingSoon",
-                "ComingSoon"
-                ],
-           "First Day": [
-                "ComingSoon",
-                "ComingSoon"
-                ],
-           "Every Day": [
-                "ComingSoon",
-                "Thing 2"
-                ],
-           "Other Nights": [
-                "ComingSoon",
-                "ComingSoon"
-                ],
-           "Other Days": [
-                "ComingSoon",
-                "ComingSoon"
-                ],
-           "End of Game": [
                 "ComingSoon",
                 "ComingSoon"
                 ]
@@ -1804,7 +1581,9 @@
     "examples": [
                 "ComingSoon",
                 "ComingSoon"
-                ]
+                ],
+    "tags": ["Information", "Death"],
+    "edition": "Sects and Violets"
 },
 "sailor":
 {
@@ -1819,39 +1598,11 @@
              "ComingSoon"
              ],
     "run": {
-           "Setup": [
-                "ComingSoon",
-                "ComingSoon"
-                ],
            "Anytime": [
                 "ComingSoon",
                 "ComingSoon"
                 ],
-           "First Night": [
-                "ComingSoon",
-                "ComingSoon"
-                ],
            "Every Night": [
-                "ComingSoon",
-                "ComingSoon"
-                ],
-           "First Day": [
-                "ComingSoon",
-                "ComingSoon"
-                ],
-           "Every Day": [
-                "ComingSoon",
-                "Thing 2"
-                ],
-           "Other Nights": [
-                "ComingSoon",
-                "ComingSoon"
-                ],
-           "Other Days": [
-                "ComingSoon",
-                "ComingSoon"
-                ],
-           "End of Game": [
                 "ComingSoon",
                 "ComingSoon"
                 ]
@@ -1859,7 +1610,9 @@
     "examples": [
                 "ComingSoon",
                 "ComingSoon"
-                ]
+                ],
+    "tags": ["Droisoning", "Death"],
+    "edition": "Bad Moon Rising"
 },
 "savant":
 {
@@ -1874,47 +1627,17 @@
              "ComingSoon"
              ],
     "run": {
-           "Setup": [
-                "ComingSoon",
-                "ComingSoon"
-                ],
-           "Anytime": [
-                "ComingSoon",
-                "ComingSoon"
-                ],
-           "First Night": [
-                "ComingSoon",
-                "ComingSoon"
-                ],
-           "Every Night": [
-                "ComingSoon",
-                "ComingSoon"
-                ],
-           "First Day": [
-                "ComingSoon",
-                "ComingSoon"
-                ],
            "Every Day": [
                 "ComingSoon",
                 "Thing 2"
-                ],
-           "Other Nights": [
-                "ComingSoon",
-                "ComingSoon"
-                ],
-           "Other Days": [
-                "ComingSoon",
-                "ComingSoon"
-                ],
-           "End of Game": [
-                "ComingSoon",
-                "ComingSoon"
                 ]
            },
     "examples": [
                 "ComingSoon",
                 "ComingSoon"
-                ]
+                ],
+    "tags": ["Information"],
+    "edition": "Sects and Violets"
 },
 "seamstress":
 {
@@ -1929,39 +1652,7 @@
              "ComingSoon"
              ],
     "run": {
-           "Setup": [
-                "ComingSoon",
-                "ComingSoon"
-                ],
-           "Anytime": [
-                "ComingSoon",
-                "ComingSoon"
-                ],
-           "First Night": [
-                "ComingSoon",
-                "ComingSoon"
-                ],
            "Every Night": [
-                "ComingSoon",
-                "ComingSoon"
-                ],
-           "First Day": [
-                "ComingSoon",
-                "ComingSoon"
-                ],
-           "Every Day": [
-                "ComingSoon",
-                "Thing 2"
-                ],
-           "Other Nights": [
-                "ComingSoon",
-                "ComingSoon"
-                ],
-           "Other Days": [
-                "ComingSoon",
-                "ComingSoon"
-                ],
-           "End of Game": [
                 "ComingSoon",
                 "ComingSoon"
                 ]
@@ -1969,7 +1660,9 @@
     "examples": [
                 "ComingSoon",
                 "ComingSoon"
-                ]
+                ],
+    "tags": ["Information"],
+    "edition": "Sects and Violets"
 },
 "shugenja":
 {
@@ -1992,7 +1685,9 @@
     "examples": [
                 "ComingSoon",
                 "ComingSoon"
-                ]
+                ],
+    "tags": ["Information"],
+    "edition": "Carousel"
 },
 "slayer":
 {
@@ -2015,7 +1710,9 @@
     "examples": [
                 "ComingSoon",
                 "ComingSoon"
-                ]
+                ],
+    "tags": ["Death", "Public"],
+    "edition": "Trouble Brewing"
 },
 "snakecharmer":
 {
@@ -2030,39 +1727,7 @@
              "ComingSoon"
              ],
     "run": {
-           "Setup": [
-                "ComingSoon",
-                "ComingSoon"
-                ],
-           "Anytime": [
-                "ComingSoon",
-                "ComingSoon"
-                ],
-           "First Night": [
-                "ComingSoon",
-                "ComingSoon"
-                ],
            "Every Night": [
-                "ComingSoon",
-                "ComingSoon"
-                ],
-           "First Day": [
-                "ComingSoon",
-                "ComingSoon"
-                ],
-           "Every Day": [
-                "ComingSoon",
-                "Thing 2"
-                ],
-           "Other Nights": [
-                "ComingSoon",
-                "ComingSoon"
-                ],
-           "Other Days": [
-                "ComingSoon",
-                "ComingSoon"
-                ],
-           "End of Game": [
                 "ComingSoon",
                 "ComingSoon"
                 ]
@@ -2070,7 +1735,9 @@
     "examples": [
                 "ComingSoon",
                 "ComingSoon"
-                ]
+                ],
+    "tags": ["Mechanical"],
+    "edition": "Sects and Violets"
 },
 "soldier":
 {
@@ -2093,7 +1760,9 @@
     "examples": [
                 "ComingSoon",
                 "ComingSoon"
-                ]
+                ],
+    "tags": ["Mechanical", "Death"],
+    "edition": "Trouble Brewing"
 },
 "steward":
 {
@@ -2108,39 +1777,7 @@
              "ComingSoon"
              ],
     "run": {
-           "Setup": [
-                "ComingSoon",
-                "ComingSoon"
-                ],
-           "Anytime": [
-                "ComingSoon",
-                "ComingSoon"
-                ],
            "First Night": [
-                "ComingSoon",
-                "ComingSoon"
-                ],
-           "Every Night": [
-                "ComingSoon",
-                "ComingSoon"
-                ],
-           "First Day": [
-                "ComingSoon",
-                "ComingSoon"
-                ],
-           "Every Day": [
-                "ComingSoon",
-                "Thing 2"
-                ],
-           "Other Nights": [
-                "ComingSoon",
-                "ComingSoon"
-                ],
-           "Other Days": [
-                "ComingSoon",
-                "ComingSoon"
-                ],
-           "End of Game": [
                 "ComingSoon",
                 "ComingSoon"
                 ]
@@ -2148,7 +1785,9 @@
     "examples": [
                 "ComingSoon",
                 "ComingSoon"
-                ]
+                ],
+    "tags": ["Information"],
+    "edition": "Carousel"
 },
 "tealady":
 {
@@ -2163,39 +1802,7 @@
              "ComingSoon"
              ],
     "run": {
-           "Setup": [
-                "ComingSoon",
-                "ComingSoon"
-                ],
            "Anytime": [
-                "ComingSoon",
-                "ComingSoon"
-                ],
-           "First Night": [
-                "ComingSoon",
-                "ComingSoon"
-                ],
-           "Every Night": [
-                "ComingSoon",
-                "ComingSoon"
-                ],
-           "First Day": [
-                "ComingSoon",
-                "ComingSoon"
-                ],
-           "Every Day": [
-                "ComingSoon",
-                "Thing 2"
-                ],
-           "Other Nights": [
-                "ComingSoon",
-                "ComingSoon"
-                ],
-           "Other Days": [
-                "ComingSoon",
-                "ComingSoon"
-                ],
-           "End of Game": [
                 "ComingSoon",
                 "ComingSoon"
                 ]
@@ -2203,7 +1810,9 @@
     "examples": [
                 "ComingSoon",
                 "ComingSoon"
-                ]
+                ],
+    "tags": ["Death"],
+    "edition": "Bad Moon Rising"
 },
 "towncrier":
 {
@@ -2230,7 +1839,9 @@
     "examples": [
                 "ComingSoon",
                 "ComingSoon"
-                ]
+                ],
+    "tags": ["Information"],
+    "edition": "Sects and Violets"
 },
 "undertaker":
 {
@@ -2253,7 +1864,9 @@
     "examples": [
                 "ComingSoon",
                 "ComingSoon"
-                ]
+                ],
+    "tags": ["Information", "Death"],
+    "edition": "Trouble Brewing"
 },
 "villageidiot":
 {
@@ -2280,7 +1893,9 @@
     "examples": [
                 "ComingSoon",
                 "ComingSoon"
-                ]
+                ],
+    "tags": ["Information", "Droisoning"],
+    "edition": "Carousel"
 },
 "virgin":
 {
@@ -2303,7 +1918,9 @@
     "examples": [
                 "ComingSoon",
                 "ComingSoon"
-                ]
+                ],
+    "tags": ["Mechanical", "Public"],
+    "edition": "Trouble Brewing"
 },
 "washerwoman":
 {
@@ -2326,7 +1943,9 @@
     "examples": [
                 "ComingSoon",
                 "ComingSoon"
-                ]
+                ],
+    "tags": ["Information"],
+    "edition": "Trouble Brewing"
 },
 "barber":
 {
@@ -2349,7 +1968,9 @@
     "examples": [
                 "ComingSoon",
                 "ComingSoon"
-                ]
+                ],
+    "tags": ["Mechanical", "Death"],
+    "edition": "Sects and Violets"
 },
 "butler":
 {
@@ -2376,7 +1997,9 @@
     "examples": [
                 "ComingSoon",
                 "ComingSoon"
-                ]
+                ],
+    "tags": ["Mechanical"],
+    "edition": "Trouble Brewing"
 },
 "damsel":
 {
@@ -2403,7 +2026,9 @@
     "examples": [
                 "ComingSoon",
                 "ComingSoon"
-                ]
+                ],
+    "tags": ["Mechanical", "Public"],
+    "edition": "Carousel"
 },
 "drunk":
 {
@@ -2434,7 +2059,9 @@
     "examples": [
                 "ComingSoon",
                 "ComingSoon"
-                ]
+                ],
+    "tags": ["Mechanical", "Droisoning"],
+    "edition": "Trouble Brewing"
 },
 "golem":
 {
@@ -2457,7 +2084,9 @@
     "examples": [
                 "ComingSoon",
                 "ComingSoon"
-                ]
+                ],
+    "tags": ["Mechanical", "Death", "Public"],
+    "edition": "Carousel"
 },
 "goon":
 {
@@ -2480,7 +2109,9 @@
     "examples": [
                 "ComingSoon",
                 "ComingSoon"
-                ]
+                ],
+    "tags": ["Mechanical", "Droisoning"],
+    "edition": "Bad Moon Rising"
 },
 "hatter":
 {
@@ -2503,7 +2134,9 @@
     "examples": [
                 "ComingSoon",
                 "ComingSoon"
-                ]
+                ],
+    "tags": ["Mechanical", "Death"],
+    "edition": "Carousel"
 },
 "heretic":
 {
@@ -2530,7 +2163,9 @@
     "examples": [
                 "ComingSoon",
                 "ComingSoon"
-                ]
+                ],
+    "tags": ["Mechanical"],
+    "edition": "Carousel"
 },
 "hermit":
 {
@@ -2561,7 +2196,9 @@
     "examples": [
                 "ComingSoon",
                 "ComingSoon"
-                ]
+                ],
+    "tags": ["Mechanical"],
+    "edition": "Carousel"
 },
 "klutz":
 {
@@ -2584,7 +2221,9 @@
     "examples": [
                 "ComingSoon",
                 "ComingSoon"
-                ]
+                ],
+    "tags": ["Mechanical", "Death", "Public"],
+    "edition": "Sects and Violets"
 },
 "lunatic":
 {
@@ -2623,7 +2262,9 @@
     "examples": [
                 "ComingSoon",
                 "ComingSoon"
-                ]
+                ],
+    "tags": ["Mechanical", "Droisoning"],
+    "edition": "Bad Moon Rising"
 },
 "moonchild":
 {
@@ -2650,7 +2291,9 @@
     "examples": [
                 "ComingSoon",
                 "ComingSoon"
-                ]
+                ],
+    "tags": ["Death", "Public"],
+    "edition": "Bad Moon Rising"
 },
 "mutant":
 {
@@ -2673,7 +2316,9 @@
     "examples": [
                 "ComingSoon",
                 "ComingSoon"
-                ]
+                ],
+    "tags": ["Mechanical", "Public"],
+    "edition": "Sects and Violets"
 },
 "ogre":
 {
@@ -2696,7 +2341,9 @@
     "examples": [
                 "ComingSoon",
                 "ComingSoon"
-                ]
+                ],
+    "tags": ["Mechanical", "Droisoning"],
+    "edition": "Carousel"
 },
 "plaguedoctor":
 {
@@ -2719,7 +2366,9 @@
     "examples": [
                 "ComingSoon",
                 "ComingSoon"
-                ]
+                ],
+    "tags": ["Mechanical", "Death"],
+    "edition": "Carousel"
 },
 "politician":
 {
@@ -2742,7 +2391,9 @@
     "examples": [
                 "ComingSoon",
                 "ComingSoon"
-                ]
+                ],
+    "tags": ["Mechanical"],
+    "edition": "Carousel"
 },
 "puzzlemaster":
 {
@@ -2769,7 +2420,9 @@
     "examples": [
                 "ComingSoon",
                 "ComingSoon"
-                ]
+                ],
+    "tags": ["Information", "Droisoning"],
+    "edition": "Carousel"
 },
 "recluse":
 {
@@ -2796,7 +2449,9 @@
     "examples": [
                 "ComingSoon",
                 "ComingSoon"
-                ]
+                ],
+    "tags": [],
+    "edition": "Trouble Brewing"
 },
 "saint":
 {
@@ -2819,7 +2474,9 @@
     "examples": [
                 "ComingSoon",
                 "ComingSoon"
-                ]
+                ],
+    "tags": ["Mechanical"],
+    "edition": "Trouble Brewing"
 },
 "snitch":
 {
@@ -2842,7 +2499,9 @@
     "examples": [
                 "ComingSoon",
                 "ComingSoon"
-                ]
+                ],
+    "tags": ["Information"],
+    "edition": "Carousel"
 },
 "sweetheart":
 {
@@ -2865,7 +2524,9 @@
     "examples": [
                 "ComingSoon",
                 "ComingSoon"
-                ]
+                ],
+    "tags": ["Droisoning", "Death"],
+    "edition": "Sects and Violets"
 },
 "tinker":
 {
@@ -2888,7 +2549,9 @@
     "examples": [
                 "ComingSoon",
                 "ComingSoon"
-                ]
+                ],
+    "tags": ["Death"],
+    "edition": "Bad Moon Rising"
 },
 "zealot":
 {
@@ -2911,7 +2574,9 @@
     "examples": [
                 "ComingSoon",
                 "ComingSoon"
-                ]
+                ],
+    "tags": ["Mechanical"],
+    "edition": "Carousel"
 },
 "assassin":
 {
@@ -2926,39 +2591,7 @@
              "ComingSoon"
              ],
     "run": {
-           "Setup": [
-                "ComingSoon",
-                "ComingSoon"
-                ],
-           "Anytime": [
-                "ComingSoon",
-                "ComingSoon"
-                ],
-           "First Night": [
-                "ComingSoon",
-                "ComingSoon"
-                ],
-           "Every Night": [
-                "ComingSoon",
-                "ComingSoon"
-                ],
-           "First Day": [
-                "ComingSoon",
-                "ComingSoon"
-                ],
-           "Every Day": [
-                "ComingSoon",
-                "Thing 2"
-                ],
            "Other Nights": [
-                "ComingSoon",
-                "ComingSoon"
-                ],
-           "Other Days": [
-                "ComingSoon",
-                "ComingSoon"
-                ],
-           "End of Game": [
                 "ComingSoon",
                 "ComingSoon"
                 ]
@@ -2966,7 +2599,9 @@
     "examples": [
                 "ComingSoon",
                 "ComingSoon"
-                ]
+                ],
+    "tags": ["Death"],
+    "edition": "Bad Moon Rising"
 },
 "baron":
 {
@@ -2984,44 +2619,14 @@
            "Setup": [
                 "ComingSoon",
                 "ComingSoon"
-                ],
-           "Anytime": [
-                "ComingSoon",
-                "ComingSoon"
-                ],
-           "First Night": [
-                "ComingSoon",
-                "ComingSoon"
-                ],
-           "Every Night": [
-                "ComingSoon",
-                "ComingSoon"
-                ],
-           "First Day": [
-                "ComingSoon",
-                "ComingSoon"
-                ],
-           "Every Day": [
-                "ComingSoon",
-                "Thing 2"
-                ],
-           "Other Nights": [
-                "ComingSoon",
-                "ComingSoon"
-                ],
-           "Other Days": [
-                "ComingSoon",
-                "ComingSoon"
-                ],
-           "End of Game": [
-                "ComingSoon",
-                "ComingSoon"
                 ]
            },
     "examples": [
                 "ComingSoon",
                 "ComingSoon"
-                ]
+                ],
+    "tags": ["Mechanical"],
+    "edition": "Trouble Brewing"
 },
 "boffin":
 {
@@ -3043,40 +2648,14 @@
            "Anytime": [
                 "ComingSoon",
                 "ComingSoon"
-                ],
-           "First Night": [
-                "ComingSoon",
-                "ComingSoon"
-                ],
-           "Every Night": [
-                "ComingSoon",
-                "ComingSoon"
-                ],
-           "First Day": [
-                "ComingSoon",
-                "ComingSoon"
-                ],
-           "Every Day": [
-                "ComingSoon",
-                "Thing 2"
-                ],
-           "Other Nights": [
-                "ComingSoon",
-                "ComingSoon"
-                ],
-           "Other Days": [
-                "ComingSoon",
-                "ComingSoon"
-                ],
-           "End of Game": [
-                "ComingSoon",
-                "ComingSoon"
                 ]
            },
     "examples": [
                 "ComingSoon",
                 "ComingSoon"
-                ]
+                ],
+    "tags": ["Mechanical"],
+    "edition": "Carousel"
 },
 "boomdandy":
 {
@@ -3091,39 +2670,7 @@
              "ComingSoon"
              ],
     "run": {
-           "Setup": [
-                "ComingSoon",
-                "ComingSoon"
-                ],
            "Anytime": [
-                "ComingSoon",
-                "ComingSoon"
-                ],
-           "First Night": [
-                "ComingSoon",
-                "ComingSoon"
-                ],
-           "Every Night": [
-                "ComingSoon",
-                "ComingSoon"
-                ],
-           "First Day": [
-                "ComingSoon",
-                "ComingSoon"
-                ],
-           "Every Day": [
-                "ComingSoon",
-                "Thing 2"
-                ],
-           "Other Nights": [
-                "ComingSoon",
-                "ComingSoon"
-                ],
-           "Other Days": [
-                "ComingSoon",
-                "ComingSoon"
-                ],
-           "End of Game": [
                 "ComingSoon",
                 "ComingSoon"
                 ]
@@ -3131,7 +2678,9 @@
     "examples": [
                 "ComingSoon",
                 "ComingSoon"
-                ]
+                ],
+    "tags": ["Death", "Public"],
+    "edition": "Carousel"
 },
 "cerenovus":
 {
@@ -3146,39 +2695,11 @@
              "ComingSoon"
              ],
     "run": {
-           "Setup": [
-                "ComingSoon",
-                "ComingSoon"
-                ],
            "Anytime": [
                 "ComingSoon",
                 "ComingSoon"
                 ],
-           "First Night": [
-                "ComingSoon",
-                "ComingSoon"
-                ],
            "Every Night": [
-                "ComingSoon",
-                "ComingSoon"
-                ],
-           "First Day": [
-                "ComingSoon",
-                "ComingSoon"
-                ],
-           "Every Day": [
-                "ComingSoon",
-                "Thing 2"
-                ],
-           "Other Nights": [
-                "ComingSoon",
-                "ComingSoon"
-                ],
-           "Other Days": [
-                "ComingSoon",
-                "ComingSoon"
-                ],
-           "End of Game": [
                 "ComingSoon",
                 "ComingSoon"
                 ]
@@ -3186,7 +2707,9 @@
     "examples": [
                 "ComingSoon",
                 "ComingSoon"
-                ]
+                ],
+    "tags": ["Mechanical"],
+    "edition": "Sects and Violets"
 },
 "devilsadvocate":
 {
@@ -3201,47 +2724,21 @@
              "ComingSoon"
              ],
     "run": {
-           "Setup": [
-                "ComingSoon",
-                "ComingSoon"
-                ],
-           "Anytime": [
-                "ComingSoon",
-                "ComingSoon"
-                ],
-           "First Night": [
-                "ComingSoon",
-                "ComingSoon"
-                ],
            "Every Night": [
-                "ComingSoon",
-                "ComingSoon"
-                ],
-           "First Day": [
                 "ComingSoon",
                 "ComingSoon"
                 ],
            "Every Day": [
                 "ComingSoon",
                 "Thing 2"
-                ],
-           "Other Nights": [
-                "ComingSoon",
-                "ComingSoon"
-                ],
-           "Other Days": [
-                "ComingSoon",
-                "ComingSoon"
-                ],
-           "End of Game": [
-                "ComingSoon",
-                "ComingSoon"
                 ]
            },
     "examples": [
                 "ComingSoon",
                 "ComingSoon"
-                ]
+                ],
+    "tags": ["Mechanical", "Death"],
+    "edition": "Bad Moon Rising"
 },
 "eviltwin":
 {
@@ -3256,10 +2753,6 @@
              "ComingSoon"
              ],
     "run": {
-           "Setup": [
-                "ComingSoon",
-                "ComingSoon"
-                ],
            "Anytime": [
                 "ComingSoon",
                 "ComingSoon"
@@ -3267,36 +2760,14 @@
            "First Night": [
                 "ComingSoon",
                 "ComingSoon"
-                ],
-           "Every Night": [
-                "ComingSoon",
-                "ComingSoon"
-                ],
-           "First Day": [
-                "ComingSoon",
-                "ComingSoon"
-                ],
-           "Every Day": [
-                "ComingSoon",
-                "Thing 2"
-                ],
-           "Other Nights": [
-                "ComingSoon",
-                "ComingSoon"
-                ],
-           "Other Days": [
-                "ComingSoon",
-                "ComingSoon"
-                ],
-           "End of Game": [
-                "ComingSoon",
-                "ComingSoon"
                 ]
            },
     "examples": [
                 "ComingSoon",
                 "ComingSoon"
-                ]
+                ],
+    "tags": ["Information", "Mechanical"],
+    "edition": "Sects and Violets"
 },
 "fearmonger":
 {
@@ -3311,47 +2782,21 @@
              "ComingSoon"
              ],
     "run": {
-           "Setup": [
-                "ComingSoon",
-                "ComingSoon"
-                ],
-           "Anytime": [
-                "ComingSoon",
-                "ComingSoon"
-                ],
-           "First Night": [
-                "ComingSoon",
-                "ComingSoon"
-                ],
            "Every Night": [
-                "ComingSoon",
-                "ComingSoon"
-                ],
-           "First Day": [
                 "ComingSoon",
                 "ComingSoon"
                 ],
            "Every Day": [
                 "ComingSoon",
                 "Thing 2"
-                ],
-           "Other Nights": [
-                "ComingSoon",
-                "ComingSoon"
-                ],
-           "Other Days": [
-                "ComingSoon",
-                "ComingSoon"
-                ],
-           "End of Game": [
-                "ComingSoon",
-                "ComingSoon"
                 ]
            },
     "examples": [
                 "ComingSoon",
                 "ComingSoon"
-                ]
+                ],
+    "tags": ["Mechanical", "Public"],
+    "edition": "Carousel"
 },
 "goblin":
 {
@@ -3366,47 +2811,17 @@
              "ComingSoon"
              ],
     "run": {
-           "Setup": [
-                "ComingSoon",
-                "ComingSoon"
-                ],
-           "Anytime": [
-                "ComingSoon",
-                "ComingSoon"
-                ],
-           "First Night": [
-                "ComingSoon",
-                "ComingSoon"
-                ],
-           "Every Night": [
-                "ComingSoon",
-                "ComingSoon"
-                ],
-           "First Day": [
-                "ComingSoon",
-                "ComingSoon"
-                ],
            "Every Day": [
                 "ComingSoon",
                 "Thing 2"
-                ],
-           "Other Nights": [
-                "ComingSoon",
-                "ComingSoon"
-                ],
-           "Other Days": [
-                "ComingSoon",
-                "ComingSoon"
-                ],
-           "End of Game": [
-                "ComingSoon",
-                "ComingSoon"
                 ]
            },
     "examples": [
                 "ComingSoon",
                 "ComingSoon"
-                ]
+                ],
+    "tags": ["Mechanical", "Public"],
+    "edition": "Carousel"
 },
 "godfather":
 {
@@ -3425,10 +2840,6 @@
                 "ComingSoon",
                 "ComingSoon"
                 ],
-           "Anytime": [
-                "ComingSoon",
-                "ComingSoon"
-                ],
            "First Night": [
                 "ComingSoon",
                 "ComingSoon"
@@ -3436,32 +2847,14 @@
            "Every Night": [
                 "ComingSoon",
                 "ComingSoon"
-                ],
-           "First Day": [
-                "ComingSoon",
-                "ComingSoon"
-                ],
-           "Every Day": [
-                "ComingSoon",
-                "Thing 2"
-                ],
-           "Other Nights": [
-                "ComingSoon",
-                "ComingSoon"
-                ],
-           "Other Days": [
-                "ComingSoon",
-                "ComingSoon"
-                ],
-           "End of Game": [
-                "ComingSoon",
-                "ComingSoon"
                 ]
            },
     "examples": [
                 "ComingSoon",
                 "ComingSoon"
-                ]
+                ],
+    "tags": ["Information", "Death"],
+    "edition": "Bad Moon Rising"
 },
 "harpy":
 {
@@ -3476,39 +2869,11 @@
              "ComingSoon"
              ],
     "run": {
-           "Setup": [
-                "ComingSoon",
-                "ComingSoon"
-                ],
            "Anytime": [
                 "ComingSoon",
                 "ComingSoon"
                 ],
-           "First Night": [
-                "ComingSoon",
-                "ComingSoon"
-                ],
            "Every Night": [
-                "ComingSoon",
-                "ComingSoon"
-                ],
-           "First Day": [
-                "ComingSoon",
-                "ComingSoon"
-                ],
-           "Every Day": [
-                "ComingSoon",
-                "Thing 2"
-                ],
-           "Other Nights": [
-                "ComingSoon",
-                "ComingSoon"
-                ],
-           "Other Days": [
-                "ComingSoon",
-                "ComingSoon"
-                ],
-           "End of Game": [
                 "ComingSoon",
                 "ComingSoon"
                 ]
@@ -3516,7 +2881,9 @@
     "examples": [
                 "ComingSoon",
                 "ComingSoon"
-                ]
+                ],
+    "tags": ["Mechanical", "Death"],
+    "edition": "Carousel"
 },
 "marionette":
 {
@@ -3539,30 +2906,6 @@
                 "ComingSoon",
                 "ComingSoon"
                 ],
-           "First Night": [
-                "ComingSoon",
-                "ComingSoon"
-                ],
-           "Every Night": [
-                "ComingSoon",
-                "ComingSoon"
-                ],
-           "First Day": [
-                "ComingSoon",
-                "ComingSoon"
-                ],
-           "Every Day": [
-                "ComingSoon",
-                "Thing 2"
-                ],
-           "Other Nights": [
-                "ComingSoon",
-                "ComingSoon"
-                ],
-           "Other Days": [
-                "ComingSoon",
-                "ComingSoon"
-                ],
            "End of Game": [
                 "ComingSoon",
                 "ComingSoon"
@@ -3571,7 +2914,9 @@
     "examples": [
                 "ComingSoon",
                 "ComingSoon"
-                ]
+                ],
+    "tags": ["Information", "Mechanical", "Droisoning"],
+    "edition": "Carousel"
 },
 "mastermind":
 {
@@ -3586,39 +2931,7 @@
              "ComingSoon"
              ],
     "run": {
-           "Setup": [
-                "ComingSoon",
-                "ComingSoon"
-                ],
            "Anytime": [
-                "ComingSoon",
-                "ComingSoon"
-                ],
-           "First Night": [
-                "ComingSoon",
-                "ComingSoon"
-                ],
-           "Every Night": [
-                "ComingSoon",
-                "ComingSoon"
-                ],
-           "First Day": [
-                "ComingSoon",
-                "ComingSoon"
-                ],
-           "Every Day": [
-                "ComingSoon",
-                "Thing 2"
-                ],
-           "Other Nights": [
-                "ComingSoon",
-                "ComingSoon"
-                ],
-           "Other Days": [
-                "ComingSoon",
-                "ComingSoon"
-                ],
-           "End of Game": [
                 "ComingSoon",
                 "ComingSoon"
                 ]
@@ -3626,7 +2939,9 @@
     "examples": [
                 "ComingSoon",
                 "ComingSoon"
-                ]
+                ],
+    "tags": ["Mechanical", "Death"],
+    "edition": "Bad Moon Rising"
 },
 "mezepheles":
 {
@@ -3641,14 +2956,6 @@
              "ComingSoon"
              ],
     "run": {
-           "Setup": [
-                "ComingSoon",
-                "ComingSoon"
-                ],
-           "Anytime": [
-                "ComingSoon",
-                "ComingSoon"
-                ],
            "First Night": [
                 "ComingSoon",
                 "ComingSoon"
@@ -3656,32 +2963,14 @@
            "Every Night": [
                 "ComingSoon",
                 "ComingSoon"
-                ],
-           "First Day": [
-                "ComingSoon",
-                "ComingSoon"
-                ],
-           "Every Day": [
-                "ComingSoon",
-                "Thing 2"
-                ],
-           "Other Nights": [
-                "ComingSoon",
-                "ComingSoon"
-                ],
-           "Other Days": [
-                "ComingSoon",
-                "ComingSoon"
-                ],
-           "End of Game": [
-                "ComingSoon",
-                "ComingSoon"
                 ]
            },
     "examples": [
                 "ComingSoon",
                 "ComingSoon"
-                ]
+                ],
+    "tags": ["Information", "Mechanical"],
+    "edition": "Carousel"
 },
 "organgrinder":
 {
@@ -3696,47 +2985,21 @@
              "ComingSoon"
              ],
     "run": {
-           "Setup": [
-                "ComingSoon",
-                "ComingSoon"
-                ],
-           "Anytime": [
-                "ComingSoon",
-                "ComingSoon"
-                ],
-           "First Night": [
-                "ComingSoon",
-                "ComingSoon"
-                ],
            "Every Night": [
-                "ComingSoon",
-                "ComingSoon"
-                ],
-           "First Day": [
                 "ComingSoon",
                 "ComingSoon"
                 ],
            "Every Day": [
                 "ComingSoon",
                 "Thing 2"
-                ],
-           "Other Nights": [
-                "ComingSoon",
-                "ComingSoon"
-                ],
-           "Other Days": [
-                "ComingSoon",
-                "ComingSoon"
-                ],
-           "End of Game": [
-                "ComingSoon",
-                "ComingSoon"
                 ]
            },
     "examples": [
                 "ComingSoon",
                 "ComingSoon"
-                ]
+                ],
+    "tags": ["Mechanical", "Droisoning", "Public"],
+    "edition": "Carousel"
 },
 "pithag":
 {
@@ -3751,39 +3014,7 @@
              "ComingSoon"
              ],
     "run": {
-           "Setup": [
-                "ComingSoon",
-                "ComingSoon"
-                ],
-           "Anytime": [
-                "ComingSoon",
-                "ComingSoon"
-                ],
-           "First Night": [
-                "ComingSoon",
-                "ComingSoon"
-                ],
-           "Every Night": [
-                "ComingSoon",
-                "ComingSoon"
-                ],
-           "First Day": [
-                "ComingSoon",
-                "ComingSoon"
-                ],
-           "Every Day": [
-                "ComingSoon",
-                "Thing 2"
-                ],
            "Other Nights": [
-                "ComingSoon",
-                "ComingSoon"
-                ],
-           "Other Days": [
-                "ComingSoon",
-                "ComingSoon"
-                ],
-           "End of Game": [
                 "ComingSoon",
                 "ComingSoon"
                 ]
@@ -3791,7 +3022,9 @@
     "examples": [
                 "ComingSoon",
                 "ComingSoon"
-                ]
+                ],
+    "tags": ["Mechanical"],
+    "edition": "Sects and Violets"
 },
 "poisoner":
 {
@@ -3806,39 +3039,7 @@
              "ComingSoon"
              ],
     "run": {
-           "Setup": [
-                "ComingSoon",
-                "ComingSoon"
-                ],
-           "Anytime": [
-                "ComingSoon",
-                "ComingSoon"
-                ],
-           "First Night": [
-                "ComingSoon",
-                "ComingSoon"
-                ],
            "Every Night": [
-                "ComingSoon",
-                "ComingSoon"
-                ],
-           "First Day": [
-                "ComingSoon",
-                "ComingSoon"
-                ],
-           "Every Day": [
-                "ComingSoon",
-                "Thing 2"
-                ],
-           "Other Nights": [
-                "ComingSoon",
-                "ComingSoon"
-                ],
-           "Other Days": [
-                "ComingSoon",
-                "ComingSoon"
-                ],
-           "End of Game": [
                 "ComingSoon",
                 "ComingSoon"
                 ]
@@ -3846,7 +3047,9 @@
     "examples": [
                 "ComingSoon",
                 "ComingSoon"
-                ]
+                ],
+    "tags": ["Droisoning"],
+    "edition": "Trouble Brewing"
 },
 "psychopath":
 {
@@ -3861,47 +3064,17 @@
              "ComingSoon"
              ],
     "run": {
-           "Setup": [
-                "ComingSoon",
-                "ComingSoon"
-                ],
-           "Anytime": [
-                "ComingSoon",
-                "ComingSoon"
-                ],
-           "First Night": [
-                "ComingSoon",
-                "ComingSoon"
-                ],
-           "Every Night": [
-                "ComingSoon",
-                "ComingSoon"
-                ],
-           "First Day": [
-                "ComingSoon",
-                "ComingSoon"
-                ],
            "Every Day": [
                 "ComingSoon",
                 "Thing 2"
-                ],
-           "Other Nights": [
-                "ComingSoon",
-                "ComingSoon"
-                ],
-           "Other Days": [
-                "ComingSoon",
-                "ComingSoon"
-                ],
-           "End of Game": [
-                "ComingSoon",
-                "ComingSoon"
                 ]
            },
     "examples": [
                 "ComingSoon",
                 "ComingSoon"
-                ]
+                ],
+    "tags": ["Death", "Public"],
+    "edition": "Carousel"
 },
 "scarletwoman":
 {
@@ -3916,39 +3089,7 @@
              "ComingSoon"
              ],
     "run": {
-           "Setup": [
-                "ComingSoon",
-                "ComingSoon"
-                ],
            "Anytime": [
-                "ComingSoon",
-                "ComingSoon"
-                ],
-           "First Night": [
-                "ComingSoon",
-                "ComingSoon"
-                ],
-           "Every Night": [
-                "ComingSoon",
-                "ComingSoon"
-                ],
-           "First Day": [
-                "ComingSoon",
-                "ComingSoon"
-                ],
-           "Every Day": [
-                "ComingSoon",
-                "Thing 2"
-                ],
-           "Other Nights": [
-                "ComingSoon",
-                "ComingSoon"
-                ],
-           "Other Days": [
-                "ComingSoon",
-                "ComingSoon"
-                ],
-           "End of Game": [
                 "ComingSoon",
                 "ComingSoon"
                 ]
@@ -3956,7 +3097,9 @@
     "examples": [
                 "ComingSoon",
                 "ComingSoon"
-                ]
+                ],
+    "tags": ["Mechanical", "Death"],
+    "edition": "Trouble Brewing"
 },
 "spy":
 {
@@ -3971,35 +3114,11 @@
              "ComingSoon"
              ],
     "run": {
-           "Setup": [
-                "ComingSoon",
-                "ComingSoon"
-                ],
            "Anytime": [
                 "ComingSoon",
                 "ComingSoon"
                 ],
-           "First Night": [
-                "ComingSoon",
-                "ComingSoon"
-                ],
            "Every Night": [
-                "ComingSoon",
-                "ComingSoon"
-                ],
-           "First Day": [
-                "ComingSoon",
-                "ComingSoon"
-                ],
-           "Every Day": [
-                "ComingSoon",
-                "Thing 2"
-                ],
-           "Other Nights": [
-                "ComingSoon",
-                "ComingSoon"
-                ],
-           "Other Days": [
                 "ComingSoon",
                 "ComingSoon"
                 ],
@@ -4011,7 +3130,9 @@
     "examples": [
                 "ComingSoon",
                 "ComingSoon"
-                ]
+                ],
+    "tags": ["Information"],
+    "edition": "Trouble Brewing"
 },
 "summoner":
 {
@@ -4034,31 +3155,7 @@
                 "ComingSoon",
                 "ComingSoon"
                 ],
-           "First Night": [
-                "ComingSoon",
-                "ComingSoon"
-                ],
-           "Every Night": [
-                "ComingSoon",
-                "ComingSoon"
-                ],
-           "First Day": [
-                "ComingSoon",
-                "ComingSoon"
-                ],
-           "Every Day": [
-                "ComingSoon",
-                "Thing 2"
-                ],
            "Other Nights": [
-                "ComingSoon",
-                "ComingSoon"
-                ],
-           "Other Days": [
-                "ComingSoon",
-                "ComingSoon"
-                ],
-           "End of Game": [
                 "ComingSoon",
                 "ComingSoon"
                 ]
@@ -4066,7 +3163,9 @@
     "examples": [
                 "ComingSoon",
                 "ComingSoon"
-                ]
+                ],
+    "tags": ["Mechanical"],
+    "edition": "Carousel"
 },
 "vizier":
 {
@@ -4081,22 +3180,6 @@
              "ComingSoon"
              ],
     "run": {
-           "Setup": [
-                "ComingSoon",
-                "ComingSoon"
-                ],
-           "Anytime": [
-                "ComingSoon",
-                "ComingSoon"
-                ],
-           "First Night": [
-                "ComingSoon",
-                "ComingSoon"
-                ],
-           "Every Night": [
-                "ComingSoon",
-                "ComingSoon"
-                ],
            "First Day": [
                 "ComingSoon",
                 "ComingSoon"
@@ -4104,24 +3187,14 @@
            "Every Day": [
                 "ComingSoon",
                 "Thing 2"
-                ],
-           "Other Nights": [
-                "ComingSoon",
-                "ComingSoon"
-                ],
-           "Other Days": [
-                "ComingSoon",
-                "ComingSoon"
-                ],
-           "End of Game": [
-                "ComingSoon",
-                "ComingSoon"
                 ]
            },
     "examples": [
                 "ComingSoon",
                 "ComingSoon"
-                ]
+                ],
+    "tags": ["Mechanical", "Public"],
+    "edition": "Carousel"
 },
 "widow":
 {
@@ -4136,39 +3209,7 @@
              "ComingSoon"
              ],
     "run": {
-           "Setup": [
-                "ComingSoon",
-                "ComingSoon"
-                ],
-           "Anytime": [
-                "ComingSoon",
-                "ComingSoon"
-                ],
            "First Night": [
-                "ComingSoon",
-                "ComingSoon"
-                ],
-           "Every Night": [
-                "ComingSoon",
-                "ComingSoon"
-                ],
-           "First Day": [
-                "ComingSoon",
-                "ComingSoon"
-                ],
-           "Every Day": [
-                "ComingSoon",
-                "Thing 2"
-                ],
-           "Other Nights": [
-                "ComingSoon",
-                "ComingSoon"
-                ],
-           "Other Days": [
-                "ComingSoon",
-                "ComingSoon"
-                ],
-           "End of Game": [
                 "ComingSoon",
                 "ComingSoon"
                 ]
@@ -4176,7 +3217,9 @@
     "examples": [
                 "ComingSoon",
                 "ComingSoon"
-                ]
+                ],
+    "tags": ["Information", "Droisoning"],
+    "edition": "Carousel"
 },
 "witch":
 {
@@ -4191,47 +3234,21 @@
              "ComingSoon"
              ],
     "run": {
-           "Setup": [
-                "ComingSoon",
-                "ComingSoon"
-                ],
-           "Anytime": [
-                "ComingSoon",
-                "ComingSoon"
-                ],
-           "First Night": [
-                "ComingSoon",
-                "ComingSoon"
-                ],
            "Every Night": [
-                "ComingSoon",
-                "ComingSoon"
-                ],
-           "First Day": [
                 "ComingSoon",
                 "ComingSoon"
                 ],
            "Every Day": [
                 "ComingSoon",
                 "Thing 2"
-                ],
-           "Other Nights": [
-                "ComingSoon",
-                "ComingSoon"
-                ],
-           "Other Days": [
-                "ComingSoon",
-                "ComingSoon"
-                ],
-           "End of Game": [
-                "ComingSoon",
-                "ComingSoon"
                 ]
            },
     "examples": [
                 "ComingSoon",
                 "ComingSoon"
-                ]
+                ],
+    "tags": ["Death"],
+    "edition": "Sects and Violets"
 },
 "wizard":
 {
@@ -4246,39 +3263,7 @@
              "ComingSoon"
              ],
     "run": {
-           "Setup": [
-                "ComingSoon",
-                "ComingSoon"
-                ],
            "Anytime": [
-                "ComingSoon",
-                "ComingSoon"
-                ],
-           "First Night": [
-                "ComingSoon",
-                "ComingSoon"
-                ],
-           "Every Night": [
-                "ComingSoon",
-                "ComingSoon"
-                ],
-           "First Day": [
-                "ComingSoon",
-                "ComingSoon"
-                ],
-           "Every Day": [
-                "ComingSoon",
-                "Thing 2"
-                ],
-           "Other Nights": [
-                "ComingSoon",
-                "ComingSoon"
-                ],
-           "Other Days": [
-                "ComingSoon",
-                "ComingSoon"
-                ],
-           "End of Game": [
                 "ComingSoon",
                 "ComingSoon"
                 ]
@@ -4286,7 +3271,9 @@
     "examples": [
                 "ComingSoon",
                 "ComingSoon"
-                ]
+                ],
+    "tags": ["Mechanical", "Public"],
+    "edition": "Carousel"
 },
 "wraith":
 {
@@ -4301,39 +3288,7 @@
              "ComingSoon"
              ],
     "run": {
-           "Setup": [
-                "ComingSoon",
-                "ComingSoon"
-                ],
-           "Anytime": [
-                "ComingSoon",
-                "ComingSoon"
-                ],
-           "First Night": [
-                "ComingSoon",
-                "ComingSoon"
-                ],
            "Every Night": [
-                "ComingSoon",
-                "ComingSoon"
-                ],
-           "First Day": [
-                "ComingSoon",
-                "ComingSoon"
-                ],
-           "Every Day": [
-                "ComingSoon",
-                "Thing 2"
-                ],
-           "Other Nights": [
-                "ComingSoon",
-                "ComingSoon"
-                ],
-           "Other Days": [
-                "ComingSoon",
-                "ComingSoon"
-                ],
-           "End of Game": [
                 "ComingSoon",
                 "ComingSoon"
                 ]
@@ -4341,7 +3296,9 @@
     "examples": [
                 "ComingSoon",
                 "ComingSoon"
-                ]
+                ],
+    "tags": ["Mechanical"],
+    "edition": "Carousel"
 },
 "xaan":
 {
@@ -4360,35 +3317,7 @@
                 "ComingSoon",
                 "ComingSoon"
                 ],
-           "Anytime": [
-                "ComingSoon",
-                "ComingSoon"
-                ],
-           "First Night": [
-                "ComingSoon",
-                "ComingSoon"
-                ],
            "Every Night": [
-                "ComingSoon",
-                "ComingSoon"
-                ],
-           "First Day": [
-                "ComingSoon",
-                "ComingSoon"
-                ],
-           "Every Day": [
-                "ComingSoon",
-                "Thing 2"
-                ],
-           "Other Nights": [
-                "ComingSoon",
-                "ComingSoon"
-                ],
-           "Other Days": [
-                "ComingSoon",
-                "ComingSoon"
-                ],
-           "End of Game": [
                 "ComingSoon",
                 "ComingSoon"
                 ]
@@ -4396,7 +3325,9 @@
     "examples": [
                 "ComingSoon",
                 "ComingSoon"
-                ]
+                ],
+    "tags": ["Mechanical", "Droisoning"],
+    "edition": "Carousel"
 },
 "alhadikhia":
 {
@@ -4451,7 +3382,9 @@
     "examples": [
                 "ComingSoon",
                 "ComingSoon"
-                ]
+                ],
+    "tags": ["Mechanical", "Death", "Resurrection", "Public"],
+    "edition": "Carousel"
 },
 "fanggu":
 {
@@ -4506,7 +3439,9 @@
     "examples": [
                 "ComingSoon",
                 "ComingSoon"
-                ]
+                ],
+    "tags": ["Mechanical", "Death"],
+    "edition": "Sects and Violets"
 },
 "imp":
 {
@@ -4521,39 +3456,7 @@
              "ComingSoon"
              ],
     "run": {
-           "Setup": [
-                "ComingSoon",
-                "ComingSoon"
-                ],
-           "Anytime": [
-                "ComingSoon",
-                "ComingSoon"
-                ],
-           "First Night": [
-                "ComingSoon",
-                "ComingSoon"
-                ],
-           "Every Night": [
-                "ComingSoon",
-                "ComingSoon"
-                ],
-           "First Day": [
-                "ComingSoon",
-                "ComingSoon"
-                ],
-           "Every Day": [
-                "ComingSoon",
-                "Thing 2"
-                ],
            "Other Nights": [
-                "ComingSoon",
-                "ComingSoon"
-                ],
-           "Other Days": [
-                "ComingSoon",
-                "ComingSoon"
-                ],
-           "End of Game": [
                 "ComingSoon",
                 "ComingSoon"
                 ]
@@ -4561,7 +3464,9 @@
     "examples": [
                 "ComingSoon",
                 "ComingSoon"
-                ]
+                ],
+    "tags": ["Mechanical", "Death"],
+    "edition": "Trouble Brewing"
 },
 "kazali":
 {
@@ -4580,35 +3485,11 @@
                 "ComingSoon",
                 "ComingSoon"
                 ],
-           "Anytime": [
-                "ComingSoon",
-                "ComingSoon"
-                ],
            "First Night": [
                 "ComingSoon",
                 "ComingSoon"
                 ],
-           "Every Night": [
-                "ComingSoon",
-                "ComingSoon"
-                ],
-           "First Day": [
-                "ComingSoon",
-                "ComingSoon"
-                ],
-           "Every Day": [
-                "ComingSoon",
-                "Thing 2"
-                ],
            "Other Nights": [
-                "ComingSoon",
-                "ComingSoon"
-                ],
-           "Other Days": [
-                "ComingSoon",
-                "ComingSoon"
-                ],
-           "End of Game": [
                 "ComingSoon",
                 "ComingSoon"
                 ]
@@ -4616,7 +3497,9 @@
     "examples": [
                 "ComingSoon",
                 "ComingSoon"
-                ]
+                ],
+    "tags": ["Mechanical", "Death"],
+    "edition": "Carousel"
 },
 "legion":
 {
@@ -4635,22 +3518,6 @@
                 "ComingSoon",
                 "ComingSoon"
                 ],
-           "Anytime": [
-                "ComingSoon",
-                "ComingSoon"
-                ],
-           "First Night": [
-                "ComingSoon",
-                "ComingSoon"
-                ],
-           "Every Night": [
-                "ComingSoon",
-                "ComingSoon"
-                ],
-           "First Day": [
-                "ComingSoon",
-                "ComingSoon"
-                ],
            "Every Day": [
                 "ComingSoon",
                 "Thing 2"
@@ -4658,20 +3525,14 @@
            "Other Nights": [
                 "ComingSoon",
                 "ComingSoon"
-                ],
-           "Other Days": [
-                "ComingSoon",
-                "ComingSoon"
-                ],
-           "End of Game": [
-                "ComingSoon",
-                "ComingSoon"
                 ]
            },
     "examples": [
                 "ComingSoon",
                 "ComingSoon"
-                ]
+                ],
+    "tags": ["Mechanical", "Death", "Public"],
+    "edition": "Carousel"
 },
 "leviathan":
 {
@@ -4686,19 +3547,7 @@
              "ComingSoon"
              ],
     "run": {
-           "Setup": [
-                "ComingSoon",
-                "ComingSoon"
-                ],
            "Anytime": [
-                "ComingSoon",
-                "ComingSoon"
-                ],
-           "First Night": [
-                "ComingSoon",
-                "ComingSoon"
-                ],
-           "Every Night": [
                 "ComingSoon",
                 "ComingSoon"
                 ],
@@ -4706,19 +3555,7 @@
                 "ComingSoon",
                 "ComingSoon"
                 ],
-           "Every Day": [
-                "ComingSoon",
-                "Thing 2"
-                ],
            "Other Nights": [
-                "ComingSoon",
-                "ComingSoon"
-                ],
-           "Other Days": [
-                "ComingSoon",
-                "ComingSoon"
-                ],
-           "End of Game": [
                 "ComingSoon",
                 "ComingSoon"
                 ]
@@ -4726,7 +3563,9 @@
     "examples": [
                 "ComingSoon",
                 "ComingSoon"
-                ]
+                ],
+    "tags": ["Mechanical", "Public"],
+    "edition": "Carousel"
 },
 "lilmonsta":
 {
@@ -4745,31 +3584,11 @@
                 "ComingSoon",
                 "ComingSoon"
                 ],
-           "Anytime": [
-                "ComingSoon",
-                "ComingSoon"
-                ],
            "First Night": [
                 "ComingSoon",
                 "ComingSoon"
                 ],
-           "Every Night": [
-                "ComingSoon",
-                "ComingSoon"
-                ],
-           "First Day": [
-                "ComingSoon",
-                "ComingSoon"
-                ],
-           "Every Day": [
-                "ComingSoon",
-                "Thing 2"
-                ],
            "Other Nights": [
-                "ComingSoon",
-                "ComingSoon"
-                ],
-           "Other Days": [
                 "ComingSoon",
                 "ComingSoon"
                 ],
@@ -4781,7 +3600,9 @@
     "examples": [
                 "ComingSoon",
                 "ComingSoon"
-                ]
+                ],
+    "tags": ["Mechanical", "Death"],
+    "edition": "Carousel"
 },
 "lleech":
 {
@@ -4796,10 +3617,6 @@
              "ComingSoon"
              ],
     "run": {
-           "Setup": [
-                "ComingSoon",
-                "ComingSoon"
-                ],
            "Anytime": [
                 "ComingSoon",
                 "ComingSoon"
@@ -4808,27 +3625,7 @@
                 "ComingSoon",
                 "ComingSoon"
                 ],
-           "Every Night": [
-                "ComingSoon",
-                "ComingSoon"
-                ],
-           "First Day": [
-                "ComingSoon",
-                "ComingSoon"
-                ],
-           "Every Day": [
-                "ComingSoon",
-                "Thing 2"
-                ],
            "Other Nights": [
-                "ComingSoon",
-                "ComingSoon"
-                ],
-           "Other Days": [
-                "ComingSoon",
-                "ComingSoon"
-                ],
-           "End of Game": [
                 "ComingSoon",
                 "ComingSoon"
                 ]
@@ -4836,7 +3633,9 @@
     "examples": [
                 "ComingSoon",
                 "ComingSoon"
-                ]
+                ],
+    "tags": ["Mechanical", "Droisoning", "Death"],
+    "edition": "Carousel"
 },
 "lordoftyphon":
 {
@@ -4855,35 +3654,11 @@
                 "ComingSoon",
                 "ComingSoon"
                 ],
-           "Anytime": [
-                "ComingSoon",
-                "ComingSoon"
-                ],
            "First Night": [
                 "ComingSoon",
                 "ComingSoon"
                 ],
-           "Every Night": [
-                "ComingSoon",
-                "ComingSoon"
-                ],
-           "First Day": [
-                "ComingSoon",
-                "ComingSoon"
-                ],
-           "Every Day": [
-                "ComingSoon",
-                "Thing 2"
-                ],
            "Other Nights": [
-                "ComingSoon",
-                "ComingSoon"
-                ],
-           "Other Days": [
-                "ComingSoon",
-                "ComingSoon"
-                ],
-           "End of Game": [
                 "ComingSoon",
                 "ComingSoon"
                 ]
@@ -4891,7 +3666,9 @@
     "examples": [
                 "ComingSoon",
                 "ComingSoon"
-                ]
+                ],
+    "tags": ["Mechanical", "Death"],
+    "edition": "Carousel"
 },
 "nodashii":
 {
@@ -4906,39 +3683,11 @@
              "ComingSoon"
              ],
     "run": {
-           "Setup": [
-                "ComingSoon",
-                "ComingSoon"
-                ],
            "Anytime": [
                 "ComingSoon",
                 "ComingSoon"
                 ],
-           "First Night": [
-                "ComingSoon",
-                "ComingSoon"
-                ],
-           "Every Night": [
-                "ComingSoon",
-                "ComingSoon"
-                ],
-           "First Day": [
-                "ComingSoon",
-                "ComingSoon"
-                ],
-           "Every Day": [
-                "ComingSoon",
-                "Thing 2"
-                ],
            "Other Nights": [
-                "ComingSoon",
-                "ComingSoon"
-                ],
-           "Other Days": [
-                "ComingSoon",
-                "ComingSoon"
-                ],
-           "End of Game": [
                 "ComingSoon",
                 "ComingSoon"
                 ]
@@ -4946,7 +3695,9 @@
     "examples": [
                 "ComingSoon",
                 "ComingSoon"
-                ]
+                ],
+    "tags": ["Droisoning", "Death"],
+    "edition": "Sects and Violets"
 },
 "ojo":
 {
@@ -4961,39 +3712,7 @@
              "ComingSoon"
              ],
     "run": {
-           "Setup": [
-                "ComingSoon",
-                "ComingSoon"
-                ],
-           "Anytime": [
-                "ComingSoon",
-                "ComingSoon"
-                ],
-           "First Night": [
-                "ComingSoon",
-                "ComingSoon"
-                ],
-           "Every Night": [
-                "ComingSoon",
-                "ComingSoon"
-                ],
-           "First Day": [
-                "ComingSoon",
-                "ComingSoon"
-                ],
-           "Every Day": [
-                "ComingSoon",
-                "Thing 2"
-                ],
            "Other Nights": [
-                "ComingSoon",
-                "ComingSoon"
-                ],
-           "Other Days": [
-                "ComingSoon",
-                "ComingSoon"
-                ],
-           "End of Game": [
                 "ComingSoon",
                 "ComingSoon"
                 ]
@@ -5001,7 +3720,9 @@
     "examples": [
                 "ComingSoon",
                 "ComingSoon"
-                ]
+                ],
+    "tags": ["Death"],
+    "edition": "Carousel"
 },
 "po":
 {
@@ -5016,39 +3737,7 @@
              "ComingSoon"
              ],
     "run": {
-           "Setup": [
-                "ComingSoon",
-                "ComingSoon"
-                ],
-           "Anytime": [
-                "ComingSoon",
-                "ComingSoon"
-                ],
-           "First Night": [
-                "ComingSoon",
-                "ComingSoon"
-                ],
-           "Every Night": [
-                "ComingSoon",
-                "ComingSoon"
-                ],
-           "First Day": [
-                "ComingSoon",
-                "ComingSoon"
-                ],
-           "Every Day": [
-                "ComingSoon",
-                "Thing 2"
-                ],
            "Other Nights": [
-                "ComingSoon",
-                "ComingSoon"
-                ],
-           "Other Days": [
-                "ComingSoon",
-                "ComingSoon"
-                ],
-           "End of Game": [
                 "ComingSoon",
                 "ComingSoon"
                 ]
@@ -5056,7 +3745,9 @@
     "examples": [
                 "ComingSoon",
                 "ComingSoon"
-                ]
+                ],
+    "tags": ["Death"],
+    "edition": "Bad Moon Rising"
 },
 "pukka":
 {
@@ -5071,39 +3762,7 @@
              "ComingSoon"
              ],
     "run": {
-           "Setup": [
-                "ComingSoon",
-                "ComingSoon"
-                ],
-           "Anytime": [
-                "ComingSoon",
-                "ComingSoon"
-                ],
-           "First Night": [
-                "ComingSoon",
-                "ComingSoon"
-                ],
            "Every Night": [
-                "ComingSoon",
-                "ComingSoon"
-                ],
-           "First Day": [
-                "ComingSoon",
-                "ComingSoon"
-                ],
-           "Every Day": [
-                "ComingSoon",
-                "Thing 2"
-                ],
-           "Other Nights": [
-                "ComingSoon",
-                "ComingSoon"
-                ],
-           "Other Days": [
-                "ComingSoon",
-                "ComingSoon"
-                ],
-           "End of Game": [
                 "ComingSoon",
                 "ComingSoon"
                 ]
@@ -5111,7 +3770,9 @@
     "examples": [
                 "ComingSoon",
                 "ComingSoon"
-                ]
+                ],
+    "tags": ["Droisoning", "Death"],
+    "edition": "Bad Moon Rising"
 },
 "riot":
 {
@@ -5126,30 +3787,6 @@
              "ComingSoon"
              ],
     "run": {
-           "Setup": [
-                "ComingSoon",
-                "ComingSoon"
-                ],
-           "Anytime": [
-                "ComingSoon",
-                "ComingSoon"
-                ],
-           "First Night": [
-                "ComingSoon",
-                "ComingSoon"
-                ],
-           "Every Night": [
-                "ComingSoon",
-                "ComingSoon"
-                ],
-           "First Day": [
-                "ComingSoon",
-                "ComingSoon"
-                ],
-           "Every Day": [
-                "ComingSoon",
-                "Thing 2"
-                ],
            "Other Nights": [
                 "ComingSoon",
                 "ComingSoon"
@@ -5157,16 +3794,14 @@
            "Other Days": [
                 "ComingSoon",
                 "ComingSoon"
-                ],
-           "End of Game": [
-                "ComingSoon",
-                "ComingSoon"
                 ]
            },
     "examples": [
                 "ComingSoon",
                 "ComingSoon"
-                ]
+                ],
+    "tags": ["Mechanical", "Death", "Public"],
+    "edition": "Carousel"
 },
 "shabaloth":
 {
@@ -5181,39 +3816,7 @@
              "ComingSoon"
              ],
     "run": {
-           "Setup": [
-                "ComingSoon",
-                "ComingSoon"
-                ],
-           "Anytime": [
-                "ComingSoon",
-                "ComingSoon"
-                ],
-           "First Night": [
-                "ComingSoon",
-                "ComingSoon"
-                ],
-           "Every Night": [
-                "ComingSoon",
-                "ComingSoon"
-                ],
-           "First Day": [
-                "ComingSoon",
-                "ComingSoon"
-                ],
-           "Every Day": [
-                "ComingSoon",
-                "Thing 2"
-                ],
            "Other Nights": [
-                "ComingSoon",
-                "ComingSoon"
-                ],
-           "Other Days": [
-                "ComingSoon",
-                "ComingSoon"
-                ],
-           "End of Game": [
                 "ComingSoon",
                 "ComingSoon"
                 ]
@@ -5221,7 +3824,9 @@
     "examples": [
                 "ComingSoon",
                 "ComingSoon"
-                ]
+                ],
+    "tags": ["Death", "Resurrection"],
+    "edition": "Bad Moon Rising"
 },
 "vigormortis":
 {
@@ -5236,39 +3841,11 @@
              "ComingSoon"
              ],
     "run": {
-           "Setup": [
-                "ComingSoon",
-                "ComingSoon"
-                ],
            "Anytime": [
                 "ComingSoon",
                 "ComingSoon"
                 ],
-           "First Night": [
-                "ComingSoon",
-                "ComingSoon"
-                ],
-           "Every Night": [
-                "ComingSoon",
-                "ComingSoon"
-                ],
-           "First Day": [
-                "ComingSoon",
-                "ComingSoon"
-                ],
-           "Every Day": [
-                "ComingSoon",
-                "Thing 2"
-                ],
            "Other Nights": [
-                "ComingSoon",
-                "ComingSoon"
-                ],
-           "Other Days": [
-                "ComingSoon",
-                "ComingSoon"
-                ],
-           "End of Game": [
                 "ComingSoon",
                 "ComingSoon"
                 ]
@@ -5276,7 +3853,9 @@
     "examples": [
                 "ComingSoon",
                 "ComingSoon"
-                ]
+                ],
+    "tags": ["Mechanical", "Droisoning", "Death"],
+    "edition": "Sects and Violets"
 },
 "vortox":
 {
@@ -5291,23 +3870,7 @@
              "ComingSoon"
              ],
     "run": {
-           "Setup": [
-                "ComingSoon",
-                "ComingSoon"
-                ],
            "Anytime": [
-                "ComingSoon",
-                "ComingSoon"
-                ],
-           "First Night": [
-                "ComingSoon",
-                "ComingSoon"
-                ],
-           "Every Night": [
-                "ComingSoon",
-                "ComingSoon"
-                ],
-           "First Day": [
                 "ComingSoon",
                 "ComingSoon"
                 ],
@@ -5318,20 +3881,14 @@
            "Other Nights": [
                 "ComingSoon",
                 "ComingSoon"
-                ],
-           "Other Days": [
-                "ComingSoon",
-                "ComingSoon"
-                ],
-           "End of Game": [
-                "ComingSoon",
-                "ComingSoon"
                 ]
            },
     "examples": [
                 "ComingSoon",
                 "ComingSoon"
-                ]
+                ],
+    "tags": ["Mechanical", "Death"],
+    "edition": "Sects and Violets"
 },
 "yaggababble":
 {
@@ -5346,10 +3903,6 @@
              "ComingSoon"
              ],
     "run": {
-           "Setup": [
-                "ComingSoon",
-                "ComingSoon"
-                ],
            "Anytime": [
                 "ComingSoon",
                 "ComingSoon"
@@ -5357,36 +3910,14 @@
            "First Night": [
                 "ComingSoon",
                 "ComingSoon"
-                ],
-           "Every Night": [
-                "ComingSoon",
-                "ComingSoon"
-                ],
-           "First Day": [
-                "ComingSoon",
-                "ComingSoon"
-                ],
-           "Every Day": [
-                "ComingSoon",
-                "Thing 2"
-                ],
-           "Other Nights": [
-                "ComingSoon",
-                "ComingSoon"
-                ],
-           "Other Days": [
-                "ComingSoon",
-                "ComingSoon"
-                ],
-           "End of Game": [
-                "ComingSoon",
-                "ComingSoon"
                 ]
            },
     "examples": [
                 "ComingSoon",
                 "ComingSoon"
-                ]
+                ],
+    "tags": ["Death", "Public"],
+    "edition": "Carousel"
 },
 "zombuul":
 {
@@ -5401,39 +3932,11 @@
              "ComingSoon"
              ],
     "run": {
-           "Setup": [
-                "ComingSoon",
-                "ComingSoon"
-                ],
            "Anytime": [
                 "ComingSoon",
                 "ComingSoon"
                 ],
-           "First Night": [
-                "ComingSoon",
-                "ComingSoon"
-                ],
-           "Every Night": [
-                "ComingSoon",
-                "ComingSoon"
-                ],
-           "First Day": [
-                "ComingSoon",
-                "ComingSoon"
-                ],
-           "Every Day": [
-                "ComingSoon",
-                "Thing 2"
-                ],
            "Other Nights": [
-                "ComingSoon",
-                "ComingSoon"
-                ],
-           "Other Days": [
-                "ComingSoon",
-                "ComingSoon"
-                ],
-           "End of Game": [
                 "ComingSoon",
                 "ComingSoon"
                 ]
@@ -5441,7 +3944,9 @@
     "examples": [
                 "ComingSoon",
                 "ComingSoon"
-                ]
+                ],
+    "tags": ["Mechanical", "Death"],
+    "edition": "Bad Moon Rising"
 },
 "apprentice":
 {
@@ -5472,7 +3977,9 @@
     "examples": [
                 "ComingSoon",
                 "ComingSoon"
-                ]
+                ],
+    "tags": ["Mechanical"],
+    "edition": "Bad Moon Rising"
 },
 "barista":
 {
@@ -5503,7 +4010,9 @@
     "examples": [
                 "ComingSoon",
                 "ComingSoon"
-                ]
+                ],
+    "tags": ["Information", "Mechanical"],
+    "edition": "Sects and Violets"
 },
 "beggar":
 {
@@ -5534,7 +4043,9 @@
     "examples": [
                 "ComingSoon",
                 "ComingSoon"
-                ]
+                ],
+    "tags": ["Information", "Mechanical", "Public"],
+    "edition": "Trouble Brewing"
 },
 "bishop":
 {
@@ -5561,7 +4072,9 @@
     "examples": [
                 "ComingSoon",
                 "ComingSoon"
-                ]
+                ],
+    "tags": ["Mechanical", "Public"],
+    "edition": "Bad Moon Rising"
 },
 "bonecollector":
 {
@@ -5592,7 +4105,9 @@
     "examples": [
                 "ComingSoon",
                 "ComingSoon"
-                ]
+                ],
+    "tags": ["Mechanical"],
+    "edition": "Sects and Violets"
 },
 "bureaucrat":
 {
@@ -5623,7 +4138,9 @@
     "examples": [
                 "ComingSoon",
                 "ComingSoon"
-                ]
+                ],
+    "tags": ["Mechanical", "Public"],
+    "edition": "Trouble Brewing"
 },
 "butcher":
 {
@@ -5650,7 +4167,9 @@
     "examples": [
                 "ComingSoon",
                 "ComingSoon"
-                ]
+                ],
+    "tags": ["Mechanical", "Public"],
+    "edition": "Sects and Violets"
 },
 "cacklejack":
 {
@@ -5681,7 +4200,9 @@
     "examples": [
                 "ComingSoon",
                 "ComingSoon"
-                ]
+                ],
+    "tags": ["Mechanical"],
+    "edition": "Carousel"
 },
 "deviant":
 {
@@ -5708,7 +4229,9 @@
     "examples": [
                 "ComingSoon",
                 "ComingSoon"
-                ]
+                ],
+    "tags": ["Mechanical", "Public"],
+    "edition": "Sects and Violets"
 },
 "gangster":
 {
@@ -5735,7 +4258,9 @@
     "examples": [
                 "ComingSoon",
                 "ComingSoon"
-                ]
+                ],
+    "tags": ["Death", "Public"],
+    "edition": "Carousel"
 },
 "gnome":
 {
@@ -5762,7 +4287,9 @@
     "examples": [
                 "ComingSoon",
                 "ComingSoon"
-                ]
+                ],
+    "tags": ["Death", "Public"],
+    "edition": "Carousel"
 },
 "gunslinger":
 {
@@ -5789,7 +4316,9 @@
     "examples": [
                 "ComingSoon",
                 "ComingSoon"
-                ]
+                ],
+    "tags": ["Death", "Public"],
+    "edition": "Trouble Brewing"
 },
 "harlot":
 {
@@ -5816,7 +4345,9 @@
     "examples": [
                 "ComingSoon",
                 "ComingSoon"
-                ]
+                ],
+    "tags": ["Information", "Death"],
+    "edition": "Sects and Violets"
 },
 "judge":
 {
@@ -5843,7 +4374,9 @@
     "examples": [
                 "ComingSoon",
                 "ComingSoon"
-                ]
+                ],
+    "tags": ["Mechanical", "Public"],
+    "edition": "Bad Moon Rising"
 },
 "matron":
 {
@@ -5870,7 +4403,9 @@
     "examples": [
                 "ComingSoon",
                 "ComingSoon"
-                ]
+                ],
+    "tags": ["Mechanical", "Public"],
+    "edition": "Bad Moon Rising"
 },
 "scapegoat":
 {
@@ -5897,7 +4432,9 @@
     "examples": [
                 "ComingSoon",
                 "ComingSoon"
-                ]
+                ],
+    "tags": ["Mechanical", "Public"],
+    "edition": "Trouble Brewing"
 },
 "thief":
 {
@@ -5928,7 +4465,9 @@
     "examples": [
                 "ComingSoon",
                 "ComingSoon"
-                ]
+                ],
+    "tags": ["Mechanical", "Public"],
+    "edition": "Trouble Brewing"
 },
 "voudon":
 {
@@ -5955,7 +4494,9 @@
     "examples": [
                 "ComingSoon",
                 "ComingSoon"
-                ]
+                ],
+    "tags": ["Mechanical", "Public"],
+    "edition": "Bad Moon Rising"
 },
 "angel":
 {
@@ -5982,7 +4523,9 @@
     "examples": [
                 "ComingSoon",
                 "ComingSoon"
-                ]
+                ],
+    "tags": ["Mechanical", "Public"],
+    "edition": "NPCs"
 },
 "buddhist":
 {
@@ -6009,7 +4552,9 @@
     "examples": [
                 "ComingSoon",
                 "ComingSoon"
-                ]
+                ],
+    "tags": ["Mechanical", "Public"],
+    "edition": "NPCs"
 },
 "deusexfiasco":
 {
@@ -6036,7 +4581,9 @@
     "examples": [
                 "ComingSoon",
                 "ComingSoon"
-                ]
+                ],
+    "tags": ["Mechanical", "Public"],
+    "edition": "NPCs"
 },
 "djinn":
 {
@@ -6063,7 +4610,9 @@
     "examples": [
                 "ComingSoon",
                 "ComingSoon"
-                ]
+                ],
+    "tags": ["Mechanical", "Public"],
+    "edition": "NPCs"
 },
 "doomsayer":
 {
@@ -6090,7 +4639,9 @@
     "examples": [
                 "ComingSoon",
                 "ComingSoon"
-                ]
+                ],
+    "tags": ["Information", "Death", "Public"],
+    "edition": "NPCs"
 },
 "duchess":
 {
@@ -6121,7 +4672,9 @@
     "examples": [
                 "ComingSoon",
                 "ComingSoon"
-                ]
+                ],
+    "tags": ["Information", "Public"],
+    "edition": "NPCs"
 },
 "ferryman":
 {
@@ -6148,7 +4701,9 @@
     "examples": [
                 "ComingSoon",
                 "ComingSoon"
-                ]
+                ],
+    "tags": ["Mechanical", "Public"],
+    "edition": "NPCs"
 },
 "fibbin":
 {
@@ -6175,7 +4730,9 @@
     "examples": [
                 "ComingSoon",
                 "ComingSoon"
-                ]
+                ],
+    "tags": ["Mechanical"],
+    "edition": "NPCs"
 },
 "fiddler":
 {
@@ -6206,7 +4763,9 @@
     "examples": [
                 "ComingSoon",
                 "ComingSoon"
-                ]
+                ],
+    "tags": ["Mechanical", "Public"],
+    "edition": "NPCs"
 },
 "hellslibrarian":
 {
@@ -6233,7 +4792,9 @@
     "examples": [
                 "ComingSoon",
                 "ComingSoon"
-                ]
+                ],
+    "tags": ["Mechanical"],
+    "edition": "NPCs"
 },
 "revolutionary":
 {
@@ -6260,7 +4821,9 @@
     "examples": [
                 "ComingSoon",
                 "ComingSoon"
-                ]
+                ],
+    "tags": ["Information", "Mechanical", "Public"],
+    "edition": "NPCs"
 },
 "sentinel":
 {
@@ -6283,7 +4846,9 @@
     "examples": [
                 "ComingSoon",
                 "ComingSoon"
-                ]
+                ],
+    "tags": ["Mechanical"],
+    "edition": "NPCs"
 },
 "spiritofivory":
 {
@@ -6310,7 +4875,9 @@
     "examples": [
                 "ComingSoon",
                 "ComingSoon"
-                ]
+                ],
+    "tags": ["Mechanical"],
+    "edition": "NPCs"
 },
 "toymaker":
 {
@@ -6337,7 +4904,9 @@
     "examples": [
                 "ComingSoon",
                 "ComingSoon"
-                ]
+                ],
+    "tags": ["Mechanical", "Death"],
+    "edition": "NPCs"
 },
 "bigwig":
 {
@@ -6364,7 +4933,9 @@
     "examples": [
                 "ComingSoon",
                 "ComingSoon"
-                ]
+                ],
+    "tags": ["Mechanical", "Death", "Public"],
+    "edition": "NPCs"
 },
 "bootlegger":
 {
@@ -6387,7 +4958,9 @@
     "examples": [
                 "ComingSoon",
                 "ComingSoon"
-                ]
+                ],
+    "tags": ["Mechanical"],
+    "edition": "NPCs"
 },
 "gardener":
 {
@@ -6410,7 +4983,9 @@
     "examples": [
                 "ComingSoon",
                 "ComingSoon"
-                ]
+                ],
+    "tags": ["Mechanical"],
+    "edition": "NPCs"
 },
 "godofug":
 {
@@ -6437,7 +5012,9 @@
     "examples": [
                 "ComingSoon",
                 "ComingSoon"
-                ]
+                ],
+    "tags": ["Mechanical", "Public"],
+    "edition": "NPCs"
 },
 "hindu":
 {
@@ -6468,7 +5045,9 @@
     "examples": [
                 "ComingSoon",
                 "ComingSoon"
-                ]
+                ],
+    "tags": ["Mechanical", "Death", "Resurrection"],
+    "edition": "NPCs"
 },
 "knaves":
 {
@@ -6499,7 +5078,9 @@
     "examples": [
                 "ComingSoon",
                 "ComingSoon"
-                ]
+                ],
+    "tags": ["Information", "Mechanical"],
+    "edition": "NPCs"
 },
 "pope":
 {
@@ -6526,7 +5107,9 @@
     "examples": [
                 "ComingSoon",
                 "ComingSoon"
-                ]
+                ],
+    "tags": ["Mechanical"],
+    "edition": "NPCs"
 },
 "stormcatcher":
 {
@@ -6557,7 +5140,9 @@
     "examples": [
                 "ComingSoon",
                 "ComingSoon"
-                ]
+                ],
+    "tags": ["Information", "Mechanical", "Death", "Public"],
+    "edition": "NPCs"
 },
 "tor":
 {
@@ -6588,7 +5173,9 @@
     "examples": [
                 "ComingSoon",
                 "ComingSoon"
-                ]
+                ],
+    "tags": ["Information", "Mechanical", "Death"],
+    "edition": "NPCs"
 },
 "ventriloquist":
 {
@@ -6615,7 +5202,9 @@
     "examples": [
                 "ComingSoon",
                 "ComingSoon"
-                ]
+                ],
+    "tags": ["Mechanical", "Death", "Public"],
+    "edition": "NPCs"
 },
 "zenomancer":
 {
@@ -6646,6 +5235,8 @@
     "examples": [
                 "ComingSoon",
                 "ComingSoon"
-                ]
+                ],
+    "tags": ["Information", "Mechanical"],
+    "edition": "NPCs"
 }
 }
