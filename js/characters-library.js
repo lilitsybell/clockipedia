@@ -1,8 +1,7 @@
-console.log("characters-library.js updated 8/08/26 09:20");
+console.log("characters-library.js updated 8/08/26 11:46");
 
 let characterLibrary = [];
 let characterSort = "team";
-
 const teamOrder = [
     "Townsfolk",
     "Outsiders",
@@ -11,17 +10,6 @@ const teamOrder = [
     "Loric",
     "Fabled"
 ];
-
-const teamColors = {
-    "Townsfolk":"blue",
-    "Outsiders":"blue",
-    "Minions":"red",
-    "Demons":"red",
-    "Loric":"lime",
-    "Fabled":"copper"
-};
-
-
 /* ==========================================
    Load Characters
 ========================================== */
