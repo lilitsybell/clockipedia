@@ -1392,7 +1392,7 @@
                 "ComingSoon",
                 "ComingSoon"
                 ],
-    "tags": ["Information", "Mechanical", "Death"],
+    "tags": ["Information", "Mechanical", "Death", Madness],
     "edition": "Carousel"
 },
 "poppygrower":
@@ -2317,7 +2317,7 @@
                 "ComingSoon",
                 "ComingSoon"
                 ],
-    "tags": ["Mechanical", "Public"],
+    "tags": ["Mechanical", "Public", Madness],
     "edition": "Sects and Violets"
 },
 "ogre":
@@ -2708,7 +2708,7 @@
                 "ComingSoon",
                 "ComingSoon"
                 ],
-    "tags": ["Mechanical"],
+    "tags": ["Mechanical", Madness],
     "edition": "Sects and Violets"
 },
 "devilsadvocate":
@@ -2882,7 +2882,7 @@
                 "ComingSoon",
                 "ComingSoon"
                 ],
-    "tags": ["Mechanical", "Death"],
+    "tags": ["Mechanical", "Death", Madness],
     "edition": "Carousel"
 },
 "marionette":
@@ -4934,7 +4934,7 @@
                 "ComingSoon",
                 "ComingSoon"
                 ],
-    "tags": ["Mechanical", "Death", "Public"],
+    "tags": ["Mechanical", "Death", "Public", Madness],
     "edition": "NPCs"
 },
 "bootlegger":
@@ -5203,7 +5203,7 @@
                 "ComingSoon",
                 "ComingSoon"
                 ],
-    "tags": ["Mechanical", "Death", "Public"],
+    "tags": ["Mechanical", "Death", "Public", Madness],
     "edition": "NPCs"
 },
 "zenomancer":
