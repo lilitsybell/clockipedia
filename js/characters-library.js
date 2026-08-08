@@ -286,27 +286,39 @@ function renderCharacterLibrary(){
 /* ==========================================
    Sort Control
 ========================================== */
+
 function setupCharacterSort(){
+
     const sort =
         document.getElementById(
-            "characterSort"
+            "character-library-sort"
         );
+
     if(!sort){
+
         console.warn(
             "Character sort control not found"
         );
+
         return;
+
     }
+
     sort.value =
         characterSort;
+
     sort.addEventListener(
         "change",
         () => {
+
             characterSort =
                 sort.value;
+
             renderCharacterLibrary();
+
         }
     );
+
 }
 /* ==========================================
    Start
