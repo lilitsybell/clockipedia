@@ -197,116 +197,97 @@ function renderCharacterLibrary(){
                     grid
                 );
             }
-            const card =
-                document.createElement(
-                    "a"
-                );
-            card.className =
-                "character-card";
-            const teamClass =
-                teamColors[
-                    character.team
-                ] || "blue";
-            card.classList.add(
-                teamClass
+const card =
+    document.createElement("a");
+card.className =
+    "character-directory-card";
+const teamClass =
+    teamColors[
+        character.team
+    ] || "blue";
+card.classList.add(teamClass);
+card.href =
+    `/character.html?id=${character.id}`;
+/* Character icon */
+const image =
+    document.createElement("img");
+image.className =
+    "character-directory-icon";
+image.src =
+    character.image;
+image.alt =
+    character.name;
+/* Card content */
+const content =
+    document.createElement("div");
+content.className =
+    "character-directory-content";
+/* Character name */
+const name =
+    document.createElement("h2");
+name.textContent =
+    character.name;
+/* Ability */
+const ability =
+    document.createElement("p");
+ability.className =
+    "character-directory-ability";
+ability.textContent =
+    character.ability || "";
+/* Tags */
+const tags =
+    document.createElement("div");
+tags.className =
+    "character-directory-tags";
+if(character.tags){
+    character.tags.forEach(
+        tag => {
+            const tagElement =
+                document.createElement("span");
+            tagElement.className =
+                "character-directory-tag";
+            tagElement.textContent =
+                tag;
+            tags.appendChild(
+                tagElement
             );
-            card.href =
-                `/character.html?id=${character.id}`;
-            /* Character icon */
-            const image =
-                document.createElement(
-                    "img"
-                );
-            image.className =
-                "character-card-image";
-            image.src =
-                character.image;
-            image.alt =
-                character.name;
-            /* Character name */
-            const name =
-                document.createElement(
-                    "h2"
-                );
-            name.textContent =
-                character.name;
-            /* Ability */
-            const ability =
-                document.createElement(
-                    "p"
-                );
-            ability.className =
-                "character-card-ability";
-            ability.textContent =
-                character.ability || "";
-            /* Tags */
-            const tags =
-                document.createElement(
-                    "div"
-                );
-            tags.className =
-                "character-card-tags";
-            if(character.tags){
-                character.tags.forEach(
-                    tag => {
-                        const tagElement =
-                            document.createElement(
-                                "span"
-                            );
-                        tagElement.className =
-                            "character-card-tag";
-                        tagElement.textContent =
-                            tag;
-                        tags.appendChild(
-                            tagElement
-                        );
-                    }
-                );
-            }
-            card.appendChild(image);
-            card.appendChild(name);
-            card.appendChild(ability);
-            card.appendChild(tags);
-            grid.appendChild(card);
+        }
+    );
+}
+/* Assemble card */
+content.appendChild(name);
+content.appendChild(ability);
+content.appendChild(tags);
+card.appendChild(image);
+card.appendChild(content);
+grid.appendChild(card);
         }
     );
 }
 /* ==========================================
    Sort Control
 ========================================== */
-
 function setupCharacterSort(){
-
     const sort =
         document.getElementById(
             "character-library-sort"
         );
-
     if(!sort){
-
         console.warn(
             "Character sort control not found"
         );
-
         return;
-
     }
-
     sort.value =
         characterSort;
-
     sort.addEventListener(
         "change",
         () => {
-
             characterSort =
                 sort.value;
-
             renderCharacterLibrary();
-
         }
     );
-
 }
 /* ==========================================
    Start
