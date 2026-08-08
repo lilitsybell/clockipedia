@@ -1,42 +1,77 @@
+<main id="content">
 
-<div class="nav-section character-menu">
+    <div class="character-library">
 
-    <div class="nav-title character-toggle">
-        Characters
-        <span class="arrow">▼</span>
+        <div class="character-library-header">
+            <h1>Characters</h1>
+            <p>
+                Explore the complete Clockipedia character library.
+            </p>
+        </div>
+
+        <div class="character-library-controls">
+
+            <div class="character-search-wrapper">
+                <input
+                    type="text"
+                    id="characterLibrarySearch"
+                    placeholder="Search characters..."
+                    autocomplete="off"
+                >
+            </div>
+
+            <div class="character-sort">
+                <label for="characterSort">
+                    Sort by:
+                </label>
+
+                <select id="characterSort">
+                    <option value="team">Team</option>
+                    <option value="alphabetical">Alphabetical</option>
+                    <option value="edition">Edition</option>
+                </select>
+            </div>
+
+        </div>
+
+        <div
+            id="characterTeamFilters"
+            class="character-team-filters">
+
+            <button data-team="all" class="active">
+                All
+            </button>
+
+            <button data-team="Townsfolk">
+                Townsfolk
+            </button>
+
+            <button data-team="Outsiders">
+                Outsiders
+            </button>
+
+            <button data-team="Minions">
+                Minions
+            </button>
+
+            <button data-team="Demons">
+                Demons
+            </button>
+
+            <button data-team="Loric">
+                Loric
+            </button>
+
+            <button data-team="Fabled">
+                Fabled
+            </button>
+
+        </div>
+
+        <div id="characterLibrary">
+            <!-- Characters will be generated here -->
+        </div>
+
     </div>
 
-
-    <div class="character-links">
-
-        <a href="/characters/townsfolk.html" class="nav-link">
-            Townsfolk
-        </a>
-
-        <a href="/characters/outsiders.html" class="nav-link">
-            Outsiders
-        </a>
-
-        <a href="/characters/minions.html" class="nav-link">
-            Minions
-        </a>
-
-        <a href="/characters/demons.html" class="nav-link">
-            Demons
-        </a>
-
-        <a href="/characters/travellers.html" class="nav-link">
-            Travellers
-        </a>
-
-        <a href="/characters/loric.html" class="nav-link">
-            Loric
-        </a>
-
-        <a href="/characters/fabled.html" class="nav-link">
-            Fabled
-        </a>
-
-    </div>
-
-</div>
+</main>
