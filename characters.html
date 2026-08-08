@@ -8,57 +8,29 @@
 </head>
 <div id="sidebar"></div>
 <main id="content">
-    <div class="character-library">
-        <div class="character-library-header">
-            <h1>Characters</h1>
-        </div>
-        <div id="characterDirectory"></div>
-        <div class="character-library-controls">
-            <div class="character-search-wrapper">
-                <input
-                    type="text"
-                    id="characterLibrarySearch"
-                    placeholder="Search characters..."
-                    autocomplete="off"
-                >
-            </div>
-            <div class="character-sort">
-                <label for="characterSort">
-                    Sort by:
-                </label>
-                <select id="characterSort">
-                    <option value="team">Team</option>
-                    <option value="alphabetical">Alphabetical</option>
-                    <option value="edition">Edition</option>
-                </select>
-            </div>
-        </div>
-        <div
-            id="characterTeamFilters"
-            class="character-team-filters">
-            <button data-team="all" class="active">
-                All
-            </button>
-            <button data-team="Townsfolk">
-                Townsfolk
-            </button>
-            <button data-team="Outsiders">
-                Outsiders
-            </button>
-            <button data-team="Minions">
-                Minions
-            </button>
-            <button data-team="Demons">
-                Demons
-            </button>
-            <button data-team="Loric">
-                Loric
-            </button>
-            <button data-team="Fabled">
-                Fabled
-            </button>
-        </div>
-        <div id="characterLibrary">
+<div class="character-library-controls">
+    <div>
+        <h1>Characters</h1>
+        <p>Explore the Clockipedia character library.</p>
+    </div>
+    <div class="character-library-sort">
+        <label for="character-library-sort">
+            Sort by:
+        </label>
+        <select id="character-library-sort">
+            <option value="team">
+                Team
+            </option>
+            <option value="alphabetical">
+                Alphabetical
+            </option>
+            <option value="edition">
+                Edition
+            </option>
+        </select>
+    </div>
+</div>
+<div id="characterLibrary"></div>
             <!-- Characters will be generated here -->
         </div>
     </div>
