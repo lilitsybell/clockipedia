@@ -715,10 +715,10 @@ font-size:22px;
 .character-link.purple{
     color:var(--purple);
 }
-.character-link.gold{
+.character-link.copper{
     color:#b77102;
 }
-.character-link.green{
+.character-link.lime{
     color:#8ea742;
 }
 .character-link.traveller{
@@ -730,10 +730,10 @@ font-size:22px;
 .wiki.red h2{
     color:#a41618;
 }
-.wiki.gold h2{
+.wiki.copper h2{
     color:#b77102;
 }
-.wiki.green h2{
+.wiki.lime h2{
     color:#8ea742;
 }
 .wiki.traveller h2{
@@ -794,10 +794,10 @@ font-size:22px;
 .wiki.red .tab.active{
     background:#a41618;
 }
-.wiki.gold .tab.active{
+.wiki.copper .tab.active{
     background:#b77102;
 }
-.wiki.green .tab.active{
+.wiki.lime .tab.active{
     background:#8ea742;
 }
 .page {
@@ -838,10 +838,10 @@ font-size:22px;
 .wiki.red {
     --team-color:var(--red);
 }
-.wiki.gold {
+.wiki.copper {
     --team-color:var(--copper);
 }
-.wiki.green {
+.wiki.lime {
     --team-color:var(--lime);
 }
 .wiki.purple {
@@ -872,10 +872,10 @@ font-size:22px;
 .wiki.red .example{
     border-left-color:#a41618;
 }
-.wiki.gold .example{
+.wiki.copper .example{
     border-left-color:#b77102;
 }
-.wiki.green .example{
+.wiki.lime .example{
     border-left-color:#8ea742;
 }
 .wiki.traveller .example{
@@ -1310,10 +1310,10 @@ font-size:22px;
 .ability-tooltip.red {
     border-color:var(--red);
 }
-.ability-tooltip.green {
+.ability-tooltip.lime {
     border-color:var(--lime);
 }
-.ability-tooltip.gold {
+.ability-tooltip.copper {
     border-color:var(--copper);
 }
 .ability-tooltip.traveller {
@@ -1327,12 +1327,12 @@ font-size:22px;
 .ability-tooltip.red .tooltip-title span {
     color:var(--red);
 }
-.ability-tooltip.green .tooltip-title strong,
-.ability-tooltip.green .tooltip-title span {
+.ability-tooltip.lime .tooltip-title strong,
+.ability-tooltip.lime .tooltip-title span {
     color:var(--lime);
 }
-.ability-tooltip.gold .tooltip-title strong,
-.ability-tooltip.gold .tooltip-title span {
+.ability-tooltip.copper .tooltip-title strong,
+.ability-tooltip.copper .tooltip-title span {
     color:var(--copper);
 }
 /* ===========================
