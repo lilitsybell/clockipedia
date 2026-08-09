@@ -11,9 +11,56 @@ const teamOrder = [
     "Loric",
     "Fabled"
 ];
+const editionOrder = [
+    "Trouble Brewing",
+    "Sects and Violets",
+    "Bad Moon Rising",
+    "Carousel",
+    "NPCs"
+];
+const editionScriptFiles = {
+    "Trouble Brewing":
+        "./scripts/trouble-brewing.json",
+    "Sects and Violets":
+        "./scripts/sects-and-violets.json",
+    "Bad Moon Rising":
+        "./scripts/bad-moon-rising.json"
+};
+const editionCharacterOrder = {};
 /* ==========================================
    Load Characters
 ========================================== */
+async function loadEditionCharacterOrders(){
+    for(
+        const [edition, file]
+        of Object.entries(editionScriptFiles)
+    ){
+        try{
+            const response =
+                await fetch(file);
+            if(!response.ok){
+                throw new Error(
+                    `Failed to load ${file}`
+                );
+            }
+            const script =
+                await response.json();
+            const characterIds =
+                script.filter(
+                    entry =>
+                        typeof entry === "string"
+                );
+            editionCharacterOrder[edition] =
+                characterIds;
+        }
+        catch(error){
+            console.error(
+                `Failed to load ${edition} order:`,
+                error
+            );
+        }
+    }
+}
 async function loadCharacterLibrary(){
     const response =
         await fetch("./data/characters.json");
@@ -35,8 +82,9 @@ async function loadCharacterLibrary(){
         "Loaded character library:",
         characterLibrary.length
     );
-    setupCharacterSort();
-    renderCharacterLibrary();
+await loadEditionCharacterOrders();
+setupCharacterSort();
+renderCharacterLibrary();
 }
 /* ==========================================
    Sort Characters
@@ -49,26 +97,82 @@ function sortCharacters(){
         );
         return;
     }
-    if(characterSort === "edition"){
-        characterLibrary.sort(
-            (a,b) => {
-                const editionA =
-                    a.edition || "";
-                const editionB =
-                    b.edition || "";
+if(characterSort === "edition"){
+    characterLibrary.sort(
+        (a,b) => {
+            const editionA =
+                a.edition || "";
+            const editionB =
+                b.edition || "";
+            const editionIndexA =
+                editionOrder.indexOf(
+                    editionA
+                );
+            const editionIndexB =
+                editionOrder.indexOf(
+                    editionB
+                );
+            /*
+             * First sort by our custom
+             * edition order.
+             */
+            if(
+                editionIndexA !==
+                editionIndexB
+            ){
                 return (
-                    editionA.localeCompare(
-                        editionB
-                    )
-                    ||
-                    a.name.localeCompare(
-                        b.name
-                    )
+                    editionIndexA -
+                    editionIndexB
                 );
             }
-        );
-        return;
-    }
+            /*
+             * Get the official script
+             * character order.
+             */
+            const order =
+                editionCharacterOrder[
+                    editionA
+                ];
+            if(order){
+                const idA =
+                    order.indexOf(
+                        a.id
+                    );
+                const idB =
+                    order.indexOf(
+                        b.id
+                    );
+                /*
+                 * Characters found in the
+                 * script use script order.
+                 */
+                if(
+                    idA !== -1 &&
+                    idB !== -1
+                ){
+                    return idA - idB;
+                }
+                /*
+                 * Anything not found in
+                 * the script goes afterward.
+                 */
+                if(idA !== -1){
+                    return -1;
+                }
+                if(idB !== -1){
+                    return 1;
+                }
+            }
+            /*
+             * Fallback to alphabetical.
+             */
+            return a.name.localeCompare(
+                b.name
+            );
+        }
+    );
+    return;
+}
     /* Default: Team */
     characterLibrary.sort(
         (a,b) => {
