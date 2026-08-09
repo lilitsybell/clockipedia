@@ -212,6 +212,19 @@ function renderCharacterLibrary(){
     sortCharacters();
     let currentGroup = null;
     let grid = null;
+    if(characterSort === "alphabetical"){
+    grid =
+        document.createElement(
+            "div"
+        );
+
+    grid.className =
+        "character-directory-grid";
+
+    container.appendChild(
+        grid
+    );
+}
     characterLibrary.forEach(
         character => {
 /*
