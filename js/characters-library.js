@@ -140,62 +140,60 @@ function renderCharacterLibrary(){
 
     sortCharacters();
 
-    let currentTeam = null;
+    let currentGroup = null;
     let grid = null;
 
     characterLibrary.forEach(
         character => {
-            /*
-             * Team sorting gets section headings.
-             * Alphabetical and Edition are one
-             * continuous grid.
-             */
-            if(
-                characterSort === "team" &&
-                character.team !== currentTeam
-            ){
+/*
+ * Team and Edition sorting get section headings.
+ * Alphabetical sorting uses one continuous grid.
+ */
+let groupValue = null;
 
-                currentTeam =
-                    character.team;
+if(characterSort === "team"){
+    groupValue = character.team || "Unknown";
+}
 
-                const heading =
-                    document.createElement(
-                        "h2"
-                    );
+if(characterSort === "edition"){
+    groupValue = character.edition || "Unknown Edition";
+}
 
-                heading.className =
-                    "character-team-heading";
+if(
+    (characterSort === "team" ||
+     characterSort === "edition") &&
+    groupValue !== currentGroup
+){
 
-                heading.textContent =
-                    currentTeam;
+    currentGroup = groupValue;
 
-                container.appendChild(
-                    heading
-                );
-                grid =
-                    document.createElement(
-                        "div"
-                    );
-                grid.className =
-                    "character-directory-grid";
-                container.appendChild(
-                    grid
-                );
-            }
-            if(
-                characterSort !== "team" &&
-                !grid
-            ){
-                grid =
-                    document.createElement(
-                        "div"
-                    );
-                grid.className =
-                    "character-directory-grid";
-                container.appendChild(
-                    grid
-                );
-            }
+    const heading =
+        document.createElement(
+            "h2"
+        );
+
+    heading.className =
+        "character-team-heading";
+
+    heading.textContent =
+        currentGroup;
+
+    container.appendChild(
+        heading
+    );
+
+    grid =
+        document.createElement(
+            "div"
+        );
+
+    grid.className =
+        "character-directory-grid";
+
+    container.appendChild(
+        grid
+    );
+}
 const card =
     document.createElement("a");
 card.className =
