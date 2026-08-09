@@ -1575,11 +1575,11 @@ font-size:22px;
     color:var(--traveller);
 }
 
-.script-character-name.green {
+.script-character-name.loric {
     color:var(--lime);
 }
 
-.script-character-name.gold {
+.script-character-name.fabled {
     color:var(--copper);
 }
 #characterSearch{
