@@ -1684,6 +1684,9 @@ color:var(--black);
 border-bottom:3px solid var(--purple);
 padding-bottom:8px;
 }
+.character-team-heading:not(:first-child){
+    margin-top:30px;
+}
 .character-directory-grid{
 display:grid;
 grid-template-columns:
