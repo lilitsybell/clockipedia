@@ -1,0 +1,24 @@
+Home Page:
+-random character generator with character type, ability, and random interaction
+-script of the day
+
+Interactions:
+-interaction finder for every character and combined up to two characters
+-explains the interaction
+-tells you whether or not it ticks a mathematician number
+
+Scripts:
+-random script generator
+-sort between full/teensy and homebrew on/off
+-search for scripts that include a specific character
+-has buttons for copying and downloading the json and almanac (if it has one)
+
+Characters:
+-sort between type, edition, or alphabetical
+-mechanic tags (information, death, public, etc)
+
+Character Pages:
+-overview with flavor, purpose, and summary
+-organized how to run
+-examples
+-interactions with other characters (taken from interactions page)
