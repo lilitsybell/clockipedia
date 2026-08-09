@@ -1,5 +1,90 @@
 [
     {
+        "text":"If the [Pit-Hag] creates a [Yaggababble], the [Yaggababble] learns their information that night. For each time the [Yaggababble] said their phrase the day before, a player might die that night.",
+        "math":"green",
+        "reason":"If a character starts knowing information, they learn it the same night they are created.",
+        "mathInfo":"No ability has malfunctioned."},
+    {
+        "text":"If the [Pit-Hag] creates a [Mezepheles], the [Mezepheles] learns their information that night. The secret word must be said after the [Mezepheles] is created in order for a player to turn evil.",
+        "math":"green",
+        "reason":"If a character starts knowing information, they learn it the same night they are created.",
+        "mathInfo":"No ability has malfunctioned."},
+    {
+        "text":"If the [Pit-Hag] creates a [Godfather], the [Godfather] learns their information that night. No Outsiders are added or removed.",
+        "math":"green",
+        "reason":"If a character starts knowing information, they learn it the same night they are created.",
+        "mathInfo":"No ability has malfunctioned."},
+    {
+        "text":"If the [Pit-Hag] creates a [Washerwoman], the [Washerwoman] learns their information that night.",
+        "math":"green",
+        "reason":"If a character starts knowing information, they learn it the same night they are created.",
+        "mathInfo":"No ability has malfunctioned."},
+    {
+        "text":"If the [Pit-Hag] creates a [Steward], the [Steward] learns their information that night.",
+        "math":"green",
+        "reason":"If a character starts knowing information, they learn it the same night they are created.",
+        "mathInfo":"No ability has malfunctioned."},
+    {
+        "text":"If the [Pit-Hag] creates a [Shugenja], the [Shugenja] learns their information that night.",
+        "math":"green",
+        "reason":"If a character starts knowing information, they learn it the same night they are created.",
+        "mathInfo":"No ability has malfunctioned."},
+    {
+        "text":"If the [Pit-Hag] creates a [Pixie], the [Pixie] learns their information that night.",
+        "math":"green",
+        "reason":"If a character starts knowing information, they learn it the same night they are created.",
+        "mathInfo":"No ability has malfunctioned."},
+    {
+        "text":"If the [Pit-Hag] creates a [Noble], the [Noble] learns their information that night.",
+        "math":"green",
+        "reason":"If a character starts knowing information, they learn it the same night they are created.",
+        "mathInfo":"No ability has malfunctioned."},
+    {
+        "text":"If the [Pit-Hag] creates a [Librarian], the [Librarian] learns their information that night.",
+        "math":"green",
+        "reason":"If a character starts knowing information, they learn it the same night they are created.",
+        "mathInfo":"No ability has malfunctioned."},
+    {
+        "text":"If the [Pit-Hag] creates a [Knight], the [Knight] learns their information that night.",
+        "math":"green",
+        "reason":"If a character starts knowing information, they learn it the same night they are created.",
+        "mathInfo":"No ability has malfunctioned."},
+    {
+        "text":"If the [Pit-Hag] creates an [Investigator], the [Investigator] learns their information that night.",
+        "math":"green",
+        "reason":"If a character starts knowing information, they learn it the same night they are created.",
+        "mathInfo":"No ability has malfunctioned."},
+    {
+        "text":"If the [Pit-Hag] creates a [Grandmother], the [Grandmother] learns their information that night.",
+        "math":"green",
+        "reason":"If a character starts knowing information, they learn it the same night they are created.",
+        "mathInfo":"No ability has malfunctioned."},
+    {
+        "text":"If the [Pit-Hag] creates a [Clockmaker], the [Clockmaker] learns their information that night.",
+        "math":"green",
+        "reason":"If a character starts knowing information, they learn it the same night they are created.",
+        "mathInfo":"No ability has malfunctioned."},
+    {
+        "text":"If the [Pit-Hag] creates a [Chef], the [Chef] learns their information that night.",
+        "math":"green",
+        "reason":"If a character starts knowing information, they learn it the same night they are created.",
+        "mathInfo":"No ability has malfunctioned."},
+    {
+        "text":"The [Investigator] might receive a \"0\" if the only Minion is the [Spy].",
+        "math":"red",
+        "reason":"The Spy's ability allows them to registers as a Townsfolk or Outsider.",
+        "mathInfo":"If the Investigator yielded false info due to misregistration, the Investigator's ability malfunctioned."},
+    {
+        "text":"The [Recluse] might register as a Minion to the [Investigator].",
+        "math":"red",
+        "reason":"The Recluse's ability allows them to register as a Minion.",
+        "mathInfo":"If the Investigator yielded false info due to misregistration, the Investigator's ability malfunctioned."},
+    {
+        "text":"A player in a [Revolutionary] pair might register as a Minion to the [Investigator].",
+        "math":"red",
+        "reason":"A player in a Revolutionary pair might register falsely once per game.",
+        "mathInfo":"If the Investigator yielded false info due to misregistration, the Investigator's ability malfunctioned."},
+    {
         "text":"If the [Artist] is [Vigormortis] poisoned, they might receive false information to their question.",
         "math":"red",
         "reason":"Players who are drunk or poisoned have no ability, but do not know this.",
