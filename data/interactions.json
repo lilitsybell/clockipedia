@@ -1,5 +1,220 @@
 [
     {
+        "text":"If the [Artist] is [Vigormortis] poisoned, they might receive false information to their question.",
+        "math":"red",
+        "reason":"Players who are drunk or poisoned have no ability, but do not know this.",
+        "mathInfo":"If the Artist received a false answer to their question due to being drunk or poisoned, the Artist's ability malfunctioned."},
+    {
+        "text":"If the [Artist] is [Pukka] poisoned, they might receive false information to their question.",
+        "math":"red",
+        "reason":"Players who are drunk or poisoned have no ability, but do not know this.",
+        "mathInfo":"If the Artist received a false answer to their question due to being drunk or poisoned, the Artist's ability malfunctioned."},
+    {
+        "text":"If the [Artist] is [Lleech] poisoned, they might receive false information to their question.",
+        "math":"red",
+        "reason":"Players who are drunk or poisoned have no ability, but do not know this.",
+        "mathInfo":"If the Artist received a false answer to their question due to being drunk or poisoned, the Artist's ability malfunctioned."},
+    {
+        "text":"If the [Artist] is [No Dashii] poisoned, they might receive false information to their question.",
+        "math":"red",
+        "reason":"Players who are drunk or poisoned have no ability, but do not know this.",
+        "mathInfo":"If the Artist received a false answer to their question due to being drunk or poisoned, the Artist's ability malfunctioned."},
+    {
+        "text":"If the [Artist] is [Xaan] poisoned, they might receive false information to their question.",
+        "math":"red",
+        "reason":"Players who are drunk or poisoned have no ability, but do not know this.",
+        "mathInfo":"If the Artist received a false answer to their question due to being drunk or poisoned, the Artist's ability malfunctioned."},
+    {
+        "text":"If the [Artist] is [Widow] poisoned, they might receive false information to their question.",
+        "math":"red",
+        "reason":"Players who are drunk or poisoned have no ability, but do not know this.",
+        "mathInfo":"If the Artist received a false answer to their question due to being drunk or poisoned, the Artist's ability malfunctioned."},
+    {
+        "text":"If the [Artist] is [Poisoner] poisoned, they might receive false information to their question.",
+        "math":"red",
+        "reason":"Players who are drunk or poisoned have no ability, but do not know this.",
+        "mathInfo":"If the Artist received a false answer to their question due to being drunk or poisoned, the Artist's ability malfunctioned."},
+    {
+        "text":"If the [Artist] is [Sweetheart] drunk, they might receive false information to their question.",
+        "math":"red",
+        "reason":"Players who are drunk or poisoned have no ability, but do not know this.",
+        "mathInfo":"If the Artist received a false answer to their question due to being drunk or poisoned, the Artist's ability malfunctioned."},
+    {
+        "text":"If the [Artist] is [Puzzlemaster] drunk, they might receive false information to their question.",
+        "math":"red",
+        "reason":"Players who are drunk or poisoned have no ability, but do not know this.",
+        "mathInfo":"If the Artist received a false answer to their question due to being drunk or poisoned, the Artist's ability malfunctioned."},
+    {
+        "text":"If the [Artist] is [Sailor] drunk, they might receive false information to their question.",
+        "math":"red",
+        "reason":"Players who are drunk or poisoned have no ability, but do not know this.",
+        "mathInfo":"If the Artist received a false answer to their question due to being drunk or poisoned, the Artist's ability malfunctioned."},
+    {
+        "text":"If the [Artist] is [Philosopher] drunk, they might receive false information to their question.",
+        "math":"red",
+        "reason":"Players who are drunk or poisoned have no ability, but do not know this.",
+        "mathInfo":"If the Artist received a false answer to their question due to being drunk or poisoned, the Artist's ability malfunctioned."},
+    {
+        "text":"If the [Artist] is [Minstrel] drunk, they might receive false information to their question.",
+        "math":"red",
+        "reason":"Players who are drunk or poisoned have no ability, but do not know this.",
+        "mathInfo":"If the Artist received a false answer to their question due to being drunk or poisoned, the Artist's ability malfunctioned."},
+    {
+        "text":"If the [Artist] is [Innkeeper] drunk, they might receive false information to their question.",
+        "math":"red",
+        "reason":"Players who are drunk or poisoned have no ability, but do not know this.",
+        "mathInfo":"If the Artist received a false answer to their question due to being drunk or poisoned, the Artist's ability malfunctioned."},
+    {
+        "text":"If the [Artist] is [Courtier] drunk, they might receive false information to their question.",
+        "math":"red",
+        "reason":"Players who are drunk or poisoned have no ability, but do not know this.",
+        "mathInfo":"If the Artist received a false answer to their question due to being drunk or poisoned, the Artist's ability malfunctioned."},
+    {
+        "text":"If the [Amnesiac] is [Vigormortis] poisoned, their ability has no effect or they might receive false information and they may receive an incorrect answer to their guess.",
+        "math":"red",
+        "reason":"Players who are drunk or poisoned have no ability.",
+        "mathInfo":"If the Amnesiac would have had an effect, but did not, or received a false answer to a guess due to being drunk or poisoned, the Amnesiac's ability malfunctioned."},
+    {
+        "text":"If the [Amnesiac] is [Pukka] poisoned, their ability has no effect or they might receive false information and they may receive an incorrect answer to their guess.",
+        "math":"red",
+        "reason":"Players who are drunk or poisoned have no ability.",
+        "mathInfo":"If the Amnesiac would have had an effect, but did not, or received a false answer to a guess due to being drunk or poisoned, the Amnesiac's ability malfunctioned."},
+    {
+        "text":"If the [Amnesiac] is [No Dashii] poisoned, their ability has no effect or they might receive false information and they may receive an incorrect answer to their guess.",
+        "math":"red",
+        "reason":"Players who are drunk or poisoned have no ability.",
+        "mathInfo":"If the Amnesiac would have had an effect, but did not, or received a false answer to a guess due to being drunk or poisoned, the Amnesiac's ability malfunctioned."},
+    {
+        "text":"If the [Amnesiac] is [Lleech] poisoned, their ability has no effect or they might receive false information and they may receive an incorrect answer to their guess.",
+        "math":"red",
+        "reason":"Players who are drunk or poisoned have no ability.",
+        "mathInfo":"If the Amnesiac would have had an effect, but did not, or received a false answer to a guess due to being drunk or poisoned, the Amnesiac's ability malfunctioned."},
+    {
+        "text":"If the [Amnesiac] is [Xaan] poisoned, their ability has no effect or they might receive false information and they may receive an incorrect answer to their guess.",
+        "math":"red",
+        "reason":"Players who are drunk or poisoned have no ability.",
+        "mathInfo":"If the Amnesiac would have had an effect, but did not, or received a false answer to a guess due to being drunk or poisoned, the Amnesiac's ability malfunctioned."},
+    {
+        "text":"If the [Amnesiac] is [Widow] poisoned, their ability has no effect or they might receive false information and they may receive an incorrect answer to their guess.",
+        "math":"red",
+        "reason":"Players who are drunk or poisoned have no ability.",
+        "mathInfo":"If the Amnesiac would have had an effect, but did not, or received a false answer to a guess due to being drunk or poisoned, the Amnesiac's ability malfunctioned."},
+    {
+        "text":"If the [Amnesiac] is [Poisoner] poisoned, their ability has no effect or they might receive false information and they may receive an incorrect answer to their guess.",
+        "math":"red",
+        "reason":"Players who are drunk or poisoned have no ability.",
+        "mathInfo":"If the Amnesiac would have had an effect, but did not, or received a false answer to a guess due to being drunk or poisoned, the Amnesiac's ability malfunctioned."},
+    {
+        "text":"If the [Amnesiac] is [Sweetheart] drunk, their ability has no effect or they might receive false information and they may receive an incorrect answer to their guess.",
+        "math":"red",
+        "reason":"Players who are drunk or poisoned have no ability.",
+        "mathInfo":"If the Amnesiac would have had an effect, but did not, or received a false answer to a guess due to being drunk or poisoned, the Amnesiac's ability malfunctioned."},
+    {
+        "text":"If the [Amnesiac] is [Puzzlemaster] drunk, their ability has no effect or they might receive false information and they may receive an incorrect answer to their guess.",
+        "math":"red",
+        "reason":"Players who are drunk or poisoned have no ability.",
+        "mathInfo":"If the Amnesiac would have had an effect, but did not, or received a false answer to a guess due to being drunk or poisoned, the Amnesiac's ability malfunctioned."},
+    {
+        "text":"If the [Amnesiac] is [Goon] drunk, their ability has no effect or they might receive false information and they may receive an incorrect answer to their guess.",
+        "math":"red",
+        "reason":"Players who are drunk or poisoned have no ability.",
+        "mathInfo":"If the Amnesiac would have had an effect, but did not, or received a false answer to a guess due to being drunk or poisoned, the Amnesiac's ability malfunctioned."},
+    {
+        "text":"If the [Amnesiac] is [Sailor] drunk, their ability has no effect or they might receive false information and they may receive an incorrect answer to their guess.",
+        "math":"red",
+        "reason":"Players who are drunk or poisoned have no ability.",
+        "mathInfo":"If the Amnesiac would have had an effect, but did not, or received a false answer to a guess due to being drunk or poisoned, the Amnesiac's ability malfunctioned."},
+    {
+        "text":"If the [Amnesiac] is [Philosopher] drunk, their ability has no effect or they might receive false information and they may receive an incorrect answer to their guess.",
+        "math":"red",
+        "reason":"Players who are drunk or poisoned have no ability.",
+        "mathInfo":"If the Amnesiac would have had an effect, but did not, or received a false answer to a guess due to being drunk or poisoned, the Amnesiac's ability malfunctioned."},
+    {
+        "text":"If the [Amnesiac] is [Minstrel] drunk, their ability has no effect or they might receive false information and they may receive an incorrect answer to their guess.",
+        "math":"red",
+        "reason":"Players who are drunk or poisoned have no ability.",
+        "mathInfo":"If the Amnesiac would have had an effect, but did not, or received a false answer to a guess due to being drunk or poisoned, the Amnesiac's ability malfunctioned."},
+    {
+        "text":"If the [Amnesiac] is [Innkeeper] drunk, their ability has no effect or they might receive false information and they may receive an incorrect answer to their guess.",
+        "math":"red",
+        "reason":"Players who are drunk or poisoned have no ability.",
+        "mathInfo":"If the Amnesiac would have had an effect, but did not, or received a false answer to a guess due to being drunk or poisoned, the Amnesiac's ability malfunctioned."},
+    {
+        "text":"If the [Amnesiac] is [Courtier] drunk, their ability has no effect or they might receive false information and they may receive an incorrect answer to their guess.",
+        "math":"red",
+        "reason":"Players who are drunk or poisoned have no ability.",
+        "mathInfo":"If the Amnesiac would have had an effect, but did not, or received a false answer to a guess due to being drunk or poisoned, the Amnesiac's ability malfunctioned."},
+    {
+        "text":"If the [Alsaahir] is [Vigormortis] poisoned while making a correct guess, their team does not win.",
+        "math":"red",
+        "reason":"Players who are drunk or poisoned have no ability.",
+        "mathInfo":"if the Alsaahir would have won, but did not because they were drunk or poisoned, the Alsaahir's ability malfunctioned."},
+    {
+        "text":"If the [Alsaahir] is [Pukka] poisoned while making a correct guess, their team does not win.",
+        "math":"red",
+        "reason":"Players who are drunk or poisoned have no ability.",
+        "mathInfo":"if the Alsaahir would have won, but did not because they were drunk or poisoned, the Alsaahir's ability malfunctioned."},
+    {
+        "text":"If the [Alsaahir] is [No Dashii] poisoned while making a correct guess, their team does not win.",
+        "math":"red",
+        "reason":"Players who are drunk or poisoned have no ability.",
+        "mathInfo":"if the Alsaahir would have won, but did not because they were drunk or poisoned, the Alsaahir's ability malfunctioned."},
+    {
+        "text":"If the [Alsaahir] is [Lleech] poisoned while making a correct guess, their team does not win.",
+        "math":"red",
+        "reason":"Players who are drunk or poisoned have no ability.",
+        "mathInfo":"if the Alsaahir would have won, but did not because they were drunk or poisoned, the Alsaahir's ability malfunctioned."},
+    {
+        "text":"If the [Alsaahir] is [Xaan] poisoned while making a correct guess, their team does not win.",
+        "math":"red",
+        "reason":"Players who are drunk or poisoned have no ability.",
+        "mathInfo":"if the Alsaahir would have won, but did not because they were drunk or poisoned, the Alsaahir's ability malfunctioned."},
+    {
+        "text":"If the [Alsaahir] is [Widow] poisoned while making a correct guess, their team does not win.",
+        "math":"red",
+        "reason":"Players who are drunk or poisoned have no ability.",
+        "mathInfo":"if the Alsaahir would have won, but did not because they were drunk or poisoned, the Alsaahir's ability malfunctioned."},
+    {
+        "text":"If the [Alsaahir] is [Poisoner] poisoned while making a correct guess, their team does not win.",
+        "math":"red",
+        "reason":"Players who are drunk or poisoned have no ability.",
+        "mathInfo":"if the Alsaahir would have won, but did not because they were drunk or poisoned, the Alsaahir's ability malfunctioned."},
+    {
+        "text":"If the [Alsaahir] is [Sweetheart] drunk while making a correct guess, their team does not win.",
+        "math":"red",
+        "reason":"Players who are drunk or poisoned have no ability.",
+        "mathInfo":"if the Alsaahir would have won, but did not because they were drunk or poisoned, the Alsaahir's ability malfunctioned."},
+    {
+        "text":"If the [Alsaahir] is [Puzzlemaster] drunk while making a correct guess, their team does not win.",
+        "math":"red",
+        "reason":"Players who are drunk or poisoned have no ability.",
+        "mathInfo":"if the Alsaahir would have won, but did not because they were drunk or poisoned, the Alsaahir's ability malfunctioned."},
+    {
+        "text":"If the [Alsaahir] is [Sailor] drunk while making a correct guess, their team does not win.",
+        "math":"red",
+        "reason":"Players who are drunk or poisoned have no ability.",
+        "mathInfo":"if the Alsaahir would have won, but did not because they were drunk or poisoned, the Alsaahir's ability malfunctioned."},
+    {
+        "text":"If the [Alsaahir] is [Philosopher] drunk while making a correct guess, their team does not win.",
+        "math":"red",
+        "reason":"Players who are drunk or poisoned have no ability.",
+        "mathInfo":"if the Alsaahir would have won, but did not because they were drunk or poisoned, the Alsaahir's ability malfunctioned."},
+    {
+        "text":"If the [Alsaahir] is [Minstrel] drunk while making a correct guess, their team does not win.",
+        "math":"red",
+        "reason":"Players who are drunk or poisoned have no ability.",
+        "mathInfo":"if the Alsaahir would have won, but did not because they were drunk or poisoned, the Alsaahir's ability malfunctioned."},
+    {
+        "text":"If the [Alsaahir] is [Innkeeper] drunk while making a correct guess, their team does not win.",
+        "math":"red",
+        "reason":"Players who are drunk or poisoned have no ability.",
+        "mathInfo":"if the Alsaahir would have won, but did not because they were drunk or poisoned, the Alsaahir's ability malfunctioned."},
+    {
+        "text":"If the [Alsaahir] is [Courtier] drunk while making a correct guess, their team does not win.",
+        "math":"red",
+        "reason":"Players who are drunk or poisoned have no ability.",
+        "mathInfo":"If the Alsaahir would have won, but did not because they were drunk or poisoned, the Alsaahir's ability malfunctioned."},
+    {
         "text":"A player protected by the [Monk] cannot be drunk due a Demon with the [Boffin] [Sweetheart] ability.",
         "math":"red",
         "reason":"The Monk protects players from dying, turning evil, and becoming drunk or poisoned from the Demon.",
