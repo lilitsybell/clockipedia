@@ -1950,7 +1950,7 @@
 "barber":
 {
     "name": "Barber",
-    "team": "Outsider",
+    "team": "Outsiders",
     "image": "https://images.klutzbanana.com/characters_official/barber_g.png",
     "ability": "If you died today or tonight, the Demon may choose 2 players (not another Demon) to swap characters.",
     "flavor": "Did you know that barbery and surgery were once the same profession? No? Well, now you do.",
@@ -1975,7 +1975,7 @@
 "butler":
 {
     "name": "Butler",
-    "team": "Outsider",
+    "team": "Outsiders",
     "image": "https://images.klutzbanana.com/characters_official/butler_g.png",
     "ability": "Each night, choose a player (not yourself): tomorrow, you may only vote if they are voting too.",
     "flavor": "Yes, sir…<br>No, sir…<br>Certainly, sir.",
@@ -2004,7 +2004,7 @@
 "damsel":
 {
     "name": "Damsel",
-    "team": "Outsider",
+    "team": "Outsiders",
     "image": "https://images.klutzbanana.com/characters_official/damsel_g.png",
     "ability": "All Minions know a Damsel is in play. If a Minion publicly guesses you (once), your team loses.",
     "flavor": "Don't touch ze hair, honey.",
@@ -2033,7 +2033,7 @@
 "drunk":
 {
     "name": "Drunk",
-    "team": "Outsider",
+    "team": "Outsiders",
     "image": "https://images.klutzbanana.com/characters_official/drunk_g.png",
     "ability": "You do not know you are the Drunk. You think you are a Townsfolk character, but you are not.",
     "flavor": "I’m only a *hic* social drinker, my dear. Admittedly, I am a heavy *burp* socializer.",
@@ -2066,7 +2066,7 @@
 "golem":
 {
     "name": "Golem",
-    "team": "Outsider",
+    "team": "Outsiders",
     "image": "https://images.klutzbanana.com/characters_official/golem_g.png",
     "ability": "You may only nominate once per game. When you do, if the nominee is not the Demon, they die.",
     "flavor": "Golem help? Golem smash! Golem help.",
@@ -2091,7 +2091,7 @@
 "goon":
 {
     "name": "Goon",
-    "team": "Outsider",
+    "team": "Outsiders",
     "image": "https://images.klutzbanana.com/characters_official/goon_g.png",
     "ability": "Each night, the 1st player to choose you with their ability is drunk until dusk. You become their alignment.",
     "flavor": "Yes boss. I explained fings real good to dat geezer. He don't want me explain it again. Nah boss, I don't need no doctor - it's only a knife wound. Be right come mornin'",
@@ -2116,7 +2116,7 @@
 "hatter":
 {
     "name": "Hatter",
-    "team": "Outsider",
+    "team": "Outsiders",
     "image": "https://images.klutzbanana.com/characters_official/hatter_g.png",
     "ability": "If you died today or tonight, the Minion & Demon players may choose new Minion & Demon characters to be.",
     "flavor": "One Hat. Too Hat. Three Hat. Tea Hat. Fore Hat. Thrive Hat. Six Hat. Sticks Hat.",
@@ -2141,7 +2141,7 @@
 "heretic":
 {
     "name": "Heretic",
-    "team": "Outsider",
+    "team": "Outsiders",
     "image": "https://images.klutzbanana.com/characters_official/heretic_g.png",
     "ability": "Whoever wins, loses & whoever loses, wins, even if you are dead.",
     "flavor": "After the hail has smashed the roof and splintered the glass of the Cathedral windows, it melts again into the earth, like a dying lamb in the desert sun. Such is the parable of the madman.",
@@ -2170,7 +2170,7 @@
 "hermit":
 {
     "name": "Hermit",
-    "team": "Outsider",
+    "team": "Outsiders",
     "image": "https://images.klutzbanana.com/characters_official/hermit_g.png",
     "ability": "You have all Outsider abilities. [-0 or -1 Outsider]",
     "flavor": "In the lost and forgotten places of the earth, the soul’s light beckons.",
@@ -2203,7 +2203,7 @@
 "klutz":
 {
     "name": "Klutz",
-    "team": "Outsider",
+    "team": "Outsiders",
     "image": "https://images.klutzbanana.com/characters_official/klutz_g.png",
     "ability": "When you learn that you died, publicly choose 1 alive player: if they are evil, your team loses.",
     "flavor": "Oops.",
@@ -2228,7 +2228,7 @@
 "lunatic":
 {
     "name": "Lunatic",
-    "team": "Outsider",
+    "team": "Outsiders",
     "image": "https://images.klutzbanana.com/characters_official/lunatic_g.png",
     "ability": "You think you are a Demon, but you are not. The Demon knows who you are & who you choose at night.",
     "flavor": "I am the night... I think.",
@@ -2269,7 +2269,7 @@
 "moonchild":
 {
     "name": "Moonchild",
-    "team": "Outsider",
+    "team": "Outsiders",
     "image": "https://images.klutzbanana.com/characters_official/moonchild_g.png",
     "ability": "When you learn that you died, publicly choose 1 alive player. Tonight, if it was a good player, they die.",
     "flavor": "Scorpio looks sideways at the lovers, and you have a choice to make. With silver cross my palm, and your fate shall be revealed. With steel cross my throat, and by the stars you shall regret it.",
@@ -2298,7 +2298,7 @@
 "mutant":
 {
     "name": "Mutant",
-    "team": "Outsider",
+    "team": "Outsiders",
     "image": "https://images.klutzbanana.com/characters_official/mutant_g.png",
     "ability": "If you are \"mad\" about being an Outsider, you might be executed.",
     "flavor": "I am not a freak! I am a human being! Have mercy!",
@@ -2323,7 +2323,7 @@
 "ogre":
 {
     "name": "Ogre",
-    "team": "Outsider",
+    "team": "Outsiders",
     "image": "https://images.klutzbanana.com/characters_official/ogre_g.png",
     "ability": "On your 1st night, choose a player (not yourself): you become their alignment (you don't know which) even if drunk or poisoned.",
     "flavor": "&lt;grunt&gt;&lt;grin&gt;&lt;/grunt&gt;",
@@ -2348,7 +2348,7 @@
 "plaguedoctor":
 {
     "name": "Plague Doctor",
-    "team": "Outsider",
+    "team": "Outsiders",
     "image": "https://images.klutzbanana.com/characters_official/plaguedoctor_g.png",
     "ability": "When you die, the Storyteller gains a Minion ability.",
     "flavor": "Pleauze shtay shtill. Thinks nid tiime for hillink. Myrhh-myrhh.",
@@ -2373,7 +2373,7 @@
 "politician":
 {
     "name": "Politician",
-    "team": "Outsider",
+    "team": "Outsiders",
     "image": "https://images.klutzbanana.com/characters_official/politician_g.png",
     "ability": "If you were the player most responsible for your team losing, you change alignment & win, even if dead.",
     "flavor": "I'm glad you asked that question. Truly, I am. But I think the REAL question here is...",
@@ -2398,7 +2398,7 @@
 "puzzlemaster":
 {
     "name": "Puzzlemaster",
-    "team": "Outsider",
+    "team": "Outsiders",
     "image": "https://images.klutzbanana.com/characters_official/puzzlemaster_g.png",
     "ability": "1 player is drunk, even if you die. If you guess (once) who it is, learn the Demon player, but guess wrong & get false info.",
     "flavor": "When one begins to think that some thing is merely some other thing, one is usually on the brink of an error. Patience, patience. Don’t confuse <b>just</b> and <b>should</b> with <b>is</b> and <b>isn’t</b>.",
@@ -2427,7 +2427,7 @@
 "recluse":
 {
     "name": "Recluse",
-    "team": "Outsider",
+    "team": "Outsiders",
     "image": "https://images.klutzbanana.com/characters_official/recluse_g.png",
     "ability": "You might register as evil & as a Minion or Demon, even if dead.",
     "flavor": "Garn git ya darn grub ya mitts ofma lorn yasee. Grr. Natsy pikkins yonder southwise ye begittin afta ya! Git! Me harvy no so widda licks and demmons no be fightin' hadsup ne'er ma kin. Git, assay!",
@@ -2456,7 +2456,7 @@
 "saint":
 {
     "name": "Saint",
-    "team": "Outsider",
+    "team": "Outsiders",
     "image": "https://images.klutzbanana.com/characters_official/saint_g.png",
     "ability": "If you die by execution, your team loses.",
     "flavor": "Wisdom begets peace. Patience begets wisdom. Fear not, for the time shall come when fear too shall pass. Let us pray, and may the unity of our vision make saints of us all.",
@@ -2481,7 +2481,7 @@
 "snitch":
 {
     "name": "Snitch",
-    "team": "Outsider",
+    "team": "Outsiders",
     "image": "https://images.klutzbanana.com/characters_official/snitch_g.png",
     "ability": "Each Minion gets 3 bluffs.",
     "flavor": "It was John.",
@@ -2506,7 +2506,7 @@
 "sweetheart":
 {
     "name": "Sweetheart",
-    "team": "Outsider",
+    "team": "Outsiders",
     "image": "https://images.klutzbanana.com/characters_official/sweetheart_g.png",
     "ability": "When you die, 1 player is drunk from now on.",
     "flavor": "I will never forget her. Never.",
@@ -2531,7 +2531,7 @@
 "tinker":
 {
     "name": "Tinker",
-    "team": "Outsider",
+    "team": "Outsiders",
     "image": "https://images.klutzbanana.com/characters_official/tinker_g.png",
     "ability": "You might die at any time.",
     "flavor": "I think I see the problem. Luckily, I have an idea! This catapult will shoot twice as far with just a minor adjustment...",
@@ -2556,7 +2556,7 @@
 "zealot":
 {
     "name": "Zealot",
-    "team": "Outsider",
+    "team": "Outsiders",
     "image": "https://images.klutzbanana.com/characters_official/zealot_g.png",
     "ability": "If there are 5 or more players alive, you must vote for every nomination.",
     "flavor": "I enjoy talking to you. Your mind appeals to me. It resembles my own mind except that you happen to be insane.",
