@@ -113,8 +113,7 @@ if(characterSort === "edition"){
                     editionB
                 );
             /*
-             * First sort by our custom
-             * edition order.
+             * First sort by edition order.
              */
             if(
                 editionIndexA !==
@@ -126,36 +125,30 @@ if(characterSort === "edition"){
                 );
             }
             /*
-             * Get the official script
-             * character order.
+             * Trouble Brewing,
+             * Sects and Violets,
+             * and Bad Moon Rising
+             * use their official script order.
              */
-            const order =
+            const scriptOrder =
                 editionCharacterOrder[
                     editionA
                 ];
-            if(order){
+            if(scriptOrder){
                 const idA =
-                    order.indexOf(
+                    scriptOrder.indexOf(
                         a.id
                     );
                 const idB =
-                    order.indexOf(
+                    scriptOrder.indexOf(
                         b.id
                     );
-                /*
-                 * Characters found in the
-                 * script use script order.
-                 */
                 if(
                     idA !== -1 &&
                     idB !== -1
                 ){
                     return idA - idB;
                 }
-                /*
-                 * Anything not found in
-                 * the script goes afterward.
-                 */
                 if(idA !== -1){
                     return -1;
                 }
@@ -164,10 +157,23 @@ if(characterSort === "edition"){
                 }
             }
             /*
-             * Fallback to alphabetical.
+             * Carousel and NPCs use
+             * the normal team order.
              */
-            return a.name.localeCompare(
-                b.name
+            const teamA =
+                teamOrder.indexOf(
+                    a.team
+                );
+            const teamB =
+                teamOrder.indexOf(
+                    b.team
+                );
+            return (
+                teamA - teamB
+                ||
+                a.name.localeCompare(
+                    b.name
+                )
             );
         }
     );
