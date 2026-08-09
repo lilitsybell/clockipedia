@@ -1,5 +1,220 @@
 [
     {
+        "text":"If the [Zombuul] dies or registers as dying by execution, and the [Barista] ability causes the [Cannibal] to be sober and healthy, the [Cannibal] gains the [Zombuul] ability.",
+        "math":"red",
+        "reason":"If the Cannibal is Barista healthy, the Cannibal gains the ability of the character that recently died by execution, whether they were evil or not.",
+        "mathInfo":"If the Cannibal is not poisoned after an evil player dies due to the Barista, the Cannibal's ability malfunctioned."},
+    {
+        "text":"If the [Yaggababble] dies by execution, and the [Barista] ability causes the [Cannibal] to be sober and healthy, the [Cannibal] gains the [Yaggababble] ability. The [Cannibal] learns a phrase, and for each time the [Cannibal] said the phrase the previous day, a player might die that night.",
+        "math":"red",
+        "reason":"If the Cannibal is Barista healthy, the Cannibal gains the ability of the character that recently died by execution, whether they were evil or not.",
+        "mathInfo":"If the Cannibal is not poisoned after an evil player dies due to the Barista, the Cannibal's ability malfunctioned."},
+    {
+        "text":"If the [Vortox] dies by execution, and the [Barista] ability causes the [Cannibal] to be sober and healthy, the [Cannibal] gains the [Vortox] ability.",
+        "math":"red",
+        "reason":"If the Cannibal is Barista healthy, the Cannibal gains the ability of the character that recently died by execution, whether they were evil or not.",
+        "mathInfo":"If the Cannibal is not poisoned after an evil player dies due to the Barista, the Cannibal's ability malfunctioned."},
+    {
+        "text":"If the [Vigormortis] dies by execution, and the [Barista] ability causes the [Cannibal] to be sober and healthy, the [Cannibal] gains the [Vigormortis] ability.",
+        "math":"red",
+        "reason":"If the Cannibal is Barista healthy, the Cannibal gains the ability of the character that recently died by execution, whether they were evil or not.",
+        "mathInfo":"If the Cannibal is not poisoned after an evil player dies due to the Barista, the Cannibal's ability malfunctioned."},
+    {
+        "text":"If the [Shabaloth] dies by execution, and the [Barista] ability causes the [Cannibal] to be sober and healthy, the [Cannibal] gains the [Shabaloth] ability.",
+        "math":"red",
+        "reason":"If the Cannibal is Barista healthy, the Cannibal gains the ability of the character that recently died by execution, whether they were evil or not.",
+        "mathInfo":"If the Cannibal is not poisoned after an evil player dies due to the Barista, the Cannibal's ability malfunctioned."},
+    {
+        "text":"If the [Riot] dies by execution, and the [Barista] ability causes the [Cannibal] to be sober and healthy, the [Cannibal] gains the [Riot] ability.",
+        "math":"red",
+        "reason":"If the Cannibal is Barista healthy, the Cannibal gains the ability of the character that recently died by execution, whether they were evil or not.",
+        "mathInfo":"If the Cannibal is not poisoned after an evil player dies due to the Barista, the Cannibal's ability malfunctioned."},
+    {
+        "text":"If the [Pukka] dies by execution, and the [Barista] ability causes the [Cannibal] to be sober and healthy, the [Cannibal] gains the [Pukka] ability.",
+        "math":"red",
+        "reason":"If the Cannibal is Barista healthy, the Cannibal gains the ability of the character that recently died by execution, whether they were evil or not.",
+        "mathInfo":"If the Cannibal is not poisoned after an evil player dies due to the Barista, the Cannibal's ability malfunctioned."},
+    {
+        "text":"If the [Po] dies by execution, and the [Barista] ability causes the [Cannibal] to be sober and healthy, the [Cannibal] gains the [Po] ability.",
+        "math":"red",
+        "reason":"If the Cannibal is Barista healthy, the Cannibal gains the ability of the character that recently died by execution, whether they were evil or not.",
+        "mathInfo":"If the Cannibal is not poisoned after an evil player dies due to the Barista, the Cannibal's ability malfunctioned."},
+    {
+        "text":"If the [Ojo] dies by execution, and the [Barista] ability causes the [Cannibal] to be sober and healthy, the [Cannibal] gains the [Ojo] ability.",
+        "math":"red",
+        "reason":"If the Cannibal is Barista healthy, the Cannibal gains the ability of the character that recently died by execution, whether they were evil or not.",
+        "mathInfo":"If the Cannibal is not poisoned after an evil player dies due to the Barista, the Cannibal's ability malfunctioned."},
+    {
+        "text":"If the [No Dashii] dies by execution, and the [Barista] ability causes the [Cannibal] to be sober and healthy, the [Cannibal] gains the [No Dashii] ability.",
+        "math":"red",
+        "reason":"If the Cannibal is Barista healthy, the Cannibal gains the ability of the character that recently died by execution, whether they were evil or not.",
+        "mathInfo":"If the Cannibal is not poisoned after an evil player dies due to the Barista, the Cannibal's ability malfunctioned."},
+    {
+        "text":"If the [Lord of Typhon] dies by execution, and the [Barista] ability causes the [Cannibal] to be sober and healthy, the [Cannibal] gains the [Lord of Typhon] ability. Minions do not change and no new Minion is created.",
+        "math":"red",
+        "reason":"If the Cannibal is Barista healthy, the Cannibal gains the ability of the character that recently died by execution, whether they were evil or not.",
+        "mathInfo":"If the Cannibal is not poisoned after an evil player dies due to the Barista, the Cannibal's ability malfunctioned."},
+    {
+        "text":"If the [Lleech] dies by execution, and the [Barista] ability causes the [Cannibal] to be sober and healthy, the [Cannibal] gains the [Lleech] ability and chooses a player to poison.",
+        "math":"red",
+        "reason":"If the Cannibal is Barista healthy, the Cannibal gains the ability of the character that recently died by execution, whether they were evil or not.",
+        "mathInfo":"If the Cannibal is not poisoned after an evil player dies due to the Barista, the Cannibal's ability malfunctioned."},
+    {
+        "text":"If the [Leviathan] dies by execution, and the [Barista] ability causes the [Cannibal] to be sober and healthy, the [Cannibal] gains the [Leviathan] ability.",
+        "math":"red",
+        "reason":"If the Cannibal is Barista healthy, the Cannibal gains the ability of the character that recently died by execution, whether they were evil or not.",
+        "mathInfo":"If the Cannibal is not poisoned after an evil player dies due to the Barista, the Cannibal's ability malfunctioned."},
+    {
+        "text":"If a [Legion] dies by execution, and the [Barista] ability causes the [Cannibal] to be sober and healthy, the [Cannibal] gains the [Legion] ability.",
+        "math":"red",
+        "reason":"If the Cannibal is Barista healthy, the Cannibal gains the ability of the character that recently died by execution, whether they were evil or not.",
+        "mathInfo":"If the Cannibal is not poisoned after an evil player dies due to the Barista, the Cannibal's ability malfunctioned."},
+    {
+        "text":"If the [Kazali] dies by execution, and the [Barista] ability causes the [Cannibal] to be sober and healthy, the [Cannibal] gains the [Kazali] ability. The [Cannibal] does not choose new Minions.",
+        "math":"red",
+        "reason":"If the Cannibal is Barista healthy, the Cannibal gains the ability of the character that recently died by execution, whether they were evil or not.",
+        "mathInfo":"If the Cannibal is not poisoned after an evil player dies due to the Barista, the Cannibal's ability malfunctioned."},
+    {
+        "text":"If the [Imp] dies by execution, and the [Barista] ability causes the [Cannibal] to be sober and healthy, the [Cannibal] gains the [Imp] ability.",
+        "math":"red",
+        "reason":"If the Cannibal is Barista healthy, the Cannibal gains the ability of the character that recently died by execution, whether they were evil or not.",
+        "mathInfo":"If the Cannibal is not poisoned after an evil player dies due to the Barista, the Cannibal's ability malfunctioned."},
+    {
+        "text":"If the [Fang Gu] dies by execution, and the [Barista] ability causes the [Cannibal] to be sober and healthy, the [Cannibal] gains the [Fang Gu] ability. No Outsider is created.",
+        "math":"red",
+        "reason":"If the Cannibal is Barista healthy, the Cannibal gains the ability of the character that recently died by execution, whether they were evil or not.",
+        "mathInfo":"If the Cannibal is not poisoned after an evil player dies due to the Barista, the Cannibal's ability malfunctioned."},
+    {
+        "text":"If the [Al-Hadikhia] dies by execution, and the [Barista] ability causes the [Cannibal] to be sober and healthy, the [Cannibal] gains the [Al-Hadikhia] ability.",
+        "math":"red",
+        "reason":"If the Cannibal is Barista healthy, the Cannibal gains the ability of the character that recently died by execution, whether they were evil or not.",
+        "mathInfo":"If the Cannibal is not poisoned after an evil player dies due to the Barista, the Cannibal's ability malfunctioned."},
+    {
+        "text":"If the [Xaan] dies by execution, and the [Barista] ability causes the [Cannibal] to be sober and healthy, the [Cannibal] gains the [Xaan] ability. No Outsiders are created or changed.",
+        "math":"red",
+        "reason":"If the Cannibal is Barista healthy, the Cannibal gains the ability of the character that recently died by execution, whether they were evil or not.",
+        "mathInfo":"If the Cannibal is not poisoned after an evil player dies due to the Barista, the Cannibal's ability malfunctioned."},
+    {
+        "text":"If the [Wraith] dies by execution, and the [Barista] ability causes the [Cannibal] to be sober and healthy, the [Cannibal] gains the [Wraith] ability. The [Cannibal] wakes with all evil players and may open their eyes at night until another player dies by execution.",
+        "math":"red",
+        "reason":"If the Cannibal is Barista healthy, the Cannibal gains the ability of the character that recently died by execution, whether they were evil or not.",
+        "mathInfo":"If the Cannibal is not poisoned after an evil player dies due to the Barista, the Cannibal's ability malfunctioned."},
+    {
+        "text":"If the [Wizard] dies by execution, and the [Barista] ability causes the [Cannibal] to be sober and healthy, the [Cannibal] gains the [Wizard] ability.",
+        "math":"red",
+        "reason":"If the Cannibal is Barista healthy, the Cannibal gains the ability of the character that recently died by execution, whether they were evil or not.",
+        "mathInfo":"If the Cannibal is not poisoned after an evil player dies due to the Barista, the Cannibal's ability malfunctioned."},
+    {
+        "text":"If the [Widow] dies by execution, and the [Barista] ability causes the [Cannibal] to be sober and healthy, the [Cannibal] gains the [Widow] ability. That night, the [Cannibal] looks at the Grimoire and chooses a player to poison. If a good player already knows the [Widow] is in play, a second player does not learn there is a [Widow] in play.",
+        "math":"red",
+        "reason":"If the Cannibal is Barista healthy, the Cannibal gains the ability of the character that recently died by execution, whether they were evil or not.",
+        "mathInfo":"If the Cannibal is not poisoned after an evil player dies due to the Barista, the Cannibal's ability malfunctioned."},
+    {
+        "text":"If the [Vizier] dies by execution, and the [Barista] ability causes the [Cannibal] to be sober and healthy, the [Cannibal] gains the [Vizier] ability. At dawn, all players learn that the [Cannibal] player is the [Vizier].",
+        "math":"red",
+        "reason":"If the Cannibal is Barista healthy, the Cannibal gains the ability of the character that recently died by execution, whether they were evil or not.",
+        "mathInfo":"If the Cannibal is not poisoned after an evil player dies due to the Barista, the Cannibal's ability malfunctioned."},
+    {
+        "text":"If the [Summoner] dies by execution and the game does not end due to a different ability, and the [Barista] ability causes the [Cannibal] to be sober and healthy, the [Cannibal] gains the [Summoner] ability. The [Cannibal] [Summoner] chooses the player and the Demon they turn into as normal.",
+        "math":"red",
+        "reason":"If the Cannibal is Barista healthy, the Cannibal gains the ability of the character that recently died by execution, whether they were evil or not.",
+        "mathInfo":"If the Cannibal is not poisoned after an evil player dies due to the Barista, the Cannibal's ability malfunctioned."},
+    {
+        "text":"If the [Spy] dies by execution, and the [Barista] ability causes the [Cannibal] to be sober and healthy, the [Cannibal] gains the [Spy] ability and sees the Grimoire that night. The [Spy] cannot misregister to a player who receives sober, healthy, and true information due to the [Barista].",
+        "math":"red",
+        "reason":"If the Cannibal is Barista healthy, the Cannibal gains the ability of the character that recently died by execution, whether they were evil or not.",
+        "mathInfo":"If the Cannibal is not poisoned after an evil player dies due to the Barista, the Cannibal's ability malfunctioned."},
+    {
+        "text":"If the [Scarlet Woman] dies by execution, and the [Barista] ability causes the [Cannibal] to be sober and healthy, the [Cannibal] gains the [Scarlet Woman] ability. If the [Cannibal] turns into the Demon because of this, the [Cannibal] would be the good Demon. The only way the [Cannibal] can become the Demon this way is if the Demon dies in a way other than execution.",
+        "math":"red",
+        "reason":"If the Cannibal is Barista healthy, the Cannibal gains the ability of the character that recently died by execution, whether they were evil or not.",
+        "mathInfo":"If the Cannibal is not poisoned after an evil player dies due to the Barista, the Cannibal's ability malfunctioned."},
+    {
+        "text":"If the [Psychopath] dies by execution, and the [Barista] ability causes the [Cannibal] to be sober and healthy, the [Cannibal] gains the [Psychopath] ability.",
+        "math":"red",
+        "reason":"If the Cannibal is Barista healthy, the Cannibal gains the ability of the character that recently died by execution, whether they were evil or not.",
+        "mathInfo":"If the Cannibal is not poisoned after an evil player dies due to the Barista, the Cannibal's ability malfunctioned."},
+    {
+        "text":"If the [Poisoner] dies by execution, and the [Barista] ability causes the [Cannibal] to be sober and healthy, the [Cannibal] gains the [Poisoner] ability.",
+        "math":"red",
+        "reason":"If the Cannibal is Barista healthy, the Cannibal gains the ability of the character that recently died by execution, whether they were evil or not.",
+        "mathInfo":"If the Cannibal is not poisoned after an evil player dies due to the Barista, the Cannibal's ability malfunctioned."},
+    {
+        "text":"If the [Pit-Hag] dies by execution, and the [Barista] ability causes the [Cannibal] to be sober and healthy, the [Cannibal] gains the [Pit-Hag] ability.",
+        "math":"red",
+        "reason":"If the Cannibal is Barista healthy, the Cannibal gains the ability of the character that recently died by execution, whether they were evil or not.",
+        "mathInfo":"If the Cannibal is not poisoned after an evil player dies due to the Barista, the Cannibal's ability malfunctioned."},
+    {
+        "text":"If the [Organ Grinder] dies by execution, and the [Barista] ability causes the [Cannibal] to be sober and healthy, the [Cannibal] gains the [Organ Grinder] ability.",
+        "math":"red",
+        "reason":"If the Cannibal is Barista healthy, the Cannibal gains the ability of the character that recently died by execution, whether they were evil or not.",
+        "mathInfo":"If the Cannibal is not poisoned after an evil player dies due to the Barista, the Cannibal's ability malfunctioned."},
+    {
+        "text":"If the [Mezepheles] dies by execution, and the [Barista] ability causes the [Cannibal] to be sober and healthy, the [Cannibal] gains the [Mezepheles] ability. The [Cannibal] learns a word that night. A player can only turn evil this way if a good player says the word after the [Cannibal] learns it, nobody is executed the next day, and the [Cannibal] does not die the next night.",
+        "math":"red",
+        "reason":"If the Cannibal is Barista healthy, the Cannibal gains the ability of the character that recently died by execution, whether they were evil or not.",
+        "mathInfo":"If the Cannibal is not poisoned after an evil player dies due to the Barista, the Cannibal's ability malfunctioned."},
+    {
+        "text":"If the [Mastermind] dies by execution, and the [Barista] ability causes the [Cannibal] to be sober and healthy, the [Cannibal] gains the [Mastermind] ability. Since the [Mastermind] requires the Demon to die by execution, the [Cannibal] [Mastermind] ability would never trigger.",
+        "math":"red",
+        "reason":"If the Cannibal is Barista healthy, the Cannibal gains the ability of the character that recently died by execution, whether they were evil or not.",
+        "mathInfo":"If the Cannibal is not poisoned after an evil player dies due to the Barista, the Cannibal's ability malfunctioned."},
+    {
+        "text":"If the [Harpy] dies by execution, and the [Barista] ability causes the [Cannibal] to be sober and healthy, the [Cannibal] gains the [Harpy] ability.",
+        "math":"red",
+        "reason":"If the Cannibal is Barista healthy, the Cannibal gains the ability of the character that recently died by execution, whether they were evil or not.",
+        "mathInfo":"If the Cannibal is not poisoned after an evil player dies due to the Barista, the Cannibal's ability malfunctioned."},
+    {
+        "text":"If the [Godfather] dies by execution, and the [Barista] ability causes the [Cannibal] to be sober and healthy, the [Cannibal] gains the [Godfather] ability. The [Cannibal] learns which Outsiders are in play, and if one died today, chooses a player to kill.",
+        "math":"red",
+        "reason":"If the Cannibal is Barista healthy, the Cannibal gains the ability of the character that recently died by execution, whether they were evil or not.",
+        "mathInfo":"If the Cannibal is not poisoned after an evil player dies due to the Barista, the Cannibal's ability malfunctioned."},
+    {
+        "text":"If the [Goblin] dies by execution, and the [Barista] ability causes the [Cannibal] to be sober and healthy, the [Cannibal] gains the [Goblin] ability. If the [Cannibal] claims to be the [Goblin] and is then executed, the [Cannibal]’s team wins.",
+        "math":"red",
+        "reason":"If the Cannibal is Barista healthy, the Cannibal gains the ability of the character that recently died by execution, whether they were evil or not.",
+        "mathInfo":"If the Cannibal is not poisoned after an evil player dies due to the Barista, the Cannibal's ability malfunctioned."},
+    {
+        "text":"If the [Evil Twin] dies by execution, and the [Barista] ability causes the [Cannibal] to be sober and healthy, the [Cannibal] gains the [Evil Twin] ability. The [Cannibal] learns an evil player and their character. The evil player learns the [Cannibal] player is the [Cannibal].",
+        "math":"red",
+        "reason":"If the Cannibal is Barista healthy, the Cannibal gains the ability of the character that recently died by execution, whether they were evil or not.",
+        "mathInfo":"If the [Cannibal] is not poisoned after an evil player dies due to the Barista, the Cannibal's ability malfunctioned."},
+    {
+        "text":"If the [Devil's Advocate] dies by execution, and the [Barista] ability causes the [Cannibal] to be sober and healthy, the [Cannibal] gains the [Devil's Advocate] ability.",
+        "math":"red",
+        "reason":"If the Cannibal is Barista healthy, the Cannibal gains the ability of the character that recently died by execution, whether they were evil or not.",
+        "mathInfo":"If the [Cannibal] is not poisoned after an evil player dies due to the Barista, the Cannibal's ability malfunctioned."},
+    {
+        "text":"If the [Cerenovus] dies by execution, and the [Barista] ability causes the [Cannibal] to be sober and healthy, the [Cannibal] gains the [Cerenovus] ability.",
+        "math":"red",
+        "reason":"If the Cannibal is Barista healthy, the Cannibal gains the ability of the character that recently died by execution, whether they were evil or not.",
+        "mathInfo":"If the Cannibal is not poisoned after an evil player dies due to the Barista, the Cannibal's ability malfunctioned."},
+    {
+        "text":"If the [Boomdandy] dies by execution, and the [Barista] ability causes the [Cannibal] to be sober and healthy, the [Cannibal] gains the [Boomdandy] ability.",
+        "math":"red",
+        "reason":"If the Cannibal is Barista healthy, the Cannibal gains the ability of the character that recently died by execution, whether they were evil or not.",
+        "mathInfo":"If the Cannibal is not poisoned after an evil player dies due to the Barista, the Cannibal's ability malfunctioned."},
+    {
+        "text":"If the [Boffin] dies by execution, and the [Barista] ability causes the [Cannibal] to be sober and healthy, the [Cannibal] gains the [Boffin] ability. The [Cannibal] learns which ability they grant the Demon.",
+        "math":"red",
+        "reason":"If the Cannibal is Barista healthy, the Cannibal gains the ability of the character that recently died by execution, whether they were evil or not.",
+        "mathInfo":"If the Cannibal is not poisoned after an evil player dies due to the Barista, the Cannibal's ability malfunctioned."},
+    {
+        "text":"If the [Baron] dies by execution, and the [Barista] ability causes the [Cannibal] to be sober and healthy, the [Cannibal] gains the [Baron] ability. No new Outsiders are created.",
+        "math":"red",
+        "reason":"If the Cannibal is Barista healthy, the Cannibal gains the ability of the character that recently died by execution, whether they were evil or not.",
+        "mathInfo":"If the Cannibal is not poisoned after an evil player dies due to the Barista, the Cannibal's ability malfunctioned."},
+    {
+        "text":"If the [Assassin] dies by execution, and the [Barista] ability causes the [Cannibal] to be sober and healthy, the [Cannibal] gains the [Assassin] ability.",
+        "math":"red",
+        "reason":"If the Cannibal is Barista healthy, the Cannibal gains the ability of the character that recently died by execution, whether they were evil or not.",
+        "mathInfo":"If the Cannibal is not poisoned after an evil player dies due to the Barista, the Cannibal's ability malfunctioned."},
+    {
+        "text":"If the [Cannibal] gains the [Puzzlemaster] ability, a new or the same player is [Puzzlemaster] drunk until another player dies by execution. The [Cannibal] only learns the Demon correctly if they guess the [Cannibal] [Puzzlemaster] drunk. The [Cannibal] learns false information if they guess the [Puzzlemaster] drunk player (assuming the [Cannibal] [Puzzlemaster] drunk is not the same player.) If the [Cannibal] dies while having the [Puzzlemaster] ability, two players are [Puzzlemaster] drunk for the rest of the game.",
+        "math":"red",
+        "reason":"The [Puzzlemaster] ability works while dead. If the [Cannibal] dies while having an ability that works on death, the [Cannibal] keeps that ability on death.",
+        "mathInfo":"If the player who is Cannibal Puzzledrunk receives incorrect information or their ability doesn't work as intended, that player's ability malfunctioned."},
+    {
         "text":"If the [Philosopher] chooses [Bounty Hunter], and the [Philosopher] dies that night, the [Philosopher] learns nothing. A Townsfolk might turn evil.",
         "math":"green",
         "reason":"Characters that kill players generally go before players that learn information.",
