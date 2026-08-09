@@ -1,12 +1,16 @@
-console.log("interaction-finder Updated 8/03/26 23:18");
+console.log("interaction-finder Updated 8/09/26 18:54");
 document.addEventListener("DOMContentLoaded", async()=>{
     try{
-await loadInteractions();
-buildPage();
-loadURLCharacters();
+        await loadCharacters();
+        await loadInteractions();
+        buildPage();
+        loadURLCharacters();
     }
     catch(error){
-        console.error("Interaction Finder failed:", error);
+        console.error(
+            "Interaction Finder failed:",
+            error
+        );
     }
 });
 function loadURLCharacters(){
