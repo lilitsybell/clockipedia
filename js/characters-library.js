@@ -20,11 +20,11 @@ const editionOrder = [
 ];
 const editionScriptFiles = {
     "Trouble Brewing":
-        "./scripts/trouble-brewing.json",
+        "./data/scripts/trouble-brewing.json",
     "Sects and Violets":
-        "./scripts/sects-and-violets.json",
+        "./data/scripts/sects-and-violets.json",
     "Bad Moon Rising":
-        "./scripts/bad-moon-rising.json"
+        "./data/scripts/bad-moon-rising.json"
 };
 const editionCharacterOrder = {};
 /* ==========================================
