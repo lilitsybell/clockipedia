@@ -1,4 +1,4 @@
-console.log("characters-library.js updated 8/08/26 11:46");
+console.log("characters-library.js updated 8/08/26 23:06");
 
 let characterLibrary = [];
 let characterSort = "team";
@@ -14,23 +14,16 @@ const teamOrder = [
 /* ==========================================
    Load Characters
 ========================================== */
-
 async function loadCharacterLibrary(){
-
     const response =
         await fetch("./data/characters.json");
-
     if(!response.ok){
-
         throw new Error(
             "Failed to load characters.json"
         );
-
     }
-
     const data =
         await response.json();
-
     characterLibrary =
         Object.entries(data).map(
             ([id, character]) => ({
@@ -38,46 +31,31 @@ async function loadCharacterLibrary(){
                 ...character
             })
         );
-
     console.log(
         "Loaded character library:",
         characterLibrary.length
     );
-
     setupCharacterSort();
-
     renderCharacterLibrary();
-
 }
-
-
 /* ==========================================
    Sort Characters
 ========================================== */
-
 function sortCharacters(){
-
     if(characterSort === "alphabetical"){
-
         characterLibrary.sort(
             (a,b) =>
                 a.name.localeCompare(b.name)
         );
-
         return;
     }
-
     if(characterSort === "edition"){
-
         characterLibrary.sort(
             (a,b) => {
-
                 const editionA =
                     a.edition || "";
-
                 const editionB =
                     b.edition || "";
-
                 return (
                     editionA.localeCompare(
                         editionB
@@ -87,24 +65,17 @@ function sortCharacters(){
                         b.name
                     )
                 );
-
             }
         );
-
         return;
     }
-
     /* Default: Team */
-
     characterLibrary.sort(
         (a,b) => {
-
             const teamA =
                 teamOrder.indexOf(a.team);
-
             const teamB =
                 teamOrder.indexOf(b.team);
-
             return (
                 teamA - teamB
                 ||
@@ -112,37 +83,25 @@ function sortCharacters(){
                     b.name
                 )
             );
-
         }
     );
-
 }
-
-
 /* ==========================================
    Render Characters
 ========================================== */
-
 function renderCharacterLibrary(){
 
     const container =
         document.getElementById(
             "characterLibrary"
         );
-
     if(!container){
-
         return;
-
     }
-
     container.innerHTML = "";
-
     sortCharacters();
-
     let currentGroup = null;
     let grid = null;
-
     characterLibrary.forEach(
         character => {
 /*
@@ -150,46 +109,35 @@ function renderCharacterLibrary(){
  * Alphabetical sorting uses one continuous grid.
  */
 let groupValue = null;
-
 if(characterSort === "team"){
     groupValue = character.team || "Unknown";
 }
-
 if(characterSort === "edition"){
     groupValue = character.edition || "Unknown Edition";
 }
-
 if(
     (characterSort === "team" ||
      characterSort === "edition") &&
     groupValue !== currentGroup
 ){
-
     currentGroup = groupValue;
-
     const heading =
         document.createElement(
             "h2"
         );
-
     heading.className =
         "character-team-heading";
-
     heading.textContent =
         currentGroup;
-
     container.appendChild(
         heading
     );
-
     grid =
         document.createElement(
             "div"
         );
-
     grid.className =
         "character-directory-grid";
-
     container.appendChild(
         grid
     );
