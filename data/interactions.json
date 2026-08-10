@@ -295,22 +295,567 @@
         "reason":"Characters that kill players generally go before players that learn information.",
         "mathInfo":"No ability has malfunctioned."},
     {
-        "text":"If the [Philosopher] chooses [Bounty Hunter], and the [Philosopher] dies that night, the [Philosopher] learns nothing. A Townsfolk might turn evil.",
+        "text":"If the [Philosopher] chooses [Bounty Hunter], and the [Philosopher] dies due to the [Zombuul] that night, the [Philosopher] learns nothing. A Townsfolk might turn evil.",
         "math":"green",
         "reason":"Characters that kill players generally go before players that learn information.",
         "mathInfo":"No ability has malfunctioned."},
     {
-        "text":"If the [Philosopher] chooses [Washerwoman], and the [Philosopher] dies that night, the [Philosopher] learns nothing and the [Washerwoman] is no longer [Philosopher] drunk.",
+        "text":"If the [Philosopher] chooses [Bounty Hunter], and the [Philosopher] dies due to the [Yaggababble] that night, the [Philosopher] learns nothing. A Townsfolk might turn evil.",
         "math":"green",
         "reason":"Characters that kill players generally go before players that learn information.",
         "mathInfo":"No ability has malfunctioned."},
     {
-        "text":"If the [Philosopher] chooses [Steward], and the [Philosopher] dies that night, the [Philosopher] learns nothing and the [Steward] is no longer [Philosopher] drunk.",
+        "text":"If the [Philosopher] chooses [Bounty Hunter], and the [Philosopher] dies due to the [Vortox] that night, the [Philosopher] learns nothing. A Townsfolk might turn evil.",
         "math":"green",
         "reason":"Characters that kill players generally go before players that learn information.",
         "mathInfo":"No ability has malfunctioned."},
     {
-        "text":"If the [Philosopher] chooses [Shugenja], and the [Philosopher] dies that night, the [Philosopher] learns nothing and the [Shugenja] is no longer [Philosopher] drunk.",
+        "text":"If the [Philosopher] chooses [Bounty Hunter], and the [Philosopher] dies due to the [Vigormortis] that night, the [Philosopher] learns nothing. A Townsfolk might turn evil.",
+        "math":"green",
+        "reason":"Characters that kill players generally go before players that learn information.",
+        "mathInfo":"No ability has malfunctioned."},
+    {
+        "text":"If the [Philosopher] chooses [Bounty Hunter], and the [Philosopher] dies due to the [Pukka] that night, the [Philosopher] learns nothing. A Townsfolk might turn evil.",
+        "math":"green",
+        "reason":"Characters that kill players generally go before players that learn information.",
+        "mathInfo":"No ability has malfunctioned."},
+    {
+        "text":"If the [Philosopher] chooses [Bounty Hunter], and the [Philosopher] dies due to the [Po] that night, the [Philosopher] learns nothing. A Townsfolk might turn evil.",
+        "math":"green",
+        "reason":"Characters that kill players generally go before players that learn information.",
+        "mathInfo":"No ability has malfunctioned."},
+    {
+        "text":"If the [Philosopher] chooses [Bounty Hunter], and the [Philosopher] dies due to the [Ojo] that night, the [Philosopher] learns nothing. A Townsfolk might turn evil.",
+        "math":"green",
+        "reason":"Characters that kill players generally go before players that learn information.",
+        "mathInfo":"No ability has malfunctioned."},
+    {
+        "text":"If the [Philosopher] chooses [Bounty Hunter], and the [Philosopher] dies due to the [No Dashii] that night, the [Philosopher] learns nothing. A Townsfolk might turn evil.",
+        "math":"green",
+        "reason":"Characters that kill players generally go before players that learn information.",
+        "mathInfo":"No ability has malfunctioned."},
+    {
+        "text":"If the [Philosopher] chooses [Bounty Hunter], and the [Philosopher] dies due to the [Lord of Typhon] that night, the [Philosopher] learns nothing. A Townsfolk might turn evil.",
+        "math":"green",
+        "reason":"Characters that kill players generally go before players that learn information.",
+        "mathInfo":"No ability has malfunctioned."},
+    {
+        "text":"If the [Philosopher] chooses [Bounty Hunter], and the [Philosopher] dies due to the [Lleech] that night, the [Philosopher] learns nothing. A Townsfolk might turn evil.",
+        "math":"green",
+        "reason":"Characters that kill players generally go before players that learn information.",
+        "mathInfo":"No ability has malfunctioned."},
+    {
+        "text":"If the [Philosopher] chooses [Bounty Hunter], and the [Philosopher] dies due to the [Lil' Monsta] that night, the [Philosopher] learns nothing. A Townsfolk might turn evil.",
+        "math":"green",
+        "reason":"Characters that kill players generally go before players that learn information.",
+        "mathInfo":"No ability has malfunctioned."},
+    {
+        "text":"If the [Philosopher] chooses [Bounty Hunter], and the [Philosopher] dies due to the [Legion] that night, the [Philosopher] learns nothing. A Townsfolk might turn evil.",
+        "math":"green",
+        "reason":"Characters that kill players generally go before players that learn information.",
+        "mathInfo":"No ability has malfunctioned."},
+    {
+        "text":"If the [Philosopher] chooses [Bounty Hunter], and the [Philosopher] dies due to the [Kazali] that night, the [Philosopher] learns nothing. A Townsfolk might turn evil.",
+        "math":"green",
+        "reason":"Characters that kill players generally go before players that learn information.",
+        "mathInfo":"No ability has malfunctioned."},
+    {
+        "text":"If the [Philosopher] chooses [Bounty Hunter], and the [Philosopher] dies due to the [Imp] that night, the [Philosopher] learns nothing. A Townsfolk might turn evil.",
+        "math":"green",
+        "reason":"Characters that kill players generally go before players that learn information.",
+        "mathInfo":"No ability has malfunctioned."},
+    {
+        "text":"If the [Philosopher] chooses [Bounty Hunter], and the [Philosopher] dies due to the [Fang Gu] that night, the [Philosopher] learns nothing. A Townsfolk might turn evil.",
+        "math":"green",
+        "reason":"Characters that kill players generally go before players that learn information.",
+        "mathInfo":"No ability has malfunctioned."},
+    {
+        "text":"If the [Philosopher] chooses [Bounty Hunter], and the [Philosopher] dies due to the [Al-Hadikhia] that night, the [Philosopher] learns nothing. A Townsfolk might turn evil.",
+        "math":"green",
+        "reason":"Characters that kill players generally go before players that learn information.",
+        "mathInfo":"No ability has malfunctioned."},
+    {
+        "text":"If the [Philosopher] chooses [Bounty Hunter], and the [Philosopher] dies due to the [Harpy] that night, the [Philosopher] learns nothing. A Townsfolk might turn evil.",
+        "math":"green",
+        "reason":"Characters that kill players generally go before players that learn information.",
+        "mathInfo":"No ability has malfunctioned."},
+    {
+        "text":"If the [Philosopher] chooses [Bounty Hunter], and the [Philosopher] dies due to the [Godfather] that night, the [Philosopher] learns nothing. A Townsfolk might turn evil.",
+        "math":"green",
+        "reason":"Characters that kill players generally go before players that learn information.",
+        "mathInfo":"No ability has malfunctioned."},
+    {
+        "text":"If the [Philosopher] chooses [Bounty Hunter], and the [Philosopher] dies due to the [Assassin] that night, the [Philosopher] learns nothing. A Townsfolk might turn evil.",
+        "math":"green",
+        "reason":"Characters that kill players generally go before players that learn information.",
+        "mathInfo":"No ability has malfunctioned."},
+    {
+        "text":"If the [Philosopher] chooses [Bounty Hunter], and the [Philosopher] dies due to the [Moonchild] that night, the [Philosopher] learns nothing. A Townsfolk might turn evil.",
+        "math":"green",
+        "reason":"Characters that kill players generally go before players that learn information.",
+        "mathInfo":"No ability has malfunctioned."},
+    {
+        "text":"If the [Philosopher] chooses [Bounty Hunter], and the [Philosopher] dies due to the [Lycanthrope] that night, the [Philosopher] learns nothing. A Townsfolk might turn evil.",
+        "math":"green",
+        "reason":"Characters that kill players generally go before players that learn information.",
+        "mathInfo":"No ability has malfunctioned."},
+    {
+        "text":"If the [Philosopher] chooses [Bounty Hunter], and the [Philosopher] dies due to the [Gossip] that night, the [Philosopher] learns nothing. A Townsfolk might turn evil.",
+        "math":"green",
+        "reason":"Characters that kill players generally go before players that learn information.",
+        "mathInfo":"No ability has malfunctioned."},
+    {
+        "text":"If the [Philosopher] chooses [Washerwoman], and the [Philosopher] dies due to the [Zombuul] that night, the [Philosopher] learns nothing and the [Washerwoman] is no longer [Philosopher] drunk.",
+        "math":"green",
+        "reason":"Characters that kill players generally go before players that learn information.",
+        "mathInfo":"No ability has malfunctioned."},
+    {
+        "text":"If the [Philosopher] chooses [Washerwoman], and the [Philosopher] dies due to the [Yaggababble] that night, the [Philosopher] learns nothing and the [Washerwoman] is no longer [Philosopher] drunk.",
+        "math":"green",
+        "reason":"Characters that kill players generally go before players that learn information.",
+        "mathInfo":"No ability has malfunctioned."},
+    {
+        "text":"If the [Philosopher] chooses [Washerwoman], and the [Philosopher] dies due to the [Vortox] that night, the [Philosopher] learns nothing and the [Washerwoman] is no longer [Philosopher] drunk.",
+        "math":"green",
+        "reason":"Characters that kill players generally go before players that learn information.",
+        "mathInfo":"No ability has malfunctioned."},
+    {
+        "text":"If the [Philosopher] chooses [Washerwoman], and the [Philosopher] dies due to the [Vigormortis] that night, the [Philosopher] learns nothing and the [Washerwoman] is no longer [Philosopher] drunk.",
+        "math":"green",
+        "reason":"Characters that kill players generally go before players that learn information.",
+        "mathInfo":"No ability has malfunctioned."},
+    {
+        "text":"If the [Philosopher] chooses [Washerwoman], and the [Philosopher] dies due to the [Shabaloth] that night, the [Philosopher] learns nothing and the [Washerwoman] is no longer [Philosopher] drunk.",
+        "math":"green",
+        "reason":"Characters that kill players generally go before players that learn information.",
+        "mathInfo":"No ability has malfunctioned."},
+    {
+        "text":"If the [Philosopher] chooses [Washerwoman], and the [Philosopher] dies due to the [Pukka] that night, the [Philosopher] learns nothing and the [Washerwoman] is no longer [Philosopher] drunk.",
+        "math":"green",
+        "reason":"Characters that kill players generally go before players that learn information.",
+        "mathInfo":"No ability has malfunctioned."},
+    {
+        "text":"If the [Philosopher] chooses [Washerwoman], and the [Philosopher] dies due to the [Po] that night, the [Philosopher] learns nothing and the [Washerwoman] is no longer [Philosopher] drunk.",
+        "math":"green",
+        "reason":"Characters that kill players generally go before players that learn information.",
+        "mathInfo":"No ability has malfunctioned."},
+    {
+        "text":"If the [Philosopher] chooses [Washerwoman], and the [Philosopher] dies due to the [Ojo] that night, the [Philosopher] learns nothing and the [Washerwoman] is no longer [Philosopher] drunk.",
+        "math":"green",
+        "reason":"Characters that kill players generally go before players that learn information.",
+        "mathInfo":"No ability has malfunctioned."},
+    {
+        "text":"If the [Philosopher] chooses [Washerwoman], and the [Philosopher] dies due to the [No Dashii] that night, the [Philosopher] learns nothing and the [Washerwoman] is no longer [Philosopher] drunk.",
+        "math":"green",
+        "reason":"Characters that kill players generally go before players that learn information.",
+        "mathInfo":"No ability has malfunctioned."},
+    {
+        "text":"If the [Philosopher] chooses [Washerwoman], and the [Philosopher] dies due to the [Lord of Typhon] that night, the [Philosopher] learns nothing and the [Washerwoman] is no longer [Philosopher] drunk.",
+        "math":"green",
+        "reason":"Characters that kill players generally go before players that learn information.",
+        "mathInfo":"No ability has malfunctioned."},
+    {
+        "text":"If the [Philosopher] chooses [Washerwoman], and the [Philosopher] dies due to the [Lleech] that night, the [Philosopher] learns nothing and the [Washerwoman] is no longer [Philosopher] drunk.",
+        "math":"green",
+        "reason":"Characters that kill players generally go before players that learn information.",
+        "mathInfo":"No ability has malfunctioned."},
+    {
+        "text":"If the [Philosopher] chooses [Washerwoman], and the [Philosopher] dies due to the [Lil' Monsta] that night, the [Philosopher] learns nothing and the [Washerwoman] is no longer [Philosopher] drunk.",
+        "math":"green",
+        "reason":"Characters that kill players generally go before players that learn information.",
+        "mathInfo":"No ability has malfunctioned."},
+    {
+        "text":"If the [Philosopher] chooses [Washerwoman], and the [Philosopher] dies due to the [Legion] that night, the [Philosopher] learns nothing and the [Washerwoman] is no longer [Philosopher] drunk.",
+        "math":"green",
+        "reason":"Characters that kill players generally go before players that learn information.",
+        "mathInfo":"No ability has malfunctioned."},
+    {
+        "text":"If the [Philosopher] chooses [Washerwoman], and the [Philosopher] dies due to the [Kazali] that night, the [Philosopher] learns nothing and the [Washerwoman] is no longer [Philosopher] drunk.",
+        "math":"green",
+        "reason":"Characters that kill players generally go before players that learn information.",
+        "mathInfo":"No ability has malfunctioned."},
+    {
+        "text":"If the [Philosopher] chooses [Washerwoman], and the [Philosopher] dies due to the [Imp] that night, the [Philosopher] learns nothing and the [Washerwoman] is no longer [Philosopher] drunk.",
+        "math":"green",
+        "reason":"Characters that kill players generally go before players that learn information.",
+        "mathInfo":"No ability has malfunctioned."},
+    {
+        "text":"If the [Philosopher] chooses [Washerwoman], and the [Philosopher] dies due to the [Fang Gu] that night, the [Philosopher] learns nothing and the [Washerwoman] is no longer [Philosopher] drunk.",
+        "math":"green",
+        "reason":"Characters that kill players generally go before players that learn information.",
+        "mathInfo":"No ability has malfunctioned."},
+    {
+        "text":"If the [Philosopher] chooses [Washerwoman], and the [Philosopher] dies due to the [Al-Hadikhia] that night, the [Philosopher] learns nothing and the [Washerwoman] is no longer [Philosopher] drunk.",
+        "math":"green",
+        "reason":"Characters that kill players generally go before players that learn information.",
+        "mathInfo":"No ability has malfunctioned."},
+    {
+        "text":"If the [Philosopher] chooses [Washerwoman], and the [Philosopher] dies due to the [Harpy] that night, the [Philosopher] learns nothing and the [Washerwoman] is no longer [Philosopher] drunk.",
+        "math":"green",
+        "reason":"Characters that kill players generally go before players that learn information.",
+        "mathInfo":"No ability has malfunctioned."},
+    {
+        "text":"If the [Philosopher] chooses [Washerwoman], and the [Philosopher] dies due to the [Godfather] that night, the [Philosopher] learns nothing and the [Washerwoman] is no longer [Philosopher] drunk.",
+        "math":"green",
+        "reason":"Characters that kill players generally go before players that learn information.",
+        "mathInfo":"No ability has malfunctioned."},
+    {
+        "text":"If the [Philosopher] chooses [Washerwoman], and the [Philosopher] dies due to the [Assassin] that night, the [Philosopher] learns nothing and the [Washerwoman] is no longer [Philosopher] drunk.",
+        "math":"green",
+        "reason":"Characters that kill players generally go before players that learn information.",
+        "mathInfo":"No ability has malfunctioned."},
+    {
+        "text":"If the [Philosopher] chooses [Washerwoman], and the [Philosopher] dies due to the [Moonchild] that night, the [Philosopher] learns nothing and the [Washerwoman] is no longer [Philosopher] drunk.",
+        "math":"green",
+        "reason":"Characters that kill players generally go before players that learn information.",
+        "mathInfo":"No ability has malfunctioned."},
+    {
+        "text":"If the [Philosopher] chooses [Washerwoman], and the [Philosopher] dies due to the [Lycanthrope] that night, the [Philosopher] learns nothing and the [Washerwoman] is no longer [Philosopher] drunk.",
+        "math":"green",
+        "reason":"Characters that kill players generally go before players that learn information.",
+        "mathInfo":"No ability has malfunctioned."},
+    {
+        "text":"If the [Philosopher] chooses [Washerwoman], and the [Philosopher] dies due to the [Gossip] that night, the [Philosopher] learns nothing and the [Washerwoman] is no longer [Philosopher] drunk.",
+        "math":"green",
+        "reason":"Characters that kill players generally go before players that learn information.",
+        "mathInfo":"No ability has malfunctioned."},
+    {
+        "text":"If the [Philosopher] chooses [Steward], and the [Philosopher] dies due to the [Zombuul] that night, the [Philosopher] learns nothing and the [Steward] is no longer [Philosopher] drunk.",
+        "math":"green",
+        "reason":"Characters that kill players generally go before players that learn information.",
+        "mathInfo":"No ability has malfunctioned."},
+    {
+        "text":"If the [Philosopher] chooses [Steward], and the [Philosopher] dies due to the [Yaggababble] that night, the [Philosopher] learns nothing and the [Steward] is no longer [Philosopher] drunk.",
+        "math":"green",
+        "reason":"Characters that kill players generally go before players that learn information.",
+        "mathInfo":"No ability has malfunctioned."},
+    {
+        "text":"If the [Philosopher] chooses [Steward], and the [Philosopher] dies due to the [Vortox] that night, the [Philosopher] learns nothing and the [Steward] is no longer [Philosopher] drunk.",
+        "math":"green",
+        "reason":"Characters that kill players generally go before players that learn information.",
+        "mathInfo":"No ability has malfunctioned."},
+    {
+        "text":"If the [Philosopher] chooses [Steward], and the [Philosopher] dies due to the [Vigormortis] that night, the [Philosopher] learns nothing and the [Steward] is no longer [Philosopher] drunk.",
+        "math":"green",
+        "reason":"Characters that kill players generally go before players that learn information.",
+        "mathInfo":"No ability has malfunctioned."},
+    {
+        "text":"If the [Philosopher] chooses [Steward], and the [Philosopher] dies due to the [Shabaloth] that night, the [Philosopher] learns nothing and the [Steward] is no longer [Philosopher] drunk.",
+        "math":"green",
+        "reason":"Characters that kill players generally go before players that learn information.",
+        "mathInfo":"No ability has malfunctioned."},
+    {
+        "text":"If the [Philosopher] chooses [Steward], and the [Philosopher] dies due to the [Pukka] that night, the [Philosopher] learns nothing and the [Steward] is no longer [Philosopher] drunk.",
+        "math":"green",
+        "reason":"Characters that kill players generally go before players that learn information.",
+        "mathInfo":"No ability has malfunctioned."},
+    {
+        "text":"If the [Philosopher] chooses [Steward], and the [Philosopher] dies due to the [Po] that night, the [Philosopher] learns nothing and the [Steward] is no longer [Philosopher] drunk.",
+        "math":"green",
+        "reason":"Characters that kill players generally go before players that learn information.",
+        "mathInfo":"No ability has malfunctioned."},
+    {
+        "text":"If the [Philosopher] chooses [Steward], and the [Philosopher] dies due to the [Ojo] that night, the [Philosopher] learns nothing and the [Steward] is no longer [Philosopher] drunk.",
+        "math":"green",
+        "reason":"Characters that kill players generally go before players that learn information.",
+        "mathInfo":"No ability has malfunctioned."},
+    {
+        "text":"If the [Philosopher] chooses [Steward], and the [Philosopher] dies due to the [No Dashii] that night, the [Philosopher] learns nothing and the [Steward] is no longer [Philosopher] drunk.",
+        "math":"green",
+        "reason":"Characters that kill players generally go before players that learn information.",
+        "mathInfo":"No ability has malfunctioned."},
+    {
+        "text":"If the [Philosopher] chooses [Steward], and the [Philosopher] dies due to the [Lleech] that night, the [Philosopher] learns nothing and the [Steward] is no longer [Philosopher] drunk.",
+        "math":"green",
+        "reason":"Characters that kill players generally go before players that learn information.",
+        "mathInfo":"No ability has malfunctioned."},
+    {
+        "text":"If the [Philosopher] chooses [Steward], and the [Philosopher] dies due to the [Lord of Typhon] that night, the [Philosopher] learns nothing and the [Steward] is no longer [Philosopher] drunk.",
+        "math":"green",
+        "reason":"Characters that kill players generally go before players that learn information.",
+        "mathInfo":"No ability has malfunctioned."},
+    {
+        "text":"If the [Philosopher] chooses [Steward], and the [Philosopher] dies due to the [Lil' Monsta] that night, the [Philosopher] learns nothing and the [Steward] is no longer [Philosopher] drunk.",
+        "math":"green",
+        "reason":"Characters that kill players generally go before players that learn information.",
+        "mathInfo":"No ability has malfunctioned."},
+    {
+        "text":"If the [Philosopher] chooses [Steward], and the [Philosopher] dies due to the [Legion] that night, the [Philosopher] learns nothing and the [Steward] is no longer [Philosopher] drunk.",
+        "math":"green",
+        "reason":"Characters that kill players generally go before players that learn information.",
+        "mathInfo":"No ability has malfunctioned."},
+    {
+        "text":"If the [Philosopher] chooses [Steward], and the [Philosopher] dies due to the [Kazali] that night, the [Philosopher] learns nothing and the [Steward] is no longer [Philosopher] drunk.",
+        "math":"green",
+        "reason":"Characters that kill players generally go before players that learn information.",
+        "mathInfo":"No ability has malfunctioned."},
+    {
+        "text":"If the [Philosopher] chooses [Steward], and the [Philosopher] dies due to the [Imp] that night, the [Philosopher] learns nothing and the [Steward] is no longer [Philosopher] drunk.",
+        "math":"green",
+        "reason":"Characters that kill players generally go before players that learn information.",
+        "mathInfo":"No ability has malfunctioned."},
+    {
+        "text":"If the [Philosopher] chooses [Steward], and the [Philosopher] dies due to the [Fang Gu] that night, the [Philosopher] learns nothing and the [Steward] is no longer [Philosopher] drunk.",
+        "math":"green",
+        "reason":"Characters that kill players generally go before players that learn information.",
+        "mathInfo":"No ability has malfunctioned."},
+    {
+        "text":"If the [Philosopher] chooses [Steward], and the [Philosopher] dies due to the [Al-Hadikhia] that night, the [Philosopher] learns nothing and the [Steward] is no longer [Philosopher] drunk.",
+        "math":"green",
+        "reason":"Characters that kill players generally go before players that learn information.",
+        "mathInfo":"No ability has malfunctioned."},
+    {
+        "text":"If the [Philosopher] chooses [Steward], and the [Philosopher] dies due to the [Godfather] that night, the [Philosopher] learns nothing and the [Steward] is no longer [Philosopher] drunk.",
+        "math":"green",
+        "reason":"Characters that kill players generally go before players that learn information.",
+        "mathInfo":"No ability has malfunctioned."},
+    {
+        "text":"If the [Philosopher] chooses [Steward], and the [Philosopher] dies due to the [Harpy] that night, the [Philosopher] learns nothing and the [Steward] is no longer [Philosopher] drunk.",
+        "math":"green",
+        "reason":"Characters that kill players generally go before players that learn information.",
+        "mathInfo":"No ability has malfunctioned."},
+    {
+        "text":"If the [Philosopher] chooses [Steward], and the [Philosopher] dies due to the [Assassin] that night, the [Philosopher] learns nothing and the [Steward] is no longer [Philosopher] drunk.",
+        "math":"green",
+        "reason":"Characters that kill players generally go before players that learn information.",
+        "mathInfo":"No ability has malfunctioned."},
+    {
+        "text":"If the [Philosopher] chooses [Steward], and the [Philosopher] dies due to the [Moonchild] that night, the [Philosopher] learns nothing and the [Steward] is no longer [Philosopher] drunk.",
+        "math":"green",
+        "reason":"Characters that kill players generally go before players that learn information.",
+        "mathInfo":"No ability has malfunctioned."},
+    {
+        "text":"If the [Philosopher] chooses [Steward], and the [Philosopher] dies due to the [Lycanthrope] that night, the [Philosopher] learns nothing and the [Steward] is no longer [Philosopher] drunk.",
+        "math":"green",
+        "reason":"Characters that kill players generally go before players that learn information.",
+        "mathInfo":"No ability has malfunctioned."},
+    {
+        "text":"If the [Philosopher] chooses [Steward], and the [Philosopher] dies due to the [Gossip] that night, the [Philosopher] learns nothing and the [Steward] is no longer [Philosopher] drunk.",
+        "math":"green",
+        "reason":"Characters that kill players generally go before players that learn information.",
+        "mathInfo":"No ability has malfunctioned."},
+    {
+        "text":"If the [Philosopher] chooses [Shugenja], and the [Philosopher] dies due to the [Zombuul] that night, the [Philosopher] learns nothing and the [Shugenja] is no longer [Philosopher] drunk.",
+        "math":"green",
+        "reason":"Characters that kill players generally go before players that learn information.",
+        "mathInfo":"No ability has malfunctioned."},
+    {
+        "text":"If the [Philosopher] chooses [Shugenja], and the [Philosopher] dies due to the [Yaggababble] that night, the [Philosopher] learns nothing and the [Shugenja] is no longer [Philosopher] drunk.",
+        "math":"green",
+        "reason":"Characters that kill players generally go before players that learn information.",
+        "mathInfo":"No ability has malfunctioned."},
+    {
+        "text":"If the [Philosopher] chooses [Shugenja], and the [Philosopher] dies due to the [Vortox] that night, the [Philosopher] learns nothing and the [Shugenja] is no longer [Philosopher] drunk.",
+        "math":"green",
+        "reason":"Characters that kill players generally go before players that learn information.",
+        "mathInfo":"No ability has malfunctioned."},
+    {
+        "text":"If the [Philosopher] chooses [Shugenja], and the [Philosopher] dies due to the [Vigormortis] that night, the [Philosopher] learns nothing and the [Shugenja] is no longer [Philosopher] drunk.",
+        "math":"green",
+        "reason":"Characters that kill players generally go before players that learn information.",
+        "mathInfo":"No ability has malfunctioned."},
+    {
+        "text":"If the [Philosopher] chooses [Shugenja], and the [Philosopher] dies due to the [Shabaloth] that night, the [Philosopher] learns nothing and the [Shugenja] is no longer [Philosopher] drunk.",
+        "math":"green",
+        "reason":"Characters that kill players generally go before players that learn information.",
+        "mathInfo":"No ability has malfunctioned."},
+    {
+        "text":"If the [Philosopher] chooses [Shugenja], and the [Philosopher] dies due to the [Pukka] that night, the [Philosopher] learns nothing and the [Shugenja] is no longer [Philosopher] drunk.",
+        "math":"green",
+        "reason":"Characters that kill players generally go before players that learn information.",
+        "mathInfo":"No ability has malfunctioned."},
+    {
+        "text":"If the [Philosopher] chooses [Shugenja], and the [Philosopher] dies due to the [Po] that night, the [Philosopher] learns nothing and the [Shugenja] is no longer [Philosopher] drunk.",
+        "math":"green",
+        "reason":"Characters that kill players generally go before players that learn information.",
+        "mathInfo":"No ability has malfunctioned."},
+    {
+        "text":"If the [Philosopher] chooses [Shugenja], and the [Philosopher] dies due to the [Ojo] that night, the [Philosopher] learns nothing and the [Shugenja] is no longer [Philosopher] drunk.",
+        "math":"green",
+        "reason":"Characters that kill players generally go before players that learn information.",
+        "mathInfo":"No ability has malfunctioned."},
+    {
+        "text":"If the [Philosopher] chooses [Shugenja], and the [Philosopher] dies due to the [No Dashii] that night, the [Philosopher] learns nothing and the [Shugenja] is no longer [Philosopher] drunk.",
+        "math":"green",
+        "reason":"Characters that kill players generally go before players that learn information.",
+        "mathInfo":"No ability has malfunctioned."},
+    {
+        "text":"If the [Philosopher] chooses [Shugenja], and the [Philosopher] dies due to the [Lord of Typhon] that night, the [Philosopher] learns nothing and the [Shugenja] is no longer [Philosopher] drunk.",
+        "math":"green",
+        "reason":"Characters that kill players generally go before players that learn information.",
+        "mathInfo":"No ability has malfunctioned."},
+    {
+        "text":"If the [Philosopher] chooses [Shugenja], and the [Philosopher] dies due to the [Lleech] that night, the [Philosopher] learns nothing and the [Shugenja] is no longer [Philosopher] drunk.",
+        "math":"green",
+        "reason":"Characters that kill players generally go before players that learn information.",
+        "mathInfo":"No ability has malfunctioned."},
+    {
+        "text":"If the [Philosopher] chooses [Shugenja], and the [Philosopher] dies due to the [Lil' Monsta] that night, the [Philosopher] learns nothing and the [Shugenja] is no longer [Philosopher] drunk.",
+        "math":"green",
+        "reason":"Characters that kill players generally go before players that learn information.",
+        "mathInfo":"No ability has malfunctioned."},
+    {
+        "text":"If the [Philosopher] chooses [Shugenja], and the [Philosopher] dies due to the [Legion] that night, the [Philosopher] learns nothing and the [Shugenja] is no longer [Philosopher] drunk.",
+        "math":"green",
+        "reason":"Characters that kill players generally go before players that learn information.",
+        "mathInfo":"No ability has malfunctioned."},
+    {
+        "text":"If the [Philosopher] chooses [Shugenja], and the [Philosopher] dies due to the [Kazali] that night, the [Philosopher] learns nothing and the [Shugenja] is no longer [Philosopher] drunk.",
+        "math":"green",
+        "reason":"Characters that kill players generally go before players that learn information.",
+        "mathInfo":"No ability has malfunctioned."},
+    {
+        "text":"If the [Philosopher] chooses [Shugenja], and the [Philosopher] dies due to the [Imp] that night, the [Philosopher] learns nothing and the [Shugenja] is no longer [Philosopher] drunk.",
+        "math":"green",
+        "reason":"Characters that kill players generally go before players that learn information.",
+        "mathInfo":"No ability has malfunctioned."},
+    {
+        "text":"If the [Philosopher] chooses [Shugenja], and the [Philosopher] dies due to the [Fang Gu] that night, the [Philosopher] learns nothing and the [Shugenja] is no longer [Philosopher] drunk.",
+        "math":"green",
+        "reason":"Characters that kill players generally go before players that learn information.",
+        "mathInfo":"No ability has malfunctioned."},
+    {
+        "text":"If the [Philosopher] chooses [Shugenja], and the [Philosopher] dies due to the [Al-Hadikhia] that night, the [Philosopher] learns nothing and the [Shugenja] is no longer [Philosopher] drunk.",
+        "math":"green",
+        "reason":"Characters that kill players generally go before players that learn information.",
+        "mathInfo":"No ability has malfunctioned."},
+    {
+        "text":"If the [Philosopher] chooses [Shugenja], and the [Philosopher] dies due to the [Harpy] that night, the [Philosopher] learns nothing and the [Shugenja] is no longer [Philosopher] drunk.",
+        "math":"green",
+        "reason":"Characters that kill players generally go before players that learn information.",
+        "mathInfo":"No ability has malfunctioned."},
+    {
+        "text":"If the [Philosopher] chooses [Shugenja], and the [Philosopher] dies due to the [Godfather] that night, the [Philosopher] learns nothing and the [Shugenja] is no longer [Philosopher] drunk.",
+        "math":"green",
+        "reason":"Characters that kill players generally go before players that learn information.",
+        "mathInfo":"No ability has malfunctioned."},
+    {
+        "text":"If the [Philosopher] chooses [Shugenja], and the [Philosopher] dies due to the [Assassin] that night, the [Philosopher] learns nothing and the [Shugenja] is no longer [Philosopher] drunk.",
+        "math":"green",
+        "reason":"Characters that kill players generally go before players that learn information.",
+        "mathInfo":"No ability has malfunctioned."},
+    {
+        "text":"If the [Philosopher] chooses [Shugenja], and the [Philosopher] dies due to the [Moonchild] that night, the [Philosopher] learns nothing and the [Shugenja] is no longer [Philosopher] drunk.",
+        "math":"green",
+        "reason":"Characters that kill players generally go before players that learn information.",
+        "mathInfo":"No ability has malfunctioned."},
+    {
+        "text":"If the [Philosopher] chooses [Shugenja], and the [Philosopher] dies due to the [Lycanthrope] that night, the [Philosopher] learns nothing and the [Shugenja] is no longer [Philosopher] drunk.",
+        "math":"green",
+        "reason":"Characters that kill players generally go before players that learn information.",
+        "mathInfo":"No ability has malfunctioned."},
+    {
+        "text":"If the [Philosopher] chooses [Shugenja], and the [Philosopher] dies due to the [Gossip] that night, the [Philosopher] learns nothing and the [Shugenja] is no longer [Philosopher] drunk.",
+        "math":"green",
+        "reason":"Characters that kill players generally go before players that learn information.",
+        "mathInfo":"No ability has malfunctioned."},
+    {
+        "text":"If the [Philosopher] chooses [Pixie], and the [Philosopher] dies due to the [Zombuul] that night, the [Philosopher] learns nothing and the [Pixie] is no longer [Philosopher] drunk.",
+        "math":"green",
+        "reason":"Characters that kill players generally go before players that learn information.",
+        "mathInfo":"No ability has malfunctioned."},
+    {
+        "text":"If the [Philosopher] chooses [Pixie], and the [Philosopher] dies due to the [Yaggababble] that night, the [Philosopher] learns nothing and the [Pixie] is no longer [Philosopher] drunk.",
+        "math":"green",
+        "reason":"Characters that kill players generally go before players that learn information.",
+        "mathInfo":"No ability has malfunctioned."},
+    {
+        "text":"If the [Philosopher] chooses [Pixie], and the [Philosopher] dies due to the [Vortox] that night, the [Philosopher] learns nothing and the [Pixie] is no longer [Philosopher] drunk.",
+        "math":"green",
+        "reason":"Characters that kill players generally go before players that learn information.",
+        "mathInfo":"No ability has malfunctioned."},
+    {
+        "text":"If the [Philosopher] chooses [Pixie], and the [Philosopher] dies due to the [Vigormortis] that night, the [Philosopher] learns nothing and the [Pixie] is no longer [Philosopher] drunk.",
+        "math":"green",
+        "reason":"Characters that kill players generally go before players that learn information.",
+        "mathInfo":"No ability has malfunctioned."},
+    {
+        "text":"If the [Philosopher] chooses [Pixie], and the [Philosopher] dies due to the [Shabaloth] that night, the [Philosopher] learns nothing and the [Pixie] is no longer [Philosopher] drunk.",
+        "math":"green",
+        "reason":"Characters that kill players generally go before players that learn information.",
+        "mathInfo":"No ability has malfunctioned."},
+    {
+        "text":"If the [Philosopher] chooses [Pixie], and the [Philosopher] dies due to the [Pukka] that night, the [Philosopher] learns nothing and the [Pixie] is no longer [Philosopher] drunk.",
+        "math":"green",
+        "reason":"Characters that kill players generally go before players that learn information.",
+        "mathInfo":"No ability has malfunctioned."},
+    {
+        "text":"If the [Philosopher] chooses [Pixie], and the [Philosopher] dies due to the [Po] that night, the [Philosopher] learns nothing and the [Pixie] is no longer [Philosopher] drunk.",
+        "math":"green",
+        "reason":"Characters that kill players generally go before players that learn information.",
+        "mathInfo":"No ability has malfunctioned."},
+    {
+        "text":"If the [Philosopher] chooses [Pixie], and the [Philosopher] dies due to the [Ojo] that night, the [Philosopher] learns nothing and the [Pixie] is no longer [Philosopher] drunk.",
+        "math":"green",
+        "reason":"Characters that kill players generally go before players that learn information.",
+        "mathInfo":"No ability has malfunctioned."},
+    {
+        "text":"If the [Philosopher] chooses [Pixie], and the [Philosopher] dies due to the [No Dashii] that night, the [Philosopher] learns nothing and the [Pixie] is no longer [Philosopher] drunk.",
+        "math":"green",
+        "reason":"Characters that kill players generally go before players that learn information.",
+        "mathInfo":"No ability has malfunctioned."},
+    {
+        "text":"If the [Philosopher] chooses [Pixie], and the [Philosopher] dies due to the [Lord of Typhon] that night, the [Philosopher] learns nothing and the [Pixie] is no longer [Philosopher] drunk.",
+        "math":"green",
+        "reason":"Characters that kill players generally go before players that learn information.",
+        "mathInfo":"No ability has malfunctioned."},
+    {
+        "text":"If the [Philosopher] chooses [Pixie], and the [Philosopher] dies due to the [Lleech] that night, the [Philosopher] learns nothing and the [Pixie] is no longer [Philosopher] drunk.",
+        "math":"green",
+        "reason":"Characters that kill players generally go before players that learn information.",
+        "mathInfo":"No ability has malfunctioned."},
+    {
+        "text":"If the [Philosopher] chooses [Pixie], and the [Philosopher] dies due to the [Lil' Monsta] that night, the [Philosopher] learns nothing and the [Pixie] is no longer [Philosopher] drunk.",
+        "math":"green",
+        "reason":"Characters that kill players generally go before players that learn information.",
+        "mathInfo":"No ability has malfunctioned."},
+    {
+        "text":"If the [Philosopher] chooses [Pixie], and the [Philosopher] dies due to the [Legion] that night, the [Philosopher] learns nothing and the [Pixie] is no longer [Philosopher] drunk.",
+        "math":"green",
+        "reason":"Characters that kill players generally go before players that learn information.",
+        "mathInfo":"No ability has malfunctioned."},
+    {
+        "text":"If the [Philosopher] chooses [Pixie], and the [Philosopher] dies due to the [Kazali] that night, the [Philosopher] learns nothing and the [Pixie] is no longer [Philosopher] drunk.",
+        "math":"green",
+        "reason":"Characters that kill players generally go before players that learn information.",
+        "mathInfo":"No ability has malfunctioned."},
+    {
+        "text":"If the [Philosopher] chooses [Pixie], and the [Philosopher] dies due to the [Imp] that night, the [Philosopher] learns nothing and the [Pixie] is no longer [Philosopher] drunk.",
+        "math":"green",
+        "reason":"Characters that kill players generally go before players that learn information.",
+        "mathInfo":"No ability has malfunctioned."},
+    {
+        "text":"If the [Philosopher] chooses [Pixie], and the [Philosopher] dies due to the [Fang Gu] that night, the [Philosopher] learns nothing and the [Pixie] is no longer [Philosopher] drunk.",
+        "math":"green",
+        "reason":"Characters that kill players generally go before players that learn information.",
+        "mathInfo":"No ability has malfunctioned."},
+    {
+        "text":"If the [Philosopher] chooses [Pixie], and the [Philosopher] dies due to the [Al-Hadikhia] that night, the [Philosopher] learns nothing and the [Pixie] is no longer [Philosopher] drunk.",
+        "math":"green",
+        "reason":"Characters that kill players generally go before players that learn information.",
+        "mathInfo":"No ability has malfunctioned."},
+    {
+        "text":"If the [Philosopher] chooses [Pixie], and the [Philosopher] dies due to the [Harpy] that night, the [Philosopher] learns nothing and the [Pixie] is no longer [Philosopher] drunk.",
+        "math":"green",
+        "reason":"Characters that kill players generally go before players that learn information.",
+        "mathInfo":"No ability has malfunctioned."},
+    {
+        "text":"If the [Philosopher] chooses [Pixie], and the [Philosopher] dies due to the [Godfather] that night, the [Philosopher] learns nothing and the [Pixie] is no longer [Philosopher] drunk.",
+        "math":"green",
+        "reason":"Characters that kill players generally go before players that learn information.",
+        "mathInfo":"No ability has malfunctioned."},
+    {
+        "text":"If the [Philosopher] chooses [Pixie], and the [Philosopher] dies due to the [Assassin] that night, the [Philosopher] learns nothing and the [Pixie] is no longer [Philosopher] drunk.",
+        "math":"green",
+        "reason":"Characters that kill players generally go before players that learn information.",
+        "mathInfo":"No ability has malfunctioned."},
+    {
+        "text":"If the [Philosopher] chooses [Pixie], and the [Philosopher] dies due to the [Moonchild] that night, the [Philosopher] learns nothing and the [Pixie] is no longer [Philosopher] drunk.",
+        "math":"green",
+        "reason":"Characters that kill players generally go before players that learn information.",
+        "mathInfo":"No ability has malfunctioned."},
+    {
+        "text":"If the [Philosopher] chooses [Pixie], and the [Philosopher] dies due to the [Lycanthrope] that night, the [Philosopher] learns nothing and the [Pixie] is no longer [Philosopher] drunk.",
         "math":"green",
         "reason":"Characters that kill players generally go before players that learn information.",
         "mathInfo":"No ability has malfunctioned."},
@@ -411,11 +956,6 @@
         "mathInfo":"No ability has malfunctioned."},
     {
         "text":"If the [Philosopher] chooses [Noble], and the [Philosopher] dies due to the [Godfather] that night, the [Philosopher] learns nothing and the [Noble] is no longer [Philosopher] drunk.",
-        "math":"green",
-        "reason":"Characters that kill players generally go before players that learn information.",
-        "mathInfo":"No ability has malfunctioned."},
-    {
-        "text":"If the [Philosopher] chooses [Noble], and the [Philosopher] dies due to the [Cerenovus] that night, the [Philosopher] learns nothing and the [Noble] is no longer [Philosopher] drunk.",
         "math":"green",
         "reason":"Characters that kill players generally go before players that learn information.",
         "mathInfo":"No ability has malfunctioned."},
@@ -535,11 +1075,6 @@
         "reason":"Characters that kill players generally go before players that learn information.",
         "mathInfo":"No ability has malfunctioned."},
     {
-        "text":"If the [Philosopher] chooses [Librarian], and the [Philosopher] dies due to the [Cerenovus] that night, the [Philosopher] learns nothing and the [Librarian] is no longer [Philosopher] drunk.",
-        "math":"green",
-        "reason":"Characters that kill players generally go before players that learn information.",
-        "mathInfo":"No ability has malfunctioned."},
-    {
         "text":"If the [Philosopher] chooses [Librarian], and the [Philosopher] dies due to the [Assassin] that night, the [Philosopher] learns nothing and the [Librarian] is no longer [Philosopher] drunk.",
         "math":"green",
         "reason":"Characters that kill players generally go before players that learn information.",
@@ -655,11 +1190,6 @@
         "reason":"Characters that kill players generally go before players that learn information.",
         "mathInfo":"No ability has malfunctioned."},
     {
-        "text":"If the [Philosopher] chooses [Knight], and the [Philosopher] dies due to the [Cerenovus] that night, the [Philosopher] learns nothing and the [Knight] is no longer [Philosopher] drunk.",
-        "math":"green",
-        "reason":"Characters that kill players generally go before players that learn information.",
-        "mathInfo":"No ability has malfunctioned."},
-    {
         "text":"If the [Philosopher] chooses [Knight], and the [Philosopher] dies due to the [Assassin] that night, the [Philosopher] learns nothing and the [Knight] is no longer [Philosopher] drunk.",
         "math":"green",
         "reason":"Characters that kill players generally go before players that learn information.",
@@ -771,11 +1301,6 @@
         "mathInfo":"No ability has malfunctioned."},
     {
         "text":"If the [Philosopher] chooses [Investigator], and the [Philosopher] dies due to the [Godfather] that night, the [Philosopher] learns nothing and the [Investigator] is no longer [Philosopher] drunk.",
-        "math":"green",
-        "reason":"Characters that kill players generally go before players that learn information.",
-        "mathInfo":"No ability has malfunctioned."},
-    {
-        "text":"If the [Philosopher] chooses [Investigator], and the [Philosopher] dies due to the [Cerenovus] that night, the [Philosopher] learns nothing and the [Investigator] is no longer [Philosopher] drunk.",
         "math":"green",
         "reason":"Characters that kill players generally go before players that learn information.",
         "mathInfo":"No ability has malfunctioned."},
@@ -900,11 +1425,6 @@
         "reason":"Characters that kill players generally go before players that learn information.",
         "mathInfo":"No ability has malfunctioned."},
     {
-        "text":"If the [Philosopher] chooses [Grandmother], and the [Philosopher] dies due to the [Cerenovus] that night, the [Philosopher] learns nothing and the [Grandmother] is no longer [Philosopher] drunk.",
-        "math":"green",
-        "reason":"Characters that kill players generally go before players that learn information.",
-        "mathInfo":"No ability has malfunctioned."},
-    {
         "text":"If the [Philosopher] chooses [Grandmother], and the [Philosopher] dies due to the [Assassin] that night, the [Philosopher] learns nothing and the [Grandmother] is no longer [Philosopher] drunk.",
         "math":"green",
         "reason":"Characters that kill players generally go before players that learn information.",
@@ -1016,11 +1536,6 @@
         "mathInfo":"No ability has malfunctioned."},
     {
         "text":"If the [Philosopher] chooses [Clockmaker], and the [Philosopher] dies due to the [Godfather] that night, the [Philosopher] learns nothing and the [Clockmaker] is no longer [Philosopher] drunk.",
-        "math":"green",
-        "reason":"Characters that kill players generally go before players that learn information.",
-        "mathInfo":"No ability has malfunctioned."},
-    {
-        "text":"If the [Philosopher] chooses [Clockmaker], and the [Philosopher] dies due to the [Cerenovus] that night, the [Philosopher] learns nothing and the [Clockmaker] is no longer [Philosopher] drunk.",
         "math":"green",
         "reason":"Characters that kill players generally go before players that learn information.",
         "mathInfo":"No ability has malfunctioned."},
@@ -1140,11 +1655,6 @@
         "reason":"Characters that kill players generally go before players that learn information.",
         "mathInfo":"No ability has malfunctioned."},
     {
-        "text":"If the [Philosopher] chooses [Chef], and the [Philosopher] dies due to the [Cerenovus] that night, the [Philosopher] learns nothing and the [Chef] is no longer [Philosopher] drunk.",
-        "math":"green",
-        "reason":"Characters that kill players generally go before players that learn information.",
-        "mathInfo":"No ability has malfunctioned."},
-    {
         "text":"If the [Philosopher] chooses [Chef], and the [Philosopher] dies due to the [Assassin] that night, the [Philosopher] learns nothing and the [Chef] is no longer [Philosopher] drunk.",
         "math":"green",
         "reason":"Characters that kill players generally go before players that learn information.",
@@ -1260,11 +1770,6 @@
         "reason":"Characters that kill players generally go before players that learn information.",
         "mathInfo":"No ability has malfunctioned."},
     {
-        "text":"If the [Pit-Hag] creates a [Bounty Hunter], and the [Bounty Hunter] dies due to the [Cerenovus] that night, the [Bounty Hunter] learns nothing. No Townsfolk is turned evil.",
-        "math":"green",
-        "reason":"Characters that kill players generally go before players that learn information.",
-        "mathInfo":"No ability has malfunctioned."},
-    {
         "text":"If the [Pit-Hag] creates a [Bounty Hunter], and the [Bounty Hunter] dies due to the [Assassin] that night, the [Bounty Hunter] learns nothing. No Townsfolk is turned evil.",
         "math":"green",
         "reason":"Characters that kill players generally go before players that learn information.",
@@ -1366,11 +1871,6 @@
         "mathInfo":"No ability has malfunctioned."},
     {
         "text":"If the [Pit-Hag] creates a [Yaggababble], and the [Yaggababble] dies due to the [Harpy] that night, the [Yaggababble] learns nothing. No players die due to the [Yaggababble].",
-        "math":"green",
-        "reason":"Characters that kill players generally go before players that learn information.",
-        "mathInfo":"No ability has malfunctioned."},
-    {
-        "text":"If the [Pit-Hag] creates a [Yaggababble], and the [Yaggababble] dies due to the [Cerenovus] that night, the [Yaggababble] learns nothing. No players die due to the [Yaggababble].",
         "math":"green",
         "reason":"Characters that kill players generally go before players that learn information.",
         "mathInfo":"No ability has malfunctioned."},
@@ -1495,11 +1995,6 @@
         "reason":"Characters that kill players generally go before players that learn information.",
         "mathInfo":"No ability has malfunctioned."},
     {
-        "text":"If the [Pit-Hag] creates a [Mezepheles], and the [Mezepheles] dies due to the [Cerenovus] that night, the [Mezepheles] learns nothing. No player is turned evil.",
-        "math":"green",
-        "reason":"Characters that kill players generally go before players that learn information.",
-        "mathInfo":"No ability has malfunctioned."},
-    {
         "text":"If the [Pit-Hag] creates a [Mezepheles], and the [Mezepheles] dies due to the [Assassin] that night, the [Mezepheles] learns nothing. No player is turned evil.",
         "math":"green",
         "reason":"Characters that kill players generally go before players that learn information.",
@@ -1606,11 +2101,6 @@
         "mathInfo":"No ability has malfunctioned."},
     {
         "text":"If the [Pit-Hag] creates a [Godfather], and the [Godfather] dies due to the [Harpy] that night, the [Godfather] learns nothing. No Outsiders are added or removed.",
-        "math":"green",
-        "reason":"Characters that kill players generally go before players that learn information.",
-        "mathInfo":"No ability has malfunctioned."},
-    {
-        "text":"If the [Pit-Hag] creates a [Godfather], and the [Godfather] dies due to the [Cerenovus] that night, the [Godfather] learns nothing. No Outsiders are added or removed.",
         "math":"green",
         "reason":"Characters that kill players generally go before players that learn information.",
         "mathInfo":"No ability has malfunctioned."},
@@ -1730,11 +2220,6 @@
         "reason":"Characters that kill players generally go before players that learn information.",
         "mathInfo":"No ability has malfunctioned."},
     {
-        "text":"If the [Pit-Hag] creates a [Washerwoman], and the [Washerwoman] dies due to the [Cerenovus] that night, the [Washerwoman] learns nothing.",
-        "math":"green",
-        "reason":"Characters that kill players generally go before players that learn information.",
-        "mathInfo":"No ability has malfunctioned."},
-    {
         "text":"If the [Pit-Hag] creates a [Washerwoman], and the [Washerwoman] dies due to the [Assassin] that night, the [Washerwoman] learns nothing.",
         "math":"green",
         "reason":"Characters that kill players generally go before players that learn information.",
@@ -1846,11 +2331,6 @@
         "mathInfo":"No ability has malfunctioned."},
     {
         "text":"If the [Pit-Hag] creates a [Steward], and the [Steward] dies due to the [Godfather] that night, the [Steward] learns nothing.",
-        "math":"green",
-        "reason":"Characters that kill players generally go before players that learn information.",
-        "mathInfo":"No ability has malfunctioned."},
-    {
-        "text":"If the [Pit-Hag] creates a [Steward], and the [Steward] dies due to the [Cerenovus] that night, the [Steward] learns nothing.",
         "math":"green",
         "reason":"Characters that kill players generally go before players that learn information.",
         "mathInfo":"No ability has malfunctioned."},
@@ -1970,11 +2450,6 @@
         "reason":"Characters that kill players generally go before players that learn information.",
         "mathInfo":"No ability has malfunctioned."},
     {
-        "text":"If the [Pit-Hag] creates a [Shugenja], and the [Shugenja] dies due to the [Cerenovus] that night, the [Shugenja] learns nothing.",
-        "math":"green",
-        "reason":"Characters that kill players generally go before players that learn information.",
-        "mathInfo":"No ability has malfunctioned."},
-    {
         "text":"If the [Pit-Hag] creates a [Shugenja], and the [Shugenja] dies due to the [Assassin] that night, the [Shugenja] learns nothing.",
         "math":"green",
         "reason":"Characters that kill players generally go before players that learn information.",
@@ -2086,11 +2561,6 @@
         "mathInfo":"No ability has malfunctioned."},
     {
         "text":"If the [Pit-Hag] creates a [Pixie], and the [Pixie] dies due to the [Godfather] that night, the [Pixie] learns nothing.",
-        "math":"green",
-        "reason":"Characters that kill players generally go before players that learn information.",
-        "mathInfo":"No ability has malfunctioned."},
-    {
-        "text":"If the [Pit-Hag] creates a [Pixie], and the [Pixie] dies due to the [Cerenovus] that night, the [Pixie] learns nothing.",
         "math":"green",
         "reason":"Characters that kill players generally go before players that learn information.",
         "mathInfo":"No ability has malfunctioned."},
@@ -2210,11 +2680,6 @@
         "reason":"Characters that kill players generally go before players that learn information.",
         "mathInfo":"No ability has malfunctioned."},
     {
-        "text":"If the [Pit-Hag] creates a [Noble], and the [Noble] dies due to the [Cerenovus] that night, the [Noble] learns nothing.",
-        "math":"green",
-        "reason":"Characters that kill players generally go before players that learn information.",
-        "mathInfo":"No ability has malfunctioned."},
-    {
         "text":"If the [Pit-Hag] creates a [Noble], and the [Noble] dies due to the [Assassin] that night, the [Noble] learns nothing.",
         "math":"green",
         "reason":"Characters that kill players generally go before players that learn information.",
@@ -2326,11 +2791,6 @@
         "mathInfo":"No ability has malfunctioned."},
     {
         "text":"If the [Pit-Hag] creates a [Librarian], and the [Librarian] dies due to the [Godfather] that night, the [Librarian] learns nothing.",
-        "math":"green",
-        "reason":"Characters that kill players generally go before players that learn information.",
-        "mathInfo":"No ability has malfunctioned."},
-    {
-        "text":"If the [Pit-Hag] creates a [Librarian], and the [Librarian] dies due to the [Cerenovus] that night, the [Librarian] learns nothing.",
         "math":"green",
         "reason":"Characters that kill players generally go before players that learn information.",
         "mathInfo":"No ability has malfunctioned."},
@@ -2450,11 +2910,6 @@
         "reason":"Characters that kill players generally go before players that learn information.",
         "mathInfo":"No ability has malfunctioned."},
     {
-        "text":"If the [Pit-Hag] creates a [Knight], and the [Knight] dies due to the [Cerenovus] that night, the [Knight] learns nothing.",
-        "math":"green",
-        "reason":"Characters that kill players generally go before players that learn information.",
-        "mathInfo":"No ability has malfunctioned."},
-    {
         "text":"If the [Pit-Hag] creates a [Knight], and the [Knight] dies due to the [Assassin] that night, the [Knight] learns nothing.",
         "math":"green",
         "reason":"Characters that kill players generally go before players that learn information.",
@@ -2566,11 +3021,6 @@
         "mathInfo":"No ability has malfunctioned."},
     {
         "text":"If the [Pit-Hag] creates an [Investigator], and the [Investigator] dies due to the [Godfather] that night, the [Investigator] learns nothing.",
-        "math":"green",
-        "reason":"Characters that kill players generally go before players that learn information.",
-        "mathInfo":"No ability has malfunctioned."},
-    {
-        "text":"If the [Pit-Hag] creates an [Investigator], and the [Investigator] dies due to the [Cerenovus] that night, the [Investigator] learns nothing.",
         "math":"green",
         "reason":"Characters that kill players generally go before players that learn information.",
         "mathInfo":"No ability has malfunctioned."},
@@ -2775,11 +3225,6 @@
         "reason":"Characters that kill players generally go before players that learn information.",
         "mathInfo":"No ability has malfunctioned."},
     {
-        "text":"If the [Pit-Hag] creates a [Grandmother], and the [Grandmother] dies due to the [Cerenovus] that night, the [Grandmother] learns nothing.",
-        "math":"green",
-        "reason":"Characters that kill players generally go before players that learn information.",
-        "mathInfo":"No ability has malfunctioned."},
-    {
         "text":"If the [Pit-Hag] creates a [Grandmother], and the [Grandmother] dies due to the [Assassin] that night, the [Grandmother] learns nothing.",
         "math":"green",
         "reason":"Characters that kill players generally go before players that learn information.",
@@ -2895,11 +3340,6 @@
         "reason":"Characters that kill players generally go before players that learn information.",
         "mathInfo":"No ability has malfunctioned."},
     {
-        "text":"If the [Pit-Hag] creates a [Clockmaker], and the [Clockmaker] dies due to the [Cerenovus] that night, the [Clockmaker] learns nothing.",
-        "math":"green",
-        "reason":"Characters that kill players generally go before players that learn information.",
-        "mathInfo":"No ability has malfunctioned."},
-    {
         "text":"If the [Pit-Hag] creates a [Clockmaker], and the [Clockmaker] dies due to the [Assassin] that night, the [Clockmaker] learns nothing.",
         "math":"green",
         "reason":"Characters that kill players generally go before players that learn information.",
@@ -3011,11 +3451,6 @@
         "mathInfo":"No ability has malfunctioned."},
     {
         "text":"If the [Pit-Hag] creates a [Chef], and the [Chef] dies due to the [Godfather] that night, the [Chef] learns nothing.",
-        "math":"green",
-        "reason":"Characters that kill players generally go before players that learn information.",
-        "mathInfo":"No ability has malfunctioned."},
-    {
-        "text":"If the [Pit-Hag] creates a [Chef], and the [Chef] dies due to the [Cerenovus] that night, the [Chef] learns nothing.",
         "math":"green",
         "reason":"Characters that kill players generally go before players that learn information.",
         "mathInfo":"No ability has malfunctioned."},
