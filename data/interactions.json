@@ -330,32 +330,687 @@
         "reason":"Characters that kill players generally go before players that learn information.",
         "mathInfo":"No ability has malfunctioned."},
     {
-        "text":"If the [Pit-Hag] creates a [Knight], and the [Knight] dies that night, the [Knight] learns nothing.",
+        "text":"If the [Pit-Hag] creates a [Knight], and the [Knight] dies due to the [Zombuul] that night, the [Knight] learns nothing.",
         "math":"green",
         "reason":"Characters that kill players generally go before players that learn information.",
         "mathInfo":"No ability has malfunctioned."},
     {
-        "text":"If the [Pit-Hag] creates a [Investigator], and the [Investigator] dies that night, the [Investigator] learns nothing.",
+        "text":"If the [Pit-Hag] creates a [Knight], and the [Knight] dies due to the [Yaggababble] that night, the [Knight] learns nothing.",
         "math":"green",
         "reason":"Characters that kill players generally go before players that learn information.",
         "mathInfo":"No ability has malfunctioned."},
     {
-        "text":"If the [Pit-Hag] creates a [Grandmother], and the Demon kills the new Grandchild that night, the [Grandmother] dies and learns nothing.",
+        "text":"If the [Pit-Hag] creates a [Knight], and the [Knight] dies due to the [Vortox] that night, the [Knight] learns nothing.",
         "math":"green",
         "reason":"Characters that kill players generally go before players that learn information.",
         "mathInfo":"No ability has malfunctioned."},
     {
-        "text":"If the [Pit-Hag] creates a [Grandmother], and the [Grandmother] dies that night, the [Grandmother] learns nothing.",
+        "text":"If the [Pit-Hag] creates a [Knight], and the [Knight] dies due to the [Vigormortis] that night, the [Knight] learns nothing.",
         "math":"green",
         "reason":"Characters that kill players generally go before players that learn information.",
         "mathInfo":"No ability has malfunctioned."},
     {
-        "text":"If the [Pit-Hag] creates a [Clockmaker], and the [Clockmaker] dies that night, the [Clockmaker] learns nothing.",
+        "text":"If the [Pit-Hag] creates a [Knight], and the [Knight] dies due to the [Shabaloth] that night, the [Knight] learns nothing.",
         "math":"green",
         "reason":"Characters that kill players generally go before players that learn information.",
         "mathInfo":"No ability has malfunctioned."},
     {
-        "text":"If the [Pit-Hag] creates a [Chef], and the [Chef] dies that night, the [Chef] learns nothing.",
+        "text":"If the [Pit-Hag] creates a [Knight], and the [Knight] dies due to the [Pukka] that night, the [Knight] learns nothing.",
+        "math":"green",
+        "reason":"Characters that kill players generally go before players that learn information.",
+        "mathInfo":"No ability has malfunctioned."},
+    {
+        "text":"If the [Pit-Hag] creates a [Knight], and the [Knight] dies due to the [Po] that night, the [Knight] learns nothing.",
+        "math":"green",
+        "reason":"Characters that kill players generally go before players that learn information.",
+        "mathInfo":"No ability has malfunctioned."},
+    {
+        "text":"If the [Pit-Hag] creates a [Knight], and the [Knight] dies due to the [Ojo] that night, the [Knight] learns nothing.",
+        "math":"green",
+        "reason":"Characters that kill players generally go before players that learn information.",
+        "mathInfo":"No ability has malfunctioned."},
+    {
+        "text":"If the [Pit-Hag] creates a [Knight], and the [Knight] dies due to the [No Dashii] that night, the [Knight] learns nothing.",
+        "math":"green",
+        "reason":"Characters that kill players generally go before players that learn information.",
+        "mathInfo":"No ability has malfunctioned."},
+    {
+        "text":"If the [Pit-Hag] creates a [Knight], and the [Knight] dies due to the [Lord of Typhon] that night, the [Knight] learns nothing.",
+        "math":"green",
+        "reason":"Characters that kill players generally go before players that learn information.",
+        "mathInfo":"No ability has malfunctioned."},
+    {
+        "text":"If the [Pit-Hag] creates a [Knight], and the [Knight] dies due to the [Lleech] that night, the [Knight] learns nothing.",
+        "math":"green",
+        "reason":"Characters that kill players generally go before players that learn information.",
+        "mathInfo":"No ability has malfunctioned."},
+    {
+        "text":"If the [Pit-Hag] creates a [Knight], and the [Knight] dies due to the [Lil' Monsta] that night, the [Knight] learns nothing.",
+        "math":"green",
+        "reason":"Characters that kill players generally go before players that learn information.",
+        "mathInfo":"No ability has malfunctioned."},
+    {
+        "text":"If the [Pit-Hag] creates a [Knight], and the [Knight] dies due to the [Legion] that night, the [Knight] learns nothing.",
+        "math":"green",
+        "reason":"Characters that kill players generally go before players that learn information.",
+        "mathInfo":"No ability has malfunctioned."},
+    {
+        "text":"If the [Pit-Hag] creates a [Knight], and the [Knight] dies due to the [Kazali] that night, the [Knight] learns nothing.",
+        "math":"green",
+        "reason":"Characters that kill players generally go before players that learn information.",
+        "mathInfo":"No ability has malfunctioned."},
+    {
+        "text":"If the [Pit-Hag] creates a [Knight], and the [Knight] dies due to the [Imp] that night, the [Knight] learns nothing.",
+        "math":"green",
+        "reason":"Characters that kill players generally go before players that learn information.",
+        "mathInfo":"No ability has malfunctioned."},
+    {
+        "text":"If the [Pit-Hag] creates a [Knight], and the [Knight] dies due to the [Fang Gu] that night, the [Knight] learns nothing.",
+        "math":"green",
+        "reason":"Characters that kill players generally go before players that learn information.",
+        "mathInfo":"No ability has malfunctioned."},
+    {
+        "text":"If the [Pit-Hag] creates a [Knight], and the [Knight] dies due to the [Al-Hadikhia] that night, the [Knight] learns nothing.",
+        "math":"green",
+        "reason":"Characters that kill players generally go before players that learn information.",
+        "mathInfo":"No ability has malfunctioned."},
+    {
+        "text":"If the [Pit-Hag] creates a [Knight], and the [Knight] dies due to the [Harpy] that night, the [Knight] learns nothing.",
+        "math":"green",
+        "reason":"Characters that kill players generally go before players that learn information.",
+        "mathInfo":"No ability has malfunctioned."},
+    {
+        "text":"If the [Pit-Hag] creates a [Knight], and the [Knight] dies due to the [Godfather] that night, the [Knight] learns nothing.",
+        "math":"green",
+        "reason":"Characters that kill players generally go before players that learn information.",
+        "mathInfo":"No ability has malfunctioned."},
+    {
+        "text":"If the [Pit-Hag] creates a [Knight], and the [Knight] dies due to the [Cerenovus] that night, the [Knight] learns nothing.",
+        "math":"green",
+        "reason":"Characters that kill players generally go before players that learn information.",
+        "mathInfo":"No ability has malfunctioned."},
+    {
+        "text":"If the [Pit-Hag] creates a [Knight], and the [Knight] dies due to the [Assassin] that night, the [Knight] learns nothing.",
+        "math":"green",
+        "reason":"Characters that kill players generally go before players that learn information.",
+        "mathInfo":"No ability has malfunctioned."},
+    {
+        "text":"If the [Pit-Hag] creates a [Knight], and the [Knight] dies due to the [Moonchild] that night, the [Knight] learns nothing.",
+        "math":"green",
+        "reason":"Characters that kill players generally go before players that learn information.",
+        "mathInfo":"No ability has malfunctioned."},
+    {
+        "text":"If the [Pit-Hag] creates a [Knight], and the [Knight] dies due to the [Lycanthrope] that night, the [Knight] learns nothing.",
+        "math":"green",
+        "reason":"Characters that kill players generally go before players that learn information.",
+        "mathInfo":"No ability has malfunctioned."},
+    {
+        "text":"If the [Pit-Hag] creates a [Knight], and the [Knight] dies due to the [Gossip] that night, the [Knight] learns nothing.",
+        "math":"green",
+        "reason":"Characters that kill players generally go before players that learn information.",
+        "mathInfo":"No ability has malfunctioned."},
+    {
+        "text":"If the [Pit-Hag] creates an [Investigator], and the [Investigator] dies due to the [Zombuul] that night, the [Investigator] learns nothing.",
+        "math":"green",
+        "reason":"Characters that kill players generally go before players that learn information.",
+        "mathInfo":"No ability has malfunctioned."},
+    {
+        "text":"If the [Pit-Hag] creates an [Investigator], and the [Investigator] dies due to the [Yaggababble] that night, the [Investigator] learns nothing.",
+        "math":"green",
+        "reason":"Characters that kill players generally go before players that learn information.",
+        "mathInfo":"No ability has malfunctioned."},
+    {
+        "text":"If the [Pit-Hag] creates an [Investigator], and the [Investigator] dies due to the [Vortox] that night, the [Investigator] learns nothing.",
+        "math":"green",
+        "reason":"Characters that kill players generally go before players that learn information.",
+        "mathInfo":"No ability has malfunctioned."},
+    {
+        "text":"If the [Pit-Hag] creates an [Investigator], and the [Investigator] dies due to the [Vigormortis] that night, the [Investigator] learns nothing.",
+        "math":"green",
+        "reason":"Characters that kill players generally go before players that learn information.",
+        "mathInfo":"No ability has malfunctioned."},
+    {
+        "text":"If the [Pit-Hag] creates an [Investigator], and the [Investigator] dies due to the [Shabaloth] that night, the [Investigator] learns nothing.",
+        "math":"green",
+        "reason":"Characters that kill players generally go before players that learn information.",
+        "mathInfo":"No ability has malfunctioned."},
+    {
+        "text":"If the [Pit-Hag] creates an [Investigator], and the [Investigator] dies due to the [Pukka] that night, the [Investigator] learns nothing.",
+        "math":"green",
+        "reason":"Characters that kill players generally go before players that learn information.",
+        "mathInfo":"No ability has malfunctioned."},
+    {
+        "text":"If the [Pit-Hag] creates an [Investigator], and the [Investigator] dies due to the [Po] that night, the [Investigator] learns nothing.",
+        "math":"green",
+        "reason":"Characters that kill players generally go before players that learn information.",
+        "mathInfo":"No ability has malfunctioned."},
+    {
+        "text":"If the [Pit-Hag] creates an [Investigator], and the [Investigator] dies due to the [Ojo] that night, the [Investigator] learns nothing.",
+        "math":"green",
+        "reason":"Characters that kill players generally go before players that learn information.",
+        "mathInfo":"No ability has malfunctioned."},
+    {
+        "text":"If the [Pit-Hag] creates an [Investigator], and the [Investigator] dies due to the [No Dashii] that night, the [Investigator] learns nothing.",
+        "math":"green",
+        "reason":"Characters that kill players generally go before players that learn information.",
+        "mathInfo":"No ability has malfunctioned."},
+    {
+        "text":"If the [Pit-Hag] creates an [Investigator], and the [Investigator] dies due to the [Lord of Typhon] that night, the [Investigator] learns nothing.",
+        "math":"green",
+        "reason":"Characters that kill players generally go before players that learn information.",
+        "mathInfo":"No ability has malfunctioned."},
+    {
+        "text":"If the [Pit-Hag] creates an [Investigator], and the [Investigator] dies due to the [Lleech] that night, the [Investigator] learns nothing.",
+        "math":"green",
+        "reason":"Characters that kill players generally go before players that learn information.",
+        "mathInfo":"No ability has malfunctioned."},
+    {
+        "text":"If the [Pit-Hag] creates an [Investigator], and the [Investigator] dies due to the [Lil' Monsta] that night, the [Investigator] learns nothing.",
+        "math":"green",
+        "reason":"Characters that kill players generally go before players that learn information.",
+        "mathInfo":"No ability has malfunctioned."},
+    {
+        "text":"If the [Pit-Hag] creates an [Investigator], and the [Investigator] dies due to the [Legion] that night, the [Investigator] learns nothing.",
+        "math":"green",
+        "reason":"Characters that kill players generally go before players that learn information.",
+        "mathInfo":"No ability has malfunctioned."},
+    {
+        "text":"If the [Pit-Hag] creates an [Investigator], and the [Investigator] dies due to the [Kazali] that night, the [Investigator] learns nothing.",
+        "math":"green",
+        "reason":"Characters that kill players generally go before players that learn information.",
+        "mathInfo":"No ability has malfunctioned."},
+    {
+        "text":"If the [Pit-Hag] creates an [Investigator], and the [Investigator] dies due to the [Imp] that night, the [Investigator] learns nothing.",
+        "math":"green",
+        "reason":"Characters that kill players generally go before players that learn information.",
+        "mathInfo":"No ability has malfunctioned."},
+    {
+        "text":"If the [Pit-Hag] creates an [Investigator], and the [Investigator] dies due to the [Fang Gu] that night, the [Investigator] learns nothing.",
+        "math":"green",
+        "reason":"Characters that kill players generally go before players that learn information.",
+        "mathInfo":"No ability has malfunctioned."},
+    {
+        "text":"If the [Pit-Hag] creates an [Investigator], and the [Investigator] dies due to the [Al-Hadikhia] that night, the [Investigator] learns nothing.",
+        "math":"green",
+        "reason":"Characters that kill players generally go before players that learn information.",
+        "mathInfo":"No ability has malfunctioned."},
+    {
+        "text":"If the [Pit-Hag] creates an [Investigator], and the [Investigator] dies due to the [Harpy] that night, the [Investigator] learns nothing.",
+        "math":"green",
+        "reason":"Characters that kill players generally go before players that learn information.",
+        "mathInfo":"No ability has malfunctioned."},
+    {
+        "text":"If the [Pit-Hag] creates an [Investigator], and the [Investigator] dies due to the [Godfather] that night, the [Investigator] learns nothing.",
+        "math":"green",
+        "reason":"Characters that kill players generally go before players that learn information.",
+        "mathInfo":"No ability has malfunctioned."},
+    {
+        "text":"If the [Pit-Hag] creates an [Investigator], and the [Investigator] dies due to the [Cerenovus] that night, the [Investigator] learns nothing.",
+        "math":"green",
+        "reason":"Characters that kill players generally go before players that learn information.",
+        "mathInfo":"No ability has malfunctioned."},
+    {
+        "text":"If the [Pit-Hag] creates an [Investigator], and the [Investigator] dies due to the [Assassin] that night, the [Investigator] learns nothing.",
+        "math":"green",
+        "reason":"Characters that kill players generally go before players that learn information.",
+        "mathInfo":"No ability has malfunctioned."},
+    {
+        "text":"If the [Pit-Hag] creates an [Investigator], and the [Investigator] dies due to the [Moonchild] that night, the [Investigator] learns nothing.",
+        "math":"green",
+        "reason":"Characters that kill players generally go before players that learn information.",
+        "mathInfo":"No ability has malfunctioned."},
+    {
+        "text":"If the [Pit-Hag] creates an [Investigator], and the [Investigator] dies due to the [Lycanthrope] that night, the [Investigator] learns nothing.",
+        "math":"green",
+        "reason":"Characters that kill players generally go before players that learn information.",
+        "mathInfo":"No ability has malfunctioned."},
+    {
+        "text":"If the [Pit-Hag] creates an [Investigator], and the [Investigator] dies due to the [Gossip] that night, the [Investigator] learns nothing.",
+        "math":"green",
+        "reason":"Characters that kill players generally go before players that learn information.",
+        "mathInfo":"No ability has malfunctioned."},
+    {
+        "text":"If the [Pit-Hag] creates a [Grandmother], and the [Zombuul] kills the new Grandchild that night, the [Grandmother] dies and learns nothing.",
+        "math":"green",
+        "reason":"Characters that kill players generally go before players that learn information.",
+        "mathInfo":"No ability has malfunctioned."},
+    {
+        "text":"If the [Pit-Hag] creates a [Grandmother], and the [Yaggababble] kills the new Grandchild that night, the [Grandmother] dies and learns nothing.",
+        "math":"green",
+        "reason":"Characters that kill players generally go before players that learn information.",
+        "mathInfo":"No ability has malfunctioned."},
+    {
+        "text":"If the [Pit-Hag] creates a [Grandmother], and the [Vortox] kills the new Grandchild that night, the [Grandmother] dies and learns nothing.",
+        "math":"green",
+        "reason":"Characters that kill players generally go before players that learn information.",
+        "mathInfo":"No ability has malfunctioned."},
+    {
+        "text":"If the [Pit-Hag] creates a [Grandmother], and the [Vigormortis] kills the new Grandchild that night, the [Grandmother] dies and learns nothing.",
+        "math":"green",
+        "reason":"Characters that kill players generally go before players that learn information.",
+        "mathInfo":"No ability has malfunctioned."},
+    {
+        "text":"If the [Pit-Hag] creates a [Grandmother], and the [Shabaloth] kills the new Grandchild that night, the [Grandmother] dies and learns nothing.",
+        "math":"green",
+        "reason":"Characters that kill players generally go before players that learn information.",
+        "mathInfo":"No ability has malfunctioned."},
+    {
+        "text":"If the [Pit-Hag] creates a [Grandmother], and the [Pukka] kills the new Grandchild that night, the [Grandmother] dies and learns nothing.",
+        "math":"green",
+        "reason":"Characters that kill players generally go before players that learn information.",
+        "mathInfo":"No ability has malfunctioned."},
+    {
+        "text":"If the [Pit-Hag] creates a [Grandmother], and the [Po] kills the new Grandchild that night, the [Grandmother] dies and learns nothing.",
+        "math":"green",
+        "reason":"Characters that kill players generally go before players that learn information.",
+        "mathInfo":"No ability has malfunctioned."},
+    {
+        "text":"If the [Pit-Hag] creates a [Grandmother], and the [Ojo] kills the new Grandchild that night, the [Grandmother] dies and learns nothing.",
+        "math":"green",
+        "reason":"Characters that kill players generally go before players that learn information.",
+        "mathInfo":"No ability has malfunctioned."},
+    {
+        "text":"If the [Pit-Hag] creates a [Grandmother], and the [No Dashii] kills the new Grandchild that night, the [Grandmother] dies and learns nothing.",
+        "math":"green",
+        "reason":"Characters that kill players generally go before players that learn information.",
+        "mathInfo":"No ability has malfunctioned."},
+    {
+        "text":"If the [Pit-Hag] creates a [Grandmother], and the [Lord of Typhon] kills the new Grandchild that night, the [Grandmother] dies and learns nothing.",
+        "math":"green",
+        "reason":"Characters that kill players generally go before players that learn information.",
+        "mathInfo":"No ability has malfunctioned."},
+    {
+        "text":"If the [Pit-Hag] creates a [Grandmother], and the [Lleech] kills the new Grandchild that night, the [Grandmother] dies and learns nothing.",
+        "math":"green",
+        "reason":"Characters that kill players generally go before players that learn information.",
+        "mathInfo":"No ability has malfunctioned."},
+    {
+        "text":"If the [Pit-Hag] creates a [Grandmother], and the [Lil' Monsta] kills the new Grandchild that night, the [Grandmother] dies and learns nothing.",
+        "math":"green",
+        "reason":"Characters that kill players generally go before players that learn information.",
+        "mathInfo":"No ability has malfunctioned."},
+    {
+        "text":"If the [Pit-Hag] creates a [Grandmother], and the [Legion] kills the new Grandchild that night, the [Grandmother] dies and learns nothing.",
+        "math":"green",
+        "reason":"Characters that kill players generally go before players that learn information.",
+        "mathInfo":"No ability has malfunctioned."},
+    {
+        "text":"If the [Pit-Hag] creates a [Grandmother], and the [Kazali] kills the new Grandchild that night, the [Grandmother] dies and learns nothing.",
+        "math":"green",
+        "reason":"Characters that kill players generally go before players that learn information.",
+        "mathInfo":"No ability has malfunctioned."},
+    {
+        "text":"If the [Pit-Hag] creates a [Grandmother], and the [Imp] kills the new Grandchild that night, the [Grandmother] dies and learns nothing.",
+        "math":"green",
+        "reason":"Characters that kill players generally go before players that learn information.",
+        "mathInfo":"No ability has malfunctioned."},
+    {
+        "text":"If the [Pit-Hag] creates a [Grandmother], and the [Fang Gu] kills the new Grandchild that night, the [Grandmother] dies and learns nothing.",
+        "math":"green",
+        "reason":"Characters that kill players generally go before players that learn information.",
+        "mathInfo":"No ability has malfunctioned."},
+    {
+        "text":"If the [Pit-Hag] creates a [Grandmother], and the [Al-Hadikhia] kills the new Grandchild that night, the [Grandmother] dies and learns nothing.",
+        "math":"green",
+        "reason":"Characters that kill players generally go before players that learn information.",
+        "mathInfo":"No ability has malfunctioned."},
+    {
+        "text":"If the [Pit-Hag] creates a [Grandmother], and the [Grandmother] dies due to the [Zombuul] that night, the [Grandmother] learns nothing.",
+        "math":"green",
+        "reason":"Characters that kill players generally go before players that learn information.",
+        "mathInfo":"No ability has malfunctioned."},
+    {
+        "text":"If the [Pit-Hag] creates a [Grandmother], and the [Grandmother] dies due to the [Yaggababble] that night, the [Grandmother] learns nothing.",
+        "math":"green",
+        "reason":"Characters that kill players generally go before players that learn information.",
+        "mathInfo":"No ability has malfunctioned."},
+    {
+        "text":"If the [Pit-Hag] creates a [Grandmother], and the [Grandmother] dies due to the [Vortox] that night, the [Grandmother] learns nothing.",
+        "math":"green",
+        "reason":"Characters that kill players generally go before players that learn information.",
+        "mathInfo":"No ability has malfunctioned."},
+    {
+        "text":"If the [Pit-Hag] creates a [Grandmother], and the [Grandmother] dies due to the [Vigormortis] that night, the [Grandmother] learns nothing.",
+        "math":"green",
+        "reason":"Characters that kill players generally go before players that learn information.",
+        "mathInfo":"No ability has malfunctioned."},
+    {
+        "text":"If the [Pit-Hag] creates a [Grandmother], and the [Grandmother] dies due to the [Shabaloth] that night, the [Grandmother] learns nothing.",
+        "math":"green",
+        "reason":"Characters that kill players generally go before players that learn information.",
+        "mathInfo":"No ability has malfunctioned."},
+    {
+        "text":"If the [Pit-Hag] creates a [Grandmother], and the [Grandmother] dies due to the [Pukka] that night, the [Grandmother] learns nothing.",
+        "math":"green",
+        "reason":"Characters that kill players generally go before players that learn information.",
+        "mathInfo":"No ability has malfunctioned."},
+    {
+        "text":"If the [Pit-Hag] creates a [Grandmother], and the [Grandmother] dies due to the [Po] that night, the [Grandmother] learns nothing.",
+        "math":"green",
+        "reason":"Characters that kill players generally go before players that learn information.",
+        "mathInfo":"No ability has malfunctioned."},
+    {
+        "text":"If the [Pit-Hag] creates a [Grandmother], and the [Grandmother] dies due to the [Ojo] that night, the [Grandmother] learns nothing.",
+        "math":"green",
+        "reason":"Characters that kill players generally go before players that learn information.",
+        "mathInfo":"No ability has malfunctioned."},
+    {
+        "text":"If the [Pit-Hag] creates a [Grandmother], and the [Grandmother] dies due to the [No Dashii] that night, the [Grandmother] learns nothing.",
+        "math":"green",
+        "reason":"Characters that kill players generally go before players that learn information.",
+        "mathInfo":"No ability has malfunctioned."},
+    {
+        "text":"If the [Pit-Hag] creates a [Grandmother], and the [Grandmother] dies due to the [Lord of Typhon] that night, the [Grandmother] learns nothing.",
+        "math":"green",
+        "reason":"Characters that kill players generally go before players that learn information.",
+        "mathInfo":"No ability has malfunctioned."},
+    {
+        "text":"If the [Pit-Hag] creates a [Grandmother], and the [Grandmother] dies due to the [Lleech] that night, the [Grandmother] learns nothing.",
+        "math":"green",
+        "reason":"Characters that kill players generally go before players that learn information.",
+        "mathInfo":"No ability has malfunctioned."},
+    {
+        "text":"If the [Pit-Hag] creates a [Grandmother], and the [Grandmother] dies due to the [Lil' Monsta] that night, the [Grandmother] learns nothing.",
+        "math":"green",
+        "reason":"Characters that kill players generally go before players that learn information.",
+        "mathInfo":"No ability has malfunctioned."},
+    {
+        "text":"If the [Pit-Hag] creates a [Grandmother], and the [Grandmother] dies due to the [Legion] that night, the [Grandmother] learns nothing.",
+        "math":"green",
+        "reason":"Characters that kill players generally go before players that learn information.",
+        "mathInfo":"No ability has malfunctioned."},
+    {
+        "text":"If the [Pit-Hag] creates a [Grandmother], and the [Grandmother] dies due to the [Kazali] that night, the [Grandmother] learns nothing.",
+        "math":"green",
+        "reason":"Characters that kill players generally go before players that learn information.",
+        "mathInfo":"No ability has malfunctioned."},
+    {
+        "text":"If the [Pit-Hag] creates a [Grandmother], and the [Grandmother] dies due to the [Imp] that night, the [Grandmother] learns nothing.",
+        "math":"green",
+        "reason":"Characters that kill players generally go before players that learn information.",
+        "mathInfo":"No ability has malfunctioned."},
+    {
+        "text":"If the [Pit-Hag] creates a [Grandmother], and the [Grandmother] dies due to the [Fang Gu] that night, the [Grandmother] learns nothing.",
+        "math":"green",
+        "reason":"Characters that kill players generally go before players that learn information.",
+        "mathInfo":"No ability has malfunctioned."},
+    {
+        "text":"If the [Pit-Hag] creates a [Grandmother], and the [Grandmother] dies due to the [Al-Hadikhia] that night, the [Grandmother] learns nothing.",
+        "math":"green",
+        "reason":"Characters that kill players generally go before players that learn information.",
+        "mathInfo":"No ability has malfunctioned."},
+    {
+        "text":"If the [Pit-Hag] creates a [Grandmother], and the [Grandmother] dies due to the [Harpy] that night, the [Grandmother] learns nothing.",
+        "math":"green",
+        "reason":"Characters that kill players generally go before players that learn information.",
+        "mathInfo":"No ability has malfunctioned."},
+    {
+        "text":"If the [Pit-Hag] creates a [Grandmother], and the [Grandmother] dies due to the [Godfather] that night, the [Grandmother] learns nothing.",
+        "math":"green",
+        "reason":"Characters that kill players generally go before players that learn information.",
+        "mathInfo":"No ability has malfunctioned."},
+    {
+        "text":"If the [Pit-Hag] creates a [Grandmother], and the [Grandmother] dies due to the [Cerenovus] that night, the [Grandmother] learns nothing.",
+        "math":"green",
+        "reason":"Characters that kill players generally go before players that learn information.",
+        "mathInfo":"No ability has malfunctioned."},
+    {
+        "text":"If the [Pit-Hag] creates a [Grandmother], and the [Grandmother] dies due to the [Assassin] that night, the [Grandmother] learns nothing.",
+        "math":"green",
+        "reason":"Characters that kill players generally go before players that learn information.",
+        "mathInfo":"No ability has malfunctioned."},
+    {
+        "text":"If the [Pit-Hag] creates a [Grandmother], and the [Grandmother] dies due to the [Moonchild] that night, the [Grandmother] learns nothing.",
+        "math":"green",
+        "reason":"Characters that kill players generally go before players that learn information.",
+        "mathInfo":"No ability has malfunctioned."},
+    {
+        "text":"If the [Pit-Hag] creates a [Grandmother], and the [Grandmother] dies due to the [Lycanthrope] that night, the [Grandmother] learns nothing.",
+        "math":"green",
+        "reason":"Characters that kill players generally go before players that learn information.",
+        "mathInfo":"No ability has malfunctioned."},
+    {
+        "text":"If the [Pit-Hag] creates a [Grandmother], and the [Grandmother] dies due to the [Gossip] that night, the [Grandmother] learns nothing.",
+        "math":"green",
+        "reason":"Characters that kill players generally go before players that learn information.",
+        "mathInfo":"No ability has malfunctioned."},
+    {
+        "text":"If the [Pit-Hag] creates a [Clockmaker], and the [Clockmaker] dies due to the [Zombuul] that night, the [Clockmaker] learns nothing.",
+        "math":"green",
+        "reason":"Characters that kill players generally go before players that learn information.",
+        "mathInfo":"No ability has malfunctioned."},
+    {
+        "text":"If the [Pit-Hag] creates a [Clockmaker], and the [Clockmaker] dies due to the [Yaggababble] that night, the [Clockmaker] learns nothing.",
+        "math":"green",
+        "reason":"Characters that kill players generally go before players that learn information.",
+        "mathInfo":"No ability has malfunctioned."},
+    {
+        "text":"If the [Pit-Hag] creates a [Clockmaker], and the [Clockmaker] dies due to the [Vortox] that night, the [Clockmaker] learns nothing.",
+        "math":"green",
+        "reason":"Characters that kill players generally go before players that learn information.",
+        "mathInfo":"No ability has malfunctioned."},
+    {
+        "text":"If the [Pit-Hag] creates a [Clockmaker], and the [Clockmaker] dies due to the [Vigormortis] that night, the [Clockmaker] learns nothing.",
+        "math":"green",
+        "reason":"Characters that kill players generally go before players that learn information.",
+        "mathInfo":"No ability has malfunctioned."},
+    {
+        "text":"If the [Pit-Hag] creates a [Clockmaker], and the [Clockmaker] dies due to the [Shabaloth] that night, the [Clockmaker] learns nothing.",
+        "math":"green",
+        "reason":"Characters that kill players generally go before players that learn information.",
+        "mathInfo":"No ability has malfunctioned."},
+    {
+        "text":"If the [Pit-Hag] creates a [Clockmaker], and the [Clockmaker] dies due to the [Pukka] that night, the [Clockmaker] learns nothing.",
+        "math":"green",
+        "reason":"Characters that kill players generally go before players that learn information.",
+        "mathInfo":"No ability has malfunctioned."},
+    {
+        "text":"If the [Pit-Hag] creates a [Clockmaker], and the [Clockmaker] dies due to the [Po] that night, the [Clockmaker] learns nothing.",
+        "math":"green",
+        "reason":"Characters that kill players generally go before players that learn information.",
+        "mathInfo":"No ability has malfunctioned."},
+    {
+        "text":"If the [Pit-Hag] creates a [Clockmaker], and the [Clockmaker] dies due to the [Ojo] that night, the [Clockmaker] learns nothing.",
+        "math":"green",
+        "reason":"Characters that kill players generally go before players that learn information.",
+        "mathInfo":"No ability has malfunctioned."},
+    {
+        "text":"If the [Pit-Hag] creates a [Clockmaker], and the [Clockmaker] dies due to the [Lord of Typhon] that night, the [Clockmaker] learns nothing.",
+        "math":"green",
+        "reason":"Characters that kill players generally go before players that learn information.",
+        "mathInfo":"No ability has malfunctioned."},
+    {
+        "text":"If the [Pit-Hag] creates a [Clockmaker], and the [Clockmaker] dies due to the [No Dashii] that night, the [Clockmaker] learns nothing.",
+        "math":"green",
+        "reason":"Characters that kill players generally go before players that learn information.",
+        "mathInfo":"No ability has malfunctioned."},
+    {
+        "text":"If the [Pit-Hag] creates a [Clockmaker], and the [Clockmaker] dies due to the [Lleech] that night, the [Clockmaker] learns nothing.",
+        "math":"green",
+        "reason":"Characters that kill players generally go before players that learn information.",
+        "mathInfo":"No ability has malfunctioned."},
+    {
+        "text":"If the [Pit-Hag] creates a [Clockmaker], and the [Clockmaker] dies due to the [Lil' Monsta] that night, the [Clockmaker] learns nothing.",
+        "math":"green",
+        "reason":"Characters that kill players generally go before players that learn information.",
+        "mathInfo":"No ability has malfunctioned."},
+    {
+        "text":"If the [Pit-Hag] creates a [Clockmaker], and the [Clockmaker] dies due to the [Legion] that night, the [Clockmaker] learns nothing.",
+        "math":"green",
+        "reason":"Characters that kill players generally go before players that learn information.",
+        "mathInfo":"No ability has malfunctioned."},
+    {
+        "text":"If the [Pit-Hag] creates a [Clockmaker], and the [Clockmaker] dies due to the [Kazali] that night, the [Clockmaker] learns nothing.",
+        "math":"green",
+        "reason":"Characters that kill players generally go before players that learn information.",
+        "mathInfo":"No ability has malfunctioned."},
+    {
+        "text":"If the [Pit-Hag] creates a [Clockmaker], and the [Clockmaker] dies due to the [Imp] that night, the [Clockmaker] learns nothing.",
+        "math":"green",
+        "reason":"Characters that kill players generally go before players that learn information.",
+        "mathInfo":"No ability has malfunctioned."},
+    {
+        "text":"If the [Pit-Hag] creates a [Clockmaker], and the [Clockmaker] dies due to the [Fang Gu] that night, the [Clockmaker] learns nothing.",
+        "math":"green",
+        "reason":"Characters that kill players generally go before players that learn information.",
+        "mathInfo":"No ability has malfunctioned."},
+    {
+        "text":"If the [Pit-Hag] creates a [Clockmaker], and the [Clockmaker] dies due to the [Al-Hadikhia] that night, the [Clockmaker] learns nothing.",
+        "math":"green",
+        "reason":"Characters that kill players generally go before players that learn information.",
+        "mathInfo":"No ability has malfunctioned."},
+    {
+        "text":"If the [Pit-Hag] creates a [Clockmaker], and the [Clockmaker] dies due to the [Harpy] that night, the [Clockmaker] learns nothing.",
+        "math":"green",
+        "reason":"Characters that kill players generally go before players that learn information.",
+        "mathInfo":"No ability has malfunctioned."},
+    {
+        "text":"If the [Pit-Hag] creates a [Clockmaker], and the [Clockmaker] dies due to the [Godfather] that night, the [Clockmaker] learns nothing.",
+        "math":"green",
+        "reason":"Characters that kill players generally go before players that learn information.",
+        "mathInfo":"No ability has malfunctioned."},
+    {
+        "text":"If the [Pit-Hag] creates a [Clockmaker], and the [Clockmaker] dies due to the [Cerenovus] that night, the [Clockmaker] learns nothing.",
+        "math":"green",
+        "reason":"Characters that kill players generally go before players that learn information.",
+        "mathInfo":"No ability has malfunctioned."},
+    {
+        "text":"If the [Pit-Hag] creates a [Clockmaker], and the [Clockmaker] dies due to the [Assassin] that night, the [Clockmaker] learns nothing.",
+        "math":"green",
+        "reason":"Characters that kill players generally go before players that learn information.",
+        "mathInfo":"No ability has malfunctioned."},
+    {
+        "text":"If the [Pit-Hag] creates a [Clockmaker], and the [Clockmaker] dies due to the [Moonchild] that night, the [Clockmaker] learns nothing.",
+        "math":"green",
+        "reason":"Characters that kill players generally go before players that learn information.",
+        "mathInfo":"No ability has malfunctioned."},
+    {
+        "text":"If the [Pit-Hag] creates a [Clockmaker], and the [Clockmaker] dies due to the [Lycanthrope] that night, the [Clockmaker] learns nothing.",
+        "math":"green",
+        "reason":"Characters that kill players generally go before players that learn information.",
+        "mathInfo":"No ability has malfunctioned."},
+    {
+        "text":"If the [Pit-Hag] creates a [Clockmaker], and the [Clockmaker] dies due to the [Gossip] that night, the [Clockmaker] learns nothing.",
+        "math":"green",
+        "reason":"Characters that kill players generally go before players that learn information.",
+        "mathInfo":"No ability has malfunctioned."},
+    {
+        "text":"If the [Pit-Hag] creates a [Chef], and the [Chef] dies due to the [Zombuul] that night, the [Chef] learns nothing.",
+        "math":"green",
+        "reason":"Characters that kill players generally go before players that learn information.",
+        "mathInfo":"No ability has malfunctioned."},
+    {
+        "text":"If the [Pit-Hag] creates a [Chef], and the [Chef] dies due to the [Yaggababble] that night, the [Chef] learns nothing.",
+        "math":"green",
+        "reason":"Characters that kill players generally go before players that learn information.",
+        "mathInfo":"No ability has malfunctioned."},
+    {
+        "text":"If the [Pit-Hag] creates a [Chef], and the [Chef] dies due to the [Vortox] that night, the [Chef] learns nothing.",
+        "math":"green",
+        "reason":"Characters that kill players generally go before players that learn information.",
+        "mathInfo":"No ability has malfunctioned."},
+    {
+        "text":"If the [Pit-Hag] creates a [Chef], and the [Chef] dies due to the [Vigormortis] that night, the [Chef] learns nothing.",
+        "math":"green",
+        "reason":"Characters that kill players generally go before players that learn information.",
+        "mathInfo":"No ability has malfunctioned."},
+    {
+        "text":"If the [Pit-Hag] creates a [Chef], and the [Chef] dies due to the [Shabaloth] that night, the [Chef] learns nothing.",
+        "math":"green",
+        "reason":"Characters that kill players generally go before players that learn information.",
+        "mathInfo":"No ability has malfunctioned."},
+    {
+        "text":"If the [Pit-Hag] creates a [Chef], and the [Chef] dies due to the [Pukka] that night, the [Chef] learns nothing.",
+        "math":"green",
+        "reason":"Characters that kill players generally go before players that learn information.",
+        "mathInfo":"No ability has malfunctioned."},
+    {
+        "text":"If the [Pit-Hag] creates a [Chef], and the [Chef] dies due to the [Po] that night, the [Chef] learns nothing.",
+        "math":"green",
+        "reason":"Characters that kill players generally go before players that learn information.",
+        "mathInfo":"No ability has malfunctioned."},
+    {
+        "text":"If the [Pit-Hag] creates a [Chef], and the [Chef] dies due to the [Ojo] that night, the [Chef] learns nothing.",
+        "math":"green",
+        "reason":"Characters that kill players generally go before players that learn information.",
+        "mathInfo":"No ability has malfunctioned."},
+    {
+        "text":"If the [Pit-Hag] creates a [Chef], and the [Chef] dies due to the [No Dashii] that night, the [Chef] learns nothing.",
+        "math":"green",
+        "reason":"Characters that kill players generally go before players that learn information.",
+        "mathInfo":"No ability has malfunctioned."},
+    {
+        "text":"If the [Pit-Hag] creates a [Chef], and the [Chef] dies due to the [Lord of Typhon] that night, the [Chef] learns nothing.",
+        "math":"green",
+        "reason":"Characters that kill players generally go before players that learn information.",
+        "mathInfo":"No ability has malfunctioned."},
+    {
+        "text":"If the [Pit-Hag] creates a [Chef], and the [Chef] dies due to the [Lleech] that night, the [Chef] learns nothing.",
+        "math":"green",
+        "reason":"Characters that kill players generally go before players that learn information.",
+        "mathInfo":"No ability has malfunctioned."},
+    {
+        "text":"If the [Pit-Hag] creates a [Chef], and the [Chef] dies due to the [Lil' Monsta] that night, the [Chef] learns nothing.",
+        "math":"green",
+        "reason":"Characters that kill players generally go before players that learn information.",
+        "mathInfo":"No ability has malfunctioned."},
+    {
+        "text":"If the [Pit-Hag] creates a [Chef], and the [Chef] dies due to the [Legion] that night, the [Chef] learns nothing.",
+        "math":"green",
+        "reason":"Characters that kill players generally go before players that learn information.",
+        "mathInfo":"No ability has malfunctioned."},
+    {
+        "text":"If the [Pit-Hag] creates a [Chef], and the [Chef] dies due to the [Kazali] that night, the [Chef] learns nothing.",
+        "math":"green",
+        "reason":"Characters that kill players generally go before players that learn information.",
+        "mathInfo":"No ability has malfunctioned."},
+    {
+        "text":"If the [Pit-Hag] creates a [Chef], and the [Chef] dies due to the [Imp] that night, the [Chef] learns nothing.",
+        "math":"green",
+        "reason":"Characters that kill players generally go before players that learn information.",
+        "mathInfo":"No ability has malfunctioned."},
+    {
+        "text":"If the [Pit-Hag] creates a [Chef], and the [Chef] dies due to the [Fang Gu] that night, the [Chef] learns nothing.",
+        "math":"green",
+        "reason":"Characters that kill players generally go before players that learn information.",
+        "mathInfo":"No ability has malfunctioned."},
+    {
+        "text":"If the [Pit-Hag] creates a [Chef], and the [Chef] dies due to the [Al-Hadikhia] that night, the [Chef] learns nothing.",
+        "math":"green",
+        "reason":"Characters that kill players generally go before players that learn information.",
+        "mathInfo":"No ability has malfunctioned."},
+    {
+        "text":"If the [Pit-Hag] creates a [Chef], and the [Chef] dies due to the [Harpy] that night, the [Chef] learns nothing.",
+        "math":"green",
+        "reason":"Characters that kill players generally go before players that learn information.",
+        "mathInfo":"No ability has malfunctioned."},
+    {
+        "text":"If the [Pit-Hag] creates a [Chef], and the [Chef] dies due to the [Godfather] that night, the [Chef] learns nothing.",
+        "math":"green",
+        "reason":"Characters that kill players generally go before players that learn information.",
+        "mathInfo":"No ability has malfunctioned."},
+    {
+        "text":"If the [Pit-Hag] creates a [Chef], and the [Chef] dies due to the [Cerenovus] that night, the [Chef] learns nothing.",
+        "math":"green",
+        "reason":"Characters that kill players generally go before players that learn information.",
+        "mathInfo":"No ability has malfunctioned."},
+    {
+        "text":"If the [Pit-Hag] creates a [Chef], and the [Chef] dies due to the [Assassin] that night, the [Chef] learns nothing.",
+        "math":"green",
+        "reason":"Characters that kill players generally go before players that learn information.",
+        "mathInfo":"No ability has malfunctioned."},
+    {
+        "text":"If the [Pit-Hag] creates a [Chef], and the [Chef] dies due to the [Moonchild] that night, the [Chef] learns nothing.",
+        "math":"green",
+        "reason":"Characters that kill players generally go before players that learn information.",
+        "mathInfo":"No ability has malfunctioned."},
+    {
+        "text":"If the [Pit-Hag] creates a [Chef], and the [Chef] dies due to the [Lycanthrope] that night, the [Chef] learns nothing.",
+        "math":"green",
+        "reason":"Characters that kill players generally go before players that learn information.",
+        "mathInfo":"No ability has malfunctioned."},
+    {
+        "text":"If the [Pit-Hag] creates a [Chef], and the [Chef] dies due to the [Gossip] that night, the [Chef] learns nothing.",
         "math":"green",
         "reason":"Characters that kill players generally go before players that learn information.",
         "mathInfo":"No ability has malfunctioned."},
