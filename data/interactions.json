@@ -1,5 +1,65 @@
 [
     {
+        "text":"If the [Juggler] is resurrected due to a [Al-Hadikhia], the [Juggler] has their new ability that day.",
+        "math":"green",
+        "reason":"The Juggler gains their ability on their first day.",
+        "mathInfo":"No ability has malfunctioned."},
+    {
+        "text":"If the [Juggler] is resurrected due to a [Shabaloth], the [Juggler] has their new ability that day.",
+        "math":"green",
+        "reason":"The Juggler gains their ability on their first day.",
+        "mathInfo":"No ability has malfunctioned."},
+    {
+        "text":"If the [Juggler] is resurrected due to a [Professor], the [Juggler] has their new ability that day.",
+        "math":"green",
+        "reason":"The Juggler gains their ability on their first day.",
+        "mathInfo":"No ability has malfunctioned."},
+    {
+        "text":"If a new [Juggler] is made due to a [Cacklejack], the new [Juggler] has their ability that day.",
+        "math":"green",
+        "reason":"The Juggler gains their ability on their first day.",
+        "mathInfo":"No ability has malfunctioned."},
+    {
+        "text":"If a new [Juggler] is made due to a [Pit-Hag], the new [Juggler] has their ability that day.",
+        "math":"green",
+        "reason":"The Juggler gains their ability on their first day.",
+        "mathInfo":"No ability has malfunctioned."},
+    {
+        "text":"If a new [Juggler] is made due to a [Barber], the new [Juggler] has their ability that day.",
+        "math":"green",
+        "reason":"The Juggler gains their ability on their first day.",
+        "mathInfo":"No ability has malfunctioned."},
+    {
+        "text":"If the [Princess] is resurrected due to a [Al-Hadikhia], the [Princess] has their new ability that day.",
+        "math":"green",
+        "reason":"The Princess gains their ability on their first day.",
+        "mathInfo":"No ability has malfunctioned."},
+    {
+        "text":"If the [Princess] is resurrected due to a [Shabaloth], the [Princess] has their new ability that day.",
+        "math":"green",
+        "reason":"The Princess gains their ability on their first day.",
+        "mathInfo":"No ability has malfunctioned."},
+    {
+        "text":"If the [Princess] is resurrected due to a [Professor], the [Princess] has their new ability that day.",
+        "math":"green",
+        "reason":"The Princess gains their ability on their first day.",
+        "mathInfo":"No ability has malfunctioned."},
+    {
+        "text":"If a new [Princess] is made due to a [Cacklejack], the new [Princess] has their ability that day.",
+        "math":"green",
+        "reason":"The Princess gains their ability on their first day.",
+        "mathInfo":"No ability has malfunctioned."},
+    {
+        "text":"If a new [Princess] is made due to a [Pit-Hag], the new [Princess] has their ability that day.",
+        "math":"green",
+        "reason":"The Princess gains their ability on their first day.",
+        "mathInfo":"No ability has malfunctioned."},
+    {
+        "text":"If a new [Princess] is made due to a [Barber], the new [Princess] has their ability that day.",
+        "math":"green",
+        "reason":"The Princess gains their ability on their first day.",
+        "mathInfo":"No ability has malfunctioned."},
+    {
         "text":"If the [Zombuul] dies or registers as dying by execution, and the [Barista] ability causes the [Cannibal] to be sober and healthy, the [Cannibal] gains the [Zombuul] ability.",
         "math":"red",
         "reason":"If the Cannibal is Barista healthy, the Cannibal gains the ability of the character that recently died by execution, whether they were evil or not.",
