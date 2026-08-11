@@ -1,10 +1,12 @@
-console.log("interaction-finder Updated 8/09/26 18:54");
+console.log("interaction-finder Updated 8/11/26 06:59");
+let interactionIndex = {};
 document.addEventListener("DOMContentLoaded", async()=>{
     try{
-        await loadCharacters();
-        await loadInteractions();
-        buildPage();
-        loadURLCharacters();
+await loadCharacters();
+await loadInteractions();
+buildInteractionIndex();
+buildPage();
+loadURLCharacters();
     }
     catch(error){
         console.error(
@@ -87,6 +89,25 @@ function buildPage(){
 `;
     setupEvents();
     updateResults();
+}
+function buildInteractionIndex(){
+    interactionIndex = {};
+    interactions.forEach((interaction,index)=>{
+        const characterNames = new Set(
+            getCharacters(interaction.text)
+        );
+        characterNames.forEach(character=>{
+            if(!interactionIndex[character]){
+                interactionIndex[character] = [];
+            }
+            interactionIndex[character].push(index);
+        });
+    });
+    console.log(
+        "Interaction index built:",
+        Object.keys(interactionIndex).length,
+        "characters"
+    );
 }
 function updateResults(){
 const selected = [
