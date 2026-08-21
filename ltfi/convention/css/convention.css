@@ -356,3 +356,150 @@ a {
         text-align: center;
     }
 }
+/* ==========================================
+   Gallery Viewer
+========================================== */
+.gallery-viewer {
+    position: fixed;
+    inset: 0;
+    z-index: 5000;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 50px 90px;
+    background: rgba(13, 24, 33, .96);
+    opacity: 0;
+    visibility: hidden;
+    pointer-events: none;
+    transition:
+        opacity .25s ease,
+        visibility .25s ease;
+}
+.gallery-viewer.open {
+    opacity: 1;
+    visibility: visible;
+    pointer-events: auto;
+}
+/* ==========================================
+   Viewer Image
+========================================== */
+.gallery-viewer-content {
+    position: relative;
+    max-width: 90vw;
+    max-height: 90vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.gallery-viewer-content img {
+    display: block;
+    max-width: 90vw;
+    max-height: 82vh;
+    width: auto;
+    height: auto;
+    object-fit: contain;
+    border-radius: 6px;
+    box-shadow:
+        0 15px 60px rgba(0,0,0,.45);
+}
+/* ==========================================
+   Counter
+========================================== */
+.gallery-counter {
+    margin-top: 15px;
+    color: white;
+    font-size: 13px;
+    font-weight: 700;
+    letter-spacing: .1em;
+}
+/* ==========================================
+   Close Button
+========================================== */
+.gallery-close {
+    position: absolute;
+    top: 20px;
+    right: 25px;
+    width: 50px;
+    height: 50px;
+    border: 0;
+    border-radius: 50%;
+    background: rgba(255,255,255,.12);
+    color: white;
+    font-size: 34px;
+    line-height: 1;
+    cursor: pointer;
+    transition:
+        background .2s ease,
+        transform .2s ease;
+}
+.gallery-close:hover {
+    background: rgba(255,255,255,.22);
+    transform: scale(1.05);
+}
+/* ==========================================
+   Previous / Next Buttons
+========================================== */
+.gallery-arrow {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 60px;
+    height: 60px;
+    border: 0;
+    border-radius: 50%;
+    background: rgba(255,255,255,.12);
+    color: white;
+    font-size: 28px;
+    cursor: pointer;
+    transition:
+        background .2s ease,
+        transform .2s ease;
+}
+.gallery-arrow:hover {
+    background: rgba(255,255,255,.22);
+}
+.gallery-previous {
+    left: 25px;
+}
+.gallery-next {
+    right: 25px;
+}
+/* ==========================================
+   Prevent Page Scrolling
+========================================== */
+body.gallery-open {
+    overflow: hidden;
+}
+/* ==========================================
+   Mobile
+========================================== */
+@media (max-width: 700px) {
+    .gallery-viewer {
+        padding: 40px 15px;
+    }
+    .gallery-viewer-content {
+        max-width: 100%;
+    }
+    .gallery-viewer-content img {
+        max-width: 95vw;
+        max-height: 78vh;
+    }
+    .gallery-arrow {
+        width: 45px;
+        height: 45px;
+        font-size: 20px;
+    }
+    .gallery-previous {
+        left: 8px;
+    }
+    .gallery-next {
+        right: 8px;
+    }
+    .gallery-close {
+        top: 10px;
+        right: 10px;
+        width: 42px;
+        height: 42px;
+        font-size: 28px;
+    }
+}
