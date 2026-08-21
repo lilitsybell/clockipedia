@@ -503,3 +503,332 @@ body.gallery-open {
         font-size: 28px;
     }
 }
+/* ==========================================
+   Attend Page
+========================================== */
+.attend-hero {
+    padding: 100px 0 80px;
+    background: var(--white);
+}
+.attend-hero h1 {
+    margin: 0 0 25px;
+    font-size: clamp(48px, 7vw, 82px);
+    line-height: .95;
+    letter-spacing: -.05em;
+}
+.attend-hero p {
+    margin: 0;
+    font-size: 20px;
+    color: var(--muted);
+}
+/* ==========================================
+   Availability Section
+========================================== */
+.availability-section {
+    padding: 70px 0 120px;
+}
+.availability-card {
+    padding: 50px;
+    margin-bottom: 30px;
+    background: var(--white);
+    border-radius: 16px;
+    box-shadow:
+        0 5px 25px rgba(0,0,0,.06);
+}
+.availability-card h2 {
+    margin: 0 0 10px;
+    font-size: 36px;
+    line-height: 1.1;
+    letter-spacing: -.03em;
+}
+.availability-card > p {
+    margin: 0 0 30px;
+    color: var(--muted);
+    font-size: 16px;
+}
+/* ==========================================
+   Guest Dropdown
+========================================== */
+.guest-select-wrapper {
+    max-width: 450px;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+.guest-select-wrapper label {
+    font-size: 13px;
+    font-weight: 800;
+    text-transform: uppercase;
+    letter-spacing: .08em;
+}
+.guest-select-wrapper select {
+    width: 100%;
+    padding: 15px 18px;
+    border: 2px solid var(--light);
+    border-radius: 8px;
+    background: white;
+    color: var(--text);
+    font: inherit;
+    font-size: 16px;
+    cursor: pointer;
+    outline: none;
+    transition:
+        border-color .2s ease;
+}
+.guest-select-wrapper select:focus {
+    border-color: var(--accent);
+}
+/* ==========================================
+   Date Selection
+========================================== */
+.date-selection-card {
+    opacity: .55;
+    transition:
+        opacity .25s ease;
+}
+.date-selection-card.enabled {
+    opacity: 1;
+}
+.availability-instructions {
+    display: flex;
+    gap: 20px;
+    margin-bottom: 30px;
+}
+.availability-example {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 13px;
+    font-weight: 700;
+}
+.availability-example::before {
+    content: "";
+    width: 18px;
+    height: 18px;
+    border-radius: 5px;
+    display: block;
+}
+.unavailable-example::before {
+    background: var(--accent);
+}
+.available-example::before {
+    background: var(--background);
+    border: 1px solid var(--light);
+}
+/* ==========================================
+   Calendar Container
+========================================== */
+.calendar-container {
+    display: grid;
+    grid-template-columns:
+        repeat(2, minmax(0, 1fr));
+    gap: 45px 35px;
+}
+.attendance-month h3 {
+    margin: 0 0 15px;
+    font-size: 24px;
+    letter-spacing: -.02em;
+}
+/* ==========================================
+   Calendar
+========================================== */
+.attendance-calendar {
+    display: grid;
+    grid-template-columns:
+        repeat(7, 1fr);
+    gap: 5px;
+}
+.calendar-weekday {
+    padding: 8px 2px;
+    text-align: center;
+    font-size: 11px;
+    font-weight: 800;
+    text-transform: uppercase;
+    letter-spacing: .05em;
+    color: var(--muted);
+}
+.calendar-day {
+    position: relative;
+    min-height: 62px;
+    padding: 8px;
+    border: 1px solid var(--light);
+    border-radius: 7px;
+    background: var(--background);
+    color: var(--text);
+    font: inherit;
+    cursor: pointer;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: space-between;
+    transition:
+        transform .15s ease,
+        border-color .15s ease,
+        background .15s ease;
+}
+.calendar-day:not(.empty):hover {
+    transform: translateY(-2px);
+    border-color: var(--accent);
+}
+.calendar-day.empty {
+    border: 0;
+    background: transparent;
+    cursor: default;
+}
+.calendar-day-number {
+    font-size: 15px;
+    font-weight: 800;
+}
+/* ==========================================
+   Selected / Unavailable Date
+========================================== */
+.calendar-day.selected {
+    background: var(--accent);
+    border-color: var(--accent);
+    color: white;
+}
+.calendar-day.selected::after {
+    content: "UNAVAILABLE";
+    position: absolute;
+    bottom: 7px;
+    left: 8px;
+    font-size: 7px;
+    font-weight: 900;
+    letter-spacing: .05em;
+    opacity: .8;
+}
+/* ==========================================
+   Selection Summary
+========================================== */
+.selection-summary {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    margin-top: 25px;
+    font-size: 14px;
+    color: var(--muted);
+}
+.selection-summary strong {
+    color: var(--text);
+}
+.submit-availability {
+    margin-top: 20px;
+    border: 0;
+    cursor: pointer;
+}
+.submission-message {
+    min-height: 24px;
+    margin-top: 15px;
+    font-size: 14px;
+    font-weight: 700;
+}
+.submission-message.success {
+    color: #58732c;
+}
+.submission-message.error {
+    color: #b52323;
+}
+/* ==========================================
+   Heat Map
+========================================== */
+.heat-map-card {
+    margin-top: 60px;
+}
+.heat-map-legend {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    margin-bottom: 30px;
+}
+.legend-item {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 13px;
+    font-weight: 700;
+}
+.legend-color {
+    width: 18px;
+    height: 18px;
+    border-radius: 5px;
+}
+.heat-none {
+    background: var(--background);
+}
+.heat-good {
+    background: #dce8c5;
+}
+.heat-mixed {
+    background: #f0d98a;
+}
+.heat-difficult {
+    background: #e6a35f;
+}
+.heat-bad {
+    background: #c96b6b;
+}
+.calendar-day-count {
+    font-size: 10px;
+    font-weight: 700;
+    opacity: .7;
+}
+/* ==========================================
+   Heat Map Day States
+========================================== */
+#heat-map-calendar .calendar-day {
+    cursor: default;
+}
+#heat-map-calendar .calendar-day:hover {
+    transform: none;
+    border-color: var(--light);
+}
+#heat-map-calendar .heat-good,
+#heat-map-calendar .heat-mixed,
+#heat-map-calendar .heat-difficult,
+#heat-map-calendar .heat-bad {
+    border-color: transparent;
+}
+/* ==========================================
+   Mobile
+========================================== */
+@media (max-width: 800px) {
+    .availability-card {
+        padding: 30px 20px;
+    }
+    .calendar-container {
+        grid-template-columns: 1fr;
+        gap: 40px;
+    }
+    .attend-hero {
+        padding: 70px 0 60px;
+    }
+    .attendance-calendar {
+        gap: 3px;
+    }
+    .calendar-day {
+        min-height: 55px;
+        padding: 6px;
+    }
+    .calendar-day.selected::after {
+        content: "NO";
+        font-size: 7px;
+    }
+}
+@media (max-width: 500px) {
+    .calendar-weekday {
+        font-size: 9px;
+    }
+    .calendar-day {
+        min-height: 48px;
+    }
+    .calendar-day-number {
+        font-size: 13px;
+    }
+    .calendar-day-count {
+        font-size: 8px;
+    }
+    .availability-instructions {
+        flex-direction: column;
+        gap: 8px;
+    }
+}
