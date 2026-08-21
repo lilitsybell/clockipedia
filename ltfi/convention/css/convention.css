@@ -124,8 +124,8 @@ a {
     align-items: center;
 }
 .convention-logo {
-    width: min(650px, 85vw);
-    max-height: 320px;
+    width: min(1100px, 95vw);
+    max-height: 400px;
     object-fit: contain;
     margin-bottom: 30px;
 }
