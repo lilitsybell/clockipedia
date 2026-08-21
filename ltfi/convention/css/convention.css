@@ -340,11 +340,12 @@ a {
         padding: 75px 0;
     }
     .gallery-grid {
-        grid-template-columns: 1fr 1fr;
-        grid-template-rows:
-            250px
-            180px
-            180px;
+        columns: 2 150px;
+        column-gap: 10px;
+    }
+    .gallery-item {
+        margin-bottom: 10px;
+        border-radius: 8px;
     }
     .gallery-feature {
         grid-column: span 2;
