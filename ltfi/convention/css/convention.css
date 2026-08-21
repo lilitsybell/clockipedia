@@ -504,19 +504,19 @@ body.gallery-open {
     }
 }
 /* ==========================================
-   Attend Page
+   Availability Page
 ========================================== */
-.attend-hero {
+.availability-hero {
     padding: 100px 0 80px;
     background: var(--white);
 }
-.attend-hero h1 {
+.availability-hero h1 {
     margin: 0 0 25px;
     font-size: clamp(48px, 7vw, 82px);
     line-height: .95;
     letter-spacing: -.05em;
 }
-.attend-hero p {
+.availability-hero p {
     margin: 0;
     font-size: 20px;
     color: var(--muted);
@@ -796,7 +796,7 @@ body.gallery-open {
         grid-template-columns: 1fr;
         gap: 40px;
     }
-    .attend-hero {
+    .availability-hero {
         padding: 70px 0 60px;
     }
     .attendance-calendar {
