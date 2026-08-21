@@ -5,7 +5,7 @@ console.log(
    Map Configuration
 ========================================== */
 const mapBasePath =
-    "/ltfi/convention/images/maps/";
+    "/ltfi/convention/images/map/";
 const floors = {
     lower: {
         title: "Lower Floor",
