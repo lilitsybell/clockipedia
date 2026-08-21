@@ -752,19 +752,16 @@ body.gallery-open {
     height: 18px;
     border-radius: 5px;
 }
-.heat-none {
-    background: var(--background);
-}
 .heat-good {
     background: #dce8c5;
 }
-.heat-mixed {
+.heat-one {
     background: #f0d98a;
 }
-.heat-difficult {
+.heat-two {
     background: #e6a35f;
 }
-.heat-bad {
+.heat-three {
     background: #c96b6b;
 }
 .calendar-day-count {
@@ -783,9 +780,9 @@ body.gallery-open {
     border-color: var(--light);
 }
 #heat-map-calendar .heat-good,
-#heat-map-calendar .heat-mixed,
-#heat-map-calendar .heat-difficult,
-#heat-map-calendar .heat-bad {
+#heat-map-calendar .heat-one,
+#heat-map-calendar .heat-two,
+#heat-map-calendar .heat-three {
     border-color: transparent;
 }
 /* ==========================================
