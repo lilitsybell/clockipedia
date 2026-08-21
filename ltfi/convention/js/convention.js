@@ -1,5 +1,36 @@
 console.log("Lock the Fuck In Seattle convention loaded");
 /* ==========================================
+   Convention Gallery
+========================================== */
+const galleryPhotos = [];
+for(let i = 1; i <= 52; i++){
+    galleryPhotos.push(
+        `/ltfi/convention/images/gallery/photo${i}.jpg`
+    );
+}
+function buildGallery(){
+    const gallery =
+        document.getElementById("gallery-grid");
+    if(!gallery){
+        return;
+    }
+    gallery.innerHTML = "";
+    galleryPhotos.forEach((photo, index) => {
+        const item =
+            document.createElement("div");
+        item.className = "gallery-item";
+        const image =
+            document.createElement("img");
+        image.src = photo;
+        image.alt =
+            `Lock the Fuck In 2026 - Photo ${index + 1}`;
+        image.loading = "lazy";
+        item.appendChild(image);
+        gallery.appendChild(item);
+    });
+}
+buildGallery();
+/* ==========================================
    Convention Countdown
 ========================================== */
 const conventionDate = new Date(
