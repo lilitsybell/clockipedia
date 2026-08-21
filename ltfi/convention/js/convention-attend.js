@@ -40,12 +40,8 @@ const attendanceEnd =
 /* ==========================================
    Local Test Data
 ========================================== */
-let attendanceData =
-    JSON.parse(
-        localStorage.getItem(
-            "ltfi-attendance"
-        ) || "{}"
-    );
+let attendanceData = {};
+let attendanceLoaded = false;
 /* ==========================================
    Current User
 ========================================== */
@@ -54,14 +50,11 @@ let selectedDates = new Set();
 /* ==========================================
    Initialize Attendance Page
 ========================================== */
-function initializeAttendance(){
+async function initializeAttendance(){
     const guestSelect =
         document.getElementById(
             "guest-select"
         );
-    /*
-        This isn't the attendance page.
-    */
     if(!guestSelect){
         return;
     }
@@ -69,6 +62,7 @@ function initializeAttendance(){
     buildPersonalCalendar();
     buildHeatMap();
     setupAttendanceEvents();
+    await loadAttendanceData();
 }
 /* ==========================================
    Populate Guest Dropdown
@@ -105,7 +99,6 @@ function dateKey(date){
     return date
         .toISOString()
         .split("T")[0];
-
 }
 function formatDate(date){
     return date.toLocaleDateString(
@@ -116,6 +109,29 @@ function formatDate(date){
             year: "numeric"
         }
     );
+}
+async function loadAttendanceData(){
+    try{
+        const response =
+            await fetch(
+                ATTENDANCE_API
+            );
+        if(!response.ok){
+            throw new Error(
+                "Failed to load attendance data"
+            );
+        }
+        attendanceData =
+            await response.json();
+        attendanceLoaded = true;
+        buildHeatMap();
+    }
+    catch(error){
+        console.error(
+            "Could not load attendance:",
+            error
+        );
+    }
 }
 /* ==========================================
    Generate Date List
@@ -499,7 +515,7 @@ function updateSelectedCount(){
 /* ==========================================
    Submit
 ========================================== */
-function submitAvailability(){
+async function submitAvailability(){
     if(!selectedGuest){
         showSubmissionMessage(
             "Please select your name first.",
@@ -507,19 +523,69 @@ function submitAvailability(){
         );
         return;
     }
-    attendanceData[selectedGuest] =
-        Array.from(selectedDates);
-    localStorage.setItem(
-        "ltfi-attendance",
-        JSON.stringify(
-            attendanceData
-        )
-    );
-    showSubmissionMessage(
-        `Availability saved for ${selectedGuest}.`,
-        "success"
-    );
-    buildHeatMap();
+    const button =
+        document.getElementById(
+            "submit-availability"
+        );
+    button.disabled = true;
+    button.textContent =
+        "Saving...";
+    try{
+        const response =
+            await fetch(
+                ATTENDANCE_API,
+                {
+                    method: "POST",
+                    body: JSON.stringify({
+                        name: selectedGuest,
+                        dates:
+                            Array.from(
+                                selectedDates
+                            )
+                    })
+                }
+            );
+        if(!response.ok){
+            throw new Error(
+                "Submission failed"
+            );
+        }
+        const result =
+            await response.json();
+        if(!result.success){
+            throw new Error(
+                result.error ||
+                "Submission failed"
+            );
+        }
+        /*
+            Update local data immediately so
+            the heat map changes without
+            requiring a page reload.
+        */
+        attendanceData[selectedGuest] =
+            Array.from(selectedDates);
+        buildHeatMap();
+        showSubmissionMessage(
+            `Availability saved for ${selectedGuest}.`,
+            "success"
+        );
+    }
+    catch(error){
+        console.error(
+            "Could not submit availability:",
+            error
+        );
+        showSubmissionMessage(
+            "Something went wrong saving your availability. Please try again.",
+            "error"
+        );
+    }
+    finally{
+        button.disabled = false;
+        button.textContent =
+            "Submit Availability";
+    }
 }
 /* ==========================================
    Submission Message
