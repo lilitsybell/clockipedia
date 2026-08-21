@@ -779,7 +779,12 @@ function setupAttendanceEvents(){
 /* ==========================================
    Start Attendance Page
 ========================================== */
-document.addEventListener(
-    "DOMContentLoaded",
-    initializeAttendance
-);
+if(document.readyState === "loading"){
+    document.addEventListener(
+        "DOMContentLoaded",
+        initializeAttendance
+    );
+}
+else{
+    initializeAttendance();
+}
