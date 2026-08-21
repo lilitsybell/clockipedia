@@ -1,3 +1,5 @@
+const ATTENDANCE_API =
+    "https://script.google.com/macros/s/AKfycbxXemVNG_-JqYDPdfZuqNNfSawQqumf3tPHNneHSXuzjVJty2Q7KuyDViJhZGDi811dpw/exec";
 /* ==========================================
    Guest List
 ========================================== */
