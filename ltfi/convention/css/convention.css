@@ -1,1 +1,366 @@
+/* ==========================================
+   Lock the Fuck In Seattle
+   Convention Styles
+========================================== */
+/* ==========================================
+   Variables
+========================================== */
+:root {
+    --black: #0d1821;
+    --white: #ffffff;
+    --background: #f5f3ef;
+    --light: #ebe7df;
+    --accent: #666699;
+    --accent-dark: #4e4e78;
+    --text: #0d1821;
+    --muted: #6d7075;
+}
+/* ==========================================
+   Reset
+========================================== */
+* {
+    box-sizing: border-box;
+}
+html {
+    scroll-behavior: smooth;
+}
+body {
+    margin: 0;
+    background: var(--background);
+    color: var(--text);
+    font-family:
+        Arial,
+        Helvetica,
+        sans-serif;
 
+    line-height: 1.5;
+}
+img {
+    display: block;
+    max-width: 100%;
+}
+a {
+    color: inherit;
+    text-decoration: none;
+}
+/* ==========================================
+   Navigation
+========================================== */
+.convention-header {
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    background: var(--black);
+    color: var(--white);
+    box-shadow:
+        0 3px 15px rgba(0,0,0,.15);
+}
+.convention-nav {
+    width: min(1200px, calc(100% - 40px));
+    min-height: 72px;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 30px;
+}
+.nav-logo {
+    font-weight: 900;
+    font-size: 18px;
+    letter-spacing: .08em;
+    white-space: nowrap;
+}
+.nav-links {
+    display: flex;
+    align-items: center;
+    gap: 32px;
+}
+.nav-links a {
+    position: relative;
+    padding: 26px 0;
+    font-size: 14px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: .08em;
+    opacity: .75;
+    transition:
+        opacity .2s ease;
+}
+.nav-links a:hover,
+.nav-links a.active {
+    opacity: 1;
+}
+.nav-links a.active::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 17px;
+    height: 3px;
+    background: var(--white);
+    border-radius: 3px;
+}
+/* ==========================================
+   Hero
+========================================== */
+.convention-hero {
+    min-height: 650px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 100px 20px;
+    background:
+        radial-gradient(
+            circle at center,
+            #ffffff 0%,
+            var(--background) 70%
+        );
+}
+.hero-content {
+    width: min(1000px, 100%);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.convention-logo {
+    width: min(650px, 85vw);
+    max-height: 320px;
+    object-fit: contain;
+    margin-bottom: 30px;
+}
+.event-dates {
+    font-size: 14px;
+    font-weight: 800;
+    letter-spacing: .18em;
+    color: var(--muted);
+    margin-bottom: 35px;
+}
+/* ==========================================
+   Countdown
+========================================== */
+.countdown {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 18px;
+}
+.countdown-unit {
+    min-width: 110px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.countdown-unit span {
+    font-size: clamp(42px, 6vw, 72px);
+    line-height: .95;
+    font-weight: 900;
+    letter-spacing: -.04em;
+}
+.countdown-unit small {
+    margin-top: 10px;
+    font-size: 11px;
+    font-weight: 800;
+    text-transform: uppercase;
+    letter-spacing: .15em;
+    color: var(--muted);
+}
+.countdown-separator {
+    font-size: 48px;
+    font-weight: 900;
+    opacity: .25;
+    margin-bottom: 20px;
+}
+.countdown-started {
+    font-size: clamp(36px, 6vw, 70px);
+    font-weight: 900;
+    letter-spacing: -.03em;
+}
+/* ==========================================
+   General Sections
+========================================== */
+.section-inner {
+    width: min(1200px, calc(100% - 40px));
+    margin: 0 auto;
+}
+.section-label {
+    font-size: 12px;
+    font-weight: 900;
+    letter-spacing: .18em;
+    color: var(--accent);
+    text-transform: uppercase;
+    margin-bottom: 15px;
+}
+/* ==========================================
+   About
+========================================== */
+.convention-about {
+    padding: 110px 0;
+    background: var(--white);
+}
+.about-text {
+    max-width: 760px;
+}
+.about-text h1 {
+    margin: 0 0 25px;
+    font-size: clamp(38px, 5vw, 64px);
+    line-height: 1.05;
+    letter-spacing: -.04em;
+}
+.about-text p {
+    max-width: 680px;
+    margin: 0 0 18px;
+    font-size: 18px;
+    color: var(--muted);
+}
+.primary-button {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 20px;
+    padding: 15px 25px;
+    border-radius: 8px;
+    background: var(--accent);
+    color: var(--white);
+    font-size: 14px;
+    font-weight: 800;
+    text-transform: uppercase;
+    letter-spacing: .08em;
+    transition:
+        background .2s ease,
+        transform .2s ease;
+}
+.primary-button:hover {
+    background: var(--accent-dark);
+    transform: translateY(-2px);
+}
+/* ==========================================
+   Gallery
+========================================== */
+.convention-gallery {
+    padding: 110px 0;
+}
+.gallery-heading {
+    margin-bottom: 40px;
+}
+.gallery-heading h2 {
+    margin: 0 0 10px;
+    font-size: clamp(36px, 5vw, 56px);
+    line-height: 1;
+    letter-spacing: -.04em;
+}
+.gallery-heading p {
+    margin: 0;
+    color: var(--muted);
+    font-size: 17px;
+}
+.gallery-grid {
+    display: grid;
+    grid-template-columns:
+        2fr
+        1fr
+        1fr;
+    grid-template-rows:
+        250px
+        250px;
+    gap: 15px;
+}
+.gallery-grid > div {
+    overflow: hidden;
+    border-radius: 12px;
+    background: var(--light);
+}
+.gallery-feature {
+    grid-row: span 2;
+}
+.gallery-grid img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition:
+        transform .4s ease;
+}
+.gallery-grid > div:hover img {
+    transform: scale(1.04);
+}
+/* ==========================================
+   Footer
+========================================== */
+.convention-footer {
+    padding: 35px 20px;
+    background: var(--black);
+    color: var(--white);
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+    font-size: 12px;
+    font-weight: 800;
+    letter-spacing: .12em;
+}
+/* ==========================================
+   Mobile
+========================================== */
+@media (max-width: 700px) {
+    .convention-nav {
+        flex-direction: column;
+        justify-content: center;
+        gap: 5px;
+        padding: 15px 0;
+    }
+    .nav-links {
+        width: 100%;
+        justify-content: center;
+        gap: 18px;
+    }
+    .nav-links a {
+        padding: 8px 0;
+        font-size: 11px;
+    }
+    .nav-links a.active::after {
+        bottom: 0;
+    }
+    .convention-hero {
+        min-height: 560px;
+        padding: 70px 20px;
+    }
+    .countdown {
+        gap: 5px;
+    }
+    .countdown-unit {
+        min-width: 65px;
+    }
+    .countdown-unit span {
+        font-size: 38px;
+    }
+    .countdown-unit small {
+        font-size: 8px;
+        letter-spacing: .08em;
+    }
+    .countdown-separator {
+        font-size: 28px;
+        margin-bottom: 15px;
+    }
+    .event-dates {
+        font-size: 11px;
+        letter-spacing: .1em;
+    }
+    .convention-about,
+    .convention-gallery {
+        padding: 75px 0;
+    }
+    .gallery-grid {
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows:
+            250px
+            180px
+            180px;
+    }
+    .gallery-feature {
+        grid-column: span 2;
+        grid-row: auto;
+    }
+    .convention-footer {
+        flex-direction: column;
+        text-align: center;
+    }
+}
