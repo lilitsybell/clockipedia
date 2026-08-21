@@ -411,41 +411,28 @@ function applyHeatMapColor(
 ){
     const count =
         getUnavailableCount(date);
-    const total =
-        guests.length;
-    const percentage =
-        total === 0
-            ? 0
-            : count / total;
     if(count === 0){
-        cell.classList.add(
-            "heat-none"
-        );
-    }
-    else if(
-        percentage <= .20
-    ){
+        // Everyone can attend
         cell.classList.add(
             "heat-good"
         );
     }
-    else if(
-        percentage <= .40
-    ){
+    else if(count === 1){
+        // One person cannot attend
         cell.classList.add(
-            "heat-mixed"
+            "heat-one"
         );
     }
-    else if(
-        percentage <= .60
-    ){
+    else if(count === 2){
+        // Two people cannot attend
         cell.classList.add(
-            "heat-difficult"
+            "heat-two"
         );
     }
     else{
+        // Three or more cannot attend
         cell.classList.add(
-            "heat-bad"
+            "heat-three"
         );
     }
 }
