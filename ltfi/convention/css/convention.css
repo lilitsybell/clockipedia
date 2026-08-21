@@ -829,3 +829,246 @@ body.gallery-open {
         gap: 8px;
     }
 }
+/* ==========================================
+   Map Page
+========================================== */
+.map-hero {
+    padding: 100px 0 70px;
+    background: var(--white);
+}
+.map-hero h1 {
+    margin: 0 0 20px;
+    font-size: clamp(48px, 7vw, 82px);
+    line-height: .95;
+    letter-spacing: -.05em;
+}
+.map-hero p {
+    margin: 0;
+    max-width: 650px;
+    color: var(--muted);
+    font-size: 19px;
+}
+/* ==========================================
+   Castle Map
+========================================== */
+.castle-map-section {
+    padding: 60px 0 100px;
+}
+/* ==========================================
+   Floor Tabs
+========================================== */
+.floor-tabs {
+    display: grid;
+    grid-template-columns:
+        repeat(4, 1fr);
+    gap: 10px;
+    margin-bottom: 30px;
+}
+.floor-tab {
+    padding: 18px 15px;
+    border: 2px solid transparent;
+    border-radius: 12px;
+    background: var(--white);
+    color: var(--text);
+    cursor: pointer;
+    text-align: left;
+    transition:
+        transform .15s ease,
+        border-color .15s ease,
+        background .15s ease;
+}
+.floor-tab:hover {
+    transform: translateY(-2px);
+    border-color: var(--accent);
+}
+.floor-tab.active {
+    background: var(--accent);
+    color: white;
+    border-color: var(--accent);
+}
+.floor-tab strong {
+    display: block;
+    margin-bottom: 3px;
+    font-size: 16px;
+}
+.floor-tab span {
+    display: block;
+    font-size: 11px;
+    opacity: .75;
+}
+/* ==========================================
+   Room Finder
+========================================== */
+.room-finder {
+    display: flex;
+    justify-content: space-between;
+    align-items: end;
+    gap: 30px;
+    margin-bottom: 30px;
+    padding: 28px;
+    border-radius: 14px;
+    background: var(--white);
+}
+.room-finder h2 {
+    margin: 0;
+    font-size: 28px;
+    letter-spacing: -.03em;
+}
+.room-finder-controls {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+}
+.room-finder select {
+    min-width: 280px;
+    padding: 13px 16px;
+    border: 2px solid var(--light);
+    border-radius: 8px;
+    background: white;
+    font: inherit;
+    font-size: 15px;
+    outline: none;
+    cursor: pointer;
+}
+.room-finder select:focus {
+    border-color: var(--accent);
+}
+/* ==========================================
+   Secondary Button
+========================================== */
+.secondary-button {
+    padding: 13px 18px;
+    border: 2px solid var(--accent);
+    border-radius: 8px;
+    background: transparent;
+    color: var(--accent);
+    font: inherit;
+    font-weight: 800;
+    cursor: pointer;
+}
+/* ==========================================
+   Floor Viewer
+========================================== */
+.floor-viewer {
+    width: 100%;
+    padding: 30px;
+    overflow: hidden;
+    background: white;
+    border-radius: 16px;
+    box-shadow:
+        0 8px 30px rgba(0,0,0,.07);
+}
+.floor-map {
+    position: relative;
+    width: min(100%, 1100px);
+    margin: 0 auto;
+    aspect-ratio: 1.2 / 1;
+}
+.floor-layer {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    pointer-events: none;
+}
+.floor-base {
+    z-index: 1;
+}
+.floor-room-layer {
+    z-index: 2;
+    transition:
+        opacity .2s ease;
+}
+.floor-labels {
+    z-index: 3;
+}
+.floor-single {
+    z-index: 1;
+}
+/* ==========================================
+   Floor Information
+========================================== */
+.floor-info {
+    display: flex;
+    justify-content: space-between;
+    align-items: end;
+    gap: 30px;
+    margin-top: 20px;
+    padding: 25px 5px;
+}
+.floor-info h2 {
+    margin: 0;
+    font-size: 32px;
+    letter-spacing: -.03em;
+}
+.floor-info p {
+    margin: 0;
+    max-width: 500px;
+    color: var(--muted);
+    text-align: right;
+}
+/* ==========================================
+   Location
+========================================== */
+.map-location-section {
+    padding: 80px 0;
+    background: var(--white);
+}
+.location-card {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 30px;
+    padding: 40px;
+    border-radius: 16px;
+    background: var(--background);
+}
+.location-card h2 {
+    margin: 0 0 5px;
+    font-size: 36px;
+    letter-spacing: -.03em;
+}
+.location-card p {
+    margin: 0;
+    color: var(--muted);
+}
+/* ==========================================
+   Mobile
+========================================== */
+@media (max-width: 800px) {
+    .floor-tabs {
+        grid-template-columns:
+            repeat(2, 1fr);
+    }
+    .room-finder {
+        flex-direction: column;
+        align-items: stretch;
+    }
+    .room-finder-controls {
+        flex-direction: column;
+        align-items: stretch;
+    }
+    .room-finder select {
+        min-width: 0;
+        width: 100%;
+    }
+    .floor-viewer {
+        padding: 10px;
+    }
+    .floor-map {
+        width: 100%;
+        aspect-ratio: 1 / 1;
+    }
+    .floor-info {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    .floor-info p {
+        text-align: left;
+    }
+    .location-card {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+}
