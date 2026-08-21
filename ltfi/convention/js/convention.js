@@ -280,9 +280,21 @@ function initializeAttendance(){
 ========================================== */
 function populateGuestSelect(){
     const select =
-        document.getElementById(
-            "guest-select"
-        );
+        document.getElementById("guest-select");
+    if(!select){
+        return;
+    }
+    // Clear anything currently in the dropdown
+    select.innerHTML = "";
+    // Default option
+    const defaultOption =
+        document.createElement("option");
+    defaultOption.value = "";
+    defaultOption.textContent =
+        "Select your name...";
+    defaultOption.selected = true;
+    select.appendChild(defaultOption);
+    // Add every guest
     guests.forEach(guest => {
         const option =
             document.createElement("option");
