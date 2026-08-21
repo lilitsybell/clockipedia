@@ -8,6 +8,10 @@ for(let i = 1; i <= 52; i++){
         `/ltfi/convention/images/gallery/photo${i}.jpg`
     );
 }
+let currentGalleryIndex = 0;
+/* ==========================================
+   Build Gallery
+========================================== */
 function buildGallery(){
     const gallery =
         document.getElementById("gallery-grid");
@@ -27,9 +31,135 @@ function buildGallery(){
         image.loading = "lazy";
         item.appendChild(image);
         gallery.appendChild(item);
+        item.addEventListener("click", () => {
+            openGallery(index);
+        });
     });
 }
-buildGallery();
+/* ==========================================
+   Open Gallery
+========================================== */
+function openGallery(index){
+    currentGalleryIndex = index;
+    updateGalleryViewer();
+    document
+        .getElementById("gallery-viewer")
+        .classList.add("open");
+    document.body.classList.add("gallery-open");
+}
+/* ==========================================
+   Close Gallery
+========================================== */
+function closeGallery(){
+    document
+        .getElementById("gallery-viewer")
+        .classList.remove("open");
+    document.body.classList.remove("gallery-open");
+}
+/* ==========================================
+   Previous Photo
+========================================== */
+function previousGalleryPhoto(){
+    currentGalleryIndex--;
+    if(currentGalleryIndex < 0){
+        currentGalleryIndex =
+            galleryPhotos.length - 1;
+    }
+    updateGalleryViewer();
+}
+/* ==========================================
+   Next Photo
+========================================== */
+function nextGalleryPhoto(){
+    currentGalleryIndex++;
+    if(
+        currentGalleryIndex >=
+        galleryPhotos.length
+    ){
+        currentGalleryIndex = 0;
+    }
+    updateGalleryViewer();
+}
+/* ==========================================
+   Update Viewer
+========================================== */
+function updateGalleryViewer(){
+    const image =
+        document.getElementById("gallery-viewer-image");
+    const counter =
+        document.getElementById("gallery-counter");
+    image.src =
+        galleryPhotos[currentGalleryIndex];
+    image.alt =
+        `Lock the Fuck In 2026 - Photo ${
+            currentGalleryIndex + 1
+        }`;
+    counter.textContent =
+        `${currentGalleryIndex + 1} / ${
+            galleryPhotos.length
+        }`;
+}
+/* ==========================================
+   Gallery Controls
+========================================== */
+document.addEventListener("DOMContentLoaded", () => {
+    buildGallery();
+    document
+        .getElementById("gallery-close")
+        .addEventListener("click", closeGallery);
+    document
+        .getElementById("gallery-previous")
+        .addEventListener(
+            "click",
+            previousGalleryPhoto
+        );
+    document
+        .getElementById("gallery-next")
+        .addEventListener(
+            "click",
+            nextGalleryPhoto
+        );
+    /*
+        Clicking the dark background
+        closes the viewer.
+    */
+    document
+        .getElementById("gallery-viewer")
+        .addEventListener("click", event => {
+            if(
+                event.target.id ===
+                "gallery-viewer"
+            ){
+                closeGallery();
+            }
+        });
+    /*
+        Keyboard controls
+    */
+    document.addEventListener(
+        "keydown",
+        event => {
+            const viewer =
+                document.getElementById(
+                    "gallery-viewer"
+                );
+            if(
+                !viewer.classList.contains("open")
+            ){
+                return;
+            }
+            if(event.key === "Escape"){
+                closeGallery();
+            }
+            if(event.key === "ArrowLeft"){
+                previousGalleryPhoto();
+            }
+            if(event.key === "ArrowRight"){
+                nextGalleryPhoto();
+            }
+        }
+    );
+});
 /* ==========================================
    Convention Countdown
 ========================================== */
