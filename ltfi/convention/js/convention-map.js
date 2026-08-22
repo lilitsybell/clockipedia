@@ -108,134 +108,8 @@ function initializeMap(){
     if(!map){
         return;
     }
-    buildRoomDropdown();
-    setupFloorTabs();
-    setupRoomControls();
+    setupCastleNavigation();
     renderFloor();
-}
-if(document.readyState === "loading"){
-    document.addEventListener(
-        "DOMContentLoaded",
-        initializeMap
-    );
-}
-else{
-    initializeMap();
-}
-/* ==========================================
-   Room Dropdown
-========================================== */
-function buildRoomDropdown(){
-    const select =
-        document.getElementById("room-select");
-    Object.entries(floors)
-        .forEach(([floorId, floor]) => {
-            if(
-                !floor.rooms ||
-                floor.rooms.length === 0
-            ){
-                return;
-            }
-            const group =
-                document.createElement("optgroup");
-            group.label =
-                floor.title;
-            floor.rooms.forEach(room => {
-                const option =
-                    document.createElement("option");
-                option.value =
-                    `${floorId}:${room.id}`;
-                option.textContent =
-                    room.name;
-                group.appendChild(option);
-            });
-            select.appendChild(group);
-        });
-}
-/* ==========================================
-   Floor Tabs
-========================================== */
-function setupFloorTabs(){
-    const tabs =
-        document.querySelectorAll(
-            ".floor-tab"
-        );
-    tabs.forEach(tab => {
-        tab.addEventListener(
-            "click",
-            () => {
-                currentFloor =
-                    tab.dataset.floor;
-                selectedRoom = null;
-                document
-                    .getElementById(
-                        "room-select"
-                    )
-                    .value = "";
-                updateFloorTabs();
-                renderFloor();
-            }
-        );
-    });
-}
-/* ==========================================
-   Room Controls
-========================================== */
-function setupRoomControls(){
-    const select =
-        document.getElementById(
-            "room-select"
-        );
-    const showAllButton =
-        document.getElementById(
-            "show-all-rooms"
-        );
-    select.addEventListener(
-        "change",
-        () => {
-            const value =
-                select.value;
-            if(!value){
-                selectedRoom = null;
-                renderFloor();
-                return;
-            }
-            const [
-                floorId,
-                roomId
-            ] = value.split(":");
-            currentFloor =
-                floorId;
-            selectedRoom =
-                roomId;
-            updateFloorTabs();
-            renderFloor();
-        }
-    );
-    showAllButton.addEventListener(
-        "click",
-        () => {
-            selectedRoom = null;
-            select.value = "";
-            renderFloor();
-        }
-    );
-}
-/* ==========================================
-   Update Tabs
-========================================== */
-function updateFloorTabs(){
-    document
-        .querySelectorAll(
-            ".floor-tab"
-        )
-        .forEach(tab => {
-            tab.classList.toggle(
-                "active",
-                tab.dataset.floor ===
-                    currentFloor
-            );
-        });
 }
 /* ==========================================
    Render Floor
@@ -289,6 +163,7 @@ function renderFloor(){
         );
     }
     updateFloorInfo();
+    updateCastleNavigation();
 }
 /* ==========================================
    Add Image Layer
@@ -343,4 +218,78 @@ function updateFloorInfo(){
         floor.title;
     description.textContent =
         floor.description;
+}
+/* ==========================================
+   Castle Navigation
+========================================== */
+function setupCastleNavigation(){
+    const floorButtons =
+        document.querySelectorAll(
+            ".castle-floor-button"
+        );
+    const roomButtons =
+        document.querySelectorAll(
+            ".castle-room-button"
+        );
+    /*
+        Floor buttons
+    */
+    floorButtons.forEach(button => {
+        button.addEventListener(
+            "click",
+            () => {
+                currentFloor =
+                    button.dataset.floor;
+                selectedRoom = null;
+                updateCastleNavigation();
+                renderFloor();
+            }
+        );
+    });
+    /*
+        Room buttons
+    */
+    roomButtons.forEach(button => {
+        button.addEventListener(
+            "click",
+            () => {
+                currentFloor =
+                    button.dataset.floor;
+                selectedRoom =
+                    button.dataset.room;
+                updateCastleNavigation();
+                renderFloor();
+            }
+        );
+    });
+}
+/* ==========================================
+   Navigation State
+========================================== */
+function updateCastleNavigation(){
+    document
+        .querySelectorAll(
+            ".castle-floor-button"
+        )
+        .forEach(button => {
+            button.classList.toggle(
+                "active",
+                button.dataset.floor ===
+                    currentFloor &&
+                selectedRoom === null
+            );
+        });
+    document
+        .querySelectorAll(
+            ".castle-room-button"
+        )
+        .forEach(button => {
+            button.classList.toggle(
+                "active",
+                button.dataset.floor ===
+                    currentFloor &&
+                button.dataset.room ===
+                    selectedRoom
+            );
+        });
 }
