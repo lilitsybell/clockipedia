@@ -8,7 +8,7 @@ console.log(
 ========================================== */
 
 const mapBasePath =
-    "/ltfi/convention/images/maps/";
+    "/ltfi/convention/images/map/";
 
 
 const floors = {
