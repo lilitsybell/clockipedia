@@ -12,14 +12,14 @@ const floors = {
         description:
             "Bedrooms, theater, and game spaces.",
         base:
-            "lower-2.png",
+            "lower-2.PNG",
         labels:
-            "lower-1.png",
+            "lower-1.PNG",
         rooms: [
             {
                 id: "cannibal-cottage",
                 name: "Cannibal Cottage",
-                image: "cannibal-cottage.png"
+                image: "cannibal-cottage.PNG"
             }
         ]
     },
@@ -28,24 +28,24 @@ const floors = {
         description:
             "Entry, gathering spaces, kitchen, dining, and bedrooms.",
         base:
-            "main-2.png",
+            "main-2.PNG",
         labels:
-            "main-1.png",
+            "main-1.PNG",
         rooms: [
             {
                 id: "generals-quarters",
                 name: "General's Quarters",
-                image: "generals-quarters.png"
+                image: "generals-quarters.PNG"
             },
             {
                 id: "huntsmans-hideout",
                 name: "Huntsman's Hideout",
-                image: "huntsmans-hideout.png"
+                image: "huntsmans-hideout.PNG"
             },
             {
                 id: "clockmakers-workshop",
                 name: "Clockmaker's Workshop",
-                image: "clockmakers-workshop.png"
+                image: "clockmakers-workshop.PNG"
             }
         ]
     },
@@ -54,34 +54,34 @@ const floors = {
         description:
             "Bedrooms, decks, conference space, and the hot tub.",
         base:
-            "upper-2.png",
+            "upper-2.PNG",
         labels:
-            "upper-1.png",
+            "upper-1.PNG",
         rooms: [
             {
                 id: "kazali-campground",
                 name: "Kazali Campground",
-                image: "kazali-campground.png"
+                image: "kazali-campground.PNG"
             },
             {
                 id: "politician-office",
                 name: "Politician Office",
-                image: "politician-office.png"
+                image: "politician-office.PNG"
             },
             {
                 id: "witches-den",
                 name: "Witches Den",
-                image: "witches-den.png"
+                image: "witches-den.PNG"
             },
             {
                 id: "cult-leader-compound",
                 name: "Cult Leader Compound",
-                image: "cult-leader-compound.png"
+                image: "cult-leader-compound.PNG"
             },
             {
                 id: "goblins-grotto",
                 name: "Goblin's Grotto",
-                image: "goblins-grotto.png"
+                image: "goblins-grotto.PNG"
             }
         ]
     },
@@ -90,7 +90,7 @@ const floors = {
         description:
             "The top-floor Ojo Observatory.",
         single:
-            "observatory.png",
+            "observatory.PNG",
         rooms: []
     }
 };
