@@ -69,69 +69,13 @@
         <!-- ==========================================
              Interactive Castle Map
         =========================================== -->
-        <section class="castle-map-section">
-            <div class="section-inner">
-                <!-- Floor Navigation -->
-                <div class="floor-tabs">
-                    <button
-                        class="floor-tab active"
-                        type="button"
-                        data-floor="lower"
-                    >
-                        <strong>Lower</strong>
-                        <span>Bedrooms + Games</span>
-                    </button>
-                    <button
-                        class="floor-tab"
-                        type="button"
-                        data-floor="main"
-                    >
-                        <strong>Main</strong>
-                        <span>Entry + Gathering</span>
-                    </button>
-                    <button
-                        class="floor-tab"
-                        type="button"
-                        data-floor="upper"
-                    >
-                        <strong>Upper</strong>
-                        <span>Bedrooms + Event Space</span>
-                    </button>
-                    <button
-                        class="floor-tab"
-                        type="button"
-                        data-floor="observatory"
-                    >
-                        <strong>Observatory</strong>
-                        <span>Top Floor</span>
-                    </button>
-                </div>
-                <!-- Quick Find -->
-                <div class="room-finder">
-                    <div>
-                        <div class="section-label">
-                            QUICK FIND
-                        </div>
-                        <h2>
-                            Where are you trying to go?
-                        </h2>
-                    </div>
-                    <div class="room-finder-controls">
-                        <select id="room-select">
-                            <option value="">
-                                Show all rooms
-                            </option>
-                        </select>
-                        <button
-                            type="button"
-                            class="secondary-button"
-                            id="show-all-rooms"
-                        >
-                            Show All
-                        </button>
-                    </div>
-                </div>
-                <!-- Map Viewer -->
+<section class="castle-map-section">
+    <div class="section-inner">
+        <div class="castle-explorer">
+            <!-- ==================================
+                 Map
+            =================================== -->
+            <div class="castle-map-column">
                 <div class="floor-viewer">
                     <div
                         class="floor-map"
@@ -140,11 +84,10 @@
                         <!-- Layers inserted by JavaScript -->
                     </div>
                 </div>
-                <!-- Floor Info -->
                 <div class="floor-info">
                     <div>
                         <div class="section-label">
-                            CURRENT FLOOR
+                            CURRENT VIEW
                         </div>
                         <h2 id="floor-title">
                             Lower Floor
@@ -155,7 +98,144 @@
                     </p>
                 </div>
             </div>
-        </section>
+            <!-- ==================================
+                 Navigation
+            =================================== -->
+            <aside class="castle-navigation">
+                <div class="castle-navigation-heading">
+                    <div class="section-label">
+                        EXPLORE THE CASTLE
+                    </div>
+                    <h2>
+                        Where are you going?
+                    </h2>
+                    <p>
+                        Choose a floor to see everything,
+                        or select a room to highlight it.
+                    </p>
+                </div>
+                <!-- Lower -->
+                <div class="castle-floor-group">
+                    <button
+                        class="castle-floor-button active"
+                        type="button"
+                        data-floor="lower"
+                    >
+                        Lower Floor
+                    </button>
+                    <div class="castle-room-list">
+                        <button
+                            type="button"
+                            class="castle-room-button"
+                            data-floor="lower"
+                            data-room="cannibal-cottage"
+                        >
+                            Cannibal Cottage
+                        </button>
+                    </div>
+                </div>
+                <!-- Main -->
+                <div class="castle-floor-group">
+                    <button
+                        class="castle-floor-button"
+                        type="button"
+                        data-floor="main"
+                    >
+                        Main Floor
+                    </button>
+                    <div class="castle-room-list">
+                        <button
+                            type="button"
+                            class="castle-room-button"
+                            data-floor="main"
+                            data-room="generals-quarters"
+                        >
+                            General's Quarters
+                        </button>
+                        <button
+                            type="button"
+                            class="castle-room-button"
+                            data-floor="main"
+                            data-room="huntsmans-hideout"
+                        >
+                            Huntsman's Hideout
+                        </button>
+                        <button
+                            type="button"
+                            class="castle-room-button"
+                            data-floor="main"
+                            data-room="clockmakers-workshop"
+                        >
+                            Clockmaker's Workshop
+                        </button>
+                    </div>
+                </div>
+                <!-- Upper -->
+                <div class="castle-floor-group">
+                    <button
+                        class="castle-floor-button"
+                        type="button"
+                        data-floor="upper"
+                    >
+                        Upper Floor
+                    </button>
+                    <div class="castle-room-list">
+                        <button
+                            type="button"
+                            class="castle-room-button"
+                            data-floor="upper"
+                            data-room="kazali-campground"
+                        >
+                            Kazali Campground
+                        </button>
+                        <button
+                            type="button"
+                            class="castle-room-button"
+                            data-floor="upper"
+                            data-room="politician-office"
+                        >
+                            Politician Office
+                        </button>
+                        <button
+                            type="button"
+                            class="castle-room-button"
+                            data-floor="upper"
+                            data-room="witches-den"
+                        >
+                            Witches Den
+                        </button>
+                        <button
+                            type="button"
+                            class="castle-room-button"
+                            data-floor="upper"
+                            data-room="cult-leader-compound"
+                        >
+                            Cult Leader Compound
+                        </button>
+                        <button
+                            type="button"
+                            class="castle-room-button"
+                            data-floor="upper"
+                            data-room="goblins-grotto"
+                        >
+                            Goblin's Grotto
+                        </button>
+                    </div>
+                </div>
+                <!-- Observatory -->
+                <div class="castle-floor-group">
+                    <button
+                        class="castle-floor-button"
+                        type="button"
+                        data-floor="observatory"
+                    >
+                        Observatory
+                    </button>
+                </div>
+            </aside>
+        </div>
+    </div>
+</section>
         <!-- ==========================================
              Getting Here
         =========================================== -->
