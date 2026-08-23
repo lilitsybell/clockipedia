@@ -1,5 +1,30 @@
 [
     {
+        "text":"If the [Vigormortis] changes characters due to the [Snake Charmer] ability, any dead Minions who have their abilities due to the [Vigormortis], no longer have their abilities.",
+        "math":"green",
+        "reason":"If the Vigormortis changes characters, their ability is no longer in play, even if a new Vigormortis is created elsewhere.",
+        "mathInfo":"No ability has malfunctioned."},
+    {
+        "text":"If the [Vigormortis] changes characters due to the [Pit-Hag] ability, any dead Minions who have their abilities due to the [Vigormortis], no longer have their abilities.",
+        "math":"green",
+        "reason":"If the Vigormortis changes characters, their ability is no longer in play, even if a new Vigormortis is created elsewhere.",
+        "mathInfo":"No ability has malfunctioned."},
+    {
+        "text":"If the [Vigormortis] changes characters due to the [Cacklejack] ability, any dead Minions who have their abilities due to the [Vigormortis], no longer have their abilities.",
+        "math":"green",
+        "reason":"If the Vigormortis changes characters, their ability is no longer in play, even if a new Vigormortis is created elsewhere.",
+        "mathInfo":"No ability has malfunctioned."},
+    {
+        "text":"If the [Vigormortis] changes characters due to the [Hatter] ability, any dead Minions who have their abilities due to the [Vigormortis], no longer have their abilities.",
+        "math":"green",
+        "reason":"If the Vigormortis changes characters, their ability is no longer in play, even if a new Vigormortis is created elsewhere.",
+        "mathInfo":"No ability has malfunctioned."},
+    {
+        "text":"If the [Vigormortis] changes characters due to the [Barber] ability, any dead Minions who have their abilities due to the [Vigormortis], no longer have their abilities.",
+        "math":"green",
+        "reason":"If the Vigormortis changes characters, their ability is no longer in play, even if a new Vigormortis is created elsewhere.",
+        "mathInfo":"No ability has malfunctioned."},
+    {
         "text":"If the good player in an [Evil Twin] pair is executed due to the [Scapegoat] ability, evil wins, regardless of whether the player died or not.",
         "math":"green",
         "reason":"Evil wins if the good player in an Evil Twin pair is executed in any way.",
