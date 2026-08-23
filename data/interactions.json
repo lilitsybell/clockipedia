@@ -5,7 +5,7 @@
         "reason":"Evil wins if the good player in an Evil Twin pair is executed in any way.",
         "mathInfo":"No ability has malfunctioned."},
     {
-        "text":"If the Saint is executed due to the [Judge] ability, the [Saint]'s team loses.",
+        "text":"If the [Saint] is executed due to the [Judge] ability, the [Saint]'s team loses.",
         "math":"green",
         "reason":"The Saint's team loses if the Saint is executed in any way.",
         "mathInfo":"No ability has malfunctioned."},
@@ -15,7 +15,7 @@
         "reason":"Evil wins if the good player in an Evil Twin pair is executed in any way.",
         "mathInfo":"No ability has malfunctioned."},
     {
-        "text":"If the Saint is executed due to the [Butcher] ability, the [Saint]'s team loses.",
+        "text":"If the [Saint] is executed due to the [Butcher] ability, the [Saint]'s team loses.",
         "math":"green",
         "reason":"The Saint's team loses if the Saint is executed in any way.",
         "mathInfo":"No ability has malfunctioned."},
@@ -25,7 +25,7 @@
         "reason":"Evil wins if the good player in an Evil Twin pair is executed in any way.",
         "mathInfo":"No ability has malfunctioned."},
     {
-        "text":"If the Saint is executed due to the [Bishop] ability, the [Saint]'s team loses.",
+        "text":"If the [Saint] is executed due to the [Bishop] ability, the [Saint]'s team loses.",
         "math":"green",
         "reason":"The Saint's team loses if the Saint is executed in any way.",
         "mathInfo":"No ability has malfunctioned."},
@@ -35,7 +35,7 @@
         "reason":"Evil wins if the good player in an Evil Twin pair is executed in any way.",
         "mathInfo":"No ability has malfunctioned."},
     {
-        "text":"If the Saint is executed due to the [Vizier] ability, the [Saint]'s team loses.",
+        "text":"If the [Saint] is executed due to the [Vizier] ability, the [Saint]'s team loses.",
         "math":"green",
         "reason":"The Saint's team loses if the Saint is executed in any way.",
         "mathInfo":"No ability has malfunctioned."},
@@ -45,7 +45,7 @@
         "reason":"Evil wins if the good player in an Evil Twin pair is executed in any way.",
         "mathInfo":"No ability has malfunctioned."},
     {
-        "text":"If the Saint is executed due to the [Cerenovus] ability, the [Saint]'s team loses.",
+        "text":"If the [Saint] is executed due to the [Cerenovus] ability, the [Saint]'s team loses.",
         "math":"green",
         "reason":"The Saint's team loses if the Saint is executed in any way.",
         "mathInfo":"No ability has malfunctioned."},
@@ -60,7 +60,7 @@
         "reason":"Evil wins if the good player in an Evil Twin pair is executed in any way.",
         "mathInfo":"No ability has malfunctioned."},
     {
-        "text":"If the Saint dies due to the [Big Wig] ability, their team does not lose.",
+        "text":"If the [Saint] dies due to the [Big Wig] ability, their team does not lose.",
         "math":"green",
         "reason":"The Saint's team only loses if the Saint is executed.",
         "mathInfo":"No ability has malfunctioned."},
@@ -70,7 +70,7 @@
         "reason":"Evil only wins if the good player is executed.",
         "mathInfo":"No ability has malfunctioned."},
     {
-        "text":"If the Saint dies due to the [Doomsayer] ability, their team does not lose.",
+        "text":"If the [Saint] dies due to the [Doomsayer] ability, their team does not lose.",
         "math":"green",
         "reason":"The Saint's team only loses if the Saint is executed.",
         "mathInfo":"No ability has malfunctioned."},
@@ -80,7 +80,7 @@
         "reason":"Evil only wins if the good player is executed.",
         "mathInfo":"No ability has malfunctioned."},
     {
-        "text":"If the Saint dies due to the [Harlot] ability, their team does not lose.",
+        "text":"If the [Saint] dies due to the [Harlot] ability, their team does not lose.",
         "math":"green",
         "reason":"The Saint's team only loses if the Saint is executed.",
         "mathInfo":"No ability has malfunctioned."},
@@ -90,7 +90,7 @@
         "reason":"Evil only wins if the good player is executed.",
         "mathInfo":"No ability has malfunctioned."},
     {
-        "text":"If the Saint dies due to the [Gunslinger] ability, their team does not lose.",
+        "text":"If the [Saint] dies due to the [Gunslinger] ability, their team does not lose.",
         "math":"green",
         "reason":"The Saint's team only loses if the Saint is executed.",
         "mathInfo":"No ability has malfunctioned."},
@@ -100,7 +100,7 @@
         "reason":"Evil only wins if the good player is executed.",
         "mathInfo":"No ability has malfunctioned."},
     {
-        "text":"If the Saint dies due to the [Gnome] ability, their team does not lose.",
+        "text":"If the [Saint] dies due to the [Gnome] ability, their team does not lose.",
         "math":"green",
         "reason":"The Saint's team only loses if the Saint is executed.",
         "mathInfo":"No ability has malfunctioned."},
@@ -110,7 +110,7 @@
         "reason":"Evil only wins if the good player is executed.",
         "mathInfo":"No ability has malfunctioned."},
     {
-        "text":"If the Saint dies due to the [Gangster] ability, their team does not lose.",
+        "text":"If the [Saint] dies due to the [Gangster] ability, their team does not lose.",
         "math":"green",
         "reason":"The Saint's team only loses if the Saint is executed.",
         "mathInfo":"No ability has malfunctioned."},
@@ -120,7 +120,7 @@
         "reason":"Evil only wins if the good player is executed.",
         "mathInfo":"No ability has malfunctioned."},
     {
-        "text":"If the Saint dies due to the [Zombuul] ability, their team does not lose.",
+        "text":"If the [Saint] dies due to the [Zombuul] ability, their team does not lose.",
         "math":"green",
         "reason":"The Saint's team only loses if the Saint is executed.",
         "mathInfo":"No ability has malfunctioned."},
@@ -130,7 +130,7 @@
         "reason":"Evil only wins if the good player is executed.",
         "mathInfo":"No ability has malfunctioned."},
     {
-        "text":"If the Saint dies due to the [Yaggababble] ability, their team does not lose.",
+        "text":"If the [Saint] dies due to the [Yaggababble] ability, their team does not lose.",
         "math":"green",
         "reason":"The Saint's team only loses if the Saint is executed.",
         "mathInfo":"No ability has malfunctioned."},
@@ -140,7 +140,7 @@
         "reason":"Evil only wins if the good player is executed.",
         "mathInfo":"No ability has malfunctioned."},
     {
-        "text":"If the Saint dies due to the [Vortox] ability, their team does not lose.",
+        "text":"If the [Saint] dies due to the [Vortox] ability, their team does not lose.",
         "math":"green",
         "reason":"The Saint's team only loses if the Saint is executed.",
         "mathInfo":"No ability has malfunctioned."},
@@ -150,7 +150,7 @@
         "reason":"Evil only wins if the good player is executed.",
         "mathInfo":"No ability has malfunctioned."},
     {
-        "text":"If the Saint dies due to the [Vigormortis] ability, their team does not lose.",
+        "text":"If the [Saint] dies due to the [Vigormortis] ability, their team does not lose.",
         "math":"green",
         "reason":"The Saint's team only loses if the Saint is executed.",
         "mathInfo":"No ability has malfunctioned."},
@@ -160,7 +160,7 @@
         "reason":"Evil only wins if the good player is executed.",
         "mathInfo":"No ability has malfunctioned."},
     {
-        "text":"If the Saint dies due to the [Riot] ability, their team does not lose.",
+        "text":"If the [Saint] dies due to the [Riot] ability, their team does not lose.",
         "math":"green",
         "reason":"The Saint's team only loses if the Saint is executed.",
         "mathInfo":"No ability has malfunctioned."},
@@ -170,7 +170,7 @@
         "reason":"Evil only wins if the good player is executed.",
         "mathInfo":"No ability has malfunctioned."},
     {
-        "text":"If the Saint dies due to the [Shabaloth] ability, their team does not lose.",
+        "text":"If the [Saint] dies due to the [Shabaloth] ability, their team does not lose.",
         "math":"green",
         "reason":"The Saint's team only loses if the Saint is executed.",
         "mathInfo":"No ability has malfunctioned."},
@@ -180,7 +180,7 @@
         "reason":"Evil only wins if the good player is executed.",
         "mathInfo":"No ability has malfunctioned."},
     {
-        "text":"If the Saint dies due to the [Pukka] ability, their team does not lose.",
+        "text":"If the [Saint] dies due to the [Pukka] ability, their team does not lose.",
         "math":"green",
         "reason":"The Saint's team only loses if the Saint is executed.",
         "mathInfo":"No ability has malfunctioned."},
@@ -190,7 +190,7 @@
         "reason":"Evil only wins if the good player is executed.",
         "mathInfo":"No ability has malfunctioned."},
     {
-        "text":"If the Saint dies due to the [Po] ability, their team does not lose.",
+        "text":"If the [Saint] dies due to the [Po] ability, their team does not lose.",
         "math":"green",
         "reason":"The Saint's team only loses if the Saint is executed.",
         "mathInfo":"No ability has malfunctioned."},
@@ -200,7 +200,7 @@
         "reason":"Evil only wins if the good player is executed.",
         "mathInfo":"No ability has malfunctioned."},
     {
-        "text":"If the Saint dies due to the [Ojo] ability, their team does not lose.",
+        "text":"If the [Saint] dies due to the [Ojo] ability, their team does not lose.",
         "math":"green",
         "reason":"The Saint's team only loses if the Saint is executed.",
         "mathInfo":"No ability has malfunctioned."},
@@ -210,7 +210,7 @@
         "reason":"Evil only wins if the good player is executed.",
         "mathInfo":"No ability has malfunctioned."},
     {
-        "text":"If the Saint dies due to the [No Dashii] ability, their team does not lose.",
+        "text":"If the [Saint] dies due to the [No Dashii] ability, their team does not lose.",
         "math":"green",
         "reason":"The Saint's team only loses if the Saint is executed.",
         "mathInfo":"No ability has malfunctioned."},
@@ -220,7 +220,7 @@
         "reason":"Evil only wins if the good player is executed.",
         "mathInfo":"No ability has malfunctioned."},
     {
-        "text":"If the Saint dies due to the [Lord of Typhon] ability, their team does not lose.",
+        "text":"If the [Saint] dies due to the [Lord of Typhon] ability, their team does not lose.",
         "math":"green",
         "reason":"The Saint's team only loses if the Saint is executed.",
         "mathInfo":"No ability has malfunctioned."},
@@ -230,7 +230,7 @@
         "reason":"Evil only wins if the good player is executed.",
         "mathInfo":"No ability has malfunctioned."},
     {
-        "text":"If the Saint dies due to the [Lleech] ability, their team does not lose.",
+        "text":"If the [Saint] dies due to the [Lleech] ability, their team does not lose.",
         "math":"green",
         "reason":"The Saint's team only loses if the Saint is executed.",
         "mathInfo":"No ability has malfunctioned."},
@@ -240,7 +240,7 @@
         "reason":"Evil only wins if the good player is executed.",
         "mathInfo":"No ability has malfunctioned."},
     {
-        "text":"If the Saint dies due to the [Lil' Monsta] ability, their team does not lose.",
+        "text":"If the [Saint] dies due to the [Lil' Monsta] ability, their team does not lose.",
         "math":"green",
         "reason":"The Saint's team only loses if the Saint is executed.",
         "mathInfo":"No ability has malfunctioned."},
@@ -250,7 +250,7 @@
         "reason":"Evil only wins if the good player is executed.",
         "mathInfo":"No ability has malfunctioned."},
     {
-        "text":"If the Saint dies due to the [Legion] ability, their team does not lose.",
+        "text":"If the [Saint] dies due to the [Legion] ability, their team does not lose.",
         "math":"green",
         "reason":"The Saint's team only loses if the Saint is executed.",
         "mathInfo":"No ability has malfunctioned."},
@@ -260,7 +260,7 @@
         "reason":"Evil only wins if the good player is executed.",
         "mathInfo":"No ability has malfunctioned."},
     {
-        "text":"If the Saint dies due to the [Kazali] ability, their team does not lose.",
+        "text":"If the [Saint] dies due to the [Kazali] ability, their team does not lose.",
         "math":"green",
         "reason":"The Saint's team only loses if the Saint is executed.",
         "mathInfo":"No ability has malfunctioned."},
@@ -270,7 +270,7 @@
         "reason":"Evil only wins if the good player is executed.",
         "mathInfo":"No ability has malfunctioned."},
     {
-        "text":"If the Saint dies due to the [Imp] ability, their team does not lose.",
+        "text":"If the [Saint] dies due to the [Imp] ability, their team does not lose.",
         "math":"green",
         "reason":"The Saint's team only loses if the Saint is executed.",
         "mathInfo":"No ability has malfunctioned."},
@@ -280,7 +280,7 @@
         "reason":"Evil only wins if the good player is executed.",
         "mathInfo":"No ability has malfunctioned."},
     {
-        "text":"If the Saint dies due to the [Fang Gu] ability, their team does not lose.",
+        "text":"If the [Saint] dies due to the [Fang Gu] ability, their team does not lose.",
         "math":"green",
         "reason":"The Saint's team only loses if the Saint is executed.",
         "mathInfo":"No ability has malfunctioned."},
@@ -290,7 +290,7 @@
         "reason":"Evil only wins if the good player is executed.",
         "mathInfo":"No ability has malfunctioned."},
     {
-        "text":"If the Saint dies due to the [Al-Hadikhia] ability, their team does not lose.",
+        "text":"If the [Saint] dies due to the [Al-Hadikhia] ability, their team does not lose.",
         "math":"green",
         "reason":"The Saint's team only loses if the Saint is executed.",
         "mathInfo":"No ability has malfunctioned."},
@@ -300,7 +300,7 @@
         "reason":"Evil only wins if the good player is executed.",
         "mathInfo":"No ability has malfunctioned."},
     {
-        "text":"If the Saint dies due to the [Witch] ability, their team does not lose.",
+        "text":"If the [Saint] dies due to the [Witch] ability, their team does not lose.",
         "math":"green",
         "reason":"The Saint's team only loses if the Saint is executed.",
         "mathInfo":"No ability has malfunctioned."},
@@ -310,7 +310,7 @@
         "reason":"Evil only wins if the good player is executed.",
         "mathInfo":"No ability has malfunctioned."},
     {
-        "text":"If the Saint dies due to the [Psychopath] ability, their team does not lose.",
+        "text":"If the [Saint] dies due to the [Psychopath] ability, their team does not lose.",
         "math":"green",
         "reason":"The Saint's team only loses if the Saint is executed.",
         "mathInfo":"No ability has malfunctioned."},
@@ -320,7 +320,7 @@
         "reason":"Evil only wins if the good player is executed.",
         "mathInfo":"No ability has malfunctioned."},
     {
-        "text":"If the Saint dies due to the [Godfather] ability, their team does not lose.",
+        "text":"If the [Saint] dies due to the [Godfather] ability, their team does not lose.",
         "math":"green",
         "reason":"The Saint's team only loses if the Saint is executed.",
         "mathInfo":"No ability has malfunctioned."},
@@ -330,7 +330,7 @@
         "reason":"Evil only wins if the good player is executed.",
         "mathInfo":"No ability has malfunctioned."},
     {
-        "text":"If the Saint dies due to the [Harpy] ability, their team does not lose.",
+        "text":"If the [Saint] dies due to the [Harpy] ability, their team does not lose.",
         "math":"green",
         "reason":"The Saint's team only loses if the Saint is executed.",
         "mathInfo":"No ability has malfunctioned."},
@@ -340,7 +340,7 @@
         "reason":"Evil only wins if the good player is executed.",
         "mathInfo":"No ability has malfunctioned."},
     {
-        "text":"If the Saint dies due to the [Boomdandy] ability, their team does not lose.",
+        "text":"If the [Saint] dies due to the [Boomdandy] ability, their team does not lose.",
         "math":"green",
         "reason":"The Saint's team only loses if the Saint is executed.",
         "mathInfo":"No ability has malfunctioned."},
@@ -350,7 +350,7 @@
         "reason":"Evil only wins if the good player is executed.",
         "mathInfo":"No ability has malfunctioned."},
     {
-        "text":"If the Saint dies due to the [Assassin] ability, their team does not lose.",
+        "text":"If the [Saint] dies due to the [Assassin] ability, their team does not lose.",
         "math":"green",
         "reason":"The Saint's team only loses if the Saint is executed.",
         "mathInfo":"No ability has malfunctioned."},
@@ -365,7 +365,7 @@
         "reason":"Evil only wins if the good player is executed.",
         "mathInfo":"No ability has malfunctioned."},
     {
-        "text":"If the Saint dies due to the [Moonchild] ability, their team does not lose.",
+        "text":"If the [Saint] dies due to the [Moonchild] ability, their team does not lose.",
         "math":"green",
         "reason":"The Saint's team only loses if the Saint is executed.",
         "mathInfo":"No ability has malfunctioned."},
@@ -375,7 +375,7 @@
         "reason":"Evil only wins if the good player is executed.",
         "mathInfo":"No ability has malfunctioned."},
     {
-        "text":"If the Saint dies due to the [Golem] ability, their team does not lose.",
+        "text":"If the [Saint] dies due to the [Golem] ability, their team does not lose.",
         "math":"green",
         "reason":"The Saint's team only loses if the Saint is executed.",
         "mathInfo":"No ability has malfunctioned."},
@@ -385,7 +385,7 @@
         "reason":"Evil only wins if the good player is executed.",
         "mathInfo":"No ability has malfunctioned."},
     {
-        "text":"If the Saint dies due to the [Slayer] ability, their team does not lose.",
+        "text":"If the [Saint] dies due to the [Slayer] ability, their team does not lose.",
         "math":"green",
         "reason":"The Saint's team only loses if the Saint is executed.",
         "mathInfo":"No ability has malfunctioned."},
@@ -395,7 +395,7 @@
         "reason":"Evil only wins if the good player is executed.",
         "mathInfo":"No ability has malfunctioned."},
     {
-        "text":"If the Saint dies due to the [Lycanthrope] ability, their team does not lose.",
+        "text":"If the [Saint] dies due to the [Lycanthrope] ability, their team does not lose.",
         "math":"green",
         "reason":"The Saint's team only loses if the Saint is executed.",
         "mathInfo":"No ability has malfunctioned."},
@@ -410,7 +410,7 @@
         "reason":"Evil only wins if the good player is executed.",
         "mathInfo":"No ability has malfunctioned."},
     {
-        "text":"If the Saint dies due to the [Gossip] ability, their team does not lose.",
+        "text":"If the [Saint] dies due to the [Gossip] ability, their team does not lose.",
         "math":"green",
         "reason":"The Saint's team only loses if the Saint is executed.",
         "mathInfo":"No ability has malfunctioned."},
