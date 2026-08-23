@@ -1,61 +1,621 @@
 [
     {
-        "text":"If the [Juggler] is resurrected due to a [Al-Hadikhia], the [Juggler] has their new ability that day.",
+        "text":"If the good player in an [Evil Twin] pair is executed due to the [Scapegoat] ability, evil wins, regardless of whether the player died or not.",
+        "math":"green",
+        "reason":"Evil wins if the good player in an Evil Twin pair is executed in any way.",
+        "mathInfo":"No ability has malfunctioned."},
+    {
+        "text":"If the Saint is executed due to the [Judge] ability, the [Saint]'s team loses.",
+        "math":"green",
+        "reason":"The Saint's team loses if the Saint is executed in any way.",
+        "mathInfo":"No ability has malfunctioned."},
+    {
+        "text":"If the good player in an [Evil Twin] pair is executed due to the [Judge] ability, evil wins, regardless of whether the player died or not.",
+        "math":"green",
+        "reason":"Evil wins if the good player in an Evil Twin pair is executed in any way.",
+        "mathInfo":"No ability has malfunctioned."},
+    {
+        "text":"If the Saint is executed due to the [Butcher] ability, the [Saint]'s team loses.",
+        "math":"green",
+        "reason":"The Saint's team loses if the Saint is executed in any way.",
+        "mathInfo":"No ability has malfunctioned."},
+    {
+        "text":"If the good player in an [Evil Twin] pair is executed due to the [Butcher] ability, evil wins, regardless of whether the player died or not.",
+        "math":"green",
+        "reason":"Evil wins if the good player in an Evil Twin pair is executed in any way.",
+        "mathInfo":"No ability has malfunctioned."},
+    {
+        "text":"If the Saint is executed due to the [Bishop] ability, the [Saint]'s team loses.",
+        "math":"green",
+        "reason":"The Saint's team loses if the Saint is executed in any way.",
+        "mathInfo":"No ability has malfunctioned."},
+    {
+        "text":"If the good player in an [Evil Twin] pair is executed due to the [Bishop] ability, evil wins, regardless of whether the player died or not.",
+        "math":"green",
+        "reason":"Evil wins if the good player in an Evil Twin pair is executed in any way.",
+        "mathInfo":"No ability has malfunctioned."},
+    {
+        "text":"If the Saint is executed due to the [Vizier] ability, the [Saint]'s team loses.",
+        "math":"green",
+        "reason":"The Saint's team loses if the Saint is executed in any way.",
+        "mathInfo":"No ability has malfunctioned."},
+    {
+        "text":"If the good player in an [Evil Twin] pair is executed due to the [Vizier] ability, evil wins, regardless of whether the player died or not.",
+        "math":"green",
+        "reason":"Evil wins if the good player in an Evil Twin pair is executed in any way.",
+        "mathInfo":"No ability has malfunctioned."},
+    {
+        "text":"If the Saint is executed due to the [Cerenovus] ability, the [Saint]'s team loses.",
+        "math":"green",
+        "reason":"The Saint's team loses if the Saint is executed in any way.",
+        "mathInfo":"No ability has malfunctioned."},
+    {
+        "text":"If the good player in an [Evil Twin] pair is executed due to the [Cerenovus] ability, evil wins, regardless of whether the player died or not.",
+        "math":"green",
+        "reason":"Evil wins if the good player in an Evil Twin pair is executed in any way.",
+        "mathInfo":"No ability has malfunctioned."},
+    {
+        "text":"If the good player in an [Evil Twin] pair is executed due to the [Mutant] ability, evil wins, regardless of whether the player died or not.",
+        "math":"green",
+        "reason":"Evil wins if the good player in an Evil Twin pair is executed in any way.",
+        "mathInfo":"No ability has malfunctioned."},
+    {
+        "text":"If the Saint dies due to the [Big Wig] ability, their team does not lose.",
+        "math":"green",
+        "reason":"The Saint's team only loses if the Saint is executed.",
+        "mathInfo":"No ability has malfunctioned."},
+    {
+        "text":"If the good player in an [Evil Twin] pair dies due to the [Big Wig] ability, evil does not win.",
+        "math":"green",
+        "reason":"Evil only wins if the good player is executed.",
+        "mathInfo":"No ability has malfunctioned."},
+    {
+        "text":"If the Saint dies due to the [Doomsayer] ability, their team does not lose.",
+        "math":"green",
+        "reason":"The Saint's team only loses if the Saint is executed.",
+        "mathInfo":"No ability has malfunctioned."},
+    {
+        "text":"If the good player in an [Evil Twin] pair dies due to the [Doomsayer] ability, evil does not win.",
+        "math":"green",
+        "reason":"Evil only wins if the good player is executed.",
+        "mathInfo":"No ability has malfunctioned."},
+    {
+        "text":"If the Saint dies due to the [Harlot] ability, their team does not lose.",
+        "math":"green",
+        "reason":"The Saint's team only loses if the Saint is executed.",
+        "mathInfo":"No ability has malfunctioned."},
+    {
+        "text":"If the good player in an [Evil Twin] pair dies due to the [Harlot] ability, evil does not win.",
+        "math":"green",
+        "reason":"Evil only wins if the good player is executed.",
+        "mathInfo":"No ability has malfunctioned."},
+    {
+        "text":"If the Saint dies due to the [Gunslinger] ability, their team does not lose.",
+        "math":"green",
+        "reason":"The Saint's team only loses if the Saint is executed.",
+        "mathInfo":"No ability has malfunctioned."},
+    {
+        "text":"If the good player in an [Evil Twin] pair dies due to the [Gunslinger] ability, evil does not win.",
+        "math":"green",
+        "reason":"Evil only wins if the good player is executed.",
+        "mathInfo":"No ability has malfunctioned."},
+    {
+        "text":"If the Saint dies due to the [Gnome] ability, their team does not lose.",
+        "math":"green",
+        "reason":"The Saint's team only loses if the Saint is executed.",
+        "mathInfo":"No ability has malfunctioned."},
+    {
+        "text":"If the good player in an [Evil Twin] pair dies due to the [Gnome] ability, evil does not win.",
+        "math":"green",
+        "reason":"Evil only wins if the good player is executed.",
+        "mathInfo":"No ability has malfunctioned."},
+    {
+        "text":"If the Saint dies due to the [Gangster] ability, their team does not lose.",
+        "math":"green",
+        "reason":"The Saint's team only loses if the Saint is executed.",
+        "mathInfo":"No ability has malfunctioned."},
+    {
+        "text":"If the good player in an [Evil Twin] pair dies due to the [Gangster] ability, evil does not win.",
+        "math":"green",
+        "reason":"Evil only wins if the good player is executed.",
+        "mathInfo":"No ability has malfunctioned."},
+    {
+        "text":"If the Saint dies due to the [Zombuul] ability, their team does not lose.",
+        "math":"green",
+        "reason":"The Saint's team only loses if the Saint is executed.",
+        "mathInfo":"No ability has malfunctioned."},
+    {
+        "text":"If the good player in an [Evil Twin] pair dies due to the [Zombuul] ability, evil does not win.",
+        "math":"green",
+        "reason":"Evil only wins if the good player is executed.",
+        "mathInfo":"No ability has malfunctioned."},
+    {
+        "text":"If the Saint dies due to the [Yaggababble] ability, their team does not lose.",
+        "math":"green",
+        "reason":"The Saint's team only loses if the Saint is executed.",
+        "mathInfo":"No ability has malfunctioned."},
+    {
+        "text":"If the good player in an [Evil Twin] pair dies due to the [Yaggababble] ability, evil does not win.",
+        "math":"green",
+        "reason":"Evil only wins if the good player is executed.",
+        "mathInfo":"No ability has malfunctioned."},
+    {
+        "text":"If the Saint dies due to the [Vortox] ability, their team does not lose.",
+        "math":"green",
+        "reason":"The Saint's team only loses if the Saint is executed.",
+        "mathInfo":"No ability has malfunctioned."},
+    {
+        "text":"If the good player in an [Evil Twin] pair dies due to the [Vortox] ability, evil does not win.",
+        "math":"green",
+        "reason":"Evil only wins if the good player is executed.",
+        "mathInfo":"No ability has malfunctioned."},
+    {
+        "text":"If the Saint dies due to the [Vigormortis] ability, their team does not lose.",
+        "math":"green",
+        "reason":"The Saint's team only loses if the Saint is executed.",
+        "mathInfo":"No ability has malfunctioned."},
+    {
+        "text":"If the good player in an [Evil Twin] pair dies due to the [Vigormortis] ability, evil does not win.",
+        "math":"green",
+        "reason":"Evil only wins if the good player is executed.",
+        "mathInfo":"No ability has malfunctioned."},
+    {
+        "text":"If the Saint dies due to the [Riot] ability, their team does not lose.",
+        "math":"green",
+        "reason":"The Saint's team only loses if the Saint is executed.",
+        "mathInfo":"No ability has malfunctioned."},
+    {
+        "text":"If the good player in an [Evil Twin] pair dies due to the [Riot] ability, evil does not win.",
+        "math":"green",
+        "reason":"Evil only wins if the good player is executed.",
+        "mathInfo":"No ability has malfunctioned."},
+    {
+        "text":"If the Saint dies due to the [Shabaloth] ability, their team does not lose.",
+        "math":"green",
+        "reason":"The Saint's team only loses if the Saint is executed.",
+        "mathInfo":"No ability has malfunctioned."},
+    {
+        "text":"If the good player in an [Evil Twin] pair dies due to the [Shabaloth] ability, evil does not win.",
+        "math":"green",
+        "reason":"Evil only wins if the good player is executed.",
+        "mathInfo":"No ability has malfunctioned."},
+    {
+        "text":"If the Saint dies due to the [Pukka] ability, their team does not lose.",
+        "math":"green",
+        "reason":"The Saint's team only loses if the Saint is executed.",
+        "mathInfo":"No ability has malfunctioned."},
+    {
+        "text":"If the good player in an [Evil Twin] pair dies due to the [Pukka] ability, evil does not win.",
+        "math":"green",
+        "reason":"Evil only wins if the good player is executed.",
+        "mathInfo":"No ability has malfunctioned."},
+    {
+        "text":"If the Saint dies due to the [Po] ability, their team does not lose.",
+        "math":"green",
+        "reason":"The Saint's team only loses if the Saint is executed.",
+        "mathInfo":"No ability has malfunctioned."},
+    {
+        "text":"If the good player in an [Evil Twin] pair dies due to the [Po] ability, evil does not win.",
+        "math":"green",
+        "reason":"Evil only wins if the good player is executed.",
+        "mathInfo":"No ability has malfunctioned."},
+    {
+        "text":"If the Saint dies due to the [Ojo] ability, their team does not lose.",
+        "math":"green",
+        "reason":"The Saint's team only loses if the Saint is executed.",
+        "mathInfo":"No ability has malfunctioned."},
+    {
+        "text":"If the good player in an [Evil Twin] pair dies due to the [Ojo] ability, evil does not win.",
+        "math":"green",
+        "reason":"Evil only wins if the good player is executed.",
+        "mathInfo":"No ability has malfunctioned."},
+    {
+        "text":"If the Saint dies due to the [No Dashii] ability, their team does not lose.",
+        "math":"green",
+        "reason":"The Saint's team only loses if the Saint is executed.",
+        "mathInfo":"No ability has malfunctioned."},
+    {
+        "text":"If the good player in an [Evil Twin] pair dies due to the [No Dashii] ability, evil does not win.",
+        "math":"green",
+        "reason":"Evil only wins if the good player is executed.",
+        "mathInfo":"No ability has malfunctioned."},
+    {
+        "text":"If the Saint dies due to the [Lord of Typhon] ability, their team does not lose.",
+        "math":"green",
+        "reason":"The Saint's team only loses if the Saint is executed.",
+        "mathInfo":"No ability has malfunctioned."},
+    {
+        "text":"If the good player in an [Evil Twin] pair dies due to the [Lord of Typhon] ability, evil does not win.",
+        "math":"green",
+        "reason":"Evil only wins if the good player is executed.",
+        "mathInfo":"No ability has malfunctioned."},
+    {
+        "text":"If the Saint dies due to the [Lleech] ability, their team does not lose.",
+        "math":"green",
+        "reason":"The Saint's team only loses if the Saint is executed.",
+        "mathInfo":"No ability has malfunctioned."},
+    {
+        "text":"If the good player in an [Evil Twin] pair dies due to the [Lleech] ability, evil does not win.",
+        "math":"green",
+        "reason":"Evil only wins if the good player is executed.",
+        "mathInfo":"No ability has malfunctioned."},
+    {
+        "text":"If the Saint dies due to the [Lil' Monsta] ability, their team does not lose.",
+        "math":"green",
+        "reason":"The Saint's team only loses if the Saint is executed.",
+        "mathInfo":"No ability has malfunctioned."},
+    {
+        "text":"If the good player in an [Evil Twin] pair dies due to the [Lil' Monsta] ability, evil does not win.",
+        "math":"green",
+        "reason":"Evil only wins if the good player is executed.",
+        "mathInfo":"No ability has malfunctioned."},
+    {
+        "text":"If the Saint dies due to the [Legion] ability, their team does not lose.",
+        "math":"green",
+        "reason":"The Saint's team only loses if the Saint is executed.",
+        "mathInfo":"No ability has malfunctioned."},
+    {
+        "text":"If the good player in an [Evil Twin] pair dies due to the [Legion] ability, evil does not win.",
+        "math":"green",
+        "reason":"Evil only wins if the good player is executed.",
+        "mathInfo":"No ability has malfunctioned."},
+    {
+        "text":"If the Saint dies due to the [Kazali] ability, their team does not lose.",
+        "math":"green",
+        "reason":"The Saint's team only loses if the Saint is executed.",
+        "mathInfo":"No ability has malfunctioned."},
+    {
+        "text":"If the good player in an [Evil Twin] pair dies due to the [Kazali] ability, evil does not win.",
+        "math":"green",
+        "reason":"Evil only wins if the good player is executed.",
+        "mathInfo":"No ability has malfunctioned."},
+    {
+        "text":"If the Saint dies due to the [Imp] ability, their team does not lose.",
+        "math":"green",
+        "reason":"The Saint's team only loses if the Saint is executed.",
+        "mathInfo":"No ability has malfunctioned."},
+    {
+        "text":"If the good player in an [Evil Twin] pair dies due to the [Imp] ability, evil does not win.",
+        "math":"green",
+        "reason":"Evil only wins if the good player is executed.",
+        "mathInfo":"No ability has malfunctioned."},
+    {
+        "text":"If the Saint dies due to the [Fang Gu] ability, their team does not lose.",
+        "math":"green",
+        "reason":"The Saint's team only loses if the Saint is executed.",
+        "mathInfo":"No ability has malfunctioned."},
+    {
+        "text":"If the good player in an [Evil Twin] pair dies due to the [Fang Gu] ability, evil does not win.",
+        "math":"green",
+        "reason":"Evil only wins if the good player is executed.",
+        "mathInfo":"No ability has malfunctioned."},
+    {
+        "text":"If the Saint dies due to the [Al-Hadikhia] ability, their team does not lose.",
+        "math":"green",
+        "reason":"The Saint's team only loses if the Saint is executed.",
+        "mathInfo":"No ability has malfunctioned."},
+    {
+        "text":"If the good player in an [Evil Twin] pair dies due to the [Al-Hadikhia] ability, evil does not win.",
+        "math":"green",
+        "reason":"Evil only wins if the good player is executed.",
+        "mathInfo":"No ability has malfunctioned."},
+    {
+        "text":"If the Saint dies due to the [Witch] ability, their team does not lose.",
+        "math":"green",
+        "reason":"The Saint's team only loses if the Saint is executed.",
+        "mathInfo":"No ability has malfunctioned."},
+    {
+        "text":"If the good player in an [Evil Twin] pair dies due to the [Witch] ability, evil does not win.",
+        "math":"green",
+        "reason":"Evil only wins if the good player is executed.",
+        "mathInfo":"No ability has malfunctioned."},
+    {
+        "text":"If the Saint dies due to the [Psychopath] ability, their team does not lose.",
+        "math":"green",
+        "reason":"The Saint's team only loses if the Saint is executed.",
+        "mathInfo":"No ability has malfunctioned."},
+    {
+        "text":"If the good player in an [Evil Twin] pair dies due to the [Psychopath] ability, evil does not win.",
+        "math":"green",
+        "reason":"Evil only wins if the good player is executed.",
+        "mathInfo":"No ability has malfunctioned."},
+    {
+        "text":"If the Saint dies due to the [Godfather] ability, their team does not lose.",
+        "math":"green",
+        "reason":"The Saint's team only loses if the Saint is executed.",
+        "mathInfo":"No ability has malfunctioned."},
+    {
+        "text":"If the good player in an [Evil Twin] pair dies due to the [Godfather] ability, evil does not win.",
+        "math":"green",
+        "reason":"Evil only wins if the good player is executed.",
+        "mathInfo":"No ability has malfunctioned."},
+    {
+        "text":"If the Saint dies due to the [Harpy] ability, their team does not lose.",
+        "math":"green",
+        "reason":"The Saint's team only loses if the Saint is executed.",
+        "mathInfo":"No ability has malfunctioned."},
+    {
+        "text":"If the good player in an [Evil Twin] pair dies due to the [Harpy] ability, evil does not win.",
+        "math":"green",
+        "reason":"Evil only wins if the good player is executed.",
+        "mathInfo":"No ability has malfunctioned."},
+    {
+        "text":"If the Saint dies due to the [Boomdandy] ability, their team does not lose.",
+        "math":"green",
+        "reason":"The Saint's team only loses if the Saint is executed.",
+        "mathInfo":"No ability has malfunctioned."},
+    {
+        "text":"If the good player in an [Evil Twin] pair dies due to the [Boomdandy] ability, evil does not win.",
+        "math":"green",
+        "reason":"Evil only wins if the good player is executed.",
+        "mathInfo":"No ability has malfunctioned."},
+    {
+        "text":"If the Saint dies due to the [Assassin] ability, their team does not lose.",
+        "math":"green",
+        "reason":"The Saint's team only loses if the Saint is executed.",
+        "mathInfo":"No ability has malfunctioned."},
+    {
+        "text":"If the good player in an [Evil Twin] pair dies due to the [Assassin] ability, evil does not win.",
+        "math":"green",
+        "reason":"Evil only wins if the good player is executed.",
+        "mathInfo":"No ability has malfunctioned."},
+    {
+        "text":"If the good player in an [Evil Twin] pair dies due to the [Tinker] ability, evil does not win.",
+        "math":"green",
+        "reason":"Evil only wins if the good player is executed.",
+        "mathInfo":"No ability has malfunctioned."},
+    {
+        "text":"If the Saint dies due to the [Moonchild] ability, their team does not lose.",
+        "math":"green",
+        "reason":"The Saint's team only loses if the Saint is executed.",
+        "mathInfo":"No ability has malfunctioned."},
+    {
+        "text":"If the good player in an [Evil Twin] pair dies due to the [Moonchild] ability, evil does not win.",
+        "math":"green",
+        "reason":"Evil only wins if the good player is executed.",
+        "mathInfo":"No ability has malfunctioned."},
+    {
+        "text":"If the Saint dies due to the [Golem] ability, their team does not lose.",
+        "math":"green",
+        "reason":"The Saint's team only loses if the Saint is executed.",
+        "mathInfo":"No ability has malfunctioned."},
+    {
+        "text":"If the good player in an [Evil Twin] pair dies due to the [Golem] ability, evil does not win.",
+        "math":"green",
+        "reason":"Evil only wins if the good player is executed.",
+        "mathInfo":"No ability has malfunctioned."},
+    {
+        "text":"If the Saint dies due to the [Slayer] ability, their team does not lose.",
+        "math":"green",
+        "reason":"The Saint's team only loses if the Saint is executed.",
+        "mathInfo":"No ability has malfunctioned."},
+    {
+        "text":"If the good player in an [Evil Twin] pair dies due to the [Slayer] ability, evil does not win.",
+        "math":"green",
+        "reason":"Evil only wins if the good player is executed.",
+        "mathInfo":"No ability has malfunctioned."},
+    {
+        "text":"If the Saint dies due to the [Lycanthrope] ability, their team does not lose.",
+        "math":"green",
+        "reason":"The Saint's team only loses if the Saint is executed.",
+        "mathInfo":"No ability has malfunctioned."},
+    {
+        "text":"If the good player in an [Evil Twin] pair dies due to the [Lycanthrope] ability, evil does not win.",
+        "math":"green",
+        "reason":"Evil only wins if the good player is executed.",
+        "mathInfo":"No ability has malfunctioned."},
+    {
+        "text":"If the good player in an [Evil Twin] pair dies due to the [Grandmother] ability, evil does not win.",
+        "math":"green",
+        "reason":"Evil only wins if the good player is executed.",
+        "mathInfo":"No ability has malfunctioned."},
+    {
+        "text":"If the Saint dies due to the [Gossip] ability, their team does not lose.",
+        "math":"green",
+        "reason":"The Saint's team only loses if the Saint is executed.",
+        "mathInfo":"No ability has malfunctioned."},
+    {
+        "text":"If the good player in an [Evil Twin] pair dies due to the [Gossip] ability, evil does not win.",
+        "math":"green",
+        "reason":"Evil only wins if the good player is executed.",
+        "mathInfo":"No ability has malfunctioned."},
+    {
+        "text":"If the good player in an [Evil Twin] pair dies due to the [Gambler] ability, evil does not win.",
+        "math":"green",
+        "reason":"Evil only wins if the good player dies is executed.",
+        "mathInfo":"No ability has malfunctioned."},
+    {
+        "text":"If the good player in an [Evil Twin] pair dies due to the [Acrobat] ability, evil does not win.",
+        "math":"green",
+        "reason":"Evil only wins if the good player is executed.",
+        "mathInfo":"No ability has malfunctioned."},
+    {
+        "text":"If the Demon with the [Boffin] [Lycanthrope] ability kills the grandchild, the [Grandmother] also dies.",
+        "math":"green",
+        "reason":"The Grandmother dies if the Demon kills the grandchild in any way.",
+        "mathInfo":"No ability has malfunctioned."},
+    {
+        "text":"If the Demon with the [Boffin] [Slayer] ability kills the grandchild, the [Grandmother] also dies.",
+        "math":"green",
+        "reason":"The Grandmother dies if the Demon kills the grandchild in any way.",
+        "mathInfo":"No ability has malfunctioned."},
+    {
+        "text":"If the Demon with the [Boffin] [Virgin] ability kills the grandchild, the [Grandmother] also dies.",
+        "math":"green",
+        "reason":"The Grandmother dies if the Demon kills the grandchild in any way.",
+        "mathInfo":"No ability has malfunctioned."},
+    {
+        "text":"If the Demon with the [Boffin] [Golem] ability kills the grandchild, the [Grandmother] also dies.",
+        "math":"green",
+        "reason":"The Grandmother dies if the Demon kills the grandchild in any way.",
+        "mathInfo":"No ability has malfunctioned."},
+    {
+        "text":"If the Demon with the [Boffin] [Moonchild] ability kills the grandchild, the [Grandmother] also dies.",
+        "math":"green",
+        "reason":"The Grandmother dies if the Demon kills the grandchild in any way.",
+        "mathInfo":"No ability has malfunctioned."},
+    {
+        "text":"If the Demon with the [Boffin] [Alchemist] [Assassin] ability kills the grandchild, the [Grandmother] also dies.",
+        "math":"green",
+        "reason":"The Grandmother dies if the Demon kills the grandchild in any way.",
+        "mathInfo":"No ability has malfunctioned."},
+    {
+        "text":"If the Demon with the [Boffin] [Alchemist] [Cerenovus] ability kills the grandchild, the [Grandmother] also dies.",
+        "math":"green",
+        "reason":"The Grandmother dies if the Demon kills the grandchild in any way.",
+        "mathInfo":"No ability has malfunctioned."},
+    {
+        "text":"If the Demon with the [Boffin] [Alchemist] [Godfather] ability kills the grandchild, the [Grandmother] also dies.",
+        "math":"green",
+        "reason":"The Grandmother dies if the Demon kills the grandchild in any way.",
+        "mathInfo":"No ability has malfunctioned."},
+    {
+        "text":"If the Demon with the [Boffin] [Alchemist] [Harpy] ability kills the grandchild, the [Grandmother] also dies.",
+        "math":"green",
+        "reason":"The Grandmother dies if the Demon kills the grandchild in any way.",
+        "mathInfo":"No ability has malfunctioned."},
+    {
+        "text":"If the Demon with the [Boffin] [Alchemist] [Psychopath] ability kills the grandchild, the [Grandmother] also dies.",
+        "math":"green",
+        "reason":"The Grandmother dies if the Demon kills the grandchild in any way.",
+        "mathInfo":"No ability has malfunctioned."},
+    {
+        "text":"If the Demon with the [Boffin] [Alchemist] [Vizier] ability kills the grandchild, the [Grandmother] also dies.",
+        "math":"green",
+        "reason":"The Grandmother dies if the Demon kills the grandchild in any way.",
+        "mathInfo":"No ability has malfunctioned."},
+    {
+        "text":"If the Demon with the [Boffin] [Alchemist] [Witch] ability kills the grandchild, the [Grandmother] also dies.",
+        "math":"green",
+        "reason":"The Grandmother dies if the Demon kills the grandchild in any way.",
+        "mathInfo":"No ability has malfunctioned."},
+    {
+        "text":"If the Demon with the [Boffin] [Gossip] ability kills the grandchild, the [Grandmother] also dies.",
+        "math":"green",
+        "reason":"The Grandmother dies if the Demon kills the grandchild in any way.",
+        "mathInfo":"No ability has malfunctioned."},
+    {
+        "text":"If the [Juggler] juggles a player correctly, but the player is later changed due to the [Cacklejack] ability, the juggler still learns they juggled that player correctly.",
+        "math":"green",
+        "reason":"The Juggler's ability checks characters at the time of the juggle.",
+        "mathInfo":"No ability has malfunctioned."},
+    {
+        "text":"If the [Juggler] juggles a player correctly, but the player is later changed due to the [Riot] ability, the juggler still learns they juggled that player correctly.",
+        "math":"green",
+        "reason":"The Juggler's ability checks characters at the time of the juggle.",
+        "mathInfo":"No ability has malfunctioned."},
+    {
+        "text":"If the [Juggler] juggles a player correctly, but the player is later changed due to the [Imp] ability, the juggler still learns they juggled that player correctly.",
+        "math":"green",
+        "reason":"The Juggler's ability checks characters at the time of the juggle.",
+        "mathInfo":"No ability has malfunctioned."},
+    {
+        "text":"If the [Juggler] juggles a player correctly, but the player is later changed due to the [Fang Gu] ability, the juggler still learns they juggled that player correctly.",
+        "math":"green",
+        "reason":"The Juggler's ability checks characters at the time of the juggle.",
+        "mathInfo":"No ability has malfunctioned."},
+    {
+        "text":"If the [Juggler] juggles a player correctly, but the player is later changed due to the [Summoner] ability, the juggler still learns they juggled that player correctly.",
+        "math":"green",
+        "reason":"The Juggler's ability checks characters at the time of the juggle.",
+        "mathInfo":"No ability has malfunctioned."},
+    {
+        "text":"If the [Juggler] juggles a player correctly, but the player is later changed due to the [Scarlet Woman] ability, the juggler still learns they juggled that player correctly.",
+        "math":"green",
+        "reason":"The Juggler's ability checks characters at the time of the juggle.",
+        "mathInfo":"No ability has malfunctioned."},
+    {
+        "text":"If the [Juggler] juggles a player correctly, but the player is later changed due to the [Pit-Hag] ability, the juggler still learns they juggled that player correctly.",
+        "math":"green",
+        "reason":"The Juggler's ability checks characters at the time of the juggle.",
+        "mathInfo":"No ability has malfunctioned."},
+    {
+        "text":"If the [Juggler] juggles a player correctly, but the player is later changed due to the [Hatter] ability, the juggler still learns they juggled that player correctly.",
+        "math":"green",
+        "reason":"The Juggler's ability checks characters at the time of the juggle.",
+        "mathInfo":"No ability has malfunctioned."},
+    {
+        "text":"If the [Juggler] juggles a player correctly, but the player is later changed due to the [Barber] ability, the juggler still learns they juggled that player correctly.",
+        "math":"green",
+        "reason":"The Juggler's ability checks characters at the time of the juggle.",
+        "mathInfo":"No ability has malfunctioned."},
+    {
+        "text":"If the [Juggler] juggles a player correctly, but the player is later changed due to the [Snake Charmer] ability, the juggler still learns they juggled that player correctly.",
+        "math":"green",
+        "reason":"The Juggler's ability checks characters at the time of the juggle.",
+        "mathInfo":"No ability has malfunctioned."},
+    {
+        "text":"If the [Juggler] juggles a player correctly, but the player is later changed due to the [Engineer] ability, the juggler still learns they juggled that player correctly.",
+        "math":"green",
+        "reason":"The Juggler's ability checks characters at the time of the juggle.",
+        "mathInfo":"No ability has malfunctioned."},
+    {
+        "text":"If the [Juggler] juggles a player correctly, but the player is later changed due to the [Huntsman] ability, the juggler still learns they juggled that player correctly.",
+        "math":"green",
+        "reason":"The Juggler's ability checks characters at the time of the juggle.",
+        "mathInfo":"No ability has malfunctioned."},
+    {
+        "text":"If the [Juggler] is resurrected due to the [Al-Hadikhia] ability, the [Juggler] has their new ability that day.",
         "math":"green",
         "reason":"The Juggler gains their ability on their first day.",
         "mathInfo":"No ability has malfunctioned."},
     {
-        "text":"If the [Juggler] is resurrected due to a [Shabaloth], the [Juggler] has their new ability that day.",
+        "text":"If the [Juggler] is resurrected due to the [Shabaloth] ability, the [Juggler] has their new ability that day.",
         "math":"green",
         "reason":"The Juggler gains their ability on their first day.",
         "mathInfo":"No ability has malfunctioned."},
     {
-        "text":"If the [Juggler] is resurrected due to a [Professor], the [Juggler] has their new ability that day.",
+        "text":"If the [Juggler] is resurrected due to the [Professor] ability, the [Juggler] has their new ability that day.",
         "math":"green",
         "reason":"The Juggler gains their ability on their first day.",
         "mathInfo":"No ability has malfunctioned."},
     {
-        "text":"If a new [Juggler] is made due to a [Cacklejack], the new [Juggler] has their ability that day.",
+        "text":"If a new [Juggler] is made due to the [Huntsman] ability, the new [Juggler] has their ability that day.",
         "math":"green",
         "reason":"The Juggler gains their ability on their first day.",
         "mathInfo":"No ability has malfunctioned."},
     {
-        "text":"If a new [Juggler] is made due to a [Pit-Hag], the new [Juggler] has their ability that day.",
+        "text":"If a new [Juggler] is made due to the [Cacklejack] ability, the new [Juggler] has their ability that day.",
         "math":"green",
         "reason":"The Juggler gains their ability on their first day.",
         "mathInfo":"No ability has malfunctioned."},
     {
-        "text":"If a new [Juggler] is made due to a [Barber], the new [Juggler] has their ability that day.",
+        "text":"If a new [Juggler] is made due to the [Pit-Hag] ability, the new [Juggler] has their ability that day.",
         "math":"green",
         "reason":"The Juggler gains their ability on their first day.",
         "mathInfo":"No ability has malfunctioned."},
     {
-        "text":"If the [Princess] is resurrected due to a [Al-Hadikhia], the [Princess] has their new ability that day.",
+        "text":"If a new [Juggler] is made due to the [Barber] ability, the new [Juggler] has their ability that day.",
+        "math":"green",
+        "reason":"The Juggler gains their ability on their first day.",
+        "mathInfo":"No ability has malfunctioned."},
+    {
+        "text":"If the [Princess] is resurrected due to the [Al-Hadikhia] ability, the [Princess] has their new ability that day.",
         "math":"green",
         "reason":"The Princess gains their ability on their first day.",
         "mathInfo":"No ability has malfunctioned."},
     {
-        "text":"If the [Princess] is resurrected due to a [Shabaloth], the [Princess] has their new ability that day.",
+        "text":"If the [Princess] is resurrected due to the [Shabaloth] ability, the [Princess] has their new ability that day.",
         "math":"green",
         "reason":"The Princess gains their ability on their first day.",
         "mathInfo":"No ability has malfunctioned."},
     {
-        "text":"If the [Princess] is resurrected due to a [Professor], the [Princess] has their new ability that day.",
+        "text":"If the [Princess] is resurrected due to the [Professor] ability, the [Princess] has their new ability that day.",
         "math":"green",
         "reason":"The Princess gains their ability on their first day.",
         "mathInfo":"No ability has malfunctioned."},
     {
-        "text":"If a new [Princess] is made due to a [Cacklejack], the new [Princess] has their ability that day.",
+        "text":"If a new [Princess] is made due to the [Cacklejack] ability, the new [Princess] has their ability that day.",
         "math":"green",
         "reason":"The Princess gains their ability on their first day.",
         "mathInfo":"No ability has malfunctioned."},
     {
-        "text":"If a new [Princess] is made due to a [Pit-Hag], the new [Princess] has their ability that day.",
+        "text":"If a new [Princess] is made due to the [Pit-Hag] ability, the new [Princess] has their ability that day.",
         "math":"green",
         "reason":"The Princess gains their ability on their first day.",
         "mathInfo":"No ability has malfunctioned."},
     {
-        "text":"If a new [Princess] is made due to a [Barber], the new [Princess] has their ability that day.",
+        "text":"If a new [Princess] is made due to the [Barber] ability, the new [Princess] has their ability that day.",
         "math":"green",
         "reason":"The Princess gains their ability on their first day.",
         "mathInfo":"No ability has malfunctioned."},
