@@ -1,5 +1,305 @@
 [
     {
+        "text":"If the [Gossip] is healthy at the time of their true statement, but is then [Vigormortis] poisoned that night, the [Gossip] does not kill.",
+        "math":"red",
+        "reason":"Players who are drunk or poisoned do not have an ability, but believe they do.",
+        "mathInfo":"If a player would have died due to the Gossip ability, but did not due to the Gossip being drunk or poisoned, the Gossip's ability malfunctioned."},
+    {
+        "text":"If the [Gossip] is [Vigormortis] poisoned at the time of their true statement, but is then healthy that night, the [Gossip] kills.",
+        "math":"green",
+        "reason":"The Gossip's ability checks to see if they made a true statement the day before. It does not matter if the Gossip was drunk, poisoned, dead, or a different character.",
+        "mathInfo":"No ability has malfunctioned."},
+    {
+        "text":"If the [Juggler] is healthy at the time of their juggle, but is then [Vigormortis] poisoned that night, the [Juggler] may learn incorrect information.",
+        "math":"red",
+        "reason":"Players who are drunk or poisoned do not have an ability, but believe they do.",
+        "mathInfo":"If the Juggler learns incorrect information due to being drunk or poisoned, the Juggler's ability malfunctioned."},
+    {
+        "text":"If the [Juggler] is [Vigormortis] poisoned at the time of their juggle, but is then healthy that night, the [Juggler] learns correct information.",
+        "math":"green",
+        "reason":"The Juggler's ability checks to see if the Juggler made a guess their first day. It does not matter if the Juggler was drunk or poisoned at the time of the juggle.",
+        "mathInfo":"No ability has malfunctioned."},
+    {
+        "text":"If the [Gossip] is healthy at the time of their true statement, but is then [Pukka] poisoned that night, the [Gossip] does not kill.",
+        "math":"red",
+        "reason":"Players who are drunk or poisoned do not have an ability, but believe they do.",
+        "mathInfo":"If a player would have died due to the Gossip ability, but did not due to the Gossip being drunk or poisoned, the Gossip's ability malfunctioned."},
+    {
+        "text":"If the [Gossip] is [Pukka] poisoned at the time of their true statement, but is then healthy that night, the [Gossip] kills.",
+        "math":"green",
+        "reason":"The Gossip's ability checks to see if they made a true statement the day before. It does not matter if the Gossip was drunk, poisoned, dead, or a different character.",
+        "mathInfo":"No ability has malfunctioned."},
+    {
+        "text":"If the [Juggler] is healthy at the time of their juggle, but is then [Pukka] poisoned that night, the [Juggler] may learn incorrect information.",
+        "math":"red",
+        "reason":"Players who are drunk or poisoned do not have an ability, but believe they do.",
+        "mathInfo":"If the Juggler learns incorrect information due to being drunk or poisoned, the Juggler's ability malfunctioned."},
+    {
+        "text":"If the [Juggler] is [Pukka] poisoned at the time of their juggle, but is then healthy that night, the [Juggler] learns correct information.",
+        "math":"green",
+        "reason":"The Juggler's ability checks to see if the Juggler made a guess their first day. It does not matter if the Juggler was drunk or poisoned at the time of the juggle.",
+        "mathInfo":"No ability has malfunctioned."},
+    {
+        "text":"If the [Gossip] is healthy at the time of their true statement, but is then [No Dashii] poisoned that night, the [Gossip] does not kill.",
+        "math":"red",
+        "reason":"Players who are drunk or poisoned do not have an ability, but believe they do.",
+        "mathInfo":"If a player would have died due to the Gossip ability, but did not due to the Gossip being drunk or poisoned, the Gossip's ability malfunctioned."},
+    {
+        "text":"If the [Gossip] is [No Dashii] poisoned at the time of their true statement, but is then healthy that night, the [Gossip] kills.",
+        "math":"green",
+        "reason":"The Gossip's ability checks to see if they made a true statement the day before. It does not matter if the Gossip was drunk, poisoned, dead, or a different character.",
+        "mathInfo":"No ability has malfunctioned."},
+    {
+        "text":"If the [Juggler] is healthy at the time of their juggle, but is then [No Dashii] poisoned that night, the [Juggler] may learn incorrect information.",
+        "math":"red",
+        "reason":"Players who are drunk or poisoned do not have an ability, but believe they do.",
+        "mathInfo":"If the Juggler learns incorrect information due to being drunk or poisoned, the Juggler's ability malfunctioned."},
+    {
+        "text":"If the [Juggler] is [No Dashii] poisoned at the time of their juggle, but is then healthy that night, the [Juggler] learns correct information.",
+        "math":"green",
+        "reason":"The Juggler's ability checks to see if the Juggler made a guess their first day. It does not matter if the Juggler was drunk or poisoned at the time of the juggle.",
+        "mathInfo":"No ability has malfunctioned."},
+    {
+        "text":"If the [Gossip] is healthy at the time of their true statement, but is then [Lleech] poisoned that night, the [Gossip] does not kill.",
+        "math":"red",
+        "reason":"Players who are drunk or poisoned do not have an ability, but believe they do.",
+        "mathInfo":"If a player would have died due to the Gossip ability, but did not due to the Gossip being drunk or poisoned, the Gossip's ability malfunctioned."},
+    {
+        "text":"If the [Gossip] is [Lleech] poisoned at the time of their true statement, but is then healthy that night, the [Gossip] kills.",
+        "math":"green",
+        "reason":"The Gossip's ability checks to see if they made a true statement the day before. It does not matter if the Gossip was drunk, poisoned, dead, or a different character.",
+        "mathInfo":"No ability has malfunctioned."},
+    {
+        "text":"If the [Juggler] is healthy at the time of their juggle, but is then [Lleech] poisoned that night, the [Juggler] may learn incorrect information.",
+        "math":"red",
+        "reason":"Players who are drunk or poisoned do not have an ability, but believe they do.",
+        "mathInfo":"If the Juggler learns incorrect information due to being drunk or poisoned, the Juggler's ability malfunctioned."},
+    {
+        "text":"If the [Juggler] is [Lleech] poisoned at the time of their juggle, but is then healthy that night, the [Juggler] learns correct information.",
+        "math":"green",
+        "reason":"The Juggler's ability checks to see if the Juggler made a guess their first day. It does not matter if the Juggler was drunk or poisoned at the time of the juggle.",
+        "mathInfo":"No ability has malfunctioned."},
+    {
+        "text":"If the [Gossip] is healthy at the time of their true statement, but is then [Xaan] poisoned that night, the [Gossip] does not kill.",
+        "math":"red",
+        "reason":"Players who are drunk or poisoned do not have an ability, but believe they do.",
+        "mathInfo":"If a player would have died due to the Gossip ability, but did not due to the Gossip being drunk or poisoned, the Gossip's ability malfunctioned."},
+    {
+        "text":"If the [Gossip] is [Xaan] poisoned at the time of their true statement, but is then healthy that night, the [Gossip] kills.",
+        "math":"green",
+        "reason":"The Gossip's ability checks to see if they made a true statement the day before. It does not matter if the Gossip was drunk, poisoned, dead, or a different character.",
+        "mathInfo":"No ability has malfunctioned."},
+    {
+        "text":"If the [Juggler] is healthy at the time of their juggle, but is then [Xaan] poisoned that night, the [Juggler] may learn incorrect information.",
+        "math":"red",
+        "reason":"Players who are drunk or poisoned do not have an ability, but believe they do.",
+        "mathInfo":"If the Juggler learns incorrect information due to being drunk or poisoned, the Juggler's ability malfunctioned."},
+    {
+        "text":"If the [Juggler] is [Xaan] poisoned at the time of their juggle, but is then healthy that night, the [Juggler] learns correct information.",
+        "math":"green",
+        "reason":"The Juggler's ability checks to see if the Juggler made a guess their first day. It does not matter if the Juggler was drunk or poisoned at the time of the juggle.",
+        "mathInfo":"No ability has malfunctioned."},
+    {
+        "text":"If the [Gossip] is healthy at the time of their true statement, but is then [Widow] poisoned that night, the [Gossip] does not kill.",
+        "math":"red",
+        "reason":"Players who are drunk or poisoned do not have an ability, but believe they do.",
+        "mathInfo":"If a player would have died due to the Gossip ability, but did not due to the Gossip being drunk or poisoned, the Gossip's ability malfunctioned."},
+    {
+        "text":"If the [Gossip] is [Widow] poisoned at the time of their true statement, but is then healthy that night, the [Gossip] kills.",
+        "math":"green",
+        "reason":"The Gossip's ability checks to see if they made a true statement the day before. It does not matter if the Gossip was drunk, poisoned, dead, or a different character.",
+        "mathInfo":"No ability has malfunctioned."},
+    {
+        "text":"If the [Juggler] is healthy at the time of their juggle, but is then [Widow] poisoned that night, the [Juggler] may learn incorrect information.",
+        "math":"red",
+        "reason":"Players who are drunk or poisoned do not have an ability, but believe they do.",
+        "mathInfo":"If the Juggler learns incorrect information due to being drunk or poisoned, the Juggler's ability malfunctioned."},
+    {
+        "text":"If the [Juggler] is [Widow] poisoned at the time of their juggle, but is then healthy that night, the [Juggler] learns correct information.",
+        "math":"green",
+        "reason":"The Juggler's ability checks to see if the Juggler made a guess their first day. It does not matter if the Juggler was drunk or poisoned at the time of the juggle.",
+        "mathInfo":"No ability has malfunctioned."},
+    {
+        "text":"If the [Gossip] is healthy at the time of their true statement, but is then [Poisoner] poisoned that night, the [Gossip] does not kill.",
+        "math":"red",
+        "reason":"Players who are drunk or poisoned do not have an ability, but believe they do.",
+        "mathInfo":"If a player would have died due to the Gossip ability, but did not due to the Gossip being drunk or poisoned, the Gossip's ability malfunctioned."},
+    {
+        "text":"If the [Gossip] is [Poisoner] poisoned at the time of their true statement, but is then healthy that night, the [Gossip] kills.",
+        "math":"green",
+        "reason":"The Gossip's ability checks to see if they made a true statement the day before. It does not matter if the Gossip was drunk, poisoned, dead, or a different character.",
+        "mathInfo":"No ability has malfunctioned."},
+    {
+        "text":"If the [Juggler] is healthy at the time of their juggle, but is then [Poisoner] poisoned that night, the [Juggler] may learn incorrect information.",
+        "math":"red",
+        "reason":"Players who are drunk or poisoned do not have an ability, but believe they do.",
+        "mathInfo":"If the Juggler learns incorrect information due to being drunk or poisoned, the Juggler's ability malfunctioned."},
+    {
+        "text":"If the [Juggler] is [Poisoner] poisoned at the time of their juggle, but is then healthy that night, the [Juggler] learns correct information.",
+        "math":"green",
+        "reason":"The Juggler's ability checks to see if the Juggler made a guess their first day. It does not matter if the Juggler was drunk or poisoned at the time of the juggle.",
+        "mathInfo":"No ability has malfunctioned."},
+    {
+        "text":"If the [Gossip] is sober at the time of their true statement, but is then [Sweetheart] drunk that night, the [Gossip] does not kill.",
+        "math":"red",
+        "reason":"Players who are drunk or poisoned do not have an ability, but believe they do.",
+        "mathInfo":"If a player would have died due to the Gossip ability, but did not due to the Gossip being drunk or poisoned, the Gossip's ability malfunctioned."},
+    {
+        "text":"If the [Gossip] is [Sweetheart] drunk at the time of their true statement, but is then sober that night, the [Gossip] kills.",
+        "math":"green",
+        "reason":"The Gossip's ability checks to see if they made a true statement the day before. It does not matter if the Gossip was drunk, poisoned, dead, or a different character.",
+        "mathInfo":"No ability has malfunctioned."},
+    {
+        "text":"If the [Juggler] is sober at the time of their juggle, but is then [Sweetheart] drunk that night, the [Juggler] may learn incorrect information.",
+        "math":"red",
+        "reason":"Players who are drunk or poisoned do not have an ability, but believe they do.",
+        "mathInfo":"If the Juggler learns incorrect information due to being drunk or poisoned, the Juggler's ability malfunctioned."},
+    {
+        "text":"If the [Juggler] is [Sweetheart] drunk at the time of their juggle, but is then sober that night, the [Juggler] learns correct information.",
+        "math":"green",
+        "reason":"The Juggler's ability checks to see if the Juggler made a guess their first day. It does not matter if the Juggler was drunk or poisoned at the time of the juggle.",
+        "mathInfo":"No ability has malfunctioned."},
+    {
+        "text":"If the [Gossip] is sober at the time of their true statement, but is then [Puzzlemaster] drunk that night, the [Gossip] does not kill.",
+        "math":"red",
+        "reason":"Players who are drunk or poisoned do not have an ability, but believe they do.",
+        "mathInfo":"If a player would have died due to the Gossip ability, but did not due to the Gossip being drunk or poisoned, the Gossip's ability malfunctioned."},
+    {
+        "text":"If the [Gossip] is [Puzzlemaster] drunk at the time of their true statement, but is then sober that night, the [Gossip] kills.",
+        "math":"green",
+        "reason":"The Gossip's ability checks to see if they made a true statement the day before. It does not matter if the Gossip was drunk, poisoned, dead, or a different character.",
+        "mathInfo":"No ability has malfunctioned."},
+    {
+        "text":"If the [Juggler] is sober at the time of their juggle, but is then [Puzzlemaster] drunk that night, the [Juggler] may learn incorrect information.",
+        "math":"red",
+        "reason":"Players who are drunk or poisoned do not have an ability, but believe they do.",
+        "mathInfo":"If the Juggler learns incorrect information due to being drunk or poisoned, the Juggler's ability malfunctioned."},
+    {
+        "text":"If the [Juggler] is [Puzzlemaster] drunk at the time of their juggle, but is then sober that night, the [Juggler] learns correct information.",
+        "math":"green",
+        "reason":"The Juggler's ability checks to see if the Juggler made a guess their first day. It does not matter if the Juggler was drunk or poisoned at the time of the juggle.",
+        "mathInfo":"No ability has malfunctioned."},
+    {
+        "text":"If the [Gossip] is sober at the time of their true statement, but is then [Sailor] drunk that night, the [Gossip] does not kill.",
+        "math":"red",
+        "reason":"Players who are drunk or poisoned do not have an ability, but believe they do.",
+        "mathInfo":"If a player would have died due to the Gossip ability, but did not due to the Gossip being drunk or poisoned, the Gossip's ability malfunctioned."},
+    {
+        "text":"If the [Gossip] is [Sailor] drunk at the time of their true statement, but is then sober that night, the [Gossip] kills.",
+        "math":"green",
+        "reason":"The Gossip's ability checks to see if they made a true statement the day before. It does not matter if the Gossip was drunk, poisoned, dead, or a different character.",
+        "mathInfo":"No ability has malfunctioned."},
+    {
+        "text":"If the [Juggler] is sober at the time of their juggle, but is then [Sailor] drunk that night, the [Juggler] may learn incorrect information.",
+        "math":"red",
+        "reason":"Players who are drunk or poisoned do not have an ability, but believe they do.",
+        "mathInfo":"If the Juggler learns incorrect information due to being drunk or poisoned, the Juggler's ability malfunctioned."},
+    {
+        "text":"If the [Juggler] is [Sailor] drunk at the time of their juggle, but is then sober that night, the [Juggler] learns correct information.",
+        "math":"green",
+        "reason":"The Juggler's ability checks to see if the Juggler made a guess their first day. It does not matter if the Juggler was drunk or poisoned at the time of the juggle.",
+        "mathInfo":"No ability has malfunctioned."},
+    {
+        "text":"If the [Gossip] is sober at the time of their true statement, but is then [Philosopher] drunk that night, the [Gossip] does not kill.",
+        "math":"red",
+        "reason":"Players who are drunk or poisoned do not have an ability, but believe they do.",
+        "mathInfo":"If a player would have died due to the Gossip ability, but did not due to the Gossip being drunk or poisoned, the Gossip's ability malfunctioned."},
+    {
+        "text":"If the [Gossip] is [Philosopher] drunk at the time of their true statement, but is then sober that night, the [Gossip] kills.",
+        "math":"green",
+        "reason":"The Gossip's ability checks to see if they made a true statement the day before. It does not matter if the Gossip was drunk, poisoned, dead, or a different character.",
+        "mathInfo":"No ability has malfunctioned."},
+    {
+        "text":"If the [Juggler] is sober at the time of their juggle, but is then [Philosopher] drunk that night, the [Juggler] may learn incorrect information.",
+        "math":"red",
+        "reason":"Players who are drunk or poisoned do not have an ability, but believe they do.",
+        "mathInfo":"If the Juggler learns incorrect information due to being drunk or poisoned, the Juggler's ability malfunctioned."},
+    {
+        "text":"If the [Juggler] is [Philosopher] drunk at the time of their juggle, but is then sober that night, the [Juggler] learns correct information.",
+        "math":"green",
+        "reason":"The Juggler's ability checks to see if the Juggler made a guess their first day. It does not matter if the Juggler was drunk or poisoned at the time of the juggle.",
+        "mathInfo":"No ability has malfunctioned."},
+    {
+        "text":"If the [Gossip] is sober at the time of their true statement, but is then [Minstrel] drunk that night, the [Gossip] does not kill.",
+        "math":"red",
+        "reason":"Players who are drunk or poisoned do not have an ability, but believe they do.",
+        "mathInfo":"If a player would have died due to the Gossip ability, but did not due to the Gossip being drunk or poisoned, the Gossip's ability malfunctioned."},
+    {
+        "text":"If the [Gossip] is [Minstrel] drunk at the time of their true statement, but is then sober that night, the [Gossip] kills.",
+        "math":"green",
+        "reason":"The Gossip's ability checks to see if they made a true statement the day before. It does not matter if the Gossip was drunk, poisoned, dead, or a different character.",
+        "mathInfo":"No ability has malfunctioned."},
+    {
+        "text":"If the [Juggler] is sober at the time of their juggle, but is then [Minstrel] drunk that night, the [Juggler] may learn incorrect information.",
+        "math":"red",
+        "reason":"Players who are drunk or poisoned do not have an ability, but believe they do.",
+        "mathInfo":"If the Juggler learns incorrect information due to being drunk or poisoned, the Juggler's ability malfunctioned."},
+    {
+        "text":"If the [Juggler] is [Minstrel] drunk at the time of their juggle, but is then sober that night, the [Juggler] learns correct information.",
+        "math":"green",
+        "reason":"The Juggler's ability checks to see if the Juggler made a guess their first day. It does not matter if the Juggler was drunk or poisoned at the time of the juggle.",
+        "mathInfo":"No ability has malfunctioned."},
+    {
+        "text":"If the [Gossip] is sober at the time of their true statement, but is then [Innkeeper] drunk that night, the [Gossip] does not kill.",
+        "math":"red",
+        "reason":"Players who are drunk or poisoned do not have an ability, but believe they do.",
+        "mathInfo":"If a player would have died due to the Gossip ability, but did not due to the Gossip being drunk or poisoned, the Gossip's ability malfunctioned."},
+    {
+        "text":"If the [Juggler] is sober at the time of their juggle, but is then [Innkeeper] drunk that night, the [Juggler] may learn incorrect information.",
+        "math":"red",
+        "reason":"Players who are drunk or poisoned do not have an ability, but believe they do.",
+        "mathInfo":"If the Juggler learns incorrect information due to being drunk or poisoned, the Juggler's ability malfunctioned."},
+    {
+        "text":"If the [Gossip] is sober at the time of their true statement, but is then [Courtier] drunk that night, the [Gossip] does not kill.",
+        "math":"red",
+        "reason":"Players who are drunk or poisoned do not have an ability, but believe they do.",
+        "mathInfo":"If a player would have died due to the Gossip ability, but did not due to the Gossip being drunk or poisoned, the Gossip's ability malfunctioned."},
+    {
+        "text":"If the [Gossip] is [Courtier] drunk at the time of their true statement, but is then sober that night, the [Gossip] kills.",
+        "math":"green",
+        "reason":"The Gossip's ability checks to see if they made a true statement the day before. It does not matter if the Gossip was drunk, poisoned, dead, or a different character.",
+        "mathInfo":"No ability has malfunctioned."},
+    {
+        "text":"If the [Juggler] is sober at the time of their juggle, but is then [Courtier] drunk that night, the [Juggler] may learn incorrect information.",
+        "math":"red",
+        "reason":"Players who are drunk or poisoned do not have an ability, but believe they do.",
+        "mathInfo":"If the Juggler learns incorrect information due to being drunk or poisoned, the Juggler's ability malfunctioned."},
+    {
+        "text":"If the [Juggler] is [Courtier] drunk at the time of their juggle, but is then sober that night, the [Juggler] learns correct information.",
+        "math":"green",
+        "reason":"The Juggler's ability checks to see if the Juggler made a guess their first day. It does not matter if the Juggler was drunk or poisoned at the time of the juggle.",
+        "mathInfo":"No ability has malfunctioned."},
+    {
+        "text":"If the dead [Gossip] makes a true statement while dead and is resurrected due to the [Al-Hadikhia] ability that night, the [Gossip] kills.",
+        "math":"green",
+        "reason":"The Gossip's ability checks to see if they made a true statement the day before. It does not matter if the Gossip was drunk, poisoned, dead, or a different character.",
+        "mathInfo":"No ability has malfunctioned."},
+    {
+        "text":"If the [Juggler] is resurrected due to the [Al-Hadikhia] ability, the [Juggler]'s first day is considered the day they find out they are alive.",
+        "math":"green",
+        "reason":"If a character is resurrected or created, they are a new instance of that character and their ability resets.",
+        "mathInfo":"No ability has malfunctioned."},
+    {
+        "text":"If the dead [Gossip] makes a true statement while dead and is resurrected due to the [Shabaloth] ability that night, the [Gossip] kills.",
+        "math":"green",
+        "reason":"The Gossip's ability checks to see if they made a true statement the day before. It does not matter if the Gossip was drunk, poisoned, dead, or a different character.",
+        "mathInfo":"No ability has malfunctioned."},
+    {
+        "text":"If the [Juggler] is resurrected due to the [Shabaloth] ability, the [Juggler]'s first day is considered the day they find out they are alive.",
+        "math":"green",
+        "reason":"If a character is resurrected or created, they are a new instance of that character and their ability resets.",
+        "mathInfo":"No ability has malfunctioned."},
+    {
+        "text":"If the dead [Gossip] makes a true statement while dead and is resurrected due to the [Professor] ability that night, the [Gossip] does not kill.",
+        "math":"green",
+        "reason":"The Gossip is before the Professor in night order.",
+        "mathInfo":"No ability has malfunctioned."},
+    {
+        "text":"If the [Juggler] is resurrected due to the [Professor] ability, the [Juggler]'s first day is considered the day they find out they are alive.",
+        "math":"green",
+        "reason":"If a character is resurrected or created, they are a new instance of that character and their ability resets.",
+        "mathInfo":"No ability has malfunctioned."},
+    {
         "text":"If the [Grandmother]'s grandchild is the [Spy], the [Grandmother] might see them as a Townsfolk, Outsider, or the [Spy].",
         "math":"red",
         "reason":"The Spy might register as a good Townsfolk or Outsider.",
