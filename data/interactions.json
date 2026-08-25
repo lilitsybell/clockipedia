@@ -1,5 +1,15 @@
 [
     {
+        "text":"If the [Grandmother]'s grandchild is the [Spy], the [Grandmother] might see them as a Townsfolk, Outsider, or the [Spy].",
+        "math":"red",
+        "reason":"The Spy might register as a good Townsfolk or Outsider.",
+        "mathInfo":"If the Grandmother sees the grandchild as anything but the character they are, the Grandmother's ability malfunctioned."},
+    {
+        "text":"If the [Grandmother]'s grandchild is the [Recluse], the [Grandmother] might see them as a Minion, Demon, or the [Recluse].",
+        "math":"red",
+        "reason":"The Recluse might register as a good Minion or Demon.",
+        "mathInfo":"If the Grandmother sees the grandchild as anything but the character they are, the Grandmother's ability malfunctioned."},
+    {
         "text":"If the [Soldier] neighbors a Minion who was killed by the [Vigormortis] ability, the [Soldier] cannot be poisoned.",
         "math":"red",
         "reason":"The Soldier is safe from being drunk, poisoned, turned evil, or killed by the Demon.",
