@@ -1,5 +1,20 @@
 [
     {
+        "text":"If the [Soldier] neighbors a Minion who was killed by the [Vigormortis] ability, the [Soldier] cannot be poisoned.",
+        "math":"red",
+        "reason":"The Soldier is safe from being drunk, poisoned, turned evil, or killed by the Demon.",
+        "mathInfo":"If the Demon attempted to poison or kill the Soldier, but the Soldier did not die, the Demon's ability malfunctioned."},
+    {
+        "text":"If the [Pukka] chooses the [Soldier], the [Soldier] is not poisoned.",
+        "math":"red",
+        "reason":"The Soldier is safe from being drunk, poisoned, turned evil, or killed by the Demon.",
+        "mathInfo":"If the Demon attempted to poison or kill the Soldier, but the Soldier did not die, the Demon's ability malfunctioned."},
+    {
+        "text":"If the [No Dashii] is neighboring the [Soldier], the [Soldier] is not poisoned.",
+        "math":"red",
+        "reason":"The Soldier is safe from being drunk, poisoned, turned evil, or killed by the Demon.",
+        "mathInfo":"If the Demon attempted to poison or kill the Soldier, but the Soldier did not die, the Demon's ability malfunctioned."},
+    {
         "text":"If the [Vigormortis] changes characters due to the [Snake Charmer] ability, any dead Minions who have their abilities due to the [Vigormortis], no longer have their abilities.",
         "math":"green",
         "reason":"If the Vigormortis changes characters, their ability is no longer in play, even if a new Vigormortis is created elsewhere.",
