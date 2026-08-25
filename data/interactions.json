@@ -1,5 +1,230 @@
 [
     {
+        "text":"If the [Angel] protected player dies due to the [Scapegoat] ability, something bad might happen to the [Scapegoat].",
+        "math":"green",
+        "reason":"Something bad might happen to a player who kills a player who is protected due to the Angel ability.",
+        "mathInfo":"No ability has malfunctioned."},
+    {
+        "text":"If the [Angel] protected player dies due to the [Judge] ability, something bad might happen to the [Judge].",
+        "math":"green",
+        "reason":"Something bad might happen to a player who kills a player who is protected due to the Angel ability.",
+        "mathInfo":"No ability has malfunctioned."},
+    {
+        "text":"If the [Angel] protected player dies due to the [Harlot] ability, something bad might happen to the [Harlot].",
+        "math":"green",
+        "reason":"Something bad might happen to a player who kills a player who is protected due to the Angel ability.",
+        "mathInfo":"No ability has malfunctioned."},
+    {
+        "text":"If the [Angel] protected player dies due to the [Gunslinger] ability, something bad might happen to the [Gunslinger].",
+        "math":"green",
+        "reason":"Something bad might happen to a player who kills a player who is protected due to the Angel ability.",
+        "mathInfo":"No ability has malfunctioned."},
+    {
+        "text":"If the [Angel] protected player dies due to the [Gnome] ability, something bad might happen to the [Gnome].",
+        "math":"green",
+        "reason":"Something bad might happen to a player who kills a player who is protected due to the Angel ability.",
+        "mathInfo":"No ability has malfunctioned."},
+    {
+        "text":"If the [Angel] protected player dies due to the [Gangster] ability, something bad might happen to the [Gangster].",
+        "math":"green",
+        "reason":"Something bad might happen to a player who kills a player who is protected due to the Angel ability.",
+        "mathInfo":"No ability has malfunctioned."},
+    {
+        "text":"If the [Angel] protected player dies due to the [Butcher] ability, something bad might happen to the [Butcher].",
+        "math":"green",
+        "reason":"Something bad might happen to a player who kills a player who is protected due to the Angel ability.",
+        "mathInfo":"No ability has malfunctioned."},
+    {
+        "text":"If the [Angel] protected player dies due to the [Bishop] ability, something bad might happen to the [Bishop].",
+        "math":"green",
+        "reason":"Something bad might happen to a player who kills a player who is protected due to the Angel ability.",
+        "mathInfo":"No ability has malfunctioned."},
+    {
+        "text":"If the [Angel] protected player dies due to the [Zombuul] ability, something bad might happen to the [Zombuul].",
+        "math":"green",
+        "reason":"Something bad might happen to a player who kills a player who is protected due to the Angel ability.",
+        "mathInfo":"No ability has malfunctioned."},
+    {
+        "text":"If the [Angel] protected player dies due to the [Yaggababble] ability, something bad might happen to the [Yaggababble].",
+        "math":"green",
+        "reason":"Something bad might happen to a player who kills a player who is protected due to the Angel ability.",
+        "mathInfo":"No ability has malfunctioned."},
+    {
+        "text":"If the [Angel] protected player dies due to the [Vortox] ability, something bad might happen to the [Vortox].",
+        "math":"green",
+        "reason":"Something bad might happen to a player who kills a player who is protected due to the Angel ability.",
+        "mathInfo":"No ability has malfunctioned."},
+    {
+        "text":"If the [Angel] protected player dies due to the [Vigormortis] ability, something bad might happen to the [Vigormortis].",
+        "math":"green",
+        "reason":"Something bad might happen to a player who kills a player who is protected due to the Angel ability.",
+        "mathInfo":"No ability has malfunctioned."},
+    {
+        "text":"If the [Angel] protected player dies due to the [Shabaloth] ability, something bad might happen to the [Shabaloth].",
+        "math":"green",
+        "reason":"Something bad might happen to a player who kills a player who is protected due to the Angel ability.",
+        "mathInfo":"No ability has malfunctioned."},
+    {
+        "text":"If the [Angel] protected player dies due to the [Riot] ability, something bad might happen to the [Riot].",
+        "math":"green",
+        "reason":"Something bad might happen to a player who kills a player who is protected due to the Angel ability.",
+        "mathInfo":"No ability has malfunctioned."},
+    {
+        "text":"If the [Angel] protected player dies due to the [Pukka] ability, something bad might happen to the [Pukka].",
+        "math":"green",
+        "reason":"Something bad might happen to a player who kills a player who is protected due to the Angel ability.",
+        "mathInfo":"No ability has malfunctioned."},
+    {
+        "text":"If the [Angel] protected player dies due to the [Po] ability, something bad might happen to the [Po].",
+        "math":"green",
+        "reason":"Something bad might happen to a player who kills a player who is protected due to the Angel ability.",
+        "mathInfo":"No ability has malfunctioned."},
+    {
+        "text":"If the [Angel] protected player dies due to the [Ojo] ability, something bad might happen to the [Ojo].",
+        "math":"green",
+        "reason":"Something bad might happen to a player who kills a player who is protected due to the Angel ability.",
+        "mathInfo":"No ability has malfunctioned."},
+    {
+        "text":"If the [Angel] protected player dies due to the [No Dashii] ability, something bad might happen to the [No Dashii].",
+        "math":"green",
+        "reason":"Something bad might happen to a player who kills a player who is protected due to the Angel ability.",
+        "mathInfo":"No ability has malfunctioned."},
+    {
+        "text":"If the [Angel] protected player dies due to the [Lord of Typhon] ability, something bad might happen to the [Lord of Typhon].",
+        "math":"green",
+        "reason":"Something bad might happen to a player who kills a player who is protected due to the Angel ability.",
+        "mathInfo":"No ability has malfunctioned."},
+    {
+        "text":"If the [Angel] protected player dies due to the [Lleech] ability, something bad might happen to the [Lleech].",
+        "math":"green",
+        "reason":"Something bad might happen to a player who kills a player who is protected due to the Angel ability.",
+        "mathInfo":"No ability has malfunctioned."},
+    {
+        "text":"If the [Angel] protected player dies due to the [Lil' Monsta] ability, something bad might happen to the player babysitting [Lil' Monsta].",
+        "math":"green",
+        "reason":"Something bad might happen to a player who kills a player who is protected due to the Angel ability.",
+        "mathInfo":"No ability has malfunctioned."},
+    {
+        "text":"If the [Angel] protected player dies due to the [Legion] ability, something bad might happen to the [Legion].",
+        "math":"green",
+        "reason":"Something bad might happen to a player who kills a player who is protected due to the Angel ability.",
+        "mathInfo":"No ability has malfunctioned."},
+    {
+        "text":"If the [Angel] protected player dies due to the [Kazali] ability, something bad might happen to the [Kazali].",
+        "math":"green",
+        "reason":"Something bad might happen to a player who kills a player who is protected due to the Angel ability.",
+        "mathInfo":"No ability has malfunctioned."},
+    {
+        "text":"If the [Angel] protected player dies due to the [Imp] ability, something bad might happen to the [Imp].",
+        "math":"green",
+        "reason":"Something bad might happen to a player who kills a player who is protected due to the Angel ability.",
+        "mathInfo":"No ability has malfunctioned."},
+    {
+        "text":"If the [Angel] protected player dies due to the [Fang Gu] ability, something bad might happen to the [Fang Gu].",
+        "math":"green",
+        "reason":"Something bad might happen to a player who kills a player who is protected due to the Angel ability.",
+        "mathInfo":"No ability has malfunctioned."},
+    {
+        "text":"If the [Angel] protected player dies due to the [Al-Hadikhia] ability, something bad might happen to the [Al-Hadikhia].",
+        "math":"green",
+        "reason":"Something bad might happen to a player who kills a player who is protected due to the Angel ability.",
+        "mathInfo":"No ability has malfunctioned."},
+    {
+        "text":"If the [Angel] protected player dies due to the [Witch] ability, something bad might happen to the [Witch].",
+        "math":"green",
+        "reason":"Something bad might happen to a player who kills a player who is protected due to the Angel ability.",
+        "mathInfo":"No ability has malfunctioned."},
+    {
+        "text":"If the [Angel] protected player dies due to the [Vizier] ability, something bad might happen to the [Vizier].",
+        "math":"green",
+        "reason":"Something bad might happen to a player who kills a player who is protected due to the Angel ability.",
+        "mathInfo":"No ability has malfunctioned."},
+    {
+        "text":"If the [Angel] protected player dies due to the [Psychopath] ability, something bad might happen to the [Psychopath].",
+        "math":"green",
+        "reason":"Something bad might happen to a player who kills a player who is protected due to the Angel ability.",
+        "mathInfo":"No ability has malfunctioned."},
+    {
+        "text":"If the [Angel] protected player dies due to the [Harpy] ability, something bad might happen to the [Harpy].",
+        "math":"green",
+        "reason":"Something bad might happen to a player who kills a player who is protected due to the Angel ability.",
+        "mathInfo":"No ability has malfunctioned."},
+    {
+        "text":"If the [Angel] protected player dies due to the [Godfather] ability, something bad might happen to the [Godfather].",
+        "math":"green",
+        "reason":"Something bad might happen to a player who kills a player who is protected due to the Angel ability.",
+        "mathInfo":"No ability has malfunctioned."},
+    {
+        "text":"If the [Angel] protected player dies due to the [Cerenovus] ability, something bad might happen to the [Cerenovus].",
+        "math":"green",
+        "reason":"Something bad might happen to a player who kills a player who is protected due to the Angel ability.",
+        "mathInfo":"No ability has malfunctioned."},
+    {
+        "text":"If the [Angel] protected player dies due to the [Boomdandy] ability, something bad might happen to the [Boomdandy].",
+        "math":"green",
+        "reason":"Something bad might happen to a player who kills a player who is protected due to the Angel ability.",
+        "mathInfo":"No ability has malfunctioned."},
+    {
+        "text":"If the [Angel] protected player dies due to the [Assassin] ability, something bad might happen to the [Assassin].",
+        "math":"green",
+        "reason":"Something bad might happen to a player who kills a player who is protected due to the Angel ability.",
+        "mathInfo":"No ability has malfunctioned."},
+    {
+        "text":"If the [Angel] protected player dies due to the [Tinker] ability, something bad might happen to the [Tinker].",
+        "math":"green",
+        "reason":"Something bad might happen to a player who kills a player who is protected due to the Angel ability.",
+        "mathInfo":"No ability has malfunctioned."},
+    {
+        "text":"If the [Angel] protected player dies due to the [Mutant] ability, something bad might happen to the [Mutant].",
+        "math":"green",
+        "reason":"Something bad might happen to a player who kills a player who is protected due to the Angel ability.",
+        "mathInfo":"No ability has malfunctioned."},
+    {
+        "text":"If the [Angel] protected player dies due to the [Moonchild] ability, something bad might happen to the [Moonchild].",
+        "math":"green",
+        "reason":"Something bad might happen to a player who kills a player who is protected due to the Angel ability.",
+        "mathInfo":"No ability has malfunctioned."},
+    {
+        "text":"If the [Angel] protected player dies due to the [Golem] ability, something bad might happen to the [Golem].",
+        "math":"green",
+        "reason":"Something bad might happen to a player who kills a player who is protected due to the Angel ability.",
+        "mathInfo":"No ability has malfunctioned."},
+    {
+        "text":"If the [Angel] protected player dies due to the [Virgin] ability, something bad might happen to the [Virgin].",
+        "math":"green",
+        "reason":"Something bad might happen to a player who kills a player who is protected due to the Angel ability.",
+        "mathInfo":"No ability has malfunctioned."},
+    {
+        "text":"If the [Angel] protected player dies due to the [Slayer] ability, something bad might happen to the [Slayer].",
+        "math":"green",
+        "reason":"Something bad might happen to a player who kills a player who is protected due to the Angel ability.",
+        "mathInfo":"No ability has malfunctioned."},
+    {
+        "text":"If the [Angel] protected player dies due to the [Lycanthrope] ability, something bad might happen to the [Lycanthrope].",
+        "math":"green",
+        "reason":"Something bad might happen to a player who kills a player who is protected due to the Angel ability.",
+        "mathInfo":"No ability has malfunctioned."},
+    {
+        "text":"If the [Angel] protected player dies due to the [Grandmother] ability, something bad might happen to the [Grandmother].",
+        "math":"green",
+        "reason":"Something bad might happen to a player who kills a player who is protected due to the Angel ability.",
+        "mathInfo":"No ability has malfunctioned."},
+    {
+        "text":"If the [Angel] protected player dies due to the [Gossip] ability, something bad might happen to the [Gossip].",
+        "math":"green",
+        "reason":"Something bad might happen to a player who kills a player who is protected due to the Angel ability.",
+        "mathInfo":"No ability has malfunctioned."},
+    {
+        "text":"If the [Angel] protected player dies due to the [Gambler] ability, something bad might happen to the [Gambler].",
+        "math":"green",
+        "reason":"Something bad might happen to a player who kills a player who is protected due to the Angel ability.",
+        "mathInfo":"No ability has malfunctioned."},
+    {
+        "text":"If the [Angel] protected player dies due to the [Acrobat] ability, something bad might happen to the [Acrobat].",
+        "math":"green",
+        "reason":"Something bad might happen to a player who kills a player who is protected due to the Angel ability.",
+        "mathInfo":"No ability has malfunctioned."},
+    {
         "text":"If the [Preacher] chooses the [Godfather] on the [Godfather]'s first night, the [Godfather] does not learn which Outsiders are in play. If the [Preacher] is later drunk, poisoned, dead, or out of play, the [Godfather] learns which Outsiders are in play that night.",
         "math":"red",
         "reason":"If a player should start knowing information, but does not, they learn the information as soon as they are able to.",
