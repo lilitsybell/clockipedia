@@ -1,5 +1,15 @@
 [
     {
+        "text":"If the [Preacher] chooses the [Godfather] on the [Godfather]'s first night, the [Godfather] does not learn which Outsiders are in play. If the [Preacher] is later drunk, poisoned, dead, or out of play, the [Godfather] learns which Outsiders are in play that night.",
+        "math":"red",
+        "reason":"If a player should start knowing information, but does not, they learn the information as soon as they are able to.",
+        "mathInfo":"If the Godfather does not learn which Outsiders are in play, the Godfather's ability malfunctioned."},
+    {
+        "text":"If the [Preacher] chooses the [Mezepheles] on the [Mezepheles]' first night, the [Mezepheles] does not learn a word. If the [Preacher] is later drunk, poisoned, dead, or out of play, the [Mezepheles] learns their word that night and from that point on a player may say the word and turn evil. No players who have previously said the word are considered to have used the [Mezepeheles]' ability.",
+        "math":"red",
+        "reason":"If a player should start knowing information, but does not, they learn the information as soon as they are able to.",
+        "mathInfo":"If the Mezepheles does not learn their word, or if a player is not turned evil after saying their word, the Mezephles' ability malfunctioned."},
+    {
         "text":"If the [Gossip] is healthy at the time of their true statement, but is then [Vigormortis] poisoned that night, the [Gossip] does not kill.",
         "math":"red",
         "reason":"Players who are drunk or poisoned do not have an ability, but believe they do.",
