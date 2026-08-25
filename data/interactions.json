@@ -6330,6 +6330,11 @@
         "reason":"The Buddhist does not stop players from using their abilities.",
         "mathInfo":"No ability has malfunctioned."},
     {
+        "text":"If the [Buddhist] is in play, a [High Priestess] who is considered a veteran player must still wait their turn to talk.",
+        "math":"green",
+        "reason":"The Buddhist does not stop players from using their abilities.",
+        "mathInfo":"No ability has malfunctioned."},
+    {
         "text":"If the [Buddhist] is in play, a [Wizard] who is considered a veteran player may still talk to use their ability.",
         "math":"green",
         "reason":"The Buddhist does not stop players from using their abilities.",
