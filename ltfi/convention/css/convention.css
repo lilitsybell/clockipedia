@@ -124,55 +124,51 @@ a {
 ========================================== */
 .banner-countdown {
     position: absolute;
-    top: 8%;
+    top: 50%;
     right: 3%;
-    width: min(31%, 520px);
-    padding: 20px 22px 18px;
-    border: 3px solid #c49d00;
-    border-radius: 16px;
-    background:
-        rgba(28, 20, 49, .88);
-    box-shadow:
-        0 8px 30px rgba(0,0,0,.35);
-    backdrop-filter: blur(6px);
+    width: 18%;
+    transform: translateY(-50%);
     color: white;
-}
-.countdown-heading {
-    margin-bottom: 12px;
-    color: #e0bd31;
-    font-size: clamp(11px, 1vw, 16px);
-    font-weight: 900;
-    letter-spacing: .16em;
     text-align: center;
 }
-.countdown {
-    display: grid;
-    grid-template-columns:
-        repeat(4, 1fr);
-    gap: 8px;
+.countdown-heading {
+    margin-bottom: 16px;
+    color: #e0bd31;
+    font-size: clamp(10px, .9vw, 15px);
+    font-weight: 900;
+    letter-spacing: .18em;
+    text-transform: uppercase;
 }
-.countdown-unit {
-    min-width: 0;
+.countdown {
     display: flex;
     flex-direction: column;
-    align-items: center;
+    gap: 12px;
+}
+.countdown-unit {
+    display: flex;
+    align-items: baseline;
+    justify-content: center;
+    gap: 8px;
 }
 .countdown-unit span {
-    color: white;
-    font-size: clamp(24px, 2.5vw, 46px);
+    min-width: 2.4ch;
+    color: #e0bd31;
+    font-size: clamp(25px, 2.8vw, 48px);
     font-weight: 900;
-    line-height: .95;
+    line-height: .9;
     letter-spacing: -.04em;
+    text-align: right;
     text-shadow:
-        0 3px 0 rgba(0,0,0,.45);
+        0 2px 4px rgba(0,0,0,.35);
 }
 .countdown-unit small {
-    margin-top: 7px;
-    color: #e0bd31;
-    font-size: clamp(7px, .65vw, 10px);
-    font-weight: 900;
-    text-transform: uppercase;
+    width: 55px;
+    color: white;
+    font-size: clamp(8px, .7vw, 11px);
+    font-weight: 800;
     letter-spacing: .1em;
+    text-align: left;
+    text-transform: uppercase;
 }
 /* ==========================================
    General Sections
@@ -362,22 +358,32 @@ a {
         top: auto;
         right: auto;
         width: 100%;
-        padding: 18px 16px;
-        border: 0;
-        border-radius: 0;
+        padding: 20px;
+        transform: none;
         background: #2d2448;
-        box-shadow: none;
     }
     .countdown {
-        max-width: 450px;
+        display: grid;
+        grid-template-columns:
+            repeat(4, 1fr);
+        max-width: 500px;
         margin: 0 auto;
-        gap: 6px;
+        gap: 10px;
+    }
+    .countdown-unit {
+        flex-direction: column;
+        align-items: center;
+        gap: 5px;
     }
     .countdown-unit span {
+        min-width: 0;
         font-size: clamp(28px, 9vw, 42px);
+        text-align: center;
     }
     .countdown-unit small {
+        width: auto;
         font-size: 8px;
+        text-align: center;
     }
 }
 /* ==========================================
