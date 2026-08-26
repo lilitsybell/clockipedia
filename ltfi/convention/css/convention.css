@@ -101,78 +101,78 @@ a {
     border-radius: 3px;
 }
 /* ==========================================
-   Hero
+   Convention Banner
 ========================================== */
 .convention-hero {
     width: 100%;
-    padding: 0;
     margin: 0;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    text-align: center;
-    background: var(--background);
+    padding: 0;
+    background: #2d2448;
 }
-.hero-content {
+.banner-wrap {
+    position: relative;
     width: 100%;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
 }
-.convention-logo {
+.convention-banner {
+    display: block;
     width: 100%;
     height: auto;
-    max-width: none;
-    max-height: none;
-    object-fit: cover;
     margin: 0;
 }
-.event-dates {
-    font-size: 14px;
-    font-weight: 800;
-    letter-spacing: .18em;
-    color: var(--muted);
-    margin-bottom: 35px;
-}
 /* ==========================================
-   Countdown
+   Banner Countdown
 ========================================== */
+.banner-countdown {
+    position: absolute;
+    top: 8%;
+    right: 3%;
+    width: min(31%, 520px);
+    padding: 20px 22px 18px;
+    border: 3px solid #c49d00;
+    border-radius: 16px;
+    background:
+        rgba(28, 20, 49, .88);
+    box-shadow:
+        0 8px 30px rgba(0,0,0,.35);
+    backdrop-filter: blur(6px);
+    color: white;
+}
+.countdown-heading {
+    margin-bottom: 12px;
+    color: #e0bd31;
+    font-size: clamp(11px, 1vw, 16px);
+    font-weight: 900;
+    letter-spacing: .16em;
+    text-align: center;
+}
 .countdown {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 18px;
+    display: grid;
+    grid-template-columns:
+        repeat(4, 1fr);
+    gap: 8px;
 }
 .countdown-unit {
-    min-width: 110px;
+    min-width: 0;
     display: flex;
     flex-direction: column;
     align-items: center;
 }
 .countdown-unit span {
-    font-size: clamp(42px, 6vw, 72px);
-    line-height: .95;
+    color: white;
+    font-size: clamp(24px, 2.5vw, 46px);
     font-weight: 900;
+    line-height: .95;
     letter-spacing: -.04em;
+    text-shadow:
+        0 3px 0 rgba(0,0,0,.45);
 }
 .countdown-unit small {
-    margin-top: 10px;
-    font-size: 11px;
-    font-weight: 800;
+    margin-top: 7px;
+    color: #e0bd31;
+    font-size: clamp(7px, .65vw, 10px);
+    font-weight: 900;
     text-transform: uppercase;
-    letter-spacing: .15em;
-    color: var(--muted);
-}
-.countdown-separator {
-    font-size: 48px;
-    font-weight: 900;
-    opacity: .25;
-    margin-bottom: 20px;
-}
-.countdown-started {
-    font-size: clamp(36px, 6vw, 70px);
-    font-weight: 900;
-    letter-spacing: -.03em;
+    letter-spacing: .1em;
 }
 /* ==========================================
    General Sections
@@ -354,6 +354,30 @@ a {
     .convention-footer {
         flex-direction: column;
         text-align: center;
+    }
+}
+@media (max-width: 750px) {
+    .banner-countdown {
+        position: relative;
+        top: auto;
+        right: auto;
+        width: 100%;
+        padding: 18px 16px;
+        border: 0;
+        border-radius: 0;
+        background: #2d2448;
+        box-shadow: none;
+    }
+    .countdown {
+        max-width: 450px;
+        margin: 0 auto;
+        gap: 6px;
+    }
+    .countdown-unit span {
+        font-size: clamp(28px, 9vw, 42px);
+    }
+    .countdown-unit small {
+        font-size: 8px;
     }
 }
 /* ==========================================
