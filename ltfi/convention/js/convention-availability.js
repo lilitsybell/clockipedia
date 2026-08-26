@@ -28,7 +28,8 @@ const guests = [
     "Nate",
     "Nic",
     "Pear",
-    "Reece"
+    "Reece",
+    "Rosie"
 ];
 /* ==========================================
    Date Range
