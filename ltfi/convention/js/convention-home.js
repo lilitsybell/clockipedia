@@ -164,7 +164,7 @@ document.addEventListener("DOMContentLoaded", () => {
    Convention Countdown
 ========================================== */
 const conventionDate = new Date(
-    "2027-08-04T00:00:00-07:00"
+    "2027-08-20T00:00:00-00:00"
 );
 function updateCountdown(){
     const now = new Date();
