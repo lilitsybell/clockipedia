@@ -124,36 +124,27 @@ a {
 ========================================== */
 .banner-countdown {
     position: absolute;
-    top: 50%;
+    top: 6%;
     right: 3%;
-    width: 18%;
-    transform: translateY(-50%);
+    width: 15%;
     color: white;
     text-align: center;
-}
-.countdown-heading {
-    margin-bottom: 16px;
-    color: #e0bd31;
-    font-size: clamp(10px, .9vw, 15px);
-    font-weight: 900;
-    letter-spacing: .18em;
-    text-transform: uppercase;
 }
 .countdown {
     display: flex;
     flex-direction: column;
-    gap: 12px;
+    gap: 9px;
 }
 .countdown-unit {
     display: flex;
     align-items: baseline;
-    justify-content: center;
+    justify-content: flex-end;
     gap: 8px;
 }
 .countdown-unit span {
     min-width: 2.4ch;
     color: #e0bd31;
-    font-size: clamp(25px, 2.8vw, 48px);
+    font-size: clamp(24px, 2.5vw, 44px);
     font-weight: 900;
     line-height: .9;
     letter-spacing: -.04em;
@@ -162,11 +153,11 @@ a {
         0 2px 4px rgba(0,0,0,.35);
 }
 .countdown-unit small {
-    width: 55px;
+    width: 58px;
     color: white;
-    font-size: clamp(8px, .7vw, 11px);
+    font-size: clamp(8px, .65vw, 11px);
     font-weight: 800;
-    letter-spacing: .1em;
+    letter-spacing: .08em;
     text-align: left;
     text-transform: uppercase;
 }
