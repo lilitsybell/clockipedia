@@ -144,7 +144,7 @@ a {
 .countdown-unit span {
     min-width: 2.4ch;
     color: #e0bd31;
-    font-size: clamp(30px, 3vw, 54px);
+    font-size: clamp(34px, 3.5vw, 62px);
     font-weight: 900;
     line-height: .9;
     letter-spacing: -.04em;
@@ -155,7 +155,7 @@ a {
 .countdown-unit small {
     width: 72px;
     color: white;
-    font-size: clamp(10px, .85vw, 14px);
+    font-size: clamp(11px, 1vw, 16px);
     font-weight: 800;
     letter-spacing: .08em;
     text-align: left;
