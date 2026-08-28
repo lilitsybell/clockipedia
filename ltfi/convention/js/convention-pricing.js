@@ -966,21 +966,72 @@ function markUnsaved(){
    function with the Google Apps Script
    shared save request.
 */
-function savePricing(){
-    hasUnsavedChanges =
-        false;
-    const status =
+async function savePricing(){
+    const button =
         document.getElementById(
-            "save-status"
+            "save-pricing-button"
         );
-    status.textContent =
-        "✓ Saved";
-    status.className =
-        "save-status saved";
-    console.log(
-        "Pricing config:",
-        pricingConfig
-    );
+    button.disabled = true;
+    button.textContent = "Saving...";
+    try{
+        const response =
+            await fetch(
+                PRICING_API,
+                {
+                    method: "POST",
+                    body: JSON.stringify({
+                        type: "pricing",
+                        config: pricingConfig,
+                        revision: 0
+                    })
+                }
+            );
+        if(!response.ok){
+            throw new Error(
+                "Failed to save pricing"
+            );
+        }
+        const data =
+            await response.json();
+        if(!data.success){
+            throw new Error(
+                data.error ||
+                "Failed to save pricing"
+            );
+        }
+        hasUnsavedChanges = false;
+        const status =
+            document.getElementById(
+                "save-status"
+            );
+        status.textContent =
+            "✓ Saved";
+        status.className =
+            "save-status saved";
+        console.log(
+            "Pricing saved:",
+            data
+        );
+    }
+    catch(error){
+        console.error(
+            "Could not save pricing:",
+            error
+        );
+        const status =
+            document.getElementById(
+                "save-status"
+            );
+        status.textContent =
+            "⚠ Save failed";
+        status.className =
+            "save-status error";
+    }
+    finally{
+        button.disabled = false;
+        button.textContent =
+            "Save Changes";
+    }
 }
 function resetPricing(){
     const confirmed =
