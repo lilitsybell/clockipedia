@@ -881,8 +881,14 @@ function renderResults(
         document.getElementById(
             "pricing-results-body"
         );
+
     body.innerHTML = "";
-    result.rows.forEach(
+    const sortedRows =
+        [...result.rows].sort(
+            (a, b) =>
+                b.price - a.price
+        );
+    sortedRows.forEach(
         row => {
             const tr =
                 document.createElement(
