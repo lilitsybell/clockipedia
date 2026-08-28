@@ -4,7 +4,7 @@ console.log(
     "Convention pricing calculator loaded"
 );
 const PRICING_API =
-    "https://script.google.com/macros/s/AKfycbxXemVNG_-JqYDPdfZuqNNfSawQqumf3tPHNneHSXuzjVJty2Q7KuyDViJhZGDi811dpw/exec";
+    "https://script.google.com/macros/s/AKfycbxsN8ESL2dW6EDROGQqv2-Z_glDrnZ6UUAtya9cdXui0RsNPTCr8vCVpJSmhKon9xCqhg/exec";
 /* ==========================================
    Defaults
 ========================================== */
