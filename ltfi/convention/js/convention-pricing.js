@@ -328,6 +328,12 @@ function renderPointSettings(){
         "kitchens"
     );
     renderPointGroup(
+    "deck-point-settings",
+    pricingConfig.points.decks,
+    deckLabels,
+    "decks"
+);
+    renderPointGroup(
         "sharing-point-settings",
         pricingConfig.points.sharing,
         sharingLabels,
@@ -439,31 +445,40 @@ function createRoomCard(
         );
     settings.className =
         "room-setting-grid";
-    settings.append(
-        createRoomSelect(
-            "Bathroom",
-            bathroomLabels,
-            room.bathroom,
-            value => {
-                room.bathroom =
-                    value;
-                roomChanged();
-            }
-        ),
-        createRoomSelect(
-            "Kitchen",
-            kitchenLabels,
-            room.kitchen,
-            value => {
-                room.kitchen =
-                    value;
-                roomChanged();
-            }
-        ),
-        createPeopleInput(
-            room
-        )
-    );
+settings.append(
+    createRoomSelect(
+        "Bathroom",
+        bathroomLabels,
+        room.bathroom,
+        value => {
+            room.bathroom =
+                value;
+            roomChanged();
+        }
+    ),
+
+    createRoomSelect(
+        "Kitchen",
+        kitchenLabels,
+        room.kitchen,
+        value => {
+            room.kitchen =
+                value;
+            roomChanged();
+        }
+    ),
+
+    createRoomSelect(
+        "Private Deck",
+        deckLabels,
+        room.deck,
+        value => {
+            room.deck =
+                value;
+            roomChanged();
+        }
+    )
+);
     const bedSection =
         document.createElement(
             "div"
@@ -562,51 +577,6 @@ function createRoomSelect(
     wrapper.append(
         label,
         select
-    );
-    return wrapper;
-}
-function createPeopleInput(
-    room
-){
-    const wrapper =
-        document.createElement(
-            "label"
-        );
-    wrapper.className =
-        "room-setting";
-    const label =
-        document.createElement(
-            "span"
-        );
-    label.textContent =
-        "People in Room";
-    const input =
-        document.createElement(
-            "input"
-        );
-    input.type = "number";
-    input.min = "1";
-    input.step = "1";
-    input.value =
-        room.people;
-    input.addEventListener(
-        "input",
-        () => {
-            room.people =
-                Math.max(
-                    1,
-                    Math.round(
-                        Number(
-                            input.value
-                        ) || 1
-                    )
-                );
-            roomChanged();
-        }
-    );
-    wrapper.append(
-        label,
-        input
     );
     return wrapper;
 }
