@@ -113,10 +113,11 @@ function formatDate(date){
 }
 async function loadAttendanceData(){
     try{
-        const response =
-            await fetch(
-                ATTENDANCE_API
-            );
+const response =
+    await fetch(
+        ATTENDANCE_API +
+        "?type=availability"
+    );
         if(!response.ok){
             throw new Error(
                 "Failed to load attendance data"
@@ -538,12 +539,14 @@ async function submitAvailability(){
                 {
                     method: "POST",
                     body: JSON.stringify({
-                        name: selectedGuest,
-                        dates:
-                            Array.from(
-                                selectedDates
-                            )
-                    })
+body: JSON.stringify({
+    type: "availability",
+    name: selectedGuest,
+    dates:
+        Array.from(
+            selectedDates
+        )
+})
                 }
             );
         if(!response.ok){
