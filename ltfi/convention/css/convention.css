@@ -1499,8 +1499,9 @@ body.gallery-open {
     justify-content: flex-end;
     margin-top: 30px;
 }
-
-
+.save-status.error {
+    color: #b52323;
+}
 @media (max-width: 1000px) {
 
     .point-settings-grid {
