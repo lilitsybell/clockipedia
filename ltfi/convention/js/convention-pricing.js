@@ -37,157 +37,179 @@ const defaultPricingConfig = {
             6: -4
         }
     },
-    rooms: [
-        {
-            id: "salzburg",
-            name: "Salzburg",
-            bathroom: "private",
-            kitchen: "kitchenette",
-            people: 1,
-            beds: [
-                {
-                    id: "salzburg-queen",
-                    type: "queen"
-                }
-            ]
-        },
-        {
-            id: "bergen",
-            name: "Bergen",
-            bathroom: "private",
-            kitchen: "kitchenette",
-            people: 2,
-            beds: [
-                {
-                    id: "bergen-queen",
-                    type: "queen"
-                },
-                {
-                    id: "bergen-rollaway",
-                    type: "twinRollaway"
-                }
-            ]
-        },
-        {
-            id: "trondheim",
-            name: "Trondheim",
-            bathroom: "private",
-            kitchen: "kitchenette",
-            people: 3,
-            beds: [
-                {
-                    id: "trondheim-twin-1",
-                    type: "twin"
-                },
-                {
-                    id: "trondheim-twin-2",
-                    type: "twin"
-                },
-                {
-                    id: "trondheim-rollaway",
-                    type: "twinRollaway"
-                }
-            ]
-        },
-        {
-            id: "stockholm",
-            name: "Stockholm",
-            bathroom: "private",
-            kitchen: "kitchenette",
-            people: 3,
-            beds: [
-                {
-                    id: "stockholm-king",
-                    type: "king"
-                },
-                {
-                    id: "stockholm-full",
-                    type: "full"
-                },
-                {
-                    id: "stockholm-twin",
-                    type: "twin"
-                }
-            ]
-        },
-        {
-            id: "oslo",
-            name: "Oslo",
-            bathroom: "private",
-            kitchen: "kitchenette",
-            people: 2,
-            beds: [
-                {
-                    id: "oslo-king",
-                    type: "king"
-                },
-                {
-                    id: "oslo-rollaway",
-                    type: "twinRollaway"
-                }
-            ]
-        },
-        {
-            id: "gothenburg",
-            name: "Gothenburg",
-            bathroom: "shared",
-            kitchen: "none",
-            people: 2,
-            beds: [
-                {
-                    id: "gothenburg-queen-1",
-                    type: "queen"
-                },
-                {
-                    id: "gothenburg-queen-2",
-                    type: "queen"
-                }
-            ]
-        },
-        {
-            id: "innsbruck",
-            name: "Innsbruck",
-            bathroom: "private",
-            kitchen: "full",
-            people: 2,
-            beds: [
-                {
-                    id: "innsbruck-queen",
-                    type: "queen"
-                },
-                {
-                    id: "innsbruck-sofa",
-                    type: "fullSofa"
-                }
-            ]
-        },
-        {
-            id: "tv-room",
-            name: "TV Room",
-            bathroom: "shared",
-            kitchen: "none",
-            people: 1,
-            beds: [
-                {
-                    id: "tv-room-sofa",
-                    type: "queenSofa"
-                }
-            ]
-        },
-        {
-            id: "lillestrom",
-            name: "Lillestrom",
-            bathroom: "shared",
-            kitchen: "none",
-            people: 1,
-            beds: [
-                {
-                    id: "lillestrom-sofa",
-                    type: "queenSofa"
-                }
-            ]
-        }
-    ]
+rooms: [
+
+    {
+        id: "cannibal-cottage",
+        name: "Cannibal Cottage",
+        bathroom: "private",
+        kitchen: "full",
+        deck: "none",
+        conjoined: "Hermit Hideout",
+        beds: [
+            {
+                id: "cannibal-cottage-sofa",
+                type: "queenSofa"
+            }
+        ]
+    },
+
+    {
+        id: "hermit-hideout",
+        name: "Hermit Hideout",
+        bathroom: "private",
+        kitchen: "full",
+        deck: "none",
+        conjoined: "Cannibal Cottage",
+        beds: [
+            {
+                id: "hermit-hideout-queen",
+                type: "queen"
+            }
+        ]
+    },
+
+    {
+        id: "generals-quarters",
+        name: "General's Quarters",
+        bathroom: "private",
+        kitchen: "kitchenette",
+        deck: "private",
+        beds: [
+            {
+                id: "generals-quarters-queen",
+                type: "queen"
+            }
+        ]
+    },
+
+    {
+        id: "huntsmans-hideout",
+        name: "Huntsman's Hideout",
+        bathroom: "shared",
+        kitchen: "none",
+        deck: "none",
+        beds: [
+            {
+                id: "huntsmans-hideout-sofa",
+                type: "queenSofa"
+            }
+        ]
+    },
+
+    {
+        id: "clockmakers-workshop",
+        name: "Clockmaker's Workshop",
+        bathroom: "shared",
+        kitchen: "none",
+        deck: "none",
+        beds: [
+            {
+                id: "clockmakers-workshop-queen",
+                type: "queen"
+            }
+        ]
+    },
+
+    {
+        id: "kazali-campground",
+        name: "Kazali Campground",
+        bathroom: "private",
+        kitchen: "kitchenette",
+        deck: "none",
+        conjoined: "Marionette Motel",
+        beds: [
+            {
+                id: "kazali-campground-king",
+                type: "king"
+            }
+        ]
+    },
+
+    {
+        id: "marionette-motel",
+        name: "Marionette Motel",
+        bathroom: "private",
+        kitchen: "kitchenette",
+        deck: "none",
+        conjoined: "Kazali Campground",
+        beds: [
+            {
+                id: "marionette-motel-twin",
+                type: "twin"
+            },
+            {
+                id: "marionette-motel-full",
+                type: "full"
+            }
+        ]
+    },
+
+    {
+        id: "politician-office",
+        name: "Politician Office",
+        bathroom: "private",
+        kitchen: "kitchenette",
+        deck: "private",
+        beds: [
+            {
+                id: "politician-office-king",
+                type: "king"
+            }
+        ]
+    },
+
+    {
+        id: "witches-den",
+        name: "Witches Den",
+        bathroom: "private",
+        kitchen: "kitchenette",
+        deck: "private",
+        beds: [
+            {
+                id: "witches-den-queen",
+                type: "queen"
+            }
+        ]
+    },
+
+    {
+        id: "cult-leader-compound",
+        name: "Cult Leader Compound",
+        bathroom: "private",
+        kitchen: "kitchenette",
+        deck: "private",
+        beds: [
+            {
+                id: "cult-leader-compound-twin-1",
+                type: "twin"
+            },
+            {
+                id: "cult-leader-compound-twin-2",
+                type: "twin"
+            }
+        ]
+    },
+
+    {
+        id: "goblins-grotto",
+        name: "Goblin's Grotto",
+        bathroom: "none",
+        kitchen: "none",
+        deck: "private",
+        beds: [
+            {
+                id: "goblins-grotto-queen-1",
+                type: "queen"
+            },
+            {
+                id: "goblins-grotto-queen-2",
+                type: "queen"
+            }
+        ]
+    }
+
+]
 };
 /* ==========================================
    Labels
