@@ -956,16 +956,11 @@ function markUnsaved(){
             "save-status"
         );
     status.textContent =
-        "● Unsaved changes";
+        "Saving...";
     status.className =
         "save-status unsaved";
+    savePricing();
 }
-/*
-   For now this only changes the UI.
-   In the next step we will replace this
-   function with the Google Apps Script
-   shared save request.
-*/
 async function savePricing(){
     const button =
         document.getElementById(
