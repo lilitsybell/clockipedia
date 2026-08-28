@@ -1066,6 +1066,47 @@ function escapeHtml(
             "&#039;"
         );
 }
+async function loadPricing(){
+    try{
+        const response =
+            await fetch(
+                PRICING_API +
+                "?type=pricing"
+            );
+        if(!response.ok){
+            throw new Error(
+                "Failed to load pricing"
+            );
+        }
+        const data =
+            await response.json();
+        if(
+            data.success &&
+            data.config
+        ){
+            pricingConfig =
+                data.config;
+        }
+        document
+            .getElementById(
+                "amount-to-allocate"
+            )
+            .value =
+            pricingConfig.amountToAllocate;
+        renderPointSettings();
+        renderRooms();
+        updatePricing();
+    }
+    catch(error){
+        console.error(
+            "Could not load pricing:",
+            error
+        );
+        renderPointSettings();
+        renderRooms();
+        updatePricing();
+    }
+}
 /* ==========================================
    Start
 ========================================== */
