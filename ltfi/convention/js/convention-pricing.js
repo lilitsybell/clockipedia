@@ -259,6 +259,7 @@ let hasUnsavedChanges = false;
 let pricingRevision = 0;
 let pricingLastUpdated = null;
 let pricingSyncTimer = null;
+let pricingAutoSaveTimer = null;
 /* ==========================================
    Initialization
 ========================================== */
@@ -961,10 +962,17 @@ function markUnsaved(){
             "save-status"
         );
     status.textContent =
-        "Saving...";
+        "● Unsaved changes";
     status.className =
         "save-status unsaved";
-    savePricing();
+    clearTimeout(
+        pricingAutoSaveTimer
+    );
+    pricingAutoSaveTimer =
+        setTimeout(
+            savePricing,
+            500
+        );
 }
 async function savePricing(){
     const button =
