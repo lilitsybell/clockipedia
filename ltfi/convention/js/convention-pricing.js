@@ -1,3 +1,5 @@
+const PRICING_API_URL =
+    "https://script.google.com/macros/s/AKfycbxXemVNG_-JqYDPdfZuqNNfSawQqumf3tPHNneHSXuzjVJty2Q7KuyDViJhZGDi811dpw/exec";
 console.log(
     "Convention pricing calculator loaded"
 );
@@ -225,14 +227,16 @@ let pricingConfig =
         defaultPricingConfig
     );
 let hasUnsavedChanges = false;
+let pricingRevision = 0;
+let pricingLastUpdated = null;
+let pricingSyncTimer = null;
 /* ==========================================
    Initialization
 ========================================== */
-function initializePricing(){
-    renderPointSettings();
-    renderRooms();
-    updatePricing();
+async function initializePricing(){
     setupGlobalControls();
+    await loadPricing();
+    startPricingSync();
 }
 function setupGlobalControls(){
     const amountInput =
