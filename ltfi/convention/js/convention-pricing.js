@@ -19,23 +19,28 @@ const defaultPricingConfig = {
             twinRollaway: 6,
             twinAirMattress: 6
         },
-        bathrooms: {
-            private: 8,
-            shared: 0
-        },
-        kitchens: {
-            full: 4,
-            kitchenette: 3,
-            none: 0
-        },
-        sharing: {
-            1: 8,
-            2: 5,
-            3: 2,
-            4: 0,
-            5: -2,
-            6: -4
-        }
+bathrooms: {
+    private: 8,
+    none: 0
+},
+
+kitchens: {
+    full: 4,
+    kitchenette: 3,
+    none: 0
+},
+
+decks: {
+    private: 2,
+    none: 0
+},
+
+sharing: {
+    1: 8,
+    2: 4,
+    3: 2,
+    4: 0,
+}
     },
 rooms: [
 
@@ -226,20 +231,22 @@ const bedLabels = {
 };
 const bathroomLabels = {
     private: "Private Bathroom",
-    shared: "Shared Bathroom"
+    none: "No Bathroom"
 };
 const kitchenLabels = {
     full: "Full Kitchen",
     kitchenette: "Kitchenette",
     none: "None"
 };
+const deckLabels = {
+    private: "Private Deck",
+    none: "No Private Deck"
+};
 const sharingLabels = {
-    1: "Private Room",
-    2: "2 People",
-    3: "3 People",
-    4: "4 People",
-    5: "5 People",
-    6: "6+ People"
+    1: "1 Bed",
+    2: "2 Beds",
+    3: "3 Beds",
+    4: "4 Beds",
 };
 /* ==========================================
    State
@@ -771,15 +778,15 @@ function roomChanged(
    Pricing Math
 ========================================== */
 function getSharingKey(
-    people
+    bedCount
 ){
-    if(people >= 6){
+    if(bedCount >= 6){
         return "6";
     }
     return String(
         Math.max(
             1,
-            people
+            bedCount
         )
     );
 }
@@ -800,21 +807,27 @@ function getBedPoints(
             .kitchens[
                 room.kitchen
             ] || 0;
-    const sharingKey =
-        getSharingKey(
-            room.people
-        );
+const sharingKey =
+    getSharingKey(
+        room.beds.length
+    );
     const sharingPoints =
         pricingConfig.points
             .sharing[
                 sharingKey
             ] || 0;
-    return (
-        bedPoints +
-        bathroomPoints +
-        kitchenPoints +
-        sharingPoints
-    );
+    const deckPoints =
+    pricingConfig.points
+        .decks[
+            room.deck
+        ] || 0;
+return (
+    bedPoints +
+    bathroomPoints +
+    kitchenPoints +
+    deckPoints +
+    sharingPoints
+);
 }
 function calculatePricing(){
     const rows = [];
