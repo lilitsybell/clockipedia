@@ -1,0 +1,337 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>
+        Moderator Pricing Calculator
+    </title>
+
+    <link
+        rel="stylesheet"
+        href="/ltfi/convention/css/convention.css"
+    >
+</head>
+
+<body>
+
+<main class="pricing-page">
+
+    <section class="pricing-header">
+
+        <div>
+            <div class="pricing-eyebrow">
+                Moderator Tool
+            </div>
+
+            <h1>
+                Room Pricing Calculator
+            </h1>
+
+            <p>
+                Adjust points, room occupancy,
+                amenities, and sleeping arrangements
+                to test different pricing models.
+            </p>
+        </div>
+
+        <div class="pricing-save-panel">
+
+            <div
+                id="save-status"
+                class="save-status saved"
+            >
+                ● Saved
+            </div>
+
+            <button
+                id="save-pricing-button"
+                class="pricing-primary-button"
+                type="button"
+            >
+                Save Changes
+            </button>
+
+        </div>
+
+    </section>
+
+
+    <section class="pricing-summary-grid">
+
+        <div class="pricing-summary-card">
+
+            <label for="amount-to-allocate">
+                Amount to Allocate
+            </label>
+
+            <div class="currency-input">
+                <span>$</span>
+
+                <input
+                    id="amount-to-allocate"
+                    type="number"
+                    min="0"
+                    step="1"
+                    value="7500"
+                >
+            </div>
+
+        </div>
+
+
+        <div class="pricing-summary-card">
+
+            <div class="summary-label">
+                Total Points
+            </div>
+
+            <div
+                id="summary-total-points"
+                class="summary-value"
+            >
+                0
+            </div>
+
+        </div>
+
+
+        <div class="pricing-summary-card">
+
+            <div class="summary-label">
+                Sleeping Spots
+            </div>
+
+            <div
+                id="summary-bed-count"
+                class="summary-value"
+            >
+                0
+            </div>
+
+        </div>
+
+
+        <div class="pricing-summary-card">
+
+            <div class="summary-label">
+                Calculated Total
+            </div>
+
+            <div
+                id="summary-price-total"
+                class="summary-value"
+            >
+                $0
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <section class="pricing-section">
+
+        <div class="pricing-section-heading">
+
+            <div>
+                <h2>
+                    Point Settings
+                </h2>
+
+                <p>
+                    These values determine how much
+                    each feature affects the final price.
+                </p>
+            </div>
+
+        </div>
+
+
+        <div class="point-settings-grid">
+
+
+            <div class="point-settings-card">
+
+                <h3>
+                    Bed Type
+                </h3>
+
+                <div
+                    id="bed-point-settings"
+                    class="point-setting-list"
+                ></div>
+
+            </div>
+
+
+            <div class="point-settings-card">
+
+                <h3>
+                    Bathroom
+                </h3>
+
+                <div
+                    id="bathroom-point-settings"
+                    class="point-setting-list"
+                ></div>
+
+            </div>
+
+
+            <div class="point-settings-card">
+
+                <h3>
+                    Kitchen
+                </h3>
+
+                <div
+                    id="kitchen-point-settings"
+                    class="point-setting-list"
+                ></div>
+
+            </div>
+
+
+            <div class="point-settings-card">
+
+                <h3>
+                    Room Sharing
+                </h3>
+
+                <div
+                    id="sharing-point-settings"
+                    class="point-setting-list"
+                ></div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <section class="pricing-section">
+
+        <div class="pricing-section-heading">
+
+            <div>
+                <h2>
+                    Rooms
+                </h2>
+
+                <p>
+                    Change occupancy or amenities,
+                    and add or remove temporary beds.
+                </p>
+            </div>
+
+        </div>
+
+        <div
+            id="room-editor"
+            class="room-editor"
+        ></div>
+
+    </section>
+
+
+    <section class="pricing-section">
+
+        <div class="pricing-section-heading">
+
+            <div>
+                <h2>
+                    Calculated Prices
+                </h2>
+
+                <p>
+                    Prices update automatically whenever
+                    the configuration changes.
+                </p>
+            </div>
+
+        </div>
+
+
+        <div class="pricing-results-wrap">
+
+            <table class="pricing-results-table">
+
+                <thead>
+                    <tr>
+                        <th>
+                            Room
+                        </th>
+
+                        <th>
+                            Bed
+                        </th>
+
+                        <th>
+                            Points
+                        </th>
+
+                        <th>
+                            Price
+                        </th>
+                    </tr>
+                </thead>
+
+                <tbody
+                    id="pricing-results-body"
+                ></tbody>
+
+                <tfoot>
+                    <tr>
+                        <th colspan="2">
+                            Total
+                        </th>
+
+                        <th
+                            id="results-total-points"
+                        >
+                            0
+                        </th>
+
+                        <th
+                            id="results-total-price"
+                        >
+                            $0
+                        </th>
+                    </tr>
+                </tfoot>
+
+            </table>
+
+        </div>
+
+    </section>
+
+
+    <section class="pricing-actions">
+
+        <button
+            id="reset-pricing-button"
+            class="pricing-secondary-button"
+            type="button"
+        >
+            Reset to Defaults
+        </button>
+
+    </section>
+
+</main>
+
+
+<script
+    src="/ltfi/convention/js/convention-pricing.js"
+></script>
+
+</body>
+</html>
