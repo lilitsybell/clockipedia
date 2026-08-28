@@ -1070,7 +1070,7 @@ function startPricingSync(){
     pricingSyncTimer =
         setInterval(
             checkForPricingUpdates,
-            5000
+            2000
         );
 }
 function checkForPricingUpdates(){
