@@ -1,5 +1,3 @@
-const PRICING_API_URL =
-    "https://script.google.com/macros/s/AKfycbxXemVNG_-JqYDPdfZuqNNfSawQqumf3tPHNneHSXuzjVJty2Q7KuyDViJhZGDi811dpw/exec";
 console.log(
     "Convention pricing calculator loaded"
 );
@@ -983,7 +981,7 @@ async function savePricing(){
                     body: JSON.stringify({
                         type: "pricing",
                         config: pricingConfig,
-                        revision: 0
+                        revision: pricingRevision
                     })
                 }
             );
@@ -1000,6 +998,10 @@ async function savePricing(){
                 "Failed to save pricing"
             );
         }
+        pricingRevision =
+    Number(
+        data.revision
+    ) || pricingRevision;
         hasUnsavedChanges = false;
         const status =
             document.getElementById(
@@ -1131,13 +1133,22 @@ function loadPricing(){
             window[callbackName] =
                 function(data){
                     try{
-                        if(
-                            data.success &&
-                            data.config
-                        ){
-                            pricingConfig =
-                                data.config;
-                        }
+if(
+    data.success &&
+    data.config
+){
+    pricingConfig =
+        data.config;
+}
+
+if(data.success){
+
+    pricingRevision =
+        Number(
+            data.revision
+        ) || 0;
+
+}
                         document
                             .getElementById(
                                 "amount-to-allocate"
