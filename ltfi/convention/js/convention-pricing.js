@@ -3,6 +3,8 @@ const PRICING_API_URL =
 console.log(
     "Convention pricing calculator loaded"
 );
+const PRICING_API =
+    "https://script.google.com/macros/s/AKfycbxXemVNG_-JqYDPdfZuqNNfSawQqumf3tPHNneHSXuzjVJty2Q7KuyDViJhZGDi811dpw/exec";
 /* ==========================================
    Defaults
 ========================================== */
@@ -236,7 +238,6 @@ let pricingSyncTimer = null;
 async function initializePricing(){
     setupGlobalControls();
     await loadPricing();
-    startPricingSync();
 }
 function setupGlobalControls(){
     const amountInput =
