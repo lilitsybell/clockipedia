@@ -91,7 +91,7 @@ rooms: [
     {
         id: "huntsmans-hideout",
         name: "Huntsman's Hideout",
-        bathroom: "shared",
+        bathroom: "none",
         kitchen: "none",
         deck: "none",
         beds: [
@@ -105,7 +105,7 @@ rooms: [
     {
         id: "clockmakers-workshop",
         name: "Clockmaker's Workshop",
-        bathroom: "shared",
+        bathroom: "none",
         kitchen: "none",
         deck: "none",
         beds: [
