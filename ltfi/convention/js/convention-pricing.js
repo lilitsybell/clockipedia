@@ -1118,46 +1118,78 @@ function escapeHtml(
             "&#039;"
         );
 }
-async function loadPricing(){
-    try{
-        const response =
-            await fetch(
+function loadPricing(){
+    return new Promise(
+        (resolve, reject) => {
+            const callbackName =
+                "pricingCallback_" +
+                Date.now();
+            const script =
+                document.createElement(
+                    "script"
+                );
+            window[callbackName] =
+                function(data){
+                    try{
+                        if(
+                            data.success &&
+                            data.config
+                        ){
+                            pricingConfig =
+                                data.config;
+                        }
+                        document
+                            .getElementById(
+                                "amount-to-allocate"
+                            )
+                            .value =
+                            pricingConfig
+                                .amountToAllocate;
+                        renderPointSettings();
+                        renderRooms();
+                        updatePricing();
+                        resolve();
+                    }
+                    finally{
+                        delete window[
+                            callbackName
+                        ];
+                        script.remove();
+                    }
+                };
+            script.onerror =
+                function(){
+                    console.error(
+                        "Could not load pricing."
+                    );
+                    delete window[
+                        callbackName
+                    ];
+                    script.remove();
+                    /*
+                        Still display the defaults.
+                    */
+                    renderPointSettings();
+                    renderRooms();
+                    updatePricing();
+                    reject(
+                        new Error(
+                            "Could not load pricing"
+                        )
+                    );
+                };
+            script.src =
                 PRICING_API +
-                "?type=pricing"
-            );
-        if(!response.ok){
-            throw new Error(
-                "Failed to load pricing"
+                "?type=pricing" +
+                "&callback=" +
+                callbackName +
+                "&t=" +
+                Date.now();
+            document.body.appendChild(
+                script
             );
         }
-        const data =
-            await response.json();
-        if(
-            data.success &&
-            data.config
-        ){
-            pricingConfig =
-                data.config;
-        }
-        document
-            .getElementById(
-                "amount-to-allocate"
-            )
-            .value =
-            pricingConfig.amountToAllocate;
-        renderPointSettings();
-        renderRooms();
-        updatePricing();
-    }
-    catch(error){
-        console.error(
-            "Could not load pricing:",
-            error
-        );
-        renderPointSettings();
-        renderRooms();
-        updatePricing();
-    }
+    );
 }
 /* ==========================================
    Start
