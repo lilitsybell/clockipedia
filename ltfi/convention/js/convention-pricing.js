@@ -236,6 +236,7 @@ let pricingSyncTimer = null;
 async function initializePricing(){
     setupGlobalControls();
     await loadPricing();
+    startPricingSync();
 }
 function setupGlobalControls(){
     const amountInput =
@@ -1059,6 +1060,100 @@ function resetPricing(){
     renderRooms();
     markUnsaved();
     updatePricing();
+}
+function startPricingSync(){
+    if(pricingSyncTimer){
+        clearInterval(
+            pricingSyncTimer
+        );
+    }
+    pricingSyncTimer =
+        setInterval(
+            checkForPricingUpdates,
+            5000
+        );
+}
+function checkForPricingUpdates(){
+    const callbackName =
+        "pricingSyncCallback_" +
+        Date.now();
+    const script =
+        document.createElement(
+            "script"
+        );
+    window[callbackName] =
+        function(data){
+            try{
+                if(
+                    !data.success
+                ){
+                    return;
+                }
+                const serverRevision =
+                    Number(
+                        data.revision
+                    ) || 0;
+                /*
+                    Nothing has changed.
+                */
+                if(
+                    serverRevision <=
+                    pricingRevision
+                ){
+                    return;
+                }
+                /*
+                    Someone else saved
+                    a newer version.
+                */
+                pricingRevision =
+                    serverRevision;
+                if(data.config){
+                    pricingConfig =
+                        data.config;
+                }
+                hasUnsavedChanges =
+                    false;
+                document
+                    .getElementById(
+                        "amount-to-allocate"
+                    )
+                    .value =
+                    pricingConfig
+                        .amountToAllocate;
+                renderPointSettings();
+                renderRooms();
+                updatePricing();
+                const status =
+                    document.getElementById(
+                        "save-status"
+                    );
+                status.textContent =
+                    "✓ Updated from another moderator";
+                status.className =
+                    "save-status saved";
+                console.log(
+                    "Loaded newer pricing revision:",
+                    pricingRevision
+                );
+            }
+            finally{
+                delete window[
+                    callbackName
+                ];
+                script.remove();
+            }
+        };
+    script.src =
+        PRICING_API +
+        "?type=pricing" +
+        "&callback=" +
+        callbackName +
+        "&t=" +
+        Date.now();
+    document.body.appendChild(
+        script
+    );
 }
 /* ==========================================
    Formatting
