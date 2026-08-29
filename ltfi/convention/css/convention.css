@@ -2406,3 +2406,37 @@ body.gallery-open {
 .booking-remove-name:hover{
     text-decoration:underline;
 }
+.booking-payment-qr{
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+    gap:14px;
+    margin:18px 0;
+}
+
+.booking-venmo-qr{
+    width:220px;
+    max-width:100%;
+    height:auto;
+    display:block;
+    background:white;
+    padding:10px;
+    border:1px solid #ddd;
+}
+
+.booking-venmo-link{
+    display:inline-flex;
+    align-items:center;
+    justify-content:center;
+    min-width:180px;
+    padding:14px 20px;
+    background:var(--purple, #666699);
+    color:white;
+    text-decoration:none;
+    font-weight:700;
+    border-radius:8px;
+}
+
+.booking-venmo-link:hover{
+    opacity:.9;
+}
