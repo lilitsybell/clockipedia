@@ -1557,41 +1557,24 @@ body.gallery-open {
 ========================================== */
 
 .room-booking-page{
-    width:min(1200px, calc(100% - 40px));
+    width:min(1180px, calc(100% - 40px));
     margin:0 auto;
-    padding:55px 0 100px;
+    padding:45px 0 90px;
 }
 
 
 /* ==========================================
-   Room Header
+   Header
 ========================================== */
 
 .room-booking-header{
-    text-align:center;
-    margin-bottom:45px;
-}
-
-.room-booking-eyebrow{
-    display:inline-block;
-    margin-bottom:12px;
-    padding:7px 15px;
-
-    background:var(--purple, #666699);
-    color:white;
-
-    border-radius:999px;
-
-    font-size:13px;
-    font-weight:700;
-    letter-spacing:.08em;
-    text-transform:uppercase;
+    margin-bottom:35px;
 }
 
 .room-booking-header h1{
     margin:0;
 
-    font-size:clamp(34px, 5vw, 58px);
+    font-size:clamp(36px, 5vw, 54px);
     line-height:1.05;
 
     color:var(--black, #0D1821);
@@ -1602,45 +1585,68 @@ body.gallery-open {
 }
 
 .room-booking-header p{
-    max-width:650px;
-    margin:18px auto 0;
+    margin:14px 0 0;
+
+    max-width:700px;
 
     font-size:18px;
-    line-height:1.6;
+    line-height:1.55;
 
     color:#666;
 }
 
 
 /* ==========================================
-   General Room Sections
+   Main Overview
 ========================================== */
 
-.room-location-section,
-.room-beds-section,
-.room-amenities-section,
-.room-photos-section{
-    margin-top:35px;
-    padding:30px;
+.room-overview-grid{
+    display:grid;
 
-    background:white;
+    grid-template-columns:
+        minmax(280px, .8fr)
+        minmax(480px, 1.4fr);
 
-    border:1px solid #e1e1e1;
-    border-radius:18px;
+    gap:24px;
 
-    box-shadow:
-        0 8px 25px
-        rgba(0,0,0,.07);
+    align-items:start;
 }
 
+
+/* ==========================================
+   Panels
+========================================== */
+
+.room-location-panel,
+.room-beds-panel,
+.room-amenities-section,
+.room-photos-section{
+    background:white;
+
+    border:1px solid #ddd;
+    border-top:5px solid var(--purple, #666699);
+
+    padding:24px;
+}
+
+.room-amenities-section,
+.room-photos-section{
+    margin-top:24px;
+}
+
+
+/* ==========================================
+   Section Headings
+========================================== */
+
 .room-section-heading{
-    margin-bottom:22px;
+    margin-bottom:18px;
 }
 
 .room-section-heading h2{
-    margin:0 0 7px;
+    margin:0 0 5px;
 
-    font-size:27px;
+    font-size:25px;
 
     color:var(--black, #0D1821);
 }
@@ -1648,40 +1654,33 @@ body.gallery-open {
 .room-section-heading p{
     margin:0;
 
-    color:#6d6d6d;
-    line-height:1.5;
+    color:#6f6f6f;
+
+    line-height:1.45;
 }
 
 
 /* ==========================================
-   Location / Floor Plan
+   Floor Plan
 ========================================== */
-
-.room-location-section{
-    border-top:
-        5px solid
-        var(--purple, #666699);
-}
 
 .room-location-map{
     display:flex;
     justify-content:center;
     align-items:center;
 
-    min-height:280px;
+    min-height:230px;
 
-    padding:25px;
+    padding:14px;
 
     background:#BBB9CE;
-
-    border-radius:14px;
 }
 
 .room-location-map img{
     display:block;
 
-    max-width:100%;
-    max-height:500px;
+    width:100%;
+    max-height:300px;
 
     object-fit:contain;
 }
@@ -1691,17 +1690,14 @@ body.gallery-open {
     align-items:center;
     justify-content:center;
 
-    min-height:230px;
     width:100%;
+    min-height:200px;
 
     border:2px dashed
-        rgba(255,255,255,.65);
-
-    border-radius:12px;
+        rgba(255,255,255,.6);
 
     color:white;
 
-    font-size:18px;
     font-weight:700;
 }
 
@@ -1714,47 +1710,28 @@ body.gallery-open {
     display:grid;
 
     grid-template-columns:
-        repeat(
-            auto-fit,
-            minmax(260px, 1fr)
-        );
+        repeat(2, minmax(0, 1fr));
 
-    gap:20px;
+    gap:16px;
 }
 
 .booking-bed-card{
     position:relative;
 
-    padding:25px;
+    padding:20px;
 
     background:#fafafa;
 
-    border:2px solid #e1e1e1;
-    border-radius:15px;
-
-    transition:
-        transform .2s ease,
-        box-shadow .2s ease,
-        border-color .2s ease;
-}
-
-.booking-bed-card:hover{
-    transform:translateY(-3px);
-
-    border-color:
-        var(--purple, #666699);
-
-    box-shadow:
-        0 8px 20px
-        rgba(0,0,0,.08);
+    border:1px solid #d8d8d8;
+    border-left:5px solid var(--purple, #666699);
 }
 
 .booking-bed-room{
-    margin-bottom:8px;
+    margin-bottom:6px;
 
     color:var(--purple, #666699);
 
-    font-size:14px;
+    font-size:13px;
     font-weight:700;
 
     text-transform:uppercase;
@@ -1762,28 +1739,28 @@ body.gallery-open {
 }
 
 .booking-bed-card h3{
-    margin:0 0 12px;
+    margin:0 0 10px;
 
     color:var(--black, #0D1821);
 
-    font-size:23px;
+    font-size:21px;
 }
 
 .booking-bed-price{
-    margin-bottom:22px;
+    margin-bottom:18px;
 
     color:var(--purple, #666699);
 
-    font-size:31px;
+    font-size:28px;
     font-weight:700;
 }
 
 .booking-bed-occupant{
     display:flex;
     flex-direction:column;
-    gap:4px;
+    gap:3px;
 
-    padding-top:15px;
+    padding-top:12px;
 
     border-top:1px solid #ddd;
 }
@@ -1791,17 +1768,17 @@ body.gallery-open {
 .booking-bed-occupant span{
     color:#777;
 
-    font-size:12px;
+    font-size:11px;
     font-weight:700;
 
     text-transform:uppercase;
-    letter-spacing:.06em;
+    letter-spacing:.05em;
 }
 
 .booking-bed-occupant strong{
     color:var(--black, #0D1821);
 
-    font-size:18px;
+    font-size:17px;
 }
 
 
@@ -1810,39 +1787,26 @@ body.gallery-open {
 ========================================== */
 
 .room-book-button{
-    display:block;
+    width:100%;
 
-    width:min(420px, 100%);
-
-    margin:28px auto 0;
-    padding:16px 25px;
+    margin-top:18px;
+    padding:14px 20px;
 
     border:0;
-    border-radius:12px;
 
-    background:
-        var(--purple, #666699);
+    background:var(--purple, #666699);
 
     color:white;
 
     font:inherit;
-    font-size:19px;
+    font-size:18px;
     font-weight:700;
 
     cursor:pointer;
-
-    box-shadow:
-        0 6px 16px
-        rgba(0,0,0,.12);
-
-    transition:
-        transform .2s ease,
-        opacity .2s ease;
 }
 
 .room-book-button:hover{
-    transform:translateY(-2px);
-    opacity:.92;
+    opacity:.9;
 }
 
 
@@ -1851,32 +1815,18 @@ body.gallery-open {
 ========================================== */
 
 .room-amenities-grid{
-    display:grid;
+    display:flex;
+    flex-wrap:wrap;
 
-    grid-template-columns:
-        repeat(
-            auto-fit,
-            minmax(190px, 1fr)
-        );
-
-    gap:14px;
+    gap:10px;
 }
 
 .room-amenity{
-    display:flex;
-    align-items:center;
-    justify-content:center;
+    padding:10px 14px;
 
-    min-height:80px;
+    background:#f4f4f7;
 
-    padding:18px;
-
-    background:#fafafa;
-
-    border:1px solid #e0e0e0;
-    border-radius:12px;
-
-    text-align:center;
+    border:1px solid #ddd;
 
     color:var(--black, #0D1821);
 }
@@ -1891,12 +1841,11 @@ body.gallery-open {
     align-items:center;
     justify-content:center;
 
-    min-height:250px;
+    min-height:220px;
 
-    background:#f4f4f4;
+    background:#f5f5f5;
 
-    border:2px dashed #ccc;
-    border-radius:14px;
+    border:1px dashed #bbb;
 
     color:#888;
 
@@ -1905,31 +1854,27 @@ body.gallery-open {
 
 
 /* ==========================================
-   Booked Bed
+   Booked State
 ========================================== */
 
 .booking-bed-card.booked{
-    background:#f1f1f1;
-    border-color:#c8c8c8;
+    background:#f0f0f0;
 }
 
 .booking-bed-card.booked::after{
     content:"BOOKED";
 
     position:absolute;
-    top:18px;
-    right:18px;
+    top:14px;
+    right:14px;
 
-    padding:5px 9px;
+    padding:4px 7px;
 
     background:#959799;
     color:white;
 
-    border-radius:999px;
-
-    font-size:11px;
+    font-size:10px;
     font-weight:700;
-    letter-spacing:.06em;
 }
 
 
@@ -1937,36 +1882,23 @@ body.gallery-open {
    Mobile
 ========================================== */
 
-@media(max-width:700px){
+@media(max-width:850px){
+
+    .room-overview-grid{
+        grid-template-columns:1fr;
+    }
+
+}
+
+@media(max-width:600px){
 
     .room-booking-page{
-        width:min(
-            100% - 24px,
-            1200px
-        );
-
-        padding-top:35px;
+        width:calc(100% - 24px);
+        padding-top:30px;
     }
 
-    .room-booking-header{
-        margin-bottom:30px;
-    }
-
-    .room-booking-header h1{
-        font-size:36px;
-    }
-
-    .room-location-section,
-    .room-beds-section,
-    .room-amenities-section,
-    .room-photos-section{
-        padding:20px;
-        border-radius:14px;
-    }
-
-    .room-location-map{
-        min-height:200px;
-        padding:15px;
+    .booking-bed-grid{
+        grid-template-columns:1fr;
     }
 
 }
