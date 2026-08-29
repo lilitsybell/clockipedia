@@ -618,9 +618,8 @@ confirmButton.addEventListener(
                                     bed:
                                         bed,
 
-                                    name:
-    names.join(" & "),
-
+names:
+    names,
                                     price:
                                         price,
 
