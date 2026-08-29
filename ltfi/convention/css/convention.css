@@ -1690,12 +1690,10 @@ body.gallery-open {
     display:flex;
     justify-content:center;
     align-items:center;
-
-    min-height:230px;
-
+    width:100%;
+    aspect-ratio:1 / 1;
     padding:14px;
-
-    background:#BBB9CE;
+    background:white;
 }
 
 .room-location-map img{
@@ -1966,9 +1964,9 @@ body.gallery-open {
 .room-floor-map{
     position:relative;
     width:100%;
-    max-width:340px;
+    height:100%;
     margin:0 auto;
-    aspect-ratio:1.2 / 1;
+    aspect-ratio:1 / 1;
 }
 
 .room-floor-map img{
