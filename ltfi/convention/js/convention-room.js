@@ -99,66 +99,186 @@ async function loadBookings(){
    Update Beds
 ========================================== */
 
+/* ==========================================
+   Update Beds
+========================================== */
+
 function updateBookedBeds(
     bookings
 ){
 
-    document
-        .querySelectorAll(
+    const bedCards =
+        document.querySelectorAll(
             ".booking-bed-card"
-        )
-        .forEach(
-            card => {
-
-                const bedId =
-                    card.dataset.bedId;
+        );
 
 
-                const booking =
-                    bookings[
-                        bedId
-                    ];
+    let totalBeds =
+        0;
+
+    let bookedBeds =
+        0;
 
 
-                const occupant =
-                    card.querySelector(
-                        ".booking-bed-occupant strong"
+    bedCards.forEach(
+        card => {
+
+            totalBeds++;
+
+
+            const bedId =
+                card.dataset.bedId;
+
+
+            const booking =
+                bookings[
+                    bedId
+                ];
+
+
+            const occupant =
+                card.querySelector(
+                    ".booking-bed-occupant strong"
+                );
+
+
+            if(!occupant){
+                return;
+            }
+
+
+            const bookingOption =
+                document.querySelector(
+                    'input[name="booking-bed"][value="' +
+                    bedId +
+                    '"]'
+                );
+
+
+            if(booking){
+
+                bookedBeds++;
+
+
+                occupant.textContent =
+                    booking.names.join(
+                        " & "
                     );
 
 
-                if(!occupant){
-                    return;
-                }
+                card.classList.add(
+                    "booked"
+                );
 
 
-                if(booking){
+                if(bookingOption){
 
-                    occupant.textContent =
-                        booking.names.join(
-                            " & "
+                    bookingOption.disabled =
+                        true;
+
+
+                    const label =
+                        bookingOption.closest(
+                            ".booking-bed-option"
                         );
 
-                    card.classList.add(
-                        "booked"
-                    );
 
-                }
-                else{
+                    if(label){
 
-                    occupant.textContent =
-                        "Empty";
+                        label.classList.add(
+                            "booked"
+                        );
 
-                    card.classList.remove(
-                        "booked"
-                    );
+                    }
 
                 }
 
             }
+            else{
+
+                occupant.textContent =
+                    "Empty";
+
+
+                card.classList.remove(
+                    "booked"
+                );
+
+
+                if(bookingOption){
+
+                    bookingOption.disabled =
+                        false;
+
+
+                    const label =
+                        bookingOption.closest(
+                            ".booking-bed-option"
+                        );
+
+
+                    if(label){
+
+                        label.classList.remove(
+                            "booked"
+                        );
+
+                    }
+
+                }
+
+            }
+
+        }
+    );
+
+
+    /* ======================================
+       Update Main Booking Button
+    ====================================== */
+
+    const openButton =
+        document.getElementById(
+            "open-booking-button"
         );
 
-}
 
+    if(!openButton){
+        return;
+    }
+
+
+    if(
+        totalBeds > 0 &&
+        bookedBeds === totalBeds
+    ){
+
+        openButton.disabled =
+            true;
+
+        openButton.textContent =
+            "Fully Booked";
+
+        openButton.classList.add(
+            "fully-booked"
+        );
+
+    }
+    else{
+
+        openButton.disabled =
+            false;
+
+        openButton.textContent =
+            "Book Room";
+
+        openButton.classList.remove(
+            "fully-booked"
+        );
+
+    }
+
+}
 
 /* ==========================================
    Start Page
