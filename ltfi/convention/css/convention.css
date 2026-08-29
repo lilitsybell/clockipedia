@@ -2438,3 +2438,22 @@ body.gallery-open {
 .booking-venmo-link:hover{
     opacity:.9;
 }
+.shared-space-description{
+    padding:22px;
+    background:#fafafa;
+    border:1px solid #d8d8d8;
+    border-left:5px solid var(--purple, #666699);
+}
+
+.shared-space-description h3{
+    margin:0 0 10px;
+    color:var(--black, #0D1821);
+    font-size:21px;
+}
+
+.shared-space-description p{
+    margin:0;
+    color:#555;
+    font-size:16px;
+    line-height:1.6;
+}
