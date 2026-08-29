@@ -1,0 +1,508 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>
+        Clockmaker's Workshop | Lock the Fuck In Seattle
+    </title>
+
+    <link
+        rel="stylesheet"
+        href="/ltfi/convention/css/convention.css"
+    >
+
+</head>
+
+
+<body>
+
+
+<!-- ==========================================
+     Navigation
+========================================== -->
+
+<header class="convention-header">
+
+    <nav class="convention-nav">
+
+        <a
+            class="nav-logo"
+            href="/ltfi/convention/"
+        >
+            LTFI SEATTLE
+        </a>
+
+
+        <div class="nav-links">
+
+            <a href="/ltfi/convention/">
+                Home
+            </a>
+
+            <a href="/ltfi/convention/availability.html">
+                Availability
+            </a>
+
+            <a href="/ltfi/convention/map.html">
+                Map
+            </a>
+
+            <a
+                href="/ltfi/convention/rooms.html"
+                class="active"
+            >
+                Rooms
+            </a>
+
+            <a href="/ltfi/convention/dining.html">
+                Dining
+            </a>
+
+            <a href="/ltfi/convention/activities.html">
+                Activities
+            </a>
+
+        </div>
+
+    </nav>
+
+</header>
+<!-- ==========================================
+     Room Page
+========================================== -->
+
+<main
+    class="room-booking-page"
+    data-room-page="clockmakers-workshop"
+>
+
+
+    <!-- ======================================
+         Room Header
+    ======================================= -->
+
+    <header class="room-booking-header">
+
+        <h1>
+            Clockmaker's Workshop
+        </h1>
+
+        <p>
+            A quiet private room with a queen bed and its own office! Perfect for Clockmakers who need a little peace to work out what exactly is going on in town.
+        </p>
+
+    </header>
+
+
+<section class="room-overview-grid">
+
+    <!-- ======================================
+         Location
+    ======================================= -->
+
+    <div class="room-location-panel">
+
+        <div class="room-section-heading">
+
+            <h2>
+                Where You'll Be
+            </h2>
+
+            <p>
+                See where this room is located
+                inside the castle.
+            </p>
+
+        </div>
+
+        <div class="room-location-map">
+
+<div class="room-floor-map">
+
+    <img
+        class="room-floor-base"
+        src="/ltfi/convention/images/rooms/room-clockmaker2.png"
+        alt="Clockmaker's Workshop"
+    >
+
+</div>
+
+        </div>
+
+    </div>
+
+
+    <!-- ======================================
+         Beds
+    ======================================= -->
+
+    <div class="room-beds-panel">
+
+        <div class="room-section-heading">
+
+            <h2>
+                Beds
+            </h2>
+
+            <p>
+                Bookings are made by bed.
+            </p>
+
+        </div>
+
+
+        <div class="booking-bed-grid">
+
+            <article
+                class="booking-bed-card"
+                data-bed-id="clockmakers-workshop-queen-bed"
+            >
+
+                <div class="booking-bed-room">
+                    Clockmaker's Workshop
+                </div>
+
+                <h3>
+                    Queen Bed
+                </h3>
+
+                <div class="booking-bed-price">
+                    $366
+                </div>
+
+                <div class="booking-bed-occupant">
+
+                    <span>
+                        Sleeping Here
+                    </span>
+
+                    <strong>
+                        Empty
+                    </strong>
+
+                </div>
+
+            </article>
+
+        </div>
+
+
+        <button
+            type="button"
+            id="open-booking-button"
+            class="room-book-button"
+        >
+            Book Room
+        </button>
+
+    </div>
+
+</section>
+
+    <!-- ======================================
+         Amenities
+    ======================================= -->
+
+    <section class="room-amenities-section">
+
+        <div class="room-section-heading">
+
+            <h2>
+                Amenities
+            </h2>
+
+        </div>
+
+
+        <div class="room-amenities-grid">
+
+            <div class="room-amenity">
+                <strong>
+                    Private Room
+                </strong>
+            </div>
+
+            <div class="room-amenity">
+                <strong>
+                    Office
+                </strong>
+            </div>
+
+        </div>
+
+    </section>
+
+
+<!-- ======================================
+     Room Photos
+======================================= -->
+
+<section class="room-photos-section">
+
+    <div class="room-section-heading">
+
+        <h2>
+            Room Photos
+        </h2>
+
+    </div>
+
+
+    <div class="room-photo-gallery">
+
+        <img
+            src="/ltfi/convention/images/rooms/clockmaker-1.jpg"
+            alt="Clockmaker's Workshop"
+        >
+      
+    </div>
+
+</section>
+
+
+</main>
+    <!-- ==========================================
+         Footer
+    =========================================== -->
+    <footer class="convention-footer">
+        <div>
+            LOCK THE FUCK IN SEATTLE
+        </div>
+        <div>
+            AUGUST 20-25, 2027
+        </div>
+    </footer>
+    <script src="/ltfi/convention/js/convention-home.js"></script>
+<!-- ==========================================
+     Booking Modal
+========================================== -->
+
+<div
+    id="booking-modal"
+    class="booking-modal"
+    aria-hidden="true"
+>
+
+    <div class="booking-modal-backdrop"></div>
+
+
+    <div
+        class="booking-modal-card"
+        role="dialog"
+        aria-modal="true"
+        aria-labelledby="booking-modal-title"
+    >
+
+        <button
+            type="button"
+            id="close-booking-modal"
+            class="booking-modal-close"
+            aria-label="Close booking form"
+        >
+            ×
+        </button>
+
+
+        <div class="booking-modal-heading">
+
+            <div class="section-label">
+                Room Booking
+            </div>
+
+            <h2 id="booking-modal-title">
+                Clockmaker's Workshop
+            </h2>
+
+            <p>
+                Choose the bed you want to reserve.
+            </p>
+
+        </div>
+
+
+        <!-- ==================================
+             Step 1: Bed
+        =================================== -->
+
+        <div class="booking-form-section">
+
+            <h3>
+                1. Choose Your Bed
+            </h3>
+
+
+            <label class="booking-bed-option">
+
+                <input
+                    type="radio"
+                    name="booking-bed"
+                    value="clockmakers-workshop-queen-bed"
+                >
+
+                <span class="booking-bed-option-info">
+
+                    <strong>
+                        Queen Bed
+                    </strong>
+
+                    <small>
+                        Clockmaker's Workshop
+                    </small>
+
+                </span>
+
+                <span class="booking-bed-option-price">
+                    $366
+                </span>
+
+            </label>
+
+        </div>
+
+
+        <!-- ==================================
+             Step 2: Names
+        =================================== -->
+
+        <div class="booking-form-section">
+
+            <h3>
+                2. Who Will Be Sleeping Here?
+            </h3>
+
+
+            <div
+                id="booking-name-list"
+                class="booking-name-list"
+            >
+
+                <div class="booking-name-row">
+
+                    <input
+                        type="text"
+                        class="booking-name-input"
+                        placeholder="Name"
+                    >
+
+                </div>
+
+            </div>
+
+
+            <button
+                type="button"
+                id="add-booking-name"
+                class="booking-add-name"
+            >
+                + Add Another Person
+            </button>
+
+        </div>
+
+
+        <!-- ==================================
+             Step 3: Payment
+        =================================== -->
+
+        <div class="booking-form-section">
+
+            <h3>
+                3. Payment
+            </h3>
+
+
+            <div class="booking-payment-summary">
+
+                <div>
+
+                    <span>
+                        Selected Bed
+                    </span>
+
+                    <strong id="booking-summary-bed">
+                        None Selected
+                    </strong>
+
+                </div>
+
+
+                <div>
+
+                    <span>
+                        Price
+                    </span>
+
+                    <strong id="booking-summary-price">
+                        —
+                    </strong>
+
+                </div>
+
+            </div>
+
+
+<div class="booking-payment-qr">
+
+    <img
+        src="/ltfi/convention/images/venmo-qr.png"
+        alt="Venmo QR code"
+        class="booking-venmo-qr"
+    >
+
+    <a
+        href="https://venmo.com/code?user_id=2190776666685440817&created=1787971194"
+        target="_blank"
+        rel="noopener noreferrer"
+        class="booking-venmo-link"
+    >
+        Open Venmo
+    </a>
+
+</div>
+
+
+            <p class="booking-payment-note">
+                Scan the QR code to pay, or make a
+                payment plan before confirming your
+                booking.
+            </p>
+
+
+            <label class="booking-payment-confirmation">
+
+                <input
+                    type="checkbox"
+                    id="booking-payment-confirmed"
+                >
+
+                <span>
+                    I have paid or have a payment plan made.
+                </span>
+
+            </label>
+
+        </div>
+
+
+        <button
+            type="button"
+            id="confirm-booking-button"
+            class="primary-button booking-confirm-button"
+        >
+            Confirm Booking
+        </button>
+
+    </div>
+
+</div>
+    <script src="/ltfi/convention/js/convention-room.js"></script>
+</body>
+
+</html>
