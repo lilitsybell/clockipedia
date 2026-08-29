@@ -1902,3 +1902,29 @@ body.gallery-open {
     }
 
 }
+.room-floor-map{
+    position:relative;
+    width:100%;
+    max-width:340px;
+    margin:0 auto;
+    aspect-ratio:1.2 / 1;
+}
+
+.room-floor-map img{
+    position:absolute;
+    inset:0;
+
+    width:100%;
+    height:100%;
+
+    object-fit:contain;
+}
+
+.room-floor-base{
+    z-index:1;
+}
+
+.room-floor-highlight{
+    z-index:2;
+    pointer-events:none;
+}
