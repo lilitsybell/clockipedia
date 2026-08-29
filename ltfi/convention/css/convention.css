@@ -2476,3 +2476,286 @@ body.gallery-open {
     font-size:14px;
     font-weight:700;
 }
+/* ==========================================
+   Rooms Directory
+========================================== */
+
+.rooms-directory-page{
+    width:min(1180px, calc(100% - 40px));
+    margin:0 auto;
+    padding:45px 0 90px;
+}
+
+.rooms-directory-header{
+    margin-bottom:28px;
+}
+
+.rooms-directory-header h1{
+    margin:0;
+    font-size:clamp(36px, 5vw, 54px);
+    line-height:1.05;
+    color:var(--black, #0D1821);
+}
+
+.rooms-directory-header p{
+    margin:14px 0 0;
+    max-width:760px;
+    font-size:18px;
+    line-height:1.55;
+    color:#666;
+}
+
+
+/* ==========================================
+   Tabs
+========================================== */
+
+.rooms-tabs{
+    display:flex;
+    gap:8px;
+    margin-bottom:30px;
+    padding-bottom:10px;
+    border-bottom:1px solid #ddd;
+}
+
+.rooms-tab{
+    padding:12px 20px;
+    border:1px solid #d5d5d5;
+    background:white;
+    color:var(--black, #0D1821);
+    font:inherit;
+    font-size:15px;
+    font-weight:700;
+    cursor:pointer;
+}
+
+.rooms-tab:hover{
+    background:#f5f5f7;
+}
+
+.rooms-tab.active{
+    background:var(--purple, #666699);
+    border-color:var(--purple, #666699);
+    color:white;
+}
+
+
+/* ==========================================
+   Tab Panels
+========================================== */
+
+.rooms-tab-panel[hidden]{
+    display:none;
+}
+
+.rooms-section-heading{
+    margin-bottom:22px;
+}
+
+.rooms-section-heading h2{
+    margin:0 0 6px;
+    font-size:28px;
+    color:var(--black, #0D1821);
+}
+
+.rooms-section-heading p{
+    margin:0;
+    color:#6f6f6f;
+    line-height:1.5;
+}
+
+
+/* ==========================================
+   Card Grid
+========================================== */
+
+.rooms-card-grid{
+    display:grid;
+    grid-template-columns:repeat(3, minmax(0, 1fr));
+    gap:22px;
+}
+
+
+/* ==========================================
+   Room Cards
+========================================== */
+
+.room-list-card{
+    display:flex;
+    flex-direction:column;
+    min-width:0;
+    overflow:hidden;
+    background:white;
+    border:1px solid #ddd;
+    border-top:5px solid var(--purple, #666699);
+    color:inherit;
+    text-decoration:none;
+    transition:
+        transform .18s ease,
+        box-shadow .18s ease;
+}
+
+.room-list-card:hover{
+    transform:translateY(-3px);
+    box-shadow:0 8px 20px rgba(0,0,0,.10);
+}
+
+.room-list-image{
+    position:relative;
+    width:100%;
+    aspect-ratio:4 / 3;
+    overflow:hidden;
+    background:#eee;
+}
+
+.room-list-image img{
+    width:100%;
+    height:100%;
+    display:block;
+    object-fit:cover;
+    transition:transform .25s ease;
+}
+
+.room-list-card:hover .room-list-image img{
+    transform:scale(1.03);
+}
+
+
+/* ==========================================
+   Availability Badge
+========================================== */
+
+.room-list-status{
+    position:absolute;
+    top:12px;
+    right:12px;
+    padding:7px 10px;
+    background:rgba(255,255,255,.94);
+    border:1px solid rgba(0,0,0,.12);
+    color:var(--black, #0D1821);
+    font-size:12px;
+    font-weight:800;
+    text-transform:uppercase;
+    letter-spacing:.04em;
+}
+
+.room-list-card.fully-booked .room-list-status{
+    background:#959799;
+    border-color:#959799;
+    color:white;
+}
+
+
+/* ==========================================
+   Card Content
+========================================== */
+
+.room-list-content{
+    display:flex;
+    flex-direction:column;
+    flex:1;
+    padding:20px;
+}
+
+.room-list-content h3{
+    margin:0 0 8px;
+    color:var(--black, #0D1821);
+    font-size:22px;
+    line-height:1.15;
+}
+
+.room-list-content h3 span{
+    display:block;
+    margin-top:3px;
+    color:var(--purple, #666699);
+    font-size:17px;
+}
+
+.room-list-content > p{
+    margin:0 0 18px;
+    color:#666;
+    line-height:1.45;
+}
+
+
+/* ==========================================
+   Feature Tags
+========================================== */
+
+.room-list-features{
+    display:flex;
+    flex-wrap:wrap;
+    gap:7px;
+    margin-top:auto;
+}
+
+.room-list-features span{
+    padding:7px 9px;
+    background:#f4f4f7;
+    border:1px solid #ddd;
+    color:#555;
+    font-size:12px;
+    font-weight:700;
+}
+
+
+/* ==========================================
+   Fully Booked Cards
+========================================== */
+
+.room-list-card.fully-booked{
+    opacity:.62;
+    border-top-color:#959799;
+}
+
+.room-list-card.fully-booked:hover{
+    opacity:.8;
+}
+
+.room-list-card.fully-booked .room-list-image img{
+    filter:grayscale(.5);
+}
+
+
+/* ==========================================
+   Shared Space Cards
+========================================== */
+
+.shared-space-card{
+    border-top-color:var(--purple, #666699);
+}
+
+
+/* ==========================================
+   Responsive
+========================================== */
+
+@media(max-width:950px){
+
+    .rooms-card-grid{
+        grid-template-columns:repeat(2, minmax(0, 1fr));
+    }
+
+}
+
+@media(max-width:600px){
+
+    .rooms-directory-page{
+        width:calc(100% - 24px);
+        padding-top:30px;
+    }
+
+    .rooms-tabs{
+        width:100%;
+    }
+
+    .rooms-tab{
+        flex:1;
+        padding:12px 10px;
+    }
+
+    .rooms-card-grid{
+        grid-template-columns:1fr;
+    }
+
+}
