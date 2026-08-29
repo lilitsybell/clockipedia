@@ -11,14 +11,37 @@ const BOOKING_API =
    Load Existing Bookings
 ========================================== */
 
+/* ==========================================
+   Load Existing Bookings
+========================================== */
+
 async function loadBookings(){
 
     try{
 
+        const url =
+            BOOKING_API +
+            "?type=bookings" +
+            "&t=" +
+            Date.now();
+
+
+        console.log(
+            "Loading bookings from:",
+            url
+        );
+
+
         const response =
             await fetch(
-                BOOKING_API +
-                "?type=bookings"
+                url,
+                {
+                    method:
+                        "GET",
+
+                    cache:
+                        "no-store"
+                }
             );
 
 
@@ -43,15 +66,23 @@ async function loadBookings(){
 
 
         if(
-            data &&
-            data.success
+            !data ||
+            data.success !== true
         ){
 
-            updateBookedBeds(
-                data.bookings || {}
+            console.error(
+                "Unexpected bookings response:",
+                data
             );
 
+            return;
+
         }
+
+
+        updateBookedBeds(
+            data.bookings || {}
+        );
 
     }
     catch(error){
@@ -64,7 +95,6 @@ async function loadBookings(){
     }
 
 }
-
 /* ==========================================
    Update Beds
 ========================================== */
