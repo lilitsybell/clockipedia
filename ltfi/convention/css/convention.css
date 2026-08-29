@@ -2443,6 +2443,12 @@ body.gallery-open {
     border-left:5px solid var(--purple, #666699);
 }
 
+.shared-space-info-block + .shared-space-info-block{
+    margin-top:24px;
+    padding-top:20px;
+    border-top:1px solid #ddd;
+}
+
 .shared-space-description h3{
     margin:0 0 10px;
     color:var(--black, #0D1821);
@@ -2454,4 +2460,19 @@ body.gallery-open {
     color:#555;
     font-size:16px;
     line-height:1.6;
+}
+
+.shared-space-tags{
+    display:flex;
+    flex-wrap:wrap;
+    gap:8px;
+}
+
+.shared-space-tags span{
+    padding:8px 12px;
+    background:white;
+    border:1px solid #d8d8d8;
+    color:var(--black, #0D1821);
+    font-size:14px;
+    font-weight:700;
 }
