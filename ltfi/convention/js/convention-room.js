@@ -197,7 +197,15 @@ document.addEventListener(
                 "booking-name-list"
             );
 
+const confirmButton =
+    document.getElementById(
+        "confirm-booking-button"
+    );
 
+const paymentConfirmed =
+    document.getElementById(
+        "booking-payment-confirmed"
+    );
         /* ==================================
            Open Modal
         ================================== */
@@ -413,6 +421,259 @@ document.addEventListener(
 
             }
         );
+/* ==================================
+   Confirm Booking
+================================== */
 
+confirmButton.addEventListener(
+    "click",
+    async () => {
+
+        /* --------------------------
+           Selected Bed
+        -------------------------- */
+
+        const selectedBed =
+            document.querySelector(
+                'input[name="booking-bed"]:checked'
+            );
+
+
+        if(!selectedBed){
+
+            alert(
+                "Please choose a bed."
+            );
+
+            return;
+
+        }
+
+
+        /* --------------------------
+           Names
+        -------------------------- */
+
+        const names =
+            Array.from(
+                document.querySelectorAll(
+                    ".booking-name-input"
+                )
+            )
+            .map(
+                input =>
+                    input.value.trim()
+            )
+            .filter(
+                name =>
+                    name !== ""
+            );
+
+
+        if(names.length === 0){
+
+            alert(
+                "Please enter at least one name."
+            );
+
+            return;
+
+        }
+
+
+        /* --------------------------
+           Payment Confirmation
+        -------------------------- */
+
+        if(
+            !paymentConfirmed.checked
+        ){
+
+            alert(
+                "Please confirm that you have paid or have a payment plan made."
+            );
+
+            return;
+
+        }
+
+
+        /* --------------------------
+           Bed Information
+        -------------------------- */
+
+        const bedId =
+            selectedBed.value;
+
+
+        let room;
+        let bed;
+        let price;
+
+
+        if(
+            bedId ===
+            "cannibal-cottage-sofa"
+        ){
+
+            room =
+                "Cannibal Cottage";
+
+            bed =
+                "Queen Sofa Bed";
+
+            price =
+                479;
+
+        }
+        else if(
+            bedId ===
+            "hermit-hideout-queen"
+        ){
+
+            room =
+                "Hermit Hideout";
+
+            bed =
+                "Queen Bed";
+
+            price =
+                522;
+
+        }
+        else{
+
+            alert(
+                "Something went wrong selecting this bed."
+            );
+
+            return;
+
+        }
+
+
+        /* --------------------------
+           Disable Button
+        -------------------------- */
+
+        confirmButton.disabled =
+            true;
+
+        confirmButton.textContent =
+            "Booking...";
+
+
+        /* --------------------------
+           Send Booking
+        -------------------------- */
+
+        try{
+
+            const response =
+                await fetch(
+                    BOOKING_API,
+                    {
+                        method:
+                            "POST",
+
+                        body:
+                            JSON.stringify(
+                                {
+                                    type:
+                                        "booking",
+
+                                    bedId:
+                                        bedId,
+
+                                    room:
+                                        room,
+
+                                    bed:
+                                        bed,
+
+                                    names:
+                                        names,
+
+                                    price:
+                                        price,
+
+                                    paymentConfirmed:
+                                        true
+                                }
+                            )
+                    }
+                );
+
+
+            const data =
+                await response.json();
+
+
+            console.log(
+                "Booking response:",
+                data
+            );
+
+
+            /* ----------------------
+               Booking Failed
+            ---------------------- */
+
+            if(
+                !data.success
+            ){
+
+                alert(
+                    data.error ||
+                    "This bed could not be booked."
+                );
+
+                loadBookings();
+
+                return;
+
+            }
+
+
+            /* ----------------------
+               Booking Successful
+            ---------------------- */
+
+            alert(
+                "Your room has been booked!"
+            );
+
+
+            closeModal();
+
+
+            loadBookings();
+
+        }
+        catch(error){
+
+            console.error(
+                "Booking failed:",
+                error
+            );
+
+
+            alert(
+                "Something went wrong while booking. Please try again."
+            );
+
+        }
+        finally{
+
+            confirmButton.disabled =
+                false;
+
+            confirmButton.textContent =
+                "Confirm Booking";
+
+        }
+
+    }
+);
     }
 );
