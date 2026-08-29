@@ -2330,3 +2330,35 @@ body.gallery-open {
     }
 
 }
+/* ==========================================
+   Additional Booking Names
+========================================== */
+
+.booking-name-row{
+    display:flex;
+    align-items:center;
+    gap:10px;
+}
+
+.booking-name-row .booking-name-input{
+    flex:1;
+}
+
+.booking-remove-name{
+    padding:8px 10px;
+
+    border:0;
+    background:transparent;
+
+    color:#a41618;
+
+    font:inherit;
+    font-size:13px;
+    font-weight:700;
+
+    cursor:pointer;
+}
+
+.booking-remove-name:hover{
+    text-decoration:underline;
+}
