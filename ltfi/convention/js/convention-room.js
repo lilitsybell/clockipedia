@@ -11,62 +11,59 @@ const BOOKING_API =
    Load Existing Bookings
 ========================================== */
 
-function loadBookings(){
+async function loadBookings(){
 
-    const callbackName =
-        "receiveRoomBookings_" +
-        Date.now();
+    try{
 
-
-    window[callbackName] =
-        function(data){
-
-            console.log(
-                "Bookings loaded:",
-                data
+        const response =
+            await fetch(
+                BOOKING_API +
+                "?type=bookings"
             );
 
 
-            if(
-                data &&
-                data.success
-            ){
+        if(!response.ok){
 
-                updateBookedBeds(
-                    data.bookings || {}
-                );
+            throw new Error(
+                "Booking request failed: " +
+                response.status
+            );
 
-            }
+        }
 
 
-            delete window[
-                callbackName
-            ];
-
-            script.remove();
-
-        };
+        const data =
+            await response.json();
 
 
-    const script =
-        document.createElement(
-            "script"
+        console.log(
+            "Bookings loaded:",
+            data
         );
 
 
-    script.src =
-        BOOKING_API +
-        "?type=bookings" +
-        "&callback=" +
-        callbackName;
+        if(
+            data &&
+            data.success
+        ){
 
+            updateBookedBeds(
+                data.bookings || {}
+            );
 
-    document.body.appendChild(
-        script
-    );
+        }
+
+    }
+    catch(error){
+
+        console.error(
+            "Could not load bookings:",
+            error
+        );
+
+    }
 
 }
-
 
 /* ==========================================
    Update Beds
