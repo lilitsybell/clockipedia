@@ -144,3 +144,96 @@ document.addEventListener(
 
     }
 );
+document.addEventListener(
+    "DOMContentLoaded",
+    () => {
+
+        const modal =
+            document.getElementById(
+                "booking-modal"
+            );
+
+        const openButton =
+            document.getElementById(
+                "open-booking-button"
+            );
+
+        const closeButton =
+            document.getElementById(
+                "close-booking-modal"
+            );
+
+        const backdrop =
+            modal.querySelector(
+                ".booking-modal-backdrop"
+            );
+
+
+        function openModal(){
+
+            modal.classList.add(
+                "open"
+            );
+
+            modal.setAttribute(
+                "aria-hidden",
+                "false"
+            );
+
+            document.body.style.overflow =
+                "hidden";
+
+        }
+
+
+        function closeModal(){
+
+            modal.classList.remove(
+                "open"
+            );
+
+            modal.setAttribute(
+                "aria-hidden",
+                "true"
+            );
+
+            document.body.style.overflow =
+                "";
+
+        }
+
+
+        openButton.addEventListener(
+            "click",
+            openModal
+        );
+
+
+        closeButton.addEventListener(
+            "click",
+            closeModal
+        );
+
+
+        backdrop.addEventListener(
+            "click",
+            closeModal
+        );
+
+
+        document.addEventListener(
+            "keydown",
+            event => {
+
+                if(
+                    event.key ===
+                    "Escape"
+                ){
+                    closeModal();
+                }
+
+            }
+        );
+
+    }
+);
