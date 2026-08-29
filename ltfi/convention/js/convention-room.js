@@ -2,6 +2,7 @@ console.log(
     "convention-room.js loaded"
 );
 
+
 const BOOKING_API =
     "https://script.google.com/macros/s/AKfycbxsN8ESL2dW6EDROGQqv2-Z_glDrnZ6UUAtya9cdXui0RsNPTCr8vCVpJSmhKon9xCqhg/exec";
 
@@ -133,20 +134,23 @@ function updateBookedBeds(
 
 
 /* ==========================================
-   Start
+   Start Page
 ========================================== */
 
 document.addEventListener(
     "DOMContentLoaded",
     () => {
 
+        /* ==================================
+           Load Existing Bookings
+        ================================== */
+
         loadBookings();
 
-    }
-);
-document.addEventListener(
-    "DOMContentLoaded",
-    () => {
+
+        /* ==================================
+           Elements
+        ================================== */
 
         const modal =
             document.getElementById(
@@ -168,6 +172,35 @@ document.addEventListener(
                 ".booking-modal-backdrop"
             );
 
+        const bedOptions =
+            document.querySelectorAll(
+                'input[name="booking-bed"]'
+            );
+
+        const summaryBed =
+            document.getElementById(
+                "booking-summary-bed"
+            );
+
+        const summaryPrice =
+            document.getElementById(
+                "booking-summary-price"
+            );
+
+        const addNameButton =
+            document.getElementById(
+                "add-booking-name"
+            );
+
+        const nameList =
+            document.getElementById(
+                "booking-name-list"
+            );
+
+
+        /* ==================================
+           Open Modal
+        ================================== */
 
         function openModal(){
 
@@ -185,6 +218,10 @@ document.addEventListener(
 
         }
 
+
+        /* ==================================
+           Close Modal
+        ================================== */
 
         function closeModal(){
 
@@ -229,8 +266,150 @@ document.addEventListener(
                     event.key ===
                     "Escape"
                 ){
+
                     closeModal();
+
                 }
+
+            }
+        );
+
+
+        /* ==================================
+           Bed Selection
+        ================================== */
+
+        bedOptions.forEach(
+            option => {
+
+                option.addEventListener(
+                    "change",
+                    () => {
+
+                        const label =
+                            option.closest(
+                                ".booking-bed-option"
+                            );
+
+
+                        const bedName =
+                            label
+                                .querySelector(
+                                    ".booking-bed-option-info strong"
+                                )
+                                .textContent
+                                .trim();
+
+
+                        const roomName =
+                            label
+                                .querySelector(
+                                    ".booking-bed-option-info small"
+                                )
+                                .textContent
+                                .trim();
+
+
+                        const price =
+                            label
+                                .querySelector(
+                                    ".booking-bed-option-price"
+                                )
+                                .textContent
+                                .trim();
+
+
+                        summaryBed.textContent =
+                            bedName +
+                            " — " +
+                            roomName;
+
+
+                        summaryPrice.textContent =
+                            price;
+
+                    }
+                );
+
+            }
+        );
+
+
+        /* ==================================
+           Add Another Person
+        ================================== */
+
+        addNameButton.addEventListener(
+            "click",
+            () => {
+
+                const row =
+                    document.createElement(
+                        "div"
+                    );
+
+
+                row.className =
+                    "booking-name-row";
+
+
+                const input =
+                    document.createElement(
+                        "input"
+                    );
+
+
+                input.type =
+                    "text";
+
+                input.className =
+                    "booking-name-input";
+
+                input.placeholder =
+                    "Name";
+
+
+                const removeButton =
+                    document.createElement(
+                        "button"
+                    );
+
+
+                removeButton.type =
+                    "button";
+
+                removeButton.className =
+                    "booking-remove-name";
+
+                removeButton.textContent =
+                    "Remove";
+
+
+                removeButton.addEventListener(
+                    "click",
+                    () => {
+
+                        row.remove();
+
+                    }
+                );
+
+
+                row.appendChild(
+                    input
+                );
+
+                row.appendChild(
+                    removeButton
+                );
+
+
+                nameList.appendChild(
+                    row
+                );
+
+
+                input.focus();
 
             }
         );
