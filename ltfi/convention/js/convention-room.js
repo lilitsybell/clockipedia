@@ -11,10 +11,6 @@ const BOOKING_API =
    Load Existing Bookings
 ========================================== */
 
-/* ==========================================
-   Load Existing Bookings
-========================================== */
-
 async function loadBookings(){
 
     try{
@@ -95,9 +91,6 @@ async function loadBookings(){
     }
 
 }
-/* ==========================================
-   Update Beds
-========================================== */
 
 /* ==========================================
    Update Beds
@@ -645,59 +638,80 @@ confirmButton.addEventListener(
         }
 
 
-        /* --------------------------
-           Bed Information
-        -------------------------- */
+/* --------------------------
+   Bed Information
+-------------------------- */
 
-        const bedId =
-            selectedBed.value;
-
-
-        let room;
-        let bed;
-        let price;
+const bedId =
+    selectedBed.value;
 
 
-        if(
-            bedId ===
-            "cannibal-cottage-sofa"
-        ){
+const selectedLabel =
+    selectedBed.closest(
+        ".booking-bed-option"
+    );
 
-            room =
-                "Cannibal Cottage";
 
-            bed =
-                "Queen Sofa Bed";
+if(!selectedLabel){
 
-            price =
-                479;
+    alert(
+        "Something went wrong selecting this bed."
+    );
 
-        }
-        else if(
-            bedId ===
-            "hermit-hideout-queen"
-        ){
+    return;
 
-            room =
-                "Hermit Hideout";
+}
 
-            bed =
-                "Queen Bed";
 
-            price =
-                522;
+const bed =
+    selectedLabel
+        .querySelector(
+            ".booking-bed-option-info strong"
+        )
+        .textContent
+        .trim();
 
-        }
-        else{
 
-            alert(
-                "Something went wrong selecting this bed."
-            );
+const room =
+    selectedLabel
+        .querySelector(
+            ".booking-bed-option-info small"
+        )
+        .textContent
+        .trim();
 
-            return;
 
-        }
+const priceText =
+    selectedLabel
+        .querySelector(
+            ".booking-bed-option-price"
+        )
+        .textContent
+        .trim();
 
+
+const price =
+    Number(
+        priceText.replace(
+            /[^0-9.]/g,
+            ""
+        )
+    );
+
+
+if(
+    !bed ||
+    !room ||
+    !Number.isFinite(price)
+){
+
+    alert(
+        "Something went wrong reading the bed information."
+    );
+
+    return;
+
+}
 
         /* --------------------------
            Disable Button
