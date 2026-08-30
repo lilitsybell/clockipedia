@@ -1,5 +1,15 @@
 [
     {
+        "text":"If the [Cannibal] gains the [Snitch] ability and the [Vortox] ability is in play, Minions learn three characters that are in play that night.",
+        "math":"red",
+        "reason":"The Cannibal is a Townsfolk, which causes the Snitch ability to be affected by the Vortox.",
+        "mathInfo":"If Minions learn three characters that are in play, the Cannibal's Snitch ability malfunctioned."},
+    {
+        "text":"If the [Cannibal] gains the [Snitch] ability, Minions learn three characters that are not in play that night.",
+        "math":"green",
+        "reason":"If the Cannibal gains an ability that would act on the first night, they gain the ability that night.",
+        "mathInfo":"No ability has malfunctioned."},
+    {
         "text":"If the [Riot] is chosen by the [Exorcist] and the [Ravenkeeper] is in play, the [Riot] still wakes to choose a player.",
         "math":"green",
         "reason":"The Exorcist only stops the Demon from waking to kill.",
