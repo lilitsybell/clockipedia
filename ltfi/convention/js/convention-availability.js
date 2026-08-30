@@ -32,7 +32,8 @@ const guests = [
     "Nic",
     "Pear",
     "Reece",
-    "Rosie"
+    "Rosie",
+    "Petra"
 ];
 
 
@@ -41,10 +42,10 @@ const guests = [
 ========================================== */
 
 const attendanceStart =
-    new Date(2027, 6, 1);
+    new Date(2027, 7, 1);
 
 const attendanceEnd =
-    new Date(2027, 9, 31);
+    new Date(2027, 11, 31);
 
 
 /* ==========================================
@@ -341,24 +342,33 @@ function buildPersonalCalendar(){
     container.innerHTML = "";
 
 
-    const months = [
-        {
-            month: 6,
-            name: "July"
-        },
-        {
-            month: 7,
-            name: "August"
-        },
-        {
-            month: 8,
-            name: "September"
-        },
-        {
-            month: 9,
-            name: "October"
-        }
-    ];
+const months = [
+    {
+        year: 2027,
+        month: 7,
+        name: "August"
+    },
+    {
+        year: 2027,
+        month: 8,
+        name: "September"
+    },
+    {
+        year: 2027,
+        month: 9,
+        name: "October"
+    },
+    {
+        year: 2027,
+        month: 10,
+        name: "November"
+    },
+    {
+        year: 2027,
+        month: 11,
+        name: "December"
+    }
+];
 
 
     months.forEach(
@@ -403,24 +413,33 @@ function buildHeatMap(){
     container.innerHTML = "";
 
 
-    const months = [
-        {
-            month: 6,
-            name: "July"
-        },
-        {
-            month: 7,
-            name: "August"
-        },
-        {
-            month: 8,
-            name: "September"
-        },
-        {
-            month: 9,
-            name: "October"
-        }
-    ];
+const months = [
+    {
+        year: 2027,
+        month: 7,
+        name: "August"
+    },
+    {
+        year: 2027,
+        month: 8,
+        name: "September"
+    },
+    {
+        year: 2027,
+        month: 9,
+        name: "October"
+    },
+    {
+        year: 2027,
+        month: 10,
+        name: "November"
+    },
+    {
+        year: 2027,
+        month: 11,
+        name: "December"
+    }
+];
 
 
     months.forEach(
