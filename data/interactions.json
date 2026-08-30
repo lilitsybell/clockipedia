@@ -1,5 +1,45 @@
 [
     {
+        "text":"If the [Riot] is chosen by the [Exorcist] and the [Ravenkeeper] is in play, the [Riot] still wakes to choose a player.",
+        "math":"green",
+        "reason":"The Exorcist only stops the Demon from waking to kill.",
+        "mathInfo":"No ability has malfunctioned."},
+    {
+        "text":"If the [Riot] is chosen by the [Exorcist] and the [Banshee] is in play, the [Riot] still wakes to choose a player.",
+        "math":"green",
+        "reason":"The Exorcist only stops the Demon from waking to kill.",
+        "mathInfo":"No ability has malfunctioned."},
+    {
+        "text":"If the [Riot] is chosen by the [Exorcist] and the [Farmer] is in play, the [Riot] still wakes to choose a player.",
+        "math":"green",
+        "reason":"The Exorcist only stops the Demon from waking to kill.",
+        "mathInfo":"No ability has malfunctioned."},
+    {
+        "text":"If the [Riot] is chosen by the [Exorcist] and the [Sage] is in play, the [Riot] still wakes to choose a player.",
+        "math":"green",
+        "reason":"The Exorcist only stops the Demon from waking to kill.",
+        "mathInfo":"No ability has malfunctioned."},
+    {
+        "text":"If the [Leviathan] is chosen by the [Exorcist] and the [Ravenkeeper] is in play, the [Leviathan] still wakes to choose a player.",
+        "math":"green",
+        "reason":"The Exorcist only stops the Demon from waking to kill.",
+        "mathInfo":"No ability has malfunctioned."},
+    {
+        "text":"If the [Leviathan] is chosen by the [Exorcist] and the [Banshee] is in play, the [Leviathan] still wakes to choose a player.",
+        "math":"green",
+        "reason":"The Exorcist only stops the Demon from waking to kill.",
+        "mathInfo":"No ability has malfunctioned."},
+    {
+        "text":"If the [Leviathan] is chosen by the [Exorcist] and the [Farmer] is in play, the [Leviathan] still wakes to choose a player.",
+        "math":"green",
+        "reason":"The Exorcist only stops the Demon from waking to kill.",
+        "mathInfo":"No ability has malfunctioned."},
+    {
+        "text":"If the [Leviathan] is chosen by the [Exorcist] and the [Sage] is in play, the [Leviathan] still wakes to choose a player.",
+        "math":"green",
+        "reason":"The Exorcist only stops the Demon from waking to kill.",
+        "mathInfo":"No ability has malfunctioned."},
+    {
         "text":"If the [Angel] protected player dies due to the [Scapegoat] ability, something bad might happen to the [Scapegoat].",
         "math":"green",
         "reason":"Something bad might happen to a player who kills a player who is protected due to the Angel ability.",
