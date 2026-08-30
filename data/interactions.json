@@ -1,5 +1,10 @@
 [
     {
+        "text":"If the [Philosopher] gains the [Snitch] ability and the [Vortox] ability is in play, Minions learn three characters that are in play that night.",
+        "math":"red",
+        "reason":"The Philosopher is a Townsfolk, which causes the Snitch ability to be affected by the Vortox.",
+        "mathInfo":"If Minions learn three characters that are in play, the Philosopher's Snitch ability malfunctioned."},
+    {
         "text":"If the [Cannibal] gains the [Snitch] ability and the [Vortox] ability is in play, Minions learn three characters that are in play that night.",
         "math":"red",
         "reason":"The Cannibal is a Townsfolk, which causes the Snitch ability to be affected by the Vortox.",
