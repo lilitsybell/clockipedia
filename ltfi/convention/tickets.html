@@ -1,0 +1,406 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <link
+        rel="icon"
+        type="image/png"
+        href="/ltfi/convention/images/favicon.png"
+    >
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>
+        Tickets | Lock the Fuck In Seattle
+    </title>
+
+    <link
+        rel="stylesheet"
+        href="/ltfi/convention/css/convention.css"
+    >
+
+</head>
+
+
+<body>
+
+
+<!-- ==========================================
+     Navigation
+========================================== -->
+
+<header class="convention-header">
+
+    <nav class="convention-nav">
+
+        <a
+            class="nav-logo"
+            href="/ltfi/convention/"
+        >
+            LOCK THE FUCK IN
+        </a>
+
+
+        <div class="nav-links">
+
+            <a href="/ltfi/convention/">
+                Home
+            </a>
+
+            <a href="/ltfi/convention/rooms.html">
+                Rooms
+            </a>
+
+            <a
+                href="/ltfi/convention/tickets.html"
+                class="active"
+            >
+                Tickets
+            </a>
+
+        </div>
+
+    </nav>
+
+</header>
+
+
+<!-- ==========================================
+     Tickets Page
+========================================== -->
+
+<main class="tickets-page">
+
+
+    <!-- ======================================
+         Header
+    ======================================= -->
+
+    <header class="tickets-header">
+
+        <h1>
+            Get Your Ticket
+        </h1>
+
+        <p>
+            Lock yourself in. Tickets are
+            <strong>$150 per person</strong>.
+            Buy one for yourself or add everyone
+            you're paying for at once.
+        </p>
+
+    </header>
+
+
+    <!-- ======================================
+         Ticket Purchase Area
+    ======================================= -->
+
+    <section class="ticket-purchase-grid">
+
+
+        <!-- ==================================
+             Form
+        =================================== -->
+
+        <div class="ticket-purchase-panel">
+
+            <div class="room-section-heading">
+
+                <h2>
+                    Who's Coming?
+                </h2>
+
+                <p>
+                    Add the name of each person
+                    you're purchasing a ticket for.
+                </p>
+
+            </div>
+
+
+            <div
+                id="ticket-name-list"
+                class="ticket-name-list"
+            >
+
+                <div class="ticket-name-row">
+
+                    <input
+                        type="text"
+                        class="ticket-name-input"
+                        placeholder="Name"
+                        autocomplete="name"
+                    >
+
+                </div>
+
+            </div>
+
+
+            <button
+                type="button"
+                id="add-ticket-name"
+                class="ticket-add-name"
+            >
+                + Add Another Person
+            </button>
+
+
+            <!-- ==============================
+                 Total
+            =============================== -->
+
+            <div class="ticket-total-box">
+
+                <div class="ticket-total-row">
+
+                    <span>
+                        Tickets
+                    </span>
+
+                    <strong id="ticket-count">
+                        1
+                    </strong>
+
+                </div>
+
+
+                <div class="ticket-total-row">
+
+                    <span>
+                        Price Per Ticket
+                    </span>
+
+                    <strong>
+                        $150
+                    </strong>
+
+                </div>
+
+
+                <div class="ticket-total-row ticket-total-final">
+
+                    <span>
+                        Total
+                    </span>
+
+                    <strong id="ticket-total">
+                        $150
+                    </strong>
+
+                </div>
+
+            </div>
+
+
+            <!-- ==============================
+                 Payment
+            =============================== -->
+
+            <div class="ticket-payment">
+
+                <div class="room-section-heading">
+
+                    <h2>
+                        Payment
+                    </h2>
+
+                    <p>
+                        Pay using Venmo, then confirm
+                        your payment below.
+                    </p>
+
+                </div>
+
+
+                <div class="booking-payment-qr">
+
+                    <img
+                        src="/ltfi/convention/images/venmo-qr.png"
+                        alt="Venmo QR code"
+                        class="booking-venmo-qr"
+                    >
+
+                    <a
+                        href="https://venmo.com/code?user_id=2190776666685440817&created=1787971194"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        class="booking-venmo-link"
+                    >
+                        Open Venmo
+                    </a>
+
+                </div>
+
+
+                <label class="ticket-payment-confirmation">
+
+                    <input
+                        type="checkbox"
+                        id="ticket-payment-confirmed"
+                    >
+
+                    <span>
+                        I have paid or have a payment plan made.
+                    </span>
+
+                </label>
+
+            </div>
+
+
+            <button
+                type="button"
+                id="purchase-ticket-button"
+                class="room-book-button"
+            >
+                Confirm Tickets
+            </button>
+
+
+            <div
+                id="ticket-submission-message"
+                class="ticket-submission-message"
+            ></div>
+
+        </div>
+
+
+        <!-- ==================================
+             Quick Information
+        =================================== -->
+
+        <aside class="ticket-info-panel">
+
+            <div class="ticket-price-display">
+
+                <span>
+                    Ticket Price
+                </span>
+
+                <strong>
+                    $150
+                </strong>
+
+                <small>
+                    per person
+                </small>
+
+            </div>
+
+
+            <div class="ticket-info-section">
+
+                <h3>
+                    Your Ticket Includes
+                </h3>
+
+                <div class="room-amenities-grid">
+
+                    <div class="room-amenity">
+                        <strong>
+                            Convention Admission
+                        </strong>
+                    </div>
+
+                    <div class="room-amenity">
+                        <strong>
+                            August 20–25
+                        </strong>
+                    </div>
+
+                    <div class="room-amenity">
+                        <strong>
+                            Lock the Fuck In Seattle
+                        </strong>
+                    </div>
+
+                </div>
+
+            </div>
+
+        </aside>
+
+    </section>
+
+
+    <!-- ======================================
+         Who's Going
+    ======================================= -->
+
+    <section class="ticket-attendees-section">
+
+        <div class="room-section-heading">
+
+            <h2>
+                Who's Going
+            </h2>
+
+            <p>
+                These people have locked themselves in.
+            </p>
+
+        </div>
+
+
+        <div class="ticket-attendee-summary">
+
+            <strong id="attendee-count">
+                0
+            </strong>
+
+            <span>
+                people attending
+            </span>
+
+        </div>
+
+
+        <div
+            id="ticket-attendee-list"
+            class="ticket-attendee-list"
+        >
+
+            <div class="ticket-attendee-loading">
+                Loading attendees...
+            </div>
+
+        </div>
+
+    </section>
+
+
+</main>
+
+
+<!-- ==========================================
+     Footer
+========================================== -->
+
+<footer class="convention-footer">
+
+    <div>
+        LOCK THE FUCK IN SEATTLE
+    </div>
+
+    <div>
+        AUGUST 20-25, 2027
+    </div>
+
+</footer>
+
+
+<script
+    src="/ltfi/convention/js/convention-tickets.js"
+></script>
+
+</body>
+
+</html>
