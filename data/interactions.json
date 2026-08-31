@@ -2,7 +2,7 @@
     {
         "text":"If the [Poppy Grower] dies and the [Vortox] ability is in play, the evil team learns false Minions and Demons.",
         "math":"red",
-        "reason":"In a Vortox game, all Townsfolk abilities yield false information..",
+        "reason":"In a Vortox game, all Townsfolk abilities yield false information.",
         "mathInfo":"If Minions and Demons learn incorrect teammates, the Poppy Grower's ability malfunctioned."},
     {
         "text":"If the [Philosopher] gains the [Snitch] ability and the [Vortox] ability is in play, Minions learn three characters that are in play that night.",
