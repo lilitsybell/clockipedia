@@ -341,7 +341,7 @@
              ],
     "run": {
            "Every Night": [
-                "Each night, if there are 2 or more alive players for the [Chambermaid] to choose, the [Chambermaid] wakes and chooses two players. They learn a 0, 1, or 2, coinciding with how many of the chosen players woke due to their own ability that night."
+                "Each night, if there are 2 or more alive players for the [Chambermaid] to choose, the [Chambermaid] wakes and chooses two players. They learn a 0, 1, or 2, correlating with how many of the chosen players woke due to their own ability that night."
                 ]
            },
     "examples": [
@@ -362,18 +362,22 @@
     "flavor": "This evening's reservations seem odd. Never before has Mrs Mayweather kept company with that scamp from Hudson Lane. Yet, tonight, they have a table for two. Strange.",
     "purpose": "The [Chef] learns how many evil players are sitting next to each other.",
     "summary": [
-             "ComingSoon",
-             "ComingSoon"
+             "A pair of evil players is when two evil players are sitting next to each other.",
+             "The [Chef] counts spaces between evil players. If there were three evil players in a line, the [Chef] would receive a 2.",
+             "If there are multiple, separate, pairs, the [Chef] learns all pairs, not just the longest line of evils.",
+             "The [Spy] and the [Recluse] register to the [Chef] twice, once for each of their neighbors. If a [Spy] or [Recluse] is sitting between two evil players, the [Chef] could receive a 0, 1, or 2.",
+             "Travellers count as players and register to the [Chef]. This may affect the [Chef]'s number, so they should keep in mind when and where Travellers are sitting."
              ],
     "run": {
            "First Night": [
-                "ComingSoon",
-                "ComingSoon"
+                "The [Chef] wakes and learns a number correlating to the number of evil pairs."
                 ]
            },
     "examples": [
-                "ComingSoon",
-                "ComingSoon"
+                "The [Lord of Typhon] is sitting between two Minions. The [Chef] learns a 2.",
+                "The [Spy] is sitting next to the [Xaan]. Across from them, the [Po] is sitting next to the [Goblin]. The [Chef] could learn a 1 or a 2.",
+                "No evil players are next to each other. The [Chef] learns a 0.",
+                "The good [Gangster] is sitting between the [Poisoner] and the [Widow]. The [Chef] learns a 0."
                 ],
     "tags": ["Information"],
     "edition": "Trouble Brewing"
