@@ -333,18 +333,22 @@
     "flavor": "I ain' t seen nothin' untoward, Milady. Begging your pardon, but if I did see somethin', it certainly weren't the master o' the house sneaking into the professor's laboratory 'round eleven o'clock and mixing up fancy potions, just like you said, Miss.",
     "purpose": "The [Chambermaid] learns who wakes at night.",
     "summary": [
-             "ComingSoon",
-             "ComingSoon"
+             "The [Chambermaid] must choose alive players. If the [Chambermaid] accidentally picks a dead player, the [Chambermaid] is asked to choose again.",
+             "The [Chambermaid] is not told which player(s) woke, only how many of them woke.",
+             "The [Chambermaid] only detects players that woke due to their own ability. If they woke due to a different ability, such as being told they were chosen by the [Cerenovus] or [Exorcist], or to be told there is a [Widow] in play, the [Chambermaid] does not learn this.",
+             "The [Chambermaid] only detects players that woke that night. If they woke a previous night, or will wake on a future night, the [Chambermaid] does not learn this.",
+             "If a player is drunk or poisoned the [Chambermaid] still learns that they woke up."
              ],
     "run": {
            "Every Night": [
-                "ComingSoon",
-                "ComingSoon"
+                "Each night, if there are 2 or more alive players for the [Chambermaid] to choose, the [Chambermaid] wakes and chooses two players. They learn a 0, 1, or 2, coinciding with how many of the chosen players woke due to their own ability that night."
                 ]
            },
     "examples": [
-                "ComingSoon",
-                "ComingSoon"
+                "On the second night, [Chambermaid] chooses the [Shugenja] and the [Witch] and learns a 1.",
+                "On the third night, the [Exorcist] chooses the [Kazali]. The [Chambermaid] chooses the [Kazali] and the [Soldier] and learns a 0.",
+                "On the first night, the [Chambermaid] chooses the [Minstrel] and the [Goon]. The [Chambermaid] becomes [Goon] drunk and learns a 1.",
+                "On the fifth night, the only three players left are the [Zombuul], who registers as dead, the [Mayor], and the [Chambermaid]. Since there is only one valid choice for the [Chambermaid] to make, the [Chambermaid] does not wake."
                 ],
     "tags": ["Information"],
     "edition": "Bad Moon Rising"
