@@ -23,79 +23,74 @@
 
 
 /* ==========================================
-   Hero
+   Homepage Intro
 ========================================== */
 
-.ltfi-hero{
-    width:100%;
+.ltfi-home-intro{
+    padding:
+        82px 0 72px;
 
     background:
-        var(--black);
-
-    color:
-        white;
+        var(--white);
 
     border-bottom:
-        8px solid
-        var(--purple-dark);
+        1px solid
+        var(--border);
 }
 
 
-.ltfi-hero-inner{
+.ltfi-home-intro-inner{
     width:
         min(
             1200px,
-            100%
+            calc(100% - 40px)
         );
-
-    min-height:
-        500px;
 
     margin:
         0 auto;
-
-    display:grid;
-
-    grid-template-columns:
-        minmax(0, 1.4fr)
-        minmax(280px, .6fr);
 }
 
 
-.ltfi-hero-content{
-    padding:
-        70px 60px;
-}
-
-
-.ltfi-eyebrow{
+.ltfi-home-intro .ltfi-eyebrow{
     margin-bottom:
         18px;
 
     color:
-        #b6b6ce;
+        var(--purple);
 
     font-size:
-        13px;
+        12px;
 
     font-weight:
         900;
 
     letter-spacing:
-        .18em;
+        .16em;
+
+    text-transform:
+        uppercase;
 }
 
 
-.ltfi-hero h1{
+.ltfi-home-intro h1{
     max-width:
-        760px;
+        900px;
+
+    margin:
+        0;
+
+    color:
+        var(--black);
 
     font-size:
         clamp(
-            56px,
+            52px,
             8vw,
-            104px
+            100px
         );
+
+    font-weight:
+        900;
 
     line-height:
         .88;
@@ -105,83 +100,58 @@
 }
 
 
-.ltfi-hero h1 span{
-    display:block;
-
-    color:
-        var(--purple-dark);
-}
-
-
-.ltfi-hero-description{
+.ltfi-home-intro-description{
     max-width:
-        620px;
+        680px;
 
     margin-top:
-        28px;
+        30px;
 
     color:
-        #d2d4d7;
+        var(--muted);
 
     font-size:
         19px;
 
     line-height:
-        1.55;
+        1.6;
 }
 
 
-.ltfi-hero-actions{
-    display:flex;
+/* ==========================================
+   Homepage Intro - Mobile
+========================================== */
 
-    flex-wrap:wrap;
+@media(max-width:700px){
 
-    gap:12px;
+    .ltfi-home-intro{
+        padding:
+            58px 0 52px;
+    }
 
-    margin-top:
-        34px;
+
+    .ltfi-home-intro h1{
+        font-size:
+            clamp(
+                44px,
+                15vw,
+                72px
+            );
+
+        line-height:
+            .92;
+    }
+
+
+    .ltfi-home-intro-description{
+        margin-top:
+            24px;
+
+        font-size:
+            17px;
+    }
+
 }
-
-
-.ltfi-hero-mark{
-    display:flex;
-
-    align-items:center;
-
-    justify-content:center;
-
-    overflow:hidden;
-
-    background:
-        var(--purple-dark);
-}
-
-
-.ltfi-hero-mark span{
-    transform:
-        rotate(-90deg);
-
-    color:
-        rgba(255,255,255,.18);
-
-    font-size:
-        clamp(
-            90px,
-            13vw,
-            170px
-        );
-
-    font-weight:
-        900;
-
-    letter-spacing:
-        -.08em;
-
-    white-space:
-        nowrap;
-}
-
-
 /* ==========================================
    Buttons
 ========================================== */
