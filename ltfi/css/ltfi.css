@@ -702,3 +702,181 @@ a{
     }
 
 }
+/* ==========================================
+   Homepage Calendar
+========================================== */
+
+.ltfi-calendar-section{
+    padding-top:
+        55px;
+}
+
+
+.calendar-section-heading{
+    display:flex;
+
+    align-items:flex-end;
+
+    justify-content:
+        space-between;
+
+    gap:
+        24px;
+}
+
+
+.ltfi-section-link{
+    margin-bottom:
+        5px;
+
+    color:
+        var(--purple);
+
+    font-size:
+        14px;
+
+    font-weight:
+        800;
+}
+
+
+.ltfi-section-link:hover{
+    text-decoration:
+        underline;
+}
+
+
+.home-calendar{
+    overflow:hidden;
+
+    background:
+        white;
+
+    border:
+        1px solid
+        var(--border);
+
+    border-top:
+        5px solid
+        var(--purple);
+}
+
+
+.home-calendar-weekdays{
+    display:grid;
+
+    grid-template-columns:
+        repeat(
+            7,
+            minmax(0, 1fr)
+        );
+
+    background:
+        var(--black);
+
+    color:
+        white;
+}
+
+
+.home-calendar-weekdays div{
+    padding:
+        13px 10px;
+
+    text-align:
+        center;
+
+    font-size:
+        12px;
+
+    font-weight:
+        900;
+
+    text-transform:
+        uppercase;
+
+    letter-spacing:
+        .07em;
+}
+
+
+.home-calendar-grid{
+    display:grid;
+
+    grid-template-columns:
+        repeat(
+            7,
+            minmax(0, 1fr)
+        );
+}
+
+
+.home-calendar-day{
+    position:relative;
+
+    min-height:
+        115px;
+
+    padding:
+        12px;
+
+    background:
+        white;
+
+    border-right:
+        1px solid
+        #e2e2e2;
+
+    border-bottom:
+        1px solid
+        #e2e2e2;
+}
+
+
+.home-calendar-day:nth-child(7n){
+    border-right:
+        0;
+}
+
+
+.home-calendar-day.empty{
+    background:
+        #f6f6f6;
+}
+
+
+.home-calendar-date{
+    display:flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+    width:
+        30px;
+
+    height:
+        30px;
+
+    color:
+        var(--black);
+
+    font-size:
+        14px;
+
+    font-weight:
+        800;
+}
+
+
+.home-calendar-day.today
+.home-calendar-date{
+    background:
+        var(--purple);
+
+    color:
+        white;
+
+    border-radius:
+        50%;
+}
