@@ -70,22 +70,17 @@
 
 
 <!-- ==========================================
-     Main
+     Full Width Hero
 ========================================== -->
 
-<main class="ltfi-page">
+<section class="ltfi-hero">
 
-
-    <!-- ======================================
-         Hero
-    ======================================= -->
-
-    <section class="ltfi-hero">
+    <div class="ltfi-hero-inner">
 
         <div class="ltfi-hero-content">
 
             <p class="ltfi-eyebrow">
-                PRIVATE COMMUNITY
+                PRIVATE DISCORD COMMUNITY
             </p>
 
             <h1>
@@ -96,9 +91,9 @@
             </h1>
 
             <p class="ltfi-hero-description">
-                Games, scripts, events, nonsense,
-                and everything happening around
-                the LTFI community.
+                Games, scripts, events, questionable
+                decisions, and everything happening
+                around the LTFI community.
             </p>
 
 
@@ -131,11 +126,76 @@
 
         </div>
 
+    </div>
+
+</section>
+
+
+<!-- ==========================================
+     Main Content
+========================================== -->
+
+<main class="ltfi-page">
+
+
+    <!-- ======================================
+         This Month
+    ======================================= -->
+
+    <section class="ltfi-section ltfi-calendar-section">
+
+        <div class="ltfi-section-heading calendar-section-heading">
+
+            <div>
+
+                <p class="ltfi-section-label">
+                    THIS MONTH
+                </p>
+
+                <h2 id="home-calendar-title">
+                    Calendar
+                </h2>
+
+            </div>
+
+
+            <a
+                href="/ltfi/calendar.html"
+                class="ltfi-section-link"
+            >
+                View Full Calendar →
+            </a>
+
+        </div>
+
+
+        <div class="home-calendar">
+
+            <div class="home-calendar-weekdays">
+
+                <div>Sun</div>
+                <div>Mon</div>
+                <div>Tue</div>
+                <div>Wed</div>
+                <div>Thu</div>
+                <div>Fri</div>
+                <div>Sat</div>
+
+            </div>
+
+
+            <div
+                id="home-calendar-grid"
+                class="home-calendar-grid"
+            ></div>
+
+        </div>
+
     </section>
 
 
     <!-- ======================================
-         Main Links
+         Explore
     ======================================= -->
 
     <section class="ltfi-section">
@@ -143,11 +203,11 @@
         <div class="ltfi-section-heading">
 
             <p class="ltfi-section-label">
-                COMMUNITY HUB
+                EXPLORE LTFI
             </p>
 
             <h2>
-                What are we doing?
+                Around the Community
             </h2>
 
         </div>
@@ -156,49 +216,12 @@
         <div class="ltfi-feature-grid">
 
 
-            <!-- Calendar -->
-
-            <a
-                class="ltfi-feature-card"
-                href="/ltfi/calendar.html"
-            >
-
-                <div class="ltfi-feature-number">
-                    01
-                </div>
-
-                <div class="ltfi-feature-content">
-
-                    <h3>
-                        Calendar
-                    </h3>
-
-                    <p>
-                        See upcoming games, events,
-                        community plans, and whatever
-                        else we have somehow agreed
-                        to do.
-                    </p>
-
-                    <span class="ltfi-card-link">
-                        View Calendar →
-                    </span>
-
-                </div>
-
-            </a>
-
-
             <!-- Scripts -->
 
             <a
                 class="ltfi-feature-card"
                 href="/ltfi/scripts.html"
             >
-
-                <div class="ltfi-feature-number">
-                    02
-                </div>
 
                 <div class="ltfi-feature-content">
 
@@ -228,10 +251,6 @@
                 href="/ltfi/convention/"
             >
 
-                <div class="ltfi-feature-number">
-                    03
-                </div>
-
                 <div class="ltfi-feature-content">
 
                     <h3>
@@ -239,10 +258,9 @@
                     </h3>
 
                     <p>
-                        Everything for the big
-                        in-person gathering:
-                        availability, rooms, tickets,
-                        activities, and more.
+                        Tickets, rooms, availability,
+                        activities, and everything else
+                        for our in-person gathering.
                     </p>
 
                     <span class="ltfi-card-link">
@@ -253,35 +271,6 @@
 
             </a>
 
-
-        </div>
-
-    </section>
-
-
-    <!-- ======================================
-         Community Strip
-    ======================================= -->
-
-    <section class="ltfi-community-strip">
-
-        <div>
-
-            <span>
-                PLAY GAMES
-            </span>
-
-            <span>
-                MAKE SCRIPTS
-            </span>
-
-            <span>
-                PLAN BAD IDEAS
-            </span>
-
-            <span>
-                LOCK IN
-            </span>
 
         </div>
 
@@ -306,6 +295,9 @@
     </div>
 
 </footer>
+
+
+<script src="/ltfi/js/ltfi-home.js"></script>
 
 
 </body>
