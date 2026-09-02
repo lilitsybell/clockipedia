@@ -399,7 +399,7 @@ a{
 
     grid-template-columns:
         repeat(
-            3,
+            2,
             minmax(0,1fr)
         );
 
@@ -407,12 +407,11 @@ a{
         20px;
 }
 
-
 .ltfi-feature-card{
     position:relative;
 
     min-height:
-        300px;
+        220px;
 
     display:flex;
 
@@ -420,10 +419,10 @@ a{
         column;
 
     justify-content:
-        space-between;
+        flex-end;
 
     padding:
-        24px;
+        28px;
 
     background:
         white;
@@ -441,7 +440,6 @@ a{
         box-shadow .18s ease;
 }
 
-
 .ltfi-feature-card:hover{
     transform:
         translateY(-4px);
@@ -450,22 +448,6 @@ a{
         0 12px 28px
         rgba(0,0,0,.09);
 }
-
-
-.ltfi-feature-number{
-    color:
-        #c5c4c8;
-
-    font-size:
-        50px;
-
-    font-weight:
-        900;
-
-    line-height:
-        1;
-}
-
 
 .ltfi-feature-content h3{
     margin-bottom:
