@@ -37,7 +37,7 @@
 
     border-bottom:
         8px solid
-        var(--purple);
+        var(--purple-dark);
 }
 
 
@@ -109,7 +109,7 @@
     display:block;
 
     color:
-        var(--purple);
+        var(--purple-dark);
 }
 
 
@@ -153,7 +153,7 @@
     overflow:hidden;
 
     background:
-        var(--purple);
+        var(--purple-dark);
 }
 
 
@@ -216,7 +216,7 @@
 
 .ltfi-button.primary{
     background:
-        var(--purple);
+        var(--purple-dark);
 
     color:
         white;
@@ -257,7 +257,7 @@
         7px;
 
     color:
-        var(--purple);
+        var(--purple-dark);
 
     font-size:
         12px;
@@ -327,7 +327,7 @@
 
     border-top:
         5px solid
-        var(--purple);
+        var(--purple-dark);
 
     transition:
         transform .18s ease,
@@ -368,7 +368,7 @@
 
 .ltfi-card-link{
     color:
-        var(--purple);
+        var(--purple-dark);
 
     font-weight:
         800;
@@ -403,7 +403,7 @@
         5px;
 
     color:
-        var(--purple);
+        var(--purple-dark);
 
     font-size:
         14px;
@@ -431,7 +431,7 @@
 
     border-top:
         5px solid
-        var(--purple);
+        var(--purple-dark);
 }
 
 
@@ -545,7 +545,7 @@
 .home-calendar-day.today
 .home-calendar-date{
     background:
-        var(--purple);
+        var(--purple-dark);
 
     color:
         white;
