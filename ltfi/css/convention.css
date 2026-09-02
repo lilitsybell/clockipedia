@@ -2,40 +2,30 @@
    Lock the Fuck In Seattle
    Convention Styles
 ========================================== */
+
+
 /* ==========================================
    Variables
 ========================================== */
+
 :root {
-    --black: #0d1821;
-    --white: #ffffff;.booking-bed-option.booked{
-    opacity:.45;
-    cursor:not-allowed;
-}
+    --black:#0D1821;
+    --white:#ffffff;
 
-.booking-bed-option.booked::after{
-    content:"BOOKED";
-    margin-left:auto;
-    font-size:11px;
-    font-weight:700;
-    color:#777;
-}
+    --purple:#666699;
+    --purple-dark:#4f4f78;
+    --purple-light:#ececf4;
 
-.booking-bed-option.booked input{
-    cursor:not-allowed;
-}
+    --background:#f5f3ef;
+    --light:#ebe7df;
 
-.room-book-button.fully-booked,
-.room-book-button:disabled{
-    background:#959799;
-    cursor:not-allowed;
-    opacity:.8;
-}
-    --background: #f5f3ef;
-    --light: #ebe7df;
-    --accent: #666699;
-    --accent-dark: #4e4e78;
-    --text: #0d1821;
-    --muted: #6d7075;
+    --accent:#666699;
+    --accent-dark:#4e4e78;
+
+    --text:#0D1821;
+    --muted:#6d7075;
+
+    --border:#d9d8d4;
 }
 /* ==========================================
    Reset
