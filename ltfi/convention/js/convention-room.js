@@ -3,6 +3,10 @@ console.log(
 );
 
 
+/* ==========================================
+   Configuration
+========================================== */
+
 const BOOKING_API =
     "https://script.google.com/macros/s/AKfycbxsN8ESL2dW6EDROGQqv2-Z_glDrnZ6UUAtya9cdXui0RsNPTCr8vCVpJSmhKon9xCqhg/exec";
 
@@ -13,13 +17,13 @@ const BOOKING_API =
 
 async function loadBookings(){
 
+    setBookingLoadingState();
+
     try{
 
         const url =
             BOOKING_API +
-            "?type=bookings" +
-            "&t=" +
-            Date.now();
+            "?type=bookings";
 
 
         console.log(
@@ -33,10 +37,7 @@ async function loadBookings(){
                 url,
                 {
                     method:
-                        "GET",
-
-                    cache:
-                        "no-store"
+                        "GET"
                 }
             );
 
@@ -66,12 +67,9 @@ async function loadBookings(){
             data.success !== true
         ){
 
-            console.error(
-                "Unexpected bookings response:",
-                data
+            throw new Error(
+                "Unexpected bookings response"
             );
-
-            return;
 
         }
 
@@ -88,9 +86,129 @@ async function loadBookings(){
             error
         );
 
+
+        setBookingErrorState();
+
     }
 
 }
+
+
+/* ==========================================
+   Loading State
+========================================== */
+
+function setBookingLoadingState(){
+
+    const bedCards =
+        document.querySelectorAll(
+            ".booking-bed-card"
+        );
+
+
+    bedCards.forEach(card => {
+
+        const occupant =
+            card.querySelector(
+                ".booking-bed-occupant strong"
+            );
+
+
+        if(occupant){
+
+            occupant.textContent =
+                "Checking...";
+
+        }
+
+    });
+
+
+    const bedOptions =
+        document.querySelectorAll(
+            'input[name="booking-bed"]'
+        );
+
+
+    bedOptions.forEach(option => {
+
+        option.disabled =
+            true;
+
+    });
+
+
+    const openButton =
+        document.getElementById(
+            "open-booking-button"
+        );
+
+
+    if(openButton){
+
+        openButton.disabled =
+            true;
+
+        openButton.textContent =
+            "Checking Availability...";
+
+        openButton.classList.remove(
+            "fully-booked"
+        );
+
+    }
+
+}
+
+
+/* ==========================================
+   Error State
+========================================== */
+
+function setBookingErrorState(){
+
+    const bedCards =
+        document.querySelectorAll(
+            ".booking-bed-card"
+        );
+
+
+    bedCards.forEach(card => {
+
+        const occupant =
+            card.querySelector(
+                ".booking-bed-occupant strong"
+            );
+
+
+        if(occupant){
+
+            occupant.textContent =
+                "Unavailable";
+
+        }
+
+    });
+
+
+    const openButton =
+        document.getElementById(
+            "open-booking-button"
+        );
+
+
+    if(openButton){
+
+        openButton.disabled =
+            true;
+
+        openButton.textContent =
+            "Availability Unavailable";
+
+    }
+
+}
+
 
 /* ==========================================
    Update Beds
@@ -113,122 +231,151 @@ function updateBookedBeds(
         0;
 
 
-    bedCards.forEach(
-        card => {
+    bedCards.forEach(card => {
 
-            totalBeds++;
-
-
-            const bedId =
-                card.dataset.bedId;
+        totalBeds++;
 
 
-            const booking =
-                bookings[
-                    bedId
-                ];
+        const bedId =
+            card.dataset.bedId;
 
 
-            const occupant =
-                card.querySelector(
-                    ".booking-bed-occupant strong"
-                );
+        const booking =
+            bookings[
+                bedId
+            ];
 
 
-            if(!occupant){
-                return;
-            }
+        const occupant =
+            card.querySelector(
+                ".booking-bed-occupant strong"
+            );
 
 
-            const bookingOption =
-                document.querySelector(
-                    'input[name="booking-bed"][value="' +
-                    bedId +
-                    '"]'
-                );
+        const bookingOption =
+            document.querySelector(
+                'input[name="booking-bed"][value="' +
+                bedId +
+                '"]'
+            );
 
 
-            if(booking){
+        if(!occupant){
+            return;
+        }
 
-                bookedBeds++;
+
+        /* ----------------------------------
+           Booked
+        ---------------------------------- */
+
+        if(booking){
+
+            bookedBeds++;
 
 
-                occupant.textContent =
-                    booking.names.join(
-                        " & "
+            const names =
+                Array.isArray(
+                    booking.names
+                )
+                    ? booking.names
+                    : [];
+
+
+            occupant.textContent =
+                names.length
+                    ? names.join(" & ")
+                    : "Booked";
+
+
+            card.classList.add(
+                "booked"
+            );
+
+
+            if(bookingOption){
+
+                bookingOption.disabled =
+                    true;
+
+
+                const label =
+                    bookingOption.closest(
+                        ".booking-bed-option"
                     );
 
 
-                card.classList.add(
-                    "booked"
-                );
+                if(label){
 
-
-                if(bookingOption){
-
-                    bookingOption.disabled =
-                        true;
-
-
-                    const label =
-                        bookingOption.closest(
-                            ".booking-bed-option"
-                        );
-
-
-                    if(label){
-
-                        label.classList.add(
-                            "booked"
-                        );
-
-                    }
-
-                }
-
-            }
-            else{
-
-                occupant.textContent =
-                    "Empty";
-
-
-                card.classList.remove(
-                    "booked"
-                );
-
-
-                if(bookingOption){
-
-                    bookingOption.disabled =
-                        false;
-
-
-                    const label =
-                        bookingOption.closest(
-                            ".booking-bed-option"
-                        );
-
-
-                    if(label){
-
-                        label.classList.remove(
-                            "booked"
-                        );
-
-                    }
+                    label.classList.add(
+                        "booked"
+                    );
 
                 }
 
             }
 
         }
+
+
+        /* ----------------------------------
+           Available
+        ---------------------------------- */
+
+        else{
+
+            occupant.textContent =
+                "Empty";
+
+
+            card.classList.remove(
+                "booked"
+            );
+
+
+            if(bookingOption){
+
+                bookingOption.disabled =
+                    false;
+
+
+                const label =
+                    bookingOption.closest(
+                        ".booking-bed-option"
+                    );
+
+
+                if(label){
+
+                    label.classList.remove(
+                        "booked"
+                    );
+
+                }
+
+            }
+
+        }
+
+    });
+
+
+    updateMainBookingButton(
+        totalBeds,
+        bookedBeds
     );
 
+}
 
-    /* ======================================
-       Update Main Booking Button
-    ====================================== */
+
+/* ==========================================
+   Main Booking Button
+========================================== */
+
+function updateMainBookingButton(
+    totalBeds,
+    bookedBeds
+){
 
     const openButton =
         document.getElementById(
@@ -249,29 +396,35 @@ function updateBookedBeds(
         openButton.disabled =
             true;
 
+
         openButton.textContent =
             "Fully Booked";
+
 
         openButton.classList.add(
             "fully-booked"
         );
 
-    }
-    else{
 
-        openButton.disabled =
-            false;
-
-        openButton.textContent =
-            "Book Room";
-
-        openButton.classList.remove(
-            "fully-booked"
-        );
+        return;
 
     }
+
+
+    openButton.disabled =
+        false;
+
+
+    openButton.textContent =
+        "Book Room";
+
+
+    openButton.classList.remove(
+        "fully-booked"
+    );
 
 }
+
 
 /* ==========================================
    Start Page
@@ -280,10 +433,6 @@ function updateBookedBeds(
 document.addEventListener(
     "DOMContentLoaded",
     () => {
-
-        /* ==================================
-           Load Existing Bookings
-        ================================== */
 
         loadBookings();
 
@@ -297,69 +446,120 @@ document.addEventListener(
                 "booking-modal"
             );
 
+
         const openButton =
             document.getElementById(
                 "open-booking-button"
             );
+
 
         const closeButton =
             document.getElementById(
                 "close-booking-modal"
             );
 
-        const backdrop =
-            modal.querySelector(
-                ".booking-modal-backdrop"
-            );
 
         const bedOptions =
             document.querySelectorAll(
                 'input[name="booking-bed"]'
             );
 
+
         const summaryBed =
             document.getElementById(
                 "booking-summary-bed"
             );
+
 
         const summaryPrice =
             document.getElementById(
                 "booking-summary-price"
             );
 
+
         const addNameButton =
             document.getElementById(
                 "add-booking-name"
             );
+
 
         const nameList =
             document.getElementById(
                 "booking-name-list"
             );
 
-const confirmButton =
-    document.getElementById(
-        "confirm-booking-button"
-    );
 
-const paymentConfirmed =
-    document.getElementById(
-        "booking-payment-confirmed"
-    );
+        const confirmButton =
+            document.getElementById(
+                "confirm-booking-button"
+            );
+
+
+        const paymentConfirmed =
+            document.getElementById(
+                "booking-payment-confirmed"
+            );
+
+
+        if(
+            !modal ||
+            !openButton ||
+            !closeButton ||
+            !summaryBed ||
+            !summaryPrice ||
+            !addNameButton ||
+            !nameList ||
+            !confirmButton ||
+            !paymentConfirmed
+        ){
+
+            console.error(
+                "Booking page is missing required elements."
+            );
+
+            return;
+
+        }
+
+
+        const backdrop =
+            modal.querySelector(
+                ".booking-modal-backdrop"
+            );
+
+
+        if(!backdrop){
+
+            console.error(
+                "Booking modal backdrop is missing."
+            );
+
+            return;
+
+        }
+
+
         /* ==================================
            Open Modal
         ================================== */
 
         function openModal(){
 
+            if(openButton.disabled){
+                return;
+            }
+
+
             modal.classList.add(
                 "open"
             );
+
 
             modal.setAttribute(
                 "aria-hidden",
                 "false"
             );
+
 
             document.body.style.overflow =
                 "hidden";
@@ -377,10 +577,12 @@ const paymentConfirmed =
                 "open"
             );
 
+
             modal.setAttribute(
                 "aria-hidden",
                 "true"
             );
+
 
             document.body.style.overflow =
                 "";
@@ -427,60 +629,89 @@ const paymentConfirmed =
            Bed Selection
         ================================== */
 
-        bedOptions.forEach(
-            option => {
+        bedOptions.forEach(option => {
 
-                option.addEventListener(
-                    "change",
-                    () => {
+            option.addEventListener(
+                "change",
+                () => {
 
-                        const label =
-                            option.closest(
-                                ".booking-bed-option"
-                            );
-
-
-                        const bedName =
-                            label
-                                .querySelector(
-                                    ".booking-bed-option-info strong"
-                                )
-                                .textContent
-                                .trim();
-
-
-                        const roomName =
-                            label
-                                .querySelector(
-                                    ".booking-bed-option-info small"
-                                )
-                                .textContent
-                                .trim();
-
-
-                        const price =
-                            label
-                                .querySelector(
-                                    ".booking-bed-option-price"
-                                )
-                                .textContent
-                                .trim();
-
-
-                        summaryBed.textContent =
-                            bedName +
-                            " — " +
-                            roomName;
-
-
-                        summaryPrice.textContent =
-                            price;
-
+                    if(
+                        !option.checked ||
+                        option.disabled
+                    ){
+                        return;
                     }
-                );
 
-            }
-        );
+
+                    const label =
+                        option.closest(
+                            ".booking-bed-option"
+                        );
+
+
+                    if(!label){
+                        return;
+                    }
+
+
+                    const bedNameElement =
+                        label.querySelector(
+                            ".booking-bed-option-info strong"
+                        );
+
+
+                    const roomNameElement =
+                        label.querySelector(
+                            ".booking-bed-option-info small"
+                        );
+
+
+                    const priceElement =
+                        label.querySelector(
+                            ".booking-bed-option-price"
+                        );
+
+
+                    if(
+                        !bedNameElement ||
+                        !roomNameElement ||
+                        !priceElement
+                    ){
+                        return;
+                    }
+
+
+                    const bedName =
+                        bedNameElement
+                            .textContent
+                            .trim();
+
+
+                    const roomName =
+                        roomNameElement
+                            .textContent
+                            .trim();
+
+
+                    const price =
+                        priceElement
+                            .textContent
+                            .trim();
+
+
+                    summaryBed.textContent =
+                        bedName +
+                        " — " +
+                        roomName;
+
+
+                    summaryPrice.textContent =
+                        price;
+
+                }
+            );
+
+        });
 
 
         /* ==================================
@@ -510,8 +741,10 @@ const paymentConfirmed =
                 input.type =
                     "text";
 
+
                 input.className =
                     "booking-name-input";
+
 
                 input.placeholder =
                     "Name";
@@ -526,8 +759,10 @@ const paymentConfirmed =
                 removeButton.type =
                     "button";
 
+
                 removeButton.className =
                     "booking-remove-name";
+
 
                 removeButton.textContent =
                     "Remove";
@@ -547,6 +782,7 @@ const paymentConfirmed =
                     input
                 );
 
+
                 row.appendChild(
                     removeButton
                 );
@@ -561,279 +797,313 @@ const paymentConfirmed =
 
             }
         );
-/* ==================================
-   Confirm Booking
-================================== */
-
-confirmButton.addEventListener(
-    "click",
-    async () => {
-
-        /* --------------------------
-           Selected Bed
-        -------------------------- */
-
-        const selectedBed =
-            document.querySelector(
-                'input[name="booking-bed"]:checked'
-            );
 
 
-        if(!selectedBed){
+        /* ==================================
+           Confirm Booking
+        ================================== */
 
-            alert(
-                "Please choose a bed."
-            );
+        confirmButton.addEventListener(
+            "click",
+            async () => {
 
-            return;
-
-        }
-
-
-        /* --------------------------
-           Names
-        -------------------------- */
-
-        const names =
-            Array.from(
-                document.querySelectorAll(
-                    ".booking-name-input"
-                )
-            )
-            .map(
-                input =>
-                    input.value.trim()
-            )
-            .filter(
-                name =>
-                    name !== ""
-            );
+                const selectedBed =
+                    document.querySelector(
+                        'input[name="booking-bed"]:checked'
+                    );
 
 
-        if(names.length === 0){
+                if(!selectedBed){
 
-            alert(
-                "Please enter at least one name."
-            );
+                    alert(
+                        "Please choose a bed."
+                    );
 
-            return;
+                    return;
 
-        }
-
-
-        /* --------------------------
-           Payment Confirmation
-        -------------------------- */
-
-        if(
-            !paymentConfirmed.checked
-        ){
-
-            alert(
-                "Please confirm that you have paid or have a payment plan made."
-            );
-
-            return;
-
-        }
+                }
 
 
-/* --------------------------
-   Bed Information
--------------------------- */
+                if(selectedBed.disabled){
 
-const bedId =
-    selectedBed.value;
+                    alert(
+                        "That bed is no longer available."
+                    );
 
+                    loadBookings();
 
-const selectedLabel =
-    selectedBed.closest(
-        ".booking-bed-option"
-    );
+                    return;
 
-
-if(!selectedLabel){
-
-    alert(
-        "Something went wrong selecting this bed."
-    );
-
-    return;
-
-}
+                }
 
 
-const bed =
-    selectedLabel
-        .querySelector(
-            ".booking-bed-option-info strong"
-        )
-        .textContent
-        .trim();
+                /* --------------------------
+                   Names
+                -------------------------- */
+
+                const names =
+                    Array.from(
+                        document.querySelectorAll(
+                            ".booking-name-input"
+                        )
+                    )
+                    .map(
+                        input =>
+                            input.value.trim()
+                    )
+                    .filter(
+                        name =>
+                            name !== ""
+                    );
 
 
-const room =
-    selectedLabel
-        .querySelector(
-            ".booking-bed-option-info small"
-        )
-        .textContent
-        .trim();
+                if(names.length === 0){
+
+                    alert(
+                        "Please enter at least one name."
+                    );
+
+                    return;
+
+                }
 
 
-const priceText =
-    selectedLabel
-        .querySelector(
-            ".booking-bed-option-price"
-        )
-        .textContent
-        .trim();
+                /* --------------------------
+                   Payment Confirmation
+                -------------------------- */
+
+                if(
+                    !paymentConfirmed.checked
+                ){
+
+                    alert(
+                        "Please confirm that you have paid or have a payment plan made."
+                    );
+
+                    return;
+
+                }
 
 
-const price =
-    Number(
-        priceText.replace(
-            /[^0-9.]/g,
-            ""
-        )
-    );
+                /* --------------------------
+                   Bed Information
+                -------------------------- */
+
+                const bedId =
+                    selectedBed.value;
 
 
-if(
-    !bed ||
-    !room ||
-    !Number.isFinite(price)
-){
-
-    alert(
-        "Something went wrong reading the bed information."
-    );
-
-    return;
-
-}
-
-        /* --------------------------
-           Disable Button
-        -------------------------- */
-
-        confirmButton.disabled =
-            true;
-
-        confirmButton.textContent =
-            "Booking...";
+                const selectedLabel =
+                    selectedBed.closest(
+                        ".booking-bed-option"
+                    );
 
 
-        /* --------------------------
-           Send Booking
-        -------------------------- */
+                if(!selectedLabel){
 
-        try{
+                    alert(
+                        "Something went wrong selecting this bed."
+                    );
 
-            const response =
-                await fetch(
-                    BOOKING_API,
-                    {
-                        method:
-                            "POST",
+                    return;
 
-                        body:
-                            JSON.stringify(
-                                {
-                                    type:
-                                        "booking",
+                }
 
-                                    bedId:
-                                        bedId,
 
-                                    room:
-                                        room,
+                const bedElement =
+                    selectedLabel.querySelector(
+                        ".booking-bed-option-info strong"
+                    );
 
-                                    bed:
-                                        bed,
 
-names:
-    names,
-                                    price:
-                                        price,
+                const roomElement =
+                    selectedLabel.querySelector(
+                        ".booking-bed-option-info small"
+                    );
 
-                                    paymentConfirmed:
-                                        true
-                                }
-                            )
+
+                const priceElement =
+                    selectedLabel.querySelector(
+                        ".booking-bed-option-price"
+                    );
+
+
+                if(
+                    !bedElement ||
+                    !roomElement ||
+                    !priceElement
+                ){
+
+                    alert(
+                        "Something went wrong reading the bed information."
+                    );
+
+                    return;
+
+                }
+
+
+                const bed =
+                    bedElement
+                        .textContent
+                        .trim();
+
+
+                const room =
+                    roomElement
+                        .textContent
+                        .trim();
+
+
+                const priceText =
+                    priceElement
+                        .textContent
+                        .trim();
+
+
+                const price =
+                    Number(
+                        priceText.replace(
+                            /[^0-9.]/g,
+                            ""
+                        )
+                    );
+
+
+                if(
+                    !bed ||
+                    !room ||
+                    !Number.isFinite(price)
+                ){
+
+                    alert(
+                        "Something went wrong reading the bed information."
+                    );
+
+                    return;
+
+                }
+
+
+                /* --------------------------
+                   Disable Button
+                -------------------------- */
+
+                confirmButton.disabled =
+                    true;
+
+
+                confirmButton.textContent =
+                    "Booking...";
+
+
+                /* --------------------------
+                   Send Booking
+                -------------------------- */
+
+                try{
+
+                    const response =
+                        await fetch(
+                            BOOKING_API,
+                            {
+                                method:
+                                    "POST",
+
+                                body:
+                                    JSON.stringify(
+                                        {
+                                            type:
+                                                "booking",
+
+                                            bedId:
+                                                bedId,
+
+                                            room:
+                                                room,
+
+                                            bed:
+                                                bed,
+
+                                            names:
+                                                names,
+
+                                            price:
+                                                price,
+
+                                            paymentConfirmed:
+                                                true
+                                        }
+                                    )
+                            }
+                        );
+
+
+                    const data =
+                        await response.json();
+
+
+                    console.log(
+                        "Booking response:",
+                        data
+                    );
+
+
+                    if(
+                        !data ||
+                        data.success !== true
+                    ){
+
+                        alert(
+                            data?.error ||
+                            "This bed could not be booked."
+                        );
+
+
+                        await loadBookings();
+
+                        return;
+
                     }
-                );
 
 
-            const data =
-                await response.json();
+                    alert(
+                        "Your room has been booked!"
+                    );
 
 
-            console.log(
-                "Booking response:",
-                data
-            );
+                    closeModal();
 
 
-            /* ----------------------
-               Booking Failed
-            ---------------------- */
+                    await loadBookings();
 
-            if(
-                !data.success
-            ){
+                }
+                catch(error){
 
-                alert(
-                    data.error ||
-                    "This bed could not be booked."
-                );
+                    console.error(
+                        "Booking failed:",
+                        error
+                    );
 
-                loadBookings();
 
-                return;
+                    alert(
+                        "Something went wrong while booking. Please try again."
+                    );
+
+                }
+                finally{
+
+                    confirmButton.disabled =
+                        false;
+
+
+                    confirmButton.textContent =
+                        "Confirm Booking";
+
+                }
 
             }
+        );
 
-
-            /* ----------------------
-               Booking Successful
-            ---------------------- */
-
-            alert(
-                "Your room has been booked!"
-            );
-
-
-            closeModal();
-
-
-            loadBookings();
-
-        }
-        catch(error){
-
-            console.error(
-                "Booking failed:",
-                error
-            );
-
-
-            alert(
-                "Something went wrong while booking. Please try again."
-            );
-
-        }
-        finally{
-
-            confirmButton.disabled =
-                false;
-
-            confirmButton.textContent =
-                "Confirm Booking";
-
-        }
-
-    }
-);
     }
 );
