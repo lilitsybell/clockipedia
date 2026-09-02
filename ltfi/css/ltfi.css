@@ -188,18 +188,7 @@ a{
 ========================================== */
 
 .ltfi-hero{
-    min-height:
-        500px;
-
-    display:grid;
-
-    grid-template-columns:
-        minmax(0, 1.4fr)
-        minmax(260px, .6fr);
-
-    align-items:center;
-
-    overflow:hidden;
+    width:100%;
 
     background:
         var(--black);
@@ -213,9 +202,30 @@ a{
 }
 
 
+.ltfi-hero-inner{
+    width:
+        min(
+            1200px,
+            100%
+        );
+
+    min-height:
+        500px;
+
+    margin:
+        0 auto;
+
+    display:grid;
+
+    grid-template-columns:
+        minmax(0, 1.4fr)
+        minmax(280px, .6fr);
+}
+
+
 .ltfi-hero-content{
     padding:
-        64px;
+        70px 60px;
 }
 
 
@@ -294,61 +304,7 @@ a{
 }
 
 
-.ltfi-button{
-    display:inline-flex;
-
-    align-items:center;
-
-    justify-content:center;
-
-    min-height:
-        50px;
-
-    padding:
-        0 22px;
-
-    font-weight:
-        800;
-
-    transition:
-        transform .15s ease,
-        opacity .15s ease;
-}
-
-
-.ltfi-button:hover{
-    transform:
-        translateY(-2px);
-}
-
-
-.ltfi-button.primary{
-    background:
-        var(--purple);
-
-    color:white;
-}
-
-
-.ltfi-button.secondary{
-    border:
-        1px solid
-        rgba(255,255,255,.28);
-
-    background:
-        rgba(255,255,255,.06);
-
-    color:white;
-}
-
-
-/* ==========================================
-   Hero Mark
-========================================== */
-
 .ltfi-hero-mark{
-    height:100%;
-
     display:flex;
 
     align-items:center;
@@ -382,7 +338,8 @@ a{
     letter-spacing:
         -.08em;
 
-    white-space:nowrap;
+    white-space:
+        nowrap;
 }
 
 
