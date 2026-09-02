@@ -1,0 +1,747 @@
+/* ==========================================
+   LTFI
+========================================== */
+
+:root{
+    --black:#0D1821;
+    --white:#ffffff;
+
+    --purple:#666699;
+    --purple-dark:#4f4f78;
+    --purple-light:#ececf4;
+
+    --background:#f4f3f0;
+    --border:#d9d8d4;
+    --muted:#707176;
+}
+
+
+/* ==========================================
+   Reset
+========================================== */
+
+*{
+    box-sizing:border-box;
+    margin:0;
+    padding:0;
+}
+
+html{
+    scroll-behavior:smooth;
+}
+
+body{
+    min-height:100vh;
+
+    background:
+        var(--background);
+
+    color:
+        var(--black);
+
+    font-family:
+        Arial,
+        Helvetica,
+        sans-serif;
+}
+
+a{
+    color:inherit;
+    text-decoration:none;
+}
+
+
+/* ==========================================
+   Navigation
+========================================== */
+
+.ltfi-header{
+    position:sticky;
+
+    top:0;
+
+    z-index:1000;
+
+    background:
+        var(--black);
+
+    color:
+        white;
+
+    box-shadow:
+        0 4px 18px
+        rgba(0,0,0,.16);
+}
+
+
+.ltfi-nav{
+    width:
+        min(
+            1200px,
+            calc(100% - 40px)
+        );
+
+    min-height:76px;
+
+    margin:
+        0 auto;
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:
+        space-between;
+
+    gap:30px;
+}
+
+
+.ltfi-logo{
+    font-size:17px;
+
+    font-weight:900;
+
+    letter-spacing:.1em;
+
+    white-space:nowrap;
+}
+
+
+.ltfi-nav-links{
+    display:flex;
+
+    align-items:center;
+
+    gap:32px;
+}
+
+
+.ltfi-nav-links a{
+    position:relative;
+
+    padding:
+        28px 0;
+
+    font-size:13px;
+
+    font-weight:800;
+
+    text-transform:
+        uppercase;
+
+    letter-spacing:.08em;
+
+    opacity:.68;
+
+    transition:
+        opacity .2s ease;
+}
+
+
+.ltfi-nav-links a:hover,
+.ltfi-nav-links a.active{
+    opacity:1;
+}
+
+
+.ltfi-nav-links a.active::after{
+    content:"";
+
+    position:absolute;
+
+    left:0;
+    right:0;
+
+    bottom:18px;
+
+    height:3px;
+
+    background:
+        var(--purple);
+
+    border-radius:3px;
+}
+
+
+/* ==========================================
+   Page
+========================================== */
+
+.ltfi-page{
+    width:
+        min(
+            1200px,
+            calc(100% - 40px)
+        );
+
+    margin:
+        0 auto;
+
+    padding:
+        44px 0 80px;
+}
+
+
+/* ==========================================
+   Hero
+========================================== */
+
+.ltfi-hero{
+    min-height:
+        500px;
+
+    display:grid;
+
+    grid-template-columns:
+        minmax(0, 1.4fr)
+        minmax(260px, .6fr);
+
+    align-items:center;
+
+    overflow:hidden;
+
+    background:
+        var(--black);
+
+    color:
+        white;
+
+    border-bottom:
+        8px solid
+        var(--purple);
+}
+
+
+.ltfi-hero-content{
+    padding:
+        64px;
+}
+
+
+.ltfi-eyebrow{
+    margin-bottom:
+        18px;
+
+    color:
+        #b6b6ce;
+
+    font-size:
+        13px;
+
+    font-weight:
+        900;
+
+    letter-spacing:
+        .18em;
+}
+
+
+.ltfi-hero h1{
+    max-width:
+        760px;
+
+    font-size:
+        clamp(
+            56px,
+            8vw,
+            104px
+        );
+
+    line-height:
+        .88;
+
+    letter-spacing:
+        -.055em;
+}
+
+
+.ltfi-hero h1 span{
+    display:block;
+
+    color:
+        var(--purple);
+}
+
+
+.ltfi-hero-description{
+    max-width:
+        620px;
+
+    margin-top:
+        28px;
+
+    color:
+        #d2d4d7;
+
+    font-size:
+        19px;
+
+    line-height:
+        1.55;
+}
+
+
+.ltfi-hero-actions{
+    display:flex;
+
+    flex-wrap:wrap;
+
+    gap:12px;
+
+    margin-top:
+        34px;
+}
+
+
+.ltfi-button{
+    display:inline-flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+    min-height:
+        50px;
+
+    padding:
+        0 22px;
+
+    font-weight:
+        800;
+
+    transition:
+        transform .15s ease,
+        opacity .15s ease;
+}
+
+
+.ltfi-button:hover{
+    transform:
+        translateY(-2px);
+}
+
+
+.ltfi-button.primary{
+    background:
+        var(--purple);
+
+    color:white;
+}
+
+
+.ltfi-button.secondary{
+    border:
+        1px solid
+        rgba(255,255,255,.28);
+
+    background:
+        rgba(255,255,255,.06);
+
+    color:white;
+}
+
+
+/* ==========================================
+   Hero Mark
+========================================== */
+
+.ltfi-hero-mark{
+    height:100%;
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+    overflow:hidden;
+
+    background:
+        var(--purple);
+}
+
+
+.ltfi-hero-mark span{
+    transform:
+        rotate(-90deg);
+
+    color:
+        rgba(255,255,255,.18);
+
+    font-size:
+        clamp(
+            90px,
+            13vw,
+            170px
+        );
+
+    font-weight:
+        900;
+
+    letter-spacing:
+        -.08em;
+
+    white-space:nowrap;
+}
+
+
+/* ==========================================
+   Sections
+========================================== */
+
+.ltfi-section{
+    padding:
+        70px 0 30px;
+}
+
+
+.ltfi-section-heading{
+    margin-bottom:
+        28px;
+}
+
+
+.ltfi-section-label{
+    margin-bottom:
+        7px;
+
+    color:
+        var(--purple);
+
+    font-size:
+        12px;
+
+    font-weight:
+        900;
+
+    letter-spacing:
+        .15em;
+}
+
+
+.ltfi-section-heading h2{
+    font-size:
+        clamp(
+            30px,
+            4vw,
+            44px
+        );
+
+    line-height:
+        1.05;
+}
+
+
+/* ==========================================
+   Feature Cards
+========================================== */
+
+.ltfi-feature-grid{
+    display:grid;
+
+    grid-template-columns:
+        repeat(
+            3,
+            minmax(0,1fr)
+        );
+
+    gap:
+        20px;
+}
+
+
+.ltfi-feature-card{
+    position:relative;
+
+    min-height:
+        300px;
+
+    display:flex;
+
+    flex-direction:
+        column;
+
+    justify-content:
+        space-between;
+
+    padding:
+        24px;
+
+    background:
+        white;
+
+    border:
+        1px solid
+        var(--border);
+
+    border-top:
+        5px solid
+        var(--purple);
+
+    transition:
+        transform .18s ease,
+        box-shadow .18s ease;
+}
+
+
+.ltfi-feature-card:hover{
+    transform:
+        translateY(-4px);
+
+    box-shadow:
+        0 12px 28px
+        rgba(0,0,0,.09);
+}
+
+
+.ltfi-feature-number{
+    color:
+        #c5c4c8;
+
+    font-size:
+        50px;
+
+    font-weight:
+        900;
+
+    line-height:
+        1;
+}
+
+
+.ltfi-feature-content h3{
+    margin-bottom:
+        10px;
+
+    font-size:
+        25px;
+}
+
+
+.ltfi-feature-content p{
+    margin-bottom:
+        24px;
+
+    color:
+        #666;
+
+    line-height:
+        1.55;
+}
+
+
+.ltfi-card-link{
+    color:
+        var(--purple);
+
+    font-weight:
+        800;
+}
+
+
+/* ==========================================
+   Community Strip
+========================================== */
+
+.ltfi-community-strip{
+    margin-top:
+        45px;
+
+    overflow:hidden;
+
+    background:
+        var(--purple);
+
+    color:white;
+}
+
+
+.ltfi-community-strip div{
+    min-height:
+        70px;
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:
+        space-around;
+
+    gap:
+        28px;
+
+    padding:
+        0 24px;
+
+    font-size:
+        13px;
+
+    font-weight:
+        900;
+
+    letter-spacing:
+        .1em;
+}
+
+
+/* ==========================================
+   Footer
+========================================== */
+
+.ltfi-footer{
+    min-height:
+        90px;
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:
+        space-between;
+
+    gap:
+        20px;
+
+    padding:
+        0 max(
+            20px,
+            calc(
+                (
+                    100% - 1200px
+                ) / 2
+            )
+        );
+
+    background:
+        var(--black);
+
+    color:
+        #aaaeb3;
+
+    font-size:
+        12px;
+
+    font-weight:
+        800;
+
+    letter-spacing:
+        .08em;
+}
+
+
+/* ==========================================
+   Responsive
+========================================== */
+
+@media(max-width:850px){
+
+    .ltfi-hero{
+        grid-template-columns:
+            1fr;
+    }
+
+
+    .ltfi-hero-mark{
+        height:
+            150px;
+    }
+
+
+    .ltfi-hero-mark span{
+        transform:
+            none;
+    }
+
+
+    .ltfi-feature-grid{
+        grid-template-columns:
+            1fr;
+    }
+
+}
+
+
+@media(max-width:700px){
+
+    .ltfi-nav{
+        flex-direction:
+            column;
+
+        justify-content:
+            center;
+
+        gap:
+            5px;
+
+        padding:
+            15px 0;
+    }
+
+
+    .ltfi-nav-links{
+        width:100%;
+
+        justify-content:
+            center;
+
+        gap:
+            18px;
+    }
+
+
+    .ltfi-nav-links a{
+        padding:
+            8px 0;
+
+        font-size:
+            11px;
+    }
+
+
+    .ltfi-nav-links a.active::after{
+        bottom:0;
+    }
+
+
+    .ltfi-page{
+        width:
+            calc(100% - 24px);
+
+        padding-top:
+            24px;
+    }
+
+
+    .ltfi-hero-content{
+        padding:
+            42px 26px;
+    }
+
+
+    .ltfi-community-strip div{
+        min-height:
+            auto;
+
+        flex-direction:
+            column;
+
+        padding:
+            24px;
+    }
+
+
+    .ltfi-footer{
+        flex-direction:
+            column;
+
+        justify-content:
+            center;
+
+        text-align:center;
+
+        padding:
+            24px;
+    }
+
+}
