@@ -1,0 +1,166 @@
+/* ==========================================
+   LTFI Global
+========================================== */
+:root{
+    --black:#0D1821;
+    --white:#ffffff;
+    --purple:#666699;
+    --purple-dark:#4f4f78;
+    --purple-light:#ececf4;
+    --background:#f4f3f0;
+    --border:#d9d8d4;
+    --muted:#707176;
+}
+/* ==========================================
+   Basic Reset
+========================================== */
+*{
+    box-sizing:border-box;
+    margin:0;
+    padding:0;
+}
+html{
+    scroll-behavior:smooth;
+}
+body{
+    min-height:100vh;
+    background:
+        var(--background);
+    color:
+        var(--black);
+    font-family:
+        Arial,
+        Helvetica,
+        sans-serif;
+}
+a{
+    color:inherit;
+    text-decoration:none;
+}
+/* ==========================================
+   LTFI Header
+========================================== */
+.ltfi-header{
+    position:sticky;
+    top:0;
+    z-index:1000;
+    background:
+        var(--black);
+    color:
+        var(--white);
+    box-shadow:
+        0 4px 18px
+        rgba(0,0,0,.16);
+}
+.ltfi-nav{
+    width:
+        min(
+            1200px,
+            calc(100% - 40px)
+        );
+    min-height:76px;
+    margin:
+        0 auto;
+    display:flex;
+    align-items:center;
+    justify-content:
+        space-between;
+    gap:30px;
+}
+.ltfi-logo{
+    font-size:17px;
+    font-weight:900;
+    letter-spacing:.1em;
+    white-space:nowrap;
+}
+.ltfi-nav-links{
+    display:flex;
+    align-items:center;
+    gap:32px;
+}
+.ltfi-nav-links a{
+    position:relative;
+    padding:
+        28px 0;
+    font-size:13px;
+    font-weight:800;
+    text-transform:uppercase;
+    letter-spacing:.08em;
+    opacity:.68;
+    transition:
+        opacity .2s ease;
+}
+.ltfi-nav-links a:hover,
+.ltfi-nav-links a.active{
+    opacity:1;
+}
+.ltfi-nav-links a.active::after{
+    content:"";
+    position:absolute;
+    left:0;
+    right:0;
+    bottom:18px;
+    height:3px;
+    background:
+        var(--purple);
+    border-radius:3px;
+}
+/* ==========================================
+   LTFI Footer
+========================================== */
+.ltfi-footer{
+    min-height:90px;
+    display:flex;
+    align-items:center;
+    justify-content:
+        space-between;
+    gap:20px;
+    padding:
+        0 max(
+            20px,
+            calc(
+                (
+                    100% - 1200px
+                ) / 2
+            )
+        );
+    background:
+        var(--black);
+    color:
+        #aaaeb3;
+    font-size:12px;
+    font-weight:800;
+    letter-spacing:.08em;
+}
+/* ==========================================
+   Mobile
+========================================== */
+@media(max-width:700px){
+    .ltfi-nav{
+        flex-direction:column;
+        justify-content:center;
+        gap:5px;
+        padding:
+            15px 0;
+    }
+    .ltfi-nav-links{
+        width:100%;
+        justify-content:center;
+        gap:18px;
+    }
+    .ltfi-nav-links a{
+        padding:
+            8px 0;
+        font-size:11px;
+    }
+    .ltfi-nav-links a.active::after{
+        bottom:0;
+    }
+    .ltfi-footer{
+        flex-direction:column;
+        justify-content:center;
+        text-align:center;
+        padding:
+            24px;
+    }
+}
