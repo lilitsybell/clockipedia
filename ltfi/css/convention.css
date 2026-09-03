@@ -3133,37 +3133,38 @@ body.gallery-open {
 ========================================== */
 
 .convention-subnav{
-    position:sticky;
+    position:relative;
 
-    top:76px;
+    top:auto;
 
-    z-index:900;
+    z-index:auto;
+
+    margin:
+        24px 30px 0;
 
     background:
         var(--white);
 
-    border-bottom:
-        1px solid
-        var(--border);
+    border:0;
+
+    border-radius:
+        16px;
 
     box-shadow:
-        0 3px 10px
-        rgba(0,0,0,.05);
+        0 2px 8px
+        rgba(0,0,0,.04);
 }
-
-
 .convention-subnav-inner{
-    width:
-        min(
-            1200px,
-            calc(100% - 40px)
-        );
+    width:100%;
 
     min-height:
-        54px;
+        58px;
+
+    padding:
+        0 22px;
 
     margin:
-        0 auto;
+        0;
 
     display:flex;
 
@@ -3175,8 +3176,6 @@ body.gallery-open {
     gap:
         28px;
 }
-
-
 .convention-subnav-brand{
     flex-shrink:0;
 
