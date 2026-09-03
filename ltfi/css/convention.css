@@ -3027,42 +3027,58 @@ body.gallery-open {
 .ticket-submission-message.error{
     color:#a41618;
 }
-
-
 /* ==========================================
-   Ticket Info Panel
+   Ticket Price Display
 ========================================== */
-
 .ticket-price-display{
+    position:relative;
     display:flex;
     flex-direction:column;
-    align-items:center;
-    text-align:center;
-    padding:28px 20px;
-    background:#f4f4f7;
-    border:1px solid #ddd;
+    align-items:flex-start;
+    padding: 28px;
+    overflow:hidden;
+    background: var(--teal);
+    color: var(--white);
+    border-radius: 14px;
+    text-align:left;
 }
-
+/* Decorative circle */
+.ticket-price-display::after{
+    content:"";
+    position:absolute;
+    width: 150px;
+    height: 150px;
+    right: -55px;
+    bottom: -65px;
+    border-radius: 50%;
+    background: rgba(255,255,255,.12);
+}
 .ticket-price-display span{
-    color:#666;
-    font-size:13px;
-    font-weight:800;
-    text-transform:uppercase;
-    letter-spacing:.07em;
+    position:relative;
+    z-index:1;
+    color: rgba(255,255,255,.8);
+    font-size: 11px;
+    font-weight: 800;
+    letter-spacing: .1em;
+    text-transform: uppercase;
 }
-
 .ticket-price-display strong{
-    margin:4px 0;
-    color:var(--purple, #666699);
-    font-size:52px;
-    line-height:1;
+    position:relative;
+    z-index:1;
+    margin: 12px 0 4px;
+    color: var(--white);
+    font-size: 58px;
+    font-weight: 900;
+    line-height: .9;
+    letter-spacing: -.04em;
 }
-
 .ticket-price-display small{
-    color:#777;
-    font-size:14px;
+    position:relative;
+    z-index:1;
+    color: rgba(255,255,255,.8);
+    font-size: 13px;
+    font-weight: 600;
 }
-
 .ticket-info-section{
     margin-top:24px;
 }
