@@ -440,38 +440,37 @@ a {
         text-align: center;
     }
 }
-@media (max-width: 750px) {
-    .banner-countdown {
-        position: relative;
-        top: auto;
-        right: auto;
-        width: 100%;
-        padding: 20px;
-        transform: none;
-        background: #2d2448;
+@media(max-width:750px){
+    .banner-countdown{
+        width:100%;
+        padding: 18px 14px;
+        background: var(--dark-visual);
     }
-    .countdown {
-        display: grid;
-        grid-template-columns:
-            repeat(4, 1fr);
-        max-width: 500px;
-        margin: 0 auto;
-        gap: 10px;
+    .countdown{
+        display:grid;
+        grid-template-columns: repeat(4, 1fr);
+        gap: 8px;
+        width:100%;
     }
-    .countdown-unit {
-        flex-direction: column;
-        align-items: center;
+    .countdown-unit{
+        min-width:0;
         gap: 5px;
     }
-    .countdown-unit span {
-        min-width: 0;
-        font-size: clamp(28px, 9vw, 42px);
-        text-align: center;
+    .countdown-unit span{
+        min-width:0;
+        font-size:
+            clamp(
+                28px,
+                9vw,
+                42px
+            );
+
+        text-align:center;
     }
-    .countdown-unit small {
-        width: auto;
+    .countdown-unit small{
+        width:100%;
         font-size: 8px;
-        text-align: center;
+        text-align:center;
     }
 }
 /* ==========================================
