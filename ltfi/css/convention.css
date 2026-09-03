@@ -1,19 +1,11 @@
 /* ==========================================
-   Variables
+   Convention Variables
 ========================================== */
-:root {
-    --black:#0D1821;
-    --white:#ffffff;
-    --purple:#666699;
-    --purple-dark:#4f4f78;
-    --purple-light:#ececf4;
-    --background:#f5f3ef;
+:root{
     --light:#ebe7df;
-    --accent:#666699;
-    --accent-dark:#4e4e78;
-    --text:#0D1821;
-    --muted:#6d7075;
-    --border:#d9d8d4;
+    --accent: var(--dark-visual);
+    --accent-dark: var(--dark-text);
+    --text: var(--dark-text);
 }
 /* ==========================================
    Reset
