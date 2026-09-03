@@ -1,30 +1,18 @@
 /* ==========================================
-   Lock the Fuck In Seattle
-   Convention Styles
-========================================== */
-
-
-/* ==========================================
    Variables
 ========================================== */
-
 :root {
     --black:#0D1821;
     --white:#ffffff;
-
     --purple:#666699;
     --purple-dark:#4f4f78;
     --purple-light:#ececf4;
-
     --background:#f5f3ef;
     --light:#ebe7df;
-
     --accent:#666699;
     --accent-dark:#4e4e78;
-
     --text:#0D1821;
     --muted:#6d7075;
-
     --border:#d9d8d4;
 }
 /* ==========================================
@@ -40,11 +28,7 @@ body {
     margin: 0;
     background: var(--background);
     color: var(--text);
-    font-family:
-        Arial,
-        Helvetica,
-        sans-serif;
-
+    font-family: Arial, Helvetica, sans-serif;
     line-height: 1.5;
 }
 img {
@@ -3253,152 +3237,75 @@ body.gallery-open {
 /* ==========================================
    Convention Name
 ========================================== */
-
 .convention-subnav-brand{
     flex-shrink:0;
-
-    color:
-        var(--dark-text);
-
-    font-size:
-        12px;
-
-    font-weight:
-        900;
-
-    letter-spacing:
-        .14em;
-
-    text-transform:
-        uppercase;
+    color: var(--dark-text);
+    font-size: 12px;
+    font-weight: 900;
+    letter-spacing: .14em;
+    text-transform: uppercase;
 }
-
-
 /* ==========================================
    Convention Links
 ========================================== */
-
 .convention-subnav-links{
     display:flex;
-
     align-items:center;
-
-    gap:
-        24px;
+    gap: 24px;
 }
-
-
 .convention-subnav-links a{
     position:relative;
-
-    padding:
-        20px 0;
-
-    color:
-        var(--muted);
-
-    font-size:
-        12px;
-
-    font-weight:
-        800;
-
-    text-transform:
-        uppercase;
-
-    letter-spacing:
-        .06em;
-
-    transition:
-        color .16s ease;
+    padding: 20px 0;
+    color: var(--muted);
+    font-size: 12px;
+    font-weight: 800;
+    text-transform: uppercase;
+    letter-spacing: .06em;
+    transition: color .16s ease;
 }
-
-
 .convention-subnav-links a:hover,
 .convention-subnav-links a.active{
-    color:
-        var(--dark-text);
+    color: var(--dark-text);
 }
-
-
 .convention-subnav-links a.active::after{
     content:"";
-
     position:absolute;
-
     left:0;
     right:0;
-
     bottom:0;
-
-    height:
-        3px;
-
-    background:
-        var(--teal);
+    height: 3px;
+    background: var(--teal);
 }
-
-
 /* ==========================================
    Convention Sub Navigation - Mobile
 ========================================== */
-
 @media(max-width:900px){
-
     .convention-subnav{
-        width:
-            calc(100% - 40px);
-
-        margin:
-            20px auto 0;
+        width: calc(100% - 40px);
+        margin: 20px auto 0;
     }
-
-
     .convention-subnav-inner{
         min-height:0;
-
         padding:0;
-
         flex-direction:column;
-
         align-items:stretch;
-
         gap:0;
     }
-
-
     .convention-subnav-brand{
-        padding:
-            14px 18px;
-
-        border-bottom:
-            1px solid
-            var(--border);
+        padding: 14px 18px;
+        border-bottom: 1px solid var(--border);
     }
-
-
     .convention-subnav-links{
         width:100%;
-
         overflow-x:auto;
-
-        gap:
-            22px;
-
-        padding:
-            0 18px;
-
+        gap: 22px;
+        padding: 0 18px;
         scrollbar-width:none;
     }
-
-
     .convention-subnav-links::-webkit-scrollbar{
         display:none;
     }
-
-
     .convention-subnav-links a{
         flex-shrink:0;
     }
-
 }
