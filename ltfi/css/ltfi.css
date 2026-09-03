@@ -541,3 +541,16 @@
         padding: 0 0 60px;
     }
 }
+/* ==========================================
+   Convention Home Spacing
+========================================== */
+.convention-hero{
+    margin-top: 20px;
+}
+.convention-about{
+    margin-top: 18px;
+}
+.convention-gallery{
+    margin-top: 18px;
+    margin-bottom: 50px;
+}
