@@ -308,6 +308,59 @@ a {
     font-size: 15px;
 }
 /* ==========================================
+   Gallery Grid
+========================================== */
+
+.gallery-grid{
+    columns:
+        4 250px;
+
+    column-gap:
+        15px;
+}
+
+
+/* ==========================================
+   Gallery Items
+========================================== */
+
+.gallery-item{
+    break-inside:
+        avoid;
+
+    margin-bottom:
+        15px;
+
+    overflow:
+        hidden;
+
+    border-radius:
+        12px;
+
+    background:
+        var(--light);
+
+    cursor:
+        pointer;
+}
+
+
+.gallery-item img{
+    display:block;
+
+    width:100%;
+    height:auto;
+
+    transition:
+        transform .4s ease;
+}
+
+
+.gallery-item:hover img{
+    transform:
+        scale(1.04);
+}
+/* ==========================================
    Footer
 ========================================== */
 .convention-footer {
