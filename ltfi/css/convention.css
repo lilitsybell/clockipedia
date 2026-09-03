@@ -144,21 +144,12 @@ a {
 ========================================== */
 .banner-countdown{
     position:relative;
-
     top:auto;
     right:auto;
-
     width:100%;
-
-    padding:
-        18px 24px;
-
-    background:
-        var(--dark-visual);
-
-    color:
-        var(--white);
-
+    padding: 18px 24px;
+    background: var(--black);
+    color: var(--white);
     text-align:center;
 }
 .countdown{
