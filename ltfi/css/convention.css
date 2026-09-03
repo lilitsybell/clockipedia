@@ -2464,16 +2464,10 @@ body.gallery-open {
 ========================================== */
 
 .tickets-page .booking-payment-qr{
-    align-items:flex-start;
-
-    gap:
-        14px;
-
-    margin:
-        20px 0;
+    align-items:center;
+    gap: 14px;
+    margin: 20px 0;
 }
-
-
 .tickets-page .booking-venmo-qr{
     width:
         190px;
