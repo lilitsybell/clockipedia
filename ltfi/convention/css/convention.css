@@ -144,24 +144,48 @@ a {
 /* ==========================================
    Banner Countdown
 ========================================== */
-.banner-countdown {
-    position: absolute;
-    top: 6%;
-    right: 3%;
-    width: 15%;
-    color: white;
-    text-align: center;
+.banner-countdown{
+    position:relative;
+
+    top:auto;
+    right:auto;
+
+    width:100%;
+
+    padding:
+        18px 24px;
+
+    background:
+        var(--dark-visual);
+
+    color:
+        var(--white);
+
+    text-align:center;
 }
-.countdown {
-    display: flex;
-    flex-direction: column;
-    gap: 9px;
+.countdown{
+    display:flex;
+
+    flex-direction:row;
+
+    align-items:center;
+
+    justify-content:center;
+
+    gap:
+        38px;
 }
-.countdown-unit {
-    display: flex;
-    align-items: baseline;
-    justify-content: flex-end;
-    gap: 8px;
+.countdown-unit{
+    display:flex;
+
+    flex-direction:column;
+
+    align-items:center;
+
+    justify-content:center;
+
+    gap:
+        4px;
 }
 .countdown-unit span {
     min-width: 2.4ch;
