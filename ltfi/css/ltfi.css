@@ -229,33 +229,37 @@
 ========================================== */
 .ltfi-section{
     padding:
-        70px 0 30px;
+        34px 0 18px;
 }
 .ltfi-section-heading{
     margin-bottom:
-        28px;
+        18px;
 }
 .ltfi-section-label{
     margin-bottom:
-        7px;
+        6px;
     color:
-        var(--purple-dark);
+        var(--muted);
     font-size:
-        12px;
+        10px;
     font-weight:
-        900;
+        800;
     letter-spacing:
-        .15em;
+        .12em;
+    text-transform:
+        uppercase;
 }
 .ltfi-section-heading h2{
+    color:
+        var(--dark-text);
     font-size:
-        clamp(
-            30px,
-            4vw,
-            44px
-        );
+        24px;
+    font-weight:
+        800;
     line-height:
-        1.05;
+        1.15;
+    letter-spacing:
+        -.02em;
 }
 /* ==========================================
    Explore
