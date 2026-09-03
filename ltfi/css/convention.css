@@ -1900,8 +1900,36 @@ body.gallery-open {
 .room-book-button:hover{
     opacity:.9;
 }
-
-
+/* ==========================================
+   Purchase Ticket Button
+========================================== */
+.tickets-page .room-book-button{
+    width:100%;
+    margin-top: 20px;
+    padding: 15px 20px;
+    border:0;
+    border-radius: 10px;
+    background: var(--teal);
+    color: var(--white);
+    font-size: 13px;
+    font-weight: 900;
+    letter-spacing: .07em;
+    text-transform: uppercase;
+    cursor:pointer;
+    transition:
+        transform .16s ease,
+        opacity .16s ease;
+}
+.tickets-page .room-book-button:hover{
+    opacity: .9;
+    transform: translateY(-1px);
+}
+.tickets-page .room-book-button:disabled{
+    background: #aaa7af;
+    cursor: not-allowed;
+    opacity: .7;
+    transform:none;
+}
 /* ==========================================
    Amenities
 ========================================== */
