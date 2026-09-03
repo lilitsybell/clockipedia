@@ -155,169 +155,81 @@
 
 
 .home-stat-label{
-    color:
-        rgba(255,255,255,.72);
-
-    font-size:
-        10px;
-
-    font-weight:
-        800;
-
-    letter-spacing:
-        .13em;
-
-    text-transform:
-        uppercase;
+    color: rgba(255,255,255,.72);
+    font-size: 10px;
+    font-weight: 800;
+    letter-spacing: .13em;
+    text-transform: uppercase;
 }
-
-
 /* Hide old dots */
-
 .home-stat-dot{
     display:none;
 }
-
-
 /* ==========================================
    Main Number
 ========================================== */
-
 .home-stat-value{
     position:relative;
-
     z-index:2;
-
-    margin-bottom:
-        10px;
-
-    color:
-        var(--white);
-
-    font-size:
-        58px;
-
-    font-weight:
-        800;
-
-    line-height:
-        .9;
-
-    letter-spacing:
-        -.05em;
+    margin-bottom: 10px;
+    color: var(--white);
+    font-size: 58px;
+    font-weight: 800;
+    line-height: .9;
+    letter-spacing: -.05em;
 }
-
-
 .home-stat-date{
-    max-width:
-        180px;
-
-    font-size:
-        42px;
-
-    line-height:
-        .95;
+    max-width: 180px;
+    font-size: 42px;
+    line-height: .95;
 }
-
-
 /* ==========================================
    Description
 ========================================== */
-
 .home-stat-description{
     position:relative;
-
     z-index:2;
-
-    color:
-        rgba(255,255,255,.78);
-
-    font-size:
-        13px;
-
-    line-height:
-        1.4;
+    color: rgba(255,255,255,.78);
+    font-size: 13px;
+    line-height: 1.4;
 }
-
-
 /* ==========================================
    Decorative Shape
 ========================================== */
-
 .home-stat-card::after{
     content:"";
-
     position:absolute;
-
-    width:
-        150px;
-
-    height:
-        150px;
-
-    right:
-        -35px;
-
-    bottom:
-        -55px;
-
-    border-radius:
-        50%;
-
-    background:
-        rgba(255,255,255,.10);
+    width: 150px;
+    height: 150px;
+    right: -35px;
+    bottom: -55px;
+    border-radius: 50%;
+    background: rgba(255,255,255,.10);
 }
-
-
 .home-stat-card::before{
     content:"";
-
     position:absolute;
-
-    width:
-        75px;
-
-    height:
-        75px;
-
-    right:
-        35px;
-
-    bottom:
-        -28px;
-
-    border-radius:
-        50%;
-
-    background:
-        rgba(255,255,255,.10);
+    width: 75px;
+    height: 75px;
+    right: 35px;
+    bottom: -28px;
+    border-radius: 50%;
+    background: rgba(255,255,255,.10);
 }
-
-
 /* ==========================================
    Responsive
 ========================================== */
-
 @media(max-width:900px){
-
     .home-stats-grid{
         grid-template-columns:
             1fr 1fr;
     }
-
 }
-
-
 @media(max-width:600px){
-
     .home-stats-grid{
-        width:
-            calc(100% - 40px);
-
-        grid-template-columns:
-            1fr;
+        width: calc(100% - 40px);
+        grid-template-columns: 1fr;
     }
-
 }
 /* ==========================================
    Buttons
@@ -326,71 +238,50 @@
     display:inline-flex;
     align-items:center;
     justify-content:center;
-    min-height:
-        50px;
-    padding:
-        0 22px;
-    font-weight:
-        800;
+    min-height: 50px;
+    padding: 0 22px;
+    font-weight: 800;
     transition:
         transform .15s ease,
         opacity .15s ease;
 }
 .ltfi-button:hover{
-    transform:
-        translateY(-2px);
+    transform: translateY(-2px);
 }
 .ltfi-button.primary{
-    background:
-        var(--purple-dark);
-    color:
-        white;
+    background: var(--purple-dark);
+    color: white;
 }
 .ltfi-button.secondary{
     border:
         1px solid
         rgba(255,255,255,.28);
-    background:
-        rgba(255,255,255,.06);
-    color:
-        white;
+    background: rgba(255,255,255,.06);
+    color: white;
 }
 /* ==========================================
    Sections
 ========================================== */
 .ltfi-section{
-    padding:
-        34px 0 18px;
+    padding: 34px 0 18px;
 }
 .ltfi-section-heading{
-    margin-bottom:
-        18px;
+    margin-bottom: 18px;
 }
 .ltfi-section-label{
-    margin-bottom:
-        6px;
-    color:
-        var(--muted);
-    font-size:
-        10px;
-    font-weight:
-        800;
-    letter-spacing:
-        .12em;
-    text-transform:
-        uppercase;
+    margin-bottom: 6px;
+    color: var(--muted);
+    font-size: 10px;
+    font-weight: 800;
+    letter-spacing: .12em;
+    text-transform: uppercase;
 }
 .ltfi-section-heading h2{
-    color:
-        var(--dark-text);
-    font-size:
-        24px;
-    font-weight:
-        800;
-    line-height:
-        1.15;
-    letter-spacing:
-        -.02em;
+    color: var(--dark-text);
+    font-size: 24px;
+    font-weight: 800;
+    line-height: 1.15;
+    letter-spacing: -.02em;
 }
 /* ==========================================
    Explore
