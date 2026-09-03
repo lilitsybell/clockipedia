@@ -246,6 +246,30 @@ a {
     line-height: 1.65;
 }
 /* ==========================================
+   Convention Primary Button
+========================================== */
+.primary-button{
+    display:inline-flex;
+    align-items:center;
+    justify-content:center;
+    margin-top:18px;
+    padding: 13px 20px;
+    background: var(--teal);
+    color: var(--white);
+    border-radius: 10px;
+    font-size: 12px;
+    font-weight: 800;
+    letter-spacing: .08em;
+    text-transform: uppercase;
+    transition:
+        transform .16s ease,
+        opacity .16s ease;
+}
+.primary-button:hover{
+    transform: translateY(-2px);
+    opacity:.9;
+}
+/* ==========================================
    Gallery
 ========================================== */
 .convention-gallery {
