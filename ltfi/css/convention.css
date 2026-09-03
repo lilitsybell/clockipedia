@@ -3162,18 +3162,30 @@ body.gallery-open {
     font-size: 13px;
     line-height: 1.5;
 }
+/* ==========================================
+   Ticket Submission Message
+========================================== */
 .ticket-submission-message{
-    margin-top:14px;
-    min-height:22px;
-    font-weight:700;
+    min-height: 0;
+    margin-top: 12px;
+    font-size: 13px;
+    font-weight: 700;
+    line-height: 1.45;
 }
-
+.ticket-submission-message:empty{
+    display:none;
+}
 .ticket-submission-message.success{
-    color:#4d7a37;
+    padding: 11px 13px;
+    background: rgba(72,169,166,.12);
+    color: #357d7a;
+    border-radius: 9px;
 }
-
 .ticket-submission-message.error{
-    color:#a41618;
+    padding: 11px 13px;
+    background: rgba(234,43,31,.08);
+    color: var(--red);
+    border-radius: 9px;
 }
 /* ==========================================
    Ticket Price Display
