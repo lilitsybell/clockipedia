@@ -3248,73 +3248,168 @@ body.gallery-open {
     color:var(--black, #0D1821);
     font-size:20px;
 }
-
-
 /* ==========================================
-   Who's Going
+   Who's Attending
 ========================================== */
 
 .ticket-attendees-section{
-    margin-top:28px;
-    padding:26px;
+    margin-top:
+        20px;
+
+    padding:
+        30px 34px;
+
+    background:
+        var(--white);
+
+    border:0;
+
+    border-radius:
+        18px;
 }
+
 
 .ticket-attendee-summary{
     display:flex;
+
     align-items:baseline;
-    gap:8px;
-    margin-bottom:20px;
+
+    gap:
+        9px;
+
+    margin-bottom:
+        20px;
 }
+
 
 .ticket-attendee-summary strong{
-    color:var(--purple, #666699);
-    font-size:32px;
+    color:
+        var(--teal);
+
+    font-size:
+        34px;
+
+    font-weight:
+        900;
+
+    line-height:1;
+
+    letter-spacing:
+        -.04em;
 }
 
+
 .ticket-attendee-summary span{
-    color:#666;
-    font-weight:700;
+    color:
+        var(--muted);
+
+    font-size:
+        13px;
+
+    font-weight:
+        700;
+
+    text-transform:
+        uppercase;
+
+    letter-spacing:
+        .06em;
 }
+
+
+/* ==========================================
+   Attendee Grid
+========================================== */
 
 .ticket-attendee-list{
     display:grid;
-    grid-template-columns:repeat(3, minmax(0, 1fr));
-    gap:10px;
+
+    grid-template-columns:
+        repeat(3, minmax(0, 1fr));
+
+    gap:
+        9px;
 }
+
 
 .ticket-attendee{
     display:flex;
+
     align-items:center;
-    gap:10px;
+
+    gap:
+        11px;
+
     min-width:0;
-    padding:12px 14px;
-    background:#fafafa;
-    border:1px solid #ddd;
+
+    padding:
+        12px 14px;
+
+    background:
+        var(--background);
+
+    border:0;
+
+    border-radius:
+        10px;
 }
+
+
+/* Initial Circle */
 
 .ticket-attendee-icon{
     display:flex;
+
     align-items:center;
+
     justify-content:center;
-    flex:0 0 26px;
-    width:26px;
-    height:26px;
-    background:var(--purple, #666699);
-    color:white;
-    border-radius:50%;
-    font-size:13px;
-    font-weight:900;
+
+    flex:
+        0 0 30px;
+
+    width:
+        30px;
+
+    height:
+        30px;
+
+    background:
+        var(--dark-visual);
+
+    color:
+        var(--white);
+
+    border-radius:
+        50%;
+
+    font-size:
+        12px;
+
+    font-weight:
+        900;
 }
+
 
 .ticket-attendee strong{
     min-width:0;
-    overflow:hidden;
-    text-overflow:ellipsis;
-    white-space:nowrap;
-    color:var(--black, #0D1821);
-    font-size:15px;
-}
 
+    overflow:hidden;
+
+    text-overflow:
+        ellipsis;
+
+    white-space:
+        nowrap;
+
+    color:
+        var(--dark-text);
+
+    font-size:
+        14px;
+
+    font-weight:
+        700;
+}
 .ticket-attendee-loading,
 .ticket-attendee-empty,
 .ticket-attendee-error{
