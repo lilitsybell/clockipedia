@@ -206,45 +206,44 @@ a {
 /* ==========================================
    About
 ========================================== */
-.convention-about {
-    padding: 110px 0;
+.convention-about{
+    width:
+        min(
+            1200px,
+            calc(100% - 60px)
+        );
+    margin: 20px auto 0;
+    padding:0;
+    background: transparent;
+}
+.convention-about .section-inner{
+    width:100%;
+}
+.about-text{
+    max-width:none;
+    padding: 34px 36px;
     background: var(--white);
+    border-radius: 18px;
 }
-.about-text {
-    max-width: 760px;
-}
-.about-text h1 {
-    margin: 0 0 25px;
-    font-size: clamp(38px, 5vw, 64px);
-    line-height: 1.05;
+.about-text h1{
+    max-width: 650px;
+    margin: 0 0 22px;
+    color: var(--dark-text);
+    font-size:
+        clamp(
+            34px,
+            4vw,
+            52px
+        );
+    line-height: 1;
     letter-spacing: -.04em;
 }
-.about-text p {
-    max-width: 680px;
-    margin: 0 0 18px;
-    font-size: 18px;
+.about-text p{
+    max-width: 760px;
+    margin: 0 0 16px;
     color: var(--muted);
-}
-.primary-button {
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
-    margin-top: 20px;
-    padding: 15px 25px;
-    border-radius: 8px;
-    background: var(--accent);
-    color: var(--white);
-    font-size: 14px;
-    font-weight: 800;
-    text-transform: uppercase;
-    letter-spacing: .08em;
-    transition:
-        background .2s ease,
-        transform .2s ease;
-}
-.primary-button:hover {
-    background: var(--accent-dark);
-    transform: translateY(-2px);
+    font-size: 16px;
+    line-height: 1.65;
 }
 /* ==========================================
    Gallery
