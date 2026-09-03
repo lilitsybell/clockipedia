@@ -2993,7 +2993,6 @@ body.gallery-open {
 /* ==========================================
    Ticket Info Panel
 ========================================== */
-
 .ticket-price-display{
     display:flex;
     flex-direction:column;
@@ -3003,7 +3002,6 @@ body.gallery-open {
     background:#f4f4f7;
     border:1px solid #ddd;
 }
-
 .ticket-price-display span{
     color:#666;
     font-size:13px;
@@ -3011,62 +3009,50 @@ body.gallery-open {
     text-transform:uppercase;
     letter-spacing:.07em;
 }
-
 .ticket-price-display strong{
     margin:4px 0;
     color:var(--purple, #666699);
     font-size:52px;
     line-height:1;
 }
-
 .ticket-price-display small{
     color:#777;
     font-size:14px;
 }
-
 .ticket-info-section{
     margin-top:24px;
 }
-
 .ticket-info-section h3{
     margin:0 0 14px;
     color:var(--black, #0D1821);
     font-size:20px;
 }
-
-
 /* ==========================================
    Who's Going
 ========================================== */
-
 .ticket-attendees-section{
     margin-top:28px;
     padding:26px;
 }
-
 .ticket-attendee-summary{
     display:flex;
     align-items:baseline;
     gap:8px;
     margin-bottom:20px;
 }
-
 .ticket-attendee-summary strong{
     color:var(--purple, #666699);
     font-size:32px;
 }
-
 .ticket-attendee-summary span{
     color:#666;
     font-weight:700;
 }
-
 .ticket-attendee-list{
     display:grid;
     grid-template-columns:repeat(3, minmax(0, 1fr));
     gap:10px;
 }
-
 .ticket-attendee{
     display:flex;
     align-items:center;
@@ -3076,7 +3062,6 @@ body.gallery-open {
     background:#fafafa;
     border:1px solid #ddd;
 }
-
 .ticket-attendee-icon{
     display:flex;
     align-items:center;
@@ -3090,7 +3075,6 @@ body.gallery-open {
     font-size:13px;
     font-weight:900;
 }
-
 .ticket-attendee strong{
     min-width:0;
     overflow:hidden;
@@ -3099,7 +3083,6 @@ body.gallery-open {
     color:var(--black, #0D1821);
     font-size:15px;
 }
-
 .ticket-attendee-loading,
 .ticket-attendee-empty,
 .ticket-attendee-error{
@@ -3110,247 +3093,134 @@ body.gallery-open {
     color:#777;
     text-align:center;
 }
-
 .ticket-attendee-error{
     color:#a41618;
 }
-
-
 /* ==========================================
    Responsive
 ========================================== */
-
 @media(max-width:850px){
-
     .ticket-purchase-grid{
         grid-template-columns:1fr;
     }
-
     .ticket-attendee-list{
         grid-template-columns:repeat(2, minmax(0, 1fr));
     }
-
 }
-
 @media(max-width:600px){
-
     .tickets-page{
         width:calc(100% - 24px);
         padding-top:30px;
     }
-
     .ticket-purchase-panel,
     .ticket-info-panel,
     .ticket-attendees-section{
         padding:20px;
     }
-
     .ticket-name-row{
         align-items:stretch;
     }
-
     .ticket-name-row:not(:first-child){
         flex-direction:column;
     }
-
     .ticket-remove-name{
         width:100%;
     }
-
     .ticket-attendee-list{
         grid-template-columns:1fr;
     }
-
 }
 /* ==========================================
    Convention Sub Navigation
 ========================================== */
-
 .convention-subnav{
     position:sticky;
-
     top:76px;
-
     z-index:900;
-
-    background:
-        var(--white);
-
-    border-bottom:
-        1px solid
-        var(--border);
-
-    box-shadow:
-        0 3px 10px
-        rgba(0,0,0,.05);
+    background: var(--white);
+    border-bottom: 1px solid var(--border);
+    box-shadow: 0 3px 10px rgba(0,0,0,.05);
 }
-
-
 .convention-subnav-inner{
     width:
         min(
             1200px,
             calc(100% - 40px)
         );
-
-    min-height:
-        54px;
-
-    margin:
-        0 auto;
-
+    min-height: 54px;
+    margin: 0 auto;
     display:flex;
-
     align-items:center;
-
-    justify-content:
-        space-between;
-
-    gap:
-        28px;
+    justify-content: space-between;
+    gap: 28px;
 }
-
-
 .convention-subnav-brand{
     flex-shrink:0;
-
-    color:
-        var(--purple);
-
-    font-size:
-        12px;
-
-    font-weight:
-        900;
-
-    letter-spacing:
-        .14em;
-
-    text-transform:
-        uppercase;
+    color: var(--purple);
+    font-size: 12px;
+    font-weight: 900;
+    letter-spacing: .14em;
+    text-transform: uppercase;
 }
-
-
 .convention-subnav-links{
     display:flex;
-
     align-items:center;
-
-    gap:
-        24px;
+    gap: 24px;
 }
-
-
 .convention-subnav-links a{
     position:relative;
-
-    padding:
-        19px 0;
-
-    color:
-        var(--muted);
-
-    font-size:
-        12px;
-
-    font-weight:
-        800;
-
-    text-transform:
-        uppercase;
-
-    letter-spacing:
-        .06em;
-
-    transition:
-        color .18s ease;
+    padding: 19px 0;
+    color: var(--muted);
+    font-size: 12px;
+    font-weight: 800;
+    text-transform: uppercase;
+    letter-spacing: .06em;
+    transition: color .18s ease;
 }
-
-
 .convention-subnav-links a:hover,
 .convention-subnav-links a.active{
-    color:
-        var(--black);
+    color: var(--black);
 }
-
-
 .convention-subnav-links a.active::after{
     content:"";
-
     position:absolute;
-
     left:0;
     right:0;
-
     bottom:0;
-
     height:3px;
-
-    background:
-        var(--purple);
+    background: var(--purple);
 }
-
-
 /* ==========================================
    Convention Sub Navigation - Mobile
 ========================================== */
-
 @media(max-width:900px){
-
     .convention-subnav{
         position:relative;
-
         top:auto;
     }
-
-
     .convention-subnav-inner{
         width:100%;
-
         min-height:0;
-
         flex-direction:column;
-
         align-items:stretch;
-
         gap:0;
     }
-
-
     .convention-subnav-brand{
-        padding:
-            13px 20px;
-
-        border-bottom:
-            1px solid
-            var(--border);
+        padding: 13px 20px;
+        border-bottom: 1px solid var(--border);
     }
-
-
     .convention-subnav-links{
         width:100%;
-
         overflow-x:auto;
-
         gap:22px;
-
-        padding:
-            0 20px;
-
+        padding: 0 20px;
         scrollbar-width:none;
     }
-
-
     .convention-subnav-links::-webkit-scrollbar{
         display:none;
     }
-
-
     .convention-subnav-links a{
         flex-shrink:0;
-
-        padding:
-            16px 0;
+        padding: 16px 0;
     }
-
 }
