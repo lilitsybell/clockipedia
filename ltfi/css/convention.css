@@ -3139,13 +3139,17 @@ body.gallery-open {
 
     z-index:auto;
 
+    width:
+        min(
+            1200px,
+            calc(100% - 60px)
+        );
+
     margin:
-        24px 30px 0;
+        28px auto 0;
 
     background:
         var(--white);
-
-    border:0;
 
     border-radius:
         16px;
@@ -3154,17 +3158,18 @@ body.gallery-open {
         0 2px 8px
         rgba(0,0,0,.04);
 }
+
+
 .convention-subnav-inner{
     width:100%;
 
     min-height:
         58px;
 
+    margin:0;
+
     padding:
         0 22px;
-
-    margin:
-        0;
 
     display:flex;
 
@@ -3176,11 +3181,17 @@ body.gallery-open {
     gap:
         28px;
 }
+
+
+/* ==========================================
+   Convention Name
+========================================== */
+
 .convention-subnav-brand{
     flex-shrink:0;
 
     color:
-        var(--purple);
+        var(--dark-text);
 
     font-size:
         12px;
@@ -3196,6 +3207,10 @@ body.gallery-open {
 }
 
 
+/* ==========================================
+   Convention Links
+========================================== */
+
 .convention-subnav-links{
     display:flex;
 
@@ -3210,7 +3225,7 @@ body.gallery-open {
     position:relative;
 
     padding:
-        19px 0;
+        20px 0;
 
     color:
         var(--muted);
@@ -3228,14 +3243,14 @@ body.gallery-open {
         .06em;
 
     transition:
-        color .18s ease;
+        color .16s ease;
 }
 
 
 .convention-subnav-links a:hover,
 .convention-subnav-links a.active{
     color:
-        var(--black);
+        var(--dark-text);
 }
 
 
@@ -3249,10 +3264,11 @@ body.gallery-open {
 
     bottom:0;
 
-    height:3px;
+    height:
+        3px;
 
     background:
-        var(--purple);
+        var(--teal);
 }
 
 
@@ -3263,16 +3279,18 @@ body.gallery-open {
 @media(max-width:900px){
 
     .convention-subnav{
-        position:relative;
+        width:
+            calc(100% - 40px);
 
-        top:auto;
+        margin:
+            20px auto 0;
     }
 
 
     .convention-subnav-inner{
-        width:100%;
-
         min-height:0;
+
+        padding:0;
 
         flex-direction:column;
 
@@ -3284,7 +3302,7 @@ body.gallery-open {
 
     .convention-subnav-brand{
         padding:
-            13px 20px;
+            14px 18px;
 
         border-bottom:
             1px solid
@@ -3297,10 +3315,11 @@ body.gallery-open {
 
         overflow-x:auto;
 
-        gap:22px;
+        gap:
+            22px;
 
         padding:
-            0 20px;
+            0 18px;
 
         scrollbar-width:none;
     }
@@ -3313,9 +3332,6 @@ body.gallery-open {
 
     .convention-subnav-links a{
         flex-shrink:0;
-
-        padding:
-            16px 0;
     }
 
 }
