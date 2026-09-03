@@ -13,95 +13,181 @@
         44px 0 80px;
 }
 /* ==========================================
-   Homepage Intro
+   Homepage Dashboard Header
 ========================================== */
-.ltfi-home-intro{
-    padding:
-        82px 0 72px;
-    background:
-        var(--white);
-    border-bottom:
-        1px solid
-        var(--border);
-}
-.ltfi-home-intro-inner{
+
+.home-dashboard-header{
     width:
         min(
             1200px,
-            calc(100% - 40px)
+            calc(100% - 60px)
         );
+
     margin:
         0 auto;
+
+    padding:
+        42px 0 24px;
 }
-.ltfi-home-intro .ltfi-eyebrow{
+
+.home-dashboard-label{
     margin-bottom:
-        18px;
+        7px;
+
     color:
-        var(--purple);
+        var(--muted);
+
     font-size:
-        12px;
+        11px;
+
     font-weight:
-        900;
+        800;
+
     letter-spacing:
-        .16em;
+        .12em;
+
     text-transform:
         uppercase;
 }
-.ltfi-home-intro h1{
-    max-width:
-        900px;
-    margin:
-        0;
+
+.home-dashboard-header h1{
     color:
-        var(--black);
+        var(--dark-text);
+
     font-size:
-        clamp(
-            52px,
-            8vw,
-            100px
-        );
+        32px;
+
     font-weight:
-        900;
-    line-height:
-        .88;
+        800;
+
     letter-spacing:
-        -.055em;
+        -.03em;
 }
-.ltfi-home-intro-description{
-    max-width:
-        680px;
-    margin-top:
-        30px;
-    color:
-        var(--muted);
-    font-size:
-        19px;
-    line-height:
-        1.6;
-}
+
+
 /* ==========================================
-   Homepage Intro - Mobile
+   Homepage Overview Cards
 ========================================== */
-@media(max-width:700px){
-    .ltfi-home-intro{
-        padding:
-            58px 0 52px;
-    }
-    .ltfi-home-intro h1{
-        font-size:
-            clamp(
-                44px,
-                15vw,
-                72px
+
+.home-overview-grid{
+    width:
+        min(
+            1200px,
+            calc(100% - 60px)
+        );
+
+    margin:
+        0 auto 28px;
+
+    display:grid;
+
+    grid-template-columns:
+        1.6fr 1fr;
+
+    gap:
+        20px;
+}
+
+.home-overview-card{
+    min-height:
+        200px;
+
+    padding:
+        30px;
+
+    border-radius:
+        18px;
+}
+
+.home-overview-main{
+    background:
+        var(--dark-visual);
+
+    color:
+        var(--white);
+}
+
+.home-overview-secondary{
+    background:
+        var(--teal);
+
+    color:
+        var(--white);
+}
+
+.home-overview-label{
+    margin-bottom:
+        22px;
+
+    font-size:
+        11px;
+
+    font-weight:
+        800;
+
+    letter-spacing:
+        .12em;
+
+    text-transform:
+        uppercase;
+
+    opacity:
+        .78;
+}
+
+.home-overview-card h2{
+    max-width:
+        620px;
+
+    margin-bottom:
+        16px;
+
+    font-size:
+        28px;
+
+    font-weight:
+        800;
+
+    line-height:
+        1.15;
+
+    letter-spacing:
+        -.025em;
+}
+
+.home-overview-description{
+    max-width:
+        520px;
+
+    font-size:
+        15px;
+
+    line-height:
+        1.55;
+
+    opacity:
+        .82;
+}
+
+
+/* ==========================================
+   Homepage Overview - Mobile
+========================================== */
+
+@media(max-width:800px){
+
+    .home-dashboard-header,
+    .home-overview-grid{
+        width:
+            min(
+                100% - 40px,
+                1200px
             );
-        line-height:
-            .92;
     }
-    .ltfi-home-intro-description{
-        margin-top:
-            24px;
-        font-size:
-            17px;
+
+    .home-overview-grid{
+        grid-template-columns:
+            1fr;
     }
 }
 /* ==========================================
@@ -360,19 +446,6 @@
 /* ==========================================
    Responsive
 ========================================== */
-@media(max-width:850px){
-    .ltfi-hero-inner{
-        grid-template-columns:
-            1fr;
-    }
-    .ltfi-hero-mark{
-        height:
-            150px;
-    }
-    .ltfi-hero-mark span{
-        transform:
-            none;
-    }
     .ltfi-feature-grid{
         grid-template-columns:
             1fr;
@@ -384,10 +457,6 @@
             calc(100% - 24px);
         padding-top:
             24px;
-    }
-    .ltfi-hero-content{
-        padding:
-            42px 26px;
     }
     .calendar-section-heading{
         align-items:flex-start;
