@@ -140,25 +140,6 @@ a {
     margin:0;
 }
 /* ==========================================
-   Convention Banner
-========================================== */
-.convention-hero {
-    width: 100%;
-    margin: 0;
-    padding: 0;
-    background: #2d2448;
-}
-.banner-wrap {
-    position: relative;
-    width: 100%;
-}
-.convention-banner {
-    display: block;
-    width: 100%;
-    height: auto;
-    margin: 0;
-}
-/* ==========================================
    Banner Countdown
 ========================================== */
 .banner-countdown{
@@ -359,10 +340,6 @@ a {
     }
     .nav-links a.active::after {
         bottom: 0;
-    }
-    .convention-hero {
-        min-height: 560px;
-        padding: 70px 20px;
     }
     .countdown {
         gap: 5px;
