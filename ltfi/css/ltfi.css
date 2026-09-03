@@ -13,83 +13,47 @@
 /* ==========================================
    Homepage Dashboard Header
 ========================================== */
-
 .home-dashboard-header{
     width:
         min(
             1200px,
             calc(100% - 60px)
         );
-
-    margin:
-        0 auto;
-
-    padding:
-        42px 0 24px;
+    margin: 0 auto;
+    padding: 34px 0 20px;
 }
-
 .home-dashboard-label{
-    margin-bottom:
-        7px;
-
-    color:
-        var(--muted);
-
-    font-size:
-        11px;
-
-    font-weight:
-        800;
-
-    letter-spacing:
-        .12em;
-
-    text-transform:
-        uppercase;
+    margin-bottom: 7px;
+    color: var(--muted);
+    font-size: 11px;
+    font-weight: 800;
+    letter-spacing: .12em;
+    text-transform: uppercase;
 }
-
 .home-dashboard-header h1{
-    color:
-        var(--dark-text);
-
-    font-size:
-        32px;
-
-    font-weight:
-        800;
-
-    letter-spacing:
-        -.03em;
+    color: var(--dark-text);
+    font-size: 30px;
+    font-weight: 800;
+    letter-spacing: -.03em;
 }
-
-
 /* ==========================================
    Homepage Stats
 ========================================== */
-
 .home-stats-grid{
     width:
         min(
             1200px,
             calc(100% - 60px)
         );
-
-    margin:
-        0 auto 28px;
-
+    margin: 0 auto 14px;
     display:grid;
-
     grid-template-columns:
         repeat(
             3,
             minmax(0,1fr)
         );
-
-    gap:
-        20px;
+    gap: 20px;
 }
-
-
 /* ==========================================
    Stat Cards
 ========================================== */
@@ -296,18 +260,11 @@
 /* ==========================================
    Feature Grid
 ========================================== */
-
 .ltfi-feature-grid{
     display:grid;
-
-    grid-template-columns:
-        1.2fr 1fr;
-
-    gap:
-        20px;
+    grid-template-columns: 1.2fr 1fr;
+    gap: 20px;
 }
-
-
 /* ==========================================
    Feature Cards
 ========================================== */
@@ -576,24 +533,11 @@
     }
 }
 /* ==========================================
-   Responsive
+   Homepage General Responsive
 ========================================== */
-    .ltfi-feature-grid{
-        grid-template-columns: 1fr;
-    }
-}
 @media(max-width:700px){
     .ltfi-page{
-        width: calc(100% - 24px);
-        padding-top: 24px;
-    }
-    .calendar-section-heading{
-        align-items:flex-start;
-        flex-direction:column;
-        gap: 10px;
-    }
-    .home-calendar-day{
-        min-height: 78px;
-        padding: 7px;
+        width: calc(100% - 40px);
+        padding: 0 0 60px;
     }
 }
