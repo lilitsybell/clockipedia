@@ -140,7 +140,7 @@ a {
     right:auto;
     width:100%;
     padding: 18px 24px;
-    background: var(--black);
+    background: black;
     color: var(--white);
     text-align:center;
 }
