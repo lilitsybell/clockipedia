@@ -2459,7 +2459,76 @@ body.gallery-open {
     border:0;
     cursor:pointer;
 }
+/* ==========================================
+   Ticket Venmo
+========================================== */
 
+.tickets-page .booking-payment-qr{
+    align-items:flex-start;
+
+    gap:
+        14px;
+
+    margin:
+        20px 0;
+}
+
+
+.tickets-page .booking-venmo-qr{
+    width:
+        190px;
+
+    padding:
+        10px;
+
+    background:
+        var(--white);
+
+    border:
+        1px solid var(--border);
+
+    border-radius:
+        12px;
+}
+
+
+.tickets-page .booking-venmo-link{
+    min-width:0;
+
+    padding:
+        11px 16px;
+
+    background:
+        var(--dark-visual);
+
+    color:
+        var(--white);
+
+    border-radius:
+        9px;
+
+    font-size:
+        12px;
+
+    font-weight:
+        800;
+
+    letter-spacing:
+        .04em;
+
+    transition:
+        opacity .16s ease,
+        transform .16s ease;
+}
+
+
+.tickets-page .booking-venmo-link:hover{
+    opacity:
+        .9;
+
+    transform:
+        translateY(-1px);
+}
 
 /* ==========================================
    Mobile
