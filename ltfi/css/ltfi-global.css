@@ -1,514 +1,323 @@
 /* ==========================================
    LTFI Global
 ========================================== */
-
 :root{
-
     /* Main Colors */
-
     --dark-text:#2A2141;
     --dark-visual:#3C3157;
-
     --gold:#B1910E;
     --red:#EA2B1F;
     --teal:#48A9A6;
-
-
     /* Neutrals */
-
     --white:#ffffff;
-
     --background:#f1f1f2;
     --panel:#ffffff;
-
     --border:#e2e1e5;
-
     --muted:#77737f;
-
-
     /* Layout */
-
     --sidebar-width:250px;
-
-
     /* ======================================
        Old Variable Aliases
        Keeps existing pages working while
        we redesign them.
     ====================================== */
-
     --black:var(--dark-text);
-
     --purple:var(--dark-visual);
     --purple-dark:var(--dark-text);
     --purple-light:#eeecf2;
-
 }
-
-
 /* ==========================================
    Basic Reset
 ========================================== */
-
 *{
     box-sizing:border-box;
-
     margin:0;
     padding:0;
 }
-
-
 html{
     scroll-behavior:smooth;
 }
-
-
 body{
     min-height:100vh;
-
     padding-left:
         var(--sidebar-width);
-
     background:
         var(--background);
-
     color:
         var(--dark-text);
-
     font-family:
         Arial,
         Helvetica,
         sans-serif;
 }
-
-
 a{
     color:inherit;
-
     text-decoration:none;
 }
-
-
 button,
 input,
 select,
 textarea{
     font:inherit;
 }
-
-
 /* ==========================================
    LTFI Sidebar
 ========================================== */
-
 .ltfi-header{
     position:fixed;
-
     top:0;
     left:0;
     bottom:0;
-
     z-index:1000;
-
     width:
         var(--sidebar-width);
-
     background:
         var(--dark-visual);
-
     color:
         var(--white);
 }
-
-
 /* ==========================================
    Sidebar Inner
 ========================================== */
-
 .ltfi-nav{
     width:100%;
     height:100%;
-
     padding:
         42px 26px;
-
     display:flex;
-
     flex-direction:column;
-
     align-items:stretch;
-
     justify-content:flex-start;
-
     gap:54px;
 }
-
-
 /* ==========================================
    Logo
 ========================================== */
-
 .ltfi-logo{
     display:block;
-
     padding:
         0 12px;
-
     color:
         var(--white);
-
     font-size:
         22px;
-
     font-weight:
         900;
-
     line-height:
         1.15;
-
     letter-spacing:
         -.02em;
-
     white-space:normal;
 }
-
-
 /* ==========================================
    Navigation Links
 ========================================== */
-
 .ltfi-nav-links{
     display:flex;
-
     flex-direction:column;
-
     align-items:stretch;
-
     gap:8px;
 }
-
-
 .ltfi-nav-links a{
     position:relative;
-
     width:100%;
-
-    padding:
-        15px 18px;
-
-    border-radius:
-        10px;
-
-    color:
-        rgba(255,255,255,.72);
-
-    font-size:
-        15px;
-
-    font-weight:
-        600;
-
-    letter-spacing:
-        0;
-
+    padding: 15px 18px;
+    border-radius: 10px;
+    color: rgba(255,255,255,.72);
+    font-size: 15px;
+    font-weight: 600;
+    letter-spacing: 0;
     text-transform:none;
-
     transition:
         background .16s ease,
         color .16s ease;
 }
-
-
 .ltfi-nav-links a:hover{
     background:
         rgba(255,255,255,.08);
-
     color:
         var(--white);
 }
-
-
 .ltfi-nav-links a.active{
     background:
         rgba(255,255,255,.12);
-
     color:
         var(--white);
 }
-
-
 /* Remove old underline */
-
 .ltfi-nav-links a.active::after{
     display:none;
 }
-
-
-/* ==========================================
+/* =========================================
    Active Indicator
 ========================================== */
-
 .ltfi-nav-links a.active::before{
     content:"";
-
     position:absolute;
-
     top:50%;
     left:0;
-
     width:4px;
     height:22px;
-
     background:
         var(--teal);
-
     border-radius:
         0 4px 4px 0;
-
     transform:
         translateY(-50%);
 }
-
-
 /* ==========================================
    Footer
 ========================================== */
-
 .ltfi-footer{
     min-height:
         76px;
-
     margin-left:
         0;
-
     padding:
         0 34px;
-
     display:flex;
-
     align-items:center;
-
     justify-content:
         space-between;
-
     gap:
         20px;
-
     border-top:
         1px solid
         var(--border);
-
     background:
         var(--white);
-
     color:
         var(--muted);
-
     font-size:
         11px;
-
     font-weight:
         700;
-
     letter-spacing:
         .08em;
-
     text-transform:
         uppercase;
 }
-
-
 /* ==========================================
    General Dashboard Elements
 ========================================== */
-
 .ltfi-panel{
     background:
         var(--panel);
-
     border-radius:
         18px;
 }
-
-
 .ltfi-page-title{
     color:
         var(--dark-text);
-
     font-size:
         30px;
-
     font-weight:
         800;
-
     letter-spacing:
         -.025em;
 }
-
-
 /* ==========================================
    Accent Utilities
 ========================================== */
-
 .ltfi-accent-dark{
     background:
         var(--dark-visual);
-
     color:
         var(--white);
 }
-
-
 .ltfi-accent-gold{
     background:
         var(--gold);
-
     color:
         var(--white);
 }
-
-
 .ltfi-accent-red{
     background:
         var(--red);
-
     color:
         var(--white);
 }
-
-
 .ltfi-accent-teal{
     background:
         var(--teal);
-
     color:
         var(--white);
 }
-
-
 /* ==========================================
    Mobile
 ========================================== */
-
 @media(max-width:800px){
-
     :root{
         --sidebar-width:0px;
     }
-
-
     body{
         padding-left:0;
         padding-top:0;
     }
-
-
     .ltfi-header{
         position:relative;
-
         width:100%;
         height:auto;
     }
-
-
     .ltfi-nav{
         height:auto;
-
         padding:
             18px 20px;
-
         flex-direction:row;
-
         align-items:center;
-
         justify-content:
             space-between;
-
         gap:
             20px;
     }
-
-
     .ltfi-logo{
         padding:0;
-
         font-size:
             17px;
-
         white-space:
             nowrap;
     }
-
-
     .ltfi-nav-links{
         flex-direction:row;
-
         gap:
             4px;
-
         overflow-x:auto;
-
         scrollbar-width:none;
     }
-
-
     .ltfi-nav-links::-webkit-scrollbar{
         display:none;
     }
-
-
     .ltfi-nav-links a{
         flex-shrink:0;
-
         width:auto;
-
         padding:
             9px 11px;
-
         font-size:
             12px;
     }
-
-
     .ltfi-nav-links a.active::before{
         display:none;
     }
-
-
     .ltfi-footer{
         padding:
             22px 20px;
     }
-
 }
-
-
 @media(max-width:560px){
-
     .ltfi-nav{
         flex-direction:column;
-
         align-items:flex-start;
-
         gap:
             15px;
     }
-
-
     .ltfi-nav-links{
         width:100%;
     }
-
-
     .ltfi-footer{
         flex-direction:column;
-
         align-items:flex-start;
-
         justify-content:center;
-
         gap:
             6px;
     }
-
 }
