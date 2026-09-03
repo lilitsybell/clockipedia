@@ -554,3 +554,17 @@
     margin-top: 18px;
     margin-bottom: 50px;
 }
+@media(max-width:700px){
+    .convention-hero{
+        width: calc(100% - 40px);
+        margin-top: 16px;
+    }
+    .convention-about{
+        width: calc(100% - 40px);
+        margin-top: 14px;
+    }
+    .convention-gallery{
+        width: calc(100% - 40px);
+        margin: 14px auto 36px;
+    }
+}
