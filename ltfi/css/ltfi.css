@@ -470,284 +470,150 @@
 /* ==========================================
    Homepage Calendar
 ========================================== */
-
 .ltfi-calendar-section{
-    padding-top:
-        28px;
+    padding-top: 28px;
 }
-
-
 .calendar-section-heading{
     display:flex;
-
     align-items:flex-end;
-
-    justify-content:
-        space-between;
-
-    gap:
-        24px;
-
-    margin-bottom:
-        18px;
+    justify-content: space-between;
+    gap: 24px;
+    margin-bottom: 18px;
 }
-
-
 .ltfi-section-link{
-    margin-bottom:
-        4px;
-
-    color:
-        var(--dark-text);
-
-    font-size:
-        13px;
-
-    font-weight:
-        700;
+    margin-bottom: 4px;
+    color: var(--dark-text);
+    font-size: 13px;
+    font-weight: 700;
 }
-
-
 .ltfi-section-link:hover{
-    text-decoration:
-        underline;
+    text-decoration: underline;
 }
-
-
 /* ==========================================
    Calendar Panel
 ========================================== */
-
 .home-calendar{
     overflow:hidden;
-
-    background:
-        var(--white);
-
-    border-radius:
-        18px;
-
+    background: var(--white);
+    border-radius: 18px;
     box-shadow:
         0 2px 8px
         rgba(0,0,0,.04);
 }
-
-
 /* ==========================================
    Weekdays
 ========================================== */
-
 .home-calendar-weekdays{
     display:grid;
-
     grid-template-columns:
         repeat(
             7,
             minmax(0, 1fr)
         );
-
-    padding:
-        0 18px;
-
-    background:
-        var(--white);
-
-    border-bottom:
-        1px solid
-        var(--border);
-
-    color:
-        var(--muted);
+    padding: 0 18px;
+    background: var(--white);
+    border-bottom: 1px solid var(--border);
+    color: var(--muted);
 }
-
-
 .home-calendar-weekdays div{
-    padding:
-        18px 10px 14px;
-
+    padding: 18px 10px 14px;
     text-align:center;
-
-    font-size:
-        11px;
-
-    font-weight:
-        800;
-
-    text-transform:
-        uppercase;
-
-    letter-spacing:
-        .07em;
+    font-size: 11px;
+    font-weight: 800;
+    text-transform: uppercase;
+    letter-spacing: .07em;
 }
-
-
 /* ==========================================
    Calendar Grid
 ========================================== */
-
 .home-calendar-grid{
     display:grid;
-
     grid-template-columns:
         repeat(
             7,
             minmax(0, 1fr)
         );
-
-    padding:
-        0 18px 18px;
+    padding: 0 18px 18px;
 }
-
-
 .home-calendar-day{
     position:relative;
-
-    min-height:
-        112px;
-
-    padding:
-        12px;
-
-    background:
-        var(--white);
-
-    border-right:
-        1px solid
-        var(--border);
-
-    border-bottom:
-        1px solid
-        var(--border);
+    min-height: 112px;
+    padding: 12px;
+    background: var(--white);
+    border-right: 1px solid var(--border);
+    border-bottom: 1px solid var(--border);
 }
-
-
 .home-calendar-day:nth-child(7n){
     border-right:0;
 }
-
-
 .home-calendar-day.empty{
-    background:
-        #f7f7f8;
+    background: #f7f7f8;
 }
-
-
 /* ==========================================
    Calendar Date
 ========================================== */
-
 .home-calendar-date{
     display:flex;
-
     align-items:center;
-
     justify-content:center;
-
-    width:
-        30px;
-
-    height:
-        30px;
-
-    color:
-        var(--dark-text);
-
-    font-size:
-        13px;
-
-    font-weight:
-        700;
+    width: 30px;
+    height: 30px;
+    color: var(--dark-text);
+    font-size: 13px;
+    font-weight: 700;
 }
-
-
 /* ==========================================
    Today
 ========================================== */
-
 .home-calendar-day.today
 .home-calendar-date{
-    background:
-        var(--teal);
-
-    color:
-        var(--white);
-
-    border-radius:
-        8px;
+    background: var(--teal);
+    color: var(--white);
+    border-radius: 8px;
 }
-
-
 /* ==========================================
    Calendar Mobile
 ========================================== */
-
 @media(max-width:700px){
-
     .calendar-section-heading{
         align-items:flex-start;
-
         flex-direction:column;
-
-        gap:
-            8px;
+        gap: 8px;
     }
-
-
     .home-calendar-weekdays{
-        padding:
-            0 8px;
+        padding: 0 8px;
     }
-
-
     .home-calendar-grid{
-        padding:
-            0 8px 8px;
+        padding: 0 8px 8px;
     }
-
-
     .home-calendar-day{
-        min-height:
-            76px;
-
-        padding:
-            6px;
+        min-height: 76px;
+        padding: 6px;
     }
-
-
     .home-calendar-weekdays div{
-        padding:
-            14px 4px 10px;
-
-        font-size:
-            10px;
+        padding: 14px 4px 10px;
+        font-size: 10px;
     }
-
 }
 /* ==========================================
    Responsive
 ========================================== */
     .ltfi-feature-grid{
-        grid-template-columns:
-            1fr;
+        grid-template-columns: 1fr;
     }
 }
 @media(max-width:700px){
     .ltfi-page{
-        width:
-            calc(100% - 24px);
-        padding-top:
-            24px;
+        width: calc(100% - 24px);
+        padding-top: 24px;
     }
     .calendar-section-heading{
         align-items:flex-start;
         flex-direction:column;
-        gap:
-            10px;
+        gap: 10px;
     }
     .home-calendar-day{
-        min-height:
-            78px;
-        padding:
-            7px;
+        min-height: 78px;
+        padding: 7px;
     }
 }
