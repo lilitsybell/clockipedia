@@ -1922,7 +1922,47 @@ body.gallery-open {
 
     color:var(--black, #0D1821);
 }
-
+/* ==========================================
+   Ticket Includes
+========================================== */
+.ticket-info-section{
+    margin-top: 26px;
+}
+.ticket-info-section h3{
+    margin: 0 0 16px;
+    color: var(--dark-text);
+    font-size: 17px;
+    font-weight: 800;
+    letter-spacing: -.02em;
+}
+.ticket-info-section .room-amenities-grid{
+    display:flex;
+    flex-direction:column;
+    gap: 8px;
+}
+.ticket-info-section .room-amenity{
+    position:relative;
+    padding: 12px 14px 12px 34px;
+    background: var(--background);
+    border:0;
+    border-radius: 9px;
+    color: var(--dark-text);
+    font-size: 13px;
+}
+/* Checkmark */
+.ticket-info-section .room-amenity::before{
+    content:"✓";
+    position:absolute;
+    left: 13px;
+    top: 50%;
+    color: var(--teal);
+    font-size: 13px;
+    font-weight: 900;
+    transform: translateY(-50%);
+}
+.ticket-info-section .room-amenity strong{
+    font-weight: 700;
+}
 
 /* ==========================================
    Room Photos
