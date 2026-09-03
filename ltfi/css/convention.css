@@ -2516,32 +2516,27 @@ body.gallery-open {
     border:1px solid #d8d8d8;
     border-left:5px solid var(--purple, #666699);
 }
-
 .shared-space-info-block + .shared-space-info-block{
     margin-top:24px;
     padding-top:20px;
     border-top:1px solid #ddd;
 }
-
 .shared-space-description h3{
     margin:0 0 10px;
     color:var(--black, #0D1821);
     font-size:21px;
 }
-
 .shared-space-description p{
     margin:0;
     color:#555;
     font-size:16px;
     line-height:1.6;
 }
-
 .shared-space-tags{
     display:flex;
     flex-wrap:wrap;
     gap:8px;
 }
-
 .shared-space-tags span{
     padding:8px 12px;
     background:white;
@@ -2553,33 +2548,28 @@ body.gallery-open {
 /* ==========================================
    Rooms Directory
 ========================================== */
-
 .rooms-directory-page{
     width:min(1180px, calc(100% - 40px));
     margin:0 auto;
     padding:45px 0 90px;
 }
-
 .rooms-directory-header{
-    margin-bottom:28px;
+    margin-bottom: 24px;
 }
-
 .rooms-directory-header h1{
-    margin:0;
-    font-size:clamp(36px, 5vw, 54px);
-    line-height:1.05;
-    color:var(--black, #0D1821);
+    margin: 0 0 6px;
+    color: var(--dark-text);
+    font-size: 38px;
+    font-weight: 800;
+    line-height:1;
+    letter-spacing: -.035em;
 }
-
 .rooms-directory-header p{
-    margin:14px 0 0;
-    max-width:760px;
-    font-size:18px;
-    line-height:1.55;
-    color:#666;
+    margin:0;
+    color: var(--muted);
+    font-size: 15px;
+    line-height: 1.5;
 }
-
-
 /* ==========================================
    Tabs
 ========================================== */
@@ -2836,13 +2826,15 @@ body.gallery-open {
 /* ==========================================
    Tickets Page
 ========================================== */
-
 .tickets-page{
-    width:min(1180px, calc(100% - 40px));
-    margin:0 auto;
-    padding:45px 0 90px;
+    width:
+        min(
+            1200px,
+            calc(100% - 60px)
+        );
+    margin: 0 auto;
+    padding: 34px 0 60px;
 }
-
 .tickets-header{
     margin-bottom:32px;
 }
