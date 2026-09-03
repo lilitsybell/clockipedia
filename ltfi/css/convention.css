@@ -115,32 +115,73 @@ a {
 /* ==========================================
    Convention Banner
 ========================================== */
-.convention-hero {
-    width: 100%;
-    margin: 0;
-    padding: 0;
-    background: #2d2448;
+
+.convention-hero{
+    width:
+        min(
+            1200px,
+            calc(100% - 60px)
+        );
+
+    margin:
+        20px auto 0;
+
+    padding:0;
+
+    background:
+        var(--dark-visual);
+
+    border-radius:
+        20px;
+
+    overflow:hidden;
 }
-.banner-wrap {
-    position: relative;
-    width: 100%;
+
+
+.banner-wrap{
+    position:relative;
+
+    width:100%;
+
+    overflow:hidden;
 }
-.convention-banner {
-    display: block;
-    width: 100%;
-    height: auto;
-    margin: 0;
+
+
+.convention-banner{
+    display:block;
+
+    width:100%;
+    height:auto;
+
+    margin:0;
 }
 /* ==========================================
    Banner Countdown
 ========================================== */
-.banner-countdown {
-    position: absolute;
-    top: 6%;
-    right: 3%;
-    width: 15%;
-    color: white;
-    text-align: center;
+.banner-countdown{
+    position:absolute;
+
+    top:24px;
+    right:24px;
+
+    width:auto;
+
+    padding:
+        18px 20px;
+
+    background:
+        rgba(42,33,65,.82);
+
+    border-radius:
+        16px;
+
+    color:
+        var(--white);
+
+    text-align:center;
+
+    backdrop-filter:
+        blur(8px);
 }
 .countdown {
     display: flex;
