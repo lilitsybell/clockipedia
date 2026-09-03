@@ -272,44 +272,40 @@ a {
 /* ==========================================
    Gallery
 ========================================== */
-.convention-gallery {
-    padding: 110px 0;
+.convention-gallery{
+    width:
+        min(
+            1200px,
+            calc(100% - 60px)
+        );
+    margin: 20px auto 60px;
+    padding:0;
 }
-.gallery-heading {
-    margin-bottom: 40px;
+.convention-gallery .section-inner{
+    width:100%;
+    padding: 34px 36px;
+    background: var(--white);
+    border-radius: 18px;
 }
-.gallery-heading h2 {
-    margin: 0 0 10px;
-    font-size: clamp(36px, 5vw, 56px);
-    line-height: 1;
+.gallery-heading{
+    margin-bottom: 28px;
+}
+.gallery-heading h2{
+    margin: 0 0 8px;
+    color: var(--dark-text);
+    font-size:
+        clamp(
+            30px,
+            4vw,
+            44px
+        );
+    line-height:1;
     letter-spacing: -.04em;
 }
-.gallery-heading p {
-    margin: 0;
+.gallery-heading p{
+    margin:0;
     color: var(--muted);
-    font-size: 17px;
-}
-.gallery-grid {
-    columns: 4 250px;
-    column-gap: 15px;
-}
-.gallery-item {
-    break-inside: avoid;
-    margin-bottom: 15px;
-    overflow: hidden;
-    border-radius: 12px;
-    background: var(--light);
-    cursor: pointer;
-}
-.gallery-item img {
-    display: block;
-    width: 100%;
-    height: auto;
-    transition:
-        transform .4s ease;
-}
-.gallery-item:hover img {
-    transform: scale(1.04);
+    font-size: 15px;
 }
 /* ==========================================
    Footer
