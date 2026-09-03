@@ -368,10 +368,17 @@ a {
         font-size: 11px;
         letter-spacing: .1em;
     }
-    .convention-about,
-    .convention-gallery {
-        padding: 75px 0;
-    }
+.convention-gallery{
+    padding: 75px 0;
+}
+.convention-about{
+    width: calc(100% - 40px);
+    margin: 16px auto 0;
+    padding:0;
+}
+.about-text{
+    padding: 26px 24px;
+}
     .gallery-grid {
         columns: 2 150px;
         column-gap: 10px;
