@@ -286,112 +286,250 @@
 /* ==========================================
    Explore
 ========================================== */
+
 .ltfi-explore-section{
     padding-top:
         38px;
 }
+
+
+/* ==========================================
+   Feature Grid
+========================================== */
+
+.ltfi-feature-grid{
+    display:grid;
+
+    grid-template-columns:
+        1.2fr 1fr;
+
+    gap:
+        20px;
+}
+
+
 /* ==========================================
    Feature Cards
 ========================================== */
-.ltfi-feature-grid{
-    display:grid;
-    grid-template-columns:
-        repeat(
-            2,
-            minmax(0,1fr)
-        );
-    gap: 20px;
-}
+
 .ltfi-feature-card{
     position:relative;
-    min-height: 220px;
+
+    min-height:
+        250px;
+
     overflow:hidden;
-    display:flex;
-    background: var(--white);
-    border-radius: 18px;
-    box-shadow:
-        0 2px 8px
-        rgba(0,0,0,.04);
+
+    padding:
+        30px;
+
+    border-radius:
+        18px;
+
+    color:
+        var(--white);
+
     transition:
         transform .16s ease,
         box-shadow .16s ease;
 }
+
+
 .ltfi-feature-card:hover{
-    transform: translateY(-3px);
-    box-shadow: 0 8px 20px rgba(0,0,0,.07);
+    transform:
+        translateY(-3px);
+
+    box-shadow:
+        0 8px 20px
+        rgba(0,0,0,.08);
 }
-/* ==========================================
-   Accent Strip
-========================================== */
+
+
+/* Scripts */
+
+.scripts-card{
+    background:
+        var(--dark-visual);
+}
+
+
+/* Convention */
+
+.convention-card{
+    background:
+        var(--red);
+}
+
+
+/* Hide old accent strip */
+
 .ltfi-feature-accent{
-    width: 12px;
-    flex-shrink:0;
+    display:none;
 }
-.scripts-card
-.ltfi-feature-accent{
-    background: var(--gold);
-}
-.convention-card
-.ltfi-feature-accent{
-    background: var(--red);
-}
+
+
 /* ==========================================
    Feature Content
 ========================================== */
+
 .ltfi-feature-content{
+    position:relative;
+
+    z-index:2;
+
     width:100%;
-    padding: 28px 30px;
+    height:100%;
+
     display:flex;
+
     flex-direction:column;
+
     align-items:flex-start;
 }
+
+
 .ltfi-feature-label{
-    margin-bottom: 18px;
-    color: var(--muted);
-    font-size: 10px;
-    font-weight: 800;
-    letter-spacing: .13em;
-    text-transform: uppercase;
+    margin-bottom:
+        34px;
+
+    color:
+        rgba(255,255,255,.72);
+
+    font-size:
+        10px;
+
+    font-weight:
+        800;
+
+    letter-spacing:
+        .13em;
+
+    text-transform:
+        uppercase;
 }
+
+
 .ltfi-feature-content h3{
-    margin-bottom: 10px;
-    color: var(--dark-text);
-    font-size: 24px;
-    font-weight: 800;
-    letter-spacing: -.02em;
+    max-width:
+        420px;
+
+    margin-bottom:
+        14px;
+
+    color:
+        var(--white);
+
+    font-size:
+        32px;
+
+    font-weight:
+        800;
+
+    line-height:
+        1;
+
+    letter-spacing:
+        -.03em;
 }
+
+
 .ltfi-feature-content p{
-    max-width: 440px;
-    margin-bottom: 26px;
-    color: var(--muted);
-    font-size: 14px;
-    line-height: 1.55;
+    max-width:
+        420px;
+
+    margin-bottom:
+        30px;
+
+    color:
+        rgba(255,255,255,.78);
+
+    font-size:
+        14px;
+
+    line-height:
+        1.55;
 }
+
+
 .ltfi-card-link{
     margin-top:auto;
-    color: var(--dark-text);
-    font-size: 13px;
-    font-weight: 800;
+
+    color:
+        var(--white);
+
+    font-size:
+        13px;
+
+    font-weight:
+        800;
 }
+
+
 /* ==========================================
-   Feature Card Accents
+   Decorative Shapes
 ========================================== */
-.scripts-card
-.ltfi-card-link{
-    color: var(--gold);
+
+.ltfi-feature-card::after{
+    content:"";
+
+    position:absolute;
+
+    width:
+        190px;
+
+    height:
+        190px;
+
+    right:
+        -50px;
+
+    bottom:
+        -70px;
+
+    border-radius:
+        50%;
+
+    background:
+        rgba(255,255,255,.08);
 }
-.convention-card
-.ltfi-card-link{
-    color: var(--red);
+
+
+.ltfi-feature-card::before{
+    content:"";
+
+    position:absolute;
+
+    width:
+        90px;
+
+    height:
+        90px;
+
+    right:
+        55px;
+
+    bottom:
+        -35px;
+
+    border-radius:
+        50%;
+
+    background:
+        rgba(255,255,255,.08);
 }
+
+
 /* ==========================================
-   Feature Cards - Mobile
+   Mobile
 ========================================== */
+
 @media(max-width:850px){
+
     .ltfi-feature-grid{
         grid-template-columns:
             1fr;
     }
+
 }
 /* ==========================================
    Homepage Calendar
