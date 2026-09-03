@@ -2993,44 +2993,53 @@ body.gallery-open {
 /* ==========================================
    Ticket Total
 ========================================== */
-
 .ticket-total-box{
-    margin-top:26px;
-    border:1px solid #ddd;
-    background:#fafafa;
+    margin-top: 28px;
+    overflow:hidden;
+    background: var(--background);
+    border-radius: 12px;
 }
-
 .ticket-total-row{
     display:flex;
-    justify-content:space-between;
-    gap:20px;
-    padding:14px 16px;
-    border-bottom:1px solid #ddd;
+    align-items:center;
+    justify-content: space-between;
+    gap: 20px;
+    padding: 13px 16px;
 }
-
-.ticket-total-row:last-child{
-    border-bottom:0;
+.ticket-total-row + .ticket-total-row{
+    border-top: 1px solid var(--border);
 }
-
 .ticket-total-row span{
-    color:#666;
+    color: var(--muted);
+    font-size: 13px;
+    font-weight: 600;
 }
-
 .ticket-total-row strong{
-    color:var(--black, #0D1821);
+    color: var(--dark-text);
+    font-size: 14px;
+    font-weight: 800;
 }
-
+/* ==========================================
+   Final Total
+========================================== */
 .ticket-total-final{
-    background:#f4f4f7;
-    font-size:20px;
+    padding: 17px 16px;
+    background: var(--dark-visual);
+    color: var(--white);
+    font-size: 16px;
 }
-
+.ticket-total-final span{
+    color: rgba(255,255,255,.75);
+    font-weight: 800;
+    text-transform: uppercase;
+    letter-spacing: .06em;
+}
 .ticket-total-final strong{
-    color:var(--purple, #666699);
-    font-size:26px;
+    color: var(--white);
+    font-size: 26px;
+    font-weight: 900;
+    letter-spacing: -.03em;
 }
-
-
 /* ==========================================
    Payment
 ========================================== */
