@@ -2921,52 +2921,56 @@ body.gallery-open {
     padding: 30px;
 }
 /* ==========================================
-   Name Rows
+   Ticket Name Rows
 ========================================== */
-
 .ticket-name-list{
     display:flex;
     flex-direction:column;
-    gap:10px;
+    gap: 10px;
 }
-
 .ticket-name-row{
     display:flex;
-    gap:10px;
     align-items:center;
+    gap: 10px;
 }
-
 .ticket-name-input{
     flex:1;
     min-width:0;
-    padding:13px 14px;
-    border:1px solid #ccc;
-    background:white;
-    color:var(--black, #0D1821);
+    padding: 14px 16px;
+    border: 1px solid var(--border);
+    border-radius: 10px;
+    background: var(--background);
+    color: var(--dark-text);
     font:inherit;
-    font-size:16px;
+    font-size: 15px;
+    transition:
+        border-color .16s ease,
+        background .16s ease;
 }
-
+.ticket-name-input::placeholder{
+    color: #99959f;
+}
 .ticket-name-input:focus{
-    outline:2px solid var(--purple, #666699);
-    outline-offset:1px;
+    outline:0;
+    border-color: var(--teal);
+    background: var(--white);
 }
-
+/* Remove Person */
 .ticket-remove-name{
-    padding:12px 14px;
-    border:1px solid #ccc;
-    background:#f4f4f4;
-    color:#666;
+    padding: 13px 15px;
+    border:0;
+    border-radius: 9px;
+    background: #f3eeee;
+    color: var(--red);
     font:inherit;
-    font-size:13px;
-    font-weight:700;
+    font-size: 12px;
+    font-weight: 800;
     cursor:pointer;
+    transition: background .16s ease;
 }
-
 .ticket-remove-name:hover{
-    background:#e8e8e8;
+    background: #eadede;
 }
-
 .ticket-add-name{
     margin-top:12px;
     padding:10px 0;
