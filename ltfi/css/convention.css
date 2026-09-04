@@ -2817,87 +2817,169 @@ body.gallery-open {
 
 .room-list-status{
     position:absolute;
-    top:12px;
-    right:12px;
-    padding:7px 10px;
-    background:rgba(255,255,255,.94);
-    border:1px solid rgba(0,0,0,.12);
-    color:var(--black, #0D1821);
-    font-size:12px;
-    font-weight:800;
-    text-transform:uppercase;
-    letter-spacing:.04em;
+
+    top:
+        12px;
+
+    right:
+        12px;
+
+    padding:
+        7px 10px;
+
+    background:
+        var(--teal);
+
+    color:
+        var(--white);
+
+    border:0;
+
+    border-radius:
+        8px;
+
+    font-size:
+        10px;
+
+    font-weight:
+        900;
+
+    letter-spacing:
+        .07em;
+
+    text-transform:
+        uppercase;
+
+    box-shadow:
+        0 3px 10px
+        rgba(0,0,0,.12);
 }
+
 
 .room-list-card.fully-booked .room-list-status{
-    background:#959799;
-    border-color:#959799;
-    color:white;
+    background:
+        var(--dark-visual);
+
+    color:
+        var(--white);
 }
-
-
 /* ==========================================
    Card Content
 ========================================== */
 
 .room-list-content{
     display:flex;
+
     flex-direction:column;
+
     flex:1;
-    padding:20px;
+
+    padding:
+        22px;
 }
 
+
 .room-list-content h3{
-    margin:0 0 8px;
-    color:var(--black, #0D1821);
-    font-size:22px;
-    line-height:1.15;
+    margin:
+        0 0 10px;
+
+    color:
+        var(--dark-text);
+
+    font-size:
+        22px;
+
+    font-weight:
+        800;
+
+    line-height:
+        1.1;
+
+    letter-spacing:
+        -.025em;
 }
+
 
 .room-list-content h3 span{
     display:block;
-    margin-top:3px;
-    color:var(--purple, #666699);
-    font-size:17px;
+
+    margin-top:
+        5px;
+
+    color:
+        var(--teal);
+
+    font-size:
+        13px;
+
+    font-weight:
+        800;
+
+    letter-spacing:
+        .04em;
+
+    text-transform:
+        uppercase;
 }
+
 
 .room-list-content > p{
-    margin:0 0 18px;
-    color:#666;
-    line-height:1.45;
+    margin:
+        0 0 20px;
+
+    color:
+        var(--muted);
+
+    font-size:
+        14px;
+
+    line-height:
+        1.5;
 }
-
-
 /* ==========================================
    Feature Tags
 ========================================== */
 
 .room-list-features{
     display:flex;
+
     flex-wrap:wrap;
-    gap:7px;
+
+    gap:
+        7px;
+
     margin-top:auto;
 }
 
+
 .room-list-features span{
-    padding:7px 9px;
-    background:#f4f4f7;
-    border:1px solid #ddd;
-    color:#555;
-    font-size:12px;
-    font-weight:700;
+    padding:
+        7px 10px;
+
+    background:
+        var(--purple-light);
+
+    border:0;
+
+    border-radius:
+        7px;
+
+    color:
+        var(--dark-visual);
+
+    font-size:
+        11px;
+
+    font-weight:
+        800;
 }
-
-
 /* ==========================================
    Fully Booked Cards
 ========================================== */
-
 .room-list-card.fully-booked{
-    opacity:.62;
-    border-top-color:#959799;
+    opacity:
+        .62;
 }
-
 .room-list-card.fully-booked:hover{
     opacity:.8;
 }
