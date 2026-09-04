@@ -3479,42 +3479,24 @@ body.gallery-open {
 
 .ticket-attendee:nth-child(4n + 2)
 .ticket-attendee-icon{
-    background:
-        var(--gold);
+    background: var(--gold);
 }
-
-
 .ticket-attendee:nth-child(4n + 3)
 .ticket-attendee-icon{
-    background:
-        var(--red);
+    background: var(--red);
 }
-
-
 .ticket-attendee:nth-child(4n + 4)
 .ticket-attendee-icon{
-    background:
-        var(--dark-visual);
+    background: var(--dark-visual);
 }
 .ticket-attendee strong{
     min-width:0;
-
     overflow:hidden;
-
-    text-overflow:
-        ellipsis;
-
-    white-space:
-        nowrap;
-
-    color:
-        var(--dark-text);
-
-    font-size:
-        14px;
-
-    font-weight:
-        700;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    color: var(--dark-text);
+    font-size: 14px;
+    font-weight: 700;
 }
 .ticket-attendee-loading,
 .ticket-attendee-empty,
@@ -3526,43 +3508,28 @@ body.gallery-open {
     color:#777;
     text-align:center;
 }
-
 .ticket-attendee-error{
     color:#a41618;
 }
-
-
 /* ==========================================
    Responsive
 ========================================== */
-
 @media(max-width:850px){
-
     .ticket-purchase-grid{
         grid-template-columns:1fr;
     }
-
     .ticket-attendee-list{
         grid-template-columns:repeat(2, minmax(0, 1fr));
     }
-
 }
-
 @media(max-width:600px){
-
     /* ======================================
        Tickets Page
     ====================================== */
-
     .tickets-page{
-        width:
-            calc(100% - 40px);
-
-        padding:
-            26px 0 40px;
+        width: calc(100% - 40px);
+        padding: 26px 0 40px;
     }
-
-
     /* ======================================
        Ticket Cards
     ====================================== */
@@ -3601,58 +3568,30 @@ body.gallery-open {
 /* ==========================================
    Convention Sub Navigation
 ========================================== */
-
 .convention-subnav{
     position:relative;
-
     top:auto;
-
     z-index:auto;
-
     width:
         min(
             1200px,
             calc(100% - 60px)
         );
-
-    margin:
-        28px auto 0;
-
-    background:
-        var(--white);
-
-    border-radius:
-        16px;
-
-    box-shadow:
-        0 2px 8px
-        rgba(0,0,0,.04);
+    margin: 28px auto 0;
+    background: var(--white);
+    border-radius: 16px;
+    box-shadow: 0 2px 8px rgba(0,0,0,.04);
 }
-
-
 .convention-subnav-inner{
     width:100%;
-
-    min-height:
-        58px;
-
+    min-height: 58px;
     margin:0;
-
-    padding:
-        0 22px;
-
+    padding: 0 22px;
     display:flex;
-
     align-items:center;
-
-    justify-content:
-        space-between;
-
-    gap:
-        28px;
+    justify-content: space-between;
+    gap: 28px;
 }
-
-
 /* ==========================================
    Convention Name
 ========================================== */
