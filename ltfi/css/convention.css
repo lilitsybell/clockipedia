@@ -1628,138 +1628,95 @@ body.gallery-open {
     .pricing-header {
         flex-direction: column;
     }
-
-
     .pricing-save-panel {
         width: 100%;
         justify-content: space-between;
     }
-
-
     .pricing-summary-grid,
     .point-settings-grid,
     .room-editor {
         grid-template-columns: 1fr;
     }
-
-
     .room-setting-grid {
         grid-template-columns: 1fr;
     }
-
 }
 /* ==========================================
    Room Booking Pages
 ========================================== */
-
 .room-booking-page{
     width:min(1180px, calc(100% - 40px));
     margin:0 auto;
     padding:45px 0 90px;
 }
-
-
 /* ==========================================
    Header
 ========================================== */
-
 .room-booking-header{
     margin-bottom:35px;
 }
-
 .room-booking-header h1{
     margin:0;
-
     font-size:clamp(36px, 5vw, 54px);
     line-height:1.05;
-
     color:var(--black, #0D1821);
 }
-
 .room-booking-header h1 span{
     color:var(--purple, #666699);
 }
-
 .room-booking-header p{
     margin:14px 0 0;
-
     max-width:700px;
-
     font-size:18px;
     line-height:1.55;
-
     color:#666;
 }
-
-
 /* ==========================================
    Main Overview
 ========================================== */
-
 .room-overview-grid{
     display:grid;
-
     grid-template-columns:
         minmax(280px, .8fr)
         minmax(480px, 1.4fr);
-
     gap:24px;
-
     align-items:start;
 }
-
-
 /* ==========================================
    Panels
 ========================================== */
-
 .room-location-panel,
 .room-beds-panel,
 .room-amenities-section,
 .room-photos-section{
     background:white;
-
     border:1px solid #ddd;
     border-top:5px solid var(--purple, #666699);
-
     padding:24px;
 }
-
 .room-amenities-section,
 .room-photos-section{
     margin-top:24px;
 }
-
-
 /* ==========================================
    Section Headings
 ========================================== */
-
 .room-section-heading{
     margin-bottom:18px;
 }
-
 .room-section-heading h2{
     margin:0 0 5px;
-
     font-size:25px;
-
     color:var(--black, #0D1821);
 }
-
 .room-section-heading p{
     margin:0;
-
     color:#6f6f6f;
-
     line-height:1.45;
 }
-
-
 /* ==========================================
    Floor Plan
 ========================================== */
-
 .room-location-map{
     display:flex;
     justify-content:center;
@@ -1769,134 +1726,90 @@ body.gallery-open {
     padding:14px;
     background:white;
 }
-
 .room-location-map img{
     display:block;
     width:100%;
     height:100%;
     object-fit:contain;
 }
-
 .room-map-placeholder{
     display:flex;
     align-items:center;
     justify-content:center;
-
     width:100%;
     min-height:200px;
-
-    border:2px dashed
-        rgba(255,255,255,.6);
-
+    border: 2px dashed rgba(255,255,255,.6);
     color:white;
-
     font-weight:700;
 }
-
-
 /* ==========================================
    Beds
 ========================================== */
-
 .booking-bed-grid{
     display:grid;
-
     grid-template-columns:
         repeat(2, minmax(0, 1fr));
-
     gap:16px;
 }
-
 .booking-bed-card{
     position:relative;
-
     padding:20px;
-
     background:#fafafa;
-
     border:1px solid #d8d8d8;
     border-left:5px solid var(--purple, #666699);
 }
-
 .booking-bed-room{
     margin-bottom:6px;
-
     color:var(--purple, #666699);
-
     font-size:13px;
     font-weight:700;
-
     text-transform:uppercase;
     letter-spacing:.04em;
 }
-
 .booking-bed-card h3{
     margin:0 0 10px;
-
     color:var(--black, #0D1821);
-
     font-size:21px;
 }
-
 .booking-bed-price{
     margin-bottom:18px;
-
     color:var(--purple, #666699);
-
     font-size:28px;
     font-weight:700;
 }
-
 .booking-bed-occupant{
     display:flex;
     flex-direction:column;
     gap:3px;
-
     padding-top:12px;
-
     border-top:1px solid #ddd;
 }
-
 .booking-bed-occupant span{
     color:#777;
-
     font-size:11px;
     font-weight:700;
-
     text-transform:uppercase;
     letter-spacing:.05em;
 }
-
 .booking-bed-occupant strong{
     color:var(--black, #0D1821);
-
     font-size:17px;
 }
-
-
 /* ==========================================
    Book Button
 ========================================== */
-
 .room-book-button{
     width:100%;
-
     margin-top:18px;
     padding:14px 20px;
-
     border:0;
-
     background:var(--purple, #666699);
-
     color:white;
-
     font:inherit;
     font-size:18px;
     font-weight:700;
-
     cursor:pointer;
 }
-
 .room-book-button:hover{
     opacity:.9;
 }
@@ -1933,21 +1846,15 @@ body.gallery-open {
 /* ==========================================
    Amenities
 ========================================== */
-
 .room-amenities-grid{
     display:flex;
     flex-wrap:wrap;
-
     gap:10px;
 }
-
 .room-amenity{
     padding:10px 14px;
-
     background:#f4f4f7;
-
     border:1px solid #ddd;
-
     color:var(--black, #0D1821);
 }
 /* ==========================================
