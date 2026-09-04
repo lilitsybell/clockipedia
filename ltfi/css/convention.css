@@ -2680,9 +2680,13 @@ body.gallery-open {
    Rooms Directory
 ========================================== */
 .rooms-directory-page{
-    width:min(1180px, calc(100% - 40px));
-    margin:0 auto;
-    padding:45px 0 90px;
+    width:
+        min(
+            1200px,
+            calc(100% - 60px)
+        );
+    margin: 0 auto;
+    padding: 34px 0 60px;
 }
 .rooms-directory-header{
     margin-bottom: 24px;
@@ -2769,53 +2773,45 @@ body.gallery-open {
     grid-template-columns:repeat(3, minmax(0, 1fr));
     gap:22px;
 }
-
-
 /* ==========================================
    Room Cards
 ========================================== */
 
 .room-list-card{
     display:flex;
+
     flex-direction:column;
+
     min-width:0;
+
     overflow:hidden;
-    background:white;
-    border:1px solid #ddd;
-    border-top:5px solid var(--purple, #666699);
+
+    background:
+        var(--white);
+
+    border:0;
+
+    border-radius:
+        18px;
+
     color:inherit;
+
     text-decoration:none;
+
     transition:
         transform .18s ease,
         box-shadow .18s ease;
 }
 
+
 .room-list-card:hover{
-    transform:translateY(-3px);
-    box-shadow:0 8px 20px rgba(0,0,0,.10);
+    transform:
+        translateY(-3px);
+
+    box-shadow:
+        0 10px 24px
+        rgba(0,0,0,.08);
 }
-
-.room-list-image{
-    position:relative;
-    width:100%;
-    aspect-ratio:4 / 3;
-    overflow:hidden;
-    background:#eee;
-}
-
-.room-list-image img{
-    width:100%;
-    height:100%;
-    display:block;
-    object-fit:cover;
-    transition:transform .25s ease;
-}
-
-.room-list-card:hover .room-list-image img{
-    transform:scale(1.03);
-}
-
-
 /* ==========================================
    Availability Badge
 ========================================== */
