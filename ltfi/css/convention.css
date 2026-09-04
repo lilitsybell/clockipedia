@@ -3389,7 +3389,36 @@ body.gallery-open {
         900;
 }
 
+/* ==========================================
+   Attendee Icon Colors
+========================================== */
 
+.ticket-attendee:nth-child(4n + 1)
+.ticket-attendee-icon{
+    background:
+        var(--teal);
+}
+
+
+.ticket-attendee:nth-child(4n + 2)
+.ticket-attendee-icon{
+    background:
+        var(--gold);
+}
+
+
+.ticket-attendee:nth-child(4n + 3)
+.ticket-attendee-icon{
+    background:
+        var(--red);
+}
+
+
+.ticket-attendee:nth-child(4n + 4)
+.ticket-attendee-icon{
+    background:
+        var(--dark-visual);
+}
 .ticket-attendee strong{
     min-width:0;
 
@@ -3444,33 +3473,53 @@ body.gallery-open {
 
 @media(max-width:600px){
 
+    /* ======================================
+       Tickets Page
+    ====================================== */
+
     .tickets-page{
-        width:calc(100% - 24px);
-        padding-top:30px;
+        width:
+            calc(100% - 40px);
+
+        padding:
+            26px 0 40px;
     }
+
+
+    /* ======================================
+       Ticket Cards
+    ====================================== */
 
     .ticket-purchase-panel,
     .ticket-info-panel,
     .ticket-attendees-section{
-        padding:20px;
+        padding: 24px 20px;
+        border-radius: 16px;
     }
-
+    /* ======================================
+       Ticket Names
+    ====================================== */
     .ticket-name-row{
         align-items:stretch;
     }
-
     .ticket-name-row:not(:first-child){
         flex-direction:column;
     }
-
     .ticket-remove-name{
         width:100%;
     }
-
-    .ticket-attendee-list{
-        grid-template-columns:1fr;
+    .ticket-price-display{
+        padding: 24px;
     }
-
+    .ticket-price-display strong{
+        font-size: 50px;
+    }
+    .tickets-page .booking-venmo-qr{
+        width: 175px;
+    }
+    .ticket-attendee-list{
+        grid-template-columns: 1fr;
+    }
 }
 /* ==========================================
    Convention Sub Navigation
