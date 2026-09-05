@@ -2019,17 +2019,13 @@ body.gallery-open {
 .room-floor-map img{
     position:absolute;
     inset:0;
-
     width:100%;
     height:100%;
-
     object-fit:contain;
 }
-
 .room-floor-base{
     z-index:1;
 }
-
 .room-floor-highlight{
     z-index:2;
     pointer-events:none;
@@ -2037,106 +2033,74 @@ body.gallery-open {
 /* ==========================================
    Booking Modal
 ========================================== */
-
 .booking-modal{
     position:fixed;
     inset:0;
     z-index:5000;
-
     display:flex;
     align-items:center;
     justify-content:center;
-
     padding:30px;
-
     opacity:0;
     visibility:hidden;
     pointer-events:none;
-
     transition:
         opacity .2s ease,
         visibility .2s ease;
 }
-
 .booking-modal.open{
     opacity:1;
     visibility:visible;
     pointer-events:auto;
 }
-
 .booking-modal-backdrop{
     position:absolute;
     inset:0;
-
-    background:
-        rgba(13,24,33,.78);
+    background: rgba(13,24,33,.78);
 }
-
 .booking-modal-card{
     position:relative;
     z-index:1;
-
     width:min(650px, 100%);
     max-height:90vh;
-
     overflow-y:auto;
-
     padding:35px;
-
     background:white;
-
     border-radius:16px;
-
-    box-shadow:
-        0 20px 60px
-        rgba(0,0,0,.28);
+    box-shadow: 0 20px 60px rgba(0,0,0,.28);
 }
-
 .booking-modal-close{
     position:absolute;
     top:16px;
     right:18px;
-
     width:38px;
     height:38px;
-
     border:0;
     border-radius:50%;
-
     background:var(--background);
-
     color:var(--text);
-
     font-size:26px;
     line-height:1;
-
     cursor:pointer;
 }
-
 .booking-modal-heading{
     padding-right:40px;
     margin-bottom:30px;
 }
-
 .booking-modal-heading h2{
     margin:0 0 8px;
-
     font-size:34px;
     line-height:1.05;
-
     letter-spacing:-.03em;
 }
-
 .booking-modal-heading p{
     margin:0;
-
     color:var(--muted);
 }
 .booking-bed-option.booked{
     opacity:.45;
     cursor:not-allowed;
 }
-
 .booking-bed-option.booked::after{
     content:"BOOKED";
     margin-left:auto;
@@ -2144,373 +2108,242 @@ body.gallery-open {
     font-weight:700;
     color:#777;
 }
-
 .booking-bed-option.booked input{
     cursor:not-allowed;
 }
-
 .room-book-button.fully-booked,
 .room-book-button:disabled{
     background:#959799;
     cursor:not-allowed;
     opacity:.8;
 }
-
 /* ==========================================
    Booking Sections
 ========================================== */
-
 .booking-form-section{
     padding:24px 0;
-
-    border-top:
-        1px solid var(--light);
+    border-top: 1px solid var(--light);
 }
-
 .booking-form-section h3{
     margin:0 0 15px;
-
     font-size:19px;
 }
-
-
 /* ==========================================
    Bed Options
 ========================================== */
-
 .booking-bed-option{
     display:grid;
-
     grid-template-columns:
         auto
         minmax(0,1fr)
         auto;
-
     align-items:center;
-
     gap:14px;
-
     padding:15px;
-
     margin-top:10px;
-
     border:2px solid var(--light);
     border-radius:9px;
-
     cursor:pointer;
-
     transition:
         border-color .15s ease,
         background .15s ease;
 }
-
 .booking-bed-option:hover{
     border-color:var(--accent);
 }
-
 .booking-bed-option:has(
     input:checked
 ){
     border-color:var(--accent);
     background:#f4f4f8;
 }
-
 .booking-bed-option input{
     width:18px;
     height:18px;
-
     accent-color:var(--accent);
 }
-
 .booking-bed-option-info{
     display:flex;
     flex-direction:column;
 }
-
 .booking-bed-option-info strong{
     font-size:16px;
 }
-
 .booking-bed-option-info small{
     margin-top:2px;
-
     color:var(--muted);
 }
-
 .booking-bed-option-price{
     color:var(--accent);
-
     font-size:19px;
     font-weight:900;
 }
-
-
 /* ==========================================
    Names
 ========================================== */
-
 .booking-name-list{
     display:flex;
     flex-direction:column;
-
     gap:10px;
 }
-
 .booking-name-input{
     width:100%;
-
     padding:13px 14px;
-
     border:2px solid var(--light);
     border-radius:8px;
-
     font:inherit;
-
     outline:none;
 }
-
 .booking-name-input:focus{
     border-color:var(--accent);
 }
-
 .booking-add-name{
     margin-top:10px;
-
     padding:8px 0;
-
     border:0;
     background:transparent;
-
     color:var(--accent);
-
     font:inherit;
     font-weight:800;
-
     cursor:pointer;
 }
-
-
 /* ==========================================
    Payment
 ========================================== */
-
 .booking-payment-summary{
     display:grid;
-
     grid-template-columns:
         repeat(2, minmax(0,1fr));
-
     gap:12px;
-
     margin-bottom:18px;
 }
-
 .booking-payment-summary > div{
     padding:14px;
-
     background:var(--background);
-
     border-radius:8px;
 }
-
 .booking-payment-summary span{
     display:block;
-
     margin-bottom:4px;
-
     color:var(--muted);
-
     font-size:11px;
     font-weight:800;
-
     text-transform:uppercase;
     letter-spacing:.06em;
 }
-
 .booking-payment-summary strong{
     font-size:17px;
 }
-
 .booking-venmo-placeholder{
     display:flex;
     align-items:center;
     justify-content:center;
-
     width:190px;
     aspect-ratio:1;
-
     margin:20px auto;
-
     background:var(--background);
-
     border:2px dashed #bbb;
-
     color:var(--muted);
-
     font-size:13px;
     font-weight:800;
-
     text-align:center;
 }
-
 .booking-payment-note{
     max-width:480px;
-
     margin:0 auto 18px;
-
     color:var(--muted);
-
     font-size:14px;
     text-align:center;
 }
-
 .booking-payment-confirmation{
     display:flex;
-
     align-items:flex-start;
-
     gap:10px;
-
     padding:15px;
-
     background:#f4f4f8;
-
     border-radius:8px;
-
     cursor:pointer;
 }
-
 .booking-payment-confirmation input{
     margin-top:3px;
-
     accent-color:var(--accent);
 }
-
 .booking-confirm-button{
     width:100%;
-
     margin-top:10px;
-
     border:0;
     cursor:pointer;
 }
 /* ==========================================
    Ticket Venmo
 ========================================== */
-
 .tickets-page .booking-payment-qr{
     align-items:center;
     gap: 14px;
     margin: 20px 0;
 }
 .tickets-page .booking-venmo-qr{
-    width:
-        190px;
-
-    padding:
-        10px;
-
-    background:
-        var(--white);
-
-    border:
-        1px solid var(--border);
-
-    border-radius:
-        12px;
+    width: 190px;
+    padding: 10px;
+    background: var(--white);
+    border: 1px solid var(--border);
+    border-radius: 12px;
 }
-
-
 .tickets-page .booking-venmo-link{
     min-width:0;
-
-    padding:
-        11px 16px;
-
-    background:
-        var(--dark-visual);
-
-    color:
-        var(--white);
-
-    border-radius:
-        9px;
-
-    font-size:
-        12px;
-
-    font-weight:
-        800;
-
-    letter-spacing:
-        .04em;
-
+    padding: 11px 16px;
+    background: var(--dark-visual);
+    color: var(--white);
+    border-radius: 9px;
+    font-size: 12px;
+    font-weight: 800;
+    letter-spacing: .04em;
     transition:
         opacity .16s ease,
         transform .16s ease;
 }
-
-
 .tickets-page .booking-venmo-link:hover{
-    opacity:
-        .9;
-
-    transform:
-        translateY(-1px);
+    opacity: .9;
+    transform: translateY(-1px);
 }
-
 /* ==========================================
    Mobile
 ========================================== */
-
 @media(max-width:600px){
-
     .booking-modal{
         padding:15px;
     }
-
     .booking-modal-card{
         padding:25px 20px;
     }
-
     .booking-modal-heading h2{
         font-size:28px;
     }
-
     .booking-payment-summary{
         grid-template-columns:1fr;
     }
-
 }
 /* ==========================================
    Additional Booking Names
 ========================================== */
-
 .booking-name-row{
     display:flex;
     align-items:center;
     gap:10px;
 }
-
 .booking-name-row .booking-name-input{
     flex:1;
 }
-
 .booking-remove-name{
     padding:8px 10px;
-
     border:0;
     background:transparent;
-
     color:#a41618;
-
     font:inherit;
     font-size:13px;
     font-weight:700;
-
     cursor:pointer;
 }
-
 .booking-remove-name:hover{
     text-decoration:underline;
 }
@@ -2615,128 +2448,63 @@ body.gallery-open {
 /* ==========================================
    Rooms Tabs
 ========================================== */
-
 .rooms-tabs{
     display:inline-flex;
-
-    gap:
-        6px;
-
-    margin-bottom:
-        26px;
-
-    padding:
-        5px;
-
-    background:
-        var(--white);
-
+    gap: 6px;
+    margin-bottom: 26px;
+    padding: 5px;
+    background: var(--white);
     border:0;
-
-    border-radius:
-        12px;
+    border-radius: 12px;
 }
-
-
 .rooms-tab{
-    padding:
-        10px 16px;
-
+    padding: 10px 16px;
     border:0;
-
-    border-radius:
-        8px;
-
-    background:
-        transparent;
-
-    color:
-        var(--muted);
-
+    border-radius: 8px;
+    background: transparent;
+    color: var(--muted);
     font:inherit;
-
-    font-size:
-        12px;
-
-    font-weight:
-        800;
-
-    letter-spacing:
-        .04em;
-
-    text-transform:
-        uppercase;
-
+    font-size: 12px;
+    font-weight: 800;
+    letter-spacing: .04em;
+    text-transform: uppercase;
     cursor:pointer;
-
     transition:
         background .16s ease,
         color .16s ease;
 }
-
-
 .rooms-tab:hover{
-    background:
-        var(--background);
-
-    color:
-        var(--dark-text);
+    background: var(--background);
+    color: var(--dark-text);
 }
-
-
 .rooms-tab.active{
-    background:
-        var(--dark-visual);
-
-    color:
-        var(--white);
+    background: var(--dark-visual);
+    color: var(--white);
 }
 /* ==========================================
    Tab Panels
 ========================================== */
-
 .rooms-tab-panel[hidden]{
     display:none;
 }
 /* ==========================================
    Rooms Section Heading
 ========================================== */
-
 .rooms-section-heading{
-    margin-bottom:
-        20px;
+    margin-bottom: 20px;
 }
-
-
 .rooms-section-heading h2{
-    margin:
-        0 0 5px;
-
-    color:
-        var(--dark-text);
-
-    font-size:
-        24px;
-
-    font-weight:
-        800;
-
-    letter-spacing:
-        -.025em;
+    margin: 0 0 5px;
+    color: var(--dark-text);
+    font-size: 24px;
+    font-weight: 800;
+    letter-spacing: -.025em;
 }
-
-
 .rooms-section-heading p{
     margin:0;
-
-    color:
-        var(--muted);
-
-    font-size:
-        14px;
-
-    line-height:
-        1.5;
+    color: var(--muted);
+    font-size: 14px;
+    line-height: 1.5;
 }
 /* ==========================================
    Card Grid
@@ -2758,38 +2526,23 @@ body.gallery-open {
 /* ==========================================
    Room Cards
 ========================================== */
-
 .room-list-card{
     display:flex;
-
     flex-direction:column;
-
     min-width:0;
-
     overflow:hidden;
-
-    background:
-        var(--white);
-
+    background: var(--white);
     border:0;
-
-    border-radius:
-        18px;
-
+    border-radius: 18px;
     color:inherit;
-
     text-decoration:none;
-
     transition:
         transform .18s ease,
         box-shadow .18s ease;
 }
-
-
 .room-list-card:hover{
     transform:
         translateY(-3px);
-
     box-shadow:
         0 10px 24px
         rgba(0,0,0,.08);
@@ -2797,115 +2550,51 @@ body.gallery-open {
 /* ==========================================
    Availability Badge
 ========================================== */
-
 .room-list-status{
     position:absolute;
-
-    top:
-        12px;
-
-    right:
-        12px;
-
-    padding:
-        7px 10px;
-
-    background:
-        var(--teal);
-
-    color:
-        var(--white);
-
+    top: 12px;
+    right: 12px;
+    padding: 7px 10px;
+    background: var(--teal);
+    color: var(--white);
     border:0;
-
-    border-radius:
-        8px;
-
-    font-size:
-        10px;
-
-    font-weight:
-        900;
-
-    letter-spacing:
-        .07em;
-
-    text-transform:
-        uppercase;
-
-    box-shadow:
-        0 3px 10px
-        rgba(0,0,0,.12);
+    border-radius: 8px;
+    font-size: 10px;
+    font-weight: 900;
+    letter-spacing: .07em;
+    text-transform: uppercase;
+    box-shadow: 0 3px 10px rgba(0,0,0,.12);
 }
-
-
 .room-list-card.fully-booked .room-list-status{
-    background:
-        var(--dark-visual);
-
-    color:
-        var(--white);
+    background: var(--dark-visual);
+    color: var(--white);
 }
 /* ==========================================
    Card Content
 ========================================== */
-
 .room-list-content{
     display:flex;
-
     flex-direction:column;
-
     flex:1;
-
-    padding:
-        22px;
+    padding: 22px;
 }
-
-
 .room-list-content h3{
-    margin:
-        0 0 10px;
-
-    color:
-        var(--dark-text);
-
-    font-size:
-        22px;
-
-    font-weight:
-        800;
-
-    line-height:
-        1.1;
-
-    letter-spacing:
-        -.025em;
+    margin: 0 0 10px;
+    color: var(--dark-text);
+    font-size: 22px;
+    font-weight: 800;
+    line-height: 1.1;
+    letter-spacing: -.025em;
 }
-
-
 .room-list-content h3 span{
     display:block;
-
-    margin-top:
-        5px;
-
-    color:
-        var(--teal);
-
-    font-size:
-        13px;
-
-    font-weight:
-        800;
-
-    letter-spacing:
-        .04em;
-
-    text-transform:
-        uppercase;
+    margin-top: 5px;
+    color: var(--teal);
+    font-size: 13px;
+    font-weight: 800;
+    letter-spacing: .04em;
+    text-transform: uppercase;
 }
-
-
 .room-list-content > p{
     margin: 0 0 20px;
     color: var(--muted);
@@ -2952,44 +2641,32 @@ body.gallery-open {
 /* ==========================================
    Shared Space Cards
 ========================================== */
-
 .shared-space-card{
     border-top-color:var(--purple, #666699);
 }
-
-
 /* ==========================================
    Responsive
 ========================================== */
-
 @media(max-width:950px){
-
     .rooms-card-grid{
         grid-template-columns:repeat(2, minmax(0, 1fr));
     }
-
 }
-
 @media(max-width:600px){
-
     .rooms-directory-page{
         width:calc(100% - 24px);
         padding-top:30px;
     }
-
     .rooms-tabs{
         width:100%;
     }
-
     .rooms-tab{
         flex:1;
         padding:12px 10px;
     }
-
     .rooms-card-grid{
         grid-template-columns:1fr;
     }
-
 }
 /* ==========================================
    Tickets Page
@@ -3006,14 +2683,12 @@ body.gallery-open {
 .tickets-header{
     margin-bottom:32px;
 }
-
 .tickets-header h1{
     margin:0;
     font-size:clamp(38px, 5vw, 56px);
     line-height:1.05;
     color:var(--black, #0D1821);
 }
-
 .tickets-header p{
     margin:14px 0 0;
     max-width:760px;
@@ -3279,7 +2954,6 @@ body.gallery-open {
 .ticket-info-section{
     margin-top:24px;
 }
-
 .ticket-info-section h3{
     margin:0 0 14px;
     color:var(--black, #0D1821);
@@ -3288,155 +2962,73 @@ body.gallery-open {
 /* ==========================================
    Who's Attending
 ========================================== */
-
 .ticket-attendees-section{
-    margin-top:
-        20px;
-
-    padding:
-        30px 34px;
-
-    background:
-        var(--white);
-
+    margin-top: 20px;
+    padding: 30px 34px;
+    background: var(--white);
     border:0;
-
-    border-radius:
-        18px;
+    border-radius: 18px;
 }
-
-
 .ticket-attendee-summary{
     display:flex;
-
     align-items:baseline;
-
-    gap:
-        9px;
-
-    margin-bottom:
-        20px;
+    gap: 9px;
+    margin-bottom: 20px;
 }
-
-
 .ticket-attendee-summary strong{
-    color:
-        var(--teal);
-
-    font-size:
-        34px;
-
-    font-weight:
-        900;
-
+    color: var(--teal);
+    font-size: 34px;
+    font-weight: 900;
     line-height:1;
-
-    letter-spacing:
-        -.04em;
+    letter-spacing: -.04em;
 }
-
-
 .ticket-attendee-summary span{
-    color:
-        var(--muted);
-
-    font-size:
-        13px;
-
-    font-weight:
-        700;
-
-    text-transform:
-        uppercase;
-
-    letter-spacing:
-        .06em;
+    color: var(--muted);
+    font-size: 13px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: .06em;
 }
-
-
 /* ==========================================
    Attendee Grid
 ========================================== */
-
 .ticket-attendee-list{
     display:grid;
-
-    grid-template-columns:
-        repeat(3, minmax(0, 1fr));
-
-    gap:
-        9px;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 9px;
 }
-
-
 .ticket-attendee{
     display:flex;
-
     align-items:center;
-
-    gap:
-        11px;
-
+    gap: 11px;
     min-width:0;
-
-    padding:
-        12px 14px;
-
-    background:
-        var(--background);
-
+    padding: 12px 14px;
+    background: var(--background);
     border:0;
-
-    border-radius:
-        10px;
+    border-radius: 10px;
 }
-
-
 /* Initial Circle */
-
 .ticket-attendee-icon{
     display:flex;
-
     align-items:center;
-
     justify-content:center;
-
-    flex:
-        0 0 30px;
-
-    width:
-        30px;
-
-    height:
-        30px;
-
-    background:
-        var(--dark-visual);
-
-    color:
-        var(--white);
-
-    border-radius:
-        50%;
-
-    font-size:
-        12px;
-
-    font-weight:
-        900;
+    flex: 0 0 30px;
+    width: 30px;
+    height: 30px;
+    background: var(--dark-visual);
+    color: var(--white);
+    border-radius: 50%;
+    font-size: 12px;
+    font-weight: 900;
 }
-
 /* ==========================================
    Attendee Icon Colors
 ========================================== */
-
 .ticket-attendee:nth-child(4n + 1)
 .ticket-attendee-icon{
     background:
         var(--gold);
 }
-
-
 .ticket-attendee:nth-child(4n + 2)
 .ticket-attendee-icon{
     background: var(--gold);
