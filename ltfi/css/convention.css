@@ -2943,14 +2943,6 @@ body.gallery-open {
     filter: grayscale(.65);
     opacity: .72;
 }
-/* Dark overlay on booked room image */
-.room-list-card.fully-booked .room-list-image::after{
-    content:"";
-    position:absolute;
-    inset:0;
-    background: rgba(42,33,65,.16);
-    pointer-events:none;
-}
 /* Keep badge above overlay */
 .room-list-card.fully-booked .room-list-status{
     z-index: 2;
