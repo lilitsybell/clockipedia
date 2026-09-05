@@ -2747,6 +2747,15 @@ body.gallery-open {
     gap: 18px;
 }
 /* ==========================================
+   Shared Spaces Grid
+========================================== */
+#shared-spaces .rooms-card-grid{
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+}
+#shared-spaces .room-list-card{
+    width:100%;
+}
+/* ==========================================
    Room Cards
 ========================================== */
 
