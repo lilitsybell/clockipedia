@@ -2898,71 +2898,56 @@ body.gallery-open {
 
 
 .room-list-content > p{
-    margin:
-        0 0 20px;
-
-    color:
-        var(--muted);
-
-    font-size:
-        14px;
-
-    line-height:
-        1.5;
+    margin: 0 0 20px;
+    color: var(--muted);
+    font-size: 14px;
+    line-height: 1.5;
 }
 /* ==========================================
    Feature Tags
 ========================================== */
-
 .room-list-features{
     display:flex;
-
     flex-wrap:wrap;
-
-    gap:
-        7px;
-
+    gap: 7px;
     margin-top:auto;
 }
-
-
 .room-list-features span{
-    padding:
-        7px 10px;
-
-    background:
-        var(--purple-light);
-
+    padding: 7px 10px;
+    background: var(--purple-light);
     border:0;
-
-    border-radius:
-        7px;
-
-    color:
-        var(--dark-visual);
-
-    font-size:
-        11px;
-
-    font-weight:
-        800;
+    border-radius: 7px;
+    color: var(--dark-visual);
+    font-size: 11px;
+    font-weight: 800;
 }
 /* ==========================================
    Fully Booked Cards
 ========================================== */
 .room-list-card.fully-booked{
-    opacity:
-        .62;
+    opacity: 1;
 }
 .room-list-card.fully-booked:hover{
-    opacity:.8;
+    opacity: 1;
 }
-
 .room-list-card.fully-booked .room-list-image img{
-    filter:grayscale(.5);
+    filter: grayscale(.65);
+    opacity: .72;
 }
-
-
+/* Dark overlay on booked room image */
+.room-list-card.fully-booked .room-list-image::after{
+    content:"";
+    position:absolute;
+    inset:0;
+    background: rgba(42,33,65,.16);
+    pointer-events:none;
+}
+/* Keep badge above overlay */
+.room-list-card.fully-booked .room-list-status{
+    z-index: 2;
+    background: var(--dark-visual);
+    color: var(--white);
+}
 /* ==========================================
    Shared Space Cards
 ========================================== */
