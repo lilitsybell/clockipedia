@@ -3447,7 +3447,7 @@ body.gallery-open {
 .ticket-attendee:nth-child(4n + 1)
 .ticket-attendee-icon{
     background:
-        var(--teal);
+        var(--gold);
 }
 
 
@@ -3457,11 +3457,11 @@ body.gallery-open {
 }
 .ticket-attendee:nth-child(4n + 3)
 .ticket-attendee-icon{
-    background: var(--red);
+    background: var(--gold);
 }
 .ticket-attendee:nth-child(4n + 4)
 .ticket-attendee-icon{
-    background: var(--dark-visual);
+    background: var(--gold);
 }
 .ticket-attendee strong{
     min-width:0;
