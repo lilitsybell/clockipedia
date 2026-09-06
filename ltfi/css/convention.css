@@ -1729,18 +1729,33 @@ body.gallery-open {
     transform:none;
 }
 /* ==========================================
-   Amenities
+   Room Amenities
 ========================================== */
 .room-amenities-grid{
     display:flex;
     flex-wrap:wrap;
-    gap:10px;
+    gap: 8px;
 }
 .room-amenity{
-    padding:10px 14px;
-    background:#f4f4f7;
-    border:1px solid #ddd;
-    color:var(--black, #0D1821);
+    position:relative;
+    padding: 10px 14px 10px 34px;
+    background: var(--background);
+    border:0;
+    border-radius: 9px;
+    color: var(--dark-text);
+    font-size: 13px;
+    font-weight: 700;
+}
+/* Checkmark */
+.room-amenity::before{
+    content:"✓";
+    position:absolute;
+    top:50%;
+    left: 13px;
+    color: var(--teal);
+    font-size: 13px;
+    font-weight: 900;
+    transform: translateY(-50%);
 }
 /* ==========================================
    Ticket Includes
