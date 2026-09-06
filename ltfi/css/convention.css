@@ -1674,22 +1674,29 @@ body.gallery-open {
     font-weight: 800;
 }
 /* ==========================================
-   Book Button
+   Room Book Button
 ========================================== */
 .room-book-button{
     width:100%;
-    margin-top:18px;
-    padding:14px 20px;
+    margin-top: 18px;
+    padding: 14px 20px;
     border:0;
-    background:var(--purple, #666699);
-    color:white;
+    border-radius: 10px;
+    background: var(--teal);
+    color: var(--white);
     font:inherit;
-    font-size:18px;
-    font-weight:700;
+    font-size: 12px;
+    font-weight: 900;
+    letter-spacing: .07em;
+    text-transform: uppercase;
     cursor:pointer;
+    transition:
+        transform .16s ease,
+        opacity .16s ease;
 }
 .room-book-button:hover{
-    opacity:.9;
+    transform: translateY(-1px);
+    opacity: .9;
 }
 /* ==========================================
    Purchase Ticket Button
