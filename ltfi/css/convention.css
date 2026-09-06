@@ -1645,31 +1645,37 @@ body.gallery-open {
    Room Booking Pages
 ========================================== */
 .room-booking-page{
-    width:min(1180px, calc(100% - 40px));
-    margin:0 auto;
-    padding:45px 0 90px;
+    width:
+        min(
+            1200px,
+            calc(100% - 60px)
+        );
+    margin: 0 auto;
+    padding: 34px 0 60px;
 }
 /* ==========================================
-   Header
+   Room Booking Header
 ========================================== */
 .room-booking-header{
-    margin-bottom:35px;
+    margin-bottom: 24px;
 }
 .room-booking-header h1{
     margin:0;
-    font-size:clamp(36px, 5vw, 54px);
-    line-height:1.05;
-    color:var(--black, #0D1821);
+    color: var(--dark-text);
+    font-size: 38px;
+    font-weight: 800;
+    line-height: 1;
+    letter-spacing: -.035em;
 }
 .room-booking-header h1 span{
-    color:var(--purple, #666699);
+    color: var(--teal);
 }
 .room-booking-header p{
-    margin:14px 0 0;
-    max-width:700px;
-    font-size:18px;
-    line-height:1.55;
-    color:#666;
+    max-width: 720px;
+    margin: 10px 0 0;
+    color: var(--muted);
+    font-size: 15px;
+    line-height: 1.55;
 }
 /* ==========================================
    Main Overview
