@@ -1804,34 +1804,34 @@ body.gallery-open {
 .room-photo-grid{
     display:flex;
     flex-direction:column;
-    gap:32px;
+    gap: 26px;
 }
 .room-photo-group h3{
-    margin:0 0 14px;
-    font-size:20px;
-    color:var(--text);
+    margin: 0 0 12px;
+    color: var(--dark-text);
+    font-size: 17px;
+    font-weight: 800;
+    letter-spacing: -.015em;
 }
 .room-photo-gallery{
     display:grid;
-    grid-template-columns:
-        repeat(3, minmax(0, 1fr));
-    gap:12px;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 10px;
 }
 .room-photo-gallery img{
+    display:block;
     width:100%;
-    aspect-ratio:4 / 3;
-    object-fit:cover;
-    border-radius:10px;
+    aspect-ratio: 4 / 3;
+    object-fit: cover;
+    border-radius: 12px;
     cursor:pointer;
     transition:
-        transform .2s ease,
-        box-shadow .2s ease;
+        transform .18s ease,
+        box-shadow .18s ease;
 }
 .room-photo-gallery img:hover{
-    transform:translateY(-2px);
-    box-shadow:
-        0 6px 18px
-        rgba(0,0,0,.12);
+    transform: translateY(-2px);
+    box-shadow: 0 8px 20px rgba(0,0,0,.10);
 }
 @media(max-width:700px){
     .room-photo-gallery{
