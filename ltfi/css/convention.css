@@ -1769,115 +1769,80 @@ body.gallery-open {
 .ticket-info-section .room-amenity strong{
     font-weight: 700;
 }
-
 /* ==========================================
    Room Photos
 ========================================== */
-
 .room-photo-grid{
     display:flex;
     flex-direction:column;
     gap:32px;
 }
-
 .room-photo-group h3{
     margin:0 0 14px;
-
     font-size:20px;
     color:var(--text);
 }
-
 .room-photo-gallery{
     display:grid;
-
     grid-template-columns:
         repeat(3, minmax(0, 1fr));
-
     gap:12px;
 }
-
 .room-photo-gallery img{
     width:100%;
     aspect-ratio:4 / 3;
-
     object-fit:cover;
-
     border-radius:10px;
-
     cursor:pointer;
-
     transition:
         transform .2s ease,
         box-shadow .2s ease;
 }
-
 .room-photo-gallery img:hover{
     transform:translateY(-2px);
-
     box-shadow:
         0 6px 18px
         rgba(0,0,0,.12);
 }
-
-
 @media(max-width:700px){
-
     .room-photo-gallery{
         grid-template-columns:
             repeat(2, minmax(0, 1fr));
     }
-
 }
-
-
 /* ==========================================
    Booked State
 ========================================== */
-
 .booking-bed-card.booked{
     background:#f0f0f0;
 }
-
 .booking-bed-card.booked::after{
     content:"BOOKED";
-
     position:absolute;
     top:14px;
     right:14px;
-
     padding:4px 7px;
-
     background:#959799;
     color:white;
-
     font-size:10px;
     font-weight:700;
 }
-
-
 /* ==========================================
    Mobile
 ========================================== */
-
 @media(max-width:850px){
-
     .room-overview-grid{
         grid-template-columns:1fr;
     }
-
 }
-
 @media(max-width:600px){
-
     .room-booking-page{
         width:calc(100% - 24px);
         padding-top:30px;
     }
-
     .booking-bed-grid{
         grid-template-columns:1fr;
     }
-
 }
 .room-floor-map{
     position:relative;
@@ -1886,7 +1851,6 @@ body.gallery-open {
     margin:0 auto;
     aspect-ratio:1 / 1;
 }
-
 .room-floor-map img{
     position:absolute;
     inset:0;
