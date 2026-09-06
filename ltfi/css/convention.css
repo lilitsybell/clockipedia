@@ -1590,28 +1590,21 @@ body.gallery-open {
 ========================================== */
 .room-location-map{
     display:flex;
-    justify-content:center;
     align-items:center;
+    justify-content:center;
     width:100%;
-    aspect-ratio:1 / 1;
-    padding:14px;
-    background:white;
+    aspect-ratio: 1 / 1;
+    padding: 22px;
+    background: var(--background);
+    border-radius: 14px;
+    overflow:hidden;
 }
 .room-location-map img{
     display:block;
     width:100%;
     height:100%;
-    object-fit:contain;
-}
-.room-map-placeholder{
-    display:flex;
-    align-items:center;
-    justify-content:center;
-    width:100%;
-    min-height:200px;
-    border: 2px dashed rgba(255,255,255,.6);
-    color:white;
-    font-weight:700;
+    object-fit: contain;
+    border-radius: 8px;
 }
 /* ==========================================
    Beds
