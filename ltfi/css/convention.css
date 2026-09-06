@@ -1887,6 +1887,54 @@ body.gallery-open {
     z-index:2;
     pointer-events:none;
 }
+@media(max-width:600px){
+    /* ======================================
+       Room Booking Page
+    ====================================== */
+    .room-booking-page{
+        width: calc(100% - 40px);
+        padding: 26px 0 40px;
+    }
+    /* ======================================
+       Header
+    ====================================== */
+    .room-booking-header{
+        margin-bottom: 20px;
+    }
+    .room-booking-header h1{
+        font-size: 32px;
+    }
+    .room-booking-header p{
+        margin-top: 8px;
+        font-size: 14px;
+    }
+    /* ======================================
+       Main Panels
+    ====================================== */
+    .room-location-panel,
+    .room-beds-panel,
+    .room-amenities-section,
+    .room-photos-section{
+        padding: 22px 20px;
+        border-radius: 16px;
+    }
+    .room-amenities-section,
+    .room-photos-section{
+        margin-top: 16px;
+    }
+    /* ======================================
+       Beds
+    ====================================== */
+    .booking-bed-grid{
+        grid-template-columns: 1fr;
+    }
+    /* ======================================
+       Floor Plan
+    ====================================== */
+    .room-location-map{
+        padding: 14px;
+    }
+}
 /* ==========================================
    Booking Modal
 ========================================== */
