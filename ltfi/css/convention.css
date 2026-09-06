@@ -91,44 +91,27 @@ a {
 /* ==========================================
    Convention Banner
 ========================================== */
-
 .convention-hero{
     width:
         min(
             1200px,
             calc(100% - 60px)
         );
-
-    margin:
-        20px auto 0;
-
+    margin: 20px auto 0;
     padding:0;
-
-    background:
-        var(--dark-visual);
-
-    border-radius:
-        20px;
-
+    background: var(--dark-visual);
+    border-radius: 20px;
     overflow:hidden;
 }
-
-
 .banner-wrap{
     position:relative;
-
     width:100%;
-
     overflow:hidden;
 }
-
-
 .convention-banner{
     display:block;
-
     width:100%;
     height:auto;
-
     margin:0;
 }
 /* ==========================================
@@ -146,27 +129,17 @@ a {
 }
 .countdown{
     display:flex;
-
     flex-direction:row;
-
     align-items:center;
-
     justify-content:center;
-
-    gap:
-        38px;
+    gap: 38px;
 }
 .countdown-unit{
     display:flex;
-
     flex-direction:column;
-
     align-items:center;
-
     justify-content:center;
-
-    gap:
-        4px;
+    gap: 4px;
 }
 .countdown-unit span {
     min-width: 2.4ch;
@@ -464,7 +437,6 @@ a {
                 9vw,
                 42px
             );
-
         text-align:center;
     }
     .countdown-unit small{
@@ -1213,14 +1185,11 @@ body.gallery-open {
 /* ==========================================
    Moderator Pricing Calculator
 ========================================== */
-
 .pricing-page {
     width: min(1400px, calc(100% - 50px));
     margin: 0 auto;
     padding: 50px 0 80px;
 }
-
-
 .pricing-header {
     display: flex;
     align-items: flex-start;
@@ -1228,20 +1197,14 @@ body.gallery-open {
     gap: 40px;
     margin-bottom: 35px;
 }
-
-
 .pricing-header h1 {
     margin: 3px 0 8px;
 }
-
-
 .pricing-header p {
     max-width: 700px;
     color: #666;
     line-height: 1.6;
 }
-
-
 .pricing-eyebrow {
     color: var(--purple, #666699);
     font-size: 13px;
@@ -1249,32 +1212,22 @@ body.gallery-open {
     letter-spacing: .12em;
     text-transform: uppercase;
 }
-
-
 .pricing-save-panel {
     display: flex;
     align-items: center;
     gap: 15px;
 }
-
-
 .save-status {
     font-size: 14px;
     font-weight: 700;
     white-space: nowrap;
 }
-
-
 .save-status.saved {
     color: #588d52;
 }
-
-
 .save-status.unsaved {
     color: #c2812e;
 }
-
-
 .pricing-primary-button,
 .pricing-secondary-button,
 .add-bed-button,
@@ -1287,28 +1240,20 @@ body.gallery-open {
     font-weight: 700;
     cursor: pointer;
 }
-
-
 .pricing-primary-button,
 .add-bed-button {
     background: var(--purple, #666699);
     color: white;
 }
-
-
 .pricing-secondary-button {
     border: 1px solid #ccc;
     background: white;
     color: #333;
 }
-
-
 .remove-bed-button {
     background: #f3e4e4;
     color: #9c3d3d;
 }
-
-
 .pricing-summary-grid {
     display: grid;
     grid-template-columns:
@@ -1316,16 +1261,12 @@ body.gallery-open {
     gap: 18px;
     margin-bottom: 40px;
 }
-
-
 .pricing-summary-card {
     padding: 20px;
     background: white;
     border: 1px solid #e5e5e5;
     border-radius: 12px;
 }
-
-
 .pricing-summary-card label,
 .summary-label {
     display: block;
@@ -1335,28 +1276,20 @@ body.gallery-open {
     font-weight: 700;
     text-transform: uppercase;
 }
-
-
 .summary-value {
     color: var(--black, #0D1821);
     font-size: 30px;
     font-weight: 800;
 }
-
-
 .currency-input {
     display: flex;
     align-items: center;
     gap: 6px;
 }
-
-
 .currency-input span {
     font-size: 24px;
     font-weight: 700;
 }
-
-
 .currency-input input {
     width: 100%;
     border: 0;
@@ -1365,13 +1298,9 @@ body.gallery-open {
     font-size: 28px;
     font-weight: 800;
 }
-
-
 .pricing-section {
     margin-top: 45px;
 }
-
-
 .pricing-section-heading {
     display: flex;
     align-items: flex-end;
@@ -1379,46 +1308,32 @@ body.gallery-open {
     gap: 25px;
     margin-bottom: 18px;
 }
-
-
 .pricing-section-heading h2 {
     margin-bottom: 4px;
 }
-
-
 .pricing-section-heading p {
     color: #777;
 }
-
-
 .point-settings-grid {
     display: grid;
     grid-template-columns:
         repeat(4, minmax(0, 1fr));
     gap: 18px;
 }
-
-
 .point-settings-card {
     padding: 22px;
     background: white;
     border: 1px solid #e5e5e5;
     border-radius: 12px;
 }
-
-
 .point-settings-card h3 {
     margin-bottom: 16px;
 }
-
-
 .point-setting-list {
     display: flex;
     flex-direction: column;
     gap: 10px;
 }
-
-
 .point-setting-row {
     display: grid;
     grid-template-columns:
@@ -1428,8 +1343,6 @@ body.gallery-open {
     gap: 12px;
     font-size: 14px;
 }
-
-
 .point-setting-row input {
     width: 100%;
     padding: 7px 8px;
@@ -1438,36 +1351,26 @@ body.gallery-open {
     font: inherit;
     text-align: right;
 }
-
-
 .room-editor {
     display: grid;
     grid-template-columns:
         repeat(2, minmax(0, 1fr));
     gap: 20px;
 }
-
-
 .room-pricing-card {
     overflow: hidden;
     background: white;
     border: 1px solid #ddd;
     border-radius: 14px;
 }
-
-
 .room-pricing-heading {
     padding: 16px 20px;
     background: var(--purple, #666699);
     color: white;
 }
-
-
 .room-pricing-heading h3 {
     margin: 0;
 }
-
-
 .room-setting-grid {
     display: grid;
     grid-template-columns:
@@ -1475,23 +1378,17 @@ body.gallery-open {
     gap: 12px;
     padding: 20px;
 }
-
-
 .room-setting {
     display: flex;
     flex-direction: column;
     gap: 6px;
 }
-
-
 .room-setting span {
     color: #777;
     font-size: 12px;
     font-weight: 700;
     text-transform: uppercase;
 }
-
-
 .room-setting select,
 .room-setting input,
 .room-bed-row select,
@@ -1504,26 +1401,18 @@ body.gallery-open {
     background: white;
     font: inherit;
 }
-
-
 .room-bed-section {
     padding: 0 20px 20px;
 }
-
-
 .room-bed-heading {
     margin-bottom: 9px;
     font-weight: 800;
 }
-
-
 .room-bed-list {
     display: flex;
     flex-direction: column;
     gap: 8px;
 }
-
-
 .room-bed-row {
     display: grid;
     grid-template-columns:
@@ -1531,8 +1420,6 @@ body.gallery-open {
         auto;
     gap: 8px;
 }
-
-
 .add-bed-control {
     display: grid;
     grid-template-columns:
@@ -1543,53 +1430,37 @@ body.gallery-open {
     padding-top: 12px;
     border-top: 1px solid #eee;
 }
-
-
 .pricing-results-wrap {
     overflow-x: auto;
     background: white;
     border: 1px solid #ddd;
     border-radius: 12px;
 }
-
-
 .pricing-results-table {
     width: 100%;
     border-collapse: collapse;
 }
-
-
 .pricing-results-table th,
 .pricing-results-table td {
     padding: 12px 15px;
     border-bottom: 1px solid #eee;
     text-align: left;
 }
-
-
 .pricing-results-table th:nth-child(3),
 .pricing-results-table td:nth-child(3),
 .pricing-results-table th:nth-child(4),
 .pricing-results-table td:nth-child(4) {
     text-align: right;
 }
-
-
 .pricing-results-table thead {
     background: #f6f6f8;
 }
-
-
 .pricing-results-table tfoot {
     font-weight: 800;
 }
-
-
 .pricing-results-table tfoot th {
     border-bottom: 0;
 }
-
-
 .pricing-actions {
     display: flex;
     justify-content: flex-end;
@@ -1599,23 +1470,16 @@ body.gallery-open {
     color: #b52323;
 }
 @media (max-width: 1000px) {
-
     .point-settings-grid {
         grid-template-columns:
             repeat(2, minmax(0, 1fr));
     }
-
-
     .pricing-summary-grid {
         grid-template-columns:
             repeat(2, minmax(0, 1fr));
     }
-
 }
-
-
 @media (max-width: 750px) {
-
     .pricing-page {
         width: min(
             100% - 28px,
@@ -1623,8 +1487,6 @@ body.gallery-open {
         );
         padding-top: 30px;
     }
-
-
     .pricing-header {
         flex-direction: column;
     }
