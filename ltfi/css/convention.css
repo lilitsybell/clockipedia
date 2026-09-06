@@ -1551,36 +1551,39 @@ body.gallery-open {
     align-items:start;
 }
 /* ==========================================
-   Panels
+   Room Panels
 ========================================== */
 .room-location-panel,
 .room-beds-panel,
 .room-amenities-section,
 .room-photos-section{
-    background:white;
-    border:1px solid #ddd;
-    border-top:5px solid var(--purple, #666699);
-    padding:24px;
+    background: var(--white);
+    border:0;
+    border-radius: 18px;
+    padding: 28px;
 }
 .room-amenities-section,
 .room-photos-section{
-    margin-top:24px;
+    margin-top: 20px;
 }
 /* ==========================================
-   Section Headings
+   Room Section Headings
 ========================================== */
 .room-section-heading{
-    margin-bottom:18px;
+    margin-bottom: 20px;
 }
 .room-section-heading h2{
-    margin:0 0 5px;
-    font-size:25px;
-    color:var(--black, #0D1821);
+    margin: 0 0 5px;
+    color: var(--dark-text);
+    font-size: 22px;
+    font-weight: 800;
+    letter-spacing: -.02em;
 }
 .room-section-heading p{
     margin:0;
-    color:#6f6f6f;
-    line-height:1.45;
+    color: var(--muted);
+    font-size: 14px;
+    line-height: 1.5;
 }
 /* ==========================================
    Floor Plan
