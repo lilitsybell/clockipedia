@@ -38,148 +38,110 @@ const castleMapData = {
             "Main Floor",
         rooms: [
             {
-                name:
-                    "Doomsayer Diner",
-
-                type:
-                    "Shared Space",
-
-                image:
-                    "/ltfi/convention/images/rooms/room-doomsayer2.png"
+                name: "Doomsayer Diner",
+                type: "Shared Space",
+                image: "/ltfi/convention/images/rooms/room-doomsayer2.png",
+                url: "/ltfi/convention/rooms/doomsayer-diner.html"
             },
             {
-                name:
-                    "Chef's Kitchen",
-                type:
-                    "Shared Space",
-                image:
-                    "/ltfi/convention/images/rooms/room-chef2.png"
+                name: "Chef's Kitchen",
+                type: "Shared Space",
+                image: "/ltfi/convention/images/rooms/room-chef2.png",
+                url: "/ltfi/convention/rooms/chefs-kitchen.html"
             },
             {
-                name:
-                    "General's Quarters",
-                type:
-                    "Bedroom",
-                image:
-                    "/ltfi/convention/images/rooms/room-general2.png"
+                name: "General's Quarters",
+                type: "Bedroom",
+                image: "/ltfi/convention/images/rooms/room-general2.png",
+                url: "/ltfi/convention/rooms/generals-quarters.html"
             },
             {
-                name:
-                    "Huntsman's Hideout",
-                type:
-                    "Bedroom",
-                image:
-                    "/ltfi/convention/images/rooms/room-huntsman2.png"
+                name: "Huntsman's Hideout",
+                type: "Bedroom",
+                image: "/ltfi/convention/images/rooms/room-huntsman2.png",
+                url: "/ltfi/convention/rooms/huntsmans-hideout.html"
             },
             {
-                name:
-                    "Innkeeper's Tavern",
-                type:
-                    "Shared Space",
-                image:
-                    "/ltfi/convention/images/rooms/room-innkeeper2.png"
+                name: "Innkeeper's Tavern",
+                type: "Shared Space",
+                image: "/ltfi/convention/images/rooms/room-innkeeper2.png",
+                url: "/ltfi/convention/rooms/innkeepers-tavern.html"
             },
             {
-                name:
-                    "Clockmaker's Workshop",
-                type:
-                    "Bedroom",
-                image:
-                    "/ltfi/convention/images/rooms/room-clockmaker2.png"
+                name: "Clockmaker's Workshop",
+                type: "Bedroom",
+                image: "/ltfi/convention/images/rooms/room-clockmaker2.png",
+                url: "/ltfi/convention/rooms/clockmakers-workshop.html"
             }
         ]
     },
     upper: {
-        name:
-            "Upper Floor",
+        name: "Upper Floor",
         rooms: [
             {
-                name:
-                    "Goblin's Grotto",
-                type:
-                    "Bedroom",
-                image:
-                    "/ltfi/convention/images/rooms/room-goblin.png"
+                name: "Goblin's Grotto",
+                type: "Bedroom",
+                image: "/ltfi/convention/images/rooms/room-goblin.png",
+                url: "/ltfi/convention/rooms/goblins-grotto.html"
             },
             {
-                name:
-                    "Witches Den",
-                type:
-                    "Bedroom",
-                image:
-                    "/ltfi/convention/images/rooms/room-witch.png"
+                name: "Witches Den",
+                type: "Bedroom",
+                image: "/ltfi/convention/images/rooms/room-witch.png",
+                url: "/ltfi/convention/rooms/witches-den.html"
             },
             {
-                name:
-                    "Politician Office",
-                type:
-                    "Bedroom",
-                image:
-                    "/ltfi/convention/images/rooms/room-politician.png"
+                name: "Politician Office",
+                type: "Bedroom",
+                image: "/ltfi/convention/images/rooms/room-politician.png",
+                url: "/ltfi/convention/rooms/politician-office.html"
             },
             {
-                name:
-                    "Cult Leader Compound",
-                type:
-                    "Bedroom",
-                image:
-                    "/ltfi/convention/images/rooms/room-cult-leader.png"
+                name: "Cult Leader Compound",
+                type: "Bedroom",
+                image: "/ltfi/convention/images/rooms/room-cult-leader.png",
+                url: "/ltfi/convention/rooms/cult-leader-compound.html"
             },
             {
-                name:
-                    "Kazali Campground",
-                type:
-                    "Bedroom",
-                image:
-                    "/ltfi/convention/images/rooms/room-kazali.png"
+                name: "Kazali Campground",
+                type: "Bedroom",
+                image: "/ltfi/convention/images/rooms/room-kazali.png",
+                url: "/ltfi/convention/rooms/kazali-campground.html"
             },
             {
-                name:
-                    "Marionette Motel",
-
-                type:
-                    "Bedroom",
-
-                image:
-                    "/ltfi/convention/images/rooms/room-kazali.png"
+                name: "Marionette Motel",
+                type: "Bedroom",
+                image: "/ltfi/convention/images/rooms/room-kazali.png",
+                url: "/ltfi/convention/rooms/kazali-campground.html"
             },
             {
-                name:
-                    "No Dashii Springs",
-                type:
-                    "Shared Space",
-                image:
-                    "/ltfi/convention/images/rooms/room-no-dashii.png"
+                name: "No Dashii Springs",
+                type: "Shared Space",
+                image: "/ltfi/convention/images/rooms/room-no-dashii.png",
+                url: "/ltfi/convention/rooms/no-dashii-springs.html"
             },
             {
-                name:
-                    "Puzzlemaster Paradise",
-                type:
-                    "Shared Space",
-                image:
-                    "/ltfi/convention/images/rooms/room-puzzlemaster.png"
+                name: "Puzzlemaster Paradise",
+                type: "Shared Space",
+                image: "/ltfi/convention/images/rooms/room-puzzlemaster.png",
+                url: "/ltfi/convention/rooms/puzzlemaster-paradise.html"
             },
             {
-                name:
-                    "Golem's Chamber",
-                type:
-                    "Shared Space",
-                image:
-                    "/ltfi/convention/images/rooms/room-golem.png"
+                name: "Golem's Chamber",
+                type: "Shared Space",
+                image: "/ltfi/convention/images/rooms/room-golem.png",
+                url: "/ltfi/convention/rooms/golems-chamber.html"
             }
         ]
     },
     observatory: {
-        name:
-            "Observatory",
+        name: "Observatory",
         rooms: [
             {
-                name:
-                    "Ojo Observatory",
-                type:
-                    "Shared Space",
-                image:
-                    "/ltfi/convention/images/rooms/room-ojo.png"
+                name: "Ojo Observatory",
+                type: "Shared Space",
+                image: "/ltfi/convention/images/rooms/room-ojo.png",
+                url: "/ltfi/convention/rooms/ojo-observatory.html"
             }
         ]
     }
