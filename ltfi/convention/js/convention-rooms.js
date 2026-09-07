@@ -350,26 +350,18 @@ function updateRoomCard(
     /* --------------------------------------
        Multiple Beds
     -------------------------------------- */
-
     status.textContent =
         availableBeds +
         " Beds Available";
-
 }
-
-
 /* ==========================================
    Get Room Names
 ========================================== */
-
 function getRoomNames(
     card
 ){
-
     const value =
         card.dataset.roomNames || "";
-
-
     return value
         .split("|")
         .map(
@@ -377,141 +369,93 @@ function getRoomNames(
                 name.trim()
         )
         .filter(Boolean);
-
 }
-
-
 /* ==========================================
    Get Bed Count
 ========================================== */
-
 function getBedCount(
     card
 ){
-
     const bedCount =
         Number(
             card.dataset.bedCount
         );
-
-
     if(
         Number.isNaN(
             bedCount
         )
     ){
-
         return 0;
-
     }
-
-
     return bedCount;
-
 }
-
-
 /* ==========================================
    Count Booked Beds
 ========================================== */
-
 function getBookedBedCount(
     roomNames,
     bookings
 ){
-
     return bookings.filter(
         booking => {
-
             if(
                 !booking ||
                 !booking.room
             ){
                 return false;
             }
-
-
             return roomNames.includes(
                 booking.room.trim()
             );
-
         }
     ).length;
-
 }
-
-
 /* ==========================================
    Available Rooms First
 ========================================== */
-
 function sortBedroomCards(){
-
     const grid =
         document.querySelector(
             "#bedroom-grid"
         );
-
-
     if(!grid){
         return;
     }
-
-
     const cards =
         Array.from(
             grid.querySelectorAll(
                 ".room-list-card"
             )
         );
-
-
     cards.sort(
         (a, b) => {
-
             const aBooked =
                 a.classList.contains(
                     "fully-booked"
                 );
-
-
             const bBooked =
                 b.classList.contains(
                     "fully-booked"
                 );
-
-
             /* ----------------------------------
                Same Availability
             ---------------------------------- */
-
             if(
                 aBooked === bBooked
             ){
-
                 return 0;
-
             }
-
-
             /* ----------------------------------
                Fully Booked Goes Last
             ---------------------------------- */
-
             return aBooked
                 ? 1
                 : -1;
-
         }
     );
-
-
     cards.forEach(card => {
-
         grid.appendChild(
             card
         );
-
     });
-
 }
