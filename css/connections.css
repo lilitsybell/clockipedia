@@ -858,28 +858,51 @@
 }
 
 
-.connections-share-button{
+.connections-share-button,
+.connections-play-button{
     padding:
         11px 17px;
 
-    border:0;
+    border:
+        1px solid transparent;
 
-    border-radius:9px;
-
-    background:
-        var(--purple);
-
-    color:white;
+    border-radius:
+        9px;
 
     font:inherit;
 
-    font-size:10px;
+    font-size:
+        10px;
 
-    font-weight:900;
+    font-weight:
+        900;
 
-    letter-spacing:.06em;
+    letter-spacing:
+        .06em;
 
-    text-transform:uppercase;
+    text-transform:
+        uppercase;
 
     cursor:pointer;
+}
+
+
+.connections-play-button{
+    background:
+        var(--purple);
+
+    color:
+        white;
+}
+
+
+.connections-share-button{
+    background:
+        white;
+
+    color:
+        var(--purple);
+
+    border-color:
+        var(--purple);
 }
