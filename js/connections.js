@@ -19,6 +19,7 @@ document.addEventListener(
             await loadCharacters();
             await loadConnectionsPuzzle();
             setupConnectionsControls();
+            setupConnectionsShare();
             renderConnectionsGame();
         }
         catch(error){
@@ -437,17 +438,16 @@ solvedGroups.push(
         renderConnectionsGame();
 
 
-        if(
-            solvedGroups.length ===
-            connectionsPuzzle.groups.length
-        ){
+if(
+    solvedGroups.length ===
+    connectionsPuzzle.groups.length
+){
 
-            showConnectionsMessage(
-                "You solved all four groups!",
-                "win"
-            );
+    showConnectionsResults(
+        true
+    );
 
-        }
+}
 
     }
     else{
@@ -775,7 +775,9 @@ function endConnectionsGame(){
     document.querySelector(
         "#connectionsSubmit"
     ).disabled = true;
-
+showConnectionsResults(
+    false
+);
 }
 
 /* ==========================================
@@ -858,6 +860,69 @@ function showConnectionsResults(
     renderConnectionsResultGrid();
 
 }
+function renderConnectionsResultGrid(){
+
+    const grid =
+        document.querySelector(
+            "#connectionsResultGrid"
+        );
+
+
+    grid.innerHTML = "";
+
+
+    connectionsGuesses.forEach(
+        guess => {
+
+            const row =
+                document.createElement(
+                    "div"
+                );
+
+
+            row.className =
+                "connections-result-row";
+
+
+            guess.forEach(
+                characterId => {
+
+                    const square =
+                        document.createElement(
+                            "span"
+                        );
+
+
+                    const groupIndex =
+                        connectionsPuzzle.groups
+                            .findIndex(
+                                group =>
+                                    group.characters.includes(
+                                        characterId
+                                    )
+                            );
+
+
+                    square.dataset.group =
+                        groupIndex;
+
+
+                    row.appendChild(
+                        square
+                    );
+
+                }
+            );
+
+
+            grid.appendChild(
+                row
+            );
+
+        }
+    );
+
+}
 /* ==========================================
    Shuffle
 ========================================== */
@@ -903,5 +968,111 @@ function waitConnections(
 
         }
     );
+
+}
+/* ==========================================
+   Share Results
+========================================== */
+
+function setupConnectionsShare(){
+
+    const button =
+        document.querySelector(
+            "#connectionsShare"
+        );
+
+
+    button.addEventListener(
+        "click",
+        shareConnectionsResults
+    );
+
+}
+
+
+async function shareConnectionsResults(){
+
+    const symbols = [
+        "🟩",
+        "🟦",
+        "🟪",
+        "🟥"
+    ];
+
+
+    const rows =
+        connectionsGuesses
+            .map(
+                guess => {
+
+                    return guess
+                        .map(
+                            characterId => {
+
+                                const groupIndex =
+                                    connectionsPuzzle.groups
+                                        .findIndex(
+                                            group =>
+                                                group.characters.includes(
+                                                    characterId
+                                                )
+                                        );
+
+
+                                return symbols[
+                                    groupIndex
+                                ];
+
+                            }
+                        )
+                        .join("");
+
+                }
+            )
+            .join("\n");
+
+
+    const result =
+`Clockipedia Character Connections #${connectionsPuzzle.id}
+
+${rows}`;
+
+
+    try{
+
+        await navigator.clipboard.writeText(
+            result
+        );
+
+
+        const button =
+            document.querySelector(
+                "#connectionsShare"
+            );
+
+
+        button.textContent =
+            "Copied!";
+
+
+        setTimeout(
+            () => {
+
+                button.textContent =
+                    "Share Results";
+
+            },
+            1800
+        );
+
+    }
+    catch(error){
+
+        console.error(
+            "Could not copy results:",
+            error
+        );
+
+    }
 
 }
