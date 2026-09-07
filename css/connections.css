@@ -1,0 +1,580 @@
+/* ==========================================
+   Connections Page
+========================================== */
+
+.connections-page{
+    width:min(
+        1100px,
+        calc(100% - 60px)
+    );
+
+    margin:0 auto;
+
+    padding:
+        48px 0 70px;
+}
+
+
+/* ==========================================
+   Header
+========================================== */
+
+.connections-header{
+    max-width:
+        700px;
+
+    margin-bottom:
+        30px;
+}
+
+
+.connections-eyebrow{
+    display:block;
+
+    margin-bottom:
+        7px;
+
+    color:
+        var(--purple);
+
+    font-size:
+        10px;
+
+    font-weight:
+        900;
+
+    letter-spacing:
+        .12em;
+
+    text-transform:
+        uppercase;
+}
+
+
+.connections-header h1{
+    margin:
+        0 0 9px;
+
+    color:
+        var(--black);
+
+    font-family:
+        "Droid Sans",
+        Arial,
+        sans-serif;
+
+    font-size:
+        38px;
+
+    line-height:
+        1.05;
+
+    letter-spacing:
+        -.035em;
+}
+
+
+.connections-header p{
+    margin:0;
+
+    color:
+        var(--gray);
+
+    font-size:
+        15px;
+
+    line-height:
+        1.55;
+}
+
+
+/* ==========================================
+   Game
+========================================== */
+
+.connections-game{
+    padding:
+        28px;
+
+    background:
+        white;
+
+    border:
+        1px solid var(--border);
+
+    border-radius:
+        22px;
+
+    box-shadow:
+        0 8px 25px
+        rgba(13,24,33,.06);
+}
+
+
+/* ==========================================
+   Character Grid
+========================================== */
+
+.connections-grid{
+    display:grid;
+
+    grid-template-columns:
+        repeat(
+            4,
+            minmax(0,1fr)
+        );
+
+    gap:
+        10px;
+}
+
+
+/* ==========================================
+   Character Tile
+========================================== */
+
+.connections-tile{
+    position:relative;
+
+    min-width:0;
+
+    min-height:
+        145px;
+
+    padding:
+        14px 10px;
+
+    display:flex;
+
+    flex-direction:column;
+
+    align-items:center;
+
+    justify-content:center;
+
+    gap:
+        8px;
+
+    border:
+        2px solid transparent;
+
+    border-radius:
+        14px;
+
+    background:
+        var(--light-gray);
+
+    color:
+        var(--black);
+
+    cursor:pointer;
+
+    transition:
+        transform .14s ease,
+        border-color .14s ease,
+        background .14s ease;
+}
+
+
+.connections-tile:hover{
+    transform:
+        translateY(-2px);
+
+    border-color:
+        #d8d8df;
+}
+
+
+.connections-tile.selected{
+    background:
+        #eeecf5;
+
+    border-color:
+        var(--purple);
+}
+
+
+.connections-tile img{
+    display:block;
+
+    width:
+        82px;
+
+    height:
+        82px;
+
+    object-fit:
+        contain;
+}
+
+
+.connections-tile span{
+    max-width:
+        100%;
+
+    font-size:
+        12px;
+
+    font-weight:
+        800;
+
+    text-align:center;
+
+    line-height:
+        1.2;
+}
+
+
+/* ==========================================
+   Solved Groups
+========================================== */
+
+.connections-solved{
+    display:flex;
+
+    flex-direction:column;
+
+    gap:
+        8px;
+
+    margin-bottom:
+        10px;
+}
+
+
+.connections-solved:empty{
+    display:none;
+}
+
+
+.connections-solved-group{
+    min-height:
+        105px;
+
+    padding:
+        20px;
+
+    display:flex;
+
+    flex-direction:column;
+
+    align-items:center;
+
+    justify-content:center;
+
+    gap:
+        6px;
+
+    border-radius:
+        14px;
+
+    text-align:center;
+
+    color:white;
+}
+
+
+.connections-solved-group:nth-child(1){
+    background:
+        var(--lime);
+}
+
+
+.connections-solved-group:nth-child(2){
+    background:
+        var(--blue);
+}
+
+
+.connections-solved-group:nth-child(3){
+    background:
+        var(--traveller);
+}
+
+
+.connections-solved-group:nth-child(4){
+    background:
+        var(--red);
+}
+
+
+.connections-solved-group strong{
+    font-size:
+        15px;
+
+    font-weight:
+        900;
+
+    text-transform:
+        uppercase;
+
+    letter-spacing:
+        .05em;
+}
+
+
+.connections-solved-group span{
+    font-size:
+        13px;
+
+    font-weight:
+        600;
+}
+
+
+/* ==========================================
+   Controls
+========================================== */
+
+.connections-controls{
+    margin-top:
+        24px;
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:
+        space-between;
+
+    gap:
+        20px;
+}
+
+
+/* Mistakes */
+
+.connections-mistakes{
+    display:flex;
+
+    align-items:center;
+
+    gap:
+        12px;
+}
+
+
+.connections-mistakes > span{
+    color:
+        var(--gray);
+
+    font-size:
+        10px;
+
+    font-weight:
+        900;
+
+    letter-spacing:
+        .07em;
+
+    text-transform:
+        uppercase;
+}
+
+
+.connections-mistake-dots{
+    display:flex;
+
+    gap:
+        6px;
+}
+
+
+.connections-mistake-dots span{
+    width:
+        10px;
+
+    height:
+        10px;
+
+    background:
+        var(--purple);
+
+    border-radius:
+        50%;
+}
+
+
+/* Buttons */
+
+.connections-buttons{
+    display:flex;
+
+    align-items:center;
+
+    gap:
+        8px;
+}
+
+
+.connections-secondary-button,
+.connections-submit-button{
+    padding:
+        10px 15px;
+
+    border:
+        0;
+
+    border-radius:
+        9px;
+
+    font:inherit;
+
+    font-size:
+        10px;
+
+    font-weight:
+        900;
+
+    letter-spacing:
+        .06em;
+
+    text-transform:
+        uppercase;
+
+    cursor:pointer;
+}
+
+
+.connections-secondary-button{
+    background:
+        var(--light-gray);
+
+    color:
+        var(--black);
+}
+
+
+.connections-submit-button{
+    background:
+        var(--purple);
+
+    color:
+        white;
+}
+
+
+.connections-submit-button:disabled{
+    opacity:
+        .35;
+
+    cursor:
+        not-allowed;
+}
+
+
+/* ==========================================
+   Message
+========================================== */
+
+.connections-message{
+    margin-top:
+        18px;
+
+    padding:
+        13px 16px;
+
+    border-radius:
+        10px;
+
+    font-size:
+        13px;
+
+    font-weight:
+        700;
+
+    text-align:center;
+}
+
+
+.connections-message.success,
+.connections-message.win{
+    background:
+        rgba(142,167,66,.14);
+
+    color:
+        #667a2d;
+}
+
+
+.connections-message.error,
+.connections-message.lose{
+    background:
+        rgba(181,35,35,.1);
+
+    color:
+        var(--red);
+}
+
+
+/* ==========================================
+   Mobile
+========================================== */
+
+@media(max-width:700px){
+
+    .connections-page{
+        width:
+            calc(100% - 24px);
+
+        padding:
+            30px 0 45px;
+    }
+
+
+    .connections-game{
+        padding:
+            16px;
+    }
+
+
+    .connections-grid{
+        grid-template-columns:
+            repeat(2, minmax(0,1fr));
+    }
+
+
+    .connections-tile{
+        min-height:
+            125px;
+    }
+
+
+    .connections-tile img{
+        width:
+            68px;
+
+        height:
+            68px;
+    }
+
+
+    .connections-controls{
+        flex-direction:
+            column;
+
+        align-items:
+            stretch;
+    }
+
+
+    .connections-mistakes{
+        justify-content:
+            center;
+    }
+
+
+    .connections-buttons{
+        display:grid;
+
+        grid-template-columns:
+            repeat(2,1fr);
+    }
+
+
+    .connections-submit-button{
+        grid-column:
+            1 / -1;
+    }
+
+}
