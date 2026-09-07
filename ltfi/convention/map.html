@@ -1,275 +1,256 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<link rel="icon" type="image/png" href="/ltfi/images/favicon.png">
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title> Lock the Fuck In </title>
-<link rel="stylesheet" href="/ltfi/css/ltfi-global.css">
-<link rel="stylesheet" href="/ltfi/css/ltfi.css">
+    <link
+        rel="icon"
+        type="image/png"
+        href="/ltfi/images/favicon.png"
+    >
+    <meta charset="UTF-8">
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+    <title>
+        Castle Map · Lock the Fuck In Seattle
+    </title>
+
+    <link
+        rel="stylesheet"
+        href="/ltfi/css/ltfi-global.css"
+    >
+    <link
+        rel="stylesheet"
+        href="/ltfi/css/convention.css"
+    >
 </head>
 <body>
-    <!-- ==========================================
-         Navigation
-    =========================================== -->
-    <header class="convention-header">
-        <nav class="convention-nav">
+<!-- ==========================================
+     Main Navigation
+========================================== -->
+<header class="ltfi-header">
+    <nav class="ltfi-nav">
+        <a
+            class="ltfi-logo"
+            href="/ltfi/"
+        >
+            LOCK THE FUCK IN
+        </a>
+        <div class="ltfi-nav-links">
+            <a href="/ltfi/">
+                Home
+            </a>
+            <a href="/ltfi/calendar/">
+                Calendar
+            </a>
+            <a href="/ltfi/scripts/">
+                Scripts
+            </a>
             <a
                 href="/ltfi/convention/"
-                class="nav-logo"
+                class="active"
             >
-                LOCK THE FUCK IN
+                Convention
             </a>
-            <div class="nav-links">
-                <a href="/ltfi/convention/">
-                    Home
-                </a>
-                <a href="/ltfi/convention/availability.html">
-                    Availability
-                </a>
-                <a
-                    href="/ltfi/convention/map.html"
-                    class="active"
-                >
-                    Map
-                </a>
-                <a href="/ltfi/convention/rooms.html">Rooms</a>
-                <a href="/ltfi/convention/dining.html">
-                    Dining
-                </a>
-                <a href="/ltfi/convention/activities.html">
-                    Activities
-                </a>
-            </div>
-        </nav>
-    </header>
-    <main>
-        <!-- ==========================================
-             Header
-        =========================================== -->
-        <section class="map-hero">
-            <div class="section-inner">
-                <div class="section-label">
-                    NORDIC HILL MANOR
-                </div>
-                <h1>
-                    Explore the castle
-                </h1>
-                <p>
-                    Find bedrooms, event spaces,
-                    and everything else around the manor.
-                </p>
-            </div>
-        </section>
-        <!-- ==========================================
-             Interactive Castle Map
-        =========================================== -->
-<section class="castle-map-section">
-    <div class="section-inner">
-        <div class="castle-explorer">
-            <!-- ==================================
-                 Map
-            =================================== -->
-            <div class="castle-map-column">
-                <div class="floor-viewer">
-                    <div
-                        class="floor-map"
-                        id="floor-map"
-                    >
-                        <!-- Layers inserted by JavaScript -->
-                    </div>
-                </div>
-                <div class="floor-info">
-                    <div>
-                        <div class="section-label">
-                            CURRENT VIEW
-                        </div>
-                        <h2 id="floor-title">
-                            Lower Floor
-                        </h2>
-                    </div>
-                    <p id="floor-description">
-                        Bedrooms, theater, and game spaces.
-                    </p>
-                </div>
-            </div>
-            <!-- ==================================
-                 Navigation
-            =================================== -->
-            <aside class="castle-navigation">
-                <div class="castle-navigation-heading">
-                    <div class="section-label">
-                        EXPLORE THE CASTLE
-                    </div>
-                    <h2>
-                        Where are you going?
-                    </h2>
-                    <p>
-                        Choose a floor to see everything,
-                        or select a room to highlight it.
-                    </p>
-                </div>
-                <!-- Lower -->
-                <div class="castle-floor-group">
-                    <button
-                        class="castle-floor-button active"
-                        type="button"
-                        data-floor="lower"
-                    >
-                        Lower Floor
-                    </button>
-                    <div class="castle-room-list">
-                        <button
-                            type="button"
-                            class="castle-room-button"
-                            data-floor="lower"
-                            data-room="cannibal-cottage"
-                        >
-                            Cannibal Cottage
-                        </button>
-                    </div>
-                </div>
-                <!-- Main -->
-                <div class="castle-floor-group">
-                    <button
-                        class="castle-floor-button"
-                        type="button"
-                        data-floor="main"
-                    >
-                        Main Floor
-                    </button>
-                    <div class="castle-room-list">
-                        <button
-                            type="button"
-                            class="castle-room-button"
-                            data-floor="main"
-                            data-room="generals-quarters"
-                        >
-                            General's Quarters
-                        </button>
-                        <button
-                            type="button"
-                            class="castle-room-button"
-                            data-floor="main"
-                            data-room="huntsmans-hideout"
-                        >
-                            Huntsman's Hideout
-                        </button>
-                        <button
-                            type="button"
-                            class="castle-room-button"
-                            data-floor="main"
-                            data-room="clockmakers-workshop"
-                        >
-                            Clockmaker's Workshop
-                        </button>
-                    </div>
-                </div>
-                <!-- Upper -->
-                <div class="castle-floor-group">
-                    <button
-                        class="castle-floor-button"
-                        type="button"
-                        data-floor="upper"
-                    >
-                        Upper Floor
-                    </button>
-                    <div class="castle-room-list">
-                        <button
-                            type="button"
-                            class="castle-room-button"
-                            data-floor="upper"
-                            data-room="kazali-campground"
-                        >
-                            Kazali Campground
-                        </button>
-                        <button
-                            type="button"
-                            class="castle-room-button"
-                            data-floor="upper"
-                            data-room="politician-office"
-                        >
-                            Politician Office
-                        </button>
-                        <button
-                            type="button"
-                            class="castle-room-button"
-                            data-floor="upper"
-                            data-room="witches-den"
-                        >
-                            Witches Den
-                        </button>
-                        <button
-                            type="button"
-                            class="castle-room-button"
-                            data-floor="upper"
-                            data-room="cult-leader-compound"
-                        >
-                            Cult Leader Compound
-                        </button>
-                        <button
-                            type="button"
-                            class="castle-room-button"
-                            data-floor="upper"
-                            data-room="goblins-grotto"
-                        >
-                            Goblin's Grotto
-                        </button>
-                    </div>
-                </div>
-                <!-- Observatory -->
-                <div class="castle-floor-group">
-                    <button
-                        class="castle-floor-button"
-                        type="button"
-                        data-floor="observatory"
-                    >
-                        Observatory
-                    </button>
-                </div>
-            </aside>
+        </div>
+    </nav>
+</header>
+<!-- ==========================================
+     Convention Navigation
+========================================== -->
+<nav class="convention-subnav">
+    <div class="convention-subnav-inner">
+        <a
+            class="convention-subnav-brand"
+            href="/ltfi/convention/"
+        >
+            SEATTLE 2027
+        </a>
+        <div class="convention-subnav-links">
+            <a href="/ltfi/convention/">
+                Home
+            </a>
+            <a href="/ltfi/convention/tickets.html">
+                Tickets
+            </a>
+            <a href="/ltfi/convention/rooms.html">
+                Rooms
+            </a>
+            <a
+                href="/ltfi/convention/map.html"
+                class="active"
+            >
+                Map
+            </a>
         </div>
     </div>
-</section>
-        <!-- ==========================================
-             Getting Here
-        =========================================== -->
-        <section class="map-location-section">
-            <div class="section-inner">
-                <div class="location-card">
+</nav>
+<!-- ==========================================
+     Map Page
+========================================== -->
+<main class="castle-map-page">
+    <!-- ======================================
+         Page Header
+    ======================================= -->
+    <header class="castle-map-header">
+        <div class="section-label">
+            NORDIC HILL MANOR
+        </div>
+        <h1>
+            Castle Map
+        </h1>
+        <p>
+            Explore the castle by floor or select
+            a room from the directory.
+        </p>
+    </header>
+    <!-- ======================================
+         Kiosk
+    ======================================= -->
+    <section class="castle-kiosk">
+        <!-- ==================================
+             Floor Navigation
+        =================================== -->
+        <div class="castle-floor-tabs">
+            <button
+                class="castle-floor-tab"
+                data-floor="lower"
+                type="button"
+            >
+                <span>01</span>
+                Lower Floor
+            </button>
+            <button
+                class="castle-floor-tab active"
+                data-floor="main"
+                type="button"
+            >
+                <span>02</span>
+                Main Floor
+            </button>
+            <button
+                class="castle-floor-tab"
+                data-floor="upper"
+                type="button"
+            >
+                <span>03</span>
+                Upper Floor
+            </button>
+            <button
+                class="castle-floor-tab"
+                data-floor="observatory"
+                type="button"
+            >
+                <span>04</span>
+                Observatory
+            </button>
+        </div>
+        <!-- ==================================
+             Kiosk Body
+        =================================== -->
+        <div class="castle-kiosk-body">
+            <!-- ==============================
+                 Directory
+            =============================== -->
+            <aside class="castle-directory">
+                <div class="castle-directory-heading">
+                    <span>
+                        Directory
+                    </span>
+                    <strong id="castle-directory-floor">
+                        Main Floor
+                    </strong>
+                </div>
+                <div
+                    class="castle-directory-list"
+                    id="castle-directory-list"
+                >
+                    <!-- Added by JavaScript -->
+                </div>
+            </aside>
+            <!-- ==============================
+                 Floor Map
+            =============================== -->
+            <div class="castle-map-display">
+                <div class="castle-map-title">
                     <div>
-                        <div class="section-label">
-                            GETTING HERE
-                        </div>
-                        <h2>
-                            Nordic Hill Manor
-                        </h2>
-                        <p>
-                            Poulsbo, Washington
-                        </p>
+                        <span>
+                            Currently Viewing
+                        </span>
+                        <strong id="castle-map-floor-name">
+                            Main Floor
+                        </strong>
                     </div>
-                    <a
-                        href="https://www.google.com/maps/search/?api=1&query=Nordic+Hill+Manor+Poulsbo+Washington"
-                        target="_blank"
-                        rel="noopener"
-                        class="primary-button"
+                </div>
+                <div
+                    class="castle-floor-plan"
+                    id="castle-floor-plan"
+                >
+                    <img
+                        id="castle-floor-image"
+                        src=""
+                        alt="Main Floor"
                     >
-                        Get Directions
-                    </a>
+                    <div
+                        class="castle-map-hotspots"
+                        id="castle-map-hotspots"
+                    >
+                        <!-- Added by JavaScript -->
+                    </div>
                 </div>
             </div>
-        </section>
-    </main>
-    <footer class="convention-footer">
-        <div>
-            LOCK THE FUCK IN SEATTLE
         </div>
-        <div>
-            AUGUST 20-25, 2027
+        <!-- ==================================
+             Selected Room
+        =================================== -->
+        <div
+            class="castle-selected-room"
+            id="castle-selected-room"
+            hidden
+        >
+            <div class="castle-selected-image">
+                <img
+                    id="castle-selected-image"
+                    src=""
+                    alt=""
+                >
+            </div>
+            <div class="castle-selected-info">
+                <span
+                    class="castle-selected-type"
+                    id="castle-selected-type"
+                >
+                    Bedroom
+                </span>
+                <h2 id="castle-selected-name">
+                    Room Name
+                </h2>
+                <p id="castle-selected-description">
+                </p>
+            </div>
+            <a
+                class="castle-selected-button"
+                id="castle-selected-button"
+                href="#"
+            >
+                View Room
+            </a>
         </div>
-    </footer>
-    <script
-        src="/ltfi/convention/js/convention-map.js"
-    ></script>
+    </section>
+</main>
+<!-- ==========================================
+     Footer
+========================================== -->
+<footer class="ltfi-footer">
+    <div>
+        LOCK THE FUCK IN
+    </div>
+    <div>
+        SEATTLE 2027 · AUGUST 20-25
+    </div>
+</footer>
+<script
+    src="/ltfi/convention/js/convention-map.js"
+></script>
 </body>
 </html>
