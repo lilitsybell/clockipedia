@@ -13,7 +13,7 @@ const castleMapData = {
                 type:
                     "Bedroom",
                 image:
-                    "/ltfi/convention/images/rooms/cannibal.png"
+                    "/ltfi/convention/images/rooms/room-cannibal.png"
             },
             {
                 name:
@@ -21,7 +21,7 @@ const castleMapData = {
                 type:
                     "Bedroom",
                 image:
-                    "/ltfi/convention/images/rooms/hermit.png"
+                    "/ltfi/convention/images/rooms/room-cannibal.png"
             },
             {
                 name:
@@ -29,7 +29,7 @@ const castleMapData = {
                 type:
                     "Shared Space",
                 image:
-                    "/ltfi/convention/images/rooms/gambler.png"
+                    "/ltfi/convention/images/rooms/room-gambler.png"
             },
             {
                 name:
@@ -37,7 +37,7 @@ const castleMapData = {
                 type:
                     "Shared Space",
                 image:
-                    "/ltfi/convention/images/rooms/typhon.png"
+                    "/ltfi/convention/images/rooms/room-typhon.png"
             }
         ]
     },
@@ -53,7 +53,7 @@ const castleMapData = {
                     "Shared Space",
 
                 image:
-                    "/ltfi/convention/images/rooms/doomsayer.png"
+                    "/ltfi/convention/images/rooms/room-doomsayer2.png"
             },
             {
                 name:
@@ -61,7 +61,7 @@ const castleMapData = {
                 type:
                     "Shared Space",
                 image:
-                    "/ltfi/convention/images/rooms/chef.png"
+                    "/ltfi/convention/images/rooms/room-chef2.png"
             },
             {
                 name:
@@ -69,7 +69,7 @@ const castleMapData = {
                 type:
                     "Bedroom",
                 image:
-                    "/ltfi/convention/images/rooms/general.png"
+                    "/ltfi/convention/images/rooms/room-general2.png"
             },
             {
                 name:
@@ -77,7 +77,7 @@ const castleMapData = {
                 type:
                     "Bedroom",
                 image:
-                    "/ltfi/convention/images/rooms/huntsman.png"
+                    "/ltfi/convention/images/rooms/room-huntsman2.png"
             },
             {
                 name:
@@ -85,7 +85,7 @@ const castleMapData = {
                 type:
                     "Shared Space",
                 image:
-                    "/ltfi/convention/images/rooms/innkeeper.png"
+                    "/ltfi/convention/images/rooms/room-innkeeper2.png"
             },
             {
                 name:
@@ -93,7 +93,7 @@ const castleMapData = {
                 type:
                     "Bedroom",
                 image:
-                    "/ltfi/convention/images/rooms/clockmaker.png"
+                    "/ltfi/convention/images/rooms/room-clockmaker2.png"
             }
         ]
     },
@@ -107,7 +107,7 @@ const castleMapData = {
                 type:
                     "Bedroom",
                 image:
-                    "/ltfi/convention/images/rooms/goblin.png"
+                    "/ltfi/convention/images/rooms/room-goblin.png"
             },
             {
                 name:
@@ -115,7 +115,7 @@ const castleMapData = {
                 type:
                     "Bedroom",
                 image:
-                    "/ltfi/convention/images/rooms/witches.png"
+                    "/ltfi/convention/images/rooms/room-witch.png"
             },
             {
                 name:
@@ -123,7 +123,7 @@ const castleMapData = {
                 type:
                     "Bedroom",
                 image:
-                    "/ltfi/convention/images/rooms/politician.png"
+                    "/ltfi/convention/images/rooms/room-politician.png"
             },
             {
                 name:
@@ -131,7 +131,7 @@ const castleMapData = {
                 type:
                     "Bedroom",
                 image:
-                    "/ltfi/convention/images/rooms/cult-leader.png"
+                    "/ltfi/convention/images/rooms/room-cult-leader.png"
             },
             {
                 name:
@@ -139,7 +139,7 @@ const castleMapData = {
                 type:
                     "Bedroom",
                 image:
-                    "/ltfi/convention/images/rooms/kazali.png"
+                    "/ltfi/convention/images/rooms/room-kazali.png"
             },
             {
                 name:
@@ -149,7 +149,7 @@ const castleMapData = {
                     "Bedroom",
 
                 image:
-                    "/ltfi/convention/images/rooms/marionette.png"
+                    "/ltfi/convention/images/rooms/room-kazali.png"
             },
             {
                 name:
@@ -157,7 +157,7 @@ const castleMapData = {
                 type:
                     "Shared Space",
                 image:
-                    "/ltfi/convention/images/rooms/no-dashii.png"
+                    "/ltfi/convention/images/rooms/room-no-dashii.png"
             },
             {
                 name:
@@ -165,7 +165,7 @@ const castleMapData = {
                 type:
                     "Shared Space",
                 image:
-                    "/ltfi/convention/images/rooms/puzzlemaster.png"
+                    "/ltfi/convention/images/rooms/room-puzzlemaster.png"
             },
             {
                 name:
@@ -173,7 +173,7 @@ const castleMapData = {
                 type:
                     "Shared Space",
                 image:
-                    "/ltfi/convention/images/rooms/golem.png"
+                    "/ltfi/convention/images/rooms/room-golem.png"
             }
         ]
     },
@@ -187,7 +187,7 @@ const castleMapData = {
                 type:
                     "Shared Space",
                 image:
-                    "/ltfi/convention/images/rooms/ojo.png"
+                    "/ltfi/convention/images/rooms/room-ojo.png"
             }
         ]
     }
