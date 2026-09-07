@@ -8,6 +8,7 @@ let selectedCharacters =
     new Set();
 let solvedGroups = [];
 let mistakesRemaining = 4;
+let connectionsGuesses = [];
 /* ==========================================
    Start Game
 ========================================== */
@@ -399,7 +400,9 @@ async function submitConnectionsSelection(){
 
     const selected =
         [...selectedCharacters];
-
+connectionsGuesses.push(
+    selected
+);
 
     const matchedGroup =
         connectionsPuzzle.groups
@@ -775,7 +778,86 @@ function endConnectionsGame(){
 
 }
 
+/* ==========================================
+   Results
+========================================== */
 
+function showConnectionsResults(
+    won
+){
+
+    const results =
+        document.querySelector(
+            "#connectionsResults"
+        );
+
+    const title =
+        document.querySelector(
+            "#connectionsResultsTitle"
+        );
+
+    const text =
+        document.querySelector(
+            "#connectionsResultsText"
+        );
+
+    const number =
+        document.querySelector(
+            "#connectionsPuzzleNumber"
+        );
+
+
+    results.hidden = false;
+
+
+    number.textContent =
+        `Puzzle #${connectionsPuzzle.id}`;
+
+
+    if(won){
+
+        if(mistakesRemaining === 4){
+
+            title.textContent =
+                "Perfect Game!";
+
+            text.textContent =
+                "You found every connection without making a mistake.";
+
+        }
+        else{
+
+            title.textContent =
+                "Puzzle Solved!";
+
+            const mistakes =
+                4 - mistakesRemaining;
+
+
+            text.textContent =
+                `You found all four connections with ${mistakes} ${
+                    mistakes === 1
+                        ? "mistake"
+                        : "mistakes"
+                }.`;
+
+        }
+
+    }
+    else{
+
+        title.textContent =
+            "So Close!";
+
+        text.textContent =
+            "The remaining connections have been revealed.";
+
+    }
+
+
+    renderConnectionsResultGrid();
+
+}
 /* ==========================================
    Shuffle
 ========================================== */
