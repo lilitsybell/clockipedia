@@ -8,36 +8,28 @@ const castleMapData = {
             "Lower Floor",
         rooms: [
             {
-                name:
-                    "Cannibal Cottage",
-                type:
-                    "Bedroom",
-                image:
-                    "/ltfi/convention/images/rooms/room-cannibal.png"
+                name: "Cannibal Cottage",
+                type: "Bedroom",
+                image: "/ltfi/convention/images/rooms/room-cannibal.png",
+                url: "/ltfi/convention/rooms/cannibal-cottage.html"
             },
             {
-                name:
-                    "Hermit Hideout",
-                type:
-                    "Bedroom",
-                image:
-                    "/ltfi/convention/images/rooms/room-cannibal.png"
+                name: "Hermit Hideout",
+                type: "Bedroom",
+                image: "/ltfi/convention/images/rooms/room-cannibal.png",
+                url: "/ltfi/convention/rooms/cannibal-cottage.html"
             },
             {
-                name:
-                    "Gambler's Game Room",
-                type:
-                    "Shared Space",
-                image:
-                    "/ltfi/convention/images/rooms/room-gambler.png"
+                name: "Gambler's Game Room",
+                type: "Shared Space",
+                image: "/ltfi/convention/images/rooms/room-gambler.png",
+                url: "/ltfi/convention/rooms/gamblers-game-room.html"
             },
             {
-                name:
-                    "Typhon Theater",
-                type:
-                    "Shared Space",
-                image:
-                    "/ltfi/convention/images/rooms/room-typhon.png"
+                name: "Typhon Theater",
+                type: "Shared Space",
+                image: "/ltfi/convention/images/rooms/room-typhon.png",
+                url: "/ltfi/convention/rooms/typhon-theater.html"
             }
         ]
     },
