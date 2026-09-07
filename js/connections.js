@@ -54,12 +54,10 @@ async function loadConnectionsPuzzle(){
         );
 
     }
-
-
-    connectionsPuzzle =
-        await response.json();
-
-
+const puzzles =
+    await response.json();
+connectionsPuzzle =
+    puzzles[0];
     connectionsCharacters =
         connectionsPuzzle.groups
             .flatMap(
