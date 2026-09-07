@@ -322,30 +322,53 @@ function toggleCharacterSelection(
 
 }
 function animateCorrectSelection(){
-
+    const grid =
+        document.querySelector(
+            "#connectionsGrid"
+        );
+    if(!grid){
+        return;
+    }
+    const gridRect =
+        grid.getBoundingClientRect();
+    const centerX =
+        gridRect.left +
+        gridRect.width / 2;
+    const centerY =
+        gridRect.top +
+        gridRect.height / 2;
     selectedCharacters
         .forEach(
             characterId => {
-
                 const tile =
                     document.querySelector(
                         `[data-character="${characterId}"]`
                     );
-
-                if(tile){
-
-                    tile.classList.add(
-                        "correct-pop"
-                    );
-
+                if(!tile){
+                    return;
                 }
-
+                const rect =
+                    tile.getBoundingClientRect();
+                const tileCenterX =
+                    rect.left +
+                    rect.width / 2;
+                const tileCenterY =
+                    rect.top +
+                    rect.height / 2;
+                tile.style.setProperty(
+                    "--collapse-x",
+                    `${centerX - tileCenterX}px`
+                );
+                tile.style.setProperty(
+                    "--collapse-y",
+                    `${centerY - tileCenterY}px`
+                );
+                tile.classList.add(
+                    "correct-collapse"
+                );
             }
         );
-
 }
-
-
 function animateWrongSelection(){
 
     selectedCharacters
