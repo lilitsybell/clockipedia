@@ -2576,6 +2576,11 @@ body.gallery-open {
     background: var(--dark-visual);
     color: var(--white);
 }
+.room-list-status{
+    opacity:1;
+    visibility:visible;
+    transform:none;
+}
 /* ==========================================
    Card Content
 ========================================== */
