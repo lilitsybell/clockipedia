@@ -3,7 +3,7 @@
         "id": 1,
         "groups": [
             {
-                "name": "Characters That Choose Players",
+                "name": "Chooses Players",
                 "characters": [
                     "courtier",
                     "exorcist",
@@ -30,12 +30,53 @@
                 ]
             },
             {
-                "name": "Abilities Involve Nominations",
+                "name": "Involve Nominations",
                 "characters": [
                     "golem",
                     "witch",
                     "fearmonger",
                     "towncrier"
+                ]
+            }
+        ]
+    },
+    {
+        "id": 2,
+        "groups": [
+            {
+                "name": "Learns Characters",
+                "characters": [
+                    "washerwoman",
+                    "king",
+                    "investigator",
+                    "undertaker"
+                ]
+            },
+            {
+                "name": "Can Change Alignment",
+                "characters": [
+                    "snakecharmer",
+                    "cultleader",
+                    "ogre",
+                    "goon"
+                ]
+            },
+            {
+                "name": "Prevent Death",
+                "characters": [
+                    "pacifist",
+                    "tealady",
+                    "innkeeper",
+                    "sailor"
+                ]
+            },
+            {
+                "name": "Affect Outsider Count",
+                "characters": [
+                    "baron",
+                    "fanggu",
+                    "godfather",
+                    "balloonist"
                 ]
             }
         ]
