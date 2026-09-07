@@ -3408,3 +3408,6 @@ body.gallery-open {
     font-size: 14px;
     line-height: 1.5;
 }
+.castle-selected-button[hidden]{
+    display:none;
+}
