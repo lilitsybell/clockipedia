@@ -3374,3 +3374,37 @@ body.gallery-open {
     transform: translateY(-1px);
     opacity: .9;
 }
+/* ==========================================
+   Map Placeholder
+========================================== */
+.castle-map-placeholder{
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+    justify-content:center;
+    width:100%;
+    min-height: 450px;
+    padding: 40px;
+    text-align:center;
+}
+.castle-map-placeholder span{
+    margin-bottom: 8px;
+    color: var(--teal);
+    font-size: 10px;
+    font-weight: 900;
+    letter-spacing: .11em;
+    text-transform: uppercase;
+}
+.castle-map-placeholder strong{
+    color: var(--dark-text);
+    font-size: 30px;
+    font-weight: 800;
+    letter-spacing: -.035em;
+}
+.castle-map-placeholder p{
+    max-width: 340px;
+    margin: 10px 0 0;
+    color: var(--muted);
+    font-size: 14px;
+    line-height: 1.5;
+}
