@@ -2058,15 +2058,22 @@ body.gallery-open {
     opacity:.8;
 }
 /* ==========================================
-   Booking Sections
+   Booking Form Sections
 ========================================== */
 .booking-form-section{
-    padding:24px 0;
-    border-top: 1px solid var(--light);
+    padding: 22px 0;
+    border-top: 1px solid var(--border);
+}
+.booking-form-section:first-of-type{
+    padding-top: 0;
+    border-top: 0;
 }
 .booking-form-section h3{
-    margin:0 0 15px;
-    font-size:19px;
+    margin: 0 0 14px;
+    color: var(--dark-text);
+    font-size: 16px;
+    font-weight: 800;
+    letter-spacing: -.015em;
 }
 /* ==========================================
    Bed Options
