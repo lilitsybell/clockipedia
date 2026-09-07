@@ -1,20 +1,13 @@
 console.log(
     "connections.js loaded"
 );
-
-
+let newestSolvedGroup = null;
 let connectionsPuzzle = null;
-
 let connectionsCharacters = [];
-
 let selectedCharacters =
     new Set();
-
 let solvedGroups = [];
-
 let mistakesRemaining = 4;
-
-
 /* ==========================================
    Start Game
 ========================================== */
@@ -420,20 +413,15 @@ async function submitConnectionsSelection(){
 
 
     if(matchedGroup){
-
         animateCorrectSelection();
-
-
-        await waitConnections(
-            380
-        );
-
-
-        solvedGroups.push(
-            matchedGroup
-        );
-
-
+await waitConnections(
+    460
+);
+newestSolvedGroup =
+    matchedGroup;
+solvedGroups.push(
+    matchedGroup
+);
         selectedCharacters.clear();
 
 
@@ -585,7 +573,13 @@ function renderSolvedGroups(){
 
             row.className =
                 "connections-solved-group";
+if(group === newestSolvedGroup){
 
+    row.classList.add(
+        "newly-solved"
+    );
+
+}
 
             row.dataset.group =
                 index;
@@ -633,7 +627,7 @@ function renderSolvedGroups(){
 
         }
     );
-
+newestSolvedGroup = null;
 }
 
 
