@@ -466,6 +466,10 @@ function showSelectedRoom(
         document.querySelector(
             "#castle-selected-description"
         );
+   const button =
+    document.querySelector(
+        "#castle-selected-button"
+    );
     if(!panel){
         return;
     }
@@ -491,6 +495,18 @@ function showSelectedRoom(
                 currentFloor
             ].name;
     }
+if(button){
+    if(room.url){
+        button.href =
+            room.url;
+        button.hidden =
+            false;
+    }
+    else{
+        button.hidden =
+            true;
+    }
+}
 }
 /* ==========================================
    Hide Selected Room
