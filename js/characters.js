@@ -76,7 +76,10 @@ async function loadCharacters(){
     if(Object.keys(characters).length){
         return characters;
     }
-    const response = await fetch("./data/characters.json");
+    const response =
+        await fetch(
+            "/data/characters.json"
+        );
     characters = await response.json();
     return characters;
 }
