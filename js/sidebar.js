@@ -22,28 +22,32 @@ document.addEventListener("DOMContentLoaded", () => {
 
 </div>
         <nav class="sidebar-nav">
-            <a href="/interaction-finder.html" class="nav-link">
-                Interactions
-            </a>
-            <a href="/scripts.html" class="nav-link">
-                Scripts
-            </a>
-<a href="/characters.html" class="nav-link">
-    Characters
-</a>
+<a href="/interaction-finder.html" class="nav-link"> Interactions </a>
+<a href="/scripts.html" class="nav-link"> Scripts </a>
+<a href="/characters.html" class="nav-link"> Characters </a>
+<a href="/games.html" class="nav-link"> Games </a>
         </nav>
     `;
-
 // Highlight current page
-const currentPage = window.location.pathname;
-document.querySelectorAll(".nav-link").forEach(link => {
-    if (new URL(link.href).pathname === currentPage) {
-        link.classList.add("active");
-    }
-});
-
+const currentPage =
+    window.location.pathname
+        .replace(/index\.html$/, "")
+        .replace(/\/$/, "");
+document
+    .querySelectorAll(".nav-link")
+    .forEach(link => {
+        const linkPage =
+            new URL(link.href)
+                .pathname
+                .replace(/index\.html$/, "")
+                .replace(/\/$/, "");
+        if(linkPage === currentPage){
+            link.classList.add(
+                "active"
+            );
+        }
+    });
     // Character dropdown
-
     const characterToggle = document.querySelector(".character-toggle");
     const characterSection = document.querySelector(".character-section");
 
