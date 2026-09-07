@@ -2,6 +2,7 @@ console.log(
     "connections.js loaded"
 );
 let newestSolvedGroup = null;
+let connectionsPuzzles = [];
 let connectionsPuzzle = null;
 let connectionsCharacters = [];
 let selectedCharacters =
@@ -49,10 +50,10 @@ async function loadConnectionsPuzzle(){
         );
 
     }
-const puzzles =
+connectionsPuzzles =
     await response.json();
 connectionsPuzzle =
-    puzzles[0];
+    connectionsPuzzles[0];
     connectionsCharacters =
         connectionsPuzzle.groups
             .flatMap(
