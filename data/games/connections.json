@@ -3,11 +3,11 @@
         "id": 1,
         "groups": [
             {
-                "name": "Chooses Players",
+                "name": "Can Prevent Demon From Killing",
                 "characters": [
                     "courtier",
                     "exorcist",
-                    "slayer",
+                    "monk",
                     "poisoner"
                 ]
             },
