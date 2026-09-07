@@ -12,28 +12,28 @@ const castleMapData = {
                 type: "Bedroom",
                 image: "/ltfi/convention/images/rooms/room-cannibal.png",
                 url: "/ltfi/convention/rooms/cannibal-cottage.html",
-                photo: "/ltfi/convention/images/rooms/cannibal-4.html"
+                photo: "/ltfi/convention/images/rooms/cannibal-4.jpg"
             },
             {
                 name: "Hermit Hideout",
                 type: "Bedroom",
                 image: "/ltfi/convention/images/rooms/room-cannibal.png",
                 url: "/ltfi/convention/rooms/cannibal-cottage.html",
-                photo: "/ltfi/convention/images/rooms/cannibal-1.html"
+                photo: "/ltfi/convention/images/rooms/cannibal-1.jpg"
             },
             {
                 name: "Gambler's Game Room",
                 type: "Shared Space",
                 image: "/ltfi/convention/images/rooms/room-gambler.png",
                 url: "/ltfi/convention/rooms/gamblers-game-room.html",
-                photo: "/ltfi/convention/images/rooms/gambler-1.html"
+                photo: "/ltfi/convention/images/rooms/gambler-1.jpg"
             },
             {
                 name: "Typhon Theater",
                 type: "Shared Space",
                 image: "/ltfi/convention/images/rooms/room-typhon.png",
                 url: "/ltfi/convention/rooms/typhon-theater.html",
-                photo: "/ltfi/convention/images/rooms/typhon-1.html"
+                photo: "/ltfi/convention/images/rooms/typhon-1.jpg"
             }
         ]
     },
@@ -46,42 +46,42 @@ const castleMapData = {
                 type: "Shared Space",
                 image: "/ltfi/convention/images/rooms/room-doomsayer2.png",
                 url: "/ltfi/convention/rooms/doomsayer-diner.html",
-                photo: "/ltfi/convention/images/rooms/doomsayer-1.html"
+                photo: "/ltfi/convention/images/rooms/doomsayer-1.jpg"
             },
             {
                 name: "Chef's Kitchen",
                 type: "Shared Space",
                 image: "/ltfi/convention/images/rooms/room-chef2.png",
                 url: "/ltfi/convention/rooms/chefs-kitchen.html",
-                photo: "/ltfi/convention/images/rooms/chef-1.html"
+                photo: "/ltfi/convention/images/rooms/chef-1.jpg"
             },
             {
                 name: "General's Quarters",
                 type: "Bedroom",
                 image: "/ltfi/convention/images/rooms/room-general2.png",
                 url: "/ltfi/convention/rooms/generals-quarters.html",
-                photo: "/ltfi/convention/images/rooms/general-1.html"
+                photo: "/ltfi/convention/images/rooms/general-1.jpg"
             },
             {
                 name: "Huntsman's Hideout",
                 type: "Bedroom",
                 image: "/ltfi/convention/images/rooms/room-huntsman2.png",
                 url: "/ltfi/convention/rooms/huntsmans-hideout.html",
-                photo: "/ltfi/convention/images/rooms/huntsman-1.html"
+                photo: "/ltfi/convention/images/rooms/huntsman-1.jpg"
             },
             {
                 name: "Innkeeper's Tavern",
                 type: "Shared Space",
                 image: "/ltfi/convention/images/rooms/room-innkeeper2.png",
                 url: "/ltfi/convention/rooms/innkeepers-tavern.html",
-                photo: "/ltfi/convention/images/rooms/innkeeper-1.html"
+                photo: "/ltfi/convention/images/rooms/innkeeper-1.jpg"
             },
             {
                 name: "Clockmaker's Workshop",
                 type: "Bedroom",
                 image: "/ltfi/convention/images/rooms/room-clockmaker2.png",
                 url: "/ltfi/convention/rooms/clockmakers-workshop.html",
-                photo: "/ltfi/convention/images/rooms/clockmaker-1.html"
+                photo: "/ltfi/convention/images/rooms/clockmaker-1.jpg"
             }
         ]
     },
@@ -93,63 +93,63 @@ const castleMapData = {
                 type: "Bedroom",
                 image: "/ltfi/convention/images/rooms/room-goblin.png",
                 url: "/ltfi/convention/rooms/goblins-grotto.html",
-                photo: "/ltfi/convention/images/rooms/goblin-1.html"
+                photo: "/ltfi/convention/images/rooms/goblin-1.jpg"
             },
             {
                 name: "Witches Den",
                 type: "Bedroom",
                 image: "/ltfi/convention/images/rooms/room-witch.png",
                 url: "/ltfi/convention/rooms/witches-den.html",
-                photo: "/ltfi/convention/images/rooms/witch-1.html"
+                photo: "/ltfi/convention/images/rooms/witch-1.jpg"
             },
             {
                 name: "Politician Office",
                 type: "Bedroom",
                 image: "/ltfi/convention/images/rooms/room-politician.png",
                 url: "/ltfi/convention/rooms/politician-office.html",
-                photo: "/ltfi/convention/images/rooms/politician-1.html"
+                photo: "/ltfi/convention/images/rooms/politician-1.jpg"
             },
             {
                 name: "Cult Leader Compound",
                 type: "Bedroom",
                 image: "/ltfi/convention/images/rooms/room-cult-leader.png",
                 url: "/ltfi/convention/rooms/cult-leader-compound.html",
-                photo: "/ltfi/convention/images/rooms/cult-1.html"
+                photo: "/ltfi/convention/images/rooms/cult-1.jpg"
             },
             {
                 name: "Kazali Campground",
                 type: "Bedroom",
                 image: "/ltfi/convention/images/rooms/room-kazali.png",
                 url: "/ltfi/convention/rooms/kazali-campground.html",
-                photo: "/ltfi/convention/images/rooms/kazali-1.html"
+                photo: "/ltfi/convention/images/rooms/kazali-1.jpg"
             },
             {
                 name: "Marionette Motel",
                 type: "Bedroom",
                 image: "/ltfi/convention/images/rooms/room-kazali.png",
                 url: "/ltfi/convention/rooms/kazali-campground.html",
-                photo: "/ltfi/convention/images/rooms/kazali-3.html"
+                photo: "/ltfi/convention/images/rooms/kazali-3.jpg"
             },
             {
                 name: "No Dashii Springs",
                 type: "Shared Space",
                 image: "/ltfi/convention/images/rooms/room-no-dashii.png",
                 url: "/ltfi/convention/rooms/no-dashii-springs.html",
-                photo: "/ltfi/convention/images/rooms/no-dashii-1.html"
+                photo: "/ltfi/convention/images/rooms/no-dashii-1.jpg"
             },
             {
                 name: "Puzzlemaster Paradise",
                 type: "Shared Space",
                 image: "/ltfi/convention/images/rooms/room-puzzlemaster.png",
                 url: "/ltfi/convention/rooms/puzzlemaster-paradise.html",
-                photo: "/ltfi/convention/images/rooms/puzzlemaster-1.html"
+                photo: "/ltfi/convention/images/rooms/puzzlemaster-1.jpg"
             },
             {
                 name: "Golem's Chamber",
                 type: "Shared Space",
                 image: "/ltfi/convention/images/rooms/room-golem.png",
                 url: "/ltfi/convention/rooms/golems-chamber.html",
-                photo: "/ltfi/convention/images/rooms/golem-1.html"
+                photo: "/ltfi/convention/images/rooms/golem-1.jpg"
             }
         ]
     },
@@ -161,7 +161,7 @@ const castleMapData = {
                 type: "Shared Space",
                 image: "/ltfi/convention/images/rooms/room-ojo.png",
                 url: "/ltfi/convention/rooms/ojo-observatory.html",
-                photo: "/ltfi/convention/images/rooms/ojo-1.html"
+                photo: "/ltfi/convention/images/rooms/ojo-1.png"
             }
         ]
     }
