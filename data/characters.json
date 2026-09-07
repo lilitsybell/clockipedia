@@ -2779,7 +2779,7 @@
 },
 "fearmonger":
 {
-    "name": "fearmonger",
+    "name": "Fearmonger",
     "team": "Minions",
     "image": "https://images.klutzbanana.com/characters_official/fearmonger_e.png",
     "ability": "Each night, choose a player: if you nominate & execute them, their team loses. All players know if you choose a new player.",
