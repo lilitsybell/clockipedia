@@ -1,567 +1,552 @@
-console.log(
-    "Lock the Fuck In Seattle map loaded"
-);
-
-
+console.log("convention-map.js loaded");
 /* ==========================================
-   Map Configuration
+   Map Data
 ========================================== */
-
-const mapBasePath =
-    "/ltfi/convention/images/map/";
-
-
-const floors = {
-
+const castleMapData = {
     lower: {
-
-        title: "Lower Floor",
-
-        description:
-            "Bedrooms, theater, and game spaces.",
-
-        base:
-            "lower-2.PNG",
-
-        labels:
-            "lower-1.PNG",
-
+        name:
+            "Lower Floor",
         rooms: [
-
             {
-                id: "cannibal-cottage",
-                name: "Cannibal Cottage",
-                image: "cannibal-cottage.PNG"
+                name:
+                    "Cannibal Cottage",
+                type:
+                    "Bedroom",
+                image:
+                    "/ltfi/convention/images/rooms/cannibal.png"
+            },
+            {
+                name:
+                    "Hermit Hideout",
+                type:
+                    "Bedroom",
+                image:
+                    "/ltfi/convention/images/rooms/hermit.png"
+            },
+            {
+                name:
+                    "Gambler's Game Room",
+                type:
+                    "Shared Space",
+                image:
+                    "/ltfi/convention/images/rooms/gambler.png"
+            },
+            {
+                name:
+                    "Typhon Theater",
+                type:
+                    "Shared Space",
+                image:
+                    "/ltfi/convention/images/rooms/typhon.png"
             }
-
         ]
-
     },
-
-
     main: {
-
-        title: "Main Floor",
-
-        description:
-            "Entry, gathering spaces, kitchen, dining, and bedrooms.",
-
-        base:
-            "main-2.PNG",
-
-        labels:
-            "main-1.PNG",
-
+        name:
+            "Main Floor",
         rooms: [
-
             {
-                id: "generals-quarters",
-                name: "General's Quarters",
-                image: "generals-quarters.PNG"
+                name:
+                    "Doomsayer Diner",
+
+                type:
+                    "Shared Space",
+
+                image:
+                    "/ltfi/convention/images/rooms/doomsayer.png"
             },
-
             {
-                id: "huntsmans-hideout",
-                name: "Huntsman's Hideout",
-                image: "huntsmans-hideout.PNG"
+                name:
+                    "Chef's Kitchen",
+                type:
+                    "Shared Space",
+                image:
+                    "/ltfi/convention/images/rooms/chef.png"
             },
-
             {
-                id: "clockmakers-workshop",
-                name: "Clockmaker's Workshop",
-                image: "clockmakers-workshop.PNG"
+                name:
+                    "General's Quarters",
+                type:
+                    "Bedroom",
+                image:
+                    "/ltfi/convention/images/rooms/general.png"
+            },
+            {
+                name:
+                    "Huntsman's Hideout",
+                type:
+                    "Bedroom",
+                image:
+                    "/ltfi/convention/images/rooms/huntsman.png"
+            },
+            {
+                name:
+                    "Innkeeper's Tavern",
+                type:
+                    "Shared Space",
+                image:
+                    "/ltfi/convention/images/rooms/innkeeper.png"
+            },
+            {
+                name:
+                    "Clockmaker's Workshop",
+                type:
+                    "Bedroom",
+                image:
+                    "/ltfi/convention/images/rooms/clockmaker.png"
             }
-
         ]
-
     },
-
-
     upper: {
-
-        title: "Upper Floor",
-
-        description:
-            "Bedrooms, decks, conference space, and the hot tub.",
-
-        base:
-            "upper-2.PNG",
-
-        labels:
-            "upper-1.PNG",
-
+        name:
+            "Upper Floor",
         rooms: [
-
             {
-                id: "kazali-campground",
-                name: "Kazali Campground",
-                image: "kazali-campground.PNG"
+                name:
+                    "Goblin's Grotto",
+                type:
+                    "Bedroom",
+                image:
+                    "/ltfi/convention/images/rooms/goblin.png"
             },
-
             {
-                id: "politician-office",
-                name: "Politician Office",
-                image: "politician-office.PNG"
+                name:
+                    "Witches Den",
+                type:
+                    "Bedroom",
+                image:
+                    "/ltfi/convention/images/rooms/witches.png"
             },
-
             {
-                id: "witches-den",
-                name: "Witches Den",
-                image: "witches-den.PNG"
+                name:
+                    "Politician Office",
+                type:
+                    "Bedroom",
+                image:
+                    "/ltfi/convention/images/rooms/politician.png"
             },
-
             {
-                id: "cult-leader-compound",
-                name: "Cult Leader Compound",
-                image: "cult-leader-compound.PNG"
+                name:
+                    "Cult Leader Compound",
+                type:
+                    "Bedroom",
+                image:
+                    "/ltfi/convention/images/rooms/cult-leader.png"
             },
-
             {
-                id: "goblins-grotto",
-                name: "Goblin's Grotto",
-                image: "goblins-grotto.PNG"
+                name:
+                    "Kazali Campground",
+                type:
+                    "Bedroom",
+                image:
+                    "/ltfi/convention/images/rooms/kazali.png"
+            },
+            {
+                name:
+                    "Marionette Motel",
+
+                type:
+                    "Bedroom",
+
+                image:
+                    "/ltfi/convention/images/rooms/marionette.png"
+            },
+            {
+                name:
+                    "No Dashii Springs",
+                type:
+                    "Shared Space",
+                image:
+                    "/ltfi/convention/images/rooms/no-dashii.png"
+            },
+            {
+                name:
+                    "Puzzlemaster Paradise",
+                type:
+                    "Shared Space",
+                image:
+                    "/ltfi/convention/images/rooms/puzzlemaster.png"
+            },
+            {
+                name:
+                    "Golem's Chamber",
+                type:
+                    "Shared Space",
+                image:
+                    "/ltfi/convention/images/rooms/golem.png"
             }
-
         ]
-
     },
-
-
     observatory: {
-
-        title: "Observatory",
-
-        description:
-            "The top-floor Ojo Observatory.",
-
-        single:
-            "observatory.PNG",
-
-        rooms: []
-
+        name:
+            "Observatory",
+        rooms: [
+            {
+                name:
+                    "Ojo Observatory",
+                type:
+                    "Shared Space",
+                image:
+                    "/ltfi/convention/images/rooms/ojo.png"
+            }
+        ]
     }
-
 };
-
-
 /* ==========================================
    Current State
 ========================================== */
-
-let currentFloor = "lower";
-
-let selectedRoom = null;
-
-
+let currentFloor =
+    "main";
+let currentRoom =
+    null;
 /* ==========================================
    Initialize
 ========================================== */
-
-function initializeMap(){
-
-    const map =
-        document.getElementById(
-            "floor-map"
+document.addEventListener(
+    "DOMContentLoaded",
+    () => {
+        setupFloorTabs();
+        renderFloor(
+            currentFloor
         );
-
-
-    if(!map){
-
-        console.error(
-            "Could not find #floor-map"
-        );
-
-        return;
-
     }
-
-
-    setupCastleNavigation();
-
-    renderFloor();
-
-}
-
-
+);
 /* ==========================================
-   Castle Navigation
+   Floor Tabs
 ========================================== */
-
-function setupCastleNavigation(){
-
-    const floorButtons =
+function setupFloorTabs(){
+    const tabs =
         document.querySelectorAll(
-            ".castle-floor-button"
+            ".castle-floor-tab"
         );
-
-
-    const roomButtons =
-        document.querySelectorAll(
-            ".castle-room-button"
-        );
-
-
-    /*
-        Floor buttons
-    */
-
-    floorButtons.forEach(button => {
-
-        button.addEventListener(
+    tabs.forEach(tab => {
+        tab.addEventListener(
             "click",
             () => {
-
+                const floor =
+                    tab.dataset.floor;
+                if(
+                    !castleMapData[floor]
+                ){
+                    return;
+                }
                 currentFloor =
-                    button.dataset.floor;
-
-                selectedRoom = null;
-
-
-                renderFloor();
-
+                    floor;
+                currentRoom =
+                    null;
+                tabs.forEach(otherTab => {
+                    otherTab.classList.toggle(
+                        "active",
+                        otherTab === tab
+                    );
+                });
+                renderFloor(
+                    floor
+                );
             }
         );
-
     });
-
-
-    /*
-        Room buttons
-    */
-
-    roomButtons.forEach(button => {
-
-        button.addEventListener(
-            "click",
-            () => {
-
-                currentFloor =
-                    button.dataset.floor;
-
-                selectedRoom =
-                    button.dataset.room;
-
-
-                renderFloor();
-
-            }
-        );
-
-    });
-
 }
-
-
 /* ==========================================
    Render Floor
 ========================================== */
-
-function renderFloor(){
-
-    const map =
-        document.getElementById(
-            "floor-map"
-        );
-
-
-    const floor =
-        floors[currentFloor];
-
-
-    if(!map || !floor){
-
-        console.error(
-            "Could not render floor:",
-            currentFloor
-        );
-
-        return;
-
-    }
-
-
-    /*
-        Clear previous floor
-    */
-
-    map.innerHTML = "";
-
-
-    /*
-        Observatory
-    */
-
-    if(floor.single){
-
-        addMapLayer(
-            floor.single,
-            "floor-layer floor-single"
-        );
-
-    }
-
-
-    /*
-        Normal floors
-    */
-
-    else{
-
-        /*
-            Background
-        */
-
-        addMapLayer(
-            floor.base,
-            "floor-layer floor-base"
-        );
-
-
-        /*
-            Room colors
-        */
-
-        floor.rooms.forEach(room => {
-
-            /*
-                If one room is selected,
-                only show that room.
-            */
-
-            if(
-                selectedRoom &&
-                selectedRoom !== room.id
-            ){
-
-                return;
-
-            }
-
-
-            addMapLayer(
-                room.image,
-                "floor-layer floor-room-layer"
-            );
-
-        });
-
-
-        /*
-            Labels always stay on top
-        */
-
-        addMapLayer(
-            floor.labels,
-            "floor-layer floor-labels"
-        );
-
-    }
-
-
-    updateFloorInfo();
-
-    updateCastleNavigation();
-
-}
-
-
-/* ==========================================
-   Add Image Layer
-========================================== */
-
-function addMapLayer(
-    file,
-    className
+function renderFloor(
+    floorKey
 ){
-
-    const map =
-        document.getElementById(
-            "floor-map"
+    const floor =
+        castleMapData[
+            floorKey
+        ];
+    if(!floor){
+        return;
+    }
+    updateFloorHeading(
+        floor
+    );
+    renderDirectory(
+        floor
+    );
+    showFloorPlaceholder(
+        floor
+    );
+    hideSelectedRoom();
+}
+/* ==========================================
+   Floor Heading
+========================================== */
+function updateFloorHeading(
+    floor
+){
+    const directoryFloor =
+        document.querySelector(
+            "#castle-directory-floor"
         );
-
-
+    const mapFloor =
+        document.querySelector(
+            "#castle-map-floor-name"
+        );
+    if(directoryFloor){
+        directoryFloor.textContent =
+            floor.name;
+    }
+    if(mapFloor){
+        mapFloor.textContent =
+            floor.name;
+    }
+}
+/* ==========================================
+   Directory
+========================================== */
+function renderDirectory(
+    floor
+){
+    const directory =
+        document.querySelector(
+            "#castle-directory-list"
+        );
+    if(!directory){
+        return;
+    }
+    directory.innerHTML =
+        "";
+    const bedroomRooms =
+        floor.rooms.filter(
+            room =>
+                room.type ===
+                "Bedroom"
+        );
+    const sharedRooms =
+        floor.rooms.filter(
+            room =>
+                room.type ===
+                "Shared Space"
+        );
+    if(
+        bedroomRooms.length
+    ){
+        directory.appendChild(
+            buildDirectoryGroup(
+                "Bedrooms",
+                bedroomRooms
+            )
+        );
+    }
+    if(
+        sharedRooms.length
+    ){
+        directory.appendChild(
+            buildDirectoryGroup(
+                "Shared Spaces",
+                sharedRooms
+            )
+        );
+    }
+}
+/* ==========================================
+   Directory Group
+========================================== */
+function buildDirectoryGroup(
+    title,
+    rooms
+){
+    const group =
+        document.createElement(
+            "div"
+        );
+    group.className =
+        "castle-directory-group";
+    const heading =
+        document.createElement(
+            "span"
+        );
+    heading.className =
+        "castle-directory-group-title";
+    heading.textContent =
+        title;
+    group.appendChild(
+        heading
+    );
+    rooms.forEach(room => {
+        const button =
+            document.createElement(
+                "button"
+            );
+        button.type =
+            "button";
+        button.className =
+            "castle-directory-room";
+        button.textContent =
+            room.name;
+        button.addEventListener(
+            "click",
+            () => {
+                selectRoom(
+                    room,
+                    button
+                );
+            }
+        );
+        group.appendChild(
+            button
+        );
+    });
+    return group;
+}
+/* ==========================================
+   Select Room
+========================================== */
+function selectRoom(
+    room,
+    button
+){
+    currentRoom =
+        room;
+    document
+        .querySelectorAll(
+            ".castle-directory-room"
+        )
+        .forEach(otherButton => {
+            otherButton.classList.remove(
+                "active"
+            );
+        });
+    button.classList.add(
+        "active"
+    );
+    showRoomMap(
+        room
+    );
+    showSelectedRoom(
+        room
+    );
+}
+/* ==========================================
+   Show Room Map
+========================================== */
+function showRoomMap(
+    room
+){
+    const floorPlan =
+        document.querySelector(
+            "#castle-floor-plan"
+        );
+    if(!floorPlan){
+        return;
+    }
+    floorPlan.innerHTML =
+        "";
     const image =
         document.createElement(
             "img"
         );
-
-
     image.src =
-        mapBasePath + file;
-
-
-    image.className =
-        className;
-
-
-    image.alt = "";
-
-
-    image.addEventListener(
-        "error",
-        () => {
-
-            console.error(
-                "Could not load map image:",
-                image.src
-            );
-
-        }
-    );
-
-
-    map.appendChild(
+        room.image;
+    image.alt =
+        room.name +
+        " location";
+    floorPlan.appendChild(
         image
     );
-
 }
-
-
 /* ==========================================
-   Update Navigation State
+   Floor Placeholder
 ========================================== */
-
-function updateCastleNavigation(){
-
-    /*
-        Floor buttons
-    */
-
-    document
-        .querySelectorAll(
-            ".castle-floor-button"
-        )
-        .forEach(button => {
-
-            const isActive =
-                button.dataset.floor ===
-                    currentFloor &&
-                selectedRoom === null;
-
-
-            button.classList.toggle(
-                "active",
-                isActive
-            );
-
-        });
-
-
-    /*
-        Room buttons
-    */
-
-    document
-        .querySelectorAll(
-            ".castle-room-button"
-        )
-        .forEach(button => {
-
-            const isActive =
-                button.dataset.floor ===
-                    currentFloor &&
-                button.dataset.room ===
-                    selectedRoom;
-
-
-            button.classList.toggle(
-                "active",
-                isActive
-            );
-
-        });
-
-}
-
-
-/* ==========================================
-   Floor Information
-========================================== */
-
-function updateFloorInfo(){
-
-    const floor =
-        floors[currentFloor];
-
-
-    const title =
-        document.getElementById(
-            "floor-title"
+function showFloorPlaceholder(
+    floor
+){
+    const floorPlan =
+        document.querySelector(
+            "#castle-floor-plan"
         );
-
-
-    const description =
-        document.getElementById(
-            "floor-description"
-        );
-
-
-    if(!title || !description){
-
+    if(!floorPlan){
         return;
-
     }
-
-
-    /*
-        Room selected
-    */
-
-    if(selectedRoom){
-
-        const room =
-            floor.rooms.find(
-                room =>
-                    room.id ===
-                    selectedRoom
-            );
-
-
-        if(room){
-
-            title.textContent =
-                room.name;
-
-
-            description.textContent =
-                `${room.name} is located on the ${floor.title}.`;
-
-
-            return;
-
-        }
-
-    }
-
-
-    /*
-        Whole floor
-    */
-
-    title.textContent =
-        floor.title;
-
-
-    description.textContent =
-        floor.description;
-
-}
-
-
-/* ==========================================
-   Start
-========================================== */
-
-if(document.readyState === "loading"){
-
-    document.addEventListener(
-        "DOMContentLoaded",
-        initializeMap
+    floorPlan.innerHTML =
+        "";
+    const placeholder =
+        document.createElement(
+            "div"
+        );
+    placeholder.className =
+        "castle-map-placeholder";
+    placeholder.innerHTML = `
+        <span>
+            ${floor.name}
+        </span>
+        <strong>
+            Select a room
+        </strong>
+        <p>
+            Choose a room from the directory
+            to see its location on the floor plan.
+        </p>
+    `;
+    floorPlan.appendChild(
+        placeholder
     );
-
 }
-else{
-
-    initializeMap();
-
+/* ==========================================
+   Selected Room
+========================================== */
+function showSelectedRoom(
+    room
+){
+    const panel =
+        document.querySelector(
+            "#castle-selected-room"
+        );
+    const image =
+        document.querySelector(
+            "#castle-selected-image"
+        );
+    const type =
+        document.querySelector(
+            "#castle-selected-type"
+        );
+    const name =
+        document.querySelector(
+            "#castle-selected-name"
+        );
+    const description =
+        document.querySelector(
+            "#castle-selected-description"
+        );
+    if(!panel){
+        return;
+    }
+    panel.hidden =
+        false;
+    if(image){
+        image.src =
+            room.image;
+        image.alt =
+            room.name;
+    }
+    if(type){
+        type.textContent =
+            room.type;
+    }
+    if(name){
+        name.textContent =
+            room.name;
+    }
+    if(description){
+        description.textContent =
+            castleMapData[
+                currentFloor
+            ].name;
+    }
+}
+/* ==========================================
+   Hide Selected Room
+========================================== */
+function hideSelectedRoom(){
+    const panel =
+        document.querySelector(
+            "#castle-selected-room"
+        );
+    if(panel){
+        panel.hidden =
+            true;
+    }
 }
