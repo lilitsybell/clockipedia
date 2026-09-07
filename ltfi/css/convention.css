@@ -3095,19 +3095,19 @@ body.gallery-open {
 .ticket-attendee:nth-child(4n + 1)
 .ticket-attendee-icon{
     background:
-        var(--gold);
+        var(--dark-visual);
 }
 .ticket-attendee:nth-child(4n + 2)
 .ticket-attendee-icon{
-    background: var(--gold);
+    background: var(--dark-visual);
 }
 .ticket-attendee:nth-child(4n + 3)
 .ticket-attendee-icon{
-    background: var(--gold);
+    background: var(--dark-visual);
 }
 .ticket-attendee:nth-child(4n + 4)
 .ticket-attendee-icon{
-    background: var(--gold);
+    background: var(--dark-visual);
 }
 .ticket-attendee strong{
     min-width:0;
