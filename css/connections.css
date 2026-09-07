@@ -578,3 +578,75 @@
     }
 
 }
+/* ==========================================
+   Connections Animations
+========================================== */
+
+.connections-tile.correct-pop{
+    animation:
+        connections-correct-pop
+        .38s ease;
+}
+
+.connections-tile.wrong-shake{
+    animation:
+        connections-wrong-shake
+        .36s ease;
+}
+
+
+@keyframes connections-correct-pop{
+
+    0%{
+        transform:
+            scale(1);
+    }
+
+    45%{
+        transform:
+            scale(1.08);
+
+        background:
+            rgba(142,167,66,.18);
+
+        border-color:
+            var(--lime);
+    }
+
+    100%{
+        transform:
+            scale(1);
+    }
+
+}
+
+
+@keyframes connections-wrong-shake{
+
+    0%,
+    100%{
+        transform:
+            translateX(0);
+    }
+
+    20%{
+        transform:
+            translateX(-7px);
+    }
+
+    40%{
+        transform:
+            translateX(7px);
+    }
+
+    60%{
+        transform:
+            translateX(-5px);
+    }
+
+    80%{
+        transform:
+            translateX(5px);
+    }
+
+}
