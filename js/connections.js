@@ -321,19 +321,70 @@ function toggleCharacterSelection(
     updateSubmitButton();
 
 }
+function animateCorrectSelection(){
+
+    selectedCharacters
+        .forEach(
+            characterId => {
+
+                const tile =
+                    document.querySelector(
+                        `[data-character="${characterId}"]`
+                    );
+
+                if(tile){
+
+                    tile.classList.add(
+                        "correct-pop"
+                    );
+
+                }
+
+            }
+        );
+
+}
 
 
-/* ==========================================
-   Submit Selection
-========================================== */
-function submitConnectionsSelection(){
+function animateWrongSelection(){
+
+    selectedCharacters
+        .forEach(
+            characterId => {
+
+                const tile =
+                    document.querySelector(
+                        `[data-character="${characterId}"]`
+                    );
+
+                if(tile){
+
+                    tile.classList.add(
+                        "wrong-shake"
+                    );
+
+                }
+
+            }
+        );
+
+}
+
+async function submitConnectionsSelection(){
+
     if(
         selectedCharacters.size !== 4
     ){
+
         return;
+
     }
+
+
     const selected =
         [...selectedCharacters];
+
+
     const matchedGroup =
         connectionsPuzzle.groups
             .find(
@@ -343,52 +394,101 @@ function submitConnectionsSelection(){
                         selected
                     )
             );
+
+
     if(matchedGroup){
+
+        animateCorrectSelection();
+
+
+        await waitConnections(
+            380
+        );
+
+
         solvedGroups.push(
             matchedGroup
         );
+
+
         selectedCharacters.clear();
+
+
         showConnectionsMessage(
             "Correct!",
             "success"
         );
+
+
         renderConnectionsGame();
+
+
         if(
             solvedGroups.length ===
             connectionsPuzzle.groups.length
         ){
+
             showConnectionsMessage(
                 "You solved all four groups!",
                 "win"
             );
+
         }
-    }
-else{
-    mistakesRemaining--;
-    const oneAway =
-        isConnectionsOneAway(
-            selected
-        );
-    selectedCharacters.clear();
-    if(oneAway){
-        showConnectionsMessage(
-            "One away...",
-            "error"
-        );
+
     }
     else{
-        showConnectionsMessage(
-            "Not quite. Try again.",
-            "error"
+
+        animateWrongSelection();
+
+
+        await waitConnections(
+            360
         );
+
+
+        mistakesRemaining--;
+
+
+        const oneAway =
+            isConnectionsOneAway(
+                selected
+            );
+
+
+        selectedCharacters.clear();
+
+
+        if(oneAway){
+
+            showConnectionsMessage(
+                "One away...",
+                "error"
+            );
+
+        }
+        else{
+
+            showConnectionsMessage(
+                "Not quite. Try again.",
+                "error"
+            );
+
+        }
+
+
+        renderConnectionsGame();
+
+
+        if(
+            mistakesRemaining <= 0
+        ){
+
+            endConnectionsGame();
+
+        }
+
     }
-    renderConnectionsGame();
-    if(
-        mistakesRemaining <= 0
-    ){
-        endConnectionsGame();
-    }
-}
+
 }
 /* ==========================================
    Match Group
@@ -688,5 +788,21 @@ function shuffleArray(array){
         ];
 
     }
+
+}
+function waitConnections(
+    milliseconds
+){
+
+    return new Promise(
+        resolve => {
+
+            setTimeout(
+                resolve,
+                milliseconds
+            );
+
+        }
+    );
 
 }
