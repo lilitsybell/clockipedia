@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <title>
+        Character Connections | Clockipedia
+    </title>
+
+    <link
+        rel="stylesheet"
+        href="/css/style.css"
+    >
+
+    <link
+        rel="stylesheet"
+        href="/css/connections.css"
+    >
+
+    <link
+        rel="icon"
+        type="image/png"
+        href="/images/favicon.png"
+    >
+
+</head>
+
+<body>
+
+
+    <div id="sidebar"></div>
+
+
+    <main id="content">
+
+        <div class="connections-page">
+
+
+            <section class="connections-header">
+
+                <span class="connections-eyebrow">
+                    Clockipedia Games
+                </span>
+
+                <h1>
+                    Character Connections
+                </h1>
+
+                <p>
+                    Find four groups of four related
+                    Blood on the Clocktower characters.
+                </p>
+
+            </section>
+
+
+            <section class="connections-game">
+
+
+                <div
+                    id="connectionsSolved"
+                    class="connections-solved"
+                >
+                </div>
+
+
+                <div
+                    id="connectionsGrid"
+                    class="connections-grid"
+                >
+                </div>
+
+
+                <div class="connections-controls">
+
+
+                    <div class="connections-mistakes">
+
+                        <span>
+                            Mistakes Remaining
+                        </span>
+
+                        <div
+                            id="connectionsMistakes"
+                            class="connections-mistake-dots"
+                        >
+                        </div>
+
+                    </div>
+
+
+                    <div class="connections-buttons">
+
+                        <button
+                            id="connectionsShuffle"
+                            class="connections-secondary-button"
+                            type="button"
+                        >
+                            Shuffle
+                        </button>
+
+                        <button
+                            id="connectionsDeselect"
+                            class="connections-secondary-button"
+                            type="button"
+                        >
+                            Deselect All
+                        </button>
+
+                        <button
+                            id="connectionsSubmit"
+                            class="connections-submit-button"
+                            type="button"
+                            disabled
+                        >
+                            Submit
+                        </button>
+
+                    </div>
+
+
+                </div>
+
+
+                <div
+                    id="connectionsMessage"
+                    class="connections-message"
+                    hidden
+                >
+                </div>
+
+
+            </section>
+
+
+        </div>
+
+    </main>
+
+
+    <script src="/js/characters.js"></script>
+    <script src="/js/search.js"></script>
+    <script src="/js/sidebar.js"></script>
+    <script src="/js/connections.js"></script>
+
+
+</body>
+
+</html>
