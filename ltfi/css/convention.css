@@ -3182,7 +3182,7 @@ body.gallery-open {
     padding: 11px 10px;
     border:0;
     border-radius: 9px;
-    background: var(--background);
+    background: var(--white);
     color: var(--dark-text);
     font:inherit;
     font-size: 13px;
