@@ -2275,11 +2275,36 @@ body.gallery-open {
     accent-color: var(--teal);
     cursor:pointer;
 }
+/* ==========================================
+   Confirm Booking Button
+========================================== */
 .booking-confirm-button{
     width:100%;
-    margin-top:10px;
+    margin-top: 16px;
+    padding: 15px 20px;
     border:0;
+    border-radius: 10px;
+    background: var(--teal);
+    color: var(--white);
+    font:inherit;
+    font-size: 12px;
+    font-weight: 900;
+    letter-spacing: .07em;
+    text-transform: uppercase;
     cursor:pointer;
+    transition:
+        transform .16s ease,
+        opacity .16s ease;
+}
+.booking-confirm-button:hover{
+    transform: translateY(-1px);
+    opacity: .9;
+}
+.booking-confirm-button:disabled{
+    background: #aaa7af;
+    cursor: not-allowed;
+    opacity: .7;
+    transform: none;
 }
 /* ==========================================
    Ticket Venmo
