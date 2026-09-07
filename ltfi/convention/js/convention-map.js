@@ -205,6 +205,7 @@ let currentRoom =
 document.addEventListener(
     "DOMContentLoaded",
     () => {
+        preloadMapImages();
         setupFloorTabs();
         renderFloor(
             currentFloor
@@ -549,4 +550,19 @@ function hideSelectedRoom(){
         panel.hidden =
             true;
     }
+}
+/* ==========================================
+   Preload Map Images
+========================================== */
+function preloadMapImages(){
+    Object
+        .values(castleMapData)
+        .forEach(floor => {
+            floor.rooms.forEach(room => {
+                const image =
+                    new Image();
+                image.src =
+                    room.image;
+            });
+        });
 }
