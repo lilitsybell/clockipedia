@@ -495,12 +495,13 @@ function showSelectedRoom(
     }
     panel.hidden =
         false;
-    if(image){
-        image.src =
-            room.image;
-        image.alt =
-            room.name;
-    }
+if(image){
+    image.src =
+        room.photo ||
+        room.image;
+    image.alt =
+        room.name;
+}
     if(type){
         type.textContent =
             room.type;
