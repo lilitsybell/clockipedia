@@ -1653,6 +1653,25 @@ body.gallery-open {
     font-weight: 900;
     letter-spacing: -.03em;
 }
+/* ==========================================
+   Booked Bed Price
+========================================== */
+.booking-bed-card.booked
+.booking-bed-price{
+    font-size:0;
+}
+.booking-bed-card.booked
+.booking-bed-price::after{
+    content:"BOOKED";
+    display:inline-block;
+    padding: 6px 9px;
+    background: var(--dark-visual);
+    border-radius: 7px;
+    color: var(--white);
+    font-size: 10px;
+    font-weight: 900;
+    letter-spacing: .07em;
+}
 .booking-bed-occupant{
     display:flex;
     flex-direction:column;
