@@ -18,33 +18,23 @@ let mistakesRemaining = 4;
 /* ==========================================
    Start Game
 ========================================== */
-
 document.addEventListener(
     "DOMContentLoaded",
     async () => {
-
         try{
-
+            await loadCharacters();
             await loadConnectionsPuzzle();
-
             setupConnectionsControls();
-
             renderConnectionsGame();
-
         }
         catch(error){
-
             console.error(
                 "Connections failed:",
                 error
             );
-
         }
-
     }
 );
-
-
 /* ==========================================
    Load Puzzle
 ========================================== */
