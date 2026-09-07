@@ -328,22 +328,14 @@ function toggleCharacterSelection(
 /* ==========================================
    Submit Selection
 ========================================== */
-
 function submitConnectionsSelection(){
-
     if(
         selectedCharacters.size !== 4
     ){
-
         return;
-
     }
-
-
     const selected =
         [...selectedCharacters];
-
-
     const matchedGroup =
         connectionsPuzzle.groups
             .find(
@@ -353,89 +345,66 @@ function submitConnectionsSelection(){
                         selected
                     )
             );
-
-
     if(matchedGroup){
-
         solvedGroups.push(
             matchedGroup
         );
-
-
         selectedCharacters.clear();
-
-
         showConnectionsMessage(
             "Correct!",
             "success"
         );
-
-
         renderConnectionsGame();
-
-
         if(
             solvedGroups.length ===
             connectionsPuzzle.groups.length
         ){
-
             showConnectionsMessage(
                 "You solved all four groups!",
                 "win"
             );
-
         }
-
+    }
+else{
+    mistakesRemaining--;
+    const oneAway =
+        isConnectionsOneAway(
+            selected
+        );
+    selectedCharacters.clear();
+    if(oneAway){
+        showConnectionsMessage(
+            "One away...",
+            "error"
+        );
     }
     else{
-
-        mistakesRemaining--;
-
-
-        selectedCharacters.clear();
-
-
         showConnectionsMessage(
             "Not quite. Try again.",
             "error"
         );
-
-
-        renderConnectionsGame();
-
-
-        if(
-            mistakesRemaining <= 0
-        ){
-
-            endConnectionsGame();
-
-        }
-
     }
-
+    renderConnectionsGame();
+    if(
+        mistakesRemaining <= 0
+    ){
+        endConnectionsGame();
+    }
 }
-
-
+}
 /* ==========================================
    Match Group
 ========================================== */
-
 function groupMatchesSelection(
     group,
     selected
 ){
-
     if(
         group.characters.length !==
         selected.length
     ){
-
         return false;
-
     }
-
-
     return group.characters
         .every(
             character =>
@@ -443,10 +412,29 @@ function groupMatchesSelection(
                     character
                 )
         );
-
 }
-
-
+function isConnectionsOneAway(
+    selected
+){
+    return connectionsPuzzle.groups
+        .some(group => {
+            if(
+                solvedGroups.includes(
+                    group
+                )
+            ){
+                return false;
+            }
+            const matches =
+                selected.filter(
+                    character =>
+                        group.characters.includes(
+                            character
+                        )
+                ).length;
+            return matches === 3;
+        });
+}
 /* ==========================================
    Solved Groups
 ========================================== */
