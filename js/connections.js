@@ -21,6 +21,7 @@ document.addEventListener(
             await loadConnectionsPuzzle();
             setupConnectionsControls();
             setupConnectionsShare();
+            setupConnectionsPlayAgain();
             renderConnectionsGame();
         }
         catch(error){
@@ -1075,5 +1076,103 @@ ${rows}`;
         );
 
     }
+
+}
+/* ==========================================
+   Play Again
+========================================== */
+
+function setupConnectionsPlayAgain(){
+
+    const button =
+        document.querySelector(
+            "#connectionsPlayAgain"
+        );
+
+
+    button.addEventListener(
+        "click",
+        playRandomConnectionsPuzzle
+    );
+
+}
+
+
+function playRandomConnectionsPuzzle(){
+
+    if(
+        connectionsPuzzles.length <= 1
+    ){
+
+        return;
+
+    }
+
+
+    const availablePuzzles =
+        connectionsPuzzles.filter(
+            puzzle =>
+                puzzle.id !==
+                connectionsPuzzle.id
+        );
+
+
+    connectionsPuzzle =
+        availablePuzzles[
+            Math.floor(
+                Math.random() *
+                availablePuzzles.length
+            )
+        ];
+
+
+    resetConnectionsPuzzle();
+
+}
+function resetConnectionsPuzzle(){
+
+    selectedCharacters.clear();
+
+    solvedGroups = [];
+
+    mistakesRemaining = 4;
+
+    connectionsGuesses = [];
+
+    newestSolvedGroup = null;
+
+
+    connectionsCharacters =
+        connectionsPuzzle.groups
+            .flatMap(
+                group =>
+                    group.characters
+            );
+
+
+    shuffleArray(
+        connectionsCharacters
+    );
+
+
+    const results =
+        document.querySelector(
+            "#connectionsResults"
+        );
+
+
+    results.hidden = true;
+
+
+    const message =
+        document.querySelector(
+            "#connectionsMessage"
+        );
+
+
+    message.hidden = true;
+
+
+    renderConnectionsGame();
 
 }
