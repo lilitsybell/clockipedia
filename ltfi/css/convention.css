@@ -3411,3 +3411,137 @@ body.gallery-open {
 .castle-selected-button[hidden]{
     display:none;
 }
+/* ==========================================
+   Castle Map - Mobile
+========================================== */
+@media(max-width:700px){
+    /* ======================================
+       Page
+    ====================================== */
+    .castle-map-page{
+        width: calc(100% - 24px);
+        padding: 26px 0 40px;
+    }
+    .castle-map-header{
+        margin-bottom: 20px;
+    }
+    .castle-map-header h1{
+        font-size: 32px;
+    }
+    .castle-map-header p{
+        font-size: 14px;
+    }
+    /* ======================================
+       Kiosk
+    ====================================== */
+    .castle-kiosk{
+        border-radius: 16px;
+    }
+    /* ======================================
+       Floor Tabs
+    ====================================== */
+    .castle-floor-tabs{
+        grid-template-columns: repeat(2, 1fr);
+        gap: 5px;
+        padding: 6px;
+    }
+    .castle-floor-tab{
+        min-height: 50px;
+        padding: 8px 10px;
+        gap: 8px;
+        font-size: 10px;
+    }
+    .castle-floor-tab span{
+        width: 24px;
+        height: 24px;
+        font-size: 8px;
+    }
+    /* ======================================
+       Main Layout
+    ====================================== */
+    .castle-kiosk-body{
+        display:flex;
+        flex-direction:column;
+        min-height:0;
+    }
+    /* ======================================
+       Directory
+    ====================================== */
+    .castle-directory{
+        padding: 20px 16px;
+        border-right:0;
+        border-bottom: 1px solid var(--border);
+    }
+    .castle-directory-heading{
+        padding: 0 4px 15px;
+    }
+    .castle-directory-list{
+        display:grid;
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 7px;
+    }
+    .castle-directory-group{
+        display:contents;
+    }
+    .castle-directory-group-title{
+        grid-column: 1 / -1;
+        padding: 10px 4px 2px;
+        margin:0;
+    }
+    .castle-directory-room{
+        height:100%;
+        padding: 11px;
+        font-size: 12px;
+    }
+    /* ======================================
+       Map
+    ====================================== */
+    .castle-map-display{
+        padding: 20px 16px;
+    }
+    .castle-map-title{
+        margin-bottom: 14px;
+    }
+    .castle-map-title strong{
+        font-size: 20px;
+    }
+    .castle-floor-plan{
+        min-height: 0;
+        padding: 12px;
+        border-radius: 12px;
+    }
+    .castle-floor-plan > img{
+        width:100%;
+        max-width:none;
+        max-height:none;
+    }
+    /* ======================================
+       Placeholder
+    ====================================== */
+    .castle-map-placeholder{
+        min-height: 280px;
+        padding: 30px 20px;
+    }
+    .castle-map-placeholder strong{
+        font-size: 25px;
+    }
+    /* ======================================
+       Selected Room
+    ====================================== */
+    .castle-selected-room{
+        grid-template-columns:
+            100px minmax(0,1fr);
+        gap: 16px;
+        padding: 18px 16px;
+    }
+    .castle-selected-image{
+        align-self:start;
+    }
+    .castle-selected-info h2{
+        font-size: 18px;
+    }
+    .castle-selected-button{
+        grid-column: 1 / -1;
+        width:100%;
+    }
+}
