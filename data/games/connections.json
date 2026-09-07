@@ -1,41 +1,43 @@
-{
-    "id": 1,
-    "groups": [
-        {
-            "name": "Trouble Brewing Townsfolk",
-            "characters": [
-                "washerwoman",
-                "librarian",
-                "investigator",
-                "chef"
-            ]
-        },
-        {
-            "name": "Trouble Brewing Outsiders",
-            "characters": [
-                "butler",
-                "drunk",
-                "recluse",
-                "saint"
-            ]
-        },
-        {
-            "name": "Trouble Brewing Minions",
-            "characters": [
-                "poisoner",
-                "spy",
-                "scarletwoman",
-                "baron"
-            ]
-        },
-        {
-            "name": "Trouble Brewing Demons",
-            "characters": [
-                "imp",
-                "fanggu",
-                "nodashii",
-                "vigormortis"
-            ]
-        }
-    ]
-}
+[
+    {
+        "id": 1,
+        "groups": [
+            {
+                "name": "Characters That Choose Players",
+                "characters": [
+                    "courtier",
+                    "exorcist",
+                    "slayer",
+                    "poisoner"
+                ]
+            },
+            {
+                "name": "Can Cause Themselves to Die",
+                "characters": [
+                    "gambler",
+                    "imp",
+                    "tinker",
+                    "acrobat"
+                ]
+            },
+            {
+                "name": "Learns a Number",
+                "characters": [
+                    "empath",
+                    "mathematician",
+                    "chef",
+                    "juggler"
+                ]
+            },
+            {
+                "name": "Abilities Involve Nominations",
+                "characters": [
+                    "golem",
+                    "witch",
+                    "fearmonger",
+                    "towncrier"
+                ]
+            }
+        ]
+    }
+]
