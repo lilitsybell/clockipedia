@@ -2066,49 +2066,60 @@ body.gallery-open {
 .booking-bed-option{
     display:grid;
     grid-template-columns:
-        auto
-        minmax(0,1fr)
-        auto;
+        auto minmax(0,1fr) auto;
     align-items:center;
-    gap:14px;
-    padding:15px;
-    margin-top:10px;
-    border:2px solid var(--light);
-    border-radius:9px;
+    gap: 14px;
+    margin-top: 10px;
+    padding: 16px;
+    background: var(--background);
+    border: 1px solid transparent;
+    border-radius: 12px;
     cursor:pointer;
     transition:
-        border-color .15s ease,
-        background .15s ease;
+        border-color .16s ease,
+        background .16s ease,
+        transform .16s ease;
 }
 .booking-bed-option:hover{
-    border-color:var(--accent);
+    border-color: var(--teal);
+    transform: translateY(-1px);
 }
 .booking-bed-option:has(
     input:checked
 ){
-    border-color:var(--accent);
-    background:#f4f4f8;
+    background: rgba(72,169,166,.10);
+    border-color: var(--teal);
 }
+/* Radio Button */
 .booking-bed-option input{
-    width:18px;
-    height:18px;
-    accent-color:var(--accent);
+    width: 18px;
+    height: 18px;
+    accent-color: var(--teal);
+    cursor:pointer;
 }
+/* Bed Information */
 .booking-bed-option-info{
     display:flex;
     flex-direction:column;
+    min-width:0;
 }
 .booking-bed-option-info strong{
-    font-size:16px;
+    color: var(--dark-text);
+    font-size: 15px;
+    font-weight: 800;
 }
 .booking-bed-option-info small{
-    margin-top:2px;
-    color:var(--muted);
+    margin-top: 3px;
+    color: var(--muted);
+    font-size: 12px;
+    line-height: 1.4;
 }
+/* Price */
 .booking-bed-option-price{
-    color:var(--accent);
-    font-size:19px;
-    font-weight:900;
+    color: var(--dark-visual);
+    font-size: 20px;
+    font-weight: 900;
+    letter-spacing: -.025em;
 }
 /* ==========================================
    Booking Names
