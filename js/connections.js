@@ -947,22 +947,22 @@ function renderConnectionsResultGrid(){
                         document.createElement(
                             "span"
                         );
+const group =
+    connectionsPuzzle.groups
+        .find(
+            group =>
+                group.characters.includes(
+                    characterId
+                )
+        );
 
 
-                    const groupIndex =
-                        connectionsPuzzle.groups
-                            .findIndex(
-                                group =>
-                                    group.characters.includes(
-                                        characterId
-                                    )
-                            );
+if(group){
 
+    square.dataset.color =
+        group.color;
 
-                    square.dataset.group =
-                        groupIndex;
-
-
+}
                     row.appendChild(
                         square
                     );
