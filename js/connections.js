@@ -1047,7 +1047,7 @@ const symbols = {
     green: "🟩",
     blue: "🟦",
     purple: "🟪",
-    red: "🟥"
+    yellow: "🟨"
 };
 
     const rows =
