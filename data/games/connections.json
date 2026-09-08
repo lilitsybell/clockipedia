@@ -89,4 +89,49 @@
             }
         ]
     }
+    {
+        "id": 3,
+        "groups": [
+            {
+                "name": "Can Cause Themselves to be Drunk",
+                "color": "green",
+                "characters": [
+                    "organgrinder",
+                    "sailor",
+                    "courtier",
+                    "innkeeper"
+                ]
+            },
+            {
+                "name": "Public Announcement from Storyteller",
+                "color": "blue",
+                "characters": [
+                    "banshee",
+                    "alhadikhia",
+                    "fearmonger",
+                    "vizier"
+                ]
+            },
+            {
+                "name": "Chooses Two Players",
+                "color": "purple",
+                "characters": [
+                    "fortuneteller",
+                    "harpy",
+                    "seamstress",
+                    "chambermaid"
+                ]
+            },
+            {
+                "name": "Learns an Evil Player as Information",
+                "color": "red",
+                "characters": [
+                    "investigator",
+                    "bountyhunter",
+                    "sage",
+                    "noble"
+                ]
+            }
+        ]
+    }
 ]
