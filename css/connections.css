@@ -929,3 +929,534 @@
 .connections-meta-divider{
     opacity:.5;
 }
+/* ==========================================
+   Puzzle Meta + Archive Button
+========================================== */
+
+.connections-puzzle-meta{
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+    gap:20px;
+    margin-top:12px;
+}
+
+.connections-puzzle-details{
+    display:flex;
+    align-items:center;
+    gap:7px;
+    color:var(--gray);
+    font-size:11px;
+}
+
+.connections-puzzle-details strong{
+    color:var(--purple);
+    font-weight:800;
+}
+
+.connections-archive-button{
+    padding:8px 13px;
+    border:1px solid var(--purple);
+    border-radius:8px;
+    background:white;
+    color:var(--purple);
+    font:inherit;
+    font-size:9px;
+    font-weight:900;
+    letter-spacing:.07em;
+    text-transform:uppercase;
+    cursor:pointer;
+}
+
+.connections-archive-button:hover{
+    background:#f1eff7;
+}
+
+
+/* ==========================================
+   Archive Modal
+========================================== */
+
+.connections-archive-modal{
+    position:fixed;
+    inset:0;
+    z-index:1000;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    padding:28px;
+}
+
+.connections-archive-modal[hidden]{
+    display:none;
+}
+
+.connections-archive-backdrop{
+    position:absolute;
+    inset:0;
+    background:rgba(13,24,33,.62);
+}
+
+.connections-archive-panel{
+    position:relative;
+    z-index:1;
+
+    width:min(
+        920px,
+        100%
+    );
+
+    max-height:calc(100vh - 56px);
+    overflow-y:auto;
+
+    padding:30px;
+
+    background:white;
+
+    border:1px solid var(--border);
+    border-radius:22px;
+
+    box-shadow:
+        0 20px 60px
+        rgba(13,24,33,.2);
+}
+
+
+/* ==========================================
+   Archive Header
+========================================== */
+
+.connections-archive-header{
+    display:flex;
+    align-items:flex-start;
+    justify-content:space-between;
+    gap:20px;
+
+    padding-bottom:22px;
+    margin-bottom:22px;
+
+    border-bottom:
+        1px solid
+        var(--border);
+}
+
+.connections-archive-header h2{
+    margin:0 0 6px;
+
+    color:var(--black);
+
+    font-family:
+        "Droid Sans",
+        Arial,
+        sans-serif;
+
+    font-size:28px;
+}
+
+.connections-archive-header p{
+    margin:0;
+
+    color:var(--gray);
+
+    font-size:13px;
+}
+
+.connections-archive-close{
+    width:40px;
+    height:40px;
+
+    border:0;
+    border-radius:10px;
+
+    background:var(--light-gray);
+
+    color:var(--black);
+
+    font-size:27px;
+    line-height:1;
+
+    cursor:pointer;
+}
+
+
+/* ==========================================
+   Calendar Navigation
+========================================== */
+
+.connections-calendar-nav{
+    display:grid;
+
+    grid-template-columns:
+        46px
+        1fr
+        46px;
+
+    align-items:center;
+
+    gap:14px;
+
+    margin-bottom:20px;
+}
+
+.connections-calendar-nav h3{
+    margin:0;
+
+    color:var(--black);
+
+    font-family:
+        "Droid Sans",
+        Arial,
+        sans-serif;
+
+    font-size:25px;
+
+    text-align:center;
+}
+
+.connections-calendar-nav button{
+    width:46px;
+    height:46px;
+
+    border:0;
+    border-radius:12px;
+
+    background:#f1eff7;
+
+    color:var(--purple);
+
+    font-size:29px;
+
+    cursor:pointer;
+}
+
+.connections-calendar-nav button:disabled{
+    opacity:.25;
+    cursor:not-allowed;
+}
+
+
+/* ==========================================
+   Weekdays
+========================================== */
+
+.connections-calendar-weekdays{
+    display:grid;
+    grid-template-columns:repeat(7,1fr);
+
+    gap:8px;
+
+    margin-bottom:8px;
+}
+
+.connections-calendar-weekdays span{
+    color:var(--gray);
+
+    font-size:10px;
+    font-weight:900;
+
+    letter-spacing:.07em;
+
+    text-align:center;
+    text-transform:uppercase;
+}
+
+
+/* ==========================================
+   Calendar
+========================================== */
+
+.connections-calendar{
+    display:grid;
+    grid-template-columns:repeat(7,1fr);
+
+    gap:8px;
+}
+
+.connections-calendar-day{
+    position:relative;
+
+    min-width:0;
+    min-height:92px;
+
+    padding:9px;
+
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+    justify-content:flex-start;
+
+    border:1px solid var(--border);
+    border-radius:12px;
+
+    background:var(--light-gray);
+
+    color:var(--black);
+
+    font:inherit;
+
+    cursor:default;
+}
+
+.connections-calendar-day-number{
+    font-size:13px;
+    font-weight:800;
+}
+
+
+/* ==========================================
+   Puzzle Days
+========================================== */
+
+.connections-calendar-day.has-puzzle{
+    background:white;
+    cursor:pointer;
+}
+
+.connections-calendar-day.has-puzzle:hover{
+    border-color:var(--purple);
+
+    background:#f6f4fa;
+}
+
+.connections-calendar-day.current-puzzle{
+    border:2px solid var(--purple);
+
+    background:#f4f2f8;
+}
+
+.connections-calendar-day.today
+.connections-calendar-day-number{
+    color:var(--purple);
+}
+
+
+/* ==========================================
+   Empty / Future Dates
+========================================== */
+
+.connections-calendar-day.no-puzzle{
+    color:#b7b7bf;
+}
+
+.connections-calendar-day.future{
+    opacity:.45;
+}
+
+
+/* ==========================================
+   Calendar Rating
+========================================== */
+
+.connections-calendar-rating{
+    flex:1;
+
+    display:flex;
+    align-items:center;
+    justify-content:center;
+
+    margin-top:5px;
+
+    font-weight:900;
+
+    line-height:1;
+}
+
+.connections-calendar-rating.perfect{
+    color:var(--purple);
+
+    font-size:29px;
+}
+
+.connections-calendar-rating.stars{
+    color:var(--copper);
+
+    font-size:19px;
+
+    letter-spacing:1px;
+}
+
+.connections-calendar-rating.failed{
+    color:var(--red);
+
+    font-size:31px;
+}
+
+
+/* ==========================================
+   In Progress
+========================================== */
+
+.connections-calendar-progress{
+    margin-top:auto;
+
+    padding:4px 7px;
+
+    border-radius:20px;
+
+    background:#eeecf5;
+
+    color:var(--purple);
+
+    font-size:8px;
+    font-weight:900;
+
+    letter-spacing:.05em;
+    text-transform:uppercase;
+}
+
+
+/* ==========================================
+   Archive Legend
+========================================== */
+
+.connections-archive-legend{
+    display:grid;
+
+    grid-template-columns:
+        repeat(5,1fr);
+
+    gap:15px;
+
+    margin-top:24px;
+    padding-top:22px;
+
+    border-top:
+        1px solid
+        var(--border);
+}
+
+.connections-archive-legend > div{
+    display:flex;
+    align-items:center;
+    gap:9px;
+}
+
+.connections-archive-legend > div > span:last-child{
+    display:flex;
+    flex-direction:column;
+
+    color:var(--gray);
+
+    font-size:9px;
+    line-height:1.35;
+}
+
+.connections-archive-legend strong{
+    color:var(--black);
+
+    font-size:10px;
+}
+
+.connections-rating{
+    min-width:34px;
+
+    font-weight:900;
+    text-align:center;
+}
+
+.connections-rating.perfect{
+    color:var(--purple);
+
+    font-size:26px;
+}
+
+.connections-rating.stars{
+    color:var(--copper);
+
+    font-size:17px;
+}
+
+.connections-rating.failed{
+    color:var(--red);
+
+    font-size:28px;
+}
+
+
+/* ==========================================
+   Archive Footer
+========================================== */
+
+.connections-archive-footer{
+    display:flex;
+    justify-content:flex-end;
+
+    margin-top:24px;
+}
+
+.connections-archive-today{
+    padding:11px 17px;
+
+    border:0;
+    border-radius:9px;
+
+    background:var(--purple);
+
+    color:white;
+
+    font:inherit;
+    font-size:10px;
+    font-weight:900;
+
+    letter-spacing:.06em;
+    text-transform:uppercase;
+
+    cursor:pointer;
+}
+
+
+/* ==========================================
+   Mobile Archive
+========================================== */
+
+@media(max-width:700px){
+
+    .connections-archive-modal{
+        padding:12px;
+    }
+
+    .connections-archive-panel{
+        padding:18px;
+        border-radius:16px;
+    }
+
+    .connections-calendar{
+        gap:4px;
+    }
+
+    .connections-calendar-weekdays{
+        gap:4px;
+    }
+
+    .connections-calendar-day{
+        min-height:67px;
+        padding:6px 3px;
+    }
+
+    .connections-calendar-day-number{
+        font-size:11px;
+    }
+
+    .connections-calendar-rating.perfect{
+        font-size:22px;
+    }
+
+    .connections-calendar-rating.stars{
+        font-size:13px;
+        letter-spacing:0;
+    }
+
+    .connections-calendar-rating.failed{
+        font-size:24px;
+    }
+
+    .connections-calendar-progress{
+        display:none;
+    }
+
+    .connections-archive-legend{
+        grid-template-columns:
+            repeat(2,1fr);
+    }
+
+}
