@@ -1,6 +1,7 @@
 [
     {
         "id": 1,
+        "author": "Bell",
         "groups": [
             {
                 "name": "Can Prevent Demon From Killing",
@@ -46,6 +47,7 @@
     },
     {
         "id": 2,
+        "author": "Bell",
         "groups": [
             {
                 "name": "Learns Characters",
@@ -91,6 +93,7 @@
     }
     {
         "id": 3,
+        "author": "Corey",
         "groups": [
             {
                 "name": "Can Cause Themselves to be Drunk",
