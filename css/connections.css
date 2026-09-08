@@ -2771,3 +2771,17 @@
     margin-top:
         8px;
 }
+.connections-character-picker-option.used{
+    opacity:.3;
+
+    cursor:not-allowed;
+}
+
+
+.connections-character-picker-option.used:hover{
+    transform:none;
+
+    border-color:transparent;
+
+    background:var(--light-gray);
+}
