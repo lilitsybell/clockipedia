@@ -569,10 +569,18 @@ function renderConnectionsPuzzleMeta(){
 
     }
 
+if(connectionsIsCustom){
+
+    number.textContent =
+        "Custom Puzzle";
+
+}
+else{
 
     number.textContent =
         `Puzzle #${connectionsPuzzle.id}`;
 
+}
 
     date.hidden =
         false;
@@ -1656,7 +1664,43 @@ function setupConnectionsShare(){
     );
 
 }
+function getConnectionsShareTitle(){
 
+    if(connectionsIsCustom){
+
+        return (
+            "Clockipedia Character Connections " +
+            "(Custom Puzzle)"
+        );
+
+    }
+
+
+    return (
+        "Clockipedia Character Connections #" +
+        connectionsPuzzle.id
+    );
+
+}
+
+
+function getConnectionsShareURL(){
+
+    if(connectionsIsCustom){
+
+        return window.location.href;
+
+    }
+
+
+    return (
+        window.location.origin +
+        "/games/character-connections.html" +
+        "?puzzle=" +
+        connectionsPuzzle.id
+    );
+
+}
 
 async function shareConnectionsResults(){
 
@@ -1711,12 +1755,16 @@ async function shareConnectionsResults(){
             .join("\n");
 
 
-    const puzzleURL =
-        `${window.location.origin}${window.location.pathname}?puzzle=${connectionsPuzzle.id}`;
+const puzzleURL =
+    getConnectionsShareURL();
 
 
-    const result =
-`Clockipedia Character Connections #${connectionsPuzzle.id}
+const shareTitle =
+    getConnectionsShareTitle();
+
+
+const result =
+`${shareTitle}
 
 ${rows}
 
