@@ -274,5 +274,51 @@
                 ]
             }
         ]
+    },
+    {
+        "id": 7,
+        "author": "Bell",
+        "groups": [
+            {
+                "name": "Pet Names for a Loved One",
+                "color": "yellow",
+                "characters": [
+                    "angel",
+                    "sweetheart",
+                    "princess",
+                    "king"
+                ]
+            },
+            {
+                "name": "Has Multiple Copies of Tokens",
+                "color": "green",
+                "characters": [
+                    "fanggu",
+                    "villageidiot",
+                    "imp",
+                    "legion"
+                ]
+            },
+            {
+                "name": "Requires a Number of Living Players",
+                "color": "blue",
+                "characters": [
+                    "riot",
+                    "zealot",
+                    "doomsayer",
+                    "scarletwoman"
+                ]
+            },
+            {
+                "name": "Storyteller Has Input",
+                "color": "purple",
+                "characters": [
+                    "alchemist",
+                    "fisherman",
+                    "general",
+                    "highpriestess"
+                ]
+            }
+        ]
     }
 ]
