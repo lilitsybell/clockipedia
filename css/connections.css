@@ -1918,33 +1918,28 @@
 ========================================== */
 
 .connections-maker{
-    padding:
-        28px;
+    padding:0;
 
     background:
-        white;
+        transparent;
 
-    border:
-        1px solid var(--border);
+    border:0;
 
-    border-radius:
-        22px;
+    border-radius:0;
 
-    box-shadow:
-        0 8px 25px
-        rgba(13,24,33,.06);
+    box-shadow:none;
 }
 
 
 .connections-maker-intro{
     margin-bottom:
-        24px;
+        16px;
 }
 
 
 .connections-maker-intro h2{
     margin:
-        0 0 5px;
+        0 0 4px;
 
     color:
         var(--black);
@@ -1955,7 +1950,7 @@
         sans-serif;
 
     font-size:
-        24px;
+        20px;
 }
 
 
@@ -1966,24 +1961,38 @@
         var(--gray);
 
     font-size:
-        13px;
+        12px;
 }
 
+
+/* ==========================================
+   Maker Groups
+========================================== */
 
 .connections-maker-groups{
     display:grid;
 
     grid-template-columns:
-        repeat(2,minmax(0,1fr));
+        repeat(
+            2,
+            minmax(0,1fr)
+        );
 
     gap:
-        16px;
+        14px;
 }
 
 
 .connections-maker-group{
+    position:relative;
+
+    overflow:hidden;
+
     padding:
         18px;
+
+    background:
+        white;
 
     border:
         1px solid var(--border);
@@ -1991,10 +2000,53 @@
     border-radius:
         14px;
 
-    background:
-        var(--light-gray);
+    box-shadow:
+        0 5px 16px
+        rgba(13,24,33,.04);
 }
 
+
+.connections-maker-group::before{
+    content:"";
+
+    position:absolute;
+
+    top:0;
+    left:0;
+    right:0;
+
+    height:
+        4px;
+}
+
+
+.connections-maker-group[data-color="green"]::before{
+    background:
+        var(--lime);
+}
+
+
+.connections-maker-group[data-color="yellow"]::before{
+    background:
+        var(--copper);
+}
+
+
+.connections-maker-group[data-color="blue"]::before{
+    background:
+        var(--blue);
+}
+
+
+.connections-maker-group[data-color="purple"]::before{
+    background:
+        var(--traveller);
+}
+
+
+/* ==========================================
+   Group Header
+========================================== */
 
 .connections-maker-group-header{
     display:flex;
@@ -2002,22 +2054,22 @@
     align-items:center;
 
     gap:
-        8px;
+        7px;
 
-    margin-bottom:
-        12px;
+    margin:
+        2px 0 10px;
 
     color:
         var(--black);
 
     font-size:
-        11px;
+        10px;
 
     font-weight:
         900;
 
     letter-spacing:
-        .06em;
+        .07em;
 
     text-transform:
         uppercase;
@@ -2026,13 +2078,13 @@
 
 .connections-maker-color{
     width:
-        12px;
+        9px;
 
     height:
-        12px;
+        9px;
 
     border-radius:
-        4px;
+        3px;
 }
 
 
@@ -2040,6 +2092,13 @@
 .connections-maker-color{
     background:
         var(--lime);
+}
+
+
+.connections-maker-group[data-color="yellow"]
+.connections-maker-color{
+    background:
+        var(--copper);
 }
 
 
@@ -2057,30 +2116,27 @@
 }
 
 
-.connections-maker-group[data-color="yellow"]
-.connections-maker-color{
-    background:
-        var(--copper);
-}
-
+/* ==========================================
+   Category Input
+========================================== */
 
 .connections-maker-category{
     width:100%;
 
     margin-bottom:
-        12px;
+        10px;
 
     padding:
-        11px 12px;
+        10px 11px;
 
     border:
         1px solid var(--border);
 
     border-radius:
-        9px;
+        8px;
 
     background:
-        white;
+        var(--light-gray);
 
     color:
         var(--black);
@@ -2092,23 +2148,58 @@
 }
 
 
+.connections-maker-category:focus{
+    outline:none;
+
+    border-color:
+        var(--purple);
+
+    background:
+        white;
+
+    box-shadow:
+        0 0 0 3px
+        rgba(102,102,153,.1);
+}
+
+
+/* ==========================================
+   Character Slots
+========================================== */
+
 .connections-maker-slots{
     display:grid;
 
     grid-template-columns:
-        repeat(2,1fr);
+        repeat(
+            4,
+            minmax(0,1fr)
+        );
 
     gap:
-        8px;
+        7px;
 }
 
 
 .connections-maker-slots button{
-    min-height:
-        55px;
+    min-width:0;
+
+    height:
+        102px;
 
     padding:
-        10px;
+        7px;
+
+    display:flex;
+
+    flex-direction:column;
+
+    align-items:center;
+
+    justify-content:center;
+
+    gap:
+        5px;
 
     border:
         1px dashed #c9c9d2;
@@ -2117,7 +2208,7 @@
         10px;
 
     background:
-        white;
+        var(--light-gray);
 
     color:
         var(--gray);
@@ -2125,51 +2216,123 @@
     font:inherit;
 
     font-size:
-        10px;
+        9px;
 
     font-weight:
         800;
 
     cursor:pointer;
+
+    transition:
+        border-color .14s ease,
+        background .14s ease,
+        transform .14s ease;
 }
 
 
 .connections-maker-slots button:hover{
+    transform:
+        translateY(-1px);
+
     border-color:
         var(--purple);
+
+    background:
+        #f1eff7;
 
     color:
         var(--purple);
 }
 
 
+/* ==========================================
+   Selected Character
+========================================== */
+
+.connections-maker-slots button.selected{
+    border-style:
+        solid;
+
+    border-color:
+        #d8d8df;
+
+    background:
+        white;
+
+    color:
+        var(--black);
+}
+
+
+.connections-maker-slots button.selected:hover{
+    border-color:
+        var(--purple);
+
+    background:
+        #f6f4fa;
+}
+
+
+.connections-maker-slots button.selected img{
+    width:
+        58px;
+
+    height:
+        58px;
+
+    object-fit:
+        contain;
+}
+
+
+.connections-maker-slots button.selected span{
+    width:100%;
+
+    overflow:hidden;
+
+    color:
+        var(--black);
+
+    font-size:
+        9px;
+
+    font-weight:
+        800;
+
+    text-align:center;
+
+    text-overflow:
+        ellipsis;
+
+    white-space:
+        nowrap;
+}
+
+
+/* ==========================================
+   Maker Mobile
+========================================== */
+
 @media(max-width:700px){
-
-    .connections-header-bottom{
-        flex-direction:column;
-
-        align-items:flex-start;
-    }
-
-
-    .connections-header-actions{
-        width:100%;
-
-        margin-left:0;
-    }
-
-
-    .connections-maker-button,
-    .connections-archive-button{
-        flex:1;
-
-        text-align:center;
-    }
-
 
     .connections-maker-groups{
         grid-template-columns:
             1fr;
+    }
+
+
+    .connections-maker-slots{
+        grid-template-columns:
+            repeat(
+                2,
+                1fr
+            );
+    }
+
+
+    .connections-maker-slots button{
+        height:
+            92px;
     }
 
 }
