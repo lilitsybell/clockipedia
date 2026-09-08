@@ -2905,3 +2905,36 @@
     }
 
 }
+.connections-archive-rating-guide{
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    flex-wrap:wrap;
+
+    gap:10px 18px;
+
+    margin-top:14px;
+}
+
+
+.connections-archive-rating-item{
+    display:flex;
+    align-items:center;
+
+    gap:6px;
+
+    color:var(--gray);
+
+    font-size:9px;
+    font-weight:700;
+}
+
+
+.connections-archive-rating-item img{
+    width:22px;
+    height:22px;
+
+    object-fit:contain;
+
+    flex-shrink:0;
+}
