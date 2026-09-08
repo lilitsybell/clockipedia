@@ -182,5 +182,51 @@
                 ]
             }
         ]
+    },
+    {
+        "id": 5,
+        "author": "Bell",
+        "groups": [
+            {
+                "name": "Token Icon is Headgear",
+                "color": "purple",
+                "characters": [
+                    "fool",
+                    "gnome",
+                    "baron",
+                    "angel"
+                ]
+            },
+            {
+                "name": "Causes Misregistration",
+                "color": "green",
+                "characters": [
+                    "lycanthrope",
+                    "revolutionary",
+                    "spy",
+                    "recluse"
+                ]
+            },
+            {
+                "name": "Public Declarations",
+                "color": "yellow",
+                "characters": [
+                    "damsel",
+                    "gossip",
+                    "psychopath",
+                    "doomsayer"
+                ]
+            },
+            {
+                "name": "Brings the Game Outside of the Norm",
+                "color": "blue",
+                "characters": [
+                    "djinn",
+                    "bootlegger",
+                    "amnesiac",
+                    "wizard"
+                ]
+            }
+        ]
     }
 ]
