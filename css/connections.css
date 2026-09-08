@@ -2767,3 +2767,7 @@
     line-height:
         1.55;
 }
+.s-header + .connections-maker{
+    margin-top:
+        8px;
+}
