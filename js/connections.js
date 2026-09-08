@@ -28,6 +28,7 @@ let connectionsFinished = false;
 
 let connectionsWon = false;
 
+let connectionsArchiveDate = null;
 
 /* ==========================================
    Start Game
@@ -44,10 +45,11 @@ document.addEventListener(
             await loadConnectionsPuzzle();
 
             setupConnectionsControls();
+setupConnectionsShare();
 
-            setupConnectionsShare();
+setupConnectionsArchive();
 
-            renderConnectionsGame();
+renderConnectionsGame();
 
 
             if(connectionsFinished){
@@ -1665,5 +1667,833 @@ function loadConnectionsState(){
         return false;
 
     }
+
+}
+/* ==========================================
+   Connections Archive
+========================================== */
+
+function setupConnectionsArchive(){
+
+    const openButton =
+        document.querySelector(
+            "#connectionsArchiveButton"
+        );
+
+    const closeButton =
+        document.querySelector(
+            "#connectionsArchiveClose"
+        );
+
+    const backdrop =
+        document.querySelector(
+            ".connections-archive-backdrop"
+        );
+
+    const previous =
+        document.querySelector(
+            "#connectionsArchivePrevious"
+        );
+
+    const next =
+        document.querySelector(
+            "#connectionsArchiveNext"
+        );
+
+    const todayButton =
+        document.querySelector(
+            "#connectionsArchiveToday"
+        );
+
+
+    openButton.addEventListener(
+        "click",
+        openConnectionsArchive
+    );
+
+
+    closeButton.addEventListener(
+        "click",
+        closeConnectionsArchive
+    );
+
+
+    backdrop.addEventListener(
+        "click",
+        closeConnectionsArchive
+    );
+
+
+    previous.addEventListener(
+        "click",
+        () => {
+
+            connectionsArchiveDate =
+                new Date(
+                    connectionsArchiveDate
+                        .getFullYear(),
+                    connectionsArchiveDate
+                        .getMonth() - 1,
+                    1
+                );
+
+
+            renderConnectionsArchive();
+
+        }
+    );
+
+
+    next.addEventListener(
+        "click",
+        () => {
+
+            connectionsArchiveDate =
+                new Date(
+                    connectionsArchiveDate
+                        .getFullYear(),
+                    connectionsArchiveDate
+                        .getMonth() + 1,
+                    1
+                );
+
+
+            renderConnectionsArchive();
+
+        }
+    );
+
+
+    todayButton.addEventListener(
+        "click",
+        goToTodayConnectionsPuzzle
+    );
+
+
+    document.addEventListener(
+        "keydown",
+        event => {
+
+            if(
+                event.key ===
+                "Escape"
+            ){
+
+                closeConnectionsArchive();
+
+            }
+
+        }
+    );
+
+}
+
+
+/* ==========================================
+   Open Archive
+========================================== */
+
+function openConnectionsArchive(){
+
+    const modal =
+        document.querySelector(
+            "#connectionsArchiveModal"
+        );
+
+
+    const puzzleDate =
+        parseConnectionsDate(
+            connectionsPuzzle.date
+        );
+
+
+    connectionsArchiveDate =
+        new Date(
+            puzzleDate.year,
+            puzzleDate.month - 1,
+            1
+        );
+
+
+    modal.hidden =
+        false;
+
+
+    renderConnectionsArchive();
+
+}
+
+
+/* ==========================================
+   Close Archive
+========================================== */
+
+function closeConnectionsArchive(){
+
+    const modal =
+        document.querySelector(
+            "#connectionsArchiveModal"
+        );
+
+
+    modal.hidden =
+        true;
+
+}
+
+
+/* ==========================================
+   Render Archive
+========================================== */
+
+function renderConnectionsArchive(){
+
+    renderConnectionsArchiveMonth();
+
+    renderConnectionsArchiveCalendar();
+
+    updateConnectionsArchiveNavigation();
+
+}
+
+
+/* ==========================================
+   Month Heading
+========================================== */
+
+function renderConnectionsArchiveMonth(){
+
+    const heading =
+        document.querySelector(
+            "#connectionsArchiveMonth"
+        );
+
+
+    heading.textContent =
+        connectionsArchiveDate
+            .toLocaleDateString(
+                "en-US",
+                {
+                    month:
+                        "long",
+
+                    year:
+                        "numeric"
+                }
+            );
+
+}
+
+
+/* ==========================================
+   Render Calendar
+========================================== */
+
+function renderConnectionsArchiveCalendar(){
+
+    const calendar =
+        document.querySelector(
+            "#connectionsArchiveCalendar"
+        );
+
+
+    calendar.innerHTML =
+        "";
+
+
+    const year =
+        connectionsArchiveDate
+            .getFullYear();
+
+
+    const month =
+        connectionsArchiveDate
+            .getMonth();
+
+
+    const firstDay =
+        new Date(
+            year,
+            month,
+            1
+        );
+
+
+    const lastDay =
+        new Date(
+            year,
+            month + 1,
+            0
+        );
+
+
+    const startingWeekday =
+        firstDay.getDay();
+
+
+    const daysInMonth =
+        lastDay.getDate();
+
+
+    /* ======================================
+       Blank cells before month
+    ====================================== */
+
+    for(
+        let i = 0;
+        i < startingWeekday;
+        i++
+    ){
+
+        calendar.appendChild(
+            buildConnectionsEmptyCalendarDay()
+        );
+
+    }
+
+
+    /* ======================================
+       Month days
+    ====================================== */
+
+    for(
+        let day = 1;
+        day <= daysInMonth;
+        day++
+    ){
+
+        calendar.appendChild(
+            buildConnectionsCalendarDay(
+                year,
+                month,
+                day
+            )
+        );
+
+    }
+
+}
+
+
+/* ==========================================
+   Calendar Day
+========================================== */
+
+function buildConnectionsCalendarDay(
+    year,
+    month,
+    day
+){
+
+    const button =
+        document.createElement(
+            "button"
+        );
+
+
+    button.type =
+        "button";
+
+
+    button.className =
+        "connections-calendar-day";
+
+
+    const dateKey =
+        formatConnectionsDateKey(
+            year,
+            month + 1,
+            day
+        );
+
+
+    const today =
+        getConnectionsDate();
+
+
+    const puzzle =
+        connectionsPuzzles.find(
+            puzzle =>
+                puzzle.date ===
+                dateKey
+        );
+
+
+    const number =
+        document.createElement(
+            "span"
+        );
+
+
+    number.className =
+        "connections-calendar-day-number";
+
+
+    number.textContent =
+        day;
+
+
+    button.appendChild(
+        number
+    );
+
+
+    if(dateKey === today){
+
+        button.classList.add(
+            "today"
+        );
+
+    }
+
+
+    if(!puzzle){
+
+        button.classList.add(
+            "no-puzzle"
+        );
+
+
+        button.disabled =
+            true;
+
+
+        return button;
+
+    }
+
+
+    if(dateKey > today){
+
+        button.classList.add(
+            "future"
+        );
+
+
+        button.disabled =
+            true;
+
+
+        return button;
+
+    }
+
+
+    button.classList.add(
+        "has-puzzle"
+    );
+
+
+    if(
+        puzzle.id ===
+        connectionsPuzzle.id
+    ){
+
+        button.classList.add(
+            "current-puzzle"
+        );
+
+    }
+
+
+    const state =
+        getConnectionsSavedState(
+            puzzle.id
+        );
+
+
+    if(state){
+
+        renderConnectionsCalendarStatus(
+            button,
+            state
+        );
+
+    }
+
+
+    button.addEventListener(
+        "click",
+        () => {
+
+            openConnectionsPuzzle(
+                puzzle.id
+            );
+
+        }
+    );
+
+
+    return button;
+
+}
+
+
+/* ==========================================
+   Empty Calendar Cell
+========================================== */
+
+function buildConnectionsEmptyCalendarDay(){
+
+    const cell =
+        document.createElement(
+            "div"
+        );
+
+
+    cell.className =
+        "connections-calendar-day no-puzzle";
+
+
+    return cell;
+
+}
+
+
+/* ==========================================
+   Calendar Status
+========================================== */
+
+function renderConnectionsCalendarStatus(
+    button,
+    state
+){
+
+    if(state.finished){
+
+        const rating =
+            document.createElement(
+                "span"
+            );
+
+
+        rating.className =
+            "connections-calendar-rating";
+
+
+        if(
+            state.won &&
+            state.mistakesRemaining === 4
+        ){
+
+            rating.classList.add(
+                "perfect"
+            );
+
+
+            rating.textContent =
+                "◆";
+
+        }
+        else if(
+            state.won &&
+            state.mistakesRemaining === 3
+        ){
+
+            rating.classList.add(
+                "stars"
+            );
+
+
+            rating.textContent =
+                "★★★";
+
+        }
+        else if(
+            state.won &&
+            state.mistakesRemaining === 2
+        ){
+
+            rating.classList.add(
+                "stars"
+            );
+
+
+            rating.textContent =
+                "★★";
+
+        }
+        else if(
+            state.won &&
+            state.mistakesRemaining === 1
+        ){
+
+            rating.classList.add(
+                "stars"
+            );
+
+
+            rating.textContent =
+                "★";
+
+        }
+        else{
+
+            rating.classList.add(
+                "failed"
+            );
+
+
+            rating.textContent =
+                "×";
+
+        }
+
+
+        button.appendChild(
+            rating
+        );
+
+
+        return;
+
+    }
+
+
+    if(
+        state.guesses?.length ||
+        state.solvedGroups?.length
+    ){
+
+        const progress =
+            document.createElement(
+                "span"
+            );
+
+
+        progress.className =
+            "connections-calendar-progress";
+
+
+        progress.textContent =
+            "In Progress";
+
+
+        button.appendChild(
+            progress
+        );
+
+    }
+
+}
+
+
+/* ==========================================
+   Saved Puzzle State
+========================================== */
+
+function getConnectionsSavedState(
+    puzzleId
+){
+
+    const saved =
+        localStorage.getItem(
+            "clockipedia-connections-" +
+            puzzleId
+        );
+
+
+    if(!saved){
+        return null;
+    }
+
+
+    try{
+
+        return JSON.parse(
+            saved
+        );
+
+    }
+    catch(error){
+
+        return null;
+
+    }
+
+}
+
+
+/* ==========================================
+   Archive Navigation
+========================================== */
+
+function updateConnectionsArchiveNavigation(){
+
+    const previous =
+        document.querySelector(
+            "#connectionsArchivePrevious"
+        );
+
+
+    const next =
+        document.querySelector(
+            "#connectionsArchiveNext"
+        );
+
+
+    const releasedPuzzles =
+        connectionsPuzzles.filter(
+            puzzle =>
+                puzzle.date <=
+                getConnectionsDate()
+        );
+
+
+    if(!releasedPuzzles.length){
+
+        previous.disabled =
+            true;
+
+
+        next.disabled =
+            true;
+
+
+        return;
+
+    }
+
+
+    const dates =
+        releasedPuzzles.map(
+            puzzle =>
+                parseConnectionsDate(
+                    puzzle.date
+                )
+        );
+
+
+    const earliest =
+        new Date(
+            Math.min(
+                ...dates.map(
+                    date =>
+                        new Date(
+                            date.year,
+                            date.month - 1,
+                            1
+                        ).getTime()
+                )
+            )
+        );
+
+
+    const today =
+        new Date();
+
+
+    const latest =
+        new Date(
+            today.getFullYear(),
+            today.getMonth(),
+            1
+        );
+
+
+    previous.disabled =
+        connectionsArchiveDate <=
+        earliest;
+
+
+    next.disabled =
+        connectionsArchiveDate >=
+        latest;
+
+}
+
+
+/* ==========================================
+   Open Puzzle
+========================================== */
+
+function openConnectionsPuzzle(
+    puzzleId
+){
+
+    window.location.href =
+        `${window.location.pathname}?puzzle=${puzzleId}`;
+
+}
+
+
+/* ==========================================
+   Today's Puzzle
+========================================== */
+
+function goToTodayConnectionsPuzzle(){
+
+    const today =
+        getConnectionsDate();
+
+
+    const puzzle =
+        connectionsPuzzles.find(
+            puzzle =>
+                puzzle.date ===
+                today
+        );
+
+
+    if(!puzzle){
+        return;
+    }
+
+
+    openConnectionsPuzzle(
+        puzzle.id
+    );
+
+}
+
+
+/* ==========================================
+   Date Helpers
+========================================== */
+
+function parseConnectionsDate(
+    date
+){
+
+    const [
+        year,
+        month,
+        day
+    ] =
+        date
+            .split("-")
+            .map(Number);
+
+
+    return {
+        year,
+        month,
+        day
+    };
+
+}
+
+
+function formatConnectionsDateKey(
+    year,
+    month,
+    day
+){
+
+    return (
+        year +
+        "-" +
+        String(month)
+            .padStart(
+                2,
+                "0"
+            ) +
+        "-" +
+        String(day)
+            .padStart(
+                2,
+                "0"
+            )
+    );
 
 }
