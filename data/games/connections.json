@@ -35,7 +35,7 @@
             },
             {
                 "name": "Involve Nominations",
-                "color": "red",
+                "color": "yellow",
                 "characters": [
                     "golem",
                     "witch",
@@ -81,7 +81,7 @@
             },
             {
                 "name": "Affect Outsider Count",
-                "color": "red",
+                "color": "yellow",
                 "characters": [
                     "baron",
                     "hermit",
@@ -97,7 +97,7 @@
         "groups": [
             {
                 "name": "Can Cause Drunkeness",
-                "color": "green",
+                "color": "yellow",
                 "characters": [
                     "organgrinder",
                     "sailor",
@@ -107,7 +107,7 @@
             },
             {
                 "name": "Public Announcement from Storyteller",
-                "color": "blue",
+                "color": "green",
                 "characters": [
                     "banshee",
                     "alhadikhia",
@@ -127,7 +127,7 @@
             },
             {
                 "name": "Learns an Evil Player as Information",
-                "color": "red",
+                "color": "blue",
                 "characters": [
                     "investigator",
                     "bountyhunter",
