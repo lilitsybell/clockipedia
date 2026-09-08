@@ -2497,7 +2497,7 @@ function renderConnectionsCalendarStatus(
 
         const rating =
             document.createElement(
-                "span"
+                "img"
             );
 
 
@@ -2510,13 +2510,11 @@ function renderConnectionsCalendarStatus(
             state.mistakesRemaining === 4
         ){
 
-            rating.classList.add(
-                "perfect"
-            );
+            rating.src =
+                "/images/connections/score-perfect.png";
 
-
-            rating.textContent =
-                "◆";
+            rating.alt =
+                "Perfect";
 
         }
         else if(
@@ -2524,13 +2522,11 @@ function renderConnectionsCalendarStatus(
             state.mistakesRemaining === 3
         ){
 
-            rating.classList.add(
-                "stars"
-            );
+            rating.src =
+                "/images/connections/score-three-star.png";
 
-
-            rating.textContent =
-                "★★★";
+            rating.alt =
+                "Three stars";
 
         }
         else if(
@@ -2538,13 +2534,11 @@ function renderConnectionsCalendarStatus(
             state.mistakesRemaining === 2
         ){
 
-            rating.classList.add(
-                "stars"
-            );
+            rating.src =
+                "/images/connections/score-two-star.png";
 
-
-            rating.textContent =
-                "★★";
+            rating.alt =
+                "Two stars";
 
         }
         else if(
@@ -2552,24 +2546,20 @@ function renderConnectionsCalendarStatus(
             state.mistakesRemaining === 1
         ){
 
-            rating.classList.add(
-                "stars"
-            );
+            rating.src =
+                "/images/connections/score-one-star.png";
 
-
-            rating.textContent =
-                "★";
+            rating.alt =
+                "One star";
 
         }
         else{
 
-            rating.classList.add(
-                "failed"
-            );
+            rating.src =
+                "/images/connections/score-failed.png";
 
-
-            rating.textContent =
-                "×";
+            rating.alt =
+                "Failed";
 
         }
 
@@ -2610,7 +2600,6 @@ function renderConnectionsCalendarStatus(
     }
 
 }
-
 
 /* ==========================================
    Saved Puzzle State
