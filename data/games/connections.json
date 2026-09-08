@@ -310,7 +310,7 @@
                 ]
             },
             {
-                "name": "Storyteller Has Input",
+                "name": "Ability Text Includes \"Storyteller\"",
                 "color": "purple",
                 "characters": [
                     "alchemist",
