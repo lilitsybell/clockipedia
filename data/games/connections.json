@@ -6,7 +6,7 @@
         "groups": [
             {
                 "name": "Can Prevent Demon From Killing",
-                "color": "green",
+                "color": "yellow",
                 "characters": [
                     "courtier",
                     "exorcist",
@@ -36,7 +36,7 @@
             },
             {
                 "name": "Involve Nominations",
-                "color": "yellow",
+                "color": "green",
                 "characters": [
                     "golem",
                     "witch",
@@ -53,7 +53,7 @@
         "groups": [
             {
                 "name": "Learns Characters",
-                "color": "green",
+                "color": "yellow",
                 "characters": [
                     "washerwoman",
                     "king",
@@ -83,7 +83,7 @@
             },
             {
                 "name": "Affect Outsider Count",
-                "color": "yellow",
+                "color": "green",
                 "characters": [
                     "baron",
                     "hermit",
@@ -100,7 +100,7 @@
         "groups": [
             {
                 "name": "Can Cause Drunkeness",
-                "color": "yellow",
+                "color": "green",
                 "characters": [
                     "organgrinder",
                     "sailor",
@@ -110,7 +110,7 @@
             },
             {
                 "name": "Public Announcement from Storyteller",
-                "color": "green",
+                "color": "yellow",
                 "characters": [
                     "banshee",
                     "alhadikhia",
@@ -147,7 +147,7 @@
         "groups": [
             {
                 "name": "Setup Ability Text",
-                "color": "green",
+                "color": "yellow",
                 "characters": [
                     "huntsman",
                     "balloonist",
@@ -167,7 +167,7 @@
             },
             {
                 "name": "Ability Can Cause Execution",
-                "color": "yellow",
+                "color": "green",
                 "characters": [
                     "cerenovus",
                     "virgin",
@@ -204,7 +204,7 @@
             },
             {
                 "name": "Causes Misregistration",
-                "color": "green",
+                "color": "yellow",
                 "characters": [
                     "lycanthrope",
                     "revolutionary",
@@ -214,7 +214,7 @@
             },
             {
                 "name": "Public Declarations",
-                "color": "yellow",
+                "color": "green",
                 "characters": [
                     "damsel",
                     "gossip",
@@ -241,7 +241,7 @@
         "groups": [
             {
                 "name": "Can Learn a Number Greater than 2",
-                "color": "green",
+                "color": "yellow",
                 "characters": [
                     "oracle",
                     "juggler",
@@ -251,7 +251,7 @@
             },
             {
                 "name": "Evil Learns Your Character is in Play",
-                "color": "yellow",
+                "color": "green",
                 "characters": [
                     "king",
                     "damsel",
@@ -288,7 +288,7 @@
         "groups": [
             {
                 "name": "Pet Names for a Loved One",
-                "color": "yellow",
+                "color": "green",
                 "characters": [
                     "angel",
                     "sweetheart",
@@ -298,7 +298,7 @@
             },
             {
                 "name": "Has Multiple Copies of Tokens",
-                "color": "green",
+                "color": "yellow",
                 "characters": [
                     "fanggu",
                     "villageidiot",
@@ -335,7 +335,7 @@
         "groups": [
             {
                 "name": "Can Receive a 0",
-                "color": "green",
+                "color": "yellow",
                 "characters": [
                     "chef",
                     "clockmaker",
@@ -345,7 +345,7 @@
             },
             {
                 "name": "Ability Changes Other Player's Character",
-                "color": "yellow",
+                "color": "green",
                 "characters": [
                     "fanggu",
                     "huntsman",
