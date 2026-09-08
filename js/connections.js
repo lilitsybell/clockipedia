@@ -1047,14 +1047,12 @@ function setupConnectionsShare(){
 
 
 async function shareConnectionsResults(){
-
-    const symbols = [
-        "🟩",
-        "🟦",
-        "🟪",
-        "🟥"
-    ];
-
+const symbols = {
+    green: "🟩",
+    blue: "🟦",
+    purple: "🟪",
+    red: "🟥"
+};
 
     const rows =
         connectionsGuesses
@@ -1065,20 +1063,19 @@ async function shareConnectionsResults(){
                         .map(
                             characterId => {
 
-                                const groupIndex =
-                                    connectionsPuzzle.groups
-                                        .findIndex(
-                                            group =>
-                                                group.characters.includes(
-                                                    characterId
-                                                )
-                                        );
+ const group =
+    connectionsPuzzle.groups
+        .find(
+            group =>
+                group.characters.includes(
+                    characterId
+                )
+        );
 
 
-                                return symbols[
-                                    groupIndex
-                                ];
-
+return group
+    ? symbols[group.color]
+    : "";
                             }
                         )
                         .join("");
