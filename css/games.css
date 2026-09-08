@@ -252,7 +252,10 @@ a.game-card:hover{
 ========================================== */
 
 .game-card-connections{
-    min-height:260px;
+    width:100%;
+    max-width:800px;
+
+    min-height:330px;
 
     padding:0;
 
@@ -261,32 +264,30 @@ a.game-card:hover{
     display:grid;
 
     grid-template-columns:
-        290px 1fr;
+        46% 54%;
 
     border:
         1px solid
         var(--border);
 
     border-radius:
-        18px;
+        20px;
 
-    background:
-        white;
+    background:white;
 
     color:
         var(--black);
 
-    text-decoration:
-        none;
+    text-decoration:none;
 
     box-shadow:
-        0 8px 24px
-        rgba(13,24,33,.07);
+        0 12px 32px
+        rgba(13,24,33,.08);
 
     transition:
-        transform .16s ease,
-        box-shadow .16s ease,
-        border-color .16s ease;
+        transform .18s ease,
+        box-shadow .18s ease,
+        border-color .18s ease;
 }
 
 
@@ -295,40 +296,99 @@ a.game-card:hover{
         translateY(-3px);
 
     border-color:
-        var(--purple);
+        #bcbcd2;
 
     box-shadow:
-        0 14px 32px
-        rgba(13,24,33,.11);
+        0 16px 40px
+        rgba(13,24,33,.12);
 }
 
 
 /* ==========================================
-   Left Artwork
+   Connections Artwork
 ========================================== */
 
 .game-card-connections-art{
-    min-height:260px;
+    position:relative;
+
+    min-height:330px;
 
     display:flex;
 
     align-items:center;
     justify-content:center;
 
-    padding:34px;
+    overflow:hidden;
+
+    padding:42px;
 
     background:
-        linear-gradient(
-            145deg,
-            #5d5d8f,
-            var(--purple)
-        );
+        #aaa9cf;
 }
 
 
+/* decorative background squares */
+
+.connections-art-square{
+    position:absolute;
+
+    width:72px;
+    height:72px;
+
+    border-radius:12px;
+
+    background:
+        rgba(255,255,255,.16);
+
+    transform:
+        rotate(-25deg);
+}
+
+
+.connections-art-square.square-one{
+    top:-18px;
+    left:18px;
+}
+
+
+.connections-art-square.square-two{
+    top:8px;
+    right:-14px;
+
+    transform:
+        rotate(22deg);
+}
+
+
+.connections-art-square.square-three{
+    bottom:-18px;
+    left:34px;
+
+    transform:
+        rotate(18deg);
+}
+
+
+.connections-art-square.square-four{
+    bottom:12px;
+    right:14px;
+
+    transform:
+        rotate(-20deg);
+}
+
+
+/* ==========================================
+   Mini Connections Board
+========================================== */
+
 .connections-card-mini-board{
-    width:190px;
-    height:190px;
+    position:relative;
+
+    z-index:2;
+
+    width:210px;
+    height:210px;
 
     display:grid;
 
@@ -338,7 +398,7 @@ a.game-card:hover{
     grid-template-rows:
         repeat(4,1fr);
 
-    gap:7px;
+    gap:8px;
 
     transform:
         rotate(-3deg);
@@ -349,13 +409,11 @@ a.game-card:hover{
     display:block;
 
     border-radius:
-        8px;
-
-    background:white;
+        9px;
 
     box-shadow:
-        0 4px 10px
-        rgba(13,24,33,.18);
+        0 6px 12px
+        rgba(13,24,33,.15);
 
     transition:
         transform .18s ease;
@@ -403,7 +461,7 @@ span[data-color="purple"]{
 
 .game-card-connections-content{
     padding:
-        34px 38px;
+        38px 42px;
 
     display:flex;
 
@@ -417,14 +475,13 @@ span[data-color="purple"]{
 .game-card-status{
     align-self:flex-start;
 
-    margin-bottom:
-        14px;
+    margin-bottom:16px;
 }
 
 
 .game-card-connections h2{
     margin:
-        0 0 9px;
+        0 0 10px;
 
     color:
         var(--black);
@@ -435,7 +492,7 @@ span[data-color="purple"]{
         sans-serif;
 
     font-size:
-        27px;
+        30px;
 
     line-height:
         1.05;
@@ -444,7 +501,7 @@ span[data-color="purple"]{
 
 .game-card-connections p{
     max-width:
-        500px;
+        430px;
 
     margin:0;
 
@@ -452,32 +509,98 @@ span[data-color="purple"]{
         var(--gray);
 
     font-size:
-        13px;
+        14px;
 
     line-height:
-        1.6;
+        1.55;
 }
 
 
-.game-card-connections
-.game-card-action{
-    margin-top:
-        22px;
+/* ==========================================
+   Card Buttons
+========================================== */
+
+.game-card-buttons{
+    margin-top:24px;
+}
+
+
+.game-card-play,
+.game-card-make{
+    width:100%;
+
+    min-height:48px;
+
+    display:flex;
+
+    align-items:center;
+    justify-content:center;
+
+    border-radius:11px;
+
+    font-size:10px;
+
+    font-weight:900;
+
+    letter-spacing:.07em;
+
+    text-transform:uppercase;
+}
+
+
+.game-card-play{
+    background:
+        var(--purple);
+
+    color:white;
+}
+
+
+.game-card-make{
+    border:
+        2px solid
+        var(--purple);
+
+    background:white;
 
     color:
         var(--purple);
+}
+
+
+.game-card-or{
+    display:flex;
+
+    align-items:center;
+
+    gap:10px;
+
+    margin:
+        10px 0;
+
+    color:
+        #aaa;
 
     font-size:
-        10px;
-
-    font-weight:
-        900;
-
-    letter-spacing:
-        .07em;
+        9px;
 
     text-transform:
         uppercase;
+}
+
+
+.game-card-or span{
+    flex:1;
+
+    height:1px;
+
+    background:
+        #ddd;
+}
+
+
+.game-card-or strong{
+    font-weight:800;
 }
 
 
@@ -490,27 +613,29 @@ span[data-color="purple"]{
     .game-card-connections{
         grid-template-columns:
             1fr;
+
+        max-width:none;
     }
 
 
     .game-card-connections-art{
         min-height:
-            210px;
+            240px;
     }
 
 
     .connections-card-mini-board{
         width:
-            155px;
+            175px;
 
         height:
-            155px;
+            175px;
     }
 
 
     .game-card-connections-content{
         padding:
-            26px;
+            28px;
     }
 
 }
