@@ -53,13 +53,44 @@ async function loadConnectionsPuzzle(){
     }
 connectionsPuzzles =
     await response.json();
-connectionsPuzzle =
-    connectionsPuzzles[
-        Math.floor(
-            Math.random() *
-            connectionsPuzzles.length
-        )
-    ];
+const params =
+    new URLSearchParams(
+        window.location.search
+    );
+
+
+const requestedPuzzle =
+    Number(
+        params.get("puzzle")
+    );
+
+
+const puzzleFromURL =
+    connectionsPuzzles.find(
+        puzzle =>
+            puzzle.id ===
+            requestedPuzzle
+    );
+
+
+if(puzzleFromURL){
+
+    connectionsPuzzle =
+        puzzleFromURL;
+
+}
+else{
+
+    connectionsPuzzle =
+        connectionsPuzzles[
+            Math.floor(
+                Math.random() *
+                connectionsPuzzles.length
+            )
+        ];
+
+}
+updateConnectionsURL();
     connectionsCharacters =
         connectionsPuzzle.groups
             .flatMap(
@@ -73,7 +104,27 @@ connectionsPuzzle =
     );
 
 }
+function updateConnectionsURL(){
 
+    const url =
+        new URL(
+            window.location.href
+        );
+
+
+    url.searchParams.set(
+        "puzzle",
+        connectionsPuzzle.id
+    );
+
+
+    window.history.replaceState(
+        {},
+        "",
+        url
+    );
+
+}
 
 /* ==========================================
    Controls
@@ -1039,10 +1090,16 @@ async function shareConnectionsResults(){
             .join("\n");
 
 
-    const result =
+const puzzleURL =
+    `${window.location.origin}${window.location.pathname}?puzzle=${connectionsPuzzle.id}`;
+
+
+const result =
 `Clockipedia Character Connections #${connectionsPuzzle.id}
 
-${rows}`;
+${rows}
+
+${puzzleURL}`;
 
 
     try{
@@ -1130,7 +1187,7 @@ function playRandomConnectionsPuzzle(){
             )
         ];
 
-
+updateConnectionsURL();
     resetConnectionsPuzzle();
 
 }
