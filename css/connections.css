@@ -2785,3 +2785,161 @@
 
     background:var(--light-gray);
 }
+/* ==========================================
+   Maker Footer
+========================================== */
+
+.connections-maker-footer{
+    margin-top:20px;
+
+    display:flex;
+    align-items:flex-end;
+    justify-content:space-between;
+
+    gap:20px;
+}
+
+
+.connections-maker-author{
+    width:min(320px,100%);
+}
+
+
+.connections-maker-author label,
+.connections-maker-share label{
+    display:block;
+
+    margin-bottom:6px;
+
+    color:var(--black);
+
+    font-size:10px;
+    font-weight:900;
+
+    letter-spacing:.06em;
+    text-transform:uppercase;
+}
+
+
+.connections-maker-author input,
+.connections-maker-share input{
+    width:100%;
+
+    padding:10px 11px;
+
+    border:1px solid var(--border);
+    border-radius:8px;
+
+    background:white;
+
+    color:var(--black);
+
+    font:inherit;
+    font-size:12px;
+}
+
+
+.connections-maker-create{
+    padding:11px 18px;
+
+    border:0;
+    border-radius:9px;
+
+    background:var(--purple);
+    color:white;
+
+    font:inherit;
+    font-size:10px;
+    font-weight:900;
+
+    letter-spacing:.06em;
+    text-transform:uppercase;
+
+    cursor:pointer;
+}
+
+
+.connections-maker-create:hover{
+    background:#575781;
+}
+
+
+.connections-maker-message{
+    margin-top:14px;
+
+    padding:10px 12px;
+
+    border-radius:8px;
+
+    background:rgba(181,35,35,.1);
+    color:var(--red);
+
+    font-size:11px;
+    font-weight:800;
+}
+
+
+.connections-maker-share{
+    margin-top:20px;
+
+    padding-top:20px;
+
+    border-top:1px solid var(--border);
+}
+
+
+.connections-maker-share-row{
+    display:flex;
+    gap:8px;
+}
+
+
+.connections-maker-share-row input{
+    flex:1;
+
+    background:var(--light-gray);
+}
+
+
+.connections-maker-share-row button{
+    flex-shrink:0;
+
+    padding:10px 14px;
+
+    border:1px solid var(--purple);
+    border-radius:8px;
+
+    background:white;
+    color:var(--purple);
+
+    font:inherit;
+    font-size:10px;
+    font-weight:900;
+
+    cursor:pointer;
+}
+
+
+@media(max-width:700px){
+
+    .connections-maker-footer{
+        flex-direction:column;
+        align-items:stretch;
+    }
+
+
+    .connections-maker-author{
+        width:100%;
+    }
+
+
+    .connections-maker-create{
+        width:100%;
+    }
+
+
+    .connections-maker-share-row{
+        flex-direction:column;
+    }
+
+}
