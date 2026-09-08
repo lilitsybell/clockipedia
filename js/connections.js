@@ -189,15 +189,11 @@ function setupConnectionsControls(){
 ========================================== */
 
 function renderConnectionsGame(){
-
+    renderConnectionsPuzzleMeta();
     renderSolvedGroups();
-
     renderConnectionsGrid();
-
     renderMistakes();
-
     updateSubmitButton();
-
 }
 
 
@@ -1231,5 +1227,27 @@ function resetConnectionsPuzzle(){
 
 
     renderConnectionsGame();
+
+}
+function renderConnectionsPuzzleMeta(){
+
+    const number =
+        document.querySelector(
+            "#connectionsPuzzleHeaderNumber"
+        );
+
+    const author =
+        document.querySelector(
+            "#connectionsAuthor"
+        );
+
+
+    number.textContent =
+        `Puzzle #${connectionsPuzzle.id}`;
+
+
+    author.textContent =
+        connectionsPuzzle.author ||
+        "Unknown";
 
 }
