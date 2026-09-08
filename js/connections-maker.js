@@ -187,7 +187,6 @@ function closeConnectionsCharacterPicker(){
 /* ==========================================
    Render Picker
 ========================================== */
-
 function renderConnectionsCharacterPicker(
     searchTerm = ""
 ){
@@ -205,6 +204,25 @@ function renderConnectionsCharacterPicker(
         searchTerm
             .trim()
             .toLowerCase();
+
+
+    const usedCharacters =
+        new Set(
+            Array.from(
+                document.querySelectorAll(
+                    ".connections-maker-slots button[data-character]"
+                )
+            )
+            .map(
+                button =>
+                    button.dataset.character
+            )
+        );
+
+
+    const currentCharacter =
+        connectionsMakerActiveSlot
+            ?.dataset.character;
 
 
     const characterList =
@@ -258,6 +276,26 @@ function renderConnectionsCharacterPicker(
                 "connections-character-picker-option";
 
 
+            const alreadyUsed =
+                usedCharacters.has(
+                    slug
+                ) &&
+                slug !==
+                currentCharacter;
+
+
+            if(alreadyUsed){
+
+                button.disabled =
+                    true;
+
+                button.classList.add(
+                    "used"
+                );
+
+            }
+
+
             const image =
                 document.createElement(
                     "img"
@@ -288,17 +326,21 @@ function renderConnectionsCharacterPicker(
             );
 
 
-            button.addEventListener(
-                "click",
-                () => {
+            if(!alreadyUsed){
 
-                    chooseConnectionsMakerCharacter(
-                        slug,
-                        character
-                    );
+                button.addEventListener(
+                    "click",
+                    () => {
 
-                }
-            );
+                        chooseConnectionsMakerCharacter(
+                            slug,
+                            character
+                        );
+
+                    }
+                );
+
+            }
 
 
             grid.appendChild(
@@ -309,8 +351,6 @@ function renderConnectionsCharacterPicker(
     );
 
 }
-
-
 /* ==========================================
    Choose Character
 ========================================== */
