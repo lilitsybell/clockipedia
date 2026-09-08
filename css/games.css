@@ -442,3 +442,15 @@ span[data-color="purple"]{
     grid-template-columns:1fr;
 }
 }
+.game-card-play,
+.game-card-make{
+    text-decoration:none;
+}
+
+.game-card-play:hover{
+    background:#575781;
+}
+
+.game-card-make:hover{
+    background:#f3f1f8;
+}
