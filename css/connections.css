@@ -818,9 +818,9 @@
 }
 
 
-.connections-result-row span[data-color="red"]{
+.connections-result-row span[data-color="yellow"]{
     background:
-        var(--red);
+        var(--copper);
 }
 
 /* Results Footer */
