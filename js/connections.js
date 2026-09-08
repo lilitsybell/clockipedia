@@ -13,6 +13,9 @@ let connectionsPuzzles = [];
 
 let connectionsPuzzle = null;
 
+let connectionsIsCustom = false;
+let connectionsCustomCode = "";
+
 let connectionsCharacters = [];
 
 let selectedCharacters =
@@ -82,8 +85,82 @@ renderConnectionsGame();
 /* ==========================================
    Load Puzzle
 ========================================== */
-
 async function loadConnectionsPuzzle(){
+
+    const params =
+        new URLSearchParams(
+            window.location.search
+        );
+
+
+    const customCode =
+        params.get(
+            "custom"
+        );
+
+
+    /* ======================================
+       Custom Puzzle
+    ====================================== */
+
+    if(customCode){
+
+        connectionsIsCustom =
+            true;
+
+        connectionsCustomCode =
+            customCode;
+
+
+        connectionsPuzzle =
+            decodeConnectionsCustomPuzzle(
+                customCode
+            );
+
+
+        validateConnectionsCustomPuzzle(
+            connectionsPuzzle
+        );
+
+
+        connectionsPuzzle.custom =
+            true;
+
+
+        if(
+            !loadConnectionsState()
+        ){
+
+            connectionsCharacters =
+                connectionsPuzzle.groups
+                    .flatMap(
+                        group =>
+                            group.characters
+                    );
+
+
+            shuffleArray(
+                connectionsCharacters
+            );
+
+
+            saveConnectionsState();
+
+        }
+
+
+        return;
+
+    }
+
+
+    /* ======================================
+       Daily Puzzle
+    ====================================== */
+
+    connectionsIsCustom =
+        false;
+
 
     const response =
         await fetch(
@@ -104,25 +181,17 @@ async function loadConnectionsPuzzle(){
         await response.json();
 
 
-    const params =
-        new URLSearchParams(
-            window.location.search
-        );
-
-
     const requestedPuzzle =
         Number(
-            params.get("puzzle")
+            params.get(
+                "puzzle"
+            )
         );
 
 
     const today =
         getConnectionsDate();
 
-
-    /* ======================================
-       Specific Archived Puzzle
-    ====================================== */
 
     if(requestedPuzzle){
 
@@ -150,12 +219,6 @@ async function loadConnectionsPuzzle(){
             puzzleFromURL;
 
     }
-
-
-    /* ======================================
-       Today's Puzzle
-    ====================================== */
-
     else{
 
         connectionsPuzzle =
@@ -180,10 +243,6 @@ async function loadConnectionsPuzzle(){
     updateConnectionsURL();
 
 
-    /* ======================================
-       Restore Saved Game
-    ====================================== */
-
     if(
         !loadConnectionsState()
     ){
@@ -206,8 +265,69 @@ async function loadConnectionsPuzzle(){
     }
 
 }
+function decodeConnectionsCustomPuzzle(
+    code
+){
+
+    try{
+
+        let base64 =
+            code
+                .replaceAll(
+                    "-",
+                    "+"
+                )
+                .replaceAll(
+                    "_",
+                    "/"
+                );
 
 
+        while(
+            base64.length % 4
+        ){
+
+            base64 +=
+                "=";
+
+        }
+
+
+        const binary =
+            atob(
+                base64
+            );
+
+
+        const bytes =
+            Uint8Array.from(
+                binary,
+                character =>
+                    character.charCodeAt(0)
+            );
+
+
+        const json =
+            new TextDecoder()
+                .decode(
+                    bytes
+                );
+
+
+        return JSON.parse(
+            json
+        );
+
+    }
+    catch(error){
+
+        throw new Error(
+            "This custom Connections link is invalid."
+        );
+
+    }
+
+}
 /* ==========================================
    Current Date
 ========================================== */
@@ -250,6 +370,15 @@ function getConnectionsDate(){
 ========================================== */
 
 function updateConnectionsURL(){
+
+    if(
+        connectionsIsCustom
+    ){
+
+        return;
+
+    }
+
 
     const url =
         new URL(
@@ -390,9 +519,79 @@ function renderConnectionsPuzzleMeta(){
             "#connectionsAuthor"
         );
 
+    const archive =
+        document.querySelector(
+            "#connectionsArchiveButton"
+        );
+
+
+    if(
+        connectionsIsCustom
+    ){
+
+        number.textContent =
+            "Custom Puzzle";
+
+
+        date.hidden =
+            true;
+
+
+        const dividers =
+            document.querySelectorAll(
+                ".connections-meta-divider"
+            );
+
+
+        if(
+            dividers[0]
+        ){
+
+            dividers[0].hidden =
+                true;
+
+        }
+
+
+        author.textContent =
+            connectionsPuzzle.author;
+
+
+        if(archive){
+
+            archive.hidden =
+                true;
+
+        }
+
+
+        return;
+
+    }
+
 
     number.textContent =
         `Puzzle #${connectionsPuzzle.id}`;
+
+
+    date.hidden =
+        false;
+
+
+    const dividers =
+        document.querySelectorAll(
+            ".connections-meta-divider"
+        );
+
+
+    if(
+        dividers[0]
+    ){
+
+        dividers[0].hidden =
+            false;
+
+    }
 
 
     const puzzleDate =
@@ -406,12 +605,18 @@ function renderConnectionsPuzzleMeta(){
             puzzleDate.year,
             puzzleDate.month - 1,
             puzzleDate.day
-        ).toLocaleDateString(
+        )
+        .toLocaleDateString(
             "en-US",
             {
-                month: "long",
-                day: "numeric",
-                year: "numeric"
+                month:
+                    "long",
+
+                day:
+                    "numeric",
+
+                year:
+                    "numeric"
             }
         );
 
@@ -423,6 +628,14 @@ function renderConnectionsPuzzleMeta(){
     author.textContent =
         connectionsPuzzle.author ||
         "Unknown";
+
+
+    if(archive){
+
+        archive.hidden =
+            false;
+
+    }
 
 }
 /* ==========================================
@@ -1556,9 +1769,56 @@ ${puzzleURL}`;
 
 function getConnectionsStorageKey(){
 
+    if(
+        connectionsIsCustom
+    ){
+
+        return (
+            "clockipedia-connections-custom-" +
+            hashConnectionsCustomCode(
+                connectionsCustomCode
+            )
+        );
+
+    }
+
+
     return (
         "clockipedia-connections-" +
         connectionsPuzzle.id
+    );
+
+}
+function hashConnectionsCustomCode(
+    text
+){
+
+    let hash =
+        0;
+
+
+    for(
+        let i = 0;
+        i < text.length;
+        i++
+    ){
+
+        hash =
+            (
+                (hash << 5) -
+                hash
+            ) +
+            text.charCodeAt(i);
+
+
+        hash |=
+            0;
+
+    }
+
+
+    return Math.abs(
+        hash
     );
 
 }
@@ -2521,5 +2781,126 @@ function formatConnectionsDateKey(
                 "0"
             )
     );
+
+}
+function validateConnectionsCustomPuzzle(
+    puzzle
+){
+
+    if(
+        !puzzle ||
+        !Array.isArray(
+            puzzle.groups
+        ) ||
+        puzzle.groups.length !== 4
+    ){
+
+        throw new Error(
+            "This custom Connections puzzle is invalid."
+        );
+
+    }
+
+
+    const validColors =
+        new Set([
+            "green",
+            "yellow",
+            "blue",
+            "purple"
+        ]);
+
+
+    const allCharacters =
+        [];
+
+
+    puzzle.groups.forEach(
+        group => {
+
+            if(
+                typeof group.name !==
+                    "string" ||
+                !group.name.trim()
+            ){
+
+                throw new Error(
+                    "This custom Connections puzzle has an invalid category."
+                );
+
+            }
+
+
+            if(
+                !validColors.has(
+                    group.color
+                )
+            ){
+
+                throw new Error(
+                    "This custom Connections puzzle has an invalid group color."
+                );
+
+            }
+
+
+            if(
+                !Array.isArray(
+                    group.characters
+                ) ||
+                group.characters.length !== 4
+            ){
+
+                throw new Error(
+                    "Each custom Connections group must contain four characters."
+                );
+
+            }
+
+
+            group.characters.forEach(
+                slug => {
+
+                    if(
+                        !characters[slug]
+                    ){
+
+                        throw new Error(
+                            `Unknown character: ${slug}`
+                        );
+
+                    }
+
+
+                    allCharacters.push(
+                        slug
+                    );
+
+                }
+            );
+
+        }
+    );
+
+
+    if(
+        new Set(
+            allCharacters
+        ).size !== 16
+    ){
+
+        throw new Error(
+            "Each character may only appear once."
+        );
+
+    }
+
+
+    puzzle.author =
+        typeof puzzle.author ===
+            "string" &&
+        puzzle.author.trim()
+            ? puzzle.author.trim()
+            : "Anonymous";
 
 }
