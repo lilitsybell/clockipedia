@@ -1,55 +1,86 @@
 console.log(
     "connections.js loaded"
 );
+
+
+/* ==========================================
+   Game State
+========================================== */
+
 let newestSolvedGroup = null;
+
 let connectionsPuzzles = [];
+
 let connectionsPuzzle = null;
+
 let connectionsCharacters = [];
+
 let selectedCharacters =
     new Set();
+
 let solvedGroups = [];
+
 let mistakesRemaining = 4;
+
 let connectionsGuesses = [];
+
 let connectionsFinished = false;
+
 let connectionsWon = false;
+
+
 /* ==========================================
    Start Game
 ========================================== */
+
 document.addEventListener(
     "DOMContentLoaded",
     async () => {
+
         try{
+
             await loadCharacters();
+
             await loadConnectionsPuzzle();
+
             setupConnectionsControls();
+
             setupConnectionsShare();
+
             renderConnectionsGame();
 
 
-if(connectionsFinished){
+            if(connectionsFinished){
 
-    showConnectionsResults(
-        connectionsWon
-    );
+                showConnectionsResults(
+                    connectionsWon
+                );
 
 
-    document.querySelector(
-        "#connectionsSubmit"
-    ).disabled = true;
+                document.querySelector(
+                    "#connectionsSubmit"
+                ).disabled = true;
 
-}
+            }
+
         }
         catch(error){
+
             console.error(
                 "Connections failed:",
                 error
             );
+
         }
+
     }
 );
+
+
 /* ==========================================
    Load Puzzle
 ========================================== */
+
 async function loadConnectionsPuzzle(){
 
     const response =
@@ -87,6 +118,10 @@ async function loadConnectionsPuzzle(){
         getConnectionsDate();
 
 
+    /* ======================================
+       Specific Archived Puzzle
+    ====================================== */
+
     if(requestedPuzzle){
 
         const puzzleFromURL =
@@ -113,12 +148,19 @@ async function loadConnectionsPuzzle(){
             puzzleFromURL;
 
     }
+
+
+    /* ======================================
+       Today's Puzzle
+    ====================================== */
+
     else{
 
         connectionsPuzzle =
             connectionsPuzzles.find(
                 puzzle =>
-                    puzzle.date === today
+                    puzzle.date ===
+                    today
             );
 
 
@@ -135,6 +177,10 @@ async function loadConnectionsPuzzle(){
 
     updateConnectionsURL();
 
+
+    /* ======================================
+       Restore Saved Game
+    ====================================== */
 
     if(
         !loadConnectionsState()
@@ -158,6 +204,12 @@ async function loadConnectionsPuzzle(){
     }
 
 }
+
+
+/* ==========================================
+   Current Date
+========================================== */
+
 function getConnectionsDate(){
 
     const now =
@@ -189,6 +241,12 @@ function getConnectionsDate(){
     return `${year}-${month}-${day}`;
 
 }
+
+
+/* ==========================================
+   Update URL
+========================================== */
+
 function updateConnectionsURL(){
 
     const url =
@@ -211,6 +269,7 @@ function updateConnectionsURL(){
 
 }
 
+
 /* ==========================================
    Controls
 ========================================== */
@@ -222,10 +281,12 @@ function setupConnectionsControls(){
             "#connectionsSubmit"
         );
 
+
     const shuffleButton =
         document.querySelector(
             "#connectionsShuffle"
         );
+
 
     const deselectButton =
         document.querySelector(
@@ -243,13 +304,20 @@ function setupConnectionsControls(){
         "click",
         () => {
 
-shuffleArray(
-    connectionsCharacters
-);
+            if(connectionsFinished){
+                return;
+            }
 
-renderConnectionsGrid();
 
-saveConnectionsState();
+            shuffleArray(
+                connectionsCharacters
+            );
+
+
+            renderConnectionsGrid();
+
+
+            saveConnectionsState();
 
         }
     );
@@ -259,12 +327,21 @@ saveConnectionsState();
         "click",
         () => {
 
+            if(connectionsFinished){
+                return;
+            }
+
+
             selectedCharacters.clear();
-renderConnectionsGrid();
 
-updateSubmitButton();
 
-saveConnectionsState();
+            renderConnectionsGrid();
+
+
+            updateSubmitButton();
+
+
+            saveConnectionsState();
 
         }
     );
@@ -277,11 +354,46 @@ saveConnectionsState();
 ========================================== */
 
 function renderConnectionsGame(){
+
     renderConnectionsPuzzleMeta();
+
     renderSolvedGroups();
+
     renderConnectionsGrid();
+
     renderMistakes();
+
     updateSubmitButton();
+
+}
+
+
+/* ==========================================
+   Puzzle Meta
+========================================== */
+
+function renderConnectionsPuzzleMeta(){
+
+    const number =
+        document.querySelector(
+            "#connectionsPuzzleHeaderNumber"
+        );
+
+
+    const author =
+        document.querySelector(
+            "#connectionsAuthor"
+        );
+
+
+    number.textContent =
+        `Puzzle #${connectionsPuzzle.id}`;
+
+
+    author.textContent =
+        connectionsPuzzle.author ||
+        "Unknown";
+
 }
 
 
@@ -424,6 +536,11 @@ function toggleCharacterSelection(
     characterId
 ){
 
+    if(connectionsFinished){
+        return;
+    }
+
+
     if(
         selectedCharacters.has(
             characterId
@@ -455,84 +572,133 @@ function toggleCharacterSelection(
 
     renderConnectionsGrid();
 
+
     updateSubmitButton();
 
+
+    saveConnectionsState();
+
 }
+
+
+/* ==========================================
+   Correct Animation
+========================================== */
+
 function animateCorrectSelection(){
+
     const grid =
         document.querySelector(
             "#connectionsGrid"
         );
+
+
     if(!grid){
         return;
     }
+
+
     const gridRect =
         grid.getBoundingClientRect();
+
+
     const centerX =
         gridRect.left +
         gridRect.width / 2;
+
+
     const centerY =
         gridRect.top +
         gridRect.height / 2;
-    selectedCharacters
-        .forEach(
-            characterId => {
-                const tile =
-                    document.querySelector(
-                        `[data-character="${characterId}"]`
-                    );
-                if(!tile){
-                    return;
-                }
-                const rect =
-                    tile.getBoundingClientRect();
-                const tileCenterX =
-                    rect.left +
-                    rect.width / 2;
-                const tileCenterY =
-                    rect.top +
-                    rect.height / 2;
-                tile.style.setProperty(
-                    "--collapse-x",
-                    `${centerX - tileCenterX}px`
+
+
+    selectedCharacters.forEach(
+        characterId => {
+
+            const tile =
+                document.querySelector(
+                    `[data-character="${characterId}"]`
                 );
-                tile.style.setProperty(
-                    "--collapse-y",
-                    `${centerY - tileCenterY}px`
-                );
-                tile.classList.add(
-                    "correct-collapse"
-                );
+
+
+            if(!tile){
+                return;
             }
-        );
+
+
+            const rect =
+                tile.getBoundingClientRect();
+
+
+            const tileCenterX =
+                rect.left +
+                rect.width / 2;
+
+
+            const tileCenterY =
+                rect.top +
+                rect.height / 2;
+
+
+            tile.style.setProperty(
+                "--collapse-x",
+                `${centerX - tileCenterX}px`
+            );
+
+
+            tile.style.setProperty(
+                "--collapse-y",
+                `${centerY - tileCenterY}px`
+            );
+
+
+            tile.classList.add(
+                "correct-collapse"
+            );
+
+        }
+    );
+
 }
+
+
+/* ==========================================
+   Wrong Animation
+========================================== */
+
 function animateWrongSelection(){
 
-    selectedCharacters
-        .forEach(
-            characterId => {
+    selectedCharacters.forEach(
+        characterId => {
 
-                const tile =
-                    document.querySelector(
-                        `[data-character="${characterId}"]`
-                    );
+            const tile =
+                document.querySelector(
+                    `[data-character="${characterId}"]`
+                );
 
-                if(tile){
 
-                    tile.classList.add(
-                        "wrong-shake"
-                    );
+            if(tile){
 
-                }
+                tile.classList.add(
+                    "wrong-shake"
+                );
 
             }
-        );
+
+        }
+    );
 
 }
+
+
+/* ==========================================
+   Submit Selection
+========================================== */
 
 async function submitConnectionsSelection(){
 
     if(
+        connectionsFinished ||
         selectedCharacters.size !== 4
     ){
 
@@ -543,9 +709,12 @@ async function submitConnectionsSelection(){
 
     const selected =
         [...selectedCharacters];
-connectionsGuesses.push(
-    selected
-);
+
+
+    connectionsGuesses.push(
+        selected
+    );
+
 
     const matchedGroup =
         connectionsPuzzle.groups
@@ -558,18 +727,30 @@ connectionsGuesses.push(
             );
 
 
+    /* ======================================
+       Correct Guess
+    ====================================== */
+
     if(matchedGroup){
+
         animateCorrectSelection();
-await waitConnections(
-    460
-);
-newestSolvedGroup =
-    matchedGroup;
-solvedGroups.push(
-    matchedGroup
-);
+
+
+        await waitConnections(
+            460
+        );
+
+
+        newestSolvedGroup =
+            matchedGroup;
+
+
+        solvedGroups.push(
+            matchedGroup
+        );
+
+
         selectedCharacters.clear();
-        saveConnectionsState();
 
 
         showConnectionsMessage(
@@ -581,26 +762,40 @@ solvedGroups.push(
         renderConnectionsGame();
 
 
-if(
-    solvedGroups.length ===
-    connectionsPuzzle.groups.length
-){
+        if(
+            solvedGroups.length ===
+            connectionsPuzzle.groups.length
+        ){
 
-    connectionsFinished = true;
-
-    connectionsWon = true;
-
-
-    saveConnectionsState();
+            connectionsFinished =
+                true;
 
 
-    showConnectionsResults(
-        true
-    );
+            connectionsWon =
+                true;
 
-}
+
+            saveConnectionsState();
+
+
+            showConnectionsResults(
+                true
+            );
+
+        }
+        else{
+
+            saveConnectionsState();
+
+        }
 
     }
+
+
+    /* ======================================
+       Incorrect Guess
+    ====================================== */
+
     else{
 
         animateWrongSelection();
@@ -621,7 +816,7 @@ if(
 
 
         selectedCharacters.clear();
-saveConnectionsState();
+
 
         if(oneAway){
 
@@ -651,53 +846,86 @@ saveConnectionsState();
             endConnectionsGame();
 
         }
+        else{
+
+            saveConnectionsState();
+
+        }
 
     }
 
 }
+
+
 /* ==========================================
    Match Group
 ========================================== */
+
 function groupMatchesSelection(
     group,
     selected
 ){
+
     if(
         group.characters.length !==
         selected.length
     ){
+
         return false;
+
     }
-    return group.characters
-        .every(
-            character =>
-                selected.includes(
-                    character
-                )
-        );
+
+
+    return group.characters.every(
+        character =>
+            selected.includes(
+                character
+            )
+    );
+
 }
+
+
+/* ==========================================
+   One Away
+========================================== */
+
 function isConnectionsOneAway(
     selected
 ){
+
     return connectionsPuzzle.groups
-        .some(group => {
-            if(
-                solvedGroups.includes(
-                    group
-                )
-            ){
-                return false;
+        .some(
+            group => {
+
+                if(
+                    solvedGroups.includes(
+                        group
+                    )
+                ){
+
+                    return false;
+
+                }
+
+
+                const matches =
+                    selected.filter(
+                        character =>
+                            group.characters.includes(
+                                character
+                            )
+                    ).length;
+
+
+                return matches === 3;
+
             }
-            const matches =
-                selected.filter(
-                    character =>
-                        group.characters.includes(
-                            character
-                        )
-                ).length;
-            return matches === 3;
-        });
+        );
+
 }
+
+
 /* ==========================================
    Solved Groups
 ========================================== */
@@ -714,10 +942,7 @@ function renderSolvedGroups(){
 
 
     solvedGroups.forEach(
-        (
-            group,
-            index
-        ) => {
+        group => {
 
             const row =
                 document.createElement(
@@ -727,16 +952,24 @@ function renderSolvedGroups(){
 
             row.className =
                 "connections-solved-group";
-if(group === newestSolvedGroup){
 
-    row.classList.add(
-        "newly-solved"
-    );
 
-}
+            if(
+                group ===
+                newestSolvedGroup
+            ){
 
-row.dataset.color =
-    group.color;
+                row.classList.add(
+                    "newly-solved"
+                );
+
+            }
+
+
+            row.dataset.color =
+                group.color;
+
+
             const title =
                 document.createElement(
                     "strong"
@@ -779,7 +1012,11 @@ row.dataset.color =
 
         }
     );
-newestSolvedGroup = null;
+
+
+    newestSolvedGroup =
+        null;
+
 }
 
 
@@ -832,6 +1069,7 @@ function updateSubmitButton(){
 
 
     button.disabled =
+        connectionsFinished ||
         selectedCharacters.size !== 4;
 
 }
@@ -845,13 +1083,12 @@ function isCharacterSolved(
     characterId
 ){
 
-    return solvedGroups
-        .some(
-            group =>
-                group.characters.includes(
-                    characterId
-                )
-        );
+    return solvedGroups.some(
+        group =>
+            group.characters.includes(
+                characterId
+            )
+    );
 
 }
 
@@ -891,26 +1128,32 @@ function showConnectionsMessage(
 ========================================== */
 
 function endConnectionsGame(){
-connectionsFinished = true;
-connectionsWon = false;
-    connectionsPuzzle.groups
-        .forEach(
-            group => {
 
-                if(
-                    !solvedGroups.includes(
-                        group
-                    )
-                ){
+    connectionsFinished =
+        true;
 
-                    solvedGroups.push(
-                        group
-                    );
 
-                }
+    connectionsWon =
+        false;
+
+
+    connectionsPuzzle.groups.forEach(
+        group => {
+
+            if(
+                !solvedGroups.includes(
+                    group
+                )
+            ){
+
+                solvedGroups.push(
+                    group
+                );
 
             }
-        );
+
+        }
+    );
 
 
     renderConnectionsGame();
@@ -922,14 +1165,15 @@ connectionsWon = false;
     );
 
 
-    document.querySelector(
-        "#connectionsSubmit"
-    ).disabled = true;
     saveConnectionsState();
-showConnectionsResults(
-    false
-);
+
+
+    showConnectionsResults(
+        false
+    );
+
 }
+
 
 /* ==========================================
    Results
@@ -944,15 +1188,18 @@ function showConnectionsResults(
             "#connectionsResults"
         );
 
+
     const title =
         document.querySelector(
             "#connectionsResultsTitle"
         );
 
+
     const text =
         document.querySelector(
             "#connectionsResultsText"
         );
+
 
     const number =
         document.querySelector(
@@ -960,7 +1207,8 @@ function showConnectionsResults(
         );
 
 
-    results.hidden = false;
+    results.hidden =
+        false;
 
 
     number.textContent =
@@ -969,10 +1217,13 @@ function showConnectionsResults(
 
     if(won){
 
-        if(mistakesRemaining === 4){
+        if(
+            mistakesRemaining === 4
+        ){
 
             title.textContent =
                 "Perfect Game!";
+
 
             text.textContent =
                 "You found every connection without making a mistake.";
@@ -983,8 +1234,10 @@ function showConnectionsResults(
             title.textContent =
                 "Puzzle Solved!";
 
+
             const mistakes =
-                4 - mistakesRemaining;
+                4 -
+                mistakesRemaining;
 
 
             text.textContent =
@@ -1002,6 +1255,7 @@ function showConnectionsResults(
         title.textContent =
             "So Close!";
 
+
         text.textContent =
             "The remaining connections have been revealed.";
 
@@ -1011,6 +1265,12 @@ function showConnectionsResults(
     renderConnectionsResultGrid();
 
 }
+
+
+/* ==========================================
+   Result Grid
+========================================== */
+
 function renderConnectionsResultGrid(){
 
     const grid =
@@ -1042,22 +1302,26 @@ function renderConnectionsResultGrid(){
                         document.createElement(
                             "span"
                         );
-const group =
-    connectionsPuzzle.groups
-        .find(
-            group =>
-                group.characters.includes(
-                    characterId
-                )
-        );
 
 
-if(group){
+                    const group =
+                        connectionsPuzzle.groups
+                            .find(
+                                group =>
+                                    group.characters.includes(
+                                        characterId
+                                    )
+                            );
 
-    square.dataset.color =
-        group.color;
 
-}
+                    if(group){
+
+                        square.dataset.color =
+                            group.color;
+
+                    }
+
+
                     row.appendChild(
                         square
                     );
@@ -1074,11 +1338,15 @@ if(group){
     );
 
 }
+
+
 /* ==========================================
    Shuffle
 ========================================== */
 
-function shuffleArray(array){
+function shuffleArray(
+    array
+){
 
     for(
         let i =
@@ -1105,6 +1373,12 @@ function shuffleArray(array){
     }
 
 }
+
+
+/* ==========================================
+   Wait
+========================================== */
+
 function waitConnections(
     milliseconds
 ){
@@ -1121,6 +1395,8 @@ function waitConnections(
     );
 
 }
+
+
 /* ==========================================
    Share Results
 ========================================== */
@@ -1142,12 +1418,23 @@ function setupConnectionsShare(){
 
 
 async function shareConnectionsResults(){
-const symbols = {
-    green: "🟩",
-    blue: "🟦",
-    purple: "🟪",
-    yellow: "🟨"
-};
+
+    const symbols = {
+
+        green:
+            "🟩",
+
+        blue:
+            "🟦",
+
+        purple:
+            "🟪",
+
+        copper:
+            "🟧"
+
+    };
+
 
     const rows =
         connectionsGuesses
@@ -1158,19 +1445,22 @@ const symbols = {
                         .map(
                             characterId => {
 
- const group =
-    connectionsPuzzle.groups
-        .find(
-            group =>
-                group.characters.includes(
-                    characterId
-                )
-        );
+                                const group =
+                                    connectionsPuzzle.groups
+                                        .find(
+                                            group =>
+                                                group.characters.includes(
+                                                    characterId
+                                                )
+                                        );
 
 
-return group
-    ? symbols[group.color]
-    : "";
+                                return group
+                                    ? symbols[
+                                        group.color
+                                    ] || "⬜"
+                                    : "⬜";
+
                             }
                         )
                         .join("");
@@ -1180,11 +1470,11 @@ return group
             .join("\n");
 
 
-const puzzleURL =
-    `${window.location.origin}${window.location.pathname}?puzzle=${connectionsPuzzle.id}`;
+    const puzzleURL =
+        `${window.location.origin}${window.location.pathname}?puzzle=${connectionsPuzzle.id}`;
 
 
-const result =
+    const result =
 `Clockipedia Character Connections #${connectionsPuzzle.id}
 
 ${rows}
@@ -1230,126 +1520,8 @@ ${puzzleURL}`;
     }
 
 }
-/* ==========================================
-   Play Again
-========================================== */
-
-function setupConnectionsPlayAgain(){
-
-    const button =
-        document.querySelector(
-            "#connectionsPlayAgain"
-        );
 
 
-    button.addEventListener(
-        "click",
-        playRandomConnectionsPuzzle
-    );
-
-}
-
-
-function playRandomConnectionsPuzzle(){
-
-    if(
-        connectionsPuzzles.length <= 1
-    ){
-
-        return;
-
-    }
-
-
-    const availablePuzzles =
-        connectionsPuzzles.filter(
-            puzzle =>
-                puzzle.id !==
-                connectionsPuzzle.id
-        );
-
-
-    connectionsPuzzle =
-        availablePuzzles[
-            Math.floor(
-                Math.random() *
-                availablePuzzles.length
-            )
-        ];
-
-updateConnectionsURL();
-    resetConnectionsPuzzle();
-
-}
-function resetConnectionsPuzzle(){
-
-    selectedCharacters.clear();
-
-    solvedGroups = [];
-
-    mistakesRemaining = 4;
-
-    connectionsGuesses = [];
-
-    newestSolvedGroup = null;
-
-
-    connectionsCharacters =
-        connectionsPuzzle.groups
-            .flatMap(
-                group =>
-                    group.characters
-            );
-
-
-    shuffleArray(
-        connectionsCharacters
-    );
-
-
-    const results =
-        document.querySelector(
-            "#connectionsResults"
-        );
-
-
-    results.hidden = true;
-
-
-    const message =
-        document.querySelector(
-            "#connectionsMessage"
-        );
-
-
-    message.hidden = true;
-
-
-    renderConnectionsGame();
-
-}
-function renderConnectionsPuzzleMeta(){
-
-    const number =
-        document.querySelector(
-            "#connectionsPuzzleHeaderNumber"
-        );
-
-    const author =
-        document.querySelector(
-            "#connectionsAuthor"
-        );
-
-
-    number.textContent =
-        `Puzzle #${connectionsPuzzle.id}`;
-
-
-    author.textContent =
-        connectionsPuzzle.author ||
-        "Unknown";
-
-}
 /* ==========================================
    Local Storage
 ========================================== */
@@ -1363,6 +1535,10 @@ function getConnectionsStorageKey(){
 
 }
 
+
+/* ==========================================
+   Save Game
+========================================== */
 
 function saveConnectionsState(){
 
@@ -1409,6 +1585,10 @@ function saveConnectionsState(){
 
 }
 
+
+/* ==========================================
+   Load Saved Game
+========================================== */
 
 function loadConnectionsState(){
 
