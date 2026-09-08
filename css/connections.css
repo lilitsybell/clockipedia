@@ -292,7 +292,7 @@
 
 .connections-solved-group[data-color="yellow"]{
     background:
-        var(--gold);
+        var(--copper);
 }
 .connections-solved-group strong{
     font-size:
