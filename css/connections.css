@@ -1329,27 +1329,57 @@
 
 .connections-calendar-day.today
 .connections-calendar-day-number{
-    color:
+    width:26px;
+    height:26px;
+
+    display:flex;
+    align-items:center;
+    justify-content:center;
+
+    margin-top:-2px;
+
+    border-radius:50%;
+
+    background:
         var(--purple);
+
+    color:
+        white;
+
+    font-weight:
+        900;
 }
 
 
 /* ==========================================
    Empty / Future Dates
 ========================================== */
-
+.connections-calendar-day.future,
 .connections-calendar-day.no-puzzle{
+    background:
+        var(--light-gray);
+
     color:
         #b7b7bf;
-}
 
+    border-color:
+        var(--border);
 
-.connections-calendar-day.future{
     opacity:
-        .45;
+        .55;
+
+    cursor:
+        not-allowed;
 }
 
+.connections-calendar-day.future:hover,
+.connections-calendar-day.no-puzzle:hover{
+    background:
+        var(--light-gray);
 
+    border-color:
+        var(--border);
+}
 /* ==========================================
    Calendar Rating
 ========================================== */
