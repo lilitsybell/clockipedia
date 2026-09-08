@@ -569,7 +569,7 @@ function createConnectionsCustomPuzzle(){
 
     const url =
         new URL(
-            "/games/connections.html",
+            "/games/character-connections.html",
             window.location.origin
         );
 
@@ -599,7 +599,6 @@ function createConnectionsCustomPuzzle(){
 
 }
 
-
 function encodeConnectionsCustomPuzzle(
     puzzle
 ){
@@ -610,24 +609,46 @@ function encodeConnectionsCustomPuzzle(
         );
 
 
-    return btoa(
-        encodeURIComponent(
-            json
-        )
-        .replace(
-            /%([0-9A-F]{2})/g,
-            (
-                match,
-                code
-            ) =>
+    const bytes =
+        new TextEncoder()
+            .encode(
+                json
+            );
+
+
+    let binary =
+        "";
+
+
+    bytes.forEach(
+        byte => {
+
+            binary +=
                 String.fromCharCode(
-                    "0x" + code
-                )
-        )
+                    byte
+                );
+
+        }
+    );
+
+
+    return btoa(
+        binary
+    )
+    .replaceAll(
+        "+",
+        "-"
+    )
+    .replaceAll(
+        "/",
+        "_"
+    )
+    .replace(
+        /=+$/,
+        ""
     );
 
 }
-
 
 async function copyConnectionsCustomPuzzleLink(){
 
