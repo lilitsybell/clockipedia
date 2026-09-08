@@ -1932,10 +1932,12 @@
 
 
 .connections-maker-intro{
+    margin-top:
+        8px;
+
     margin-bottom:
         16px;
 }
-
 
 .connections-maker-intro h2{
     margin:
