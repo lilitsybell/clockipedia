@@ -231,17 +231,7 @@ grid-template-columns:
     box-shadow:
         0 4px 10px
         rgba(13,24,33,.14);
-
-    transition:
-        transform .16s ease;
 }
-
-
-.game-card-connections:hover
-.connections-card-mini-board span{
-    transform:translateY(-2px);
-}
-
 
 .connections-card-mini-board
 span[data-color="yellow"]{
