@@ -252,12 +252,63 @@
             </section>
 
         </div>
+<div
+    id="connectionsCharacterPicker"
+    class="connections-character-picker"
+    hidden
+>
 
+    <div class="connections-character-picker-backdrop"></div>
+
+    <section class="connections-character-picker-panel">
+
+        <header class="connections-character-picker-header">
+
+            <div>
+
+                <span class="connections-eyebrow">
+                    Choose Character
+                </span>
+
+                <h2>
+                    Select a Character
+                </h2>
+
+            </div>
+
+            <button
+                id="connectionsCharacterPickerClose"
+                class="connections-character-picker-close"
+                type="button"
+                aria-label="Close character picker"
+            >
+                ×
+            </button>
+
+        </header>
+
+        <input
+            id="connectionsCharacterSearch"
+            class="connections-character-search"
+            type="text"
+            placeholder="Search characters..."
+            autocomplete="off"
+        >
+
+        <div
+            id="connectionsCharacterPickerGrid"
+            class="connections-character-picker-grid"
+        ></div>
+
+    </section>
+
+</div>
     </main>
 
     <script src="/js/characters.js"></script>
     <script src="/js/search.js"></script>
     <script src="/js/sidebar.js"></script>
+    <script src="/js/connections-maker.js"></script>
 
 </body>
 </html>
