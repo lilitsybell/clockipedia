@@ -185,7 +185,77 @@
         #f1eff7;
 }
 
+.connections-header-actions{
+    margin-left:auto;
 
+    display:flex;
+    align-items:center;
+
+    gap:8px;
+}
+
+
+.connections-maker-button,
+.connections-archive-button{
+    padding:
+        8px 13px;
+
+    border:
+        1px solid var(--purple);
+
+    border-radius:
+        8px;
+
+    font:inherit;
+
+    font-size:
+        9px;
+
+    font-weight:
+        900;
+
+    letter-spacing:
+        .07em;
+
+    text-transform:
+        uppercase;
+
+    text-decoration:none;
+
+    cursor:pointer;
+}
+
+
+.connections-maker-button{
+    background:
+        var(--purple);
+
+    color:
+        white;
+}
+
+
+.connections-maker-button:hover{
+    background:
+        #575781;
+}
+
+
+.connections-archive-button{
+    margin-left:0;
+
+    background:
+        white;
+
+    color:
+        var(--purple);
+}
+
+
+.connections-archive-button:hover{
+    background:
+        #f1eff7;
+}
 /* ==========================================
    Game
 ========================================== */
