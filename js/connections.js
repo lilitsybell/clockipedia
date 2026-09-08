@@ -54,7 +54,12 @@ async function loadConnectionsPuzzle(){
 connectionsPuzzles =
     await response.json();
 connectionsPuzzle =
-    connectionsPuzzles[0];
+    connectionsPuzzles[
+        Math.floor(
+            Math.random() *
+            connectionsPuzzles.length
+        )
+    ];
     connectionsCharacters =
         connectionsPuzzle.groups
             .flatMap(
