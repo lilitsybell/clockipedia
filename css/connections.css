@@ -900,3 +900,32 @@
     border-color:
         var(--purple);
 }
+.connections-puzzle-meta{
+    display:flex;
+
+    align-items:center;
+
+    gap:7px;
+
+    margin-top:10px;
+
+    color:
+        var(--gray);
+
+    font-size:
+        11px;
+}
+
+
+.connections-puzzle-meta strong{
+    color:
+        var(--purple);
+
+    font-weight:
+        800;
+}
+
+
+.connections-meta-divider{
+    opacity:.5;
+}
