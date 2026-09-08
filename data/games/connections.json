@@ -4,6 +4,7 @@
         "groups": [
             {
                 "name": "Can Prevent Demon From Killing",
+                "color": "green",
                 "characters": [
                     "courtier",
                     "exorcist",
@@ -13,6 +14,7 @@
             },
             {
                 "name": "Can Cause Themselves to Die",
+                "color": "blue",
                 "characters": [
                     "gambler",
                     "imp",
@@ -22,6 +24,7 @@
             },
             {
                 "name": "Learns a Number",
+                "color": "purple",
                 "characters": [
                     "empath",
                     "mathematician",
@@ -31,6 +34,7 @@
             },
             {
                 "name": "Involve Nominations",
+                "color": "red",
                 "characters": [
                     "golem",
                     "witch",
@@ -45,6 +49,7 @@
         "groups": [
             {
                 "name": "Learns Characters",
+                "color": "green",
                 "characters": [
                     "washerwoman",
                     "king",
@@ -54,6 +59,7 @@
             },
             {
                 "name": "Causes Alignment Change",
+                "color": "blue",
                 "characters": [
                     "snakecharmer",
                     "cultleader",
@@ -63,6 +69,7 @@
             },
             {
                 "name": "Prevent Death",
+                "color": "purple",
                 "characters": [
                     "pacifist",
                     "tealady",
@@ -72,6 +79,7 @@
             },
             {
                 "name": "Affect Outsider Count",
+                "color": "red",
                 "characters": [
                     "baron",
                     "hermit",
