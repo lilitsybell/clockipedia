@@ -468,22 +468,24 @@
 ========================================== */
 
 .connections-message{
-    margin-top:
-        18px;
+    margin:0;
 
     padding:
-        13px 16px;
+        7px 12px;
 
     border-radius:
-        10px;
+        8px;
 
     font-size:
-        13px;
+        11px;
 
     font-weight:
-        700;
+        800;
 
     text-align:center;
+
+    white-space:
+        nowrap;
 }
 
 
@@ -505,8 +507,6 @@
     color:
         var(--red);
 }
-
-
 /* ==========================================
    Mobile
 ========================================== */
