@@ -1458,7 +1458,7 @@ async function shareConnectionsResults(){
         purple:
             "🟪",
 
-        copper:
+        yellow:
             "🟧"
 
     };
