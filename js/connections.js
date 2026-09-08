@@ -582,6 +582,8 @@ else{
 
 }
 
+}
+
     date.hidden =
         false;
 
