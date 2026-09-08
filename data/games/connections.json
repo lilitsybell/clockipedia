@@ -136,5 +136,51 @@
                 ]
             }
         ]
+    },
+    {
+        "id": 4,
+        "author": "Corey",
+        "groups": [
+            {
+                "name": "Setup Ability Text",
+                "color": "green",
+                "characters": [
+                    "huntsman",
+                    "balloonist",
+                    "choirboy",
+                    "atheist"
+                ]
+            },
+            {
+                "name": "Involves Neighbors",
+                "color": "blue",
+                "characters": [
+                    "tealady",
+                    "empath",
+                    "cultleader",
+                    "lordoftyphon"
+                ]
+            },
+            {
+                "name": "Ability Can Cause Execution",
+                "color": "yellow",
+                "characters": [
+                    "cerenovus",
+                    "virgin",
+                    "mutant",
+                    "vizier"
+                ]
+            },
+            {
+                "name": "Token Icon is an Animal",
+                "color": "purple",
+                "characters": [
+                    "ravenkeeper",
+                    "pacifist",
+                    "snakecharmer",
+                    "organgrinder"
+                ]
+            }
+        ]
     }
 ]
