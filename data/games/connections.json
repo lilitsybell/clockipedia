@@ -320,5 +320,51 @@
                 ]
             }
         ]
+    },
+    {
+        "id": 8,
+        "author": "Corey",
+        "groups": [
+            {
+                "name": "Can Receive a 0",
+                "color": "green",
+                "characters": [
+                    "chef",
+                    "clockmaker",
+                    "librarian",
+                    "oracle"
+                ]
+            },
+            {
+                "name": "Ability Changes Other Player's Character",
+                "color": "yellow",
+                "characters": [
+                    "fanggu",
+                    "huntsman",
+                    "imp",
+                    "farmer"
+                ]
+            },
+            {
+                "name": "If In Play, Game May Continue with No Alive Demon",
+                "color": "blue",
+                "characters": [
+                    "eviltwin",
+                    "summoner",
+                    "mastermind",
+                    "recluse"
+                ]
+            },
+            {
+                "name": "Flower on Character Icon",
+                "color": "purple",
+                "characters": [
+                    "flowergirl",
+                    "poppygrower",
+                    "godfather",
+                    "damsel"
+                ]
+            }
+        ]
     }
 ]
