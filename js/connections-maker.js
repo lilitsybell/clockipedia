@@ -418,3 +418,277 @@ function chooseConnectionsMakerCharacter(
     closeConnectionsCharacterPicker();
 
 }
+/* ==========================================
+   Create Custom Puzzle
+========================================== */
+
+document.addEventListener(
+    "DOMContentLoaded",
+    () => {
+
+        const createButton =
+            document.querySelector(
+                "#connectionsMakerCreate"
+            );
+
+        const copyButton =
+            document.querySelector(
+                "#connectionsMakerCopy"
+            );
+
+
+        createButton.addEventListener(
+            "click",
+            createConnectionsCustomPuzzle
+        );
+
+
+        copyButton.addEventListener(
+            "click",
+            copyConnectionsCustomPuzzleLink
+        );
+
+    }
+);
+
+
+function createConnectionsCustomPuzzle(){
+
+    const groupElements =
+        Array.from(
+            document.querySelectorAll(
+                ".connections-maker-group"
+            )
+        );
+
+
+    const groups =
+        groupElements.map(
+            groupElement => {
+
+                const name =
+                    groupElement
+                        .querySelector(
+                            ".connections-maker-category"
+                        )
+                        .value
+                        .trim();
+
+
+                const color =
+                    groupElement.dataset.color;
+
+
+                const selectedCharacters =
+                    Array.from(
+                        groupElement.querySelectorAll(
+                            ".connections-maker-slots button"
+                        )
+                    )
+                    .map(
+                        button =>
+                            button.dataset.character
+                    )
+                    .filter(Boolean);
+
+
+                return {
+                    name,
+                    color,
+                    characters:
+                        selectedCharacters
+                };
+
+            }
+        );
+
+
+    const invalidGroup =
+        groups.find(
+            group =>
+                !group.name ||
+                group.characters.length !== 4
+        );
+
+
+    if(invalidGroup){
+
+        showConnectionsMakerMessage(
+            "Each group needs a category name and four characters."
+        );
+
+        return;
+
+    }
+
+
+    const allCharacters =
+        groups.flatMap(
+            group =>
+                group.characters
+        );
+
+
+    if(
+        new Set(allCharacters).size !==
+        16
+    ){
+
+        showConnectionsMakerMessage(
+            "Each character can only be used once."
+        );
+
+        return;
+
+    }
+
+
+    const author =
+        document.querySelector(
+            "#connectionsMakerAuthor"
+        )
+        .value
+        .trim();
+
+
+    const customPuzzle = {
+
+        author:
+            author || "Anonymous",
+
+        groups
+
+    };
+
+
+    const encoded =
+        encodeConnectionsCustomPuzzle(
+            customPuzzle
+        );
+
+
+    const url =
+        new URL(
+            "/games/connections.html",
+            window.location.origin
+        );
+
+
+    url.searchParams.set(
+        "custom",
+        encoded
+    );
+
+
+    document.querySelector(
+        "#connectionsMakerShareURL"
+    ).value =
+        url.toString();
+
+
+    document.querySelector(
+        "#connectionsMakerShare"
+    ).hidden =
+        false;
+
+
+    document.querySelector(
+        "#connectionsMakerMessage"
+    ).hidden =
+        true;
+
+}
+
+
+function encodeConnectionsCustomPuzzle(
+    puzzle
+){
+
+    const json =
+        JSON.stringify(
+            puzzle
+        );
+
+
+    return btoa(
+        encodeURIComponent(
+            json
+        )
+        .replace(
+            /%([0-9A-F]{2})/g,
+            (
+                match,
+                code
+            ) =>
+                String.fromCharCode(
+                    "0x" + code
+                )
+        )
+    );
+
+}
+
+
+async function copyConnectionsCustomPuzzleLink(){
+
+    const input =
+        document.querySelector(
+            "#connectionsMakerShareURL"
+        );
+
+
+    await navigator.clipboard.writeText(
+        input.value
+    );
+
+
+    const button =
+        document.querySelector(
+            "#connectionsMakerCopy"
+        );
+
+
+    const originalText =
+        button.textContent;
+
+
+    button.textContent =
+        "Copied!";
+
+
+    setTimeout(
+        () => {
+
+            button.textContent =
+                originalText;
+
+        },
+        1200
+    );
+
+}
+
+
+function showConnectionsMakerMessage(
+    message
+){
+
+    const box =
+        document.querySelector(
+            "#connectionsMakerMessage"
+        );
+
+
+    box.textContent =
+        message;
+
+    box.hidden =
+        false;
+
+
+    document.querySelector(
+        "#connectionsMakerShare"
+    ).hidden =
+        true;
+
+}
