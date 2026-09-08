@@ -290,9 +290,9 @@
 }
 
 
-.connections-solved-group[data-color="red"]{
+.connections-solved-group[data-color="yellow"]{
     background:
-        var(--red);
+        var(--gold);
 }
 .connections-solved-group strong{
     font-size:
