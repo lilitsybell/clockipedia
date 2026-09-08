@@ -2,6 +2,7 @@
     {
         "id": 1,
         "author": "Bell",
+        "date": "2026-09-08",
         "groups": [
             {
                 "name": "Can Prevent Demon From Killing",
@@ -48,6 +49,7 @@
     {
         "id": 2,
         "author": "Bell",
+        "date": "2026-09-09",
         "groups": [
             {
                 "name": "Learns Characters",
@@ -94,6 +96,7 @@
     {
         "id": 3,
         "author": "Corey",
+        "date": "2026-09-10",
         "groups": [
             {
                 "name": "Can Cause Drunkeness",
@@ -140,6 +143,7 @@
     {
         "id": 4,
         "author": "Corey",
+        "date": "2026-09-11",
         "groups": [
             {
                 "name": "Setup Ability Text",
@@ -186,6 +190,7 @@
     {
         "id": 5,
         "author": "Bell",
+        "date": "2026-09-12",
         "groups": [
             {
                 "name": "Token Icon is Headgear",
@@ -232,6 +237,7 @@
     {
         "id": 6,
         "author": "Corey",
+        "date": "2026-09-13",
         "groups": [
             {
                 "name": "Can Learn a Number Greater than 2",
@@ -278,6 +284,7 @@
     {
         "id": 7,
         "author": "Bell",
+        "date": "2026-09-14",
         "groups": [
             {
                 "name": "Pet Names for a Loved One",
@@ -324,6 +331,7 @@
     {
         "id": 8,
         "author": "Corey",
+        "date": "2026-09-15",
         "groups": [
             {
                 "name": "Can Receive a 0",
