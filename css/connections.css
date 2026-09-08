@@ -800,30 +800,28 @@
     border-radius:5px;
 }
 
-
-.connections-result-row span[data-group="0"]{
+.connections-result-row span[data-color="green"]{
     background:
         var(--lime);
 }
 
 
-.connections-result-row span[data-group="1"]{
+.connections-result-row span[data-color="blue"]{
     background:
         var(--blue);
 }
 
 
-.connections-result-row span[data-group="2"]{
+.connections-result-row span[data-color="purple"]{
     background:
         var(--traveller);
 }
 
 
-.connections-result-row span[data-group="3"]{
+.connections-result-row span[data-color="red"]{
     background:
         var(--red);
 }
-
 
 /* Results Footer */
 
