@@ -2442,7 +2442,7 @@
     "purpose": "The [Recluse] draws suspicion.",
     "summary": [
              "ComingSoon",
-             "ComingSoon"
+             "<b>Yes, But Don't:</b> The game can continue without an alive Demon if there is an alive [Recluse] in play registering as the Demon."
              ],
     "run": {
            "Anytime": [
