@@ -642,10 +642,8 @@ if(group === newestSolvedGroup){
 
 }
 
-            row.dataset.group =
-                index;
-
-
+row.dataset.color =
+    group.color;
             const title =
                 document.createElement(
                     "strong"
