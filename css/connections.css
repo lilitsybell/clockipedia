@@ -390,7 +390,7 @@
 }
 
 
-.connections-solved-group[data-color="copper"]{
+.connections-solved-group[data-color="yellow"]{
     background:
         var(--copper);
 }
@@ -882,7 +882,7 @@
 }
 
 
-.connections-result-row span[data-color="copper"]{
+.connections-result-row span[data-color="yellow"]{
     background:
         var(--copper);
 }
