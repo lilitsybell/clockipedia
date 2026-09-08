@@ -373,7 +373,6 @@ function renderConnectionsGame(){
 /* ==========================================
    Puzzle Meta
 ========================================== */
-
 function renderConnectionsPuzzleMeta(){
 
     const number =
@@ -381,6 +380,10 @@ function renderConnectionsPuzzleMeta(){
             "#connectionsPuzzleHeaderNumber"
         );
 
+    const date =
+        document.querySelector(
+            "#connectionsPuzzleDate"
+        );
 
     const author =
         document.querySelector(
@@ -392,13 +395,36 @@ function renderConnectionsPuzzleMeta(){
         `Puzzle #${connectionsPuzzle.id}`;
 
 
+    const puzzleDate =
+        parseConnectionsDate(
+            connectionsPuzzle.date
+        );
+
+
+    const formattedDate =
+        new Date(
+            puzzleDate.year,
+            puzzleDate.month - 1,
+            puzzleDate.day
+        ).toLocaleDateString(
+            "en-US",
+            {
+                month: "long",
+                day: "numeric",
+                year: "numeric"
+            }
+        );
+
+
+    date.textContent =
+        formattedDate;
+
+
     author.textContent =
         connectionsPuzzle.author ||
         "Unknown";
 
 }
-
-
 /* ==========================================
    Render Grid
 ========================================== */
