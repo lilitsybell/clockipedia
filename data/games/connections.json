@@ -228,5 +228,51 @@
                 ]
             }
         ]
+    },
+    {
+        "id": 6,
+        "author": "Corey",
+        "groups": [
+            {
+                "name": "Can Learn a Number Greater than 2",
+                "color": "green",
+                "characters": [
+                    "oracle",
+                    "juggler",
+                    "chef",
+                    "clockmaker"
+                ]
+            },
+            {
+                "name": "Evil Learns Your Character is in Play",
+                "color": "yellow",
+                "characters": [
+                    "king",
+                    "damsel",
+                    "lunatic",
+                    "magician"
+                ]
+            },
+            {
+                "name": "Ability has (not yourself) in the Ability Text",
+                "color": "blue",
+                "characters": [
+                    "ogre",
+                    "monk",
+                    "chambermaid",
+                    "dreamer"
+                ]
+            },
+            {
+                "name": "Character Name Has Two Sets of Double Letters",
+                "color": "purple",
+                "characters": [
+                    "innkeeper",
+                    "balloonist",
+                    "assassin",
+                    "lleech"
+                ]
+            }
+        ]
     }
 ]
