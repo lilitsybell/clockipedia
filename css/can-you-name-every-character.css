@@ -73,7 +73,7 @@
 ========================================== */
 
 .name-every-character-team{
-    margin-bottom:16px;
+    margin-bottom:13px;
 }
 
 .name-every-character-team-header{
@@ -82,7 +82,7 @@
     align-items:center;
     justify-content:space-between;
 
-    margin-bottom:5px;
+    margin-bottom:4px;
 }
 
 
@@ -94,7 +94,7 @@
         Arial,
         sans-serif;
 
-    font-size:14px;
+    font-size:13px;
 }
 
 
@@ -115,51 +115,64 @@
     display:grid;
 
     grid-template-columns:
-        repeat(auto-fill, minmax(42px, 1fr));
+        repeat(5, minmax(0, 1fr));
 
-    gap:4px;
+    gap:5px;
 }
 
 .name-every-character-slot{
-    aspect-ratio:1;
+    min-width:0;
+    height:34px;
 
     display:flex;
 
     align-items:center;
-    justify-content:center;
 
-    min-width:0;
+    gap:7px;
+
+    padding:4px 7px;
 
     border:1px solid var(--border);
 
     border-radius:6px;
 
     background:white;
+
+    overflow:hidden;
 }
 
 
 .name-every-character-slot-image{
-    width:100%;
-    height:100%;
+    width:24px;
+    height:24px;
+
+    flex-shrink:0;
 
     display:flex;
 
     align-items:center;
     justify-content:center;
 
-    border-radius:5px;
+    border-radius:50%;
 
     background:var(--light-gray);
 
-    color:#c2c2c9;
+    color:#c1c1c8;
 
-    font-size:14px;
+    font-size:10px;
     font-weight:900;
 }
 
 
 .name-every-character-slot-name{
-    display:none;
+    flex:1;
+
+    min-width:0;
+    height:7px;
+
+    border-radius:999px;
+
+    background:#e8e8ed;
 }
 
 /* ==========================================
@@ -208,29 +221,31 @@
 }
 
 
-/* ==========================================
-   Mobile
-========================================== */
+@media(max-width:1000px){
 
-
-@media(max-width:700px){
-
-    .name-every-character-page{
-        width:
-            calc(100% - 30px);
-
-        padding:
-            30px 0 50px;
+    .name-every-character-grid{
+        grid-template-columns:
+            repeat(4, minmax(0, 1fr));
     }
 
 }
 
 
-@media(max-width:460px){
+@media(max-width:750px){
 
     .name-every-character-grid{
         grid-template-columns:
-            1fr;
+            repeat(3, minmax(0, 1fr));
+    }
+
+}
+
+
+@media(max-width:520px){
+
+    .name-every-character-grid{
+        grid-template-columns:
+            repeat(2, minmax(0, 1fr));
     }
 
 }
