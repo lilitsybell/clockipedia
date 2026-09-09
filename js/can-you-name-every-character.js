@@ -72,8 +72,17 @@ let nameEveryCharacterGuessed =
 let nameEveryCharacterStartTime =
     null;
 
+let nameEveryCharacterElapsedTime =
+    0;
+
 let nameEveryCharacterTimerInterval =
     null;
+
+let nameEveryCharacterTimerStarted =
+    false;
+
+let nameEveryCharacterPaused =
+    false;
 
 let nameEveryCharacterGameEnded =
     false;
@@ -701,25 +710,45 @@ function setupNameEveryCharacterGiveUp(){
         );
 
 
-    button.addEventListener(
-        "click",
-        () => {
+button.addEventListener(
+    "click",
+    () => {
 
-            const confirmed =
-                window.confirm(
-                    "Give up and reveal all remaining characters?"
-                );
-
-
-            if(!confirmed){
-                return;
-            }
+        const wasRunning =
+            nameEveryCharacterTimerInterval !==
+            null;
 
 
-            giveUpNameEveryCharacter();
+        if(wasRunning){
+
+            pauseNameEveryCharacterTimer();
 
         }
-    );
+
+
+        const confirmed =
+            window.confirm(
+                "Give up and reveal all remaining characters?"
+            );
+
+
+        if(!confirmed){
+
+            if(wasRunning){
+
+                resumeNameEveryCharacterTimer();
+
+            }
+
+            return;
+
+        }
+
+
+        giveUpNameEveryCharacter();
+
+    }
+);
 
 }
 
@@ -910,55 +939,120 @@ stopNameEveryCharacterTimer();
 function startNameEveryCharacterTimer(){
 
     if(
-        nameEveryCharacterTimerInterval ||
+        nameEveryCharacterTimerStarted ||
         nameEveryCharacterGameEnded
     ){
-
         return;
-
     }
+
+
+    nameEveryCharacterTimerStarted =
+        true;
+
+
+    resumeNameEveryCharacterTimer();
+
+}
+
+
+function resumeNameEveryCharacterTimer(){
+
+    if(
+        nameEveryCharacterGameEnded ||
+        nameEveryCharacterTimerInterval
+    ){
+        return;
+    }
+
+
+    nameEveryCharacterPaused =
+        false;
 
 
     nameEveryCharacterStartTime =
         Date.now();
 
 
-    updateNameEveryCharacterTimer();
-
-
     nameEveryCharacterTimerInterval =
         setInterval(
             updateNameEveryCharacterTimer,
-            1000
+            250
         );
+
+
+    updateNameEveryCharacterTimer();
+
+}
+
+
+function pauseNameEveryCharacterTimer(){
+
+    if(
+        !nameEveryCharacterTimerInterval
+    ){
+        return;
+    }
+
+
+    nameEveryCharacterElapsedTime +=
+        Date.now() -
+        nameEveryCharacterStartTime;
+
+
+    clearInterval(
+        nameEveryCharacterTimerInterval
+    );
+
+
+    nameEveryCharacterTimerInterval =
+        null;
+
+
+    nameEveryCharacterStartTime =
+        null;
+
+
+    nameEveryCharacterPaused =
+        true;
+
+
+    updateNameEveryCharacterTimer();
 
 }
 
 
 function updateNameEveryCharacterTimer(){
 
-    if(!nameEveryCharacterStartTime){
-        return;
+    let elapsed =
+        nameEveryCharacterElapsedTime;
+
+
+    if(
+        nameEveryCharacterTimerInterval &&
+        nameEveryCharacterStartTime
+    ){
+
+        elapsed +=
+            Date.now() -
+            nameEveryCharacterStartTime;
+
     }
 
 
-    const elapsed =
+    const totalSeconds =
         Math.floor(
-            (
-                Date.now() -
-                nameEveryCharacterStartTime
-            ) / 1000
+            elapsed / 1000
         );
 
 
     const minutes =
         Math.floor(
-            elapsed / 60
+            totalSeconds / 60
         );
 
 
     const seconds =
-        elapsed % 60;
+        totalSeconds % 60;
 
 
     const timer =
@@ -979,6 +1073,11 @@ function stopNameEveryCharacterTimer(){
         nameEveryCharacterTimerInterval
     ){
 
+        nameEveryCharacterElapsedTime +=
+            Date.now() -
+            nameEveryCharacterStartTime;
+
+
         clearInterval(
             nameEveryCharacterTimerInterval
         );
@@ -990,16 +1089,14 @@ function stopNameEveryCharacterTimer(){
     }
 
 
-    if(
-        nameEveryCharacterStartTime
-    ){
-
-        updateNameEveryCharacterTimer();
-
-    }
+    nameEveryCharacterStartTime =
+        null;
 
 
     nameEveryCharacterGameEnded =
         true;
+
+
+    updateNameEveryCharacterTimer();
 
 }
