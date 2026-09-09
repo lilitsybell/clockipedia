@@ -106,6 +106,7 @@ setupNameEveryCharacterGiveUp();
 updateNameEveryCharacterProgress();
 
 updateNameEveryCharacterTeamProgress();
+setupNameEveryCharacterShare();            
 
         }
         catch(error){
@@ -931,6 +932,38 @@ stopNameEveryCharacterTimer();
 
     complete.hidden =
         false;
+showNameEveryCharacterWinner();
+}
+/* ==========================================
+   Winner Popup
+========================================== */
+
+function showNameEveryCharacterWinner(){
+
+    const winner =
+        document.querySelector(
+            "#nameEveryCharacterWinner"
+        );
+
+
+    const winnerTime =
+        document.querySelector(
+            "#nameEveryCharacterWinnerTime"
+        );
+
+
+    const timer =
+        document.querySelector(
+            "#nameEveryCharacterTimer"
+        );
+
+
+    winnerTime.textContent =
+        timer.textContent;
+
+
+    winner.hidden =
+        false;
 
 }
 /* ==========================================
@@ -1167,5 +1200,102 @@ function setupNameEveryCharacterPause(){
 
         }
     );
+
+}
+/* ==========================================
+   Share Result
+========================================== */
+
+function setupNameEveryCharacterShare(){
+
+    const button =
+        document.querySelector(
+            "#nameEveryCharacterShare"
+        );
+
+
+    button.addEventListener(
+        "click",
+        shareNameEveryCharacterResult
+    );
+
+}
+
+
+async function shareNameEveryCharacterResult(){
+
+    const time =
+        document.querySelector(
+            "#nameEveryCharacterWinnerTime"
+        ).textContent;
+
+
+    const status =
+        document.querySelector(
+            "#nameEveryCharacterShareStatus"
+        );
+
+
+    const url =
+        window.location.href;
+
+
+    const text =
+        `🏆 I named every Blood on the Clocktower character in ${time}!\n\n${url}`;
+
+
+    try{
+
+        if(
+            navigator.share
+        ){
+
+            await navigator.share({
+                title:
+                    "Can You Name Every Character?",
+                text:
+                    `🏆 I named every Blood on the Clocktower character in ${time}!`,
+                url:
+                    url
+            });
+
+
+            status.textContent =
+                "Shared!";
+
+        }
+        else{
+
+            await navigator.clipboard.writeText(
+                text
+            );
+
+
+            status.textContent =
+                "Result copied to clipboard!";
+
+        }
+
+    }
+    catch(error){
+
+        if(
+            error.name ===
+            "AbortError"
+        ){
+            return;
+        }
+
+
+        console.error(
+            "Share failed:",
+            error
+        );
+
+
+        status.textContent =
+            "Could not share result.";
+
+    }
 
 }
