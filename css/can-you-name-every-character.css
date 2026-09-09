@@ -491,3 +491,21 @@ font-weight: 600;
 .name-every-character-complete[hidden]{
     display:none;
 }
+/* ==========================================
+   Timer
+========================================== */
+
+.name-every-character-timer{
+    min-width:48px;
+
+    color:var(--black);
+
+    font-size:13px;
+
+    font-weight:900;
+
+    font-variant-numeric:
+        tabular-nums;
+
+    text-align:center;
+}
