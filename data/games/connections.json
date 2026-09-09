@@ -1,5 +1,5 @@
 [
-    {"id": 18, "author": "Ben", "date": "2026-09-23",
+    {"id": 19, "author": "Ben", "date": "2026-09-24",
         "groups": [
             {"name": "interacts with madness", "color": "yellow",
                 "characters": ["pixie", "ventriloquist", "harpy", "bigwig"]},
@@ -9,7 +9,7 @@
                 "characters": ["scarletwoman", "hindu", "dreamer", "minstrel"]},
             {"name": "ability text says \"different\"", "color": "purple",
                 "characters": ["balloonist", "devilsadvocate", "cacklejack", "alchemist"]}]},
-    {"id": 17, "author": "Ben", "date": "2026-09-22",
+    {"id": 18, "author": "Ben", "date": "2026-09-23",
         "groups": [
             {"name": "learned by the evil team", "color": "yellow",
                 "characters": ["stormcatcher", "king", "damsel", "marionette"]},
@@ -19,6 +19,16 @@
                 "characters": ["goon", "ogre", "cultleader", "politician"]},
             {"name": "lets a specific team win", "color": "purple",
                 "characters": ["alsaahir", "vortox", "eviltwin", "atheist"]}]},
+    {"id": 17, "author": "Bell", "date": "2026-09-22",
+        "groups": [
+            {"name": "all players know they are in play", "color": "yellow",
+                "characters": ["alhadikhia", "vizier", "fearmonger", "leviathan"]},
+            {"name": "can become the demon due to their own ability", "color": "green",
+                "characters": ["pithag", "scarletwoman", "snakecharmer", "cacklejack"]},
+            {"name": "token icon has teeth as a dominant feature", "color": "blue",
+                "characters": ["yaggababble", "snitch", "shabaloth", "goblin"]},
+            {"name": "ability text includes \"townsfolk\"", "color": "purple",
+                "characters": ["washerwoman", "huntsman", "professor", "pixie"]}]},
     {"id": 16, "author": "Ben", "date": "2026-09-21",
         "groups": [
             {"name": "selects a character", "color": "yellow",
