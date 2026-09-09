@@ -249,3 +249,63 @@
     }
 
 }
+/* ==========================================
+   Guess Controls
+========================================== */
+
+.name-every-character-controls{
+    display:flex;
+
+    align-items:center;
+
+    gap:12px;
+
+    margin-bottom:24px;
+}
+
+
+.name-every-character-input{
+    flex:1;
+
+    min-width:0;
+
+    height:46px;
+
+    padding:0 14px;
+
+    border:1px solid var(--border);
+
+    border-radius:10px;
+
+    background:white;
+
+    color:var(--black);
+
+    font:inherit;
+
+    font-size:15px;
+
+    outline:none;
+}
+
+
+.name-every-character-input:focus{
+    border-color:var(--purple);
+
+    box-shadow:
+        0 0 0 3px
+        rgba(102,102,153,.12);
+}
+
+
+.name-every-character-progress{
+    min-width:78px;
+
+    text-align:right;
+
+    color:var(--gray);
+
+    font-size:13px;
+
+    font-weight:900;
+}
