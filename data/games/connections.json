@@ -1,4 +1,14 @@
 [
+    {"id": 16, "author": "Ben", "date": "2026-09-21",
+        "groups": [
+            {"name": "selects a character", "color": "yellow",
+                "characters": ["gambler", "cerenovus", "ojo", "courtier"]},
+            {"name": "causes misregistration", "color": "green",
+                "characters": ["zombuul", "revolutionary", "lycanthrope", "recluse"]},
+            {"name": "\"start knowing\" characters that cause death", "color": "purple",
+                "characters": ["grandmother", "yaggababble", "gnome", "godfather"]},
+            {"name": "cannot be boffin abilities", "color": "blue",
+                "characters": ["drunk", "heretic", "politician", "ogre"]}]},
     {"id": 15, "author": "seaplus", "date": "2026-09-20",
         "groups": [
             {"name": "win/lose conditions", "color": "yellow",
