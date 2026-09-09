@@ -428,23 +428,34 @@ function setupNameEveryCharacterInput(){
             }
 
 
-            const match =
-                Object.entries(
-                    characters
+const match =
+    Object.entries(
+        characters
+    )
+    .find(
+        ([
+            slug,
+            character
+        ]) => {
+
+            if(
+                nameEveryCharacterGuessed.has(
+                    slug
                 )
-                .find(
-                    ([
-                        slug,
-                        character
-                    ]) => {
+            ){
 
-                        return normalizeNameEveryCharacterGuess(
-                            character.name
-                        ) ===
-                        guess;
+                return false;
 
-                    }
-                );
+            }
+
+
+            return normalizeNameEveryCharacterGuess(
+                character.name
+            ) ===
+            guess;
+
+        }
+    );
 
 
             if(!match){
@@ -457,20 +468,6 @@ function setupNameEveryCharacterInput(){
                 character
             ] =
                 match;
-
-
-            if(
-                nameEveryCharacterGuessed.has(
-                    slug
-                )
-            ){
-
-                input.value =
-                    "";
-
-                return;
-
-            }
 
 
             nameEveryCharacterGuessed.add(
