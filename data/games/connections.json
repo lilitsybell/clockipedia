@@ -101,7 +101,7 @@
                 "characters": ["baron", "hermit", "godfather", "balloonist"]}]},
     {"id": 1, "author": "Bell", "date": "2026-09-06",
         "groups": [
-            {"name": can prevent demon from killing", "color": "yellow",
+            {"name": "can prevent demon from killing", "color": "yellow",
                 "characters": ["courtier", "exorcist", "monk", "poisoner"]},
             {"name": "can cause themself to die", "color": "blue",
                 "characters": ["gambler", "imp", "tinker", "acrobat"]},
