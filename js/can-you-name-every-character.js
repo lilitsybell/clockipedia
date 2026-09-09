@@ -1221,7 +1221,6 @@ function setupNameEveryCharacterShare(){
 
 }
 
-
 async function shareNameEveryCharacterResult(){
 
     const time =
@@ -1241,60 +1240,66 @@ async function shareNameEveryCharacterResult(){
 
 
     const text =
-        `🏆 I named every Blood on the Clocktower character in ${time}!\n\n${url}`;
+`🏆 Can You Name Every Character?
+
+I named every Blood on the Clocktower character!
+
+⏱️ Time: ${time}
+✅ ${Object.keys(characters).length} / ${Object.keys(characters).length}
+
+${url}`;
 
 
     try{
 
-        if(
-            navigator.share
-        ){
-
-            await navigator.share({
-                title:
-                    "Can You Name Every Character?",
-                text:
-                    `🏆 I named every Blood on the Clocktower character in ${time}!`,
-                url:
-                    url
-            });
+        await navigator.clipboard.writeText(
+            text
+        );
 
 
-            status.textContent =
-                "Shared!";
+        status.textContent =
+            "Result copied!";
 
-        }
-        else{
 
-            await navigator.clipboard.writeText(
-                text
+        const button =
+            document.querySelector(
+                "#nameEveryCharacterShare"
             );
 
 
-            status.textContent =
-                "Result copied to clipboard!";
+        const originalText =
+            button.textContent;
 
-        }
+
+        button.textContent =
+            "Copied!";
+
+
+        setTimeout(
+            () => {
+
+                button.textContent =
+                    originalText;
+
+
+                status.textContent =
+                    "";
+
+            },
+            2000
+        );
 
     }
     catch(error){
 
-        if(
-            error.name ===
-            "AbortError"
-        ){
-            return;
-        }
-
-
         console.error(
-            "Share failed:",
+            "Copy failed:",
             error
         );
 
 
         status.textContent =
-            "Could not share result.";
+            "Could not copy result.";
 
     }
 
