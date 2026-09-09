@@ -84,7 +84,7 @@ document.addEventListener(
 renderNameEveryCharacterBoard();
 
 setupNameEveryCharacterInput();
-
+setupNameEveryCharacterGiveUp();
 updateNameEveryCharacterProgress();
 
 updateNameEveryCharacterTeamProgress();
@@ -670,5 +670,159 @@ function updateNameEveryCharacterTeamProgress(){
 
         }
     );
+
+}
+/* ==========================================
+   Give Up
+========================================== */
+
+function setupNameEveryCharacterGiveUp(){
+
+    const button =
+        document.querySelector(
+            "#nameEveryCharacterGiveUp"
+        );
+
+
+    button.addEventListener(
+        "click",
+        () => {
+
+            const confirmed =
+                window.confirm(
+                    "Give up and reveal all remaining characters?"
+                );
+
+
+            if(!confirmed){
+                return;
+            }
+
+
+            giveUpNameEveryCharacter();
+
+        }
+    );
+
+}
+
+
+function giveUpNameEveryCharacter(){
+
+    Object.entries(
+        characters
+    )
+    .forEach(
+        ([
+            slug,
+            character
+        ]) => {
+
+            if(
+                nameEveryCharacterGuessed.has(
+                    slug
+                )
+            ){
+
+                return;
+
+            }
+
+
+            revealMissedNameEveryCharacter(
+                slug,
+                character
+            );
+
+        }
+    );
+
+
+    const input =
+        document.querySelector(
+            "#nameEveryCharacterInput"
+        );
+
+
+    const button =
+        document.querySelector(
+            "#nameEveryCharacterGiveUp"
+        );
+
+
+    input.disabled =
+        true;
+
+
+    input.placeholder =
+        "Game over";
+
+
+    button.disabled =
+        true;
+
+}
+/* ==========================================
+   Reveal Missed Character
+========================================== */
+
+function revealMissedNameEveryCharacter(
+    slug,
+    character
+){
+
+    const slot =
+        document.querySelector(
+            `[data-character="${slug}"]`
+        );
+
+
+    if(!slot){
+        return;
+    }
+
+
+    slot.classList.add(
+        "missed"
+    );
+
+
+    const image =
+        slot.querySelector(
+            ".name-every-character-slot-image"
+        );
+
+
+    const name =
+        slot.querySelector(
+            ".name-every-character-slot-name"
+        );
+
+
+    image.innerHTML =
+        "";
+
+
+    const token =
+        document.createElement(
+            "img"
+        );
+
+
+    token.src =
+        character.image;
+
+
+    token.alt =
+        character.name;
+
+
+    image.appendChild(
+        token
+    );
+
+
+    name.textContent =
+        character.name;
 
 }
