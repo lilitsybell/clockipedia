@@ -344,8 +344,8 @@
 
 
 .name-every-character-slot-image img{
-    width:24px;
-    height:24px;
+    width:30px;
+    height:30px;
 
     display:block;
 
@@ -361,7 +361,7 @@
 
     color:var(--black);
 
-    font-size:10px;
+    font-size:12px;
 
     font-weight:800;
 
