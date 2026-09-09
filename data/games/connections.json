@@ -1,4 +1,14 @@
 [
+    {"id": 20, "author": "Ben", "date": "2026-09-25",
+        "groups": [
+            {"name": "has setup text", "color": "yellow",
+                "characters": ["kazali", "lilmonsta", "choirboy", "hermit"]},
+            {"name": "must choose an alive player", "color": "green",
+                "characters": ["snakecharmer", "chambermaid", "lycanthrope", "klutz"]},
+            {"name": "works in sets of 3", "color": "blue",
+                "characters": ["noble", "alhadikhia", "snitch", "courtier"]},
+            {"name": "gives true information", "color": "purple",
+                "characters": ["zenomancer", "savant", "barista", "knaves"]}]},
     {"id": 19, "author": "Ben", "date": "2026-09-24",
         "groups": [
             {"name": "interacts with madness", "color": "yellow",
