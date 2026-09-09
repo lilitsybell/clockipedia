@@ -101,6 +101,7 @@ document.addEventListener(
 renderNameEveryCharacterBoard();
 
 setupNameEveryCharacterInput();
+setupNameEveryCharacterPause();
 setupNameEveryCharacterGiveUp();
 updateNameEveryCharacterProgress();
 
@@ -1098,5 +1099,73 @@ function stopNameEveryCharacterTimer(){
 
 
     updateNameEveryCharacterTimer();
+
+}
+/* ==========================================
+   Pause
+========================================== */
+
+function setupNameEveryCharacterPause(){
+
+    const button =
+        document.querySelector(
+            "#nameEveryCharacterPause"
+        );
+
+
+    const input =
+        document.querySelector(
+            "#nameEveryCharacterInput"
+        );
+
+
+    button.addEventListener(
+        "click",
+        () => {
+
+            if(
+                nameEveryCharacterGameEnded ||
+                !nameEveryCharacterTimerStarted
+            ){
+                return;
+            }
+
+
+            if(nameEveryCharacterPaused){
+
+                resumeNameEveryCharacterTimer();
+
+
+                nameEveryCharacterPaused =
+                    false;
+
+
+                input.disabled =
+                    false;
+
+
+                button.textContent =
+                    "Pause";
+
+
+                input.focus();
+
+            }
+            else{
+
+                pauseNameEveryCharacterTimer();
+
+
+                input.disabled =
+                    true;
+
+
+                button.textContent =
+                    "Resume";
+
+            }
+
+        }
+    );
 
 }
