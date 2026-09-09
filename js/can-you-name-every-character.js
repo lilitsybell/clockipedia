@@ -108,6 +108,7 @@ updateNameEveryCharacterTeamProgress();
 setupNameEveryCharacterShare();    
 setupNameEveryCharacterPlayAgain();
 loadNameEveryCharacterBestTime();
+setupNameEveryCharacterGameOverCopy();
 
         }
         catch(error){
@@ -1539,5 +1540,78 @@ function loadNameEveryCharacterBestTime(){
 
     element.textContent =
         `Best: ${minutes}:${String(seconds).padStart(2, "0")}`;
+
+}
+function setupNameEveryCharacterGameOverCopy(){
+
+    const button =
+        document.querySelector(
+            "#nameEveryCharacterGameOverCopy"
+        );
+
+
+    button.addEventListener(
+        "click",
+        async () => {
+
+            const total =
+                Object.keys(
+                    characters
+                ).length;
+
+
+            const guessed =
+                nameEveryCharacterGuessed.size;
+
+
+            const percent =
+                Math.round(
+                    guessed /
+                    total *
+                    100
+                );
+
+
+            const time =
+                document.querySelector(
+                    "#nameEveryCharacterGameOverTime"
+                ).textContent;
+
+
+            const text =
+`Can You Name Every Character?
+
+I named ${guessed} / ${total} Blood on the Clocktower characters (${percent}%).
+
+⏱️ Time: ${time}
+
+${window.location.href}`;
+
+
+            await navigator.clipboard.writeText(
+                text
+            );
+
+
+            const original =
+                button.textContent;
+
+
+            button.textContent =
+                "Copied!";
+
+
+            setTimeout(
+                () => {
+
+                    button.textContent =
+                        original;
+
+                },
+                2000
+            );
+
+        }
+    );
 
 }
