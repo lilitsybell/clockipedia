@@ -37,7 +37,7 @@
                 "characters": ["monk", "soldier", "lycanthrope", "princess"]},
             {"name": "trouble brewing minions", "color": "yellow",
                 "characters": ["poisoner", "scarletwoman", "spy", "baron"]},
-            {"name": "registers as a demon", "color": "purple",
+            {"name": "registers as a demon", "color": "blue",
                 "characters": ["lordoftyphon", "recluse", "kazali", "fanggu"]}]},
     {"id": 11, "author": "Corey", "date": "2026-09-16",
         "groups": [
@@ -47,7 +47,7 @@
                 "characters": ["nightwatchman", "professor", "bonecollector", "golem"]},
             {"name": "demon icon is or has eyes", "color": "blue",
                 "characters": ["ojo", "lordoftyphon", "nodashii", "vigormortis"]},
-            {"name": "can cause storyteller chosen death", "color": "purple",
+            {"name": "can cause storyteller-chosen death", "color": "purple",
                 "characters": ["pithag", "lilmonsta", "atheist", "gossip"]}]},
     {"id": 10, "author": "Corey", "date": "2026-09-15",
         "groups": [
@@ -55,7 +55,7 @@
                 "characters": ["chef", "clockmaker", "librarian", "oracle"]},
             {"name": "ability changes other players' characters", "color": "green",
                 "characters": ["fanggu", "huntsman", "imp", "farmer"]},
-            {"name": "if in play, game may continue with no alive demon", "color": "blue",
+            {"name": "if in play, game may continue with no living demon", "color": "blue",
                 "characters": ["eviltwin", "summoner", "mastermind", "atheist"]},
             {"name": "flower on character icon", "color": "purple",
                 "characters": ["flowergirl", "poppygrower", "godfather", "damsel"]}]},
