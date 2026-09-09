@@ -81,10 +81,13 @@ document.addEventListener(
 
             await loadCharacters();
 
-            renderNameEveryCharacterBoard();
-            setupNameEveryCharacterInput();
+renderNameEveryCharacterBoard();
+
+setupNameEveryCharacterInput();
 
 updateNameEveryCharacterProgress();
+
+updateNameEveryCharacterTeamProgress();
 
         }
         catch(error){
@@ -229,12 +232,16 @@ function buildNameEveryCharacterTeam(
         );
 
 
-    count.className =
-        "name-every-character-team-count";
+count.className =
+    "name-every-character-team-count";
 
 
-    count.textContent =
-        `0 / ${teamCharacters.length}`;
+count.dataset.team =
+    teamInfo.key;
+
+
+count.textContent =
+    `0 / ${teamCharacters.length}`;
 
 
     const grid =
@@ -486,6 +493,7 @@ const match =
 
 
             updateNameEveryCharacterProgress();
+            updateNameEveryCharacterTeamProgress();
 
         }
     );
@@ -602,5 +610,65 @@ function updateNameEveryCharacterProgress(){
 
     progress.textContent =
         `${nameEveryCharacterGuessed.size} / ${total}`;
+
+}
+/* ==========================================
+   Team Progress
+========================================== */
+
+function updateNameEveryCharacterTeamProgress(){
+
+    nameEveryCharacterTeams.forEach(
+        teamInfo => {
+
+            const teamCharacters =
+                Object.entries(
+                    characters
+                )
+                .filter(
+                    ([
+                        slug,
+                        character
+                    ]) => {
+
+                        return normalizeNameEveryCharacterTeam(
+                            character.team
+                        ) ===
+                        teamInfo.key;
+
+                    }
+                );
+
+
+            const guessed =
+                teamCharacters.filter(
+                    ([
+                        slug
+                    ]) => {
+
+                        return nameEveryCharacterGuessed.has(
+                            slug
+                        );
+
+                    }
+                ).length;
+
+
+            const counter =
+                document.querySelector(
+                    `.name-every-character-team-count[data-team="${teamInfo.key}"]`
+                );
+
+
+            if(!counter){
+                return;
+            }
+
+
+            counter.textContent =
+                `${guessed} / ${teamCharacters.length}`;
+
+        }
+    );
 
 }
