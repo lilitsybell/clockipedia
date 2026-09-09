@@ -1447,8 +1447,18 @@ function showConnectionsResults(
         false;
 
 
+if(connectionsIsCustom){
+
+    number.textContent =
+        "Custom Puzzle";
+
+}
+else{
+
     number.textContent =
         `Puzzle #${connectionsPuzzle.id}`;
+
+}
 
 
     if(won){
