@@ -1,4 +1,14 @@
 [
+    {"id": 17, "author": "Ben", "date": "2026-09-22",
+        "groups": [
+            {"name": "learned by the evil team", "color": "yellow",
+                "characters": ["stormcatcher", "king", "damsel", "marionette"]},
+            {"name": "\"you start knowing\" characters", "color": "green",
+                "characters": ["pixie", "mezepheles", "noble", "clockmaker"]},
+            {"name": "can turn themselves evil", "color": "blue",
+                "characters": ["goon", "ogre", "cultleader", "politician"]},
+            {"name": "lets a specific team win", "color": "purple",
+                "characters": ["alsaahir", "vortox", "eviltwin", "atheist"]}]},
     {"id": 16, "author": "Ben", "date": "2026-09-21",
         "groups": [
             {"name": "selects a character", "color": "yellow",
