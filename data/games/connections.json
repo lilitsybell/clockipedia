@@ -1,4 +1,14 @@
 [
+    {"id": 12, "author": "CJ", "date": "2026-09-17",
+        "groups": [
+            {"name": "relating to pairs", "color": "purple",
+                "characters": ["chef", "revolutionary", "knaves", "eviltwin"]},
+            {"name": "prevents demon kills", "color": "green",
+                "characters": ["monk", "soldier", "lycanthrope", "princess"]},
+            {"name": "trouble brewing minions", "color": "yellow",
+                "characters": ["poisoner", "scarletwoman", "spy", "baron"]},
+            {"name": "registers as a demon", "color": "purple",
+                "characters": ["lordoftyphon", "recluse", "kazali", "fanggu"]}]},
     {"id": 11, "author": "Corey", "date": "2026-09-16",
         "groups": [
             {"name": "townsfolk starting with f", "color": "yellow",
