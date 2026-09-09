@@ -309,3 +309,52 @@
 
     font-weight:900;
 }
+/* ==========================================
+   Guessed Characters
+========================================== */
+
+.name-every-character-slot.guessed{
+    border-color:
+        rgba(102,102,153,.35);
+
+    background:
+        rgba(102,102,153,.05);
+}
+
+
+.name-every-character-slot.guessed
+.name-every-character-slot-image{
+    background:transparent;
+}
+
+
+.name-every-character-slot-image img{
+    width:24px;
+    height:24px;
+
+    display:block;
+
+    object-fit:contain;
+}
+
+
+.name-every-character-slot.guessed
+.name-every-character-slot-name{
+    height:auto;
+
+    background:none;
+
+    color:var(--black);
+
+    font-size:10px;
+
+    font-weight:800;
+
+    line-height:1.1;
+
+    white-space:nowrap;
+
+    overflow:hidden;
+
+    text-overflow:ellipsis;
+}
