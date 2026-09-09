@@ -722,3 +722,98 @@ font-weight: 600;
     font-size:11px;
     font-weight:700;
 }
+/* ==========================================
+   Pause Overlay
+========================================== */
+
+.name-every-character-pause-overlay{
+    min-height:420px;
+
+    display:flex;
+    flex-direction:column;
+
+    align-items:center;
+    justify-content:center;
+
+    padding:40px;
+
+    border:1px solid var(--border);
+    border-radius:14px;
+
+    background:white;
+
+    text-align:center;
+}
+
+
+.name-every-character-pause-overlay[hidden]{
+    display:none;
+}
+
+
+.name-every-character-pause-icon{
+    width:64px;
+    height:64px;
+
+    display:flex;
+    align-items:center;
+    justify-content:center;
+
+    margin-bottom:15px;
+
+    border-radius:50%;
+
+    background:
+        rgba(102,102,153,.1);
+
+    color:var(--purple);
+
+    font-size:22px;
+    font-weight:900;
+
+    letter-spacing:3px;
+}
+
+
+.name-every-character-pause-overlay h2{
+    margin:0 0 6px;
+
+    color:var(--black);
+
+    font-family:
+        "Droid Sans",
+        Arial,
+        sans-serif;
+
+    font-size:24px;
+}
+
+
+.name-every-character-pause-overlay p{
+    margin:0 0 20px;
+
+    color:var(--gray);
+
+    font-size:13px;
+}
+
+
+.name-every-character-resume{
+    height:42px;
+
+    padding:0 22px;
+
+    border:0;
+    border-radius:9px;
+
+    background:var(--purple);
+
+    color:white;
+
+    font:inherit;
+
+    font-size:13px;
+    font-weight:900;
+
+    cursor:pointer;
+}
