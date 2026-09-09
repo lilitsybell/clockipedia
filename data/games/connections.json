@@ -1,5 +1,5 @@
 [
-    {"id": 10, "author": "Corey", "date": "2026-09-15",
+    {"id": 11, "author": "Corey", "date": "2026-09-16",
         "groups": [
             {"name": "townsfolk starting with f", "color": "yellow",
                 "characters": ["farmer", "fisherman", "flowergirl", "fool"]},
@@ -9,7 +9,7 @@
                 "characters": ["ojo", "lordoftyphon", "nodashii", "vigormortis"]},
             {"name": "can cause storyteller chosen death", "color": "purple",
                 "characters": ["pithag", "lilmonsta", "atheist", "gossip"]}]},
-    {"id": 9, "author": "Corey", "date": "2026-09-14",
+    {"id": 10, "author": "Corey", "date": "2026-09-15",
         "groups": [
             {"name": "can receive a \"0\"", "color": "yellow",
                 "characters": ["chef", "clockmaker", "librarian", "oracle"]},
@@ -19,6 +19,16 @@
                 "characters": ["eviltwin", "summoner", "mastermind", "atheist"]},
             {"name": "flower on character icon", "color": "purple",
                 "characters": ["flowergirl", "poppygrower", "godfather", "damsel"]}]},
+    {"id": 9, "author": "Ben", "date": "2026-09-14",
+        "groups": [
+            {"name": "once per game abilities", "color": "yellow",
+                "characters": ["fisherman", "assassin", "bonecollector", "slayer"]},
+            {"name": "on your 1st day or night", "color": "blue",
+                "characters": ["princess", "juggler", "apprentice", "widow"]},
+            {"name": "cannot choose themselves", "color": "purple",
+                "characters": ["butler", "monk", "bureaucrat", "chambermaid"]},
+            {"name": "can poison or drunk themselves", "color": "green",
+                "characters": ["organgrinder", "cannibal", "sailor", "villageidiot"]}]},
     {"id": 8, "author": "Bell", "date": "2026-09-13",
         "groups": [
             {"name": "pet names for a loved one", "color": "green",
