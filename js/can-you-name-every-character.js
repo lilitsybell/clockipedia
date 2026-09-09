@@ -104,10 +104,10 @@ setupNameEveryCharacterInput();
 setupNameEveryCharacterPause();
 setupNameEveryCharacterGiveUp();
 updateNameEveryCharacterProgress();
-
 updateNameEveryCharacterTeamProgress();
 setupNameEveryCharacterShare();    
 setupNameEveryCharacterPlayAgain();
+loadNameEveryCharacterBestTime();
 
         }
         catch(error){
@@ -942,6 +942,7 @@ function checkNameEveryCharacterComplete(){
 
     }
 stopNameEveryCharacterTimer();
+saveNameEveryCharacterBestTime();
 
     const input =
         document.querySelector(
@@ -1444,5 +1445,99 @@ function setupNameEveryCharacterPlayAgain(){
 
             }
         );
+
+}
+/* ==========================================
+   Best Time
+========================================== */
+
+function getNameEveryCharacterFinalMilliseconds(){
+
+    return nameEveryCharacterElapsedTime;
+
+}
+
+
+function saveNameEveryCharacterBestTime(){
+
+    const time =
+        getNameEveryCharacterFinalMilliseconds();
+
+
+    if(!time){
+        return;
+    }
+
+
+    const currentBest =
+        Number(
+            localStorage.getItem(
+                "nameEveryCharacterBestTime"
+            )
+        );
+
+
+    if(
+        !currentBest ||
+        time < currentBest
+    ){
+
+        localStorage.setItem(
+            "nameEveryCharacterBestTime",
+            time
+        );
+
+    }
+
+
+    loadNameEveryCharacterBestTime();
+
+}
+
+
+function loadNameEveryCharacterBestTime(){
+
+    const best =
+        Number(
+            localStorage.getItem(
+                "nameEveryCharacterBestTime"
+            )
+        );
+
+
+    const element =
+        document.querySelector(
+            "#nameEveryCharacterBest"
+        );
+
+
+    if(!best){
+
+        element.textContent =
+            "Best: —";
+
+        return;
+
+    }
+
+
+    const totalSeconds =
+        Math.floor(
+            best / 1000
+        );
+
+
+    const minutes =
+        Math.floor(
+            totalSeconds / 60
+        );
+
+
+    const seconds =
+        totalSeconds % 60;
+
+
+    element.textContent =
+        `Best: ${minutes}:${String(seconds).padStart(2, "0")}`;
 
 }
