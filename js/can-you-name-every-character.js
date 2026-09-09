@@ -109,6 +109,7 @@ setupNameEveryCharacterShare();
 setupNameEveryCharacterPlayAgain();
 loadNameEveryCharacterBestTime();
 setupNameEveryCharacterGameOverCopy();
+setupNameEveryCharacterPopupClose();
 
         }
         catch(error){
@@ -1613,5 +1614,71 @@ ${window.location.href}`;
 
         }
     );
+
+}
+/* ==========================================
+   Close Result Popups
+========================================== */
+
+function setupNameEveryCharacterPopupClose(){
+
+    const winner =
+        document.querySelector(
+            "#nameEveryCharacterWinner"
+        );
+
+
+    const gameOver =
+        document.querySelector(
+            "#nameEveryCharacterGameOver"
+        );
+
+
+    if(winner){
+
+        winner.addEventListener(
+            "click",
+            event => {
+
+                if(
+                    event.target === winner ||
+                    event.target.classList.contains(
+                        "name-every-character-winner-backdrop"
+                    )
+                ){
+
+                    winner.hidden =
+                        true;
+
+                }
+
+            }
+        );
+
+    }
+
+
+    if(gameOver){
+
+        gameOver.addEventListener(
+            "click",
+            event => {
+
+                if(
+                    event.target === gameOver ||
+                    event.target.classList.contains(
+                        "name-every-character-game-over-backdrop"
+                    )
+                ){
+
+                    gameOver.hidden =
+                        true;
+
+                }
+
+            }
+        );
+
+    }
 
 }
