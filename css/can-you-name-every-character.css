@@ -542,3 +542,183 @@ font-weight: 600;
 
     cursor:default;
 }
+/* ==========================================
+   Winner Popup
+========================================== */
+
+.name-every-character-winner{
+    position:fixed;
+    inset:0;
+
+    z-index:1000;
+
+    display:flex;
+    align-items:center;
+    justify-content:center;
+
+    padding:24px;
+}
+
+
+.name-every-character-winner[hidden]{
+    display:none;
+}
+
+
+.name-every-character-winner-backdrop{
+    position:absolute;
+    inset:0;
+
+    background:
+        rgba(13,24,33,.68);
+
+    backdrop-filter:
+        blur(4px);
+}
+
+
+.name-every-character-winner-card{
+    position:relative;
+
+    width:min(
+        430px,
+        100%
+    );
+
+    padding:34px 32px 30px;
+
+    border-radius:22px;
+
+    background:white;
+
+    text-align:center;
+
+    box-shadow:
+        0 24px 70px
+        rgba(0,0,0,.28);
+}
+
+
+.name-every-character-winner-trophy{
+    width:82px;
+    height:82px;
+
+    display:flex;
+    align-items:center;
+    justify-content:center;
+
+    margin:0 auto 16px;
+
+    border-radius:50%;
+
+    background:
+        rgba(183,113,2,.10);
+
+    font-size:46px;
+}
+
+
+.name-every-character-winner-eyebrow{
+    margin-bottom:6px;
+
+    color:var(--purple);
+
+    font-size:11px;
+    font-weight:900;
+
+    letter-spacing:.12em;
+
+    text-transform:uppercase;
+}
+
+
+.name-every-character-winner-card h2{
+    margin:0 0 9px;
+
+    color:var(--black);
+
+    font-family:
+        "Droid Sans",
+        Arial,
+        sans-serif;
+
+    font-size:28px;
+}
+
+
+.name-every-character-winner-subtitle{
+    margin:0 0 24px;
+
+    color:var(--gray);
+
+    font-size:14px;
+
+    line-height:1.5;
+}
+
+
+.name-every-character-winner-time-label{
+    margin-bottom:3px;
+
+    color:var(--gray);
+
+    font-size:11px;
+    font-weight:800;
+
+    text-transform:uppercase;
+
+    letter-spacing:.08em;
+}
+
+
+.name-every-character-winner-time{
+    margin-bottom:24px;
+
+    color:var(--purple);
+
+    font-size:46px;
+    font-weight:900;
+
+    line-height:1;
+
+    font-variant-numeric:
+        tabular-nums;
+}
+
+
+.name-every-character-share{
+    width:100%;
+    height:46px;
+
+    border:0;
+
+    border-radius:10px;
+
+    background:var(--purple);
+
+    color:white;
+
+    font:inherit;
+
+    font-size:14px;
+    font-weight:900;
+
+    cursor:pointer;
+}
+
+
+.name-every-character-share:hover{
+    opacity:.92;
+}
+
+
+.name-every-character-share-status{
+    min-height:18px;
+
+    margin-top:10px;
+
+    color:var(--gray);
+
+    font-size:11px;
+    font-weight:700;
+}
