@@ -1,384 +1,98 @@
 [
-    {
-        "id": 1,
-        "author": "Bell",
-        "date": "2026-09-06",
+    {"id": 1, "author": "Bell", "date": "2026-09-06",
         "groups": [
-            {
-                "name": "Can Prevent Demon From Killing",
-                "color": "yellow",
-                "characters": [
-                    "courtier",
-                    "exorcist",
-                    "monk",
-                    "poisoner"
-                ]
-            },
-            {
-                "name": "Can Cause Themselves to Die",
-                "color": "blue",
-                "characters": [
-                    "gambler",
-                    "imp",
-                    "tinker",
-                    "acrobat"
-                ]
-            },
-            {
-                "name": "Learns a Number",
-                "color": "purple",
-                "characters": [
-                    "empath",
-                    "mathematician",
-                    "chef",
-                    "juggler"
-                ]
-            },
-            {
-                "name": "Involve Nominations",
-                "color": "green",
-                "characters": [
-                    "golem",
-                    "witch",
-                    "fearmonger",
-                    "towncrier"
-                ]
-            }
-        ]
-    },
-    {
-        "id": 2,
-        "author": "Bell",
-        "date": "2026-09-07",
+            {"name": "Can Prevent Demon From Killing", "color": "yellow",
+                "characters": ["courtier", "exorcist", "monk", "poisoner"]},
+            {"name": "Can Cause Themselves to Die", "color": "blue",
+                "characters": ["gambler", "imp", "tinker", "acrobat"]},
+            {"name": "Learns a Number", "color": "purple",
+                "characters": ["empath", "mathematician", "chef", "juggler"]},
+            {"name": "Involve Nominations", "color": "green",
+                "characters": ["golem", "witch", "fearmonger", "towncrier"]}]},
+    {"id": 2, "author": "Bell", "date": "2026-09-07",
         "groups": [
-            {
-                "name": "Learns Characters",
-                "color": "yellow",
-                "characters": [
-                    "washerwoman",
-                    "king",
-                    "investigator",
-                    "undertaker"
-                ]
-            },
-            {
-                "name": "Causes Alignment Change",
-                "color": "blue",
-                "characters": [
-                    "snakecharmer",
-                    "cultleader",
-                    "fanggu",
-                    "goon"
-                ]
-            },
-            {
-                "name": "Prevent Death",
-                "color": "purple",
-                "characters": [
-                    "pacifist",
-                    "tealady",
-                    "innkeeper",
-                    "sailor"
-                ]
-            },
-            {
-                "name": "Affect Outsider Count",
-                "color": "green",
-                "characters": [
-                    "baron",
-                    "hermit",
-                    "godfather",
-                    "balloonist"
-                ]
-            }
-        ]
-    },
+            {"name": "learns characters", "color": "yellow",
+                "characters": ["washerwoman", "king", "investigator", "undertaker"]},
+            {"name": "causes alignment change", "color": "blue",
+                "characters": ["snakecharmer", "cultleader", "fanggu", "goon"]},
+            {"name": "prevents death", "color": "purple",
+                "characters": ["pacifist", "tealady", "innkeeper", "sailor"]},
+            {"name": "affects outsider count", "color": "green",
+                "characters": ["baron", "hermit", "godfather", "balloonist"]}]},
+    {"id": 3, "author": "Corey", "date": "2026-09-08",
+        "groups": [
+            {"name": "can cause drunkeness", "color": "green",
+                "characters": ["organgrinder", "sailor", "courtier", "innkeeper"]},
+            {"name": "public announcement from storyteller", "color": "yellow",
+                "characters": ["banshee", "alhadikhia", "fearmonger", "vizier"]},
+            {"name": "chooses two players", "color": "purple",
+                "characters": ["fortuneteller", "harpy", "seamstress", "chambermaid"]},
+            {"name": "learns an evil player as information", "color": "blue",
+                "characters": ["investigator", "bountyhunter", "sage", "noble"]}]},
+    {"id": 4, "author": "Corey", "date": "2026-09-09",
+        "groups": [
+            {"name": "setup ability text", "color": "yellow",
+                "characters": ["huntsman", "balloonist", "choirboy", "atheist"]},
+            {"name": "involves neighbors", "color": "blue",
+                "characters": ["tealady", "empath", "cultleader", "lordoftyphon"]},
+            {"name": "ability can cause an execution", "color": "green",
+                "characters": ["cerenovus", "virgin", "mutant", "vizier"]},
+            {"name": "token icon is an animal", "color": "purple",
+                "characters": ["ravenkeeper", "pacifist", "snakecharmer", "organgrinder"]}]},
+    {"id": 5, "author": "Bell", "date": "2026-09-10",
+        "groups": [
+            {"name": "token icon is headgear", "color": "purple",
+                "characters": ["fool", "gnome", "baron", "angel"]},
+            {"name": "causes misregistration", "color": "yellow",
+                "characters": ["lycanthrope", "revolutionary", "spy", "recluse"]},
+            {"name": "public declarations", "color": "green",
+                "characters": ["damsel", "gossip", "psychopath", "doomsayer"]},
+            {"name": "brings the game outside of the norm", "color": "blue",
+                "characters": ["djinn", "bootlegger", "amnesiac", "wizard"]}]},
+    {"id": 6, "author": "Ben", "date": "2026-09-11",
+        "groups": [
+            {"name": "kills someone during the day", "color": "green",
+                "characters": ["psychopath", "witch", "gunslinger", "golem"]},
+            {"name": "visits the storyteller", "color": "yellow",
+                "characters": ["amnesiac", "savant", "wizard", "puzzlemaster"]},
+            {"name": "lets storytellers decide deaths", "color": "purple",
+                "characters": ["boomdandy", "gossip", "legion", "pithag"]},
+            {"name": "townsfolk that cause character change", "color": "blue",
+                "characters": ["huntsman", "farmer", "snakecharmer", "engineer"]}]},
+    {"id": 7, "author": "Corey", "date": "2026-09-12",
+        "groups": [
+            {"name": "can learn a number greater than 2", "color": "yellow",
+                "characters": ["oracle", "juggler", "chef", "clockmaker"]},
+            {"name": "evil learns your character is in play", "color": "green",
+                "characters": ["king", "damsel", "lunatic", "magician"]},
+            {"name": "has \"(not yourself)\" in the ability text", "color": "blue",
+                "characters": ["ogre", "monk", "chambermaid", "dreamer"]},
+            {"name": "character name has two sets of double letters", "color": "purple",
+                "characters": ["innkeeper", "balloonist", "assassin", "lleech"]}]},    
+    {"id": 8, "author": "Bell", "date": "2026-09-13",
+        "groups": [
+            {"name": "pet names for a loved one", "color": "green",
+                "characters": ["angel", "sweetheart", "princess", "king"]},
+            {"name": "has multiple copies of tokens", "color": "yellow",
+                "characters": ["fanggu", "villageidiot", "imp", "legion"]},
+            {"name": "requires a number of living players", "color": "blue",
+                "characters": ["witch", "zealot", "doomsayer", "scarletwoman"]},
+            {"name": "ability text includes \"storyteller\"", "color": "purple",
+                "characters": ["alchemist", "fisherman", "general", "highpriestess"]}]},
+    {"id": 9, "author": "Corey", "date": "2026-09-14",
+        "groups": [
+            {"name": "can receive a \"0\"", "color": "yellow",
+                "characters": ["chef", "clockmaker", "librarian", "oracle"]},
+            {"name": "ability changes other players characters", "color": "green",
+                "characters": ["fanggu", "huntsman", "imp", "farmer"]},
+            {"name": "if in play, game may continue with no alive demon", "color": "blue",
+                "characters": ["eviltwin", "summoner", "mastermind", "atheist"]},
+            {"name": "flower on character icon", "color": "purple",
+                "characters": ["flowergirl", "poppygrower", "godfather", "damsel"]}]},
     {
-        "id": 3,
+        "id": 10,
         "author": "Corey",
-        "date": "2026-09-08",
-        "groups": [
-            {
-                "name": "Can Cause Drunkeness",
-                "color": "green",
-                "characters": [
-                    "organgrinder",
-                    "sailor",
-                    "courtier",
-                    "innkeeper"
-                ]
-            },
-            {
-                "name": "Public Announcement from Storyteller",
-                "color": "yellow",
-                "characters": [
-                    "banshee",
-                    "alhadikhia",
-                    "fearmonger",
-                    "vizier"
-                ]
-            },
-            {
-                "name": "Chooses Two Players",
-                "color": "purple",
-                "characters": [
-                    "fortuneteller",
-                    "harpy",
-                    "seamstress",
-                    "chambermaid"
-                ]
-            },
-            {
-                "name": "Learns an Evil Player as Information",
-                "color": "blue",
-                "characters": [
-                    "investigator",
-                    "bountyhunter",
-                    "sage",
-                    "noble"
-                ]
-            }
-        ]
-    },
-    {
-        "id": 4,
-        "author": "Corey",
-        "date": "2026-09-09",
-        "groups": [
-            {
-                "name": "Setup Ability Text",
-                "color": "yellow",
-                "characters": [
-                    "huntsman",
-                    "balloonist",
-                    "choirboy",
-                    "atheist"
-                ]
-            },
-            {
-                "name": "Involves Neighbors",
-                "color": "blue",
-                "characters": [
-                    "tealady",
-                    "empath",
-                    "cultleader",
-                    "lordoftyphon"
-                ]
-            },
-            {
-                "name": "Ability Can Cause Execution",
-                "color": "green",
-                "characters": [
-                    "cerenovus",
-                    "virgin",
-                    "mutant",
-                    "vizier"
-                ]
-            },
-            {
-                "name": "Token Icon is an Animal",
-                "color": "purple",
-                "characters": [
-                    "ravenkeeper",
-                    "pacifist",
-                    "snakecharmer",
-                    "organgrinder"
-                ]
-            }
-        ]
-    },
-    {
-        "id": 5,
-        "author": "Bell",
-        "date": "2026-09-10",
-        "groups": [
-            {
-                "name": "Token Icon is Headgear",
-                "color": "purple",
-                "characters": [
-                    "fool",
-                    "gnome",
-                    "baron",
-                    "angel"
-                ]
-            },
-            {
-                "name": "Causes Misregistration",
-                "color": "yellow",
-                "characters": [
-                    "lycanthrope",
-                    "revolutionary",
-                    "spy",
-                    "recluse"
-                ]
-            },
-            {
-                "name": "Public Declarations",
-                "color": "green",
-                "characters": [
-                    "damsel",
-                    "gossip",
-                    "psychopath",
-                    "doomsayer"
-                ]
-            },
-            {
-                "name": "Brings the Game Outside of the Norm",
-                "color": "blue",
-                "characters": [
-                    "djinn",
-                    "bootlegger",
-                    "amnesiac",
-                    "wizard"
-                ]
-            }
-        ]
-    },
-    {
-        "id": 6,
-        "author": "Corey",
-        "date": "2026-09-11",
-        "groups": [
-            {
-                "name": "Can Learn a Number Greater than 2",
-                "color": "yellow",
-                "characters": [
-                    "oracle",
-                    "juggler",
-                    "chef",
-                    "clockmaker"
-                ]
-            },
-            {
-                "name": "Evil Learns Your Character is in Play",
-                "color": "green",
-                "characters": [
-                    "king",
-                    "damsel",
-                    "lunatic",
-                    "magician"
-                ]
-            },
-            {
-                "name": "Ability has (not yourself) in the Ability Text",
-                "color": "blue",
-                "characters": [
-                    "ogre",
-                    "monk",
-                    "chambermaid",
-                    "dreamer"
-                ]
-            },
-            {
-                "name": "Character Name Has Two Sets of Double Letters",
-                "color": "purple",
-                "characters": [
-                    "innkeeper",
-                    "balloonist",
-                    "assassin",
-                    "lleech"
-                ]
-            }
-        ]
-    },
-    {
-        "id": 7,
-        "author": "Bell",
-        "date": "2026-09-12",
-        "groups": [
-            {
-                "name": "Pet Names for a Loved One",
-                "color": "green",
-                "characters": [
-                    "angel",
-                    "sweetheart",
-                    "princess",
-                    "king"
-                ]
-            },
-            {
-                "name": "Has Multiple Copies of Tokens",
-                "color": "yellow",
-                "characters": [
-                    "fanggu",
-                    "villageidiot",
-                    "imp",
-                    "legion"
-                ]
-            },
-            {
-                "name": "Requires a Number of Living Players",
-                "color": "blue",
-                "characters": [
-                    "witch",
-                    "zealot",
-                    "doomsayer",
-                    "scarletwoman"
-                ]
-            },
-            {
-                "name": "Ability Text Includes \"Storyteller\"",
-                "color": "purple",
-                "characters": [
-                    "alchemist",
-                    "fisherman",
-                    "general",
-                    "highpriestess"
-                ]
-            }
-        ]
-    },
-    {
-        "id": 8,
-        "author": "Corey",
-        "date": "2026-09-13",
-        "groups": [
-            {
-                "name": "Can Receive a 0",
-                "color": "yellow",
-                "characters": [
-                    "chef",
-                    "clockmaker",
-                    "librarian",
-                    "oracle"
-                ]
-            },
-            {
-                "name": "Ability Changes Other Player's Character",
-                "color": "green",
-                "characters": [
-                    "fanggu",
-                    "huntsman",
-                    "imp",
-                    "farmer"
-                ]
-            },
-            {
-                "name": "If In Play, Game May Continue with No Alive Demon",
-                "color": "blue",
-                "characters": [
-                    "eviltwin",
-                    "summoner",
-                    "mastermind",
-                    "atheist"
-                ]
-            },
-            {
-                "name": "Flower on Character Icon",
-                "color": "purple",
-                "characters": [
-                    "flowergirl",
-                    "poppygrower",
-                    "godfather",
-                    "damsel"
-                ]
-            }
-        ]
-    },
-    {
-        "id": 9,
-        "author": "Corey",
-        "date": "2026-09-14",
+        "date": "2026-09-15",
         "groups": [
             {
                 "name": "Townsfolk Starting with F",
