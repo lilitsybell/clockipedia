@@ -808,6 +808,52 @@ stopNameEveryCharacterTimer();
 
     button.disabled =
         true;
+showNameEveryCharacterGameOver();
+}
+function showNameEveryCharacterGameOver(){
+
+    const total =
+        Object.keys(
+            characters
+        ).length;
+
+
+    const guessed =
+        nameEveryCharacterGuessed.size;
+
+
+    const percent =
+        Math.round(
+            guessed /
+            total *
+            100
+        );
+
+
+    document.querySelector(
+        "#nameEveryCharacterGameOverScore"
+    ).textContent =
+        `${guessed} / ${total}`;
+
+
+    document.querySelector(
+        "#nameEveryCharacterGameOverPercent"
+    ).textContent =
+        `${percent}%`;
+
+
+    document.querySelector(
+        "#nameEveryCharacterGameOverTime"
+    ).textContent =
+        document.querySelector(
+            "#nameEveryCharacterTimer"
+        ).textContent;
+
+
+    document.querySelector(
+        "#nameEveryCharacterGameOver"
+    ).hidden =
+        false;
 
 }
 /* ==========================================
