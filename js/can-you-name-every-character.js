@@ -106,7 +106,8 @@ setupNameEveryCharacterGiveUp();
 updateNameEveryCharacterProgress();
 
 updateNameEveryCharacterTeamProgress();
-setupNameEveryCharacterShare();            
+setupNameEveryCharacterShare();    
+setupNameEveryCharacterPlayAgain();
 
         }
         catch(error){
@@ -1421,5 +1422,27 @@ ${url}`;
             "Could not copy result.";
 
     }
+
+}
+function setupNameEveryCharacterPlayAgain(){
+
+    document
+        .querySelectorAll(
+            ".name-every-character-play-again"
+        )
+        .forEach(
+            button => {
+
+                button.addEventListener(
+                    "click",
+                    () => {
+
+                        window.location.reload();
+
+                    }
+                );
+
+            }
+        );
 
 }
