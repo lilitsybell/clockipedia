@@ -509,3 +509,36 @@ font-weight: 600;
 
     text-align:center;
 }
+.name-every-character-pause{
+    height:40px;
+
+    padding:0 13px;
+
+    border:1px solid var(--border);
+
+    border-radius:8px;
+
+    background:white;
+
+    color:var(--purple);
+
+    font:inherit;
+
+    font-size:12px;
+    font-weight:800;
+
+    cursor:pointer;
+}
+
+
+.name-every-character-pause:hover{
+    background:
+        rgba(102,102,153,.06);
+}
+
+
+.name-every-character-pause:disabled{
+    opacity:.45;
+
+    cursor:default;
+}
