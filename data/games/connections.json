@@ -1,4 +1,14 @@
 [
+    {"id": 22, "author": "Ben", "date": "2026-09-27",
+        "groups": [
+            {"name": "\"if the demon kills\"", "color": "yellow",
+                "characters": ["grandmother", "sage", "banshee", "choirboy"]},
+            {"name": "modifies outsiders with setup text", "color": "green",
+                "characters": ["balloonist", "kazali", "hermit", "baron"]},
+            {"name": "\"all players know\"", "color": "blue",
+                "characters": ["djinn", "leviathan", "fearmonger", "vizier"]},
+            {"name": "ability uses the word \"might\"", "color": "purple",
+                "characters": ["sentinel", "wizard", "tinker", "harlot"]}]},
     {"id": 21, "author": "Ben", "date": "2026-09-26",
         "groups": [
             {"name": "relates to neighbors", "color": "yellow",
