@@ -69,6 +69,14 @@ const nameEveryCharacterTeams = [
 
 let nameEveryCharacterGuessed =
     new Set();
+let nameEveryCharacterStartTime =
+    null;
+
+let nameEveryCharacterTimerInterval =
+    null;
+
+let nameEveryCharacterGameEnded =
+    false;
 /* ==========================================
    Start
 ========================================== */
@@ -423,6 +431,14 @@ function setupNameEveryCharacterInput(){
     input.addEventListener(
         "input",
         () => {
+            if(
+    !nameEveryCharacterStartTime &&
+    input.value.length
+){
+
+    startNameEveryCharacterTimer();
+
+}
 
             const guess =
                 normalizeNameEveryCharacterGuess(
@@ -709,7 +725,7 @@ function setupNameEveryCharacterGiveUp(){
 
 
 function giveUpNameEveryCharacter(){
-
+stopNameEveryCharacterTimer();
     Object.entries(
         characters
     )
@@ -847,7 +863,7 @@ function checkNameEveryCharacterComplete(){
         return;
 
     }
-
+stopNameEveryCharacterTimer();
 
     const input =
         document.querySelector(
@@ -885,5 +901,105 @@ function checkNameEveryCharacterComplete(){
 
     complete.hidden =
         false;
+
+}
+/* ==========================================
+   Timer
+========================================== */
+
+function startNameEveryCharacterTimer(){
+
+    if(
+        nameEveryCharacterTimerInterval ||
+        nameEveryCharacterGameEnded
+    ){
+
+        return;
+
+    }
+
+
+    nameEveryCharacterStartTime =
+        Date.now();
+
+
+    updateNameEveryCharacterTimer();
+
+
+    nameEveryCharacterTimerInterval =
+        setInterval(
+            updateNameEveryCharacterTimer,
+            1000
+        );
+
+}
+
+
+function updateNameEveryCharacterTimer(){
+
+    if(!nameEveryCharacterStartTime){
+        return;
+    }
+
+
+    const elapsed =
+        Math.floor(
+            (
+                Date.now() -
+                nameEveryCharacterStartTime
+            ) / 1000
+        );
+
+
+    const minutes =
+        Math.floor(
+            elapsed / 60
+        );
+
+
+    const seconds =
+        elapsed % 60;
+
+
+    const timer =
+        document.querySelector(
+            "#nameEveryCharacterTimer"
+        );
+
+
+    timer.textContent =
+        `${minutes}:${String(seconds).padStart(2, "0")}`;
+
+}
+
+
+function stopNameEveryCharacterTimer(){
+
+    if(
+        nameEveryCharacterTimerInterval
+    ){
+
+        clearInterval(
+            nameEveryCharacterTimerInterval
+        );
+
+
+        nameEveryCharacterTimerInterval =
+            null;
+
+    }
+
+
+    if(
+        nameEveryCharacterStartTime
+    ){
+
+        updateNameEveryCharacterTimer();
+
+    }
+
+
+    nameEveryCharacterGameEnded =
+        true;
 
 }
