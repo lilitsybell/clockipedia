@@ -422,3 +422,51 @@
     background:
         rgba(181,35,35,.06);
 }
+/* ==========================================
+   Missed Characters
+========================================== */
+
+.name-every-character-slot.missed{
+    border-color:
+        rgba(181,35,35,.4);
+
+    background:
+        rgba(181,35,35,.07);
+}
+
+
+.name-every-character-slot.missed
+.name-every-character-slot-image{
+    background:transparent;
+
+    opacity:.7;
+}
+
+
+.name-every-character-slot.missed
+.name-every-character-slot-name{
+    height:auto;
+
+    background:none;
+
+    color:var(--red);
+
+    font-size:12px;
+
+    font-weight:800;
+
+    line-height:1.1;
+
+    white-space:nowrap;
+
+    overflow:hidden;
+
+    text-overflow:ellipsis;
+}
+
+
+.name-every-character-give-up:disabled{
+    opacity:.45;
+
+    cursor:default;
+}
