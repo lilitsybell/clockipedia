@@ -1137,13 +1137,44 @@ function stopNameEveryCharacterTimer(){
 /* ==========================================
    Pause
 ========================================== */
-
 function setupNameEveryCharacterPause(){
 
-    const button =
+    const pauseButton =
         document.querySelector(
             "#nameEveryCharacterPause"
         );
+
+
+    const resumeButton =
+        document.querySelector(
+            "#nameEveryCharacterResume"
+        );
+
+
+    pauseButton.addEventListener(
+        "click",
+        pauseNameEveryCharacterGame
+    );
+
+
+    resumeButton.addEventListener(
+        "click",
+        resumeNameEveryCharacterGame
+    );
+
+}
+function pauseNameEveryCharacterGame(){
+
+    if(
+        nameEveryCharacterGameEnded ||
+        !nameEveryCharacterTimerStarted ||
+        nameEveryCharacterPaused
+    ){
+        return;
+    }
+
+
+    pauseNameEveryCharacterTimer();
 
 
     const input =
@@ -1152,54 +1183,96 @@ function setupNameEveryCharacterPause(){
         );
 
 
-    button.addEventListener(
-        "click",
-        () => {
-
-            if(
-                nameEveryCharacterGameEnded ||
-                !nameEveryCharacterTimerStarted
-            ){
-                return;
-            }
+    const board =
+        document.querySelector(
+            "#nameEveryCharacterBoard"
+        );
 
 
-            if(nameEveryCharacterPaused){
-
-                resumeNameEveryCharacterTimer();
-
-
-                nameEveryCharacterPaused =
-                    false;
+    const overlay =
+        document.querySelector(
+            "#nameEveryCharacterPauseOverlay"
+        );
 
 
-                input.disabled =
-                    false;
+    const button =
+        document.querySelector(
+            "#nameEveryCharacterPause"
+        );
 
 
-                button.textContent =
-                    "Pause";
+    input.disabled =
+        true;
 
 
-                input.focus();
-
-            }
-            else{
-
-                pauseNameEveryCharacterTimer();
+    board.hidden =
+        true;
 
 
-                input.disabled =
-                    true;
+    overlay.hidden =
+        false;
 
 
-                button.textContent =
-                    "Resume";
+    button.disabled =
+        true;
 
-            }
+}
 
-        }
-    );
+
+function resumeNameEveryCharacterGame(){
+
+    if(
+        !nameEveryCharacterPaused ||
+        nameEveryCharacterGameEnded
+    ){
+        return;
+    }
+
+
+    const input =
+        document.querySelector(
+            "#nameEveryCharacterInput"
+        );
+
+
+    const board =
+        document.querySelector(
+            "#nameEveryCharacterBoard"
+        );
+
+
+    const overlay =
+        document.querySelector(
+            "#nameEveryCharacterPauseOverlay"
+        );
+
+
+    const button =
+        document.querySelector(
+            "#nameEveryCharacterPause"
+        );
+
+
+    overlay.hidden =
+        true;
+
+
+    board.hidden =
+        false;
+
+
+    input.disabled =
+        false;
+
+
+    button.disabled =
+        false;
+
+
+    resumeNameEveryCharacterTimer();
+
+
+    input.focus();
 
 }
 /* ==========================================
