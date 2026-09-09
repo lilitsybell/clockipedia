@@ -524,10 +524,17 @@ function renderConnectionsPuzzleMeta(){
             "#connectionsArchiveButton"
         );
 
+    const dividers =
+        document.querySelectorAll(
+            ".connections-meta-divider"
+        );
 
-    if(
-        connectionsIsCustom
-    ){
+
+    /* ======================================
+       Custom Puzzle
+    ====================================== */
+
+    if(connectionsIsCustom){
 
         number.textContent =
             "Custom Puzzle";
@@ -537,15 +544,7 @@ function renderConnectionsPuzzleMeta(){
             true;
 
 
-        const dividers =
-            document.querySelectorAll(
-                ".connections-meta-divider"
-            );
-
-
-        if(
-            dividers[0]
-        ){
+        if(dividers[0]){
 
             dividers[0].hidden =
                 true;
@@ -569,34 +568,20 @@ function renderConnectionsPuzzleMeta(){
 
     }
 
-if(connectionsIsCustom){
 
-    number.textContent =
-        "Custom Puzzle";
-
-}
-else{
+    /* ======================================
+       Daily Puzzle
+    ====================================== */
 
     number.textContent =
         `Puzzle #${connectionsPuzzle.id}`;
 
-}
-
-}
 
     date.hidden =
         false;
 
 
-    const dividers =
-        document.querySelectorAll(
-            ".connections-meta-divider"
-        );
-
-
-    if(
-        dividers[0]
-    ){
+    if(dividers[0]){
 
         dividers[0].hidden =
             false;
