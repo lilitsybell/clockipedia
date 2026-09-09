@@ -494,6 +494,7 @@ const match =
 
             updateNameEveryCharacterProgress();
             updateNameEveryCharacterTeamProgress();
+            checkNameEveryCharacterComplete();
 
         }
     );
@@ -824,5 +825,65 @@ function revealMissedNameEveryCharacter(
 
     name.textContent =
         character.name;
+
+}
+/* ==========================================
+   Complete Game
+========================================== */
+
+function checkNameEveryCharacterComplete(){
+
+    const total =
+        Object.keys(
+            characters
+        ).length;
+
+
+    if(
+        nameEveryCharacterGuessed.size !==
+        total
+    ){
+
+        return;
+
+    }
+
+
+    const input =
+        document.querySelector(
+            "#nameEveryCharacterInput"
+        );
+
+
+    const button =
+        document.querySelector(
+            "#nameEveryCharacterGiveUp"
+        );
+
+
+    const complete =
+        document.querySelector(
+            "#nameEveryCharacterComplete"
+        );
+
+
+    input.disabled =
+        true;
+
+
+    input.value =
+        "";
+
+
+    input.placeholder =
+        "All characters named!";
+
+
+    button.disabled =
+        true;
+
+
+    complete.hidden =
+        false;
 
 }
