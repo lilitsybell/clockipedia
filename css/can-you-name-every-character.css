@@ -391,3 +391,34 @@
     }
 
 }
+/* ==========================================
+   Give Up Button
+========================================== */
+
+.name-every-character-give-up{
+    height:40px;
+
+    padding:0 14px;
+
+    border:1px solid
+        rgba(181,35,35,.35);
+
+    border-radius:8px;
+
+    background:white;
+
+    color:var(--red);
+
+    font:inherit;
+
+    font-size:12px;
+    font-weight:800;
+
+    cursor:pointer;
+}
+
+
+.name-every-character-give-up:hover{
+    background:
+        rgba(181,35,35,.06);
+}
