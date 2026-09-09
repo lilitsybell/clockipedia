@@ -1,4 +1,14 @@
 [
+    {"id": 21, "author": "Ben", "date": "2026-09-26",
+        "groups": [
+            {"name": "relates to neighbors", "color": "yellow",
+                "characters": ["empath", "nodashii", "revolutionary", "tealady"]},
+            {"name": "players \"do not know\"", "color": "green",
+                "characters": ["poppygrower", "amnesiac", "ogre", "tor"]},
+            {"name": "gains an ability", "color": "blue",
+                "characters": ["boffin", "philosopher", "plaguedoctor", "cannibal"]},
+            {"name": "can create duplicate characters", "color": "purple",
+                "characters": ["villageidiot", "imp", "pope", "cacklejack"]}]},
     {"id": 20, "author": "Ben", "date": "2026-09-25",
         "groups": [
             {"name": "has setup text", "color": "yellow",
