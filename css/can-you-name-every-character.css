@@ -970,3 +970,34 @@ font-weight: 600;
     font-variant-numeric:
         tabular-nums;
 }
+.name-every-character-result-buttons{
+    display:flex;
+    flex-direction:column;
+
+    gap:8px;
+}
+
+
+.name-every-character-play-again{
+    width:100%;
+    height:44px;
+
+    border:1px solid var(--border);
+    border-radius:10px;
+
+    background:white;
+
+    color:var(--black);
+
+    font:inherit;
+
+    font-size:13px;
+    font-weight:800;
+
+    cursor:pointer;
+}
+
+
+.name-every-character-play-again:hover{
+    background:var(--light-gray);
+}
