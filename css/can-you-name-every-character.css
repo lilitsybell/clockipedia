@@ -843,3 +843,130 @@ font-weight: 600;
 
     cursor:pointer;
 }
+/* ==========================================
+   Game Over Popup
+========================================== */
+
+.name-every-character-game-over{
+    position:fixed;
+    inset:0;
+
+    z-index:1000;
+
+    display:flex;
+    align-items:center;
+    justify-content:center;
+
+    padding:24px;
+}
+
+
+.name-every-character-game-over[hidden]{
+    display:none;
+}
+
+
+.name-every-character-game-over-backdrop{
+    position:absolute;
+    inset:0;
+
+    background:
+        rgba(13,24,33,.68);
+
+    backdrop-filter:
+        blur(4px);
+}
+
+
+.name-every-character-game-over-card{
+    position:relative;
+
+    width:min(430px, 100%);
+
+    padding:34px 32px 30px;
+
+    border-radius:22px;
+
+    background:white;
+
+    text-align:center;
+
+    box-shadow:
+        0 24px 70px
+        rgba(0,0,0,.28);
+
+    animation:
+        nameEveryCharacterWinnerIn
+        .35s ease-out;
+}
+
+
+.name-every-character-game-over-eyebrow{
+    margin-bottom:6px;
+
+    color:var(--red);
+
+    font-size:11px;
+    font-weight:900;
+
+    letter-spacing:.12em;
+
+    text-transform:uppercase;
+}
+
+
+.name-every-character-game-over-card h2{
+    margin:0 0 20px;
+
+    font-family:
+        "Droid Sans",
+        Arial,
+        sans-serif;
+
+    color:var(--black);
+
+    font-size:28px;
+}
+
+
+.name-every-character-game-over-score{
+    color:var(--black);
+
+    font-size:38px;
+    font-weight:900;
+}
+
+
+.name-every-character-game-over-percent{
+    margin:3px 0 22px;
+
+    color:var(--red);
+
+    font-size:15px;
+    font-weight:900;
+}
+
+
+.name-every-character-game-over-time-label{
+    color:var(--gray);
+
+    font-size:10px;
+    font-weight:900;
+
+    letter-spacing:.08em;
+
+    text-transform:uppercase;
+}
+
+
+.name-every-character-game-over-time{
+    margin:3px 0 24px;
+
+    color:var(--purple);
+
+    font-size:32px;
+    font-weight:900;
+
+    font-variant-numeric:
+        tabular-nums;
+}
