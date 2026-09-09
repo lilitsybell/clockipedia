@@ -5,7 +5,7 @@
                 "characters": ["farmer", "fisherman", "flowergirl", "fool"]},
             {"name": "ability includes \"once per game\"", "color": "green",
                 "characters": ["nightwatchman", "professor", "bonecollector", "golem"]},
-            {"name": "demon icon art is or has eyes", "color": "blue",
+            {"name": "demon icon is or has eyes", "color": "blue",
                 "characters": ["ojo", "lordoftyphon", "nodashii", "vigormortis"]},
             {"name": "can cause storyteller chosen death", "color": "purple",
                 "characters": ["pithag", "lilmonsta", "atheist", "gossip"]}]},
@@ -13,7 +13,7 @@
         "groups": [
             {"name": "can receive a \"0\"", "color": "yellow",
                 "characters": ["chef", "clockmaker", "librarian", "oracle"]},
-            {"name": "ability changes other players characters", "color": "green",
+            {"name": "ability changes other players' characters", "color": "green",
                 "characters": ["fanggu", "huntsman", "imp", "farmer"]},
             {"name": "if in play, game may continue with no alive demon", "color": "blue",
                 "characters": ["eviltwin", "summoner", "mastermind", "atheist"]},
@@ -55,7 +55,7 @@
                 "characters": ["psychopath", "witch", "gunslinger", "golem"]},
             {"name": "visits the storyteller", "color": "yellow",
                 "characters": ["amnesiac", "savant", "wizard", "puzzlemaster"]},
-            {"name": "lets storytellers decide deaths", "color": "purple",
+            {"name": "lets the storyteller decide deaths", "color": "purple",
                 "characters": ["boomdandy", "gossip", "legion", "pithag"]},
             {"name": "townsfolk that cause character change", "color": "blue",
                 "characters": ["huntsman", "farmer", "snakecharmer", "engineer"]}]},
@@ -81,7 +81,7 @@
                 "characters": ["ravenkeeper", "pacifist", "snakecharmer", "organgrinder"]}]},
     {"id": 3, "author": "Corey", "date": "2026-09-08",
         "groups": [
-            {"name": "can cause drunkeness", "color": "green",
+            {"name": "can cause drunkenness", "color": "green",
                 "characters": ["organgrinder", "sailor", "courtier", "innkeeper"]},
             {"name": "public announcement from storyteller", "color": "yellow",
                 "characters": ["banshee", "alhadikhia", "fearmonger", "vizier"]},
@@ -101,12 +101,12 @@
                 "characters": ["baron", "hermit", "godfather", "balloonist"]}]},
     {"id": 1, "author": "Bell", "date": "2026-09-06",
         "groups": [
-            {"name": "Can Prevent Demon From Killing", "color": "yellow",
+            {"name": can prevent demon from killing", "color": "yellow",
                 "characters": ["courtier", "exorcist", "monk", "poisoner"]},
-            {"name": "Can Cause Themselves to Die", "color": "blue",
+            {"name": "can cause themself to die", "color": "blue",
                 "characters": ["gambler", "imp", "tinker", "acrobat"]},
-            {"name": "Learns a Number", "color": "purple",
+            {"name": "learns a number", "color": "purple",
                 "characters": ["empath", "mathematician", "chef", "juggler"]},
-            {"name": "Involve Nominations", "color": "green",
+            {"name": "involves nominations", "color": "green",
                 "characters": ["golem", "witch", "fearmonger", "towncrier"]}]}
 ]
