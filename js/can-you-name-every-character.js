@@ -67,7 +67,8 @@ const nameEveryCharacterTeams = [
 
 ];
 
-
+let nameEveryCharacterGuessed =
+    new Set();
 /* ==========================================
    Start
 ========================================== */
@@ -81,6 +82,9 @@ document.addEventListener(
             await loadCharacters();
 
             renderNameEveryCharacterBoard();
+            setupNameEveryCharacterInput();
+
+updateNameEveryCharacterProgress();
 
         }
         catch(error){
@@ -395,5 +399,211 @@ function normalizeNameEveryCharacterTeam(
 
     return map[team] ||
         team;
+
+}
+/* ==========================================
+   Guess Input
+========================================== */
+
+function setupNameEveryCharacterInput(){
+
+    const input =
+        document.querySelector(
+            "#nameEveryCharacterInput"
+        );
+
+
+    input.addEventListener(
+        "input",
+        () => {
+
+            const guess =
+                normalizeNameEveryCharacterGuess(
+                    input.value
+                );
+
+
+            if(!guess){
+                return;
+            }
+
+
+            const match =
+                Object.entries(
+                    characters
+                )
+                .find(
+                    ([
+                        slug,
+                        character
+                    ]) => {
+
+                        return normalizeNameEveryCharacterGuess(
+                            character.name
+                        ) ===
+                        guess;
+
+                    }
+                );
+
+
+            if(!match){
+                return;
+            }
+
+
+            const [
+                slug,
+                character
+            ] =
+                match;
+
+
+            if(
+                nameEveryCharacterGuessed.has(
+                    slug
+                )
+            ){
+
+                input.value =
+                    "";
+
+                return;
+
+            }
+
+
+            nameEveryCharacterGuessed.add(
+                slug
+            );
+
+
+            revealNameEveryCharacter(
+                slug,
+                character
+            );
+
+
+            input.value =
+                "";
+
+
+            updateNameEveryCharacterProgress();
+
+        }
+    );
+
+}
+
+
+/* ==========================================
+   Normalize Guess
+========================================== */
+
+function normalizeNameEveryCharacterGuess(
+    text
+){
+
+    return text
+        .toLowerCase()
+        .normalize("NFD")
+        .replace(
+            /[\u0300-\u036f]/g,
+            ""
+        )
+        .replace(
+            /[^a-z0-9]/g,
+            ""
+        );
+
+}
+
+
+/* ==========================================
+   Reveal Character
+========================================== */
+
+function revealNameEveryCharacter(
+    slug,
+    character
+){
+
+    const slot =
+        document.querySelector(
+            `[data-character="${slug}"]`
+        );
+
+
+    if(!slot){
+        return;
+    }
+
+
+    slot.classList.add(
+        "guessed"
+    );
+
+
+    const image =
+        slot.querySelector(
+            ".name-every-character-slot-image"
+        );
+
+
+    const name =
+        slot.querySelector(
+            ".name-every-character-slot-name"
+        );
+
+
+    image.innerHTML =
+        "";
+
+
+    const token =
+        document.createElement(
+            "img"
+        );
+
+
+    token.src =
+        character.image;
+
+
+    token.alt =
+        character.name;
+
+
+    image.appendChild(
+        token
+    );
+
+
+    name.textContent =
+        character.name;
+
+}
+
+
+/* ==========================================
+   Progress
+========================================== */
+
+function updateNameEveryCharacterProgress(){
+
+    const progress =
+        document.querySelector(
+            "#nameEveryCharacterProgress"
+        );
+
+
+    const total =
+        Object.keys(
+            characters
+        ).length;
+
+
+    progress.textContent =
+        `${nameEveryCharacterGuessed.size} / ${total}`;
 
 }
