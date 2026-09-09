@@ -254,6 +254,10 @@
 ========================================== */
 
 .name-every-character-controls{
+    position:sticky;
+    top:12px;
+    z-index:20;
+
     display:flex;
 
     align-items:center;
@@ -261,6 +265,17 @@
     gap:12px;
 
     margin-bottom:24px;
+
+    padding:8px;
+
+    border:1px solid var(--border);
+    border-radius:12px;
+
+    background:rgba(255,255,255,.96);
+
+    box-shadow:
+        0 5px 18px
+        rgba(13,24,33,.08);
 }
 
 
