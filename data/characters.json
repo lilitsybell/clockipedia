@@ -165,9 +165,9 @@
     "purpose": "The [Atheist] knows exactly who to execute to win.",
     "summary": [
              "If the [Atheist] is in play on setup, there are no evil players. This includes evil Townsfolk, Outsiders, and Travellers.",
-             "The Storyteller may break any rule of the game they wish. This includes but is not limited to: having duplicate in play characters, lying about information, killing players when they wouldn't have died otherwise, and changing player's characters.",
-             "The good team wins if the Storyteller is executed. The Storyteller nomination works like a normal player nomination. a 50% majority is required and may be lifted. If an [Atheist] or [Atheist] ability is created during the game, the good team wins if they execute either the Storyteller or the last living Demon.",
-             "The good team loses if the Storyteller is not executed. If an [Atheist] or [Atheist] ability is created during the game, the good team loses if they execute neither the Storyteller or the last living Demon."
+             "The Storyteller may break any rule of the game they wish. This includes but is not limited to: having duplicate in play characters, lying about information, killing players when they wouldn't have died otherwise, and changing players' characters.",
+             "The good team wins if the Storyteller is executed. The Storyteller nomination works like a normal player nomination. A 50% majority is required and may be lifted. If an [Atheist] or [Atheist] ability is created during the game, the good team wins if they execute either the Storyteller or the last living Demon.",
+             "The good team loses if the Storyteller is not executed. If an [Atheist] or [Atheist] ability is created during the game, the good team loses if they execute neither the Storyteller nor the last living Demon."
              ],
     "run": {
            "Setup": [
@@ -183,7 +183,7 @@
            },
     "examples": [
                 "The [Fortune Teller] receives a yes on the [Lycanthrope] and the [Artist], even though neither is the Red Herring. The [Lycanthrope] fails to kill the [Moonchild], and the Storyteller kills the [Banshee] instead, announcing the [Banshee] has died. When only three players are alive, the [Tinker] is executed and the good team loses.",
-                "On the second night, the [Pit-Hag] changes the [Minstrel] into the [Atheist]. The Demon kills the [Nighwatchman] and the Storyteller kills the [Steward]. That day, the new [Atheist] nominates the Storyteller and the Storyteller is executed. The good team wins and the evil team loses."
+                "On the second night, the [Pit-Hag] changes the [Minstrel] into the [Atheist]. The Demon kills the [Nightwatchman] and the Storyteller kills the [Steward]. That day, the new [Atheist] nominates the Storyteller and the Storyteller is executed. The good team wins and the evil team loses."
                 ],
     "tags": ["Mechanical"],
     "edition": "Carousel"
@@ -212,7 +212,7 @@
                 ]
            },
     "examples": [
-                "On the first night, the [Balloonist] is learns the [Alchemist]. The next night, they learn the [Ogre]. The night after that, they learn the [Chambermaid].",
+                "On the first night, the [Balloonist] learns the [Alchemist]. The next night, they learn the [Ogre]. The night after that, they learn the [Chambermaid].",
                 "On the third night, the [Balloonist] learns the [Leviathan]. The next night, the [Leviathan] was chosen by the [Snake Charmer], and is now the new [Snake Charmer]. The [Balloonist] learns the new [Snake Charmer], even though they learned the same player the night before.",
                 "On the first night, the [Balloonist] learns the [Courtier]. The next night, the [Poisoner] chooses the [Balloonist]. The poisoned [Balloonist] learns the [Preacher]. The next night, the healthy [Balloonist] learns the [Witch]."
                 ],
@@ -330,7 +330,7 @@
     "team": "Townsfolk",
     "image": "https://images.klutzbanana.com/characters_official/chambermaid_g.png",
     "ability": "Each night, choose 2 alive players (not yourself): you learn how many woke tonight due to their ability.",
-    "flavor": "I ain' t seen nothin' untoward, Milady. Begging your pardon, but if I did see somethin', it certainly weren't the master o' the house sneaking into the professor's laboratory 'round eleven o'clock and mixing up fancy potions, just like you said, Miss.",
+    "flavor": "I ain't seen nothin' untoward, Milady. Begging your pardon, but if I did see somethin', it certainly weren't the master o' the house sneaking into the professor's laboratory 'round eleven o'clock and mixing up fancy potions, just like you said, Miss.",
     "purpose": "The [Chambermaid] learns who wakes at night.",
     "summary": [
              "The [Chambermaid] must choose alive players. If the [Chambermaid] accidentally picks a dead player, the [Chambermaid] is asked to choose again.",
@@ -345,7 +345,7 @@
                 ]
            },
     "examples": [
-                "On the second night, [Chambermaid] chooses the [Shugenja] and the [Witch] and learns a 1.",
+                "On the second night, the [Chambermaid] chooses the [Shugenja] and the [Witch] and learns a 1.",
                 "On the third night, the [Exorcist] chooses the [Kazali]. The [Chambermaid] chooses the [Kazali] and the [Soldier] and learns a 0.",
                 "On the first night, the [Chambermaid] chooses the [Minstrel] and the [Goon]. The [Chambermaid] becomes [Goon] drunk and learns a 1.",
                 "On the fifth night, the only three players left are the [Zombuul], who registers as dead, the [Mayor], and the [Chambermaid]. Since there is only one valid choice for the [Chambermaid] to make, the [Chambermaid] does not wake."
@@ -364,7 +364,7 @@
     "summary": [
              "A pair of evil players is when two evil players are sitting next to each other.",
              "The [Chef] counts spaces between evil players. If there were three evil players in a line, the [Chef] would receive a 2.",
-             "If there are multiple, separate, pairs, the [Chef] learns all pairs, not just the longest line of evils.",
+             "If there are multiple separate pairs, the [Chef] learns all pairs, not just the longest line of evils.",
              "The [Spy] and the [Recluse] register to the [Chef] twice, once for each of their neighbors. If a [Spy] or [Recluse] is sitting between two evil players, the [Chef] could receive a 0, 1, or 2.",
              "Travellers count as players and register to the [Chef]. This may affect the [Chef]'s number, so they should keep in mind when and where Travellers are sitting."
              ],
@@ -392,7 +392,7 @@
     "purpose": "The [Choirboy] learns who the Demon is if the Demon kills the [King].",
     "summary": [
              "If the [Choirboy] is in play during setup, the [King] is also in play and the player with the [King] token cannot be the [Drunk] or the [Marionette].",
-             "If the Demon kills the [King] using their ability to use the [King], the [Choirboy] learns who the Demon is. The Demon must kill the [Choirboy] using a character ability. Nominating the [King] does not count.",
+             "If the Demon kills the [King] using their ability, the [Choirboy] learns who the Demon is. The Demon must kill the [King] using a character ability. Nominating the [King] does not count.",
              "The Demon must kill the [King] in order for the [Choirboy] to learn who the Demon is. If the [King] is attacked, but doesn't die, the [Choirboy] learns nothing.",
              "The [Choirboy] does not learn which type of Demon the Demon is."
              ],
@@ -422,7 +422,7 @@
     "flavor": "Do not disturb me. The tick must continue, for the circle is a symbol of life and contains all things - all answers - in its divine machinery. I must work.",
     "purpose": "The [Clockmaker] learns how close the Demon is to their closest Minion.",
     "summary": [
-             "On the [Clockmaker]'s first night, they learn how many steps the Demon is to its nearest Minion, clockwise, or counterclockwise",
+             "On the [Clockmaker]'s first night, they learn how many steps the Demon is to its nearest Minion, clockwise, or counterclockwise.",
              "The number of steps is equal to the number of players between the Demon and its nearest Minion +1."
              ],
     "run": {
@@ -455,7 +455,7 @@
              "The [Courtier] must choose a playable character. Fabled and Loric characters cannot be chosen.",
              "If a player who is [Courtier] drunk becomes a different character, they continue to be [Courtier] drunk.",
              "If the [Courtier] chooses a character that is not in play, but becomes in play before the three nights and days are up, that player is not [Courtier] drunk.",
-             "If there are multiple copies of a character in play, only one of those players are made [Courtier] drunk.",
+             "If there are multiple copies of a character in play, only one of those players is made [Courtier] drunk.",
              "If the [Courtier] is the first in the night to choose the [Goon], the [Courtier] becomes [Goon] drunk and the [Goon] becomes good and is not made [Courtier] drunk."
              ],
     "run": {
@@ -483,8 +483,7 @@
     "summary": [
              "Every night, the [Cult Leader] becomes the alignment of one of their neighbors.",
              "Once per day, at any time, the [Cult Leader] may attempt to publicly form a cult. If all alive and dead good players agree, the [Cult Leader]'s team wins.",
-             "The [Cult Leader] only wakes to learn their alignment if their alignment has changed.",
-             "ComingSoon"
+             "The [Cult Leader] only wakes to learn their alignment if their alignment has changed."
              ],
     "run": {
            "Every Night": [
