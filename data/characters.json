@@ -447,18 +447,27 @@
     "flavor": "I am more afraid of an army of one hundred sheep led by a lion than an army of one hundred lions led by a sheep.",
     "purpose": "The [Courtier] may drunk any character, even if they don't know which player it is.",
     "summary": [
-             "ComingSoon",
-             "ComingSoon"
+             "Once per game, the [Courtier] can choose one character to immediately become drunk for 3 nights and 3 days.",
+             "The [Courtier] chooses a character, not a player.",
+             "The [Courtier] does not learn if they were successful or who they made drunk.",
+             "If the drunk or poisoned [Courtier] chooses a character, that character is not drunk, even if the [Courtier] later becomes sober and healthy."
+             "If the [Courtier] made a character drunk, but the [Courtier] becomes drunk or poisoned, the player they made drunk becomes sober again. If the [Courtier] becomes sober and healthy again before the three nights and three days have ended, that player becomes drunk yet again. The 3 nights and days do not pause while the [Courtier] is drunk or poisoned.",
+             "The [Courtier] must choose a playable character. Fabled and Loric characters cannot be chosen.",
+             "If a player who is [Courtier] drunk becomes a different character, they continue to be [Courtier] drunk.",
+             "If the [Courtier] chooses a character that is not in play, but becomes in play before the three nights and days are up, that player is not [Courtier] drunk.",
+             "If there are multiple copies of a character in play, only one of those players are made [Courtier] drunk.",
+             "If the [Courtier] is the first in the night to choose the [Goon], the [Courtier] becomes [Goon] drunk and the [Goon] becomes good and is not made [Courtier] drunk."
              ],
     "run": {
            "Every Night": [
-                "ComingSoon",
-                "ComingSoon"
+                "Each night, the [Courtier] chooses whether or not to use their ability.",
+                "If the [Courtier] chooses to use their ability, they must choose a playable character. If they do, and that character is in play, that player is drunk for three nights and three days starting immediately."
                 ]
            },
     "examples": [
-                "ComingSoon",
-                "ComingSoon"
+                "The [Poisoner] chooses to poison the [Courtier]. The same night, the [Courtier] chooses the [Lleech]. The [Lleech] stays sober and kills the [Nightwatchman] that night and the [Barber] the next night.",
+                "The [Courtier] chooses the [Scarlet Woman]. Two days later, the [Slayer] kills the [Lord of Typhon]. The game ends and the good team wins.",
+                "On the first night, the [Courtier] chooses the [Godfather]. The [Godfather] incorrectly learns that the [Golem], [Sweetheart], and [Drunk] are in play. On the 2nd day, the [Sweetheart] dies. The drunk [Godfather] chooses a player to kill, but the player does not die."
                 ],
     "tags": ["Droisoning"],
     "edition": "Bad Moon Rising"
@@ -472,21 +481,27 @@
     "flavor": "Thinking themselves wise, they became fools.",
     "purpose": "The [Cult Leader]'s team is able to win if they get everyone to agree they should.",
     "summary": [
-             "ComingSoon",
+             "Every night, the [Cult Leader] becomes the alignment of one of their neighbors.",
+             "Once per day, at any time, the [Cult Leader] may attempt to publicly form a cult. If all alive and dead good players agree, the [Cult Leader]'s team wins.",
+             "The [Cult Leader] only wakes to learn their alignment if their alignment has changed.",
              "ComingSoon"
              ],
     "run": {
-           "Anytime": [
-                "ComingSoon",
-                "ComingSoon"
-                ],
            "Every Night": [
-                "ComingSoon",
-                "ComingSoon"
+                "If both of the [Cult Leader]'s alive neighbors are good, the [Cult Leader] becomes good. If the [Cult Leader] was previously evil, they learn that they are now good.",
+                "If both of the [Cult Leader]'s alive neighbors are evil, the [Cult Leader] becomes evil. If the [Cult Leader] was previously good, they learn that they are now evil.",
+                "If one of the [Cult Leader]'s alive neighbors is evil, and the other is good, the Storyteller chooses which alignment the [Cult Leader] becomes. If the [Cult Leader] changes alignment, they learn this."
+                ],
+           "Every Day": [
+                "The [Cult Leader] may publicly choose to form a cult. The Storyteller announces this and has the players vote. This does not use a vote token. If all good players, alive and dead, vote to form the cult, the [Cult Leader]'s team immediately wins. If not all good players vote to form the cult, nothing happens."
                 ]
            },
     "examples": [
-                "ComingSoon",
+                "The good [Cult Leader] is sitting between the [Widow] and the [Fearmonger]. The [Cult Leader] becomes evil and learns this.",
+                "The good [Cult Leader] declares they are forming a cult. All players raise their hand except for the [Zealot]. The Storyteller announces a cult was not formed and goes on with the day.",
+                "The good [Cult Leader] is sitting between the [Farmer] and the [Sage], who is the faux paw to the [Lycanthrope]. Even though, both neighbors are good, the [Sage] registers as evil and the [Cult Leader] becomes evil and learns this.",
+                "The evil [Cult Leader] is sitting between the [Virgin] and the [Xaan]. The [Cult Leader] becomes good and learns this.",
+                "The evil [Cult Leader] declares they are forming a cult. All players raise their hand except for the [Recluse] and the [Harpy]. The [Recluse] registers as evil, and the Storyteller declares that a cult was formed and that the evil team has won."
                 "ComingSoon"
                 ],
     "tags": ["Mechanical", "Public"],
