@@ -391,22 +391,24 @@
     "flavor": "I saw it, I did. I was in the pews, tidying the hymn books, when a dreadful tune started from the pipe organ. The organist had a long cloak, and long fingers on the keys. And a hat that looked… just like… yours.",
     "purpose": "The [Choirboy] learns who the Demon is if the Demon kills the [King].",
     "summary": [
-             "ComingSoon",
-             "ComingSoon"
+             "If the [Choirboy] is in play during setup, the [King] is also in play and the player with the [King] token cannot be the [Drunk] or the [Marionette].",
+             "If the [Demon] kills the [King] using their ability to use the [King], the [Choirboy] learns who the Demon is. The Demon must kill the [Choirboy] using a character ability. Nominating the [King] does not count.",
+             "The [Demon] must kill the [King] in order for the [Choirboy] to learn who the Demon is. If the [King] is attacked, but doesn't die, the [Choirboy] learns nothing.",
+             "The [Choirboy] does not learn which type of Demon the Demon is."
              ],
     "run": {
            "Setup": [
-                "ComingSoon",
-                "ComingSoon"
+                "If the [Choirboy] is added to the bag, the [King] is also added to the bag. If the [King] was already in the bag, a second [King] is not added. The [Choirboy] does not affect Outsider count and cannot cause an Outsider to be removed."
                 ],
            "Every Night": [
-                "ComingSoon",
-                "ComingSoon"
+                "If the Demon kills the [King] using any character ability, the [Choirboy] wakes up that night to learn who the Demon is."
                 ]
            },
     "examples": [
-                "ComingSoon",
-                "ComingSoon"
+                "The [Kazali] chooses to kill the [King]. That same night, the [Choirboy] learns who the [Kazali] player is.",
+                "The [Po] chooses the [King], the [Choirboy], and the [Butler]. Since the [Choirboy] wakes after the Demon step, the [Choirboy] learns nothing.",
+                "The [Lycanthrope] chooses the [King] and the [King] dies. The [Choirboy] learns nothing.",
+                "The [Imp] with the [Boffin] [Moonchild] chooses themself to die. The next morning, the now dead [Imp] chooses the [King]. The [King] dies that night and the [Choirboy] learns who the new [Imp] is."
                 ],
     "tags": ["Information", "Death"],
     "edition": "Carousel"
