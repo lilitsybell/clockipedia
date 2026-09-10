@@ -1,5 +1,5 @@
 [
-    {"id": 23, "author": "Ben", "date": "2026-09-28",
+    {"id": 24, "author": "Ben", "date": "2026-09-29",
         "groups": [
             {"name": "interacts with madness", "color": "yellow",
                 "characters": ["pixie", "ventriloquist", "harpy", "bigwig"]},
@@ -9,7 +9,7 @@
                 "characters": ["scarletwoman", "hindu", "dreamer", "minstrel"]},
             {"name": "ability text says \"different\"", "color": "purple",
                 "characters": ["balloonist", "devilsadvocate", "cacklejack", "alchemist"]}]},
-    {"id": 22, "author": "Ben", "date": "2026-09-27",
+    {"id": 23, "author": "Ben", "date": "2026-09-28",
         "groups": [
             {"name": "\"if the demon kills\"", "color": "yellow",
                 "characters": ["grandmother", "sage", "banshee", "choirboy"]},
@@ -19,7 +19,7 @@
                 "characters": ["djinn", "leviathan", "fearmonger", "vizier"]},
             {"name": "ability uses the word \"might\"", "color": "purple",
                 "characters": ["sentinel", "wizard", "tinker", "harlot"]}]},
-    {"id": 21, "author": "Ben", "date": "2026-09-26",
+    {"id": 22, "author": "Ben", "date": "2026-09-27",
         "groups": [
             {"name": "relates to neighbors", "color": "yellow",
                 "characters": ["empath", "nodashii", "revolutionary", "tealady"]},
@@ -29,6 +29,16 @@
                 "characters": ["boffin", "philosopher", "plaguedoctor", "cannibal"]},
             {"name": "can create duplicate characters", "color": "purple",
                 "characters": ["villageidiot", "imp", "pope", "cacklejack"]}]},
+    {"id": 21, "author": "seaplus", "date": "2026-09-26",
+        "groups": [
+            {"name": "circles (mostly)", "color": "yellow",
+                "characters": ["wizard", "balloonist", "boomdandy", "fortuneteller"]},
+            {"name": "hoops", "color": "green",
+                "characters": ["angel", "deviant", "engineer", "virgin"]},
+            {"name": "raised hands", "color": "blue",
+                "characters": ["fearmonger", "legion", "banshee", "zombuul"]},
+            {"name": "glass", "color": "purple",
+                "characters": ["alchemist", "boffin", "courtier", "bountyhunter"]}]},
     {"id": 20, "author": "Ben", "date": "2026-09-25",
         "groups": [
             {"name": "has setup text", "color": "yellow",
@@ -85,8 +95,8 @@
                 "characters": ["alsaahir", "mastermind", "eviltwin", "klutz"]},
             {"name": "yes/no info", "color": "green",
                 "characters": ["flowergirl", "artist", "seamstress", "towncrier"]},
-            {"name": "outsiders that choose players", "color": "blue",
-                "characters": ["barber", "klutz", "moonchild", "ogre"]},
+            {"name": "storyteller discretion info", "color": "blue",
+                "characters": ["highpriestess", "fisherman", "savant", "general"]},
             {"name": "can cheat", "color": "purple",
                 "characters": ["butler", "zealot", "moonchild", "golem"]}]},
     {"id": 14, "author": "Bell", "date": "2026-09-19",
