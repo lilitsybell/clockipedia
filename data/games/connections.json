@@ -183,11 +183,11 @@
         "groups": [
             {"name": "outsiders that include \"drunk\" in their ability text", "color": "yellow",
                 "characters": ["drunk", "puzzlemaster", "sweetheart", "goon"]},
-            {"name": "outsiders that include \"demon\" in their ability text", "color": "green",
+            {"name": "outsiders that include \"demon\" in their ability text", "color": "purple",
                 "characters": ["barber", "golem", "lunatic", "recluse"]},
             {"name": "outsiders that choose players", "color": "blue",
                 "characters": ["klutz", "butler", "moonchild", "ogre"]},
-            {"name": "outsiders with alternative win/lose conditions", "color": "purple",
+            {"name": "outsiders with alternative win/lose conditions", "color": "green",
                 "characters": ["saint", "damsel", "politician", "heretic"]}]},
     {"id": 4, "author": "Corey", "date": "2026-09-09",
         "groups": [
