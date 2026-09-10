@@ -186,9 +186,9 @@
             {"name": "outsiders that include \"demon\" in their ability text", "color": "green",
                 "characters": ["barber", "golem", "lunatic", "recluse"]},
             {"name": "outsiders that choose players", "color": "blue",
-                "characters": ["barber", "klutz", "moonchild", "ogre"]},
+                "characters": ["klutz", "butler", "moonchild", "ogre"]},
             {"name": "outsiders with alternative win/lose conditions", "color": "purple",
-                "characters": ["saint", "klutz", "politician", "heretic"]}]},
+                "characters": ["saint", "damsel", "politician", "heretic"]}]},
     {"id": 4, "author": "Corey", "date": "2026-09-09",
         "groups": [
             {"name": "setup ability text", "color": "yellow",
