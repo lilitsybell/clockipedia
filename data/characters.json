@@ -431,7 +431,7 @@
                 ]
            },
     "examples": [
-                "In an 11 player game, the [Clockmaker] sits next to the [Al-Hadikhia], who sits next to the [Cult Leader], who sits next to the [Baron], who sits next to the [Witch]. The [Clockmaker learns a 2.]",
+                "In an 11 player game, the [Clockmaker] sits next to the [Al-Hadikhia], who sits next to the [Cult Leader], who sits next to the [Baron], who sits next to the [Witch]. The [Clockmaker] learns a 2.",
                 "In a 7 player game, there is a [Summoner] and no other evils. The [Clockmaker] learns a 0.",
                 "The [Pit-Hag] creates a [Clockmaker]. The [No Dashii] is sitting next to the [Washerwoman] and the dead [Poisoner]. The [Clockmaker] learns a 1."
                 ],
