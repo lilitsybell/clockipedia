@@ -422,18 +422,18 @@
     "flavor": "Do not disturb me. The tick must continue, for the circle is a symbol of life and contains all things - all answers - in its divine machinery. I must work.",
     "purpose": "The [Clockmaker] learns how close the Demon is to their closest Minion.",
     "summary": [
-             "ComingSoon",
-             "ComingSoon"
+             "On the [Clockmaker]'s first night, they learn how many steps the Demon is to its nearest Minion, clockwise, or counterclockwise",
+             "The number of steps is equal to the number of players between the Demon and its nearest Minion +1."
              ],
     "run": {
            "First Night": [
-                "ComingSoon",
-                "ComingSoon"
+                "The [Clockmaker] learns a number equal to the steps between the Demon and its nearest Minion."
                 ]
            },
     "examples": [
-                "ComingSoon",
-                "ComingSoon"
+                "In an 11 player game, the [Clockmaker] sits next to the [Al-Hadikhia], who sits next to the [Cult Leader], who sits next to the [Baron], who sits next to the [Witch]. The [Clockmaker learns a 2.]",
+                "In a 7 player game, there is a [Summoner] and no other evils. The [Clockmaker] learns a 0.",
+                "The [Pit-Hag] creates a [Clockmaker]. The [No Dashii] is sitting next to the [Washerwoman] and the dead [Poisoner]. The [Clockmaker] learns a 1."
                 ],
     "tags": ["Information"],
     "edition": "Sects and Violets"
