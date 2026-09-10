@@ -392,8 +392,8 @@
     "purpose": "The [Choirboy] learns who the Demon is if the Demon kills the [King].",
     "summary": [
              "If the [Choirboy] is in play during setup, the [King] is also in play and the player with the [King] token cannot be the [Drunk] or the [Marionette].",
-             "If the [Demon] kills the [King] using their ability to use the [King], the [Choirboy] learns who the Demon is. The Demon must kill the [Choirboy] using a character ability. Nominating the [King] does not count.",
-             "The [Demon] must kill the [King] in order for the [Choirboy] to learn who the Demon is. If the [King] is attacked, but doesn't die, the [Choirboy] learns nothing.",
+             "If the Demon kills the [King] using their ability to use the [King], the [Choirboy] learns who the Demon is. The Demon must kill the [Choirboy] using a character ability. Nominating the [King] does not count.",
+             "The Demon must kill the [King] in order for the [Choirboy] to learn who the Demon is. If the [King] is attacked, but doesn't die, the [Choirboy] learns nothing.",
              "The [Choirboy] does not learn which type of Demon the Demon is."
              ],
     "run": {
