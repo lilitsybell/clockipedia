@@ -460,7 +460,7 @@
              ],
     "run": {
            "Every Night": [
-                "Each night, the [Courtier] chooses whether or not to use their ability.",
+                "The [Courtier] chooses whether or not to use their ability.",
                 "If the [Courtier] chooses to use their ability, they must choose a playable character. If they do, and that character is in play, that player is drunk for three nights and three days starting immediately."
                 ]
            },
@@ -515,18 +515,19 @@
     "flavor": "I remember the Clockmaker. The sky was red and it was raining fractal triangles. There was a smell of violets and a bubbling sound. A woman with glowing eyes and a scraggly beard was hissing at the sky. Then, I awoke.",
     "purpose": "The [Dreamer] learns two characters a player might be.",
     "summary": [
-             "ComingSoon",
-             "ComingSoon"
+             "Each night, the [Dreamer] chooses a player and learns a good character and an evil character, one of which is that player's character.",
+             "The [Dreamer] cannot choose themself or a Traveller.",
+             "The alignment of the player does not matter. The [Dreamer] will always see a good character and an evil character."
              ],
     "run": {
            "Every Night": [
-                "ComingSoon",
-                "ComingSoon"
+                "The [Dreamer] chooses a player. If the player is a good character, the [Dreamer] learns that character and any evil character. If the player is an evil character, the [Dreamer] learns any good character and that evil character."
                 ]
            },
     "examples": [
-                "ComingSoon",
-                "ComingSoon"
+                "The [Dreamer] chooses the [Farmer]. The [Dreamer] learns [Farmer] and [Goblin].",
+                "The [Dreamer] chooses the [Recluse], who registers as the [Fearmonger]. The [Dreamer] learns [Town Crier] and [Fearmonger].",
+                "The [Dreamer] chooses the evil [Poppy Grower]. The [Dreamer] learns [Poppy Grower] and [Riot]."
                 ],
     "tags": ["Information"],
     "edition": "Sects and Violets"
