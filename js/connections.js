@@ -496,6 +496,34 @@ function renderConnectionsGame(){
 
     updateSubmitButton();
 
+
+    const shuffle =
+        document.querySelector(
+            "#connectionsShuffle"
+        );
+
+
+    const deselect =
+        document.querySelector(
+            "#connectionsDeselect"
+        );
+
+
+    if(shuffle){
+
+        shuffle.disabled =
+            connectionsFinished;
+
+    }
+
+
+    if(deselect){
+
+        deselect.disabled =
+            connectionsFinished;
+
+    }
+
 }
 
 
@@ -1980,11 +2008,45 @@ function loadConnectionsState(){
             state.finished || false;
 
 
-        connectionsWon =
-            state.won || false;
+connectionsWon =
+    state.won || false;
 
 
-        return true;
+/* ======================================
+   Restore Finished Puzzle
+====================================== */
+
+if(connectionsFinished){
+
+    connectionsPuzzle.groups.forEach(
+        group => {
+
+            const alreadySolved =
+                solvedGroups.some(
+                    solvedGroup =>
+                        solvedGroup.name ===
+                        group.name
+                );
+
+
+            if(!alreadySolved){
+
+                solvedGroups.push(
+                    group
+                );
+
+            }
+
+        }
+    );
+
+
+    selectedCharacters.clear();
+
+}
+
+
+return true;
 
     }
     catch(error){
