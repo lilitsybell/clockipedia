@@ -567,18 +567,24 @@
     "flavor": "If it bends, great. If it breaks, well, it probably needed fixing anyway.",
     "purpose": "The [Engineer] decides which evil characters are in play.",
     "summary": [
-             "ComingSoon",
-             "ComingSoon"
+             "Once per game, the [Engineer] can choose which Minions or Demon is in play. They can only choose one or the other, not both.",
+             "If the [Engineer] chooses to change the Minions, the Minions become those new Minions. If the [Engineer] chooses a Minion that is already in play, that Minion stays that Minion.",
+             "If the [Engineer] chooses to change the Demon, the Demon becomes that new Demon.",
+             "The [Engineer] never learns what the starting Minions and Demon are.",
+             "The [Engineer] chooses the same number of Minions as the character count shows. If there is a way for extra Minions to exist, the [Engineer] may choose extra Minions. If they choose too many, the Storyteller chooses which to put in play.",
+             "If the [Engineer] chooses too few Minions, the Storyteller only changes that many Minions."
              ],
     "run": {
            "Every Night": [
-                "ComingSoon",
-                "ComingSoon"
+                "The [Engineer] chooses whether or not to use their ability.",
+                "If the [Engineer] chooses to use their ability, the [Engineer] chooses the new Minions or Demon characters. Minions or the Demon become those characters and learn this."
                 ]
            },
     "examples": [
-                "ComingSoon",
-                "ComingSoon"
+                "On the first night, the [Courtier] chooses the [Ojo]. The Demon is already the [Ojo], so nothing happens.",
+                "On the third night, the [Courtier] chooses the [Lleech]. The Storyteller wakes the [Vortox] and tells them they are now the [Lleech]. That night, the new [Lleech] chooses a host and a player to kill.",
+                "On the first night, the [Courtier] chooses [Psychopath] and [Wizard]. There is already a [Psychopath] and [Vizier] in play. The [Vizier] learns they are now the [Wizard].",
+                "On the second night, the [Courtier] chooses [Assassin], [Marionette], and [Godfather]. There are only 2 Minions in play, but there is a [Lord of Typhon] on the script. The Storyteller chooses to leave the [Marionette] as the [Marionette], and tells the [Boomdandy] they are now the [Godfather]. The new [Godfather] learns which Outsiders are in play that night."
                 ],
     "tags": ["Mechanical"],
     "edition": "Carousel"
@@ -592,18 +598,21 @@
     "flavor": "We cast you out, every unclean spirit, every satanic power, every onslaught of the infernal adversary, every legion, every diabolical group and sect, in the name and by the power of Our Lord Jesus Christ. We command you, begone and fly far from the Church of God, from the souls made by God in His image and redeemed by the precious blood of the divine Lamb.",
     "purpose": "The [Exorcist] might stop a Demon attack.",
     "summary": [
-             "ComingSoon",
-             "ComingSoon"
+             "Each night, the [Exorcist] chooses a player. If that player is the Demon, they learn who the [Exorcist] is then do not wake to attack that night.",
+             "If the Demon would wake due to another ability, such as choosing a [Lleech] host or being told who the [Nightwatchman] is, the Demon wakes for those abilities.",
+             "Other Demon functions that do not require waking still occur, such as the [Vortox] causing false information, the [Shabaloth] regurgitating a player, or the [Pukka] killing the previously targeted player.",
+             "The [Exorcist] may not choose the same player as the night before."
              ],
     "run": {
            "Other Nights": [
-                "ComingSoon",
-                "ComingSoon"
+                "The [Engineer] chooses a player. If that player is the Demon, the Demon learns who the [Engineer] is and does not wake to attack. If that player is not the Demon, nothing happens."
                 ]
            },
     "examples": [
-                "ComingSoon",
-                "ComingSoon"
+                "On the third night, the [Exorcist] chooses the [Kazali]. The [Kazali] learns who the [Exorcist] is and does not kill that night.",
+                "On the second night, the [Exorcist] chooses the [Village Idiot]. Nothing happens.",
+                "On the fourth night, the [Exorcist] chooses the [Poisoner]. Nothing happens.",
+                "On the third night, the [Exorcist] chooses the [Pit-Hag]. The [Imp] chooses themselves, and the [Pit-Hag] becomes the Demon. The [Pit-Hag] learns this and does not learn who the [Exorcist] is."
                 ],
     "tags": ["Mechanical", "Death"],
     "edition": "Bad Moon Rising"
