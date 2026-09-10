@@ -605,7 +605,7 @@
              ],
     "run": {
            "Other Nights": [
-                "The [Engineer] chooses a player. If that player is the Demon, the Demon learns who the [Engineer] is and does not wake to attack. If that player is not the Demon, nothing happens."
+                "The [Exorcist] chooses a player. If that player is the Demon, the Demon learns who the [Exorcist] is and does not wake to attack. If that player is not the Demon, nothing happens."
                 ]
            },
     "examples": [
@@ -614,7 +614,7 @@
                 "On the fourth night, the [Exorcist] chooses the [Poisoner]. Nothing happens.",
                 "On the third night, the [Exorcist] chooses the [Pit-Hag]. The [Imp] chooses themselves, and the [Pit-Hag] becomes the Demon. The [Pit-Hag] learns this and does not learn who the [Exorcist] is."
                 ],
-    "tags": ["Mechanical", "Death"],
+    "tags": ["Mechanical"],
     "edition": "Bad Moon Rising"
 },
 "farmer":
