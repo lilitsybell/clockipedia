@@ -541,18 +541,19 @@
     "flavor": "My skin prickles. Something is not right here. I can feel it.",
     "purpose": "The [Empath] learns how many of their alive neighbors are evil.",
     "summary": [
-             "ComingSoon",
-             "ComingSoon"
+             "The [Empath] learns how many of their alive neighbors are evil, but not which ones.",
+             "The [Empath] only sees alive neighbors. If their closest neighbor is dead, they see the next closest neighbor."
              ],
     "run": {
            "Every Night": [
-                "ComingSoon",
-                "ComingSoon"
+                "The [Empath] learns a 0, 1, or 2, depending on how many of their alive neighbors are evil."
                 ]
            },
     "examples": [
-                "ComingSoon",
-                "ComingSoon"
+                "The [Empath] is sitting between the [Soldier] and the [Magician]. The [Empath] learns a 0.",
+                "The [Empath] is sitting between the alive [Savant] and the alive [Saint]. The [Shabaloth] kills the [Savant]. The [Empath]'s new closest living neighbors are the evil [Gunslinger] and the [Saint]. The [Empath] learns a 1.",
+                "The [Empath] is sitting between the [Minstrel] and the [Pixie]. That night, the [Minstrel] becomes evil due to the [Mezepheles] ability. The [Empath] learns a 1.",
+                "The [Empath] is sitting between the evil [Judge] and the [Wizard]. The [Empath] learns a 2."
                 ],
     "tags": ["Information"],
     "edition": "Trouble Brewing"
