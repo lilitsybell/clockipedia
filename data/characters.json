@@ -450,7 +450,7 @@
              "Once per game, the [Courtier] can choose one character to immediately become drunk for 3 nights and 3 days.",
              "The [Courtier] chooses a character, not a player.",
              "The [Courtier] does not learn if they were successful or who they made drunk.",
-             "If the drunk or poisoned [Courtier] chooses a character, that character is not drunk, even if the [Courtier] later becomes sober and healthy."
+             "If the drunk or poisoned [Courtier] chooses a character, that character is not drunk, even if the [Courtier] later becomes sober and healthy.",
              "If the [Courtier] made a character drunk, but the [Courtier] becomes drunk or poisoned, the player they made drunk becomes sober again. If the [Courtier] becomes sober and healthy again before the three nights and three days have ended, that player becomes drunk yet again. The 3 nights and days do not pause while the [Courtier] is drunk or poisoned.",
              "The [Courtier] must choose a playable character. Fabled and Loric characters cannot be chosen.",
              "If a player who is [Courtier] drunk becomes a different character, they continue to be [Courtier] drunk.",
@@ -502,7 +502,6 @@
                 "The good [Cult Leader] is sitting between the [Farmer] and the [Sage], who is the faux paw to the [Lycanthrope]. Even though, both neighbors are good, the [Sage] registers as evil and the [Cult Leader] becomes evil and learns this.",
                 "The evil [Cult Leader] is sitting between the [Virgin] and the [Xaan]. The [Cult Leader] becomes good and learns this.",
                 "The evil [Cult Leader] declares they are forming a cult. All players raise their hand except for the [Recluse] and the [Harpy]. The [Recluse] registers as evil, and the Storyteller declares that a cult was formed and that the evil team has won."
-                "ComingSoon"
                 ],
     "tags": ["Mechanical", "Public"],
     "edition": "Carousel"
