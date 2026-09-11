@@ -684,22 +684,23 @@
     "flavor": "Yesterday's violets have withered and died, but today my poppies bloom.",
     "purpose": "The [Flowergirl] learns if the Demon voted.",
     "summary": [
-             "ComingSoon",
-             "ComingSoon"
+             "The [Flowergirl] learns if any Demon voted, whether or not the player was executed.",
+             "The [Flowergirl] does not learn if a Demon voted on the exile of a Traveller.",
+             "The [Flowergirl] learns if a player was a Demon at the time of voting. If a Demon voted, but then becomes a different character type, the [Flowergirl] still learns the Demon voted. If a different character type votes, but then becomes the Demon, the [Flowergirl] does not learn the Demon voted.",
+             "If there are multiple Demons, the [Flowergirl] learns if any of them voted."
              ],
     "run": {
            "Every Day": [
-                "ComingSoon",
-                "Thing 2"
+                "If a Demon votes, the Storyteller places the reminder token on the [Flowergirl]."
                 ],
            "Other Nights": [
-                "ComingSoon",
-                "ComingSoon"
+                "If a Demon voted, the [Flowergirl] learns a yes. If a Demon did not vote, the [Flowergirl] learns a no."
                 ]
            },
     "examples": [
-                "ComingSoon",
-                "ComingSoon"
+                "There are two nominations and the [Shabaloth] voted on both of them, but neither were executed. That night, the [Flowergirl] learns a yes.",
+                "The [Leviathan] does not vote on any nominations. The [Snake Charmer] votes on the second nomination. That night, the [Snake Charmer] chooses the [Leviathan] and they swap characters and alignments. Since the previous [Leviathan] did not vote, the [Flowergirl] learns a no.",
+                "The [Gunslinger] is up for exile. The [Ojo] votes for the exile. The [Ojo] does not vote on any other nominations. That night, the [Flowergirl] learns a no."
                 ],
     "tags": ["Information"],
     "edition": "Sects and Violets"
