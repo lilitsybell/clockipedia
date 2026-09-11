@@ -412,18 +412,6 @@ font-weight: 600;
         rgba(102,102,153,.12);
 }
 
-
-.name-every-character-progress{
-    min-width:78px;
-
-    text-align:right;
-
-    color:var(--gray);
-
-    font-size:20px;
-
-    font-weight:900;
-}
 /* ==========================================
    Guessed Characters
 ========================================== */
@@ -1331,7 +1319,7 @@ font-weight: 600;
 
     color:var(--gray);
 
-    font-size:12px;
+    font-size:20px;
     font-weight:900;
 
     text-align:center;
