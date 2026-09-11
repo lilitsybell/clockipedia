@@ -114,6 +114,7 @@ setupNameEveryCharacterPopupClose();
 
 setupNameEveryCharacterRestart();
 updateNameEveryCharacterRestartButton();
+loadNameEveryCharacterBestTime();
 
         }
         catch(error){
