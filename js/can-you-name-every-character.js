@@ -96,20 +96,24 @@ document.addEventListener(
 
         try{
 
-            await loadCharacters();
+await loadCharacters();
 
 renderNameEveryCharacterBoard();
 
 setupNameEveryCharacterInput();
 setupNameEveryCharacterPause();
 setupNameEveryCharacterGiveUp();
+
 updateNameEveryCharacterProgress();
 updateNameEveryCharacterTeamProgress();
-setupNameEveryCharacterShare();    
+
+setupNameEveryCharacterShare();
 setupNameEveryCharacterPlayAgain();
-loadNameEveryCharacterBestTime();
 setupNameEveryCharacterGameOverCopy();
 setupNameEveryCharacterPopupClose();
+
+setupNameEveryCharacterRestart();
+updateNameEveryCharacterRestartButton();
 
         }
         catch(error){
@@ -1179,7 +1183,7 @@ function stopNameEveryCharacterTimer(){
 
     nameEveryCharacterGameEnded =
         true;
-
+updateNameEveryCharacterRestartButton();
 
     updateNameEveryCharacterTimer();
 
@@ -1680,5 +1684,64 @@ function setupNameEveryCharacterPopupClose(){
         );
 
     }
+
+}
+function setupNameEveryCharacterRestart(){
+
+    const button =
+        document.querySelector(
+            "#nameEveryCharacterRestart"
+        );
+
+
+    if(!button){
+        return;
+    }
+
+
+    button.addEventListener(
+        "click",
+        () => {
+
+            if(
+                !nameEveryCharacterGameEnded
+            ){
+
+                const confirmed =
+                    window.confirm(
+                        "Restart the game? Your current progress will be lost."
+                    );
+
+
+                if(!confirmed){
+                    return;
+                }
+
+            }
+
+
+            window.location.reload();
+
+        }
+    );
+
+}
+function updateNameEveryCharacterRestartButton(){
+
+    const button =
+        document.querySelector(
+            "#nameEveryCharacterRestart"
+        );
+
+
+    if(!button){
+        return;
+    }
+
+
+    button.textContent =
+        nameEveryCharacterGameEnded
+            ? "Play Again"
+            : "Restart";
 
 }
