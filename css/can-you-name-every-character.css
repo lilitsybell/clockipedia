@@ -194,16 +194,6 @@ font-size: 18px;
 font-weight: 600;
 }
 
-
-.name-every-character-team-count{
-    color:var(--gray);
-
-    font-size:11px;
-
-    font-weight:800;
-}
-
-
 /* ==========================================
    Character Grid
 ========================================== */
@@ -1439,7 +1429,7 @@ font-weight: 600;
 .name-every-character-team-count{
     color:var(--purple);
 
-    font-size:11px;
+    font-size:17px;
     font-weight:900;
 
     font-variant-numeric:
