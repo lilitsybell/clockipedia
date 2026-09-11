@@ -19,9 +19,15 @@
 ========================================== */
 
 .name-every-character-header{
+    display:flex;
+
+    align-items:center;
+    justify-content:space-between;
+
+    gap:30px;
+
     margin-bottom:34px;
 }
-
 
 .name-every-character-eyebrow{
     display:block;
@@ -66,7 +72,88 @@
 
     line-height:1.55;
 }
+.name-every-character-header-text{
+    flex:1;
+    min-width:0;
+}
 
+
+.name-every-character-best-card{
+    width:285px;
+    min-height:105px;
+
+    flex-shrink:0;
+
+    display:flex;
+    align-items:center;
+
+    gap:18px;
+
+    padding:18px 22px;
+
+    border-radius:16px;
+
+    background:
+        linear-gradient(
+            135deg,
+            rgba(102,102,153,.08),
+            rgba(102,102,153,.16)
+        );
+}
+
+
+.name-every-character-best-trophy{
+    width:68px;
+    height:68px;
+
+    flex-shrink:0;
+
+    object-fit:contain;
+}
+
+
+.name-every-character-best-info{
+    display:flex;
+    flex-direction:column;
+}
+
+
+.name-every-character-best-label{
+    margin-bottom:3px;
+
+    color:var(--black);
+
+    font-size:11px;
+    font-weight:700;
+}
+
+
+.name-every-character-best-time{
+    color:var(--black);
+
+    font-family:
+        "Droid Sans",
+        Arial,
+        sans-serif;
+
+    font-size:28px;
+
+    line-height:1;
+}
+
+
+.name-every-character-best-message{
+    margin-top:5px;
+
+    color:var(--purple);
+
+    font-size:9px;
+    font-weight:900;
+
+    letter-spacing:.06em;
+
+    text-transform:uppercase;
+}
 
 /* ==========================================
    Team Sections
@@ -230,7 +317,15 @@ font-weight: 600;
     }
 
 }
+.name-every-character-header{
+    align-items:flex-start;
+    flex-direction:column;
+}
 
+
+.name-every-character-best-card{
+    width:100%;
+}
 
 @media(max-width:750px){
 
