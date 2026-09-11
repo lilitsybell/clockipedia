@@ -739,22 +739,26 @@
     "flavor": "I sense great evil in your soul! But... that could just be your perfume. I am allergic to Elderberry.",
     "purpose": "The [Fortune Teller] learns who may and may not be the Demon.",
     "summary": [
-             "ComingSoon",
-             "ComingSoon"
+             "Each night, the [Fortune Teller] chooses two players and learns if at least one of them is a Demon or if neither of them is a Demon.",
+             "One good player registers as the Demon to the [Fortune Teller]. If that player becomes evil, a different player registers as the Demon to the [Fortune Teller].",
+             "The [Fortune Teller] may choose any two players, alive, dead, Travellers, or themself.",
+             "The [Fortune Teller] learns any Demon, dead or alive."
              ],
     "run": {
            "First Night": [
-                "ComingSoon",
-                "ComingSoon"
+                "The Storyteller chooses one good player to be the <b>Red Herring</b>. This player registers as the Demon to the [Fortune Teller]. If the <b>Red Herring</b> ever becomes or registers as evil, the Storyteller chooses a new player to become the <b>Red Herring</b>.",
+                "The <b>Red Herring</b> does not know they are the <b>Red Herring</b>."
                 ],
            "Every Night": [
-                "ComingSoon",
-                "ComingSoon"
+                "The [Fortune Teller] chooses two players. If at least one is or registers as the Demon, the [Fortune Teller] learns a yes. Otherwise, the [Fortune Teller] learns a no."
                 ]
            },
     "examples": [
-                "ComingSoon",
-                "ComingSoon"
+                "The [Fortune Teller] chooses the [Amnesiac] and the [Alchemist] and learns a no.",
+                "The [Fortune Teller] chooses the [Artist] and the [Recluse]. The [Recluse] registers as the Demon and the [Fortune Teller] learns a yes.",
+                "The [Fortune Teller] checks the [Town Crier], who is the <b>Red Herring</b>, and the [Summoner]. Since the [Town Crier] registers as the Demon, the [Fortune Teller] learns a yes.",
+                "The [Fortune Teller] checks the [Pukka] and the [Village Idiot] and learns a yes.",
+                "The [Fortune Teller] checks the dead [Zombuul] and themself and learns a yes."
                 ],
     "tags": ["Information"],
     "edition": "Trouble Brewing"
