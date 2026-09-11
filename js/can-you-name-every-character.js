@@ -1521,7 +1521,7 @@ function loadNameEveryCharacterBestTime(){
     if(!best){
 
         element.textContent =
-            "Best: —";
+            "N/A";
 
         return;
 
@@ -1545,7 +1545,7 @@ function loadNameEveryCharacterBestTime(){
 
 
     element.textContent =
-        `Best: ${minutes}:${String(seconds).padStart(2, "0")}`;
+        `${minutes}:${String(seconds).padStart(2, "0")}`;
 
 }
 function setupNameEveryCharacterGameOverCopy(){
