@@ -657,18 +657,20 @@
     "flavor": "This was my favourite part of the river... see how the sunlight makes a rainbow from the monastery to the market? This was the best place for big fish. And the older I get, the bigger they were.",
     "purpose": "The [Fisherman] learns what to do from the Storyteller.",
     "summary": [
-             "ComingSoon",
-             "ComingSoon"
+             "The [Fisherman] may visit the Storyteller at any time during the day. They choose if and when to use their ability.",
+             "The Storyteller chooses what advice to give the [Fisherman]. The advice may be as clear or vague as the Storyteller thinks is best.",
+             "The Storyteller might choose to give less helpful advice when there are more players alive, and more helpful advice as the game draws to an end."
              ],
     "run": {
            "Every Day": [
-                "ComingSoon",
-                "Thing 2"
+                "Once per game, the [Fisherman] may choose to visit the Storyteller to use their ability. If they do, the Storyteller gives them one piece of advice."
                 ]
            },
     "examples": [
-                "ComingSoon",
-                "ComingSoon"
+                "On the first day, the [Fisherman] visits the Storyteller. The Storyteller tells the [Fisherman] to nominate Liv. Liv is the [Virgin].",
+                "On the final day, the [Fisherman] visits the Storyteller. The Storyteller tells the [Fisherman] to execute Chelsea. Chelsea is the [Lleech] host.",
+                "On the first day, the [Fisherman] visits the Storyteller. The Storyteller tells the [Fisherman] \"three blind mice\". The Storyteller is hinting that there are three evil players and a [Poppy Grower] in play.",
+                "On the second day, the [Fisherman] visits the Storyteller. The Storyteller tells the [Fisherman] to ignore Corey's information. Corey is the [Drunk]."
                 ],
     "tags": ["Information"],
     "edition": "Carousel"
