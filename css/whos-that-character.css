@@ -1,0 +1,302 @@
+.whos-that-character-page{
+    width:min(
+        900px,
+        calc(100% - 60px)
+    );
+
+    margin:0 auto;
+
+    padding:48px 0 70px;
+}
+
+
+/* ==========================================
+   Header
+========================================== */
+
+.whos-that-character-header{
+    margin-bottom:32px;
+}
+
+
+.whos-that-character-eyebrow{
+    display:block;
+
+    margin-bottom:7px;
+
+    color:var(--purple);
+
+    font-size:10px;
+    font-weight:900;
+
+    letter-spacing:.12em;
+
+    text-transform:uppercase;
+}
+
+
+.whos-that-character-header h1{
+    margin:0 0 9px;
+
+    color:var(--black);
+
+    font-family:
+        "Droid Sans",
+        Arial,
+        sans-serif;
+
+    font-size:38px;
+
+    line-height:1.05;
+
+    letter-spacing:-.035em;
+}
+
+
+.whos-that-character-header p{
+    margin:0;
+
+    color:var(--gray);
+
+    font-size:15px;
+
+    line-height:1.55;
+}
+
+
+/* ==========================================
+   Main Game Card
+========================================== */
+
+.whos-that-character-game{
+    display:flex;
+    flex-direction:column;
+
+    align-items:center;
+
+    gap:18px;
+
+    padding:30px;
+
+    border:1px solid var(--border);
+
+    border-radius:18px;
+
+    background:white;
+
+    box-shadow:
+        0 8px 28px
+        rgba(13,24,33,.08);
+}
+
+
+/* ==========================================
+   Character Image
+========================================== */
+
+.whos-that-character-image-card{
+    width:100%;
+
+    min-height:370px;
+
+    display:flex;
+
+    align-items:center;
+    justify-content:center;
+
+    border-radius:16px;
+
+    background:var(--light-gray);
+
+    overflow:hidden;
+}
+
+
+/* ==========================================
+   Silhouette
+========================================== */
+
+.whos-that-character-silhouette{
+    width:300px;
+    height:300px;
+
+    background:var(--black);
+
+    -webkit-mask-image:
+        var(--character-image);
+
+    mask-image:
+        var(--character-image);
+
+    -webkit-mask-size:contain;
+    mask-size:contain;
+
+    -webkit-mask-position:center;
+    mask-position:center;
+
+    -webkit-mask-repeat:no-repeat;
+    mask-repeat:no-repeat;
+}
+
+
+/* ==========================================
+   Guess Area
+========================================== */
+
+.whos-that-character-answer-area{
+    width:min(
+        520px,
+        100%
+    );
+
+    display:flex;
+
+    gap:10px;
+}
+
+
+.whos-that-character-input{
+    flex:1;
+
+    min-width:0;
+
+    height:44px;
+
+    padding:0 15px;
+
+    border:1px solid var(--border);
+
+    border-radius:9px;
+
+    background:white;
+
+    color:var(--black);
+
+    font:inherit;
+
+    font-size:14px;
+
+    outline:none;
+}
+
+
+.whos-that-character-input:focus{
+    border-color:var(--purple);
+
+    box-shadow:
+        0 0 0 2px
+        rgba(102,102,153,.10);
+}
+
+
+.whos-that-character-guess{
+    height:44px;
+
+    padding:0 20px;
+
+    border:1px solid
+        rgba(102,102,153,.28);
+
+    border-radius:9px;
+
+    background:
+        rgba(102,102,153,.10);
+
+    color:var(--purple);
+
+    font:inherit;
+
+    font-size:12px;
+    font-weight:900;
+
+    cursor:pointer;
+}
+
+
+.whos-that-character-guess:hover{
+    background:
+        rgba(102,102,153,.16);
+}
+
+
+/* ==========================================
+   Message
+========================================== */
+
+.whos-that-character-message{
+    min-height:20px;
+
+    color:var(--gray);
+
+    font-size:13px;
+    font-weight:800;
+
+    text-align:center;
+}
+
+
+/* ==========================================
+   Next Character
+========================================== */
+
+.whos-that-character-next{
+    height:42px;
+
+    padding:0 20px;
+
+    border:0;
+
+    border-radius:9px;
+
+    background:var(--purple);
+
+    color:white;
+
+    font:inherit;
+
+    font-size:12px;
+    font-weight:900;
+
+    cursor:pointer;
+}
+
+
+.whos-that-character-next:hover{
+    opacity:.9;
+}
+
+
+/* ==========================================
+   Responsive
+========================================== */
+
+@media(max-width:650px){
+
+    .whos-that-character-page{
+        width:calc(100% - 30px);
+
+        padding-top:32px;
+    }
+
+
+    .whos-that-character-image-card{
+        min-height:300px;
+    }
+
+
+    .whos-that-character-silhouette{
+        width:240px;
+        height:240px;
+    }
+
+
+    .whos-that-character-answer-area{
+        flex-direction:column;
+    }
+
+
+    .whos-that-character-guess{
+        width:100%;
+    }
+
+}
