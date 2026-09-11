@@ -1756,19 +1756,51 @@ function setupNameEveryCharacterRestart(){
         "click",
         () => {
 
-            if(
-                !nameEveryCharacterGameEnded
-            ){
+            /* ======================================
+               Finished Game = Play Again
+            ====================================== */
 
-                const confirmed =
-                    window.confirm(
-                        "Restart the game? Your current progress will be lost."
-                    );
+            if(nameEveryCharacterGameEnded){
+
+                window.location.reload();
+
+                return;
+
+            }
 
 
-                if(!confirmed){
-                    return;
+            /* ======================================
+               Running Game = Restart
+            ====================================== */
+
+            const wasRunning =
+                nameEveryCharacterTimerInterval !==
+                null;
+
+
+            if(wasRunning){
+
+                pauseNameEveryCharacterTimer();
+
+            }
+
+
+            const confirmed =
+                window.confirm(
+                    "Restart the game? Your current progress will be lost."
+                );
+
+
+            if(!confirmed){
+
+                if(wasRunning){
+
+                    resumeNameEveryCharacterTimer();
+
                 }
+
+
+                return;
 
             }
 
