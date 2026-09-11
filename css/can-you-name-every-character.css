@@ -105,14 +105,15 @@
 
 
 .name-every-character-best-trophy{
-    width:68px;
-    height:68px;
+    width:88px;
+    height:88px;
 
     flex-shrink:0;
 
     object-fit:contain;
-}
 
+    margin:-10px 0;
+}
 
 .name-every-character-best-info{
     flex:1;
