@@ -238,19 +238,44 @@ function buildNameEveryCharacterTeam(
     header.className =
         "name-every-character-team-header";
 
-
-    const title =
-        document.createElement(
-            "h2"
-        );
-
-
-    title.className =
-        "name-every-character-team-title";
+const title =
+    document.createElement(
+        "h2"
+    );
 
 
-    title.textContent =
-        teamInfo.label;
+title.className =
+    "name-every-character-team-title";
+
+
+const icon =
+    document.createElement(
+        "span"
+    );
+
+
+icon.className =
+    "name-every-character-team-icon";
+
+
+const label =
+    document.createElement(
+        "span"
+    );
+
+
+label.textContent =
+    teamInfo.label;
+
+
+title.appendChild(
+    icon
+);
+
+
+title.appendChild(
+    label
+);
 
 
     const count =
