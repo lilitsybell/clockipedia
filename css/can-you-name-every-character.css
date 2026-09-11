@@ -1430,30 +1430,9 @@ font-weight: 600;
 
     flex-shrink:0;
 
-    border:3px solid currentColor;
-    border-radius:50%;
+    display:block;
 
-    position:relative;
-}
-
-
-.name-every-character-team-icon::before{
-    content:"";
-
-    position:absolute;
-
-    width:8px;
-    height:8px;
-
-    top:50%;
-    left:50%;
-
-    border-radius:50%;
-
-    background:currentColor;
-
-    transform:
-        translate(-50%, -50%);
+    object-fit:contain;
 }
 
 
