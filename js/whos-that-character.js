@@ -5,6 +5,16 @@ console.log(
 
 let whosThatCharacterCurrent = null;
 
+let whosThatCharacterGameCharacters = [];
+
+let whosThatCharacterIndex = 0;
+
+let whosThatCharacterTries = 3;
+
+let whosThatCharacterScore = 0;
+
+const whosThatCharacterGameLength = 10;
+
 
 /* ==========================================
    Start Game
@@ -18,9 +28,9 @@ document.addEventListener(
 
             await loadCharacters();
 
-            setupWhosThatCharacterGame();
+setupWhosThatCharacterGame();
 
-            chooseWhosThatCharacter();
+startWhosThatCharacterGame();
 
         }
         catch(error){
@@ -79,20 +89,24 @@ function setupWhosThatCharacterGame(){
         }
     );
 
+nextButton.addEventListener(
+    "click",
+    () => {
 
-    nextButton.addEventListener(
-        "click",
-        chooseWhosThatCharacter
-    );
+        whosThatCharacterIndex++;
+
+        loadWhosThatCharacterRound();
+
+    }
+);
 
 }
 
-
 /* ==========================================
-   Choose Random Character
+   Start New Game
 ========================================== */
 
-function chooseWhosThatCharacter(){
+function startWhosThatCharacterGame(){
 
     const entries =
         Object.entries(
@@ -100,24 +114,51 @@ function chooseWhosThatCharacter(){
         );
 
 
-    if(!entries.length){
-        return;
-    }
-
-
-    const randomIndex =
-        Math.floor(
-            Math.random() *
-            entries.length
+    const shuffled =
+        [...entries]
+        .sort(
+            () =>
+                Math.random() - .5
         );
+
+
+    whosThatCharacterGameCharacters =
+        shuffled
+        .slice(
+            0,
+            whosThatCharacterGameLength
+        );
+
+
+    whosThatCharacterIndex = 0;
+
+    whosThatCharacterScore = 0;
+
+    loadWhosThatCharacterRound();
+
+}
+/* ==========================================
+   Load Round
+========================================== */
+
+function loadWhosThatCharacterRound(){
+
+    if(
+        whosThatCharacterIndex >=
+        whosThatCharacterGameCharacters.length
+    ){
+
+        return;
+
+    }
 
 
     const [
         slug,
         character
     ] =
-        entries[
-            randomIndex
+        whosThatCharacterGameCharacters[
+            whosThatCharacterIndex
         ];
 
 
@@ -127,7 +168,12 @@ function chooseWhosThatCharacter(){
     };
 
 
+    whosThatCharacterTries = 3;
+
+
     showWhosThatCharacterSilhouette();
+
+    updateWhosThatCharacterStatus();
 
 
     const input =
@@ -159,7 +205,6 @@ function chooseWhosThatCharacter(){
     input.focus();
 
 }
-
 
 /* ==========================================
    Show Silhouette
@@ -311,5 +356,41 @@ function revealWhosThatCharacter(){
 
     silhouette.style.background =
         `url("${whosThatCharacterCurrent.image}") center / contain no-repeat`;
+
+}
+/* ==========================================
+   Update Status
+========================================== */
+
+function updateWhosThatCharacterStatus(){
+
+    const progress =
+        document.querySelector(
+            "#whosThatCharacterProgress"
+        );
+
+
+    const tries =
+        document.querySelector(
+            "#whosThatCharacterTries"
+        );
+
+
+    const score =
+        document.querySelector(
+            "#whosThatCharacterScore"
+        );
+
+
+    progress.textContent =
+        `${whosThatCharacterIndex + 1} / ${whosThatCharacterGameLength}`;
+
+
+    tries.textContent =
+        whosThatCharacterTries;
+
+
+    score.textContent =
+        `${whosThatCharacterScore} / 30`;
 
 }
