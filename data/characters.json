@@ -714,18 +714,18 @@
     "flavor": "...and the King said 'What?! I've never even owned a pair of rubber pantaloons, let alone a custard cannon!' Ho-ho! Jolly day!",
     "purpose": "The [Fool] has two lives.",
     "summary": [
-             "ComingSoon",
-             "ComingSoon"
+             "The first time the [Fool] would die for any reason, they do not.",
+             "If the [Fool] is protected by another ability, they do not use their ability. The [Fool] must be about to die for their ability to be used."
              ],
     "run": {
            "Anytime": [
-                "ComingSoon",
-                "ComingSoon"
+                "The first time the [Fool] would die, they do not. No announcement is made unless the death would have been caused by execution. In that case, the Storyteller announces that the player did not die."
                 ]
            },
     "examples": [
-                "ComingSoon",
-                "ComingSoon"
+                "The [Lycanthrope] chooses the [Fool]. The [Fool] does not die. That same night, the [Vigormortis] chooses the [Fool]. This time, the [Fool] dies.",
+                "The [Witch] chooses the [Fool]. The [Fool] nominates and the nomination occurs normally. The [Fool] does not die and no announcement is made.",
+                "The [Monk] chooses the [Fool]. That same night, the [Imp] chooses the [Fool]. The [Fool] does not die. The next day, the [Fool] is executed and does not die. That night, the [Godfather] chooses the [Fool]. This time, the [Fool] dies."
                 ],
     "tags": ["Mechanical", "Death"],
     "edition": "Bad Moon Rising"
