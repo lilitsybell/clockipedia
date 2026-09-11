@@ -625,18 +625,25 @@
     "flavor": "Even the high and mighty need food on the table. Without us, the city starves.",
     "purpose": "The [Farmer] turns other players into [Farmer]s.",
     "summary": [
-             "ComingSoon",
-             "ComingSoon"
+             "If the [Farmer] dies at night, a good player becomes a [Farmer].",
+             "The [Farmer] must die at night in order to create a new [Farmer]. Dying during the day in any way does not count.",
+             "It does not matter how the [Farmer] dies at night. They can be killed by a Demon, a Minion, or even another good character.",
+             "If the [Farmer] is evil, a good player still becomes a [Farmer].",
+             "A good character that is evil due to an ability like the [Bounty Hunter] or [Mezepheles] cannot become a [Farmer].",
+             "When a player becomes a [Farmer], they learn this. They do not keep any abilities they had before becoming a [Farmer].",
+             "If there are no alive good players that are not already [Farmer]s, another [Farmer] becomes the [Farmer] again. If this happens, they do not learn this, as they did not change characters.",
+             "A [Farmer] can become a [Farmer]. If this happens, they do not learn this, as they did not change characters."
              ],
     "run": {
            "Every Night": [
-                "ComingSoon",
-                "ComingSoon"
+                "If the [Farmer] died, a alive good player becomes a [Farmer] and learns this."
                 ]
            },
     "examples": [
-                "ComingSoon",
-                "ComingSoon"
+                "The [Ojo] chooses [Fortune Teller]. There is no [Fortune Teller], so the [Farmer] dies instead. The alive and good [Empath] becomes a [Farmer] and learns this.",
+                "The [Lycanthrope] chooses the [Farmer]. The [Farmer] dies and the alive good [Moonchild] becomes the [Farmer] and learns this.",
+                "The [Dreamer] decides to use the [Doomsayer] ability. The [Farmer] dies. No player is turned into a [Farmer].",
+                "The [Lord of Typhon] chooses the [Farmer], but the [Farmer] is sitting next to the [Tea Lady] and is protected. The [Farmer] does not die and no player is turned into a [Farmer]."
                 ],
     "tags": ["Mechanical", "Death"],
     "edition": "Carousel"
