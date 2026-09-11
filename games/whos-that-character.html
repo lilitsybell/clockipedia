@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <title>
+        Who's That Character? | Clockipedia
+    </title>
+
+    <link
+        rel="stylesheet"
+        href="/css/style.css"
+    >
+
+    <link
+        rel="stylesheet"
+        href="/css/whos-that-character.css"
+    >
+
+    <link
+        rel="icon"
+        type="image/png"
+        href="/images/favicon.png"
+    >
+
+</head>
+
+<body>
+
+    <div id="sidebar"></div>
+
+    <main id="content">
+
+        <div class="whos-that-character-page">
+
+            <section class="whos-that-character-header">
+
+                <span class="whos-that-character-eyebrow">
+                    Clockipedia Games
+                </span>
+
+                <h1>
+                    Who's That Character?
+                </h1>
+
+                <p>
+                    Can you identify the character from their silhouette?
+                </p>
+
+            </section>
+
+
+            <section class="whos-that-character-game">
+
+                <div class="whos-that-character-image-card">
+
+                    <div
+                        id="whosThatCharacterSilhouette"
+                        class="whos-that-character-silhouette"
+                    ></div>
+
+                </div>
+
+
+                <div class="whos-that-character-answer-area">
+
+                    <input
+                        type="text"
+                        id="whosThatCharacterInput"
+                        class="whos-that-character-input"
+                        placeholder="Type a character name..."
+                        autocomplete="off"
+                        spellcheck="false"
+                    >
+
+                    <button
+                        id="whosThatCharacterGuess"
+                        class="whos-that-character-guess"
+                        type="button"
+                    >
+                        Guess
+                    </button>
+
+                </div>
+
+
+                <div
+                    id="whosThatCharacterMessage"
+                    class="whos-that-character-message"
+                ></div>
+
+
+                <button
+                    id="whosThatCharacterNext"
+                    class="whos-that-character-next"
+                    type="button"
+                    hidden
+                >
+                    Next Character
+                </button>
+
+            </section>
+
+        </div>
+
+    </main>
+
+
+    <script src="/js/characters.js"></script>
+    <script src="/js/search.js"></script>
+    <script src="/js/sidebar.js"></script>
+
+    <script src="/js/whos-that-character.js"></script>
+
+</body>
+
+</html>
