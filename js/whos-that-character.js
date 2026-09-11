@@ -95,6 +95,19 @@ nextButton.addEventListener(
 
         whosThatCharacterIndex++;
 
+
+        if(
+            whosThatCharacterIndex >=
+            whosThatCharacterGameLength
+        ){
+
+            finishWhosThatCharacterGame();
+
+            return;
+
+        }
+
+
         loadWhosThatCharacterRound();
 
     }
@@ -260,7 +273,74 @@ function normalizeWhosThatCharacterGuess(
 
 }
 
+/* ==========================================
+   Team Color
+========================================== */
 
+function getWhosThatCharacterTeamColor(
+    team
+){
+
+    const colors = {
+
+        Townsfolk:
+            "var(--blue)",
+
+        Outsider:
+            "var(--blue)",
+
+        Outsiders:
+            "var(--blue)",
+
+        Minion:
+            "var(--red)",
+
+        Minions:
+            "var(--red)",
+
+        Demon:
+            "var(--red)",
+
+        Demons:
+            "var(--red)",
+
+        Traveller:
+            "var(--traveller)",
+
+        Travellers:
+            "var(--traveller)",
+
+        Loric:
+            "var(--lime)",
+
+        Fabled:
+            "var(--copper)"
+
+    };
+
+
+    return colors[team] ||
+        "var(--purple)";
+
+}
+/* ==========================================
+   Show Team Color Hint
+========================================== */
+
+function showWhosThatCharacterTeamColor(){
+
+    const silhouette =
+        document.querySelector(
+            "#whosThatCharacterSilhouette"
+        );
+
+
+    silhouette.style.background =
+        getWhosThatCharacterTeamColor(
+            whosThatCharacterCurrent.team
+        );
+
+}
 /* ==========================================
    Submit Guess
 ========================================== */
@@ -307,33 +387,129 @@ function submitWhosThatCharacterGuess(){
         );
 
 
+    /* ======================================
+       Correct Guess
+    ====================================== */
+
     if(guess === answer){
 
-        message.textContent =
-            `Correct! It's ${whosThatCharacterCurrent.name}.`;
+        whosThatCharacterScore +=
+            whosThatCharacterTries;
+
+
+        updateWhosThatCharacterStatus();
 
 
         revealWhosThatCharacter();
 
 
+        message.textContent =
+            `Correct! It's ${whosThatCharacterCurrent.name}. +${whosThatCharacterTries} points`;
+
+
         input.disabled = true;
 
-        nextButton.hidden = false;
+
+        nextButton.textContent =
+            whosThatCharacterIndex ===
+            whosThatCharacterGameLength - 1
+                ? "See Results"
+                : "Next Character";
+
+
+        nextButton.hidden =
+            false;
+
+
+        return;
 
     }
-    else{
+
+
+    /* ======================================
+       Wrong Guess
+    ====================================== */
+
+    whosThatCharacterTries--;
+
+
+    updateWhosThatCharacterStatus();
+
+
+    /* First Wrong Guess */
+
+    if(whosThatCharacterTries === 2){
+
+        showWhosThatCharacterTeamColor();
+
 
         message.textContent =
-            "Not quite — try again.";
+            "Not quite! Here's a hint: their team color.";
 
 
-        input.select();
+        input.value = "";
+
+        input.focus();
+
+        return;
 
     }
+
+
+    /* Second Wrong Guess */
+
+    if(whosThatCharacterTries === 1){
+
+        revealWhosThatCharacter();
+
+
+        message.textContent =
+            "Still not quite! Here's the full artwork.";
+
+
+        input.value = "";
+
+        input.focus();
+
+        return;
+
+    }
+
+
+    /* Third Wrong Guess */
+
+    message.textContent =
+        `It was ${whosThatCharacterCurrent.name}.`;
+
+
+    input.disabled = true;
+
+
+    setTimeout(
+        () => {
+
+whosThatCharacterIndex++;
+
+
+if(
+    whosThatCharacterIndex >=
+    whosThatCharacterGameLength
+){
+
+    finishWhosThatCharacterGame();
+
+    return;
 
 }
 
 
+loadWhosThatCharacterRound();
+
+        },
+        1200
+    );
+
+}
 /* ==========================================
    Reveal Character
 ========================================== */
@@ -392,5 +568,51 @@ function updateWhosThatCharacterStatus(){
 
     score.textContent =
         `${whosThatCharacterScore} / 30`;
+
+}
+/* ==========================================
+   Finish Game
+========================================== */
+
+function finishWhosThatCharacterGame(){
+
+    const input =
+        document.querySelector(
+            "#whosThatCharacterInput"
+        );
+
+
+    const guessButton =
+        document.querySelector(
+            "#whosThatCharacterGuess"
+        );
+
+
+    const nextButton =
+        document.querySelector(
+            "#whosThatCharacterNext"
+        );
+
+
+    const message =
+        document.querySelector(
+            "#whosThatCharacterMessage"
+        );
+
+
+    input.disabled =
+        true;
+
+
+    guessButton.disabled =
+        true;
+
+
+    nextButton.hidden =
+        true;
+
+
+    message.textContent =
+        `Game complete! Final score: ${whosThatCharacterScore} / 30`;
 
 }
