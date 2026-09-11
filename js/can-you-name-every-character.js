@@ -963,12 +963,6 @@ saveNameEveryCharacterBestTime();
         );
 
 
-    const complete =
-        document.querySelector(
-            "#nameEveryCharacterComplete"
-        );
-
-
     input.disabled =
         true;
 
@@ -984,9 +978,6 @@ saveNameEveryCharacterBestTime();
     button.disabled =
         true;
 
-
-    complete.hidden =
-        false;
 showNameEveryCharacterWinner();
 }
 /* ==========================================
