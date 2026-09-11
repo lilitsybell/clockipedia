@@ -250,12 +250,48 @@ title.className =
 
 const icon =
     document.createElement(
-        "span"
+        "img"
     );
 
 
 icon.className =
     "name-every-character-team-icon";
+
+
+const teamIcons = {
+
+    Townsfolk:
+        "/images/generic_townsfolk.png",
+
+    Outsider:
+        "/images/generic_outsider.png",
+
+    Minion:
+        "/images/generic_minion.png",
+
+    Demon:
+        "/images/generic_demon.png",
+
+    Traveller:
+        "/images/generic_traveller.png",
+
+    Loric:
+        "/images/generic_loric.png",
+
+    Fabled:
+        "/images/generic_fabled.png"
+
+};
+
+
+icon.src =
+    teamIcons[
+        teamInfo.key
+    ];
+
+
+icon.alt =
+    "";
 
 
 const label =
