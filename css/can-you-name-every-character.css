@@ -1011,3 +1011,37 @@ font-weight: 600;
 
     white-space:nowrap;
 }
+.name-every-character-restart{
+    flex-shrink:0;
+
+    height:40px;
+
+    padding:0 14px;
+
+    border:1px solid var(--border);
+    border-radius:9px;
+
+    background:white;
+
+    color:var(--purple);
+
+    font:inherit;
+
+    font-size:12px;
+    font-weight:900;
+
+    cursor:pointer;
+
+    transition:
+        background .15s ease,
+        border-color .15s ease;
+}
+
+
+.name-every-character-restart:hover{
+    background:
+        rgba(102,102,153,.06);
+
+    border-color:
+        rgba(102,102,153,.35);
+}
