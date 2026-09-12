@@ -333,7 +333,6 @@
         blur(4px);
 }
 
-
 .name-every-character-winner-card{
     position:relative;
 
@@ -353,13 +352,11 @@
     box-shadow:
         0 24px 70px
         rgba(0,0,0,.28);
-}
-.name-every-character-winner-card{
+
     animation:
         nameEveryCharacterWinnerIn
         .35s ease-out;
 }
-
 
 @keyframes nameEveryCharacterWinnerIn{
 
