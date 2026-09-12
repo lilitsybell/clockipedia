@@ -772,18 +772,21 @@
     "flavor": "Heads, I win. Tails, you lose.",
     "purpose": "The [Gambler] learns who is telling the truth about their character.",
     "summary": [
-             "ComingSoon",
-             "ComingSoon"
+             "Each night, except the first, the [Gambler] guesses a player's character.",
+             "If the [Gambler] guesses correctly, nothing happens.",
+             "If the [Gambler] guesses incorrectly, the [Gambler] dies.",
+             "The [Gambler] must guess the [Drunk], [Marionette], and [Lunatic] as those characters, not as the characters they think they are, in order to live.",
+             "The [Gambler] may choose any player: alive, dead, Traveller, or themself."
              ],
     "run": {
            "Other Nights": [
-                "ComingSoon",
-                "ComingSoon"
+                "The [Gambler] chooses a player and a character. If the [Gambler] guesses incorrectly, they die. If they guess correctly, nothing happens."
                 ]
            },
     "examples": [
-                "ComingSoon",
-                "ComingSoon"
+                "The [Gambler] chooses the [Knight] player and guesses they are the [Knight]. Nothing happens.",
+                "The [Gambler] chooses the [Marionette] [Empath] and guesses they are the [Empath]. The [Marionette] is not the [Empath], so the [Gambler] dies.",
+                "The [Gambler] chooses the [Vortox] player and guesses they are the [Mayor]. The [Vortox] is not the [Mayor], so the [Gambler] dies."
                 ],
     "tags": ["Death"],
     "edition": "Bad Moon Rising"
@@ -797,18 +800,21 @@
     "flavor": "I don’t have time for quotes.",
     "purpose": "The [General] learns which team is winning.",
     "summary": [
-             "ComingSoon",
-             "ComingSoon"
+             "The [General] learns which team the Storyteller believes is winning.",
+             "The Storyteller can use any part of the game to decide who they think is winning. This could include number of evil players alive, drunk or poisoned information, talk from the players, or even how experienced the evil team is.",
+             "The Storyteller chooses which team they believe is winning at the time of waking the [General].",
+             "Some Storytellers may choose to run \"5 Star [General]\". This means that the [General] may learn the normal \"good\", \"neutral\", \"evil\", but also \"slightly good\" or \slightly evil\"."
              ],
     "run": {
            "Every Night": [
-                "ComingSoon",
-                "ComingSoon"
+                "The [General] wakes and learns which team is winning.",
+                "If playing in person, the Storyteller gives the [General] a thumbs up for good, or a thumbs down for evil."
                 ]
            },
     "examples": [
-                "ComingSoon",
-                "ComingSoon"
+                "There is a [Poppy Grower] in play and the [Witch] chooses the [Scarlet Woman]. The Storyteller tells the [General] that good is winning.",
+                "There are only 5 players left alive, and 3 of them are evil. The Storyteller tells the [General] that evil is winning.",
+                "It is the beginning of the game and both teams are doing well. It is hard to decide who will win at this point, so the Storyteller tells the "
                 ],
     "tags": ["Information"],
     "edition": "Carousel"
