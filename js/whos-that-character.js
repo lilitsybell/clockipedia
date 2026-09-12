@@ -468,8 +468,8 @@ message.className =
 
 message.className =
     "whos-that-character-message hint";
-        message.textContent =
-            "Not quite! Here's a hint: their team color.";
+message.textContent =
+    `Not quite! Here's a hint: It's a ${whosThatCharacterCurrent.team}.`;
 
 
         input.value = "";
@@ -489,8 +489,8 @@ message.className =
 
 message.className =
     "whos-that-character-message hint";
-        message.textContent =
-            "Still not quite! Here's the full artwork.";
+message.textContent =
+    "Not that either! Here is the full image.";
 
 
         input.value = "";
@@ -505,8 +505,8 @@ message.className =
     /* Third Wrong Guess */
 message.className =
     "whos-that-character-message wrong";
-    message.textContent =
-        `It was ${whosThatCharacterCurrent.name}.`;
+message.textContent =
+    `Sorry, it was ${whosThatCharacterCurrent.name}.`;
 
 
     input.disabled = true;
