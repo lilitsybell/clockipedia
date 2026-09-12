@@ -929,7 +929,6 @@
         rgba(102,102,153,.13);
 }
 
-
 .name-every-character-team-title{
     display:flex;
     align-items:center;
@@ -940,17 +939,11 @@
 
     color:var(--purple);
 
-    font-family:
-        "Droid Sans",
-        Arial,
-        sans-serif;
-
     font-size:22px;
     font-weight:700;
 
     line-height:1;
 }
-
 
 .name-every-character-team-icon{
     width:40px;
