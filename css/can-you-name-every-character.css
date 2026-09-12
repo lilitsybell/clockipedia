@@ -838,13 +838,7 @@
     font-weight:900;
 }
 
-.name-every-character-give-up:disabled,
-.name-every-character-restart:disabled,
-.name-every-character-pause:disabled{
-    opacity:.45;
 
-    cursor:default;
-}
 .name-every-character-team{
     margin-bottom:22px;
 }
