@@ -856,22 +856,25 @@
     "flavor": "Take a jacket if you go outside, dearie. And your thermos. And your scarf. I have a weak heart, you know. Whatever would I do if you caught cold...or worse?",
     "purpose": "The [Grandmother] learns exactly which character one player is, but dies if the Demon kills them.",
     "summary": [
-             "ComingSoon",
-             "ComingSoon"
+             "The [Grandmother] knows one good player who is marked as their <b>Grandchild</b>.",
+             "The <b>Grandchild</b> can be any character type, as long as the player is good.",
+             "The <b>Grandchild</b> does not learn they are the <b>Grandchild</b>.",
+             "If the <b>Grandchild</b> is ever killed by the Demon, the [Grandmother] also immediately dies.",
+             "If the <b>Grandchild</b> ever becomes evil, they stay the <b>Grandchild</b>. If the Demon kills them, the [Grandmother] still dies too."
              ],
     "run": {
            "Anytime": [
-                "ComingSoon",
-                "ComingSoon"
+                "If the Demon kills the <b>Grandchild</b>, the [Grandmother] immediately dies.",
+                "If the Demon has a [Boffin] ability that kills, and uses it to kill the <b>Grandchild</b>, the [Grandmother] immediately dies."
                 ],
            "First Night": [
-                "ComingSoon",
-                "ComingSoon"
+                "The [Grandmother] learns a good player and their character."
                 ]
            },
     "examples": [
-                "ComingSoon",
-                "ComingSoon"
+                "The [Lycanthrope] chooses the [Monk], who is the <b>Grandchild</b>. The [Grandmother] does not die.",
+                "The [Shabaloth] chooses the [King] and the [Snake Charmer], who is the <b>Grandchild</b>. In the morning, the Storyteller announces that the [King], [Snake Charmer], and [Grandmother] players are dead.",
+                "The [Po] with the [Boffin] [Golem] ability nominates the [Fisherman], who is the <b>Grandchild</b>. The [Fisherman] and the [Grandmother] both die."
                 ],
     "tags": ["Information", "Death"],
     "edition": "Bad Moon Rising"
