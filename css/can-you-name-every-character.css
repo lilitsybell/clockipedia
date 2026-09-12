@@ -474,6 +474,9 @@
     font-weight:900;
 }
 
+.name-every-character-share:hover{
+    opacity:.92;
+}
 
 .name-every-character-share-status{
     min-height:18px;
@@ -710,6 +713,11 @@
     font-size:13px;
     font-weight:800;
 }
+
+.name-every-character-play-again:hover{
+    background:var(--light-gray);
+}
+
 .name-every-character-best{
     flex-shrink:0;
 
