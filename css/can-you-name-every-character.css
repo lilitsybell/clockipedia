@@ -1088,3 +1088,14 @@
     }
 
 }
+.name-every-character-timer-wrap,
+.name-every-character-progress{
+    flex:1;
+}
+
+
+.name-every-character-restart,
+.name-every-character-pause,
+.name-every-character-give-up{
+    flex:1;
+}
