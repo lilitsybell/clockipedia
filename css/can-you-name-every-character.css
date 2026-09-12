@@ -736,7 +736,7 @@
    Guess Input
 ========================================== */
 .name-every-character-input{
-    flex:1;
+    flex:1 1 auto;
 
     min-width:0;
     height:44px;
@@ -814,7 +814,7 @@
 .name-every-character-pause{
     height:40px;
 
-    flex-shrink:0;
+    flex:0 0 auto;
 
     padding:0 15px;
 
@@ -861,7 +861,7 @@
 .name-every-character-give-up{
     height:40px;
 
-    flex-shrink:0;
+    flex:0 0 auto;
 
     padding:0 16px;
 
@@ -1024,15 +1024,17 @@
         display:none;
     }
 
-}
-.name-every-character-timer-wrap,
-.name-every-character-progress{
-    flex:1;
-}
+
+    .name-every-character-timer-wrap,
+    .name-every-character-progress{
+        flex:1;
+    }
 
 
-.name-every-character-restart,
-.name-every-character-pause,
-.name-every-character-give-up{
-    flex:1;
+    .name-every-character-restart,
+    .name-every-character-pause,
+    .name-every-character-give-up{
+        flex:1;
+    }
+
 }
