@@ -577,25 +577,13 @@
     font-size:13px;
 }
 
-
 .name-every-character-resume{
     height:42px;
 
     padding:0 22px;
 
-    border:0;
-    border-radius:9px;
-
-    background:var(--purple);
-
-    color:white;
-
-    font:inherit;
-
     font-size:13px;
     font-weight:900;
-
-    cursor:pointer;
 }
 /* ==========================================
    Game Over Popup
