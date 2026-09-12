@@ -199,14 +199,22 @@ function showWhosThatCharacterSilhouette(){
         );
 
 
+    reveal.classList.remove(
+        "revealed"
+    );
+
+
+    reveal.style.opacity =
+        "0";
+
+
     silhouette.classList.remove(
         "revealed"
     );
 
 
-    reveal.classList.remove(
-        "revealed"
-    );
+    silhouette.style.opacity =
+        "1";
 
 
     reveal.src =
@@ -232,6 +240,17 @@ function showWhosThatCharacterSilhouette(){
     silhouette.style.setProperty(
         "--character-image",
         `url("${whosThatCharacterCurrent.image}")`
+    );
+
+
+    requestAnimationFrame(
+        () => {
+
+            reveal.style.opacity = "";
+
+            silhouette.style.opacity = "";
+
+        }
     );
 
 }
@@ -447,8 +466,15 @@ if(guess === answer){
 
 message.className =
     "whos-that-character-message hint";
+const article =
+    whosThatCharacterCurrent.team === "Outsider" ||
+    whosThatCharacterCurrent.team === "Outsiders"
+        ? "an"
+        : "a";
+
+
 message.textContent =
-    `Not quite! Here's a hint: It's a ${whosThatCharacterCurrent.team}.`;
+    `Not quite! Here's a hint: It's ${article} ${whosThatCharacterCurrent.team}.`;
 
 
         input.value = "";
