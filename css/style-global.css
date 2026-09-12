@@ -639,7 +639,26 @@ li{
         color .15s ease,
         transform .15s ease;
 }
+.site-button,
+.site-button-secondary,
+.site-button-danger{
+    transition:
+        background .15s ease,
+        border-color .15s ease,
+        transform .15s ease,
+        box-shadow .15s ease;
+}
 
+
+.site-button:not(:disabled):hover,
+.site-button-secondary:not(:disabled):hover,
+.site-button-danger:not(:disabled):hover{
+    transform:translateY(-1px);
+
+    box-shadow:
+        0 4px 10px
+        rgba(13,24,33,.10);
+}
 
 /* Primary */
 
