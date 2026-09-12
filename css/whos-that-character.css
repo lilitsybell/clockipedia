@@ -31,6 +31,8 @@
     border-radius:16px;
 
     background:var(--light-gray);
+
+    position:relative;
 }
 
 
@@ -60,9 +62,18 @@
     mask-repeat:no-repeat;
 
 }
-.whos-that-character-silhouette img{
-    width:100%;
-    height:100%;
+.whos-that-character-silhouette{
+    position:absolute;
+
+    transition:
+        background-color .2s ease,
+        opacity .2s ease;
+}
+
+
+.whos-that-character-reveal{
+    width:300px;
+    height:300px;
 
     display:block;
 
@@ -71,14 +82,18 @@
     opacity:0;
 
     transition:
-        opacity .2s ease;
+        opacity .25s ease;
 }
 
 
-.whos-that-character-silhouette.revealed img{
+.whos-that-character-silhouette.revealed{
+    opacity:0;
+}
+
+
+.whos-that-character-reveal.revealed{
     opacity:1;
 }
-
 /* ==========================================
    Guess Area
 ========================================== */
