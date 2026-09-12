@@ -801,9 +801,9 @@
     "purpose": "The [General] learns which team is winning.",
     "summary": [
              "The [General] learns which team the Storyteller believes is winning.",
-             "The Storyteller can use any part of the game to decide who they think is winning. This could include number of evil players alive, drunk or poisoned information, talk from the players, or even how experienced the evil team is.",
+             "The Storyteller can use any part of the game to decide who they think is winning. This could include the number of evil players alive, drunk or poisoned information, talk from the players, or even how experienced the evil team is.",
              "The Storyteller chooses which team they believe is winning at the time of waking the [General].",
-             "Some Storytellers may choose to run \"5 Star [General]\". This means that the [General] may learn the normal \"good\", \"neutral\", \"evil\", but also \"slightly good\" or \slightly evil\"."
+             "Some Storytellers may choose to run \"5 Star [General]\". This means that the [General] may learn the normal \"good\", \"neither\", or \"evil\", but also \"slightly good\" or \"slightly evil\"."
              ],
     "run": {
            "Every Night": [
@@ -814,7 +814,7 @@
     "examples": [
                 "There is a [Poppy Grower] in play and the [Witch] chooses the [Scarlet Woman]. The Storyteller tells the [General] that good is winning.",
                 "There are only 5 players left alive, and 3 of them are evil. The Storyteller tells the [General] that evil is winning.",
-                "It is the beginning of the game and both teams are doing well. It is hard to decide who will win at this point, so the Storyteller tells the "
+                "It is the beginning of the game and both teams are doing well. It is hard to decide who will win at this point, so the Storyteller tells the [General] that neither team is winning."
                 ],
     "tags": ["Information"],
     "edition": "Carousel"
