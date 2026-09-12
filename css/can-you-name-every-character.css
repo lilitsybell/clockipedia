@@ -99,35 +99,6 @@
     text-transform:uppercase;
 }
 
-/* ==========================================
-   Team Sections
-========================================== */
-
-.name-every-character-team{
-    margin-bottom:13px;
-}
-
-.name-every-character-team-header{
-    display:flex;
-
-    align-items:center;
-    justify-content:space-between;
-
-    margin-bottom:4px;
-}
-
-
-.name-every-character-team-title{
-    margin:0;
-
-    font-family:
-        "Droid Sans",
-        Arial,
-        sans-serif;
-
-font-size: 18px;
-font-weight: 600;
-}
 
 /* ==========================================
    Character Grid
@@ -197,50 +168,6 @@ font-weight: 600;
     background:#e8e8ed;
 }
 
-/* ==========================================
-   Team Colors
-========================================== */
-
-.name-every-character-team[data-team="Townsfolk"]
-.name-every-character-team-title,
-.name-every-character-team[data-team="Outsider"]
-.name-every-character-team-title,
-.name-every-character-team[data-team="Outsiders"]
-.name-every-character-team-title{
-    color:var(--blue);
-}
-
-
-.name-every-character-team[data-team="Minion"]
-.name-every-character-team-title,
-.name-every-character-team[data-team="Minions"]
-.name-every-character-team-title,
-.name-every-character-team[data-team="Demon"]
-.name-every-character-team-title,
-.name-every-character-team[data-team="Demons"]
-.name-every-character-team-title{
-    color:var(--red);
-}
-
-
-.name-every-character-team[data-team="Traveller"]
-.name-every-character-team-title,
-.name-every-character-team[data-team="Travellers"]
-.name-every-character-team-title{
-    color:var(--traveller);
-}
-
-
-.name-every-character-team[data-team="Loric"]
-.name-every-character-team-title{
-    color:var(--lime);
-}
-
-
-.name-every-character-team[data-team="Fabled"]
-.name-every-character-team-title{
-    color:var(--copper);
-}
 
 
 @media(max-width:1000px){
