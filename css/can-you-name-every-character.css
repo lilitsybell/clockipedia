@@ -1071,3 +1071,20 @@
     }
 
 }
+@media(max-width:700px){
+
+    .name-every-character-controls{
+        flex-wrap:wrap;
+    }
+
+
+    .name-every-character-input{
+        flex-basis:100%;
+    }
+
+
+    .name-every-character-control-divider{
+        display:none;
+    }
+
+}
