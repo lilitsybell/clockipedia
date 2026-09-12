@@ -157,6 +157,19 @@
         width:100%;
     }
 
+.whos-that-character-status{
+    grid-template-columns:1fr;
+}
+
+
+.whos-that-character-status-item +
+.whos-that-character-status-item{
+    border-left:0;
+
+    border-top:
+        1px solid var(--border);
+}
+
 }
 /* ==========================================
    Game Status
@@ -170,13 +183,13 @@
     grid-template-columns:
         repeat(3, 1fr);
 
+    overflow:hidden;
+
     border:1px solid var(--border);
 
     border-radius:12px;
 
     background:var(--light-gray);
-
-    overflow:hidden;
 }
 
 
