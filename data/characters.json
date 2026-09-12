@@ -828,22 +828,21 @@
     "flavor": "Blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah. Blah.",
     "purpose": "The [Gossip] kills players to learn information.",
     "summary": [
-             "ComingSoon",
-             "ComingSoon"
+             "Each day, the [Gossip] may choose to make a public statement. If it is true, the Storyteller chooses a player to kill that night. If it is false, nothing happens.",
+             "If the Storyteller does not know if the [Gossip]'s statement is true, or did not properly hear the statement, it is treated as false.",
+             "If the [Gossip] makes a true statement while drunk or poisoned, but is sober and healthy that night, the Storyteller still kills a player."
              ],
     "run": {
            "Every Day": [
-                "ComingSoon",
-                "Thing 2"
+                "If the [Gossip] makes a true statement, even if they are drunk or poisoned, the Storyteller places the [Gossip]'s reminder token next to them."
                 ],
            "Other Nights": [
-                "ComingSoon",
-                "ComingSoon"
+                "If the [Gossip] has a reminder token next to them, the Storyteller chooses a player to kill."
                 ]
            },
     "examples": [
-                "ComingSoon",
-                "ComingSoon"
+                "The [Gossip] states \"I would like to gossip that both of my neighbors are good.\" One of the [Gossip]'s neighbors is the [Recluse], who registers as evil, so the Storyteller does not kill a player that night.",
+                "The [Poisoner] chooses the [Gossip]. That day, the poisoned [Gossip] states \"One player is poisoned.\" That night, the [Imp] chooses themself and the [Poisoner] becomes the [Imp]. The healthy [Gossip] causes the Storyteller to choose a player to die. The [Storyteller] kills the [Knight]."
                 ],
     "tags": ["Information", "Death"],
     "edition": "Bad Moon Rising"
