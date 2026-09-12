@@ -1056,3 +1056,18 @@
     }
 
 }
+@media(max-width:800px){
+
+    .name-every-character-header{
+        grid-template-columns:1fr;
+
+        gap:18px;
+    }
+
+
+    .name-every-character-best-card{
+        width:100%;
+        max-width:285px;
+    }
+
+}
