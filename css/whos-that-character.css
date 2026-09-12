@@ -11,16 +11,6 @@
     gap:18px;
 
     padding:30px;
-
-    border:1px solid var(--border);
-
-    border-radius:18px;
-
-    background:white;
-
-    box-shadow:
-        0 8px 28px
-        rgba(13,24,33,.08);
 }
 
 
