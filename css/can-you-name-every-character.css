@@ -269,68 +269,6 @@ font-weight: 600;
     }
 
 }
-/* ==========================================
-   Guess Controls
-========================================== */
-
-.name-every-character-controls{
-    position:sticky;
-    top:12px;
-    z-index:20;
-
-    display:flex;
-
-    align-items:center;
-
-    gap:12px;
-
-    margin-bottom:24px;
-
-    padding:8px;
-
-    border:1px solid var(--border);
-    border-radius:12px;
-
-    background:rgba(255,255,255,.96);
-
-    box-shadow:
-        0 5px 18px
-        rgba(13,24,33,.08);
-}
-
-
-.name-every-character-input{
-    flex:1;
-
-    min-width:0;
-
-    height:46px;
-
-    padding:0 14px;
-
-    border:1px solid var(--border);
-
-    border-radius:10px;
-
-    background:white;
-
-    color:var(--black);
-
-    font:inherit;
-
-    font-size:15px;
-
-    outline:none;
-}
-
-
-.name-every-character-input:focus{
-    border-color:var(--purple);
-
-    box-shadow:
-        0 0 0 3px
-        rgba(102,102,153,.12);
-}
 
 /* ==========================================
    Guessed Characters
@@ -399,37 +337,7 @@ font-weight: 600;
     }
 
 }
-/* ==========================================
-   Give Up Button
-========================================== */
 
-.name-every-character-give-up{
-    height:40px;
-
-    padding:0 14px;
-
-    border:1px solid
-        rgba(181,35,35,.35);
-
-    border-radius:8px;
-
-    background:white;
-
-    color:var(--red);
-
-    font:inherit;
-
-    font-size:12px;
-    font-weight:800;
-
-    cursor:pointer;
-}
-
-
-.name-every-character-give-up:hover{
-    background:
-        rgba(181,35,35,.06);
-}
 /* ==========================================
    Missed Characters
 ========================================== */
@@ -472,12 +380,6 @@ font-weight: 600;
     text-overflow:ellipsis;
 }
 
-
-.name-every-character-give-up:disabled{
-    opacity:.45;
-
-    cursor:default;
-}
 /* ==========================================
    Complete Game
 ========================================== */
@@ -498,57 +400,7 @@ font-weight: 600;
 .name-every-character-complete[hidden]{
     display:none;
 }
-/* ==========================================
-   Timer
-========================================== */
 
-.name-every-character-timer{
-    min-width:48px;
-
-    color:var(--black);
-
-    font-size:13px;
-
-    font-weight:900;
-
-    font-variant-numeric:
-        tabular-nums;
-
-    text-align:center;
-}
-.name-every-character-pause{
-    height:40px;
-
-    padding:0 13px;
-
-    border:1px solid var(--border);
-
-    border-radius:8px;
-
-    background:white;
-
-    color:var(--purple);
-
-    font:inherit;
-
-    font-size:12px;
-    font-weight:800;
-
-    cursor:pointer;
-}
-
-
-.name-every-character-pause:hover{
-    background:
-        rgba(102,102,153,.06);
-}
-
-
-.name-every-character-pause:disabled{
-    opacity:.45;
-
-    cursor:default;
-}
 /* ==========================================
    Winner Popup
 ========================================== */
@@ -1018,40 +870,7 @@ font-weight: 600;
 
     white-space:nowrap;
 }
-.name-every-character-restart{
-    flex-shrink:0;
 
-    height:40px;
-
-    padding:0 14px;
-
-    border:1px solid var(--border);
-    border-radius:9px;
-
-    background:white;
-
-    color:var(--purple);
-
-    font:inherit;
-
-    font-size:12px;
-    font-weight:900;
-
-    cursor:pointer;
-
-    transition:
-        background .15s ease,
-        border-color .15s ease;
-}
-
-
-.name-every-character-restart:hover{
-    background:
-        rgba(102,102,153,.06);
-
-    border-color:
-        rgba(102,102,153,.35);
-}
 /* ==========================================
    Sticky Controls
 ========================================== */
