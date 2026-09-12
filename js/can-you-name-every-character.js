@@ -772,7 +772,6 @@ function updateNameEveryCharacterTeamProgress(){
 /* ==========================================
    Give Up
 ========================================== */
-
 function setupNameEveryCharacterGiveUp(){
 
     const button =
@@ -780,49 +779,158 @@ function setupNameEveryCharacterGiveUp(){
             "#nameEveryCharacterGiveUp"
         );
 
+    const confirmButton =
+        document.querySelector(
+            "#nameEveryCharacterGiveUpConfirm"
+        );
 
-button.addEventListener(
-    "click",
-    () => {
-
-        const wasRunning =
-            nameEveryCharacterTimerInterval !==
-            null;
-
-
-        if(wasRunning){
-
-            pauseNameEveryCharacterTimer();
-
-        }
+    const cancelButton =
+        document.querySelector(
+            "#nameEveryCharacterGiveUpCancel"
+        );
 
 
-        const confirmed =
-            window.confirm(
-                "Give up and reveal all remaining characters?"
+    button.addEventListener(
+        "click",
+        showNameEveryCharacterGiveUpConfirmation
+    );
+
+
+    confirmButton.addEventListener(
+        "click",
+        () => {
+
+            hideNameEveryCharacterGiveUpConfirmation(
+                false
             );
 
-
-        if(!confirmed){
-
-            if(wasRunning){
-
-                resumeNameEveryCharacterTimer();
-
-            }
-
-            return;
+            giveUpNameEveryCharacter();
 
         }
+    );
 
 
-        giveUpNameEveryCharacter();
+    cancelButton.addEventListener(
+        "click",
+        () => {
 
+            hideNameEveryCharacterGiveUpConfirmation(
+                true
+            );
+
+        }
+    );
+
+}
+function showNameEveryCharacterGiveUpConfirmation(){
+
+    if(nameEveryCharacterGameEnded){
+        return;
     }
-);
+
+
+    const wasRunning =
+        nameEveryCharacterTimerInterval !==
+        null;
+
+
+    if(wasRunning){
+        pauseNameEveryCharacterTimer();
+    }
+
+
+    const board =
+        document.querySelector(
+            "#nameEveryCharacterBoard"
+        );
+
+
+    const input =
+        document.querySelector(
+            "#nameEveryCharacterInput"
+        );
+
+
+    const overlay =
+        document.querySelector(
+            "#nameEveryCharacterGiveUpOverlay"
+        );
+
+
+    overlay.dataset.wasRunning =
+        wasRunning
+            ? "true"
+            : "false";
+
+
+    board.hidden =
+        true;
+
+
+    input.disabled =
+        true;
+
+
+    overlay.hidden =
+        false;
 
 }
 
+
+function hideNameEveryCharacterGiveUpConfirmation(
+    resumeGame
+){
+
+    const board =
+        document.querySelector(
+            "#nameEveryCharacterBoard"
+        );
+
+
+    const input =
+        document.querySelector(
+            "#nameEveryCharacterInput"
+        );
+
+
+    const overlay =
+        document.querySelector(
+            "#nameEveryCharacterGiveUpOverlay"
+        );
+
+
+    const wasRunning =
+        overlay.dataset.wasRunning ===
+        "true";
+
+
+    overlay.hidden =
+        true;
+
+
+    board.hidden =
+        false;
+
+
+    input.disabled =
+        false;
+
+
+    if(
+        resumeGame &&
+        wasRunning
+    ){
+
+        resumeNameEveryCharacterTimer();
+
+    }
+
+
+    if(resumeGame){
+        input.focus();
+    }
+
+}
 
 function giveUpNameEveryCharacter(){
 stopNameEveryCharacterTimer();
@@ -1747,6 +1855,18 @@ function setupNameEveryCharacterRestart(){
         );
 
 
+    const confirmButton =
+        document.querySelector(
+            "#nameEveryCharacterRestartConfirm"
+        );
+
+
+    const cancelButton =
+        document.querySelector(
+            "#nameEveryCharacterRestartCancel"
+        );
+
+
     if(!button){
         return;
     }
@@ -1755,10 +1875,6 @@ function setupNameEveryCharacterRestart(){
     button.addEventListener(
         "click",
         () => {
-
-            /* ======================================
-               Finished Game = Play Again
-            ====================================== */
 
             if(nameEveryCharacterGameEnded){
 
@@ -1769,46 +1885,136 @@ function setupNameEveryCharacterRestart(){
             }
 
 
-            /* ======================================
-               Running Game = Restart
-            ====================================== */
+            showNameEveryCharacterRestartConfirmation();
 
-            const wasRunning =
-                nameEveryCharacterTimerInterval !==
-                null;
+        }
+    );
 
 
-            if(wasRunning){
-
-                pauseNameEveryCharacterTimer();
-
-            }
-
-
-            const confirmed =
-                window.confirm(
-                    "Restart the game? Your current progress will be lost."
-                );
-
-
-            if(!confirmed){
-
-                if(wasRunning){
-
-                    resumeNameEveryCharacterTimer();
-
-                }
-
-
-                return;
-
-            }
-
+    confirmButton.addEventListener(
+        "click",
+        () => {
 
             window.location.reload();
 
         }
     );
+
+
+    cancelButton.addEventListener(
+        "click",
+        () => {
+
+            hideNameEveryCharacterRestartConfirmation(
+                true
+            );
+
+        }
+    );
+
+}
+function showNameEveryCharacterRestartConfirmation(){
+
+    const wasRunning =
+        nameEveryCharacterTimerInterval !==
+        null;
+
+
+    if(wasRunning){
+        pauseNameEveryCharacterTimer();
+    }
+
+
+    const board =
+        document.querySelector(
+            "#nameEveryCharacterBoard"
+        );
+
+
+    const input =
+        document.querySelector(
+            "#nameEveryCharacterInput"
+        );
+
+
+    const overlay =
+        document.querySelector(
+            "#nameEveryCharacterRestartOverlay"
+        );
+
+
+    overlay.dataset.wasRunning =
+        wasRunning
+            ? "true"
+            : "false";
+
+
+    board.hidden =
+        true;
+
+
+    input.disabled =
+        true;
+
+
+    overlay.hidden =
+        false;
+
+}
+
+
+function hideNameEveryCharacterRestartConfirmation(
+    resumeGame
+){
+
+    const board =
+        document.querySelector(
+            "#nameEveryCharacterBoard"
+        );
+
+
+    const input =
+        document.querySelector(
+            "#nameEveryCharacterInput"
+        );
+
+
+    const overlay =
+        document.querySelector(
+            "#nameEveryCharacterRestartOverlay"
+        );
+
+
+    const wasRunning =
+        overlay.dataset.wasRunning ===
+        "true";
+
+
+    overlay.hidden =
+        true;
+
+
+    board.hidden =
+        false;
+
+
+    input.disabled =
+        false;
+
+
+    if(
+        resumeGame &&
+        wasRunning
+    ){
+
+        resumeNameEveryCharacterTimer();
+
+    }
+
+
+    if(resumeGame){
+        input.focus();
+    }
 
 }
 function updateNameEveryCharacterRestartButton(){
