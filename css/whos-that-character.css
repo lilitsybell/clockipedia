@@ -147,10 +147,23 @@
 
     font-size:13px;
     font-weight:800;
-
     text-align:center;
 }
 
+
+.whos-that-character-message.correct{
+    color:var(--lime);
+}
+
+
+.whos-that-character-message.wrong{
+    color:var(--red);
+}
+
+
+.whos-that-character-message.hint{
+    color:var(--purple);
+}
 
 /* ==========================================
    Next Character
