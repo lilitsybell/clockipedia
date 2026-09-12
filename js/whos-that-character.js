@@ -222,13 +222,36 @@ function loadWhosThatCharacterRound(){
 /* ==========================================
    Show Silhouette
 ========================================== */
-
 function showWhosThatCharacterSilhouette(){
 
     const silhouette =
         document.querySelector(
             "#whosThatCharacterSilhouette"
         );
+
+
+    const reveal =
+        document.querySelector(
+            "#whosThatCharacterReveal"
+        );
+
+
+    silhouette.classList.remove(
+        "revealed"
+    );
+
+
+    reveal.classList.remove(
+        "revealed"
+    );
+
+
+    reveal.src =
+        whosThatCharacterCurrent.image;
+
+
+    reveal.alt =
+        whosThatCharacterCurrent.name;
 
 
     silhouette.style.background =
@@ -249,7 +272,6 @@ function showWhosThatCharacterSilhouette(){
     );
 
 }
-
 
 /* ==========================================
    Normalize Guess
@@ -513,7 +535,6 @@ loadWhosThatCharacterRound();
 /* ==========================================
    Reveal Character
 ========================================== */
-
 function revealWhosThatCharacter(){
 
     const silhouette =
@@ -522,16 +543,20 @@ function revealWhosThatCharacter(){
         );
 
 
-    silhouette.style.webkitMaskImage =
-        "none";
+    const reveal =
+        document.querySelector(
+            "#whosThatCharacterReveal"
+        );
 
 
-    silhouette.style.maskImage =
-        "none";
+    silhouette.classList.add(
+        "revealed"
+    );
 
 
-    silhouette.style.background =
-        `url("${whosThatCharacterCurrent.image}") center / contain no-repeat`;
+    reveal.classList.add(
+        "revealed"
+    );
 
 }
 /* ==========================================
