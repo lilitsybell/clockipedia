@@ -211,7 +211,8 @@ function loadWhosThatCharacterRound(){
     input.disabled = false;
 
     message.textContent = "";
-
+message.className =
+    "whos-that-character-message";
     nextButton.hidden = true;
 
 
@@ -424,7 +425,8 @@ function submitWhosThatCharacterGuess(){
 
         revealWhosThatCharacter();
 
-
+message.className =
+    "whos-that-character-message correct";
         message.textContent =
             `Correct! It's ${whosThatCharacterCurrent.name}. +${whosThatCharacterTries} points`;
 
@@ -464,7 +466,8 @@ function submitWhosThatCharacterGuess(){
 
         showWhosThatCharacterTeamColor();
 
-
+message.className =
+    "whos-that-character-message hint";
         message.textContent =
             "Not quite! Here's a hint: their team color.";
 
@@ -484,7 +487,8 @@ function submitWhosThatCharacterGuess(){
 
         revealWhosThatCharacter();
 
-
+message.className =
+    "whos-that-character-message hint";
         message.textContent =
             "Still not quite! Here's the full artwork.";
 
@@ -499,7 +503,8 @@ function submitWhosThatCharacterGuess(){
 
 
     /* Third Wrong Guess */
-
+message.className =
+    "whos-that-character-message wrong";
     message.textContent =
         `It was ${whosThatCharacterCurrent.name}.`;
 
