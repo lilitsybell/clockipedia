@@ -70,8 +70,9 @@
         opacity .2s ease;
 }
 
-
 .whos-that-character-reveal{
+    position:absolute;
+
     width:300px;
     height:300px;
 
