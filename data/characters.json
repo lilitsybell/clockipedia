@@ -888,18 +888,19 @@
     "flavor": "There is life behind the personality that uses personalities as masks. There are times when life puts off the mask and deep answers to deep.",
     "purpose": "The [High Priestess] learns who to talk to from the Storyteller.",
     "summary": [
-             "ComingSoon",
-             "ComingSoon"
+             "The Storyteller decides which player they believe the [High Priestess] should talk to most. This might be a player with good information, a Minion who does not have a bluff yet, a player who is nominating correctly, or any other reason.",
+             "The [High Priestess] can learn any player: alive, dead, good, evil, a Traveller, themself, or even a player they have learned previously."
              ],
     "run": {
            "Every Night": [
-                "ComingSoon",
-                "ComingSoon"
+                "The [High Priestess] learns a player."
                 ]
            },
     "examples": [
-                "ComingSoon",
-                "ComingSoon"
+                "On the first night, the [High Priestess] learns the [Princess] player. The [High Priestess] trusts the [Princess] and helps them execute a player.",
+                "On the third night, the [High Priestess] learns the [Moonchild] player. That player died the day before, and the player they chose did not die.",
+                "On the first night, the [High Priestess] learns the [Mastermind] player. The [Mastermind] player has not talked to the Demon yet and does not know what to claim. The [High Priestess] becomes suspicious of the [Mastermind] player.",
+                "On the fifth night, there are only 3 players left. The [High Priestess] learns the [No Dashii] player. The [High Priestess] nominates the [No Dashii]."
                 ],
     "tags": ["Information"],
     "edition": "Carousel"
