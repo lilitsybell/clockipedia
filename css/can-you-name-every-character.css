@@ -344,14 +344,8 @@
 
     color:var(--black);
 
-    font-family:
-        "Droid Sans",
-        Arial,
-        sans-serif;
-
     font-size:28px;
 }
-
 
 .name-every-character-winner-subtitle{
     margin:0 0 24px;
@@ -525,11 +519,6 @@
 
 .name-every-character-game-over-card h2{
     margin:0 0 20px;
-
-    font-family:
-        "Droid Sans",
-        Arial,
-        sans-serif;
 
     color:var(--black);
 
