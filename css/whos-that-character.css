@@ -60,6 +60,24 @@
     mask-repeat:no-repeat;
 
 }
+.whos-that-character-silhouette img{
+    width:100%;
+    height:100%;
+
+    display:block;
+
+    object-fit:contain;
+
+    opacity:0;
+
+    transition:
+        opacity .2s ease;
+}
+
+
+.whos-that-character-silhouette.revealed img{
+    opacity:1;
+}
 
 /* ==========================================
    Guess Area
