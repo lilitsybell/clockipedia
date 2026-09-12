@@ -168,35 +168,6 @@
     background:#e8e8ed;
 }
 
-
-
-@media(max-width:1000px){
-
-    .name-every-character-grid{
-        grid-template-columns:
-            repeat(4, minmax(0, 1fr));
-    }
-
-}
-@media(max-width:750px){
-
-    .name-every-character-grid{
-        grid-template-columns:
-            repeat(3, minmax(0, 1fr));
-    }
-
-}
-
-
-@media(max-width:520px){
-
-    .name-every-character-grid{
-        grid-template-columns:
-            repeat(2, minmax(0, 1fr));
-    }
-
-}
-
 /* ==========================================
    Guessed Characters
 ========================================== */
