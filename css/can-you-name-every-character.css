@@ -803,36 +803,14 @@
 /* ==========================================
    Guess Input
 ========================================== */
-
 .name-every-character-input{
     flex:1;
 
     min-width:0;
-
     height:44px;
 
-    padding:0 16px;
-
-    border:1px solid #d8d8e1;
-
-    border-radius:10px;
-
-    background:white;
-
-    color:var(--black);
-
-    font:inherit;
-
     font-size:14px;
-
-    outline:none;
-
-    transition:
-        border-color .15s ease,
-        box-shadow .15s ease;
 }
-
-
 .name-every-character-input:focus{
     border-color:var(--purple);
 
