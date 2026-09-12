@@ -470,25 +470,8 @@
     width:100%;
     height:46px;
 
-    border:0;
-
-    border-radius:10px;
-
-    background:var(--purple);
-
-    color:white;
-
-    font:inherit;
-
     font-size:14px;
     font-weight:900;
-
-    cursor:pointer;
-}
-
-
-.name-every-character-share:hover{
-    opacity:.92;
 }
 
 
@@ -724,24 +707,8 @@
     width:100%;
     height:44px;
 
-    border:1px solid var(--border);
-    border-radius:10px;
-
-    background:white;
-
-    color:var(--black);
-
-    font:inherit;
-
     font-size:13px;
     font-weight:800;
-
-    cursor:pointer;
-}
-
-
-.name-every-character-play-again:hover{
-    background:var(--light-gray);
 }
 .name-every-character-best{
     flex-shrink:0;
