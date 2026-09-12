@@ -94,23 +94,7 @@
 
     min-width:0;
 
-    height:44px;
-
-    padding:0 15px;
-
-    border:1px solid var(--border);
-
-    border-radius:9px;
-
-    background:white;
-
-    color:var(--black);
-
-    font:inherit;
-
     font-size:14px;
-
-    outline:none;
 }
 
 
@@ -122,36 +106,14 @@
         rgba(102,102,153,.10);
 }
 
-
 .whos-that-character-guess{
     height:44px;
 
     padding:0 20px;
 
-    border:1px solid
-        rgba(102,102,153,.28);
-
-    border-radius:9px;
-
-    background:
-        rgba(102,102,153,.10);
-
-    color:var(--purple);
-
-    font:inherit;
-
     font-size:12px;
     font-weight:900;
-
-    cursor:pointer;
 }
-
-
-.whos-that-character-guess:hover{
-    background:
-        rgba(102,102,153,.16);
-}
-
 
 /* ==========================================
    Message
@@ -172,34 +134,14 @@
 /* ==========================================
    Next Character
 ========================================== */
-
 .whos-that-character-next{
     height:42px;
 
     padding:0 20px;
 
-    border:0;
-
-    border-radius:9px;
-
-    background:var(--purple);
-
-    color:white;
-
-    font:inherit;
-
     font-size:12px;
     font-weight:900;
-
-    cursor:pointer;
 }
-
-
-.whos-that-character-next:hover{
-    opacity:.9;
-}
-
-
 /* ==========================================
    Responsive
 ========================================== */
