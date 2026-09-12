@@ -299,65 +299,6 @@
     display:none;
 }
 
-/* ==========================================
-   Winner Popup
-========================================== */
-
-.name-every-character-winner{
-    position:fixed;
-    inset:0;
-
-    z-index:1000;
-
-    display:flex;
-    align-items:center;
-    justify-content:center;
-
-    padding:24px;
-}
-
-
-.name-every-character-winner[hidden]{
-    display:none;
-}
-
-
-.name-every-character-winner-backdrop{
-    position:absolute;
-    inset:0;
-
-    background:
-        rgba(13,24,33,.68);
-
-    backdrop-filter:
-        blur(4px);
-}
-
-.name-every-character-winner-card{
-    position:relative;
-
-    width:min(
-        430px,
-        100%
-    );
-
-    padding:34px 32px 30px;
-
-    border-radius:22px;
-
-    background:white;
-
-    text-align:center;
-
-    box-shadow:
-        0 24px 70px
-        rgba(0,0,0,.28);
-
-    animation:
-        nameEveryCharacterWinnerIn
-        .35s ease-out;
-}
-
 @keyframes nameEveryCharacterWinnerIn{
 
     from{
@@ -590,60 +531,6 @@
    Game Over Popup
 ========================================== */
 
-.name-every-character-game-over{
-    position:fixed;
-    inset:0;
-
-    z-index:1000;
-
-    display:flex;
-    align-items:center;
-    justify-content:center;
-
-    padding:24px;
-}
-
-
-.name-every-character-game-over[hidden]{
-    display:none;
-}
-
-
-.name-every-character-game-over-backdrop{
-    position:absolute;
-    inset:0;
-
-    background:
-        rgba(13,24,33,.68);
-
-    backdrop-filter:
-        blur(4px);
-}
-
-
-.name-every-character-game-over-card{
-    position:relative;
-
-    width:min(430px, 100%);
-
-    padding:34px 32px 30px;
-
-    border-radius:22px;
-
-    background:white;
-
-    text-align:center;
-
-    box-shadow:
-        0 24px 70px
-        rgba(0,0,0,.28);
-
-    animation:
-        nameEveryCharacterWinnerIn
-        .35s ease-out;
-}
-
-
 .name-every-character-game-over-eyebrow{
     margin-bottom:6px;
 
@@ -759,6 +646,64 @@
     font-weight:800;
 
     white-space:nowrap;
+}
+
+.name-every-character-winner,
+.name-every-character-game-over{
+    position:fixed;
+
+    inset:0;
+
+    z-index:1000;
+
+    display:flex;
+
+    align-items:center;
+    justify-content:center;
+
+    padding:20px;
+}
+
+
+.name-every-character-winner[hidden],
+.name-every-character-game-over[hidden]{
+    display:none;
+}
+
+.name-every-character-winner-backdrop,
+.name-every-character-game-over-backdrop{
+    position:absolute;
+
+    inset:0;
+
+    background:
+        rgba(13,24,33,.55);
+}
+
+.name-every-character-winner-card,
+.name-every-character-game-over-card{
+    position:relative;
+
+    width:min(
+        430px,
+        100%
+    );
+
+    padding:34px 32px 30px;
+
+    border-radius:22px;
+
+    background:white;
+
+    text-align:center;
+
+    box-shadow:
+        0 24px 70px
+        rgba(0,0,0,.28);
+
+    animation:
+        nameEveryCharacterWinnerIn
+        .35s ease-out;
 }
 
 /* ==========================================
