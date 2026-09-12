@@ -64,12 +64,6 @@ function setupWhosThatCharacterGame(){
         );
 
 
-    const nextButton =
-        document.querySelector(
-            "#whosThatCharacterNext"
-        );
-
-
     guessButton.addEventListener(
         "click",
         submitWhosThatCharacterGuess
@@ -88,30 +82,6 @@ function setupWhosThatCharacterGame(){
 
         }
     );
-
-nextButton.addEventListener(
-    "click",
-    () => {
-
-        whosThatCharacterIndex++;
-
-
-        if(
-            whosThatCharacterIndex >=
-            whosThatCharacterGameLength
-        ){
-
-            finishWhosThatCharacterGame();
-
-            return;
-
-        }
-
-
-        loadWhosThatCharacterRound();
-
-    }
-);
 
 }
 
@@ -200,20 +170,12 @@ function loadWhosThatCharacterRound(){
             "#whosThatCharacterMessage"
         );
 
-
-    const nextButton =
-        document.querySelector(
-            "#whosThatCharacterNext"
-        );
-
-
     input.value = "";
     input.disabled = false;
 
     message.textContent = "";
 message.className =
     "whos-that-character-message";
-    nextButton.hidden = true;
 
 
     input.focus();
@@ -414,40 +376,57 @@ function submitWhosThatCharacterGuess(){
        Correct Guess
     ====================================== */
 
-    if(guess === answer){
+if(guess === answer){
 
-        whosThatCharacterScore +=
-            whosThatCharacterTries;
-
-
-        updateWhosThatCharacterStatus();
+    whosThatCharacterScore +=
+        whosThatCharacterTries;
 
 
-        revealWhosThatCharacter();
-
-message.className =
-    "whos-that-character-message correct";
-        message.textContent =
-            `Correct! It's ${whosThatCharacterCurrent.name}. +${whosThatCharacterTries} points`;
+    updateWhosThatCharacterStatus();
 
 
-        input.disabled = true;
+    revealWhosThatCharacter();
 
 
-        nextButton.textContent =
-            whosThatCharacterIndex ===
-            whosThatCharacterGameLength - 1
-                ? "See Results"
-                : "Next Character";
+    message.className =
+        "whos-that-character-message correct";
 
 
-        nextButton.hidden =
-            false;
+    message.textContent =
+        `Correct! It's ${whosThatCharacterCurrent.name}. +${whosThatCharacterTries} points`;
 
 
-        return;
+    input.disabled = true;
 
-    }
+
+    setTimeout(
+        () => {
+
+            whosThatCharacterIndex++;
+
+
+            if(
+                whosThatCharacterIndex >=
+                whosThatCharacterGameLength
+            ){
+
+                finishWhosThatCharacterGame();
+
+                return;
+
+            }
+
+
+            loadWhosThatCharacterRound();
+
+        },
+        1200
+    );
+
+
+    return;
+
+}
 
 
     /* ======================================
