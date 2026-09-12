@@ -20,19 +20,17 @@
 
 .whos-that-character-image-card{
     width:100%;
-
     min-height:370px;
 
     display:flex;
-
     align-items:center;
     justify-content:center;
+
+    overflow:hidden;
 
     border-radius:16px;
 
     background:var(--light-gray);
-
-    overflow:hidden;
 }
 
 
@@ -60,8 +58,11 @@
 
     -webkit-mask-repeat:no-repeat;
     mask-repeat:no-repeat;
-}
 
+    transition:
+        background .2s ease,
+        opacity .2s ease;
+}
 
 /* ==========================================
    Guess Area
