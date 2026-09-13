@@ -216,14 +216,6 @@ function showWhosThatCharacterSilhouette(){
         "0";
 
 
-    silhouette.classList.remove(
-        "revealed"
-    );
-
-    reveal.classList.remove(
-        "revealed"
-    );
-
     silhouette.style.webkitMaskImage =
         `url("${whosThatCharacterCurrent.image}")`;
 
@@ -494,35 +486,43 @@ message.textContent =
     }
 
 
-    /* Second Wrong Guess */
+/* Second Wrong Guess */
 
-    if(whosThatCharacterTries === 1){
+if(whosThatCharacterTries === 1){
 
-        revealWhosThatCharacter();
-
-message.className =
-    "whos-that-character-message hint";
-message.textContent =
-    "Not that either! Here is the full image.";
+    showWhosThatCharacterFullImage();
 
 
-        input.value = "";
-
-        input.focus();
-
-        return;
-
-    }
+    message.className =
+        "whos-that-character-message hint";
 
 
-    /* Third Wrong Guess */
+    message.textContent =
+        "Not that either! Here is the full image.";
+
+
+    input.value = "";
+
+    input.focus();
+
+    return;
+
+}
+
+/* Third Wrong Guess */
+
+revealWhosThatCharacter();
+
+
 message.className =
     "whos-that-character-message wrong";
+
+
 message.textContent =
     `Sorry, it was ${whosThatCharacterCurrent.name}.`;
 
 
-    input.disabled = true;
+input.disabled = true;
 
 
     setTimeout(
@@ -553,6 +553,42 @@ loadWhosThatCharacterRound();
 /* ==========================================
    Reveal Character
 ========================================== */
+/* ==========================================
+   Show Full Image Hint
+========================================== */
+
+function showWhosThatCharacterFullImage(){
+
+    const silhouette =
+        document.querySelector(
+            "#whosThatCharacterSilhouette"
+        );
+
+
+    const reveal =
+        document.querySelector(
+            "#whosThatCharacterReveal"
+        );
+
+
+    silhouette.style.opacity =
+        "0";
+
+
+    reveal.style.opacity =
+        "1";
+
+
+    reveal.style.transform =
+        `rotate(${whosThatCharacterRotation}deg)`;
+
+}
+
+
+/* ==========================================
+   Final Reveal
+========================================== */
+
 function revealWhosThatCharacter(){
 
     const silhouette =
@@ -567,22 +603,16 @@ function revealWhosThatCharacter(){
         );
 
 
-    silhouette.style.transform =
-        "rotate(0deg)";
+    silhouette.style.opacity =
+        "0";
+
+
+    reveal.style.opacity =
+        "1";
 
 
     reveal.style.transform =
         "rotate(0deg)";
-
-
-    silhouette.classList.add(
-        "revealed"
-    );
-
-
-    reveal.classList.add(
-        "revealed"
-    );
 
 }
 /* ==========================================
