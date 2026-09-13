@@ -792,28 +792,24 @@ li{
 
     z-index:10000;
 
-    width:300px;
+    width:325px;
 
     display:none;
 
     overflow:hidden;
 
     border:
-        1px solid
-        rgba(13,24,33,.12);
-
-    border-top:
-        5px solid
+        3px solid
         var(--purple);
 
-    border-radius:12px;
+    border-radius:11px;
 
     background:white;
 
     color:var(--black);
 
     box-shadow:
-        0 12px 32px
+        0 8px 22px
         rgba(13,24,33,.18);
 
     pointer-events:none;
@@ -832,7 +828,7 @@ li{
     gap:12px;
 
     padding:
-        13px 14px;
+        11px 13px;
 
     background:
         var(--light-gray);
@@ -840,8 +836,8 @@ li{
 
 
 .tooltip-header img{
-    width:48px;
-    height:48px;
+    width:36px;
+    height:36px;
 
     flex-shrink:0;
 
@@ -859,31 +855,25 @@ li{
 
 
 .tooltip-title strong{
-    color:var(--black);
-
     font-family:
         "Droid Sans",
         Arial,
         sans-serif;
 
-    font-size:17px;
-    font-weight:400;
+    font-size:18px;
+    font-weight:700;
 
-    line-height:1.15;
+    line-height:1.05;
 }
 
 
 .tooltip-title span{
-    margin-top:3px;
+    margin-top:2px;
 
-    color:var(--gray);
+    font-size:12px;
+    font-weight:500;
 
-    font-size:11px;
-    font-weight:700;
-
-    text-transform:uppercase;
-
-    letter-spacing:.05em;
+    line-height:1.1;
 }
 
 
@@ -893,14 +883,20 @@ li{
 
 .tooltip-ability{
     padding:
-        13px 14px
+        14px 13px
         15px;
+
+    border-top:
+        1px solid
+        var(--border);
+
+    background:white;
 
     color:var(--black);
 
-    font-size:13px;
+    font-size:14px;
 
-    line-height:1.5;
+    line-height:1.45;
 }
 
 
@@ -909,38 +905,86 @@ li{
 ========================================== */
 
 .ability-tooltip.blue{
-    border-top-color:
+    border-color:
         var(--blue);
 }
 
 
+.ability-tooltip.blue
+.tooltip-title strong,
+.ability-tooltip.blue
+.tooltip-title span{
+    color:var(--blue);
+}
+
+
 .ability-tooltip.red{
-    border-top-color:
+    border-color:
         var(--red);
 }
 
 
+.ability-tooltip.red
+.tooltip-title strong,
+.ability-tooltip.red
+.tooltip-title span{
+    color:var(--red);
+}
+
+
 .ability-tooltip.purple{
-    border-top-color:
+    border-color:
         var(--purple);
 }
 
 
+.ability-tooltip.purple
+.tooltip-title strong,
+.ability-tooltip.purple
+.tooltip-title span{
+    color:var(--purple);
+}
+
+
 .ability-tooltip.traveller{
-    border-top-color:
+    border-color:
         var(--traveller);
 }
 
 
+.ability-tooltip.traveller
+.tooltip-title strong,
+.ability-tooltip.traveller
+.tooltip-title span{
+    color:var(--traveller);
+}
+
+
 .ability-tooltip.lime{
-    border-top-color:
+    border-color:
         var(--lime);
 }
 
 
+.ability-tooltip.lime
+.tooltip-title strong,
+.ability-tooltip.lime
+.tooltip-title span{
+    color:var(--lime);
+}
+
+
 .ability-tooltip.copper{
-    border-top-color:
+    border-color:
         var(--copper);
+}
+
+
+.ability-tooltip.copper
+.tooltip-title strong,
+.ability-tooltip.copper
+.tooltip-title span{
+    color:var(--copper);
 }
 /* ==========================================
    Character Links
