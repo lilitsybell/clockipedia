@@ -257,18 +257,17 @@ function loadWhosThatCharacterRound(
     resume = false
 ){
 
-    const completedBadge =
-        document.querySelector(
-            "#whosThatCharacterCompletedBadge"
-        );
+const completedBadge =
+    document.querySelector(
+        "#whosThatCharacterCompletedBadge"
+    );
 
 
-    if(completedBadge){
+if(completedBadge){
 
-        completedBadge.hidden =
-            true;
+    completedBadge.remove();
 
-    }
+}
 
 
     if(
