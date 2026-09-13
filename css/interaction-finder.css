@@ -14,27 +14,61 @@
         0 10px 28px
         rgba(13,24,33,.07);
 }
+/* ==========================================
+   Selector Heading
+========================================== */
 
+.selector-heading{
+    margin-bottom:18px;
+}
+
+
+.selector-heading h2{
+    margin:0 0 5px;
+
+    color:var(--black);
+
+    font-size:20px;
+
+    line-height:1.1;
+}
+
+
+.selector-heading p{
+    margin:0;
+
+    color:var(--gray);
+
+    font-size:13px;
+
+    line-height:1.45;
+}
+
+
+/* ==========================================
+   Selector Fields
+========================================== */
+
+.selector-fields{
+    display:grid;
+
+    grid-template-columns:
+        repeat(3, minmax(0, 1fr));
+
+    gap:10px;
+}
 /* ==========================================
    Selector Area
 ========================================== */
 
 .selector-container{
-    display:grid;
-
-    grid-template-columns:
-        repeat(3, minmax(0, 1fr))
-        auto;
-
-    gap:10px;
-
     padding:22px 28px;
-
-    background:
-        rgba(102,102,153,.05);
 
     border-bottom:
         1px solid var(--border);
+
+    background:
+        rgba(102,102,153,.08);
 }
 
 
@@ -72,7 +106,7 @@
 
     color:var(--black);
 
-    font-size:14px;
+    font-size:15px;
 
     outline:none;
 
@@ -197,10 +231,11 @@
 
 #clearButton{
     min-width:90px;
-    height:44px;
+    height:40px;
 
-    padding:
-        0 16px;
+    margin-top:12px;
+
+    padding:0 16px;
 
     border:
         1.5px solid
@@ -228,10 +263,8 @@
 
 
 #clearButton:hover{
-    background:
-        #f3f1f8;
+    background:#f3f1f8;
 }
-
 
 /* ==========================================
    Legend
