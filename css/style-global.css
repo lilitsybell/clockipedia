@@ -834,16 +834,14 @@ li{
         var(--light-gray);
 }
 
-
 .tooltip-header img{
-    width:36px;
-    height:36px;
+    width:58px;
+    height:58px;
 
     flex-shrink:0;
 
     object-fit:contain;
 }
-
 
 .tooltip-title{
     min-width:0;
