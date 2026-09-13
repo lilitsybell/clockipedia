@@ -257,6 +257,20 @@ function loadWhosThatCharacterRound(
     resume = false
 ){
 
+    const completedBadge =
+        document.querySelector(
+            "#whosThatCharacterCompletedBadge"
+        );
+
+
+    if(completedBadge){
+
+        completedBadge.hidden =
+            true;
+
+    }
+
+
     if(
         whosThatCharacterIndex >=
         whosThatCharacterGameCharacters.length
