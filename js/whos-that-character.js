@@ -145,9 +145,97 @@ function startWhosThatCharacterGame(){
         );
 
 
-    whosThatCharacterIndex = 0;
+    const saved =
+        getWhosThatCharacterResult(
+            whosThatCharacterPuzzleDate
+        );
 
-    whosThatCharacterScore = 0;
+
+    /*
+       Completed puzzle.
+    */
+
+    if(
+        saved &&
+        saved.completed
+    ){
+
+        whosThatCharacterScore =
+            saved.score;
+
+
+        whosThatCharacterIndex =
+            whosThatCharacterGameLength;
+
+
+        input.disabled =
+            true;
+
+
+        guessButton.disabled =
+            true;
+
+
+        showWhosThatCharacterCompletedState(
+            saved
+        );
+
+
+        return;
+
+    }
+
+
+    /*
+       Resume an unfinished puzzle.
+    */
+
+    if(saved){
+
+        whosThatCharacterIndex =
+            saved.index ?? 0;
+
+
+        whosThatCharacterScore =
+            saved.score ?? 0;
+
+
+        whosThatCharacterTries =
+            saved.tries ?? 3;
+
+
+        input.disabled =
+            false;
+
+
+        guessButton.disabled =
+            false;
+
+
+        loadWhosThatCharacterRound(
+            true
+        );
+
+
+        return;
+
+    }
+
+
+    /*
+       Brand new puzzle.
+    */
+
+    whosThatCharacterIndex =
+        0;
+
+
+    whosThatCharacterScore =
+        0;
+
+
+    whosThatCharacterTries =
+        3;
 
 
     input.disabled =
@@ -165,7 +253,9 @@ function startWhosThatCharacterGame(){
    Load Round
 ========================================== */
 
-function loadWhosThatCharacterRound(){
+function loadWhosThatCharacterRound(
+    resume = false
+){
 
     if(
         whosThatCharacterIndex >=
@@ -183,14 +273,46 @@ whosThatCharacterCurrent =
     ];
 
 
-    whosThatCharacterTries = 3;
+if(!resume){
+
+    whosThatCharacterTries =
+        3;
+
+}
 whosThatCharacterRotation =
     getWhosThatCharacterRotation(
         whosThatCharacterPuzzleDate,
         whosThatCharacterIndex
     );
 
-    showWhosThatCharacterSilhouette();
+showWhosThatCharacterSilhouette()
+    .then(
+        () => {
+
+            if(!resume){
+                return;
+            }
+
+
+            if(
+                whosThatCharacterTries === 2
+            ){
+
+                showWhosThatCharacterTeamColor();
+
+            }
+
+
+            else if(
+                whosThatCharacterTries === 1
+            ){
+
+                showWhosThatCharacterFullImage();
+
+            }
+
+        }
+    );
 
     updateWhosThatCharacterStatus();
 
@@ -528,32 +650,36 @@ if(guess === answer){
         `Correct! It's ${whosThatCharacterCurrent.name}. +${whosThatCharacterTries} points`;
 
 
-    input.disabled = true;
+input.disabled =
+    true;
 
 
-    setTimeout(
-        () => {
-
-            whosThatCharacterIndex++;
+whosThatCharacterIndex++;
 
 
-            if(
-                whosThatCharacterIndex >=
-                whosThatCharacterGameLength
-            ){
-
-                finishWhosThatCharacterGame();
-
-                return;
-
-            }
+saveWhosThatCharacterState();
 
 
-            loadWhosThatCharacterRound();
+setTimeout(
+    () => {
 
-        },
-        1200
-    );
+        if(
+            whosThatCharacterIndex >=
+            whosThatCharacterGameLength
+        ){
+
+            finishWhosThatCharacterGame();
+
+            return;
+
+        }
+
+
+        loadWhosThatCharacterRound();
+
+    },
+    1200
+);
 
 
     return;
@@ -565,10 +691,13 @@ if(guess === answer){
        Wrong Guess
     ====================================== */
 
-    whosThatCharacterTries--;
+whosThatCharacterTries--;
 
 
-    updateWhosThatCharacterStatus();
+updateWhosThatCharacterStatus();
+
+
+saveWhosThatCharacterState();
 
 
     /* First Wrong Guess */
@@ -638,29 +767,32 @@ message.textContent =
 input.disabled = true;
 
 
-    setTimeout(
-        () => {
-
 whosThatCharacterIndex++;
 
 
-if(
-    whosThatCharacterIndex >=
-    whosThatCharacterGameLength
-){
-
-    finishWhosThatCharacterGame();
-
-    return;
-
-}
+saveWhosThatCharacterState();
 
 
-loadWhosThatCharacterRound();
+setTimeout(
+    () => {
 
-        },
-        1200
-    );
+        if(
+            whosThatCharacterIndex >=
+            whosThatCharacterGameLength
+        ){
+
+            finishWhosThatCharacterGame();
+
+            return;
+
+        }
+
+
+        loadWhosThatCharacterRound();
+
+    },
+    1200
+);
 
 }
 /* ==========================================
@@ -770,7 +902,9 @@ function updateWhosThatCharacterStatus(){
 
 function finishWhosThatCharacterGame(){
 
-    saveWhosThatCharacterResult();
+saveWhosThatCharacterState(
+    true
+);
 
 
     const input =
@@ -1066,7 +1200,8 @@ next.disabled =
 previous.disabled =
     whosThatCharacterArchiveDate <=
     firstPuzzleMonth;
-
+calendar.innerHTML =
+    "";
 
     const firstDay =
         new Date(
@@ -1770,8 +1905,10 @@ function formatWhosThatCharacterDate(
     return `${year}-${month}-${day}`;
 
 }
+
+
 /* ==========================================
-   Saved Puzzle Results
+   Saved Puzzle State
 ========================================== */
 
 function getWhosThatCharacterStorageKey(
@@ -1783,7 +1920,9 @@ function getWhosThatCharacterStorageKey(
 }
 
 
-function saveWhosThatCharacterResult(){
+function saveWhosThatCharacterState(
+    completed = false
+){
 
     const key =
         getWhosThatCharacterStorageKey(
@@ -1791,15 +1930,20 @@ function saveWhosThatCharacterResult(){
         );
 
 
-    const result = {
-        completed:true,
-        score:whosThatCharacterScore
+    const state = {
+        completed,
+        score:
+            whosThatCharacterScore,
+        index:
+            whosThatCharacterIndex,
+        tries:
+            whosThatCharacterTries
     };
 
 
     localStorage.setItem(
         key,
-        JSON.stringify(result)
+        JSON.stringify(state)
     );
 
 }
@@ -1862,5 +2006,69 @@ function getWhosThatCharacterScoreColor(
 
 
     return `hsl(${hue}, 72%, 42%)`;
+
+}
+function showWhosThatCharacterCompletedState(
+    saved
+){
+
+    const progress =
+        document.querySelector(
+            "#whosThatCharacterProgress"
+        );
+
+
+    const tries =
+        document.querySelector(
+            "#whosThatCharacterTries"
+        );
+
+
+    const score =
+        document.querySelector(
+            "#whosThatCharacterScore"
+        );
+
+
+    const message =
+        document.querySelector(
+            "#whosThatCharacterMessage"
+        );
+
+
+    const silhouette =
+        document.querySelector(
+            "#whosThatCharacterSilhouette"
+        );
+
+
+    const reveal =
+        document.querySelector(
+            "#whosThatCharacterReveal"
+        );
+
+
+    progress.textContent =
+        `${whosThatCharacterGameLength} / ${whosThatCharacterGameLength}`;
+
+
+    tries.textContent =
+        "—";
+
+
+    score.textContent =
+        `${saved.score} / 30`;
+
+
+    message.textContent =
+        `Game complete! Final score: ${saved.score} / 30`;
+
+
+    silhouette.style.opacity =
+        "0";
+
+
+    reveal.style.opacity =
+        "0";
 
 }
