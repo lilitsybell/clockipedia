@@ -25,7 +25,30 @@ const whosThatCharacterStartDate =
 let whosThatCharacterPuzzleDate =
     getWhosThatCharacterToday();
 
+/* ==========================================
+   Daily Puzzle Rules
+========================================== */
 
+const whosThatCharacterTeamLimits = {
+    Townsfolk:4,
+    Outsiders:3,
+    Minions:3,
+    Demons:3,
+    Travellers:2,
+    Fabled:2,
+    Loric:2
+};
+
+
+const whosThatCharacterRequiredTeams = [
+    "Townsfolk",
+    "Outsiders",
+    "Minions",
+    "Demons",
+    "Travellers",
+    "Fabled",
+    "Loric"
+];
 /* ==========================================
    Start Game
 ========================================== */
@@ -104,31 +127,16 @@ function setupWhosThatCharacterGame(){
 
 function startWhosThatCharacterGame(){
 
-    const entries =
-        Object.entries(
-            characters
-        );
-
-
-    const shuffled =
-        [...entries]
-        .sort(
-            () =>
-                Math.random() - .5
-        );
-
-
     whosThatCharacterGameCharacters =
-        shuffled
-        .slice(
-            0,
-            whosThatCharacterGameLength
+        generateWhosThatCharacterPuzzle(
+            whosThatCharacterPuzzleDate
         );
 
 
     whosThatCharacterIndex = 0;
 
     whosThatCharacterScore = 0;
+
 
     loadWhosThatCharacterRound();
 
@@ -358,21 +366,32 @@ async function showWhosThatCharacterSilhouette(){
    Normalize Guess
 ========================================== */
 
-function normalizeWhosThatCharacterGuess(
-    text
+function normalizeWhosThatCharacterTeam(
+    team
 ){
 
-    return text
-        .toLowerCase()
-        .normalize("NFD")
-        .replace(
-            /[\u0300-\u036f]/g,
-            ""
-        )
-        .replace(
-            /[^a-z0-9]/g,
-            ""
-        );
+    const teams = {
+        Townsfolk:"Townsfolk",
+
+        Outsider:"Outsiders",
+        Outsiders:"Outsiders",
+
+        Minion:"Minions",
+        Minions:"Minions",
+
+        Demon:"Demons",
+        Demons:"Demons",
+
+        Traveller:"Travellers",
+        Travellers:"Travellers",
+
+        Fabled:"Fabled",
+
+        Loric:"Loric"
+    };
+
+
+    return teams[team] || null;
 
 }
 
@@ -1074,5 +1093,311 @@ function updateWhosThatCharacterPuzzleDetails(){
                 year:"numeric"
             }
         );
+
+}
+/* ==========================================
+   Normalize Team Name
+========================================== */
+
+function normalizeWhosThatCharacterTeam(
+    team
+){
+
+    const teams = {
+        Townsfolk:"Townsfolk",
+
+        Outsider:"Outsiders",
+        Outsiders:"Outsiders",
+
+        Minion:"Minions",
+        Minions:"Minions",
+
+        Demon:"Demons",
+        Demons:"Demons",
+
+        Fabled:"Fabled",
+
+        Loric:"Loric"
+    };
+
+    return teams[team] || null;
+
+}
+/* ==========================================
+   Generate Daily Puzzle
+========================================== */
+/* ==========================================
+   Seeded Random
+========================================== */
+
+function getWhosThatCharacterSeed(
+    dateString
+){
+
+    let seed = 0;
+
+
+    for(
+        let i = 0;
+        i < dateString.length;
+        i++
+    ){
+
+        seed =
+            (
+                seed * 31 +
+                dateString.charCodeAt(i)
+            ) >>> 0;
+
+    }
+
+
+    return seed;
+
+}
+
+
+function createWhosThatCharacterRandom(
+    seed
+){
+
+    return function(){
+
+        seed +=
+            0x6D2B79F5;
+
+
+        let value =
+            seed;
+
+
+        value =
+            Math.imul(
+                value ^ value >>> 15,
+                value | 1
+            );
+
+
+        value ^=
+            value +
+            Math.imul(
+                value ^ value >>> 7,
+                value | 61
+            );
+
+
+        return (
+            (
+                value ^
+                value >>> 14
+            ) >>> 0
+        ) / 4294967296;
+
+    };
+
+}
+function generateWhosThatCharacterPuzzle(
+    dateString
+){
+
+    const seed =
+        getWhosThatCharacterSeed(
+            dateString
+        );
+
+    const random =
+        createWhosThatCharacterRandom(
+            seed
+        );
+
+
+    const pools = {};
+
+
+    whosThatCharacterRequiredTeams
+        .forEach(
+            team => {
+
+                pools[team] = [];
+
+            }
+        );
+
+
+    Object.entries(characters)
+        .forEach(
+            ([slug, character]) => {
+
+                const team =
+                    normalizeWhosThatCharacterTeam(
+                        character.team
+                    );
+
+                if(!team){
+                    return;
+                }
+
+                pools[team].push({
+                    slug,
+                    ...character
+                });
+
+            }
+        );
+
+
+    const puzzle = [];
+
+    const counts = {};
+
+
+    whosThatCharacterRequiredTeams
+        .forEach(
+            team => {
+
+                counts[team] = 0;
+
+            }
+        );
+
+
+    /*
+        First guarantee one character
+        from every required team.
+    */
+
+    whosThatCharacterRequiredTeams
+        .forEach(
+            team => {
+
+                const pool =
+                    pools[team];
+
+                if(!pool.length){
+                    throw new Error(
+                        `No characters available for ${team}.`
+                    );
+                }
+
+
+                const index =
+                    Math.floor(
+                        random() *
+                        pool.length
+                    );
+
+
+                const character =
+                    pool.splice(
+                        index,
+                        1
+                    )[0];
+
+
+                puzzle.push(
+                    character
+                );
+
+                counts[team]++;
+
+            }
+        );
+
+
+    /*
+        Fill the remaining slots while
+        respecting each team's maximum.
+    */
+
+    while(
+        puzzle.length <
+        whosThatCharacterGameLength
+    ){
+
+        const availableTeams =
+            whosThatCharacterRequiredTeams
+                .filter(
+                    team =>
+                        counts[team] <
+                        whosThatCharacterTeamLimits[team] &&
+                        pools[team].length
+                );
+
+
+        if(!availableTeams.length){
+
+            throw new Error(
+                "Unable to generate daily puzzle."
+            );
+
+        }
+
+
+        const team =
+            availableTeams[
+                Math.floor(
+                    random() *
+                    availableTeams.length
+                )
+            ];
+
+
+        const pool =
+            pools[team];
+
+
+        const characterIndex =
+            Math.floor(
+                random() *
+                pool.length
+            );
+
+
+        const character =
+            pool.splice(
+                characterIndex,
+                1
+            )[0];
+
+
+        puzzle.push(
+            character
+        );
+
+        counts[team]++;
+
+    }
+
+
+    /*
+        Shuffle the final 10 characters
+        using the same seeded random source.
+    */
+
+    for(
+        let i = puzzle.length - 1;
+        i > 0;
+        i--
+    ){
+
+        const j =
+            Math.floor(
+                random() *
+                (i + 1)
+            );
+
+
+        [
+            puzzle[i],
+            puzzle[j]
+        ] = [
+            puzzle[j],
+            puzzle[i]
+        ];
+
+    }
+
+
+    return puzzle;
 
 }
