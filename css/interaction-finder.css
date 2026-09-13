@@ -628,22 +628,21 @@
 
     color:white;
 
-    font-family:
-        "Roboto",
-        Arial,
-        sans-serif;
+font:
+    400 13px/1.45
+    "Roboto",
+    Arial,
+    sans-serif;
 
-    font-size:13px;
-    font-weight:400;
+font-style:normal;
 
-    line-height:1.45;
+letter-spacing:0;
+word-spacing:0;
 
-    letter-spacing:0;
+text-align:left;
+text-transform:none;
 
-    text-align:left;
-    text-transform:none;
-
-    white-space:normal;
+white-space:normal;
 
     box-shadow:
         0 8px 22px
