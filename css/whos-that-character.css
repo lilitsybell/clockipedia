@@ -1,4 +1,71 @@
 /* ==========================================
+   Completed Puzzle
+========================================== */
+
+.whos-that-character-completed-badge{
+    width:190px;
+    height:190px;
+
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+    justify-content:center;
+
+    position:relative;
+    z-index:3;
+
+    border:10px solid
+        var(--completed-score-color);
+
+    border-radius:50%;
+
+    background:white;
+
+    box-shadow:
+        0 12px 30px
+        rgba(13,24,33,.16);
+
+    text-align:center;
+}
+
+
+.whos-that-character-completed-label{
+    margin-bottom:3px;
+
+    color:var(--gray);
+
+    font-size:10px;
+    font-weight:900;
+    letter-spacing:.13em;
+
+    text-transform:uppercase;
+}
+
+
+.whos-that-character-completed-score{
+    color:
+        var(--completed-score-color);
+
+    font-family:
+        "Droid Sans",
+        Arial,
+        sans-serif;
+
+    font-size:76px;
+    font-weight:900;
+    line-height:.9;
+}
+
+
+.whos-that-character-completed-total{
+    margin-top:7px;
+
+    color:var(--black);
+
+    font-size:16px;
+    font-weight:900;
+}
+/* ==========================================
    Archive Scores
 ========================================== */
 
