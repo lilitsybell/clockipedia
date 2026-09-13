@@ -157,19 +157,10 @@ function loadWhosThatCharacterRound(){
     }
 
 
-    const [
-        slug,
-        character
-    ] =
-        whosThatCharacterGameCharacters[
-            whosThatCharacterIndex
-        ];
-
-
-    whosThatCharacterCurrent = {
-        slug,
-        ...character
-    };
+whosThatCharacterCurrent =
+    whosThatCharacterGameCharacters[
+        whosThatCharacterIndex
+    ];
 
 
     whosThatCharacterTries = 3;
