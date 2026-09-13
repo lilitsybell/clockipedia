@@ -50,13 +50,13 @@ document
             currentPath === linkPath;
 
 
-        // Character pages
-        if(
-            linkPath === "/characters.html" &&
-            currentPath.startsWith("/characters/")
-        ){
-            isActive = true;
-        }
+// Character pages
+if(
+    linkPath === "/characters.html" &&
+    currentPath === "/character.html"
+){
+    isActive = true;
+}
 
 
         // Game pages
