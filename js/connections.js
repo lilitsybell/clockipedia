@@ -2080,7 +2080,7 @@ function setupConnectionsArchive(){
 
     const backdrop =
         document.querySelector(
-            ".connections-archive-backdrop"
+            ".daily-archive-backdrop"
         );
 
     const previous =
