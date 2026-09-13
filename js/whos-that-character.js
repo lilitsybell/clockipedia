@@ -268,7 +268,17 @@ if(completedBadge){
     completedBadge.remove();
 
 }
+const shareButton =
+    document.querySelector(
+        "#whosThatCharacterShareButton"
+    );
 
+
+if(shareButton){
+
+    shareButton.remove();
+
+}
 
     if(
         whosThatCharacterIndex >=
@@ -2189,7 +2199,54 @@ resultBadge.innerHTML =
             / 30
         </span>
     `;
+let shareButton =
+    document.querySelector(
+        "#whosThatCharacterShareButton"
+    );
 
+
+if(!shareButton){
+
+    shareButton =
+        document.createElement(
+            "button"
+        );
+
+
+    shareButton.id =
+        "whosThatCharacterShareButton";
+
+
+    shareButton.className =
+        "site-button-secondary whos-that-character-share-button";
+
+
+    shareButton.type =
+        "button";
+
+
+    shareButton.textContent =
+        "Share Results";
+
+
+    const message =
+        document.querySelector(
+            "#whosThatCharacterMessage"
+        );
+
+
+    message.insertAdjacentElement(
+        "afterend",
+        shareButton
+    );
+
+
+    shareButton.addEventListener(
+        "click",
+        shareWhosThatCharacterResult
+    );
+
+}
 }
 function getWhosThatCharacterSingularTeam(
     team
@@ -2217,5 +2274,129 @@ function getWhosThatCharacterSingularTeam(
 
 
     return teams[team] || team;
+
+}
+/* ==========================================
+   Share Results
+========================================== */
+
+async function shareWhosThatCharacterResult(){
+
+    const saved =
+        getWhosThatCharacterResult(
+            whosThatCharacterPuzzleDate
+        );
+
+
+    if(
+        !saved ||
+        !saved.completed
+    ){
+        return;
+    }
+
+
+    const puzzleNumber =
+        getWhosThatCharacterPuzzleNumber(
+            whosThatCharacterPuzzleDate
+        );
+
+
+    const url =
+        "https://clockipedia.com/games/whos-that-character.html";
+
+
+    const text =
+`Who's That Character? #${puzzleNumber}
+I scored ${saved.score} / 30 points.
+
+${url}`;
+
+
+    /*
+       Use the device's native share menu
+       when available.
+    */
+
+    if(navigator.share){
+
+        try{
+
+            await navigator.share({
+                text
+            });
+
+
+            return;
+
+        }
+        catch(error){
+
+            if(
+                error.name ===
+                "AbortError"
+            ){
+                return;
+            }
+
+        }
+
+    }
+
+
+    /*
+       Otherwise copy the result.
+    */
+
+    try{
+
+        await navigator.clipboard.writeText(
+            text
+        );
+
+
+        showWhosThatCharacterShareConfirmation();
+
+    }
+    catch(error){
+
+        console.error(
+            "Could not share results:",
+            error
+        );
+
+    }
+
+}
+function showWhosThatCharacterShareConfirmation(){
+
+    const button =
+        document.querySelector(
+            "#whosThatCharacterShareButton"
+        );
+
+
+    if(!button){
+        return;
+    }
+
+
+    const originalText =
+        button.textContent;
+
+
+    button.textContent =
+        "Copied!";
+
+
+    setTimeout(
+        () => {
+
+            button.textContent =
+                originalText;
+
+        },
+        1600
+    );
 
 }
