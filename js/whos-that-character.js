@@ -1090,10 +1090,14 @@ function normalizeWhosThatCharacterTeam(
         Demon:"Demons",
         Demons:"Demons",
 
+        Traveller:"Travellers",
+        Travellers:"Travellers",
+
         Fabled:"Fabled",
 
         Loric:"Loric"
     };
+
 
     return teams[team] || null;
 
