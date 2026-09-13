@@ -21,7 +21,7 @@
                 "characters": ["balloonist", "devilsadvocate", "cacklejack", "alchemist"]}]},
     {"id": 23, "author": "Bell", "date": "2026-09-28",
         "groups": [
-            {"name": "affect vote count", "color": "yellow",
+            {"name": "affects vote count", "color": "yellow",
                 "characters": ["bureaucrat", "thief", "banshee", "godofug"]},
             {"name": "ability text includes \"think\"", "color": "green",
                 "characters": ["magician", "lunatic", "marionette", "drunk"]},
