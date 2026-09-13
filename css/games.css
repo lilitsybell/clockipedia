@@ -603,16 +603,23 @@ span[data-color="purple"]{
 
 .name-card-mini-row.guessed
 .name-card-mini-token{
-    background:var(--purple);
+    background:var(--traveller);
 }
 
+
+.name-card-mini-row.guessed:nth-child(3)
+.name-card-mini-token{
+    background:var(--lime);
+}
 
 .name-card-mini-row.guessed
 .name-card-mini-name{
-    background:
-        rgba(102,102,153,.65);
+    background:var(--traveller));
 }
-
+.name-card-mini-row.guessed:nth-child(3)
+.name-card-mini-name{
+    background:var(--lime);
+}
 
 /* ==========================================
    Name Every Character Content
@@ -804,7 +811,7 @@ span[data-color="purple"]{
     left:-35px;
     top:50%;
 
-    background:#aaa8cf;
+    background:var(--blue);
 
     transform:
         translateY(-50%)
@@ -821,7 +828,7 @@ span[data-color="purple"]{
     right:-35px;
     top:50%;
 
-    background:#aaa8cf;
+    background:var(--red);
 
     transform:
         translateY(-50%)
