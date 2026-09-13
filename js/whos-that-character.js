@@ -156,8 +156,8 @@ function loadWhosThatCharacterRound(){
     whosThatCharacterTries = 3;
 whosThatCharacterRotation =
     Math.floor(
-        Math.random() * 360
-    );
+        Math.random() * 361
+    ) - 180;
 
     showWhosThatCharacterSilhouette();
 
@@ -190,7 +190,7 @@ message.className =
 /* ==========================================
    Show Silhouette
 ========================================== */
-function showWhosThatCharacterSilhouette(){
+async function showWhosThatCharacterSilhouette(){
 
     const silhouette =
         document.querySelector(
@@ -203,11 +203,22 @@ function showWhosThatCharacterSilhouette(){
             "#whosThatCharacterReveal"
         );
 
+
+    const imageUrl =
+        whosThatCharacterCurrent.image;
+
+
+    /*
+       Hide everything while the new
+       character is prepared.
+    */
+
     silhouette.style.transition =
         "none";
 
     reveal.style.transition =
         "none";
+
 
     silhouette.style.opacity =
         "0";
@@ -216,39 +227,116 @@ function showWhosThatCharacterSilhouette(){
         "0";
 
 
+    /*
+       Preload the character artwork.
+       This prevents the black square from
+       appearing before the mask exists.
+    */
+
+    await new Promise(
+        resolve => {
+
+            const image =
+                new Image();
+
+
+            image.onload =
+                resolve;
+
+            image.onerror =
+                resolve;
+
+
+            image.src =
+                imageUrl;
+
+
+            if(image.complete){
+                resolve();
+            }
+
+        }
+    );
+
+
+    /*
+       Make sure we are still displaying
+       the same round.
+    */
+
+    if(
+        !whosThatCharacterCurrent ||
+        whosThatCharacterCurrent.image !== imageUrl
+    ){
+        return;
+    }
+
+
+    /*
+       Prepare the silhouette.
+    */
+
     silhouette.style.webkitMaskImage =
-        `url("${whosThatCharacterCurrent.image}")`;
+        `url("${imageUrl}")`;
 
     silhouette.style.maskImage =
-        `url("${whosThatCharacterCurrent.image}")`;
+        `url("${imageUrl}")`;
 
 
     silhouette.style.setProperty(
         "--character-image",
-        `url("${whosThatCharacterCurrent.image}")`
+        `url("${imageUrl}")`
     );
 
 
     silhouette.style.backgroundColor =
         "var(--black)";
 
+
     silhouette.style.transform =
         `rotate(${whosThatCharacterRotation}deg)`;
 
-    reveal.style.transform =
-        `rotate(${whosThatCharacterRotation}deg)`;
+
+    /*
+       Prepare the full artwork at
+       the exact same angle.
+    */
 
     reveal.src =
-        whosThatCharacterCurrent.image;
+        imageUrl;
+
 
     reveal.alt =
         whosThatCharacterCurrent.name;
 
+
+    reveal.style.transform =
+        `rotate(${whosThatCharacterRotation}deg)`;
+
+
+    /*
+       Force the browser to finish applying
+       the starting state.
+    */
+
     void silhouette.offsetWidth;
 
-    silhouette.style.transition = "";
 
-    reveal.style.transition = "";
+    /*
+       Turn transitions back on.
+    */
+
+    silhouette.style.transition =
+        "";
+
+    reveal.style.transition =
+        "";
+
+
+    /*
+       Now that the mask is ready,
+       show the silhouette.
+    */
 
     silhouette.style.opacity =
         "1";
@@ -339,10 +427,10 @@ function showWhosThatCharacterTeamColor(){
         );
 
 
-    silhouette.style.background =
-        getWhosThatCharacterTeamColor(
-            whosThatCharacterCurrent.team
-        );
+silhouette.style.backgroundColor =
+    getWhosThatCharacterTeamColor(
+        whosThatCharacterCurrent.team
+    );
 
 }
 /* ==========================================
