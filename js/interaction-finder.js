@@ -57,14 +57,46 @@ function updateURLCharacters(){
 function buildPage(){
     document.getElementById("interaction-finder").innerHTML = `
 <div class="finder-container">
-    <div class="selector-container">
-<div class="character-selector" id="selector1"></div>
-<div class="character-selector" id="selector2"></div>
-<div class="character-selector" id="selector3"></div>
-        <button id="clearButton">
-            Clear
-        </button>
+<div class="selector-container">
+
+    <div class="selector-heading">
+
+        <h2>
+            Select Characters
+        </h2>
+
+        <p>
+            Choose up to three characters to find their interactions.
+        </p>
+
     </div>
+
+
+    <div class="selector-fields">
+
+        <div
+            class="character-selector"
+            id="selector1"
+        ></div>
+
+        <div
+            class="character-selector"
+            id="selector2"
+        ></div>
+
+        <div
+            class="character-selector"
+            id="selector3"
+        ></div>
+
+    </div>
+
+
+    <button id="clearButton">
+        Clear
+    </button>
+
+</div>
 <div class="legend">
     <div class="legend-item">
         <span class="triangle green">▲</span>
