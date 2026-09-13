@@ -574,6 +574,14 @@ function revealWhosThatCharacter(){
         );
 
 
+    silhouette.style.transform =
+        "rotate(0deg)";
+
+
+    reveal.style.transform =
+        "rotate(0deg)";
+
+
     silhouette.classList.add(
         "revealed"
     );
