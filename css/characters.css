@@ -90,7 +90,6 @@
     margin-bottom:46px;
 }
 
-
 .character-team-heading{
     margin:
         0 0 18px;
@@ -113,6 +112,13 @@
     font-weight:400;
 }
 
+
+/* Space between teams / editions */
+
+.character-directory-grid
++ .character-team-heading{
+    margin-top:40px;
+}
 
 /* ==========================================
    Character Grid
