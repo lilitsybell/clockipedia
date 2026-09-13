@@ -176,7 +176,10 @@
 /* ==========================================
    Character Dropdown Results
 ========================================== */
-
+.selector-container{
+    position:relative;
+    z-index:10;
+}
 .character-results{
     position:absolute;
 
@@ -204,7 +207,11 @@
         rgba(13,24,33,.12);
 }
 
-
+.character-results{
+    position:absolute;
+    top:calc(100% + 6px);
+    left:0;
+    z-index:1000;
 .character-results .search-item{
     display:flex;
 
@@ -290,7 +297,10 @@
     background:white;
 }
 
-
+.legend{
+    position:relative;
+    z-index:1;
+}
 .legend-item{
     display:flex;
 
