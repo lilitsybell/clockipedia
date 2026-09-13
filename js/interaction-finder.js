@@ -72,29 +72,33 @@ function buildPage(){
     </div>
 
 
-    <div class="selector-fields">
+    <div class="selector-controls">
 
-        <div
-            class="character-selector"
-            id="selector1"
-        ></div>
+        <div class="selector-fields">
 
-        <div
-            class="character-selector"
-            id="selector2"
-        ></div>
+            <div
+                class="character-selector"
+                id="selector1"
+            ></div>
 
-        <div
-            class="character-selector"
-            id="selector3"
-        ></div>
+            <div
+                class="character-selector"
+                id="selector2"
+            ></div>
+
+            <div
+                class="character-selector"
+                id="selector3"
+            ></div>
+
+        </div>
+
+
+        <button id="clearButton">
+            Clear
+        </button>
 
     </div>
-
-
-    <button id="clearButton">
-        Clear
-    </button>
 
 </div>
 <div class="legend">
