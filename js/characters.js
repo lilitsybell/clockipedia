@@ -1,4 +1,4 @@
-console.log("characters.js updated 9/13/26 13:10");
+console.log("characters.js updated 9/13/26 13:13");
 let characters = {};
 const teamColors = {
     "Townsfolk":"blue",
@@ -87,24 +87,52 @@ function getCharacter(id){
     return characters[id];
 }
 function formatCharacters(text){
+
     // Preserve escaped brackets
     text = text
         .replace(/\[\[/g, "__LBRACKET__")
         .replace(/\]\]/g, "__RBRACKET__");
-    text = text.replace(/\[(.*?)\]/g, (_, character)=>{
-        const slug = getSlug(character);
-        const linkedCharacter = getCharacter(slug);
-        let team = "default";
-        if(linkedCharacter){
-            team = teamColors[linkedCharacter.team] || "default";
+
+
+    text = text.replace(
+        /\[(.*?)\]/g,
+        (_, character) => {
+
+            const slug =
+                getSlug(character);
+
+            const linkedCharacter =
+                getCharacter(slug);
+
+            let team = "default";
+
+
+            if(linkedCharacter){
+
+                team =
+                    teamColors[
+                        linkedCharacter.team
+                    ] || "default";
+
+            }
+
+
+            return `<a href="character.html?id=${slug}" class="character-link ${team}" data-character="${slug}">${character}</a>`;
+
         }
-return `<a
-    href="character.html?id=${slug}"
-    class="character-link ${team}"
-    data-character="${slug}">${character}</a>`;
+    );
+
+
     return text
-        .replace(/__LBRACKET__/g, "[")
-        .replace(/__RBRACKET__/g, "]");
+        .replace(
+            /__LBRACKET__/g,
+            "["
+        )
+        .replace(
+            /__RBRACKET__/g,
+            "]"
+        );
+
 }
 function getCharacters(text){
     text = text
