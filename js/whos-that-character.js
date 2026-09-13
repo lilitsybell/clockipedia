@@ -996,6 +996,18 @@ function renderWhosThatCharacterArchive(){
         );
 
 
+    const previous =
+        document.querySelector(
+            "#whosThatCharacterArchivePrevious"
+        );
+
+
+    const next =
+        document.querySelector(
+            "#whosThatCharacterArchiveNext"
+        );
+
+
     const year =
         whosThatCharacterArchiveDate
             .getFullYear();
@@ -1015,6 +1027,23 @@ function renderWhosThatCharacterArchive(){
                     year:"numeric"
                 }
             );
+
+
+    const today =
+        new Date();
+
+
+    const currentMonth =
+        new Date(
+            today.getFullYear(),
+            today.getMonth(),
+            1
+        );
+
+
+    next.disabled =
+        whosThatCharacterArchiveDate >=
+        currentMonth;
 
 
     calendar.innerHTML =
