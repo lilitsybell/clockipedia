@@ -567,7 +567,6 @@
 /* ==========================================
    Mathematician Triangle
 ========================================== */
-
 .math-triangle{
     position:relative;
 
@@ -575,24 +574,16 @@
     height:30px;
 
     display:flex;
-
     align-items:center;
     justify-content:center;
 
     color:var(--purple);
 
+    font-size:21px;
+    line-height:1;
+
     cursor:help;
 }
-
-
-.math-triangle::before{
-    content:"▲";
-
-    font-size:21px;
-
-    line-height:1;
-}
-
 
 .math-triangle.green{
     color:var(--lime);
@@ -684,18 +675,22 @@
         translateY(0);
 }
 
+/* ==========================================
+   Tooltip Arrow
+========================================== */
 
-/* tooltip arrow for question button */
-
-.info-popup::before{
+.info-popup::before,
+.math-triangle::before{
     content:"";
 
     position:absolute;
 
     z-index:5001;
 
-    top:-10px;
-    right:9px;
+    bottom:
+        calc(100% + 5px);
+
+    right:7px;
 
     border-left:
         5px solid transparent;
@@ -714,12 +709,12 @@
 }
 
 
-.info-popup:hover::before{
+.info-popup:hover::before,
+.math-triangle:hover::before{
     opacity:1;
 
     visibility:visible;
 }
-
 
 /* ==========================================
    Empty Results
