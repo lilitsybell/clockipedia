@@ -57,9 +57,6 @@ function updateURLCharacters(){
 function buildPage(){
     document.getElementById("interaction-finder").innerHTML = `
 <div class="finder-container">
-    <div class="finder-header">
-        Interaction Finder
-    </div>
     <div class="selector-container">
 <div class="character-selector" id="selector1"></div>
 <div class="character-selector" id="selector2"></div>
