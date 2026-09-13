@@ -357,32 +357,21 @@ async function showWhosThatCharacterSilhouette(){
    Normalize Guess
 ========================================== */
 
-function normalizeWhosThatCharacterTeam(
-    team
+function normalizeWhosThatCharacterGuess(
+    text
 ){
 
-    const teams = {
-        Townsfolk:"Townsfolk",
-
-        Outsider:"Outsiders",
-        Outsiders:"Outsiders",
-
-        Minion:"Minions",
-        Minions:"Minions",
-
-        Demon:"Demons",
-        Demons:"Demons",
-
-        Traveller:"Travellers",
-        Travellers:"Travellers",
-
-        Fabled:"Fabled",
-
-        Loric:"Loric"
-    };
-
-
-    return teams[team] || null;
+    return text
+        .toLowerCase()
+        .normalize("NFD")
+        .replace(
+            /[\u0300-\u036f]/g,
+            ""
+        )
+        .replace(
+            /[^a-z0-9]/g,
+            ""
+        );
 
 }
 
