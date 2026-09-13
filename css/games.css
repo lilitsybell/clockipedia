@@ -786,30 +786,34 @@ span[data-color="purple"]{
 .whos-card-character{
     position:absolute;
 
-    -webkit-mask-image:
-        var(--card-character-image);
+    display:flex;
+    align-items:center;
+    justify-content:center;
 
-    mask-image:
-        var(--card-character-image);
+    filter:
+        drop-shadow(4px 0 0 white)
+        drop-shadow(-4px 0 0 white)
+        drop-shadow(0 4px 0 white)
+        drop-shadow(0 -4px 0 white)
+        drop-shadow(3px 3px 0 white)
+        drop-shadow(-3px 3px 0 white)
+        drop-shadow(3px -3px 0 white)
+        drop-shadow(-3px -3px 0 white);
+}
 
-    -webkit-mask-size:contain;
-    mask-size:contain;
 
-    -webkit-mask-position:center;
-    mask-position:center;
+.whos-card-character img{
+    width:100%;
+    height:100%;
 
-    -webkit-mask-repeat:no-repeat;
-    mask-repeat:no-repeat;
+    display:block;
 
-filter:
-    drop-shadow(4px 0 0 white)
-    drop-shadow(-4px 0 0 white)
-    drop-shadow(0 4px 0 white)
-    drop-shadow(0 -4px 0 white)
-    drop-shadow(3px 3px 0 white)
-    drop-shadow(-3px 3px 0 white)
-    drop-shadow(3px -3px 0 white)
-    drop-shadow(-3px -3px 0 white);
+    object-fit:contain;
+}
+.whos-card-character img{
+    filter:
+        brightness(0)
+        saturate(100%);
 }
 
 .whos-card-character-left{
