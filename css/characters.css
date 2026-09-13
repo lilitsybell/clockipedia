@@ -1,0 +1,351 @@
+/* ==========================================
+   Character Library Controls
+========================================== */
+
+.character-library-controls{
+    display:flex;
+
+    align-items:center;
+    justify-content:flex-end;
+
+    margin-bottom:24px;
+}
+
+
+.character-library-sort{
+    display:flex;
+
+    align-items:center;
+
+    gap:8px;
+}
+
+
+.character-library-sort label{
+    color:var(--gray);
+
+    font-size:13px;
+    font-weight:700;
+}
+
+
+.character-library-sort select{
+    height:40px;
+
+    padding:
+        0 34px
+        0 12px;
+
+    border:
+        1px solid
+        #d8d8e1;
+
+    border-radius:9px;
+
+    background:white;
+
+    color:var(--black);
+
+    font-family:
+        "Roboto",
+        Arial,
+        sans-serif;
+
+    font-size:14px;
+
+    outline:none;
+
+    cursor:pointer;
+
+    transition:
+        border-color .15s ease,
+        box-shadow .15s ease;
+}
+
+
+.character-library-sort select:focus{
+    border-color:var(--purple);
+
+    box-shadow:
+        0 0 0 2px
+        rgba(102,102,153,.10);
+}
+
+
+/* ==========================================
+   Character Library
+========================================== */
+
+#characterLibrary{
+    width:100%;
+}
+
+
+/* ==========================================
+   Team Sections
+========================================== */
+
+.character-team-section{
+    margin-bottom:46px;
+}
+
+
+.character-team-heading{
+    margin:
+        0 0 18px;
+
+    padding-bottom:9px;
+
+    border-bottom:
+        2px solid
+        var(--purple);
+
+    color:var(--black);
+
+    font-family:
+        "Droid Sans",
+        Arial,
+        sans-serif;
+
+    font-size:25px;
+
+    font-weight:400;
+}
+
+
+/* ==========================================
+   Character Grid
+========================================== */
+
+.character-directory-grid{
+    display:grid;
+
+    grid-template-columns:
+        repeat(4, minmax(0, 1fr));
+
+    gap:16px;
+}
+
+
+/* ==========================================
+   Character Cards
+========================================== */
+
+.character-directory-card{
+    --team-color:var(--purple);
+
+    min-width:0;
+
+    display:flex;
+
+    flex-direction:column;
+
+    padding:
+        18px 18px
+        17px;
+
+    border:
+        1px solid
+        var(--border);
+
+    border-top:
+        4px solid
+        var(--team-color);
+
+    border-radius:14px;
+
+    background:white;
+
+    color:var(--black);
+
+    text-decoration:none;
+
+    box-shadow:
+        0 5px 16px
+        rgba(13,24,33,.06);
+
+    transition:
+        transform .15s ease,
+        box-shadow .15s ease,
+        border-color .15s ease;
+}
+
+
+.character-directory-card:hover{
+    transform:
+        translateY(-2px);
+
+    box-shadow:
+        0 8px 20px
+        rgba(13,24,33,.10);
+}
+
+
+/* ==========================================
+   Team Colors
+========================================== */
+
+.character-directory-card.blue{
+    --team-color:var(--blue);
+}
+
+
+.character-directory-card.red{
+    --team-color:var(--red);
+}
+
+
+.character-directory-card.traveller{
+    --team-color:var(--traveller);
+}
+
+
+.character-directory-card.lime{
+    --team-color:var(--lime);
+}
+
+
+.character-directory-card.copper{
+    --team-color:var(--copper);
+}
+
+
+.character-directory-card.purple{
+    --team-color:var(--purple);
+}
+
+
+/* ==========================================
+   Character Artwork
+========================================== */
+
+.character-directory-icon{
+    width:115px;
+    height:115px;
+
+    align-self:center;
+
+    margin-bottom:12px;
+
+    object-fit:contain;
+}
+
+
+/* ==========================================
+   Character Content
+========================================== */
+
+.character-directory-content{
+    min-width:0;
+
+    display:flex;
+
+    flex:1;
+
+    flex-direction:column;
+}
+
+
+.character-directory-card h2{
+    margin:
+        0 0 7px;
+
+    color:
+        var(--team-color);
+
+    font-size:19px;
+
+    line-height:1.15;
+}
+
+
+.character-directory-ability{
+    margin:
+        0 0 14px;
+
+    color:#444;
+
+    font-size:13px;
+
+    line-height:1.45;
+}
+
+
+/* ==========================================
+   Character Tags
+========================================== */
+
+.character-directory-tags{
+    display:flex;
+
+    flex-wrap:wrap;
+
+    gap:5px;
+
+    margin-top:auto;
+}
+
+
+.character-directory-tag{
+    padding:
+        4px 8px;
+
+    border-radius:999px;
+
+    background:
+        rgba(13,24,33,.055);
+
+    color:#666;
+
+    font-size:10px;
+
+    line-height:1;
+}
+
+
+/* ==========================================
+   Responsive
+========================================== */
+
+@media(max-width:1050px){
+
+    .character-directory-grid{
+        grid-template-columns:
+            repeat(3, minmax(0, 1fr));
+    }
+
+}
+
+
+@media(max-width:800px){
+
+    .character-directory-grid{
+        grid-template-columns:
+            repeat(2, minmax(0, 1fr));
+    }
+
+}
+
+
+@media(max-width:550px){
+
+    .character-library-controls{
+        justify-content:stretch;
+    }
+
+
+    .character-library-sort{
+        width:100%;
+    }
+
+
+    .character-library-sort select{
+        flex:1;
+    }
+
+
+    .character-directory-grid{
+        grid-template-columns:1fr;
+    }
+
+}
