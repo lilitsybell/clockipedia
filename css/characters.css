@@ -1,14 +1,12 @@
 /* ==========================================
    Character Library Controls
 ========================================== */
-
 .character-library-controls{
     display:flex;
 
     align-items:center;
-    justify-content:flex-end;
 
-    margin-bottom:24px;
+    margin-bottom:18px;
 }
 
 
@@ -24,10 +22,13 @@
 .character-library-sort label{
     color:var(--gray);
 
-    font-size:13px;
-    font-weight:700;
-}
+    font-size:11px;
+    font-weight:800;
 
+    letter-spacing:.05em;
+
+    text-transform:uppercase;
+}
 
 .character-library-sort select{
     height:40px;
