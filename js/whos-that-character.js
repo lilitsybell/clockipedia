@@ -657,7 +657,25 @@ input.disabled =
 whosThatCharacterIndex++;
 
 
-saveWhosThatCharacterState();
+whosThatCharacterTries =
+    3;
+
+
+if(
+    whosThatCharacterIndex >=
+    whosThatCharacterGameLength
+){
+
+    saveWhosThatCharacterState(
+        true
+    );
+
+}
+else{
+
+    saveWhosThatCharacterState();
+
+}
 
 
 setTimeout(
@@ -770,7 +788,25 @@ input.disabled = true;
 whosThatCharacterIndex++;
 
 
-saveWhosThatCharacterState();
+whosThatCharacterTries =
+    3;
+
+
+if(
+    whosThatCharacterIndex >=
+    whosThatCharacterGameLength
+){
+
+    saveWhosThatCharacterState(
+        true
+    );
+
+}
+else{
+
+    saveWhosThatCharacterState();
+
+}
 
 
 setTimeout(
