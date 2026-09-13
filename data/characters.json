@@ -948,18 +948,19 @@
     "flavor": "Come inside, fair traveller, and rest your weary bones. Drink and be merry, for the legions of the Dark One shall not harass thee tonight.",
     "purpose": "The [Innkeeper] protects two players from death every night, but causes one of them to be drunk.",
     "summary": [
-             "ComingSoon",
-             "ComingSoon"
+             "The [Innkeeper] protects two players from dying in any way that night, but one of those players becomes drunk in the process.",
+             "Players chosen by the [Innkeeper] are only safe at night."
              ],
     "run": {
            "Other Nights": [
-                "ComingSoon",
-                "ComingSoon"
+                "The [Innkeeper] chooses 2 players.",
+                "Neither of these players can die that night.",
+                "One of these players, chosen by the Storyteller, is immediately drunk until dusk."
                 ]
            },
     "examples": [
-                "ComingSoon",
-                "ComingSoon"
+                "The [Innkeeper] chooses the [Fisherman] and the [Kazali] players. The [Fisherman] is made drunk until dusk. The next day, the [Fisherman] uses their ability and receives false advice. The [Fisherman] is executed and dies.",
+                "The [Innkeeper] chooses the [Exorcist] and the [Choirboy] players. The [Exorcist] is made drunk until dusk. The [Vigormortis] chooses the [Exorcist] player, but the [Exorcist] does not die."
                 ],
     "tags": ["Droisoning", "Death"],
     "edition": "Bad Moon Rising"
