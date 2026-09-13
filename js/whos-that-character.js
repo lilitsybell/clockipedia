@@ -20,7 +20,7 @@ let whosThatCharacterRotation = 0;
 let whosThatCharacterArchiveDate = null;
 
 const whosThatCharacterStartDate =
-    "2026-09-07";
+    "2026-09-01";
 
 let whosThatCharacterPuzzleDate =
     getWhosThatCharacterToday();
@@ -987,8 +987,10 @@ saveWhosThatCharacterState(
         true;
 
 
-    message.textContent =
-        `Game complete! Final score: ${whosThatCharacterScore} / 30`;
+showWhosThatCharacterCompletedState({
+    completed:true,
+    score:whosThatCharacterScore
+});
 
 }
 /* ==========================================
