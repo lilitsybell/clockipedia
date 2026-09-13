@@ -787,22 +787,16 @@ span[data-color="purple"]{
    Who's That Character Silhouettes
 ========================================== */
 
-.whos-card-character{
+.whos-card-preview{
     position:absolute;
-
-    display:flex;
-    align-items:center;
-    justify-content:center;
-
-    background:transparent;
 }
 
 
-.whos-card-character-shape{
-    position:absolute;
-
+.whos-card-preview-shape{
     width:100%;
     height:100%;
+
+    background:var(--character-color);
 
     -webkit-mask-image:
         var(--card-character-image);
@@ -821,43 +815,7 @@ span[data-color="purple"]{
 }
 
 
-.whos-card-character-outline{
-    z-index:1;
-
-    background:white;
-
-    transform:scale(1.08);
-}
-
-
-.whos-card-character-fill{
-    z-index:2;
-
-    background:
-        var(--character-color);
-}
-
-.whos-card-character-image{
-    width:100%;
-    height:100%;
-
-    display:block;
-
-    object-fit:contain;
-
-    filter:
-        drop-shadow(3px 0 0 white)
-        drop-shadow(-3px 0 0 white)
-        drop-shadow(0 3px 0 white)
-        drop-shadow(0 -3px 0 white)
-        drop-shadow(2px 2px 0 white)
-        drop-shadow(-2px 2px 0 white)
-        drop-shadow(2px -2px 0 white)
-        drop-shadow(-2px -2px 0 white);
-}
-/* Poppy Grower */
-
-.whos-card-character-left{
+.whos-card-preview-left{
     z-index:2;
 
     width:175px;
@@ -866,8 +824,7 @@ span[data-color="purple"]{
     left:-38px;
     top:50%;
 
-    --character-color:
-        var(--blue);
+    --character-color:var(--blue);
 
     transform:
         translateY(-50%)
@@ -875,9 +832,7 @@ span[data-color="purple"]{
 }
 
 
-/* Organ Grinder */
-
-.whos-card-character-right{
+.whos-card-preview-right{
     z-index:2;
 
     width:175px;
@@ -886,8 +841,7 @@ span[data-color="purple"]{
     right:-38px;
     top:50%;
 
-    --character-color:
-        var(--red);
+    --character-color:var(--red);
 
     transform:
         translateY(-50%)
@@ -895,9 +849,7 @@ span[data-color="purple"]{
 }
 
 
-/* No Dashii */
-
-.whos-card-character-center{
+.whos-card-preview-center{
     z-index:3;
 
     width:185px;
@@ -906,13 +858,14 @@ span[data-color="purple"]{
     left:50%;
     top:50%;
 
-    --character-color:
-        var(--purple);
+    --character-color:var(--purple);
 
     transform:
         translate(-50%,-50%)
         rotate(-4deg);
 }
+
+
 .whos-card-question{
     position:absolute;
 
@@ -933,7 +886,6 @@ span[data-color="purple"]{
 
     font-size:68px;
     font-weight:900;
-
     line-height:1;
 
     pointer-events:none;
