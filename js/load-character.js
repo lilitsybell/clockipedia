@@ -13,23 +13,43 @@ await loadInteractions();
         document.getElementById("character").innerHTML = `
         <div class="wiki ${teamColors[character.team]}">
 <div class="character-header">
+
+    <img
+        class="character-header-background"
+        src="${character.image}"
+        alt=""
+        aria-hidden="true"
+    >
+
     <div class="character-title">
-<h1 class="${teamColors[character.team]}">
-<span 
-    class="character-link ${teamColors[character.team]}"
-    data-character="${characterID}"
->
-    ${character.name}
-</span>
-<span class="character-team">
-    (${singularTeam(character.team)})
-</span>
+
+        <h1 class="${teamColors[character.team]}">
+
+            <span 
+                class="character-link ${teamColors[character.team]}"
+                data-character="${characterID}"
+            >
+                ${character.name}
+            </span>
+
+            <span class="character-team">
+                (${singularTeam(character.team)})
+            </span>
+
         </h1>
+
         <p class="character-ability">
             "${character.ability}"
         </p>
+
     </div>
-    <img src="${character.image}">
+
+    <img
+        class="character-header-art"
+        src="${character.image}"
+        alt="${character.name}"
+    >
+
 </div>
             <div class="tabs">
                 <div class="tab active" onclick="showPage(0)">
