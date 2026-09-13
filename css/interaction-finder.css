@@ -424,47 +424,6 @@
         rgba(13,24,33,.08);
 }
 
-
-/* ==========================================
-   Interaction Team Colors
-========================================== */
-
-.interaction-card.blue{
-    border-left-color:
-        var(--blue);
-}
-
-
-.interaction-card.red{
-    border-left-color:
-        var(--red);
-}
-
-
-.interaction-card.purple{
-    border-left-color:
-        var(--purple);
-}
-
-
-.interaction-card.traveller{
-    border-left-color:
-        var(--traveller);
-}
-
-
-.interaction-card.lime{
-    border-left-color:
-        var(--lime);
-}
-
-
-.interaction-card.copper{
-    border-left-color:
-        var(--copper);
-}
-
-
 /* ==========================================
    Interaction Text
 ========================================== */
