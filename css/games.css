@@ -614,7 +614,7 @@ span[data-color="purple"]{
 
 .name-card-mini-row.guessed
 .name-card-mini-name{
-    background:var(--traveller));
+    background:var(--traveller);
 }
 .name-card-mini-row.guessed:nth-child(3)
 .name-card-mini-name{
