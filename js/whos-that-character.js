@@ -17,6 +17,8 @@ const whosThatCharacterGameLength = 10;
 
 let whosThatCharacterRotation = 0;
 
+let whosThatCharacterArchiveDate = null;
+
 
 /* ==========================================
    Start Game
@@ -31,7 +33,7 @@ document.addEventListener(
             await loadCharacters();
 
 setupWhosThatCharacterGame();
-
+setupWhosThatCharacterArchive();
 startWhosThatCharacterGame();
 
         }
@@ -783,5 +785,189 @@ function finishWhosThatCharacterGame(){
 
     message.textContent =
         `Game complete! Final score: ${whosThatCharacterScore} / 30`;
+
+}
+/* ==========================================
+   Archive Setup
+========================================== */
+
+function setupWhosThatCharacterArchive(){
+
+    const openButton =
+        document.querySelector(
+            "#whosThatCharacterArchiveButton"
+        );
+
+    const closeButton =
+        document.querySelector(
+            "#whosThatCharacterArchiveClose"
+        );
+
+    const backdrop =
+        document.querySelector(
+            ".daily-archive-backdrop"
+        );
+
+    const previous =
+        document.querySelector(
+            "#whosThatCharacterArchivePrevious"
+        );
+
+    const next =
+        document.querySelector(
+            "#whosThatCharacterArchiveNext"
+        );
+
+    const todayButton =
+        document.querySelector(
+            "#whosThatCharacterArchiveToday"
+        );
+
+
+    openButton.addEventListener(
+        "click",
+        openWhosThatCharacterArchive
+    );
+
+
+    closeButton.addEventListener(
+        "click",
+        closeWhosThatCharacterArchive
+    );
+
+
+    backdrop.addEventListener(
+        "click",
+        closeWhosThatCharacterArchive
+    );
+
+
+    previous.addEventListener(
+        "click",
+        () => {
+
+            whosThatCharacterArchiveDate =
+                new Date(
+                    whosThatCharacterArchiveDate
+                        .getFullYear(),
+                    whosThatCharacterArchiveDate
+                        .getMonth() - 1,
+                    1
+                );
+
+            renderWhosThatCharacterArchive();
+
+        }
+    );
+
+
+    next.addEventListener(
+        "click",
+        () => {
+
+            whosThatCharacterArchiveDate =
+                new Date(
+                    whosThatCharacterArchiveDate
+                        .getFullYear(),
+                    whosThatCharacterArchiveDate
+                        .getMonth() + 1,
+                    1
+                );
+
+            renderWhosThatCharacterArchive();
+
+        }
+    );
+
+
+    todayButton.addEventListener(
+        "click",
+        () => {
+
+            whosThatCharacterArchiveDate =
+                new Date(
+                    new Date().getFullYear(),
+                    new Date().getMonth(),
+                    1
+                );
+
+            renderWhosThatCharacterArchive();
+
+        }
+    );
+
+
+    document.addEventListener(
+        "keydown",
+        event => {
+
+            if(event.key === "Escape"){
+                closeWhosThatCharacterArchive();
+            }
+
+        }
+    );
+
+}
+/* ==========================================
+   Open / Close Archive
+========================================== */
+
+function openWhosThatCharacterArchive(){
+
+    const modal =
+        document.querySelector(
+            "#whosThatCharacterArchiveModal"
+        );
+
+    const now =
+        new Date();
+
+    whosThatCharacterArchiveDate =
+        new Date(
+            now.getFullYear(),
+            now.getMonth(),
+            1
+        );
+
+    modal.hidden =
+        false;
+
+    renderWhosThatCharacterArchive();
+
+}
+
+
+function closeWhosThatCharacterArchive(){
+
+    const modal =
+        document.querySelector(
+            "#whosThatCharacterArchiveModal"
+        );
+
+    modal.hidden =
+        true;
+
+}
+/* ==========================================
+   Render Archive
+========================================== */
+
+function renderWhosThatCharacterArchive(){
+
+    const heading =
+        document.querySelector(
+            "#whosThatCharacterArchiveMonth"
+        );
+
+    heading.textContent =
+        whosThatCharacterArchiveDate
+            .toLocaleDateString(
+                "en-US",
+                {
+                    month:"long",
+                    year:"numeric"
+                }
+            );
 
 }
