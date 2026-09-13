@@ -1,4 +1,4 @@
-console.log("characters.js updated 9/13/26 13:05");
+console.log("characters.js updated 9/13/26 13:10");
 let characters = {};
 const teamColors = {
     "Townsfolk":"blue",
@@ -99,10 +99,9 @@ function formatCharacters(text){
             team = teamColors[linkedCharacter.team] || "default";
         }
 return `<a
-    href="/characters/${slug}.html"
+    href="character.html?id=${slug}"
     class="character-link ${team}"
     data-character="${slug}">${character}</a>`;
-    });
     return text
         .replace(/__LBRACKET__/g, "[")
         .replace(/__RBRACKET__/g, "]");
