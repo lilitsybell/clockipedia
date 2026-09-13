@@ -800,6 +800,16 @@ span[data-color="purple"]{
 
     -webkit-mask-repeat:no-repeat;
     mask-repeat:no-repeat;
+
+filter:
+    drop-shadow(4px 0 0 white)
+    drop-shadow(-4px 0 0 white)
+    drop-shadow(0 4px 0 white)
+    drop-shadow(0 -4px 0 white)
+    drop-shadow(3px 3px 0 white)
+    drop-shadow(-3px 3px 0 white)
+    drop-shadow(3px -3px 0 white)
+    drop-shadow(-3px -3px 0 white);
 }
 
 .whos-card-character-left{
@@ -854,12 +864,6 @@ span[data-color="purple"]{
     transform:
         translate(-50%,-50%)
         rotate(-4deg);
-
-    filter:
-        drop-shadow(
-            0 7px 8px
-            rgba(13,24,33,.16)
-        );
 }
 .whos-card-question{
     position:absolute;
