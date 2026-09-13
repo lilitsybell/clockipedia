@@ -272,3 +272,56 @@
     font-variant-numeric:
         tabular-nums;
 }
+.whos-that-character-rays{
+    position:absolute;
+
+    width:520px;
+    height:520px;
+
+    border-radius:50%;
+
+    background:
+        repeating-conic-gradient(
+            from 0deg,
+            rgba(102,102,153,.28) 0deg 10deg,
+            transparent 10deg 22deg
+        );
+
+    animation:
+        whosThatCharacterRaysSpin 18s linear infinite,
+        whosThatCharacterRaysPulse 3s ease-in-out infinite alternate;
+
+    pointer-events:none;
+}
+
+
+@keyframes whosThatCharacterRaysSpin{
+
+    from{
+        transform:
+            rotate(0deg)
+            scale(1);
+    }
+
+    to{
+        transform:
+            rotate(360deg)
+            scale(1);
+    }
+
+}
+
+
+@keyframes whosThatCharacterRaysPulse{
+
+    from{
+        width:480px;
+        height:480px;
+    }
+
+    to{
+        width:560px;
+        height:560px;
+    }
+
+}
