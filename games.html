@@ -17,7 +17,45 @@
 
 
 <body>
+<svg
+    width="0"
+    height="0"
+    style="position:absolute"
+    aria-hidden="true"
+>
+    <filter id="whos-card-outline">
+        <feMorphology
+            in="SourceAlpha"
+            operator="dilate"
+            radius="3"
+            result="expanded"
+        />
 
+        <feFlood
+            flood-color="white"
+            result="white"
+        />
+
+        <feComposite
+            in="white"
+            in2="expanded"
+            operator="in"
+            result="outline"
+        />
+
+        <feComposite
+            in="outline"
+            in2="SourceAlpha"
+            operator="out"
+            result="outlineOnly"
+        />
+
+        <feMerge>
+            <feMergeNode in="outlineOnly" />
+            <feMergeNode in="SourceGraphic" />
+        </feMerge>
+    </filter>
+</svg>
 
     <div id="sidebar"></div>
 
