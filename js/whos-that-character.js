@@ -2105,12 +2105,75 @@ function showWhosThatCharacterCompletedState(
         `Game complete! Final score: ${saved.score} / 30`;
 
 
-    silhouette.style.opacity =
-        "0";
+silhouette.style.opacity =
+    "0";
 
 
-    reveal.style.opacity =
-        "0";
+reveal.style.opacity =
+    "0";
+
+
+let resultBadge =
+    document.querySelector(
+        "#whosThatCharacterCompletedBadge"
+    );
+
+
+if(!resultBadge){
+
+    resultBadge =
+        document.createElement(
+            "div"
+        );
+
+
+    resultBadge.id =
+        "whosThatCharacterCompletedBadge";
+
+
+    resultBadge.className =
+        "whos-that-character-completed-badge";
+
+
+    const imageCard =
+        document.querySelector(
+            ".whos-that-character-image-card"
+        );
+
+
+    imageCard.appendChild(
+        resultBadge
+    );
+
+}
+
+
+resultBadge.hidden =
+    false;
+
+
+resultBadge.style.setProperty(
+    "--completed-score-color",
+    getWhosThatCharacterScoreColor(
+        saved.score
+    )
+);
+
+
+resultBadge.innerHTML =
+    `
+        <span class="whos-that-character-completed-label">
+            Final Score
+        </span>
+
+        <strong class="whos-that-character-completed-score">
+            ${saved.score}
+        </strong>
+
+        <span class="whos-that-character-completed-total">
+            / 30
+        </span>
+    `;
 
 }
 function getWhosThatCharacterSingularTeam(
