@@ -269,17 +269,19 @@
 /* ==========================================
    Legend
 ========================================== */
-
 .legend{
     display:flex;
+
+    align-items:center;
+    justify-content:center;
 
     flex-wrap:wrap;
 
     gap:
-        8px 18px;
+        10px 24px;
 
     padding:
-        16px 28px;
+        18px 28px;
 
     border-bottom:
         1px solid
@@ -294,11 +296,11 @@
 
     align-items:center;
 
-    gap:6px;
+    gap:7px;
 
     color:var(--gray);
 
-    font-size:11px;
+    font-size:13px;
 }
 
 
@@ -306,9 +308,9 @@
     color:var(--black);
 }
 
+.legend .triangle{
+    font-size:13px;
 
-.triangle{
-    font-size:11px;
     line-height:1;
 }
 
@@ -466,7 +468,7 @@
 
     color:var(--black);
 
-    font-size:14px;
+    font-size:16px;
 
     line-height:1.55;
 }
@@ -541,24 +543,20 @@
 ========================================== */
 
 .math-triangle{
-    width:0;
-    height:0;
+    position:relative;
+
+    width:20px;
+    height:20px;
 
     display:block;
-
-    border-left:
-        9px solid transparent;
-
-    border-right:
-        9px solid transparent;
-
-    border-bottom:
-        16px solid
-        var(--purple);
 
     cursor:help;
 }
 
+
+.math-triangle::after{
+    /* tooltip rules above still apply */
+}
 
 .math-triangle.green{
     border-bottom-color:
@@ -614,4 +612,278 @@
         font-size:13px;
     }
 
+}
+/* ==========================================
+   Selector Area
+========================================== */
+
+.selector-container{
+    position:relative;
+
+    overflow:hidden;
+
+    padding:22px 28px;
+
+    border-bottom:
+        1px solid var(--border);
+
+    background:
+        rgba(102,102,153,.08);
+}
+
+
+/* faint Clockipedia logo */
+
+.selector-container::after{
+    content:"";
+
+    position:absolute;
+
+    top:50%;
+    right:20px;
+
+    width:240px;
+    height:150px;
+
+    transform:
+        translateY(-50%);
+
+    background:
+        url("/images/clockipedia-logo.png")
+        center / contain
+        no-repeat;
+
+    opacity:.045;
+
+    pointer-events:none;
+}
+
+
+.selector-heading,
+.selector-controls{
+    position:relative;
+
+    z-index:1;
+}
+
+
+/* ==========================================
+   Selector Heading
+========================================== */
+
+.selector-heading{
+    margin-bottom:18px;
+}
+
+
+.selector-heading h2{
+    margin:0 0 5px;
+
+    color:var(--black);
+
+    font-size:20px;
+
+    line-height:1.1;
+}
+
+
+.selector-heading p{
+    margin:0;
+
+    color:var(--gray);
+
+    font-size:13px;
+
+    line-height:1.45;
+}
+
+
+/* ==========================================
+   Selector Controls
+========================================== */
+
+.selector-controls{
+    display:grid;
+
+    grid-template-columns:
+        minmax(0, 1fr)
+        90px;
+
+    gap:10px;
+}
+
+
+.selector-fields{
+    display:grid;
+
+    grid-template-columns:
+        repeat(3, minmax(0, 1fr));
+
+    gap:10px;
+}
+
+
+#clearButton{
+    width:90px;
+    height:44px;
+
+    margin:0;
+
+    padding:0 16px;
+
+    border:
+        1.5px solid
+        var(--purple);
+
+    border-radius:9px;
+
+    background:white;
+
+    color:var(--purple);
+
+    font-size:10px;
+    font-weight:900;
+
+    letter-spacing:.06em;
+
+    text-transform:uppercase;
+
+    cursor:pointer;
+
+    transition:
+        background .15s ease;
+}
+
+
+#clearButton:hover{
+    background:#f3f1f8;
+}
+/* ==========================================
+   Interaction Tooltips
+========================================== */
+
+.info-popup,
+.math-triangle{
+    position:relative;
+}
+
+
+/* tooltip box */
+
+.info-popup::after,
+.math-triangle::after{
+    content:
+        attr(data-info);
+
+    position:absolute;
+
+    z-index:100;
+
+    bottom:
+        calc(100% + 10px);
+
+    left:50%;
+
+    width:260px;
+
+    padding:
+        10px 12px;
+
+    transform:
+        translateX(-50%)
+        translateY(4px);
+
+    border:
+        1px solid
+        rgba(102,102,153,.18);
+
+    border-radius:9px;
+
+    background:
+        var(--black);
+
+    color:white;
+
+    font-size:12px;
+    font-weight:400;
+
+    line-height:1.45;
+
+    text-align:left;
+
+    white-space:normal;
+
+    box-shadow:
+        0 8px 22px
+        rgba(13,24,33,.18);
+
+    opacity:0;
+
+    visibility:hidden;
+
+    pointer-events:none;
+
+    transition:
+        opacity .12s ease,
+        transform .12s ease,
+        visibility .12s ease;
+}
+
+
+/* little tooltip arrow */
+
+.info-popup::before,
+.math-triangle::before{
+    content:"";
+
+    position:absolute;
+
+    z-index:101;
+
+    bottom:
+        calc(100% + 5px);
+
+    left:50%;
+
+    transform:
+        translateX(-50%);
+
+    border-left:
+        5px solid transparent;
+
+    border-right:
+        5px solid transparent;
+
+    border-top:
+        5px solid
+        var(--black);
+
+    opacity:0;
+
+    visibility:hidden;
+
+    pointer-events:none;
+
+    transition:
+        opacity .12s ease;
+}
+
+
+/* show tooltip */
+
+.info-popup:hover::after,
+.info-popup:hover::before,
+.math-triangle:hover::after,
+.math-triangle:hover::before{
+    opacity:1;
+
+    visibility:visible;
+}
+
+
+.info-popup:hover::after,
+.math-triangle:hover::after{
+    transform:
+        translateX(-50%)
+        translateY(0);
 }
