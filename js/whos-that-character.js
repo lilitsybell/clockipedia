@@ -19,6 +19,12 @@ let whosThatCharacterRotation = 0;
 
 let whosThatCharacterArchiveDate = null;
 
+const whosThatCharacterStartDate =
+    "2026-09-12";
+
+let whosThatCharacterPuzzleDate =
+    getWhosThatCharacterToday();
+
 
 /* ==========================================
    Start Game
@@ -30,10 +36,13 @@ document.addEventListener(
 
         try{
 
-            await loadCharacters();
+await loadCharacters();
 
 setupWhosThatCharacterGame();
 setupWhosThatCharacterArchive();
+
+updateWhosThatCharacterPuzzleDetails();
+
 startWhosThatCharacterGame();
 
         }
@@ -969,5 +978,101 @@ function renderWhosThatCharacterArchive(){
                     year:"numeric"
                 }
             );
+
+}
+/* ==========================================
+   Daily Puzzle Date
+========================================== */
+
+function getWhosThatCharacterToday(){
+
+    const today =
+        new Date();
+
+    const year =
+        today.getFullYear();
+
+    const month =
+        String(
+            today.getMonth() + 1
+        ).padStart(
+            2,
+            "0"
+        );
+
+    const day =
+        String(
+            today.getDate()
+        ).padStart(
+            2,
+            "0"
+        );
+
+    return `${year}-${month}-${day}`;
+
+}
+
+
+function getWhosThatCharacterPuzzleNumber(
+    dateString
+){
+
+    const start =
+        new Date(
+            `${whosThatCharacterStartDate}T00:00:00`
+        );
+
+    const date =
+        new Date(
+            `${dateString}T00:00:00`
+        );
+
+    const difference =
+        Math.round(
+            (
+                date - start
+            ) /
+            86400000
+        );
+
+    return difference + 1;
+
+}
+function updateWhosThatCharacterPuzzleDetails(){
+
+    const numberElement =
+        document.querySelector(
+            "#whosThatCharacterPuzzleNumber"
+        );
+
+    const dateElement =
+        document.querySelector(
+            "#whosThatCharacterPuzzleDate"
+        );
+
+    const puzzleNumber =
+        getWhosThatCharacterPuzzleNumber(
+            whosThatCharacterPuzzleDate
+        );
+
+    const puzzleDate =
+        new Date(
+            `${whosThatCharacterPuzzleDate}T00:00:00`
+        );
+
+
+    numberElement.textContent =
+        `Puzzle #${puzzleNumber}`;
+
+
+    dateElement.textContent =
+        puzzleDate.toLocaleDateString(
+            "en-US",
+            {
+                month:"long",
+                day:"numeric",
+                year:"numeric"
+            }
+        );
 
 }
