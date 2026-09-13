@@ -836,3 +836,100 @@ span[data-color="purple"]{
 
     line-height:1.55;
 }
+.whos-card-character{
+    position:absolute;
+
+    -webkit-mask-image:
+        var(--card-character-image);
+
+    mask-image:
+        var(--card-character-image);
+
+    -webkit-mask-size:contain;
+    mask-size:contain;
+
+    -webkit-mask-position:center;
+    mask-position:center;
+
+    -webkit-mask-repeat:no-repeat;
+    mask-repeat:no-repeat;
+}
+
+
+.whos-card-character-left{
+    z-index:2;
+
+    width:125px;
+    height:125px;
+
+    left:18px;
+
+    background:#aaa8cf;
+
+    transform:rotate(-12deg);
+}
+
+
+.whos-card-character-right{
+    z-index:2;
+
+    width:125px;
+    height:125px;
+
+    right:18px;
+
+    background:#aaa8cf;
+
+    transform:rotate(12deg);
+}
+
+
+.whos-card-character-center{
+    z-index:3;
+
+    width:155px;
+    height:155px;
+
+    left:50%;
+    top:50%;
+
+    background:var(--purple);
+
+    transform:
+        translate(-50%,-50%)
+        rotate(-5deg);
+
+    filter:
+        drop-shadow(
+            0 7px 8px
+            rgba(13,24,33,.16)
+        );
+}
+
+
+.whos-card-question{
+    position:absolute;
+
+    z-index:4;
+
+    left:50%;
+    top:50%;
+
+    transform:
+        translate(-50%,-50%)
+        rotate(-5deg);
+
+    color:white;
+
+    font-family:
+        "Droid Sans",
+        Arial,
+        sans-serif;
+
+    font-size:64px;
+    font-weight:900;
+
+    line-height:1;
+
+    pointer-events:none;
+}
