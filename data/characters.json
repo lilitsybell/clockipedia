@@ -914,22 +914,27 @@
     "flavor": "My cabin is warm and sturdy. My axe by the door, my boots drying by the fire, and elk stew a-simmering… Hark! A scream echoes through the valley! The rain and the mud and the cold, cold wind mask the scent of the wolves, but I know the path and my pace is steady. I am coming.",
     "purpose": "The [Huntsman] may turn the [Damsel] into a Townsfolk.",
     "summary": [
-             "ComingSoon",
-             "ComingSoon"
+             "If the [Huntsman] is in play, the [Damsel] is also in play.",
+             "If the [Damsel] is already in play, the [Huntsman] does not add a second [Damsel].",
+             "Once per game, the [Huntsman] may choose a living player. If they choose the [Damsel], the [Damsel] becomes a not-in-play Townsfolk, chosen by the Storyteller, and learns this.",
+             "The [Huntsman] does not learn if they were successful.",
+             "If the [Damsel] becomes a Townsfolk, they no longer have the [Damsel] ability.",
+             "The [Damsel] does not need to be sober or healthy to become a Townsfolk."
              ],
     "run": {
            "Setup": [
-                "ComingSoon",
-                "ComingSoon"
+                "If the [Huntsman] is in play, the [Damsel] is also in play.",
+                "If the [Damsel] is added, it replaces a Townsfolk character."
                 ],
            "Every Night": [
-                "ComingSoon",
-                "ComingSoon"
+                "Once per game, the [Huntsman] may choose to use their ability. If they do, they choose a living player. If that player is the [Damsel], the [Damsel] becomes a not-in-play Townsfolk and learns this.",
+                "The Storyteller chooses which Townsfolk the [Damsel] becomes."
                 ]
            },
     "examples": [
-                "ComingSoon",
-                "ComingSoon"
+                "On the third night, the [Huntsman] uses their ability and chooses the [Damsel]. The [Damsel] becomes the [Virgin].",
+                "On the second night, the [Huntsman] chooses the [Savant]. Nothing happens.",
+                "On the fifth night, the [Huntsman] chooses the poisoned [Damsel]. The [Damsel] becomes a poisoned [King] and learns they are the [King]. Since the new [King] is poisoned, they have no ability and the [Po] does not learn who they are that night."
                 ],
     "tags": ["Mechanical"],
     "edition": "Carousel"
