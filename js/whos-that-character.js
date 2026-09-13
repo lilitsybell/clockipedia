@@ -156,8 +156,8 @@ function loadWhosThatCharacterRound(){
     whosThatCharacterTries = 3;
 whosThatCharacterRotation =
     Math.floor(
-        Math.random() * 71
-    ) - 35;
+        Math.random() * 360
+    );
 
     showWhosThatCharacterSilhouette();
 
@@ -203,11 +203,14 @@ function showWhosThatCharacterSilhouette(){
             "#whosThatCharacterReveal"
         );
 
+    silhouette.style.transition =
+        "none";
 
-    reveal.classList.remove(
-        "revealed"
-    );
+    reveal.style.transition =
+        "none";
 
+    silhouette.style.opacity =
+        "0";
 
     reveal.style.opacity =
         "0";
@@ -217,36 +220,12 @@ function showWhosThatCharacterSilhouette(){
         "revealed"
     );
 
-
-    silhouette.style.opacity =
-        "1";
-
-
-    /* Apply this round's random rotation */
-
-    silhouette.style.transform =
-        `rotate(${whosThatCharacterRotation}deg)`;
-
-
-    reveal.style.transform =
-        `rotate(${whosThatCharacterRotation}deg)`;
-
-
-    reveal.src =
-        whosThatCharacterCurrent.image;
-
-
-    reveal.alt =
-        whosThatCharacterCurrent.name;
-
-
-    silhouette.style.background =
-        "var(--black)";
-
+    reveal.classList.remove(
+        "revealed"
+    );
 
     silhouette.style.webkitMaskImage =
         `url("${whosThatCharacterCurrent.image}")`;
-
 
     silhouette.style.maskImage =
         `url("${whosThatCharacterCurrent.image}")`;
@@ -258,15 +237,29 @@ function showWhosThatCharacterSilhouette(){
     );
 
 
-    requestAnimationFrame(
-        () => {
+    silhouette.style.backgroundColor =
+        "var(--black)";
 
-            reveal.style.opacity = "";
+    silhouette.style.transform =
+        `rotate(${whosThatCharacterRotation}deg)`;
 
-            silhouette.style.opacity = "";
+    reveal.style.transform =
+        `rotate(${whosThatCharacterRotation}deg)`;
 
-        }
-    );
+    reveal.src =
+        whosThatCharacterCurrent.image;
+
+    reveal.alt =
+        whosThatCharacterCurrent.name;
+
+    void silhouette.offsetWidth;
+
+    silhouette.style.transition = "";
+
+    reveal.style.transition = "";
+
+    silhouette.style.opacity =
+        "1";
 
 }
 
