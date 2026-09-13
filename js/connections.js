@@ -2389,7 +2389,7 @@ function buildConnectionsCalendarDay(
 
 
     button.className =
-        "connections-calendar-day";
+        "daily-calendar-day";
 
 
     const dateKey =
@@ -2419,7 +2419,7 @@ function buildConnectionsCalendarDay(
 
 
     number.className =
-        "connections-calendar-day-number";
+        "daily-calendar-day-number";
 
 
     number.textContent =
@@ -2535,7 +2535,7 @@ function buildConnectionsEmptyCalendarDay(){
 
 
     cell.className =
-        "connections-calendar-day no-puzzle";
+        "daily-calendar-day no-puzzle";
 
 
     return cell;
@@ -2645,7 +2645,7 @@ function renderConnectionsCalendarStatus(
 
 
         progress.className =
-            "connections-calendar-progress";
+            "daily-calendar-progress";
 
 
         progress.textContent =
