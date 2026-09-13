@@ -354,7 +354,7 @@ function setupCharacterSort(){
     const sortModes = [
         {
             value:"team",
-            label:"Team"
+            label:"Character Type"
         },
         {
             value:"alphabetical",
