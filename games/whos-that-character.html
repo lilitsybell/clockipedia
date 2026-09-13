@@ -23,21 +23,33 @@
 
         <div class="site-page">
 
-            <section class="site-header">
+<section class="site-header">
 
-                <span class="site-eyebrow">
-                    Clockipedia Games
-                </span>
+    <span class="site-eyebrow">
+        Clockipedia Games
+    </span>
 
-                <h1>
-                    Who's That Character?
-                </h1>
+    <h1>
+        Who's That Character?
+    </h1>
 
-                <p>
-                    Can you identify the character from their silhouette?
-                </p>
+    <p>
+        Can you identify the character from their silhouette?
+    </p>
 
-            </section>
+    <div class="whos-that-character-header-actions">
+
+        <button
+            id="whosThatCharacterArchiveButton"
+            class="site-button-secondary"
+            type="button"
+        >
+            Archive
+        </button>
+
+    </div>
+
+</section>
 
 
             <section class="site-card whos-that-character-game">
@@ -131,7 +143,110 @@
             </section>
 
         </div>
+<div
+    id="whosThatCharacterArchiveModal"
+    class="daily-archive-modal"
+    hidden
+>
 
+    <div class="daily-archive-backdrop"></div>
+
+    <section
+        class="daily-archive-panel"
+        role="dialog"
+        aria-modal="true"
+        aria-labelledby="whosThatCharacterArchiveTitle"
+    >
+
+        <header class="daily-archive-header">
+
+            <div>
+
+                <span class="site-eyebrow">
+                    Who's That Character?
+                </span>
+
+                <h2 id="whosThatCharacterArchiveTitle">
+                    Puzzle Archive
+                </h2>
+
+                <p>
+                    Play previous daily puzzles and
+                    revisit your results.
+                </p>
+
+            </div>
+
+            <button
+                id="whosThatCharacterArchiveClose"
+                class="daily-archive-close"
+                type="button"
+                aria-label="Close archive"
+            >
+                ×
+            </button>
+
+        </header>
+
+
+        <div class="daily-calendar-nav">
+
+            <button
+                id="whosThatCharacterArchivePrevious"
+                type="button"
+                aria-label="Previous month"
+            >
+                ‹
+            </button>
+
+            <h3 id="whosThatCharacterArchiveMonth"></h3>
+
+            <button
+                id="whosThatCharacterArchiveNext"
+                type="button"
+                aria-label="Next month"
+            >
+                ›
+            </button>
+
+        </div>
+
+
+        <div class="daily-calendar-weekdays">
+
+            <span>Sun</span>
+            <span>Mon</span>
+            <span>Tue</span>
+            <span>Wed</span>
+            <span>Thu</span>
+            <span>Fri</span>
+            <span>Sat</span>
+
+        </div>
+
+
+        <div
+            id="whosThatCharacterArchiveCalendar"
+            class="daily-calendar"
+        >
+        </div>
+
+
+        <div class="daily-archive-footer">
+
+            <button
+                id="whosThatCharacterArchiveToday"
+                class="daily-archive-today"
+                type="button"
+            >
+                Today's Puzzle
+            </button>
+
+        </div>
+
+    </section>
+
+</div>
     </main>
 
 
