@@ -269,8 +269,8 @@
 .whos-that-character-rays{
     position:absolute;
 
-    width:900px;
-    height:900px;
+    width:1200px;
+    height:1200px;
 
     border-radius:50%;
 
@@ -282,7 +282,10 @@
         );
 
     animation:
-        whosThatCharacterRaysSpin 45s linear infinite;
+        whosThatCharacterRaysSpin
+        90s
+        linear
+        infinite;
 
     pointer-events:none;
 }
