@@ -893,21 +893,32 @@ function setupWhosThatCharacterArchive(){
     );
 
 
-    todayButton.addEventListener(
-        "click",
-        () => {
+todayButton.addEventListener(
+    "click",
+    () => {
 
-            whosThatCharacterArchiveDate =
-                new Date(
-                    new Date().getFullYear(),
-                    new Date().getMonth(),
-                    1
-                );
+        whosThatCharacterPuzzleDate =
+            getWhosThatCharacterToday();
 
-            renderWhosThatCharacterArchive();
 
-        }
-    );
+        whosThatCharacterArchiveDate =
+            new Date(
+                new Date().getFullYear(),
+                new Date().getMonth(),
+                1
+            );
+
+
+        closeWhosThatCharacterArchive();
+
+
+        updateWhosThatCharacterPuzzleDetails();
+
+
+        startWhosThatCharacterGame();
+
+    }
+);
 
 
     document.addEventListener(
