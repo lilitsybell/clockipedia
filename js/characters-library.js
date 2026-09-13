@@ -336,26 +336,87 @@ grid.appendChild(card);
    Sort Control
 ========================================== */
 function setupCharacterSort(){
-    const sort =
+
+    const button =
         document.getElementById(
             "character-library-sort"
         );
-    if(!sort){
+
+    if(!button){
         console.warn(
             "Character sort control not found"
         );
+
         return;
     }
-    sort.value =
-        characterSort;
-    sort.addEventListener(
-        "change",
+
+
+    const sortModes = [
+        {
+            value:"team",
+            label:"Team"
+        },
+        {
+            value:"alphabetical",
+            label:"Alphabetical"
+        },
+        {
+            value:"edition",
+            label:"Edition"
+        }
+    ];
+
+
+    function updateSortButton(){
+
+        const current =
+            sortModes.find(
+                mode =>
+                    mode.value ===
+                    characterSort
+            );
+
+        button.textContent =
+            current?.label || "Team";
+
+    }
+
+
+    updateSortButton();
+
+
+    button.addEventListener(
+        "click",
         () => {
+
+            const currentIndex =
+                sortModes.findIndex(
+                    mode =>
+                        mode.value ===
+                        characterSort
+                );
+
+
+            const nextIndex =
+                (
+                    currentIndex + 1
+                ) %
+                sortModes.length;
+
+
             characterSort =
-                sort.value;
+                sortModes[
+                    nextIndex
+                ].value;
+
+
+            updateSortButton();
+
             renderCharacterLibrary();
+
         }
     );
+
 }
 /* ==========================================
    Start
