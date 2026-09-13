@@ -477,12 +477,6 @@ function submitWhosThatCharacterGuess(){
         );
 
 
-    const nextButton =
-        document.querySelector(
-            "#whosThatCharacterNext"
-        );
-
-
     const guess =
         normalizeWhosThatCharacterGuess(
             input.value
@@ -778,12 +772,6 @@ function finishWhosThatCharacterGame(){
         );
 
 
-    const nextButton =
-        document.querySelector(
-            "#whosThatCharacterNext"
-        );
-
-
     const message =
         document.querySelector(
             "#whosThatCharacterMessage"
@@ -795,10 +783,6 @@ function finishWhosThatCharacterGame(){
 
 
     guessButton.disabled =
-        true;
-
-
-    nextButton.hidden =
         true;
 
 
