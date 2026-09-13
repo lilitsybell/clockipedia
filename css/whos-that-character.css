@@ -89,14 +89,6 @@
         transform .45s ease;
 }
 
-.whos-that-character-silhouette.revealed{
-    opacity:0;
-}
-
-
-.whos-that-character-reveal.revealed{
-    opacity:1;
-}
 /* ==========================================
    Guess Area
 ========================================== */
