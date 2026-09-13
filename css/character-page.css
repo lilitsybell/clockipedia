@@ -12,39 +12,92 @@
 ========================================== */
 
 .character-header{
+    position:relative;
+
     display:flex;
 
     align-items:center;
-    justify-content:center;
+    justify-content:space-between;
 
-    gap:48px;
+    gap:45px;
 
-    margin-bottom:32px;
+    min-height:235px;
+
+    margin-bottom:34px;
 
     padding:
-        10px 20px
-        28px;
+        34px 48px;
+
+    overflow:hidden;
+
+    border:
+        1px solid
+        var(--border);
+
+    border-left:
+        6px solid
+        var(--team-color);
+
+    border-radius:18px;
+
+    background:
+        linear-gradient(
+            110deg,
+            rgba(102,102,153,.055),
+            rgba(255,255,255,.96) 55%
+        );
+
+    box-shadow:
+        0 10px 28px
+        rgba(13,24,33,.06);
 }
 
 
-.character-header img{
-    width:180px;
-    height:180px;
+/* subtle decorative circle */
 
-    flex-shrink:0;
+.character-header::after{
+    content:"";
 
-    object-fit:contain;
+    position:absolute;
+
+    width:310px;
+    height:310px;
+
+    right:-100px;
+    top:-105px;
+
+    border:
+        55px solid
+        var(--team-color);
+
+    border-radius:50%;
+
+    opacity:.035;
+
+    pointer-events:none;
 }
 
 
 .character-title{
-    width:min(560px, 100%);
+    position:relative;
+
+    z-index:1;
+
+    width:min(650px, 100%);
 }
 
 
 .character-header h1{
+    display:flex;
+
+    align-items:baseline;
+
+    flex-wrap:wrap;
+
+    gap:10px;
+
     margin:
-        0 0 5px;
+        0 0 16px;
 
     color:var(--team-color);
 
@@ -53,14 +106,19 @@
         Arial,
         sans-serif;
 
-    font-size:36px;
+    font-size:42px;
 
-    line-height:1.1;
+    line-height:1.05;
 }
 
 
 .character-team{
     color:var(--gray);
+
+    font-family:
+        "Roboto",
+        Arial,
+        sans-serif;
 
     font-size:16px;
 
@@ -69,17 +127,36 @@
 
 
 .character-ability{
-    max-width:650px;
+    max-width:630px;
 
-    margin-top:16px;
+    margin:0;
 
     color:var(--black);
 
     font-size:17px;
 
-    line-height:1.5;
+    line-height:1.55;
 }
 
+
+.character-header img{
+    position:relative;
+
+    z-index:1;
+
+    width:190px;
+    height:190px;
+
+    flex-shrink:0;
+
+    object-fit:contain;
+
+    filter:
+        drop-shadow(
+            0 6px 8px
+            rgba(13,24,33,.10)
+        );
+}
 
 /* ==========================================
    Wiki Container
@@ -391,7 +468,162 @@
 
     gap:10px;
 }
+/* ==========================================
+   Interaction Info Icons
+========================================== */
 
+.info-button{
+    position:relative;
+
+    width:30px;
+    height:30px;
+
+    display:flex;
+
+    align-items:center;
+    justify-content:center;
+
+    flex-shrink:0;
+
+    border:
+        1px solid
+        rgba(102,102,153,.22);
+
+    border-radius:50%;
+
+    background:
+        rgba(102,102,153,.08);
+
+    color:var(--purple);
+
+    font-size:13px;
+    font-weight:900;
+
+    line-height:1;
+
+    cursor:help;
+}
+
+
+.info-button:hover{
+    background:
+        rgba(102,102,153,.14);
+}
+
+
+/* ==========================================
+   Mathematician Triangle
+========================================== */
+
+.math-triangle{
+    position:relative;
+
+    width:24px;
+    height:30px;
+
+    display:flex;
+
+    align-items:center;
+    justify-content:center;
+
+    flex-shrink:0;
+
+    font-size:21px;
+
+    line-height:1;
+
+    cursor:help;
+}
+
+
+.math-triangle.green{
+    color:var(--lime);
+}
+
+
+.math-triangle.red{
+    color:var(--red);
+}
+
+
+/* ==========================================
+   Interaction Tooltips
+========================================== */
+
+.info-popup::after,
+.math-triangle::after{
+    content:
+        attr(data-info);
+
+    position:absolute;
+
+    z-index:5000;
+
+    bottom:
+        calc(100% + 10px);
+
+    right:0;
+
+    width:280px;
+
+    padding:
+        11px 13px;
+
+    border:
+        1px solid
+        rgba(255,255,255,.12);
+
+    border-radius:9px;
+
+    background:var(--black);
+
+    color:white;
+
+    font:
+        400 13px/1.45
+        "Roboto",
+        Arial,
+        sans-serif;
+
+    font-style:normal;
+
+    letter-spacing:0;
+    word-spacing:0;
+
+    text-align:left;
+    text-transform:none;
+
+    white-space:normal;
+
+    box-shadow:
+        0 8px 22px
+        rgba(13,24,33,.20);
+
+    opacity:0;
+
+    visibility:hidden;
+
+    pointer-events:none;
+
+    transform:
+        translateY(4px);
+
+    transition:
+        opacity .12s ease,
+        transform .12s ease,
+        visibility .12s ease;
+}
+
+
+.info-popup:hover::after,
+.math-triangle:hover::after{
+    opacity:1;
+
+    visibility:visible;
+
+    transform:
+        translateY(0);
+}
 
 /* ==========================================
    Responsive
