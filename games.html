@@ -9,53 +9,26 @@
         Games | Clockipedia
     </title>
 
-    <link rel="stylesheet" href="/css/style-global.css">
-    <link rel="stylesheet" href="/css/games.css">
-    <link rel="icon" type="image/png" href="/images/favicon.png">
+    <link
+        rel="stylesheet"
+        href="/css/style-global.css"
+    >
+
+    <link
+        rel="stylesheet"
+        href="/css/games.css"
+    >
+
+    <link
+        rel="icon"
+        type="image/png"
+        href="/images/favicon.png"
+    >
 
 </head>
 
 
 <body>
-<svg
-    width="0"
-    height="0"
-    style="position:absolute"
-    aria-hidden="true"
->
-    <filter id="whos-card-outline">
-        <feMorphology
-            in="SourceAlpha"
-            operator="dilate"
-            radius="3"
-            result="expanded"
-        />
-
-        <feFlood
-            flood-color="white"
-            result="white"
-        />
-
-        <feComposite
-            in="white"
-            in2="expanded"
-            operator="in"
-            result="outline"
-        />
-
-        <feComposite
-            in="outline"
-            in2="SourceAlpha"
-            operator="out"
-            result="outlineOnly"
-        />
-
-        <feMerge>
-            <feMergeNode in="outlineOnly" />
-            <feMergeNode in="SourceGraphic" />
-        </feMerge>
-    </filter>
-</svg>
 
     <div id="sidebar"></div>
 
@@ -69,237 +42,340 @@
                  Header
             ================================== -->
 
-<section class="site-header">
+            <section class="site-header">
 
-    <span class="site-eyebrow">
-        Clockipedia Games
-    </span>
+                <span class="site-eyebrow">
+                    Clockipedia Games
+                </span>
 
-    <h1>
-        Games
-    </h1>
+                <h1>
+                    Games
+                </h1>
 
-    <p>
-        Play Blood on the Clocktower puzzles, quizzes,
-        and daily challenges.
-    </p>
+                <p>
+                    Play Blood on the Clocktower puzzles,
+                    quizzes, and daily challenges.
+                </p>
 
-</section>
+            </section>
+
+
             <!-- =================================
                  Game Grid
             ================================== -->
 
-<section class="games-grid">
-
-<div class="game-card game-card-connections">
-
-    <div class="game-card-connections-art">
-
-        <span class="connections-art-square square-one"></span>
-        <span class="connections-art-square square-two"></span>
-        <span class="connections-art-square square-three"></span>
-        <span class="connections-art-square square-four"></span>
-
-        <div class="connections-card-mini-board">
-
-            <span data-color="yellow"></span>
-            <span data-color="yellow"></span>
-            <span data-color="green"></span>
-            <span data-color="purple"></span>
-
-            <span data-color="blue"></span>
-            <span data-color="green"></span>
-            <span data-color="blue"></span>
-            <span data-color="yellow"></span>
-
-            <span data-color="purple"></span>
-            <span data-color="blue"></span>
-            <span data-color="green"></span>
-            <span data-color="purple"></span>
-
-            <span data-color="green"></span>
-            <span data-color="yellow"></span>
-            <span data-color="purple"></span>
-            <span data-color="blue"></span>
-
-        </div>
-
-    </div>
+            <section class="games-grid">
 
 
-    <div class="game-card-connections-content">
+                <!-- =================================
+                     Character Connections
+                ================================== -->
 
-        <span class="game-card-status">
-            Daily Game
-        </span>
+                <div class="game-card game-card-connections">
 
-        <h2>
-            Character Connections
-        </h2>
+                    <div class="game-card-connections-art">
 
-        <p>
-            Sort sixteen Blood on the Clocktower characters
-            into four groups based on what connects them.
-        </p>
+                        <span
+                            class="connections-art-square square-one"
+                        ></span>
 
-<div class="game-card-buttons">
+                        <span
+                            class="connections-art-square square-two"
+                        ></span>
 
-    <a
-        href="/games/character-connections.html"
-        class="game-card-play"
-    >
-        Play Today's Puzzle
-    </a>
+                        <span
+                            class="connections-art-square square-three"
+                        ></span>
 
-    <div class="game-card-or">
-        <span></span>
-        <strong>or</strong>
-        <span></span>
-    </div>
-
-    <a
-        href="/games/character-connections-maker.html"
-        class="game-card-make"
-    >
-        Make Your Own
-    </a>
-
-</div>
-
-    </div>
-
-</div>
-<div class="game-card game-card-name-every-character">
-
-    <div class="game-card-name-art">
-
-        <span class="name-art-circle circle-one"></span>
-        <span class="name-art-circle circle-two"></span>
-        <span class="name-art-circle circle-three"></span>
-
-        <div class="name-card-mini-board">
-
-            <div class="name-card-mini-row guessed">
-                <span class="name-card-mini-token"></span>
-                <span class="name-card-mini-name long"></span>
-            </div>
-
-            <div class="name-card-mini-row">
-                <span class="name-card-mini-token">?</span>
-                <span class="name-card-mini-name medium"></span>
-            </div>
-
-            <div class="name-card-mini-row guessed">
-                <span class="name-card-mini-token"></span>
-                <span class="name-card-mini-name short"></span>
-            </div>
-
-            <div class="name-card-mini-row">
-                <span class="name-card-mini-token">?</span>
-                <span class="name-card-mini-name long"></span>
-            </div>
-
-            <div class="name-card-mini-row">
-                <span class="name-card-mini-token">?</span>
-                <span class="name-card-mini-name medium"></span>
-            </div>
-
-        </div>
-
-    </div>
+                        <span
+                            class="connections-art-square square-four"
+                        ></span>
 
 
-    <div class="game-card-name-content">
+                        <div class="connections-card-mini-board">
 
-        <span class="game-card-status">
-            Quiz
-        </span>
+                            <span data-color="yellow"></span>
+                            <span data-color="yellow"></span>
+                            <span data-color="green"></span>
+                            <span data-color="purple"></span>
 
-        <h2>
-            Can You Name Every Character?
-        </h2>
+                            <span data-color="blue"></span>
+                            <span data-color="green"></span>
+                            <span data-color="blue"></span>
+                            <span data-color="yellow"></span>
 
-        <p>
-            Test your Blood on the Clocktower knowledge
-            and see how quickly you can name every character.
-        </p>
+                            <span data-color="purple"></span>
+                            <span data-color="blue"></span>
+                            <span data-color="green"></span>
+                            <span data-color="purple"></span>
 
-        <div class="game-card-buttons">
+                            <span data-color="green"></span>
+                            <span data-color="yellow"></span>
+                            <span data-color="purple"></span>
+                            <span data-color="blue"></span>
 
-            <a
-                href="/games/can-you-name-every-character.html"
-                class="game-card-play"
-            >
-                Play
-            </a>
+                        </div>
 
-        </div>
-
-    </div>
-
-</div>
-<article class="game-card-whos-that-character">
-
-    <div class="game-card-whos-art">
-
-        <div class="whos-card-rays"></div>
-
-        <div class="whos-card-preview whos-card-preview-left">
-            <div
-                class="whos-card-preview-shape"
-                style="--card-character-image:url('https://images.klutzbanana.com/characters_official/poppygrower_g.png');"
-            ></div>
-        </div>
-
-        <div class="whos-card-preview whos-card-preview-right">
-            <div
-                class="whos-card-preview-shape"
-                style="--card-character-image:url('https://images.klutzbanana.com/characters_official/organgrinder_e.png');"
-            ></div>
-        </div>
-
-        <div class="whos-card-preview whos-card-preview-center">
-            <div
-                class="whos-card-preview-shape"
-                style="--card-character-image:url('https://images.klutzbanana.com/characters_official/nodashii_e.png');"
-            ></div>
-
-            <span class="whos-card-question">
-                ?
-            </span>
-        </div>
-
-    </div>
+                    </div>
 
 
-    <div class="game-card-whos-content">
+                    <div class="game-card-connections-content">
 
-        <span class="game-card-status">
-            Daily Game
-        </span>
+                        <span class="game-card-status">
+                            Daily Game
+                        </span>
 
-        <h2>
-            Who's That Character?
-        </h2>
+                        <h2>
+                            Character Connections
+                        </h2>
 
-        <p>
-            Identify ten Blood on the Clocktower
-            characters from their silhouettes.
-        </p>
+                        <p>
+                            Sort sixteen Blood on the Clocktower
+                            characters into four groups based on
+                            what connects them.
+                        </p>
 
-        <div class="game-card-buttons">
-            <a
-                class="game-card-play"
-                href="/games/whos-that-character.html"
-            >
-                Play Today's Puzzle
-            </a>
-        </div>
 
-    </div>
+                        <div class="game-card-buttons">
 
-</article>
-</section>
+                            <a
+                                href="/games/character-connections.html"
+                                class="game-card-play"
+                            >
+                                Play Today's Puzzle
+                            </a>
+
+                            <div class="game-card-or">
+                                <span></span>
+                                <strong>or</strong>
+                                <span></span>
+                            </div>
+
+                            <a
+                                href="/games/character-connections-maker.html"
+                                class="game-card-make"
+                            >
+                                Make Your Own
+                            </a>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+                <!-- =================================
+                     Name Every Character
+                ================================== -->
+
+                <div
+                    class="game-card game-card-name-every-character"
+                >
+
+                    <div class="game-card-name-art">
+
+                        <span
+                            class="name-art-circle circle-one"
+                        ></span>
+
+                        <span
+                            class="name-art-circle circle-two"
+                        ></span>
+
+                        <span
+                            class="name-art-circle circle-three"
+                        ></span>
+
+
+                        <div class="name-card-mini-board">
+
+                            <div class="name-card-mini-row guessed">
+
+                                <span
+                                    class="name-card-mini-token"
+                                ></span>
+
+                                <span
+                                    class="name-card-mini-name long"
+                                ></span>
+
+                            </div>
+
+
+                            <div class="name-card-mini-row">
+
+                                <span class="name-card-mini-token">
+                                    ?
+                                </span>
+
+                                <span
+                                    class="name-card-mini-name medium"
+                                ></span>
+
+                            </div>
+
+
+                            <div class="name-card-mini-row guessed">
+
+                                <span
+                                    class="name-card-mini-token"
+                                ></span>
+
+                                <span
+                                    class="name-card-mini-name short"
+                                ></span>
+
+                            </div>
+
+
+                            <div class="name-card-mini-row">
+
+                                <span class="name-card-mini-token">
+                                    ?
+                                </span>
+
+                                <span
+                                    class="name-card-mini-name long"
+                                ></span>
+
+                            </div>
+
+
+                            <div class="name-card-mini-row">
+
+                                <span class="name-card-mini-token">
+                                    ?
+                                </span>
+
+                                <span
+                                    class="name-card-mini-name medium"
+                                ></span>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="game-card-name-content">
+
+                        <span class="game-card-status">
+                            Quiz
+                        </span>
+
+                        <h2>
+                            Can You Name Every Character?
+                        </h2>
+
+                        <p>
+                            Test your Blood on the Clocktower
+                            knowledge and see how quickly you can
+                            name every character.
+                        </p>
+
+
+                        <div class="game-card-buttons">
+
+                            <a
+                                href="/games/can-you-name-every-character.html"
+                                class="game-card-play"
+                            >
+                                Play
+                            </a>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+                <!-- =================================
+                     Who's That Character?
+                ================================== -->
+
+                <article class="game-card-whos-that-character">
+
+                    <div class="game-card-whos-art">
+
+                        <div class="whos-card-rays"></div>
+
+
+                        <img
+                            class="
+                                whos-card-preview
+                                whos-card-preview-left
+                            "
+                            src="/images/poppygrower-blue.png"
+                            alt=""
+                        >
+
+
+                        <img
+                            class="
+                                whos-card-preview
+                                whos-card-preview-right
+                            "
+                            src="/images/organgrinder-red.png"
+                            alt=""
+                        >
+
+
+                        <div class="whos-card-preview-center-wrap">
+
+                            <img
+                                class="
+                                    whos-card-preview
+                                    whos-card-preview-center
+                                "
+                                src="/images/nodashii-purple.png"
+                                alt=""
+                            >
+
+                            <span class="whos-card-question">
+                                ?
+                            </span>
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="game-card-whos-content">
+
+                        <span class="game-card-status">
+                            Daily Game
+                        </span>
+
+                        <h2>
+                            Who's That Character?
+                        </h2>
+
+                        <p>
+                            Identify ten Blood on the Clocktower
+                            characters from their silhouettes.
+                        </p>
+
+
+                        <div class="game-card-buttons">
+
+                            <a
+                                class="game-card-play"
+                                href="/games/whos-that-character.html"
+                            >
+                                Play Today's Puzzle
+                            </a>
+
+                        </div>
+
+                    </div>
+
+                </article>
+
+
+            </section>
 
         </div>
 
@@ -310,7 +386,6 @@
     <script src="/js/tooltip.js"></script>
     <script src="/js/search.js"></script>
     <script src="/js/sidebar.js"></script>
-
 
 </body>
 
