@@ -789,31 +789,12 @@ span[data-color="purple"]{
 
 .whos-card-preview{
     position:absolute;
-}
 
+    display:block;
 
-.whos-card-preview-shape{
-    width:100%;
-    height:100%;
+    object-fit:contain;
 
-    background:var(--character-color);
-
-    -webkit-mask-image:
-        var(--card-character-image);
-
-    mask-image:
-        var(--card-character-image);
-
-    -webkit-mask-size:contain;
-    mask-size:contain;
-
-    -webkit-mask-position:center;
-    mask-position:center;
-
-    -webkit-mask-repeat:no-repeat;
-    mask-repeat:no-repeat;
-
-    filter:url(#whos-card-outline);
+    pointer-events:none;
 }
 
 
@@ -825,8 +806,6 @@ span[data-color="purple"]{
 
     left:-38px;
     top:50%;
-
-    --character-color:var(--blue);
 
     transform:
         translateY(-50%)
@@ -843,15 +822,15 @@ span[data-color="purple"]{
     right:-38px;
     top:50%;
 
-    --character-color:var(--red);
-
     transform:
         translateY(-50%)
         rotate(8deg);
 }
 
 
-.whos-card-preview-center{
+.whos-card-preview-center-wrap{
+    position:absolute;
+
     z-index:3;
 
     width:185px;
@@ -860,11 +839,17 @@ span[data-color="purple"]{
     left:50%;
     top:50%;
 
-    --character-color:var(--purple);
-
     transform:
         translate(-50%,-50%)
         rotate(-4deg);
+}
+
+
+.whos-card-preview-center{
+    width:100%;
+    height:100%;
+
+    position:relative;
 }
 
 
@@ -877,7 +862,8 @@ span[data-color="purple"]{
     top:50%;
 
     transform:
-        translate(-50%,-50%);
+        translate(-50%,-50%)
+        rotate(4deg);
 
     color:white;
 
