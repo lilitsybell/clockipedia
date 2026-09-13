@@ -30,48 +30,41 @@
     text-transform:uppercase;
 }
 
-.character-library-sort select{
+.character-sort-button{
+    min-width:130px;
     height:40px;
 
     padding:
-        0 34px
-        0 12px;
+        0 16px;
 
     border:
-        1px solid
-        #d8d8e1;
+        1.5px solid
+        var(--purple);
 
     border-radius:9px;
 
     background:white;
 
-    color:var(--black);
+    color:var(--purple);
 
-    font-family:
-        "Roboto",
-        Arial,
-        sans-serif;
+    font-size:10px;
+    font-weight:900;
 
-    font-size:14px;
+    letter-spacing:.06em;
 
-    outline:none;
+    text-transform:uppercase;
 
     cursor:pointer;
 
     transition:
-        border-color .15s ease,
-        box-shadow .15s ease;
+        background .15s ease,
+        color .15s ease;
 }
 
 
-.character-library-sort select:focus{
-    border-color:var(--purple);
-
-    box-shadow:
-        0 0 0 2px
-        rgba(102,102,153,.10);
+.character-sort-button:hover{
+    background:#f3f1f8;
 }
-
 
 /* ==========================================
    Character Library
