@@ -14,623 +14,18 @@
         0 10px 28px
         rgba(13,24,33,.07);
 }
-/* ==========================================
-   Selector Heading
-========================================== */
-
-.selector-heading{
-    margin-bottom:18px;
-}
 
 
-.selector-heading h2{
-    margin:0 0 5px;
-
-    color:var(--black);
-
-    font-size:20px;
-
-    line-height:1.1;
-}
-
-
-.selector-heading p{
-    margin:0;
-
-    color:var(--gray);
-
-    font-size:13px;
-
-    line-height:1.45;
-}
-
-
-/* ==========================================
-   Selector Fields
-========================================== */
-
-.selector-fields{
-    display:grid;
-
-    grid-template-columns:
-        repeat(3, minmax(0, 1fr));
-
-    gap:10px;
-}
 /* ==========================================
    Selector Area
 ========================================== */
 
 .selector-container{
-    padding:22px 28px;
-
-    border-bottom:
-        1px solid var(--border);
-
-    background:
-        rgba(102,102,153,.08);
-}
-
-
-.character-selector{
     position:relative;
 
-    min-width:0;
-}
-
-
-/* ==========================================
-   Character Search
-========================================== */
-
-.character-search-wrapper{
-    position:relative;
-}
-
-
-.character-search{
-    width:100%;
-    height:44px;
-
-    padding:
-        0 38px
-        0 14px;
-
-    border:
-        1px solid
-        #d8d8e1;
-
-    border-radius:9px;
-
-    background:white;
-
-    color:var(--black);
-
-    font-size:15px;
-
-    outline:none;
-
-    transition:
-        border-color .15s ease,
-        box-shadow .15s ease;
-}
-
-
-.character-search:focus{
-    border-color:
-        var(--purple);
-
-    box-shadow:
-        0 0 0 2px
-        rgba(102,102,153,.10);
-}
-
-
-.character-search::placeholder{
-    color:#aaaab4;
-}
-
-
-/* ==========================================
-   Character Clear Button
-========================================== */
-
-.clear-character{
-    position:absolute;
-
-    top:50%;
-    right:10px;
-
-    width:24px;
-    height:24px;
-
-    align-items:center;
-    justify-content:center;
-
-    transform:
-        translateY(-50%);
-
-    border-radius:50%;
-
-    color:#aaaab4;
-
-    font-size:18px;
-    line-height:1;
-
-    cursor:pointer;
-
-    transition:
-        color .15s ease,
-        background .15s ease;
-}
-
-
-.clear-character:hover{
-    background:
-        rgba(102,102,153,.08);
-
-    color:var(--purple);
-}
-
-
-/* ==========================================
-   Character Dropdown Results
-========================================== */
-.selector-container{
-    position:relative;
     z-index:10;
-}
-.character-results{
-    position:absolute;
 
-    top:calc(100% + 6px);
-    left:0;
-
-    z-index:50;
-
-    width:100%;
-
-    display:none;
-
-    overflow:hidden;
-
-    border:
-        1px solid
-        var(--border);
-
-    border-radius:10px;
-
-    background:white;
-
-    box-shadow:
-        0 10px 28px
-        rgba(13,24,33,.12);
-}
-
-.character-results{
-    position:absolute;
-    top:calc(100% + 6px);
-    left:0;
-    z-index:1000;
-.character-results .search-item{
-    display:flex;
-
-    align-items:center;
-
-    gap:10px;
-
-    padding:
-        8px 10px;
-
-    cursor:pointer;
-}
-
-
-.character-results .search-item:hover{
-    background:
-        rgba(102,102,153,.08);
-}
-
-
-/* ==========================================
-   Clear All Button
-========================================== */
-
-#clearButton{
-    min-width:90px;
-    height:40px;
-
-    margin-top:12px;
-
-    padding:0 16px;
-
-    border:
-        1.5px solid
-        var(--purple);
-
-    border-radius:9px;
-
-    background:white;
-
-    color:var(--purple);
-
-    font-size:10px;
-    font-weight:900;
-
-    letter-spacing:.06em;
-
-    text-transform:uppercase;
-
-    cursor:pointer;
-
-    transition:
-        background .15s ease,
-        color .15s ease;
-}
-
-
-#clearButton:hover{
-    background:#f3f1f8;
-}
-
-/* ==========================================
-   Legend
-========================================== */
-.legend{
-    display:flex;
-
-    align-items:center;
-    justify-content:center;
-
-    flex-wrap:wrap;
-
-    gap:
-        10px 24px;
-
-    padding:
-        18px 28px;
-
-    border-bottom:
-        1px solid
-        var(--border);
-
-    background:white;
-}
-
-.legend{
-    position:relative;
-    z-index:1;
-}
-.legend-item{
-    display:flex;
-
-    align-items:center;
-
-    gap:7px;
-
-    color:var(--gray);
-
-    font-size:13px;
-}
-
-
-.legend-item b{
-    color:var(--black);
-}
-
-.legend .triangle{
-    font-size:13px;
-
-    line-height:1;
-}
-
-
-.triangle.green{
-    color:var(--lime);
-}
-
-
-.triangle.red{
-    color:var(--red);
-}
-
-
-/* ==========================================
-   Results Area
-========================================== */
-
-#results{
-    padding:
-        20px 28px
-        28px;
-}
-
-
-#result-count{
-    margin-bottom:14px;
-
-    color:var(--purple);
-
-    font-size:10px;
-    font-weight:900;
-
-    letter-spacing:.07em;
-
-    text-transform:uppercase;
-}
-
-
-#list{
-    margin:0;
-    padding:0;
-
-    list-style:none;
-}
-
-
-/* ==========================================
-   Mobile
-========================================== */
-
-@media(max-width:850px){
-
-    .selector-container{
-        grid-template-columns:
-            1fr;
-    }
-
-
-    #clearButton{
-        width:100%;
-    }
-
-}
-
-
-@media(max-width:700px){
-
-    .finder-header{
-        padding:
-            18px 20px;
-
-        font-size:20px;
-    }
-
-
-    .selector-container{
-        padding:
-            18px 20px;
-    }
-
-
-    .legend{
-        padding:
-            14px 20px;
-    }
-
-
-    #results{
-        padding:
-            18px 20px
-            22px;
-    }
-
-}
-/* ==========================================
-   Interaction Cards
-========================================== */
-
-.interaction-card{
-    position:relative;
-
-    display:flex;
-    align-items:center;
-    justify-content:space-between;
-
-    gap:18px;
-
-    min-height:68px;
-
-    margin-bottom:10px;
-
-    padding:
-        16px 18px
-        16px 20px;
-
-    border:
-        1px solid
-        var(--border);
-
-    border-left:
-        5px solid
-        var(--purple);
-
-    border-radius:12px;
-
-    background:white;
-
-    box-shadow:
-        0 4px 14px
-        rgba(13,24,33,.05);
-
-    transition:
-        border-color .15s ease,
-        box-shadow .15s ease,
-        transform .15s ease;
-}
-
-
-.interaction-card:hover{
-    transform:
-        translateY(-1px);
-
-    box-shadow:
-        0 7px 18px
-        rgba(13,24,33,.08);
-}
-
-/* ==========================================
-   Interaction Text
-========================================== */
-
-.interaction-text{
-    min-width:0;
-
-    color:var(--black);
-
-    font-size:16px;
-
-    line-height:1.55;
-}
-
-
-/* ==========================================
-   Interaction Icons
-========================================== */
-
-.interaction-icons{
-    flex-shrink:0;
-
-    display:flex;
-    align-items:center;
-
-    gap:8px;
-}
-
-
-/* ==========================================
-   Info Button
-========================================== */
-
-.info-button{
-    width:28px;
-    height:28px;
-
-    display:flex;
-    align-items:center;
-    justify-content:center;
-
-    border:
-        1px solid
-        rgba(102,102,153,.22);
-
-    border-radius:50%;
-
-    background:
-        rgba(102,102,153,.08);
-
-    color:
-        var(--purple);
-
-    font-size:12px;
-    font-weight:900;
-
-    line-height:1;
-
-    cursor:help;
-
-    transition:
-        background .15s ease,
-        border-color .15s ease,
-        transform .15s ease;
-}
-
-
-.info-button:hover{
-    transform:
-        scale(1.05);
-
-    border-color:
-        rgba(102,102,153,.38);
-
-    background:
-        rgba(102,102,153,.14);
-}
-
-
-/* ==========================================
-   Mathematician Triangle
-========================================== */
-
-.math-triangle{
-    position:relative;
-
-    width:20px;
-    height:20px;
-
-    display:block;
-
-    cursor:help;
-}
-
-
-.math-triangle::after{
-    /* tooltip rules above still apply */
-}
-
-.math-triangle.green{
-    border-bottom-color:
-        var(--lime);
-}
-
-
-.math-triangle.red{
-    border-bottom-color:
-        var(--red);
-}
-
-
-/* ==========================================
-   Empty Results
-========================================== */
-
-#list > li:not(.interaction-card){
-    padding:24px;
-
-    border:
-        1px dashed
-        var(--border);
-
-    border-radius:12px;
-
-    color:var(--gray);
-
-    font-size:13px;
-
-    text-align:center;
-}
-
-
-/* ==========================================
-   Interaction Card Mobile
-========================================== */
-
-@media(max-width:700px){
-
-    .interaction-card{
-        align-items:flex-start;
-
-        gap:12px;
-
-        padding:
-            14px 14px
-            14px 16px;
-    }
-
-
-    .interaction-text{
-        font-size:13px;
-    }
-
-}
-/* ==========================================
-   Selector Area
-========================================== */
-
-.selector-container{
-    position:relative;
-
-    overflow:hidden;
+    overflow:visible;
 
     padding:22px 28px;
 
@@ -650,7 +45,9 @@
     position:absolute;
 
     top:50%;
-    right:20px;
+    right:22px;
+
+    z-index:0;
 
     width:240px;
     height:150px;
@@ -720,6 +117,8 @@
         90px;
 
     gap:10px;
+
+    align-items:start;
 }
 
 
@@ -732,6 +131,163 @@
     gap:10px;
 }
 
+
+.character-selector{
+    position:relative;
+
+    min-width:0;
+}
+
+
+/* ==========================================
+   Character Search
+========================================== */
+
+.character-search-wrapper{
+    position:relative;
+}
+
+
+.character-search{
+    width:100%;
+    height:44px;
+
+    padding:
+        0 38px
+        0 14px;
+
+    border:
+        1px solid
+        #d8d8e1;
+
+    border-radius:9px;
+
+    background:white;
+
+    color:var(--black);
+
+    font-size:15px;
+
+    outline:none;
+
+    transition:
+        border-color .15s ease,
+        box-shadow .15s ease;
+}
+
+
+.character-search:focus{
+    border-color:
+        var(--purple);
+
+    box-shadow:
+        0 0 0 2px
+        rgba(102,102,153,.10);
+}
+
+
+.character-search::placeholder{
+    color:#aaaab4;
+}
+
+
+/* ==========================================
+   Individual Character Clear Button
+========================================== */
+
+.clear-character{
+    position:absolute;
+
+    top:50%;
+    right:10px;
+
+    width:24px;
+    height:24px;
+
+    align-items:center;
+    justify-content:center;
+
+    transform:
+        translateY(-50%);
+
+    border-radius:50%;
+
+    color:#aaaab4;
+
+    font-size:18px;
+    line-height:1;
+
+    cursor:pointer;
+
+    transition:
+        color .15s ease,
+        background .15s ease;
+}
+
+
+.clear-character:hover{
+    background:
+        rgba(102,102,153,.08);
+
+    color:var(--purple);
+}
+
+
+/* ==========================================
+   Character Dropdown Results
+========================================== */
+
+.character-results{
+    position:absolute;
+
+    top:calc(100% + 6px);
+    left:0;
+
+    z-index:1000;
+
+    width:100%;
+
+    display:none;
+
+    overflow:hidden;
+
+    border:
+        1px solid
+        var(--border);
+
+    border-radius:10px;
+
+    background:white;
+
+    box-shadow:
+        0 10px 28px
+        rgba(13,24,33,.14);
+}
+
+
+.character-results .search-item{
+    display:flex;
+
+    align-items:center;
+
+    gap:10px;
+
+    padding:
+        8px 10px;
+
+    cursor:pointer;
+}
+
+
+.character-results .search-item:hover{
+    background:
+        rgba(102,102,153,.08);
+}
+
+
+/* ==========================================
+   Clear All Button
+========================================== */
 
 #clearButton{
     width:90px;
@@ -761,24 +317,296 @@
     cursor:pointer;
 
     transition:
-        background .15s ease;
+        background .15s ease,
+        color .15s ease;
 }
 
 
 #clearButton:hover{
     background:#f3f1f8;
 }
+
+
 /* ==========================================
-   Interaction Tooltips
+   Legend
 ========================================== */
 
-.info-popup,
-.math-triangle{
+.legend{
     position:relative;
+
+    z-index:1;
+
+    display:flex;
+
+    align-items:center;
+    justify-content:center;
+
+    flex-wrap:wrap;
+
+    gap:
+        10px 24px;
+
+    padding:
+        18px 28px;
+
+    border-bottom:
+        1px solid var(--border);
+
+    background:white;
 }
 
 
-/* tooltip box */
+.legend-item{
+    display:flex;
+
+    align-items:center;
+
+    gap:7px;
+
+    color:var(--gray);
+
+    font-size:14px;
+
+    line-height:1.4;
+}
+
+
+.legend-item b{
+    color:var(--black);
+}
+
+
+.legend .triangle{
+    font-size:14px;
+
+    line-height:1;
+}
+
+
+.triangle.green{
+    color:var(--lime);
+}
+
+
+.triangle.red{
+    color:var(--red);
+}
+
+
+/* ==========================================
+   Results Area
+========================================== */
+
+#results{
+    padding:
+        20px 28px
+        28px;
+}
+
+
+#result-count{
+    margin-bottom:14px;
+
+    color:var(--purple);
+
+    font-size:11px;
+    font-weight:900;
+
+    letter-spacing:.07em;
+
+    text-transform:uppercase;
+}
+
+
+#list{
+    margin:0;
+
+    padding:0;
+
+    list-style:none;
+}
+
+
+/* ==========================================
+   Interaction Cards
+========================================== */
+
+.interaction-card{
+    position:relative;
+
+    display:flex;
+
+    align-items:center;
+    justify-content:space-between;
+
+    gap:18px;
+
+    min-height:68px;
+
+    margin-bottom:10px;
+
+    padding:
+        16px 18px
+        16px 20px;
+
+    border:
+        1px solid
+        var(--border);
+
+    border-left:
+        5px solid
+        var(--purple);
+
+    border-radius:12px;
+
+    background:white;
+
+    box-shadow:
+        0 4px 14px
+        rgba(13,24,33,.05);
+
+    transition:
+        border-color .15s ease,
+        box-shadow .15s ease,
+        transform .15s ease;
+}
+
+
+.interaction-card:hover{
+    transform:
+        translateY(-1px);
+
+    box-shadow:
+        0 7px 18px
+        rgba(13,24,33,.08);
+}
+
+
+/* ==========================================
+   Interaction Text
+========================================== */
+
+.interaction-text{
+    min-width:0;
+
+    color:var(--black);
+
+    font-size:16px;
+
+    line-height:1.55;
+}
+
+
+/* ==========================================
+   Interaction Icons
+========================================== */
+
+.interaction-icons{
+    flex-shrink:0;
+
+    display:flex;
+
+    align-items:center;
+
+    gap:10px;
+}
+
+
+/* ==========================================
+   Reason Button
+========================================== */
+
+.info-button{
+    position:relative;
+
+    width:30px;
+    height:30px;
+
+    display:flex;
+
+    align-items:center;
+    justify-content:center;
+
+    border:
+        1px solid
+        rgba(102,102,153,.22);
+
+    border-radius:50%;
+
+    background:
+        rgba(102,102,153,.08);
+
+    color:var(--purple);
+
+    font-size:13px;
+    font-weight:900;
+
+    line-height:1;
+
+    cursor:help;
+
+    transition:
+        background .15s ease,
+        border-color .15s ease,
+        transform .15s ease;
+}
+
+
+.info-button:hover{
+    transform:
+        scale(1.05);
+
+    border-color:
+        rgba(102,102,153,.38);
+
+    background:
+        rgba(102,102,153,.14);
+}
+
+
+/* ==========================================
+   Mathematician Triangle
+========================================== */
+
+.math-triangle{
+    position:relative;
+
+    width:24px;
+    height:30px;
+
+    display:flex;
+
+    align-items:center;
+    justify-content:center;
+
+    color:var(--purple);
+
+    cursor:help;
+}
+
+
+.math-triangle::before{
+    content:"▲";
+
+    font-size:21px;
+
+    line-height:1;
+}
+
+
+.math-triangle.green{
+    color:var(--lime);
+}
+
+
+.math-triangle.red{
+    color:var(--red);
+}
+
+
+/* ==========================================
+   Interaction Tooltips
+========================================== */
 
 .info-popup::after,
 .math-triangle::after{
@@ -787,51 +615,57 @@
 
     position:absolute;
 
-    z-index:100;
+    z-index:5000;
 
     bottom:
         calc(100% + 10px);
 
-    left:50%;
+    right:0;
 
-    width:260px;
+    width:280px;
 
     padding:
-        10px 12px;
-
-    transform:
-        translateX(-50%)
-        translateY(4px);
+        11px 13px;
 
     border:
         1px solid
-        rgba(102,102,153,.18);
+        rgba(255,255,255,.12);
 
     border-radius:9px;
 
-    background:
-        var(--black);
+    background:var(--black);
 
     color:white;
 
-    font-size:12px;
+    font-family:
+        "Roboto",
+        Arial,
+        sans-serif;
+
+    font-size:13px;
     font-weight:400;
 
     line-height:1.45;
 
+    letter-spacing:0;
+
     text-align:left;
+    text-transform:none;
 
     white-space:normal;
 
     box-shadow:
         0 8px 22px
-        rgba(13,24,33,.18);
+        rgba(13,24,33,.20);
 
     opacity:0;
 
     visibility:hidden;
 
     pointer-events:none;
+
+    transform:
+        translateY(4px);
 
     transition:
         opacity .12s ease,
@@ -840,23 +674,28 @@
 }
 
 
-/* little tooltip arrow */
+.info-popup:hover::after,
+.math-triangle:hover::after{
+    opacity:1;
 
-.info-popup::before,
-.math-triangle::before{
+    visibility:visible;
+
+    transform:
+        translateY(0);
+}
+
+
+/* tooltip arrow for question button */
+
+.info-popup::before{
     content:"";
 
     position:absolute;
 
-    z-index:101;
+    z-index:5001;
 
-    bottom:
-        calc(100% + 5px);
-
-    left:50%;
-
-    transform:
-        translateX(-50%);
+    top:-10px;
+    right:9px;
 
     border-left:
         5px solid transparent;
@@ -865,35 +704,121 @@
         5px solid transparent;
 
     border-top:
-        5px solid
-        var(--black);
+        5px solid var(--black);
 
     opacity:0;
 
     visibility:hidden;
 
     pointer-events:none;
-
-    transition:
-        opacity .12s ease;
 }
 
 
-/* show tooltip */
-
-.info-popup:hover::after,
-.info-popup:hover::before,
-.math-triangle:hover::after,
-.math-triangle:hover::before{
+.info-popup:hover::before{
     opacity:1;
 
     visibility:visible;
 }
 
 
-.info-popup:hover::after,
-.math-triangle:hover::after{
-    transform:
-        translateX(-50%)
-        translateY(0);
+/* ==========================================
+   Empty Results
+========================================== */
+
+#list > li:not(.interaction-card){
+    padding:24px;
+
+    border:
+        1px dashed
+        var(--border);
+
+    border-radius:12px;
+
+    color:var(--gray);
+
+    font-size:14px;
+
+    text-align:center;
+}
+
+
+/* ==========================================
+   Tablet
+========================================== */
+
+@media(max-width:850px){
+
+    .selector-controls{
+        grid-template-columns:1fr;
+    }
+
+
+    .selector-fields{
+        grid-template-columns:1fr;
+    }
+
+
+    #clearButton{
+        width:100%;
+    }
+
+}
+
+
+/* ==========================================
+   Mobile
+========================================== */
+
+@media(max-width:700px){
+
+    .selector-container{
+        padding:
+            18px 20px;
+    }
+
+
+    .selector-container::after{
+        width:180px;
+        height:120px;
+
+        right:10px;
+    }
+
+
+    .legend{
+        padding:
+            14px 20px;
+
+        font-size:13px;
+    }
+
+
+    #results{
+        padding:
+            18px 20px
+            22px;
+    }
+
+
+    .interaction-card{
+        align-items:flex-start;
+
+        gap:12px;
+
+        padding:
+            14px 14px
+            14px 16px;
+    }
+
+
+    .interaction-text{
+        font-size:15px;
+    }
+
+
+    .info-popup::after,
+    .math-triangle::after{
+        width:220px;
+    }
+
 }
