@@ -62,12 +62,14 @@
     mask-repeat:no-repeat;
 
 }
+
 .whos-that-character-silhouette{
     position:absolute;
 
     transition:
         background-color .2s ease,
-        opacity .2s ease;
+        opacity .2s ease,
+        transform .45s ease;
 }
 
 .whos-that-character-reveal{
@@ -83,9 +85,9 @@
     opacity:0;
 
     transition:
-        opacity .25s ease;
+        opacity .25s ease,
+        transform .45s ease;
 }
-
 
 .whos-that-character-silhouette.revealed{
     opacity:0;
