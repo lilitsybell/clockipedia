@@ -1123,13 +1123,33 @@ function renderWhosThatCharacterArchive(){
            Valid daily puzzle.
         */
 
-        else{
+else{
 
-            button.classList.add(
-                "has-puzzle"
-            );
+    button.classList.add(
+        "has-puzzle"
+    );
+
+
+    button.addEventListener(
+        "click",
+        () => {
+
+            whosThatCharacterPuzzleDate =
+                dateString;
+
+
+            closeWhosThatCharacterArchive();
+
+
+            updateWhosThatCharacterPuzzleDetails();
+
+
+            startWhosThatCharacterGame();
 
         }
+    );
+
+}
 
 
         /*
