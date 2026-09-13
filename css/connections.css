@@ -1015,17 +1015,6 @@
 ========================================== */
 
 @media(max-width:700px){
-
-    .daily-game-header-bottom{
-        align-items:flex-end;
-    }
-
-
-    .daily-game-puzzle-details{
-        flex-wrap:wrap;
-    }
-
-
     .connections-game{
         padding:
             16px;
