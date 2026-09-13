@@ -53,31 +53,6 @@
 }
 
 
-/* subtle decorative circle */
-
-.character-header::after{
-    content:"";
-
-    position:absolute;
-
-    width:310px;
-    height:310px;
-
-    right:-100px;
-    top:-105px;
-
-    border:
-        55px solid
-        var(--team-color);
-
-    border-radius:50%;
-
-    opacity:.035;
-
-    pointer-events:none;
-}
-
-
 .character-title{
     position:relative;
 
