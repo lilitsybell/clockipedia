@@ -1029,25 +1029,40 @@ function renderWhosThatCharacterArchive(){
             );
 
 
-    const today =
-        new Date();
+const today =
+    new Date();
 
 
-    const currentMonth =
-        new Date(
-            today.getFullYear(),
-            today.getMonth(),
-            1
-        );
+const currentMonth =
+    new Date(
+        today.getFullYear(),
+        today.getMonth(),
+        1
+    );
 
 
-    next.disabled =
-        whosThatCharacterArchiveDate >=
-        currentMonth;
+const startDate =
+    new Date(
+        `${whosThatCharacterStartDate}T00:00:00`
+    );
 
 
-    calendar.innerHTML =
-        "";
+const firstPuzzleMonth =
+    new Date(
+        startDate.getFullYear(),
+        startDate.getMonth(),
+        1
+    );
+
+
+next.disabled =
+    whosThatCharacterArchiveDate >=
+    currentMonth;
+
+
+previous.disabled =
+    whosThatCharacterArchiveDate <=
+    firstPuzzleMonth;
 
 
     const firstDay =
