@@ -269,21 +269,20 @@
 .whos-that-character-rays{
     position:absolute;
 
-    width:520px;
-    height:520px;
+    width:900px;
+    height:900px;
 
     border-radius:50%;
 
     background:
         repeating-conic-gradient(
             from 0deg,
-            rgba(102,102,153,.28) 0deg 10deg,
+            rgba(102,102,153,.22) 0deg 10deg,
             transparent 10deg 22deg
         );
 
     animation:
-        whosThatCharacterRaysSpin 18s linear infinite,
-        whosThatCharacterRaysPulse 3s ease-in-out infinite alternate;
+        whosThatCharacterRaysSpin 45s linear infinite;
 
     pointer-events:none;
 }
@@ -293,29 +292,12 @@
 
     from{
         transform:
-            rotate(0deg)
-            scale(1);
+            rotate(0deg);
     }
 
     to{
         transform:
-            rotate(360deg)
-            scale(1);
-    }
-
-}
-
-
-@keyframes whosThatCharacterRaysPulse{
-
-    from{
-        width:480px;
-        height:480px;
-    }
-
-    to{
-        width:560px;
-        height:560px;
+            rotate(360deg);
     }
 
 }
