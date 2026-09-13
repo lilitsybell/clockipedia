@@ -730,15 +730,15 @@ span[data-color="purple"]{
 .whos-card-rays{
     position:absolute;
 
-    width:760px;
-    height:760px;
+    width:700px;
+    height:700px;
 
     border-radius:50%;
 
     background:
         repeating-conic-gradient(
             from -8deg,
-            rgba(255,255,255,.20) 0deg 11deg,
+            rgba(255,255,255,.14) 0deg 11deg,
             transparent 11deg 24deg
         );
 
@@ -805,42 +805,46 @@ span[data-color="purple"]{
 .whos-card-character-left{
     z-index:2;
 
-    width:215px;
-    height:215px;
+    width:175px;
+    height:175px;
 
-    left:-35px;
+    left:-38px;
     top:50%;
 
     background:var(--blue);
 
     transform:
         translateY(-50%)
-        rotate(-10deg);
+        rotate(-8deg);
+
+    opacity:.9;
 }
 
 
 .whos-card-character-right{
     z-index:2;
 
-    width:215px;
-    height:215px;
+    width:175px;
+    height:175px;
 
-    right:-35px;
+    right:-38px;
     top:50%;
 
     background:var(--red);
 
     transform:
         translateY(-50%)
-        rotate(10deg);
+        rotate(8deg);
+
+    opacity:.9;
 }
 
 
 .whos-card-character-center{
     z-index:3;
 
-    width:245px;
-    height:245px;
+    width:185px;
+    height:185px;
 
     left:50%;
     top:50%;
@@ -849,7 +853,7 @@ span[data-color="purple"]{
 
     transform:
         translate(-50%,-50%)
-        rotate(-5deg);
+        rotate(-4deg);
 
     filter:
         drop-shadow(
@@ -867,7 +871,7 @@ span[data-color="purple"]{
 
     transform:
         translate(-50%,-50%)
-        rotate(-5deg);
+        rotate(-4deg);
 
     color:white;
 
@@ -876,7 +880,7 @@ span[data-color="purple"]{
         Arial,
         sans-serif;
 
-    font-size:88px;
+    font-size:68px;
     font-weight:900;
 
     line-height:1;
