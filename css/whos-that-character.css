@@ -124,66 +124,7 @@
 /* ==========================================
    Silhouette
 ========================================== */
-.whos-card-character{
-    position:absolute;
 
-    display:flex;
-    align-items:center;
-    justify-content:center;
-
-    background:transparent;
-}
-
-
-.whos-card-character-shape{
-    position:absolute;
-
-    width:100%;
-    height:100%;
-
-    -webkit-mask-image:
-        var(--card-character-image);
-
-    mask-image:
-        var(--card-character-image);
-
-    -webkit-mask-size:contain;
-    mask-size:contain;
-
-    -webkit-mask-position:center;
-    mask-position:center;
-
-    -webkit-mask-repeat:no-repeat;
-    mask-repeat:no-repeat;
-}
-
-
-.whos-card-character-outline{
-    z-index:1;
-
-    background:white;
-
-    transform:scale(1.08);
-}
-
-
-.whos-card-character-fill{
-    z-index:2;
-
-    background:
-        var(--character-color);
-}
-.whos-card-character-left{
-    --character-color:var(--blue);
-}
-
-.whos-card-character-center{
-    --character-color:var(--purple);
-}
-
-.whos-card-character-right{
-    --character-color:var(--red);
-}
 .whos-that-character-silhouette{
     width:300px;
     height:300px;
