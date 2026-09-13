@@ -1,3 +1,444 @@
 /* ==========================================
    Character Page
 ========================================== */
+
+#character{
+    width:100%;
+}
+
+
+/* ==========================================
+   Character Header
+========================================== */
+
+.character-header{
+    display:flex;
+
+    align-items:center;
+    justify-content:center;
+
+    gap:48px;
+
+    margin-bottom:32px;
+
+    padding:
+        10px 20px
+        28px;
+}
+
+
+.character-header img{
+    width:180px;
+    height:180px;
+
+    flex-shrink:0;
+
+    object-fit:contain;
+}
+
+
+.character-title{
+    width:min(560px, 100%);
+}
+
+
+.character-header h1{
+    margin:
+        0 0 5px;
+
+    color:var(--team-color);
+
+    font-family:
+        "Droid Sans",
+        Arial,
+        sans-serif;
+
+    font-size:36px;
+
+    line-height:1.1;
+}
+
+
+.character-team{
+    color:var(--gray);
+
+    font-size:16px;
+
+    font-weight:500;
+}
+
+
+.character-ability{
+    max-width:650px;
+
+    margin-top:16px;
+
+    color:var(--black);
+
+    font-size:17px;
+
+    line-height:1.5;
+}
+
+
+/* ==========================================
+   Wiki Container
+========================================== */
+
+.wiki{
+    --team-color:var(--purple);
+
+    width:100%;
+
+    margin:auto;
+}
+
+
+/* ==========================================
+   Team Colors
+========================================== */
+
+.wiki.blue{
+    --team-color:var(--blue);
+}
+
+
+.wiki.red{
+    --team-color:var(--red);
+}
+
+
+.wiki.purple{
+    --team-color:var(--purple);
+}
+
+
+.wiki.copper{
+    --team-color:var(--copper);
+}
+
+
+.wiki.lime{
+    --team-color:var(--lime);
+}
+
+
+.wiki.traveller{
+    --team-color:var(--traveller);
+}
+
+
+/* ==========================================
+   Tabs
+========================================== */
+
+.tabs{
+    display:flex;
+
+    align-items:flex-end;
+
+    gap:6px;
+
+    margin:0;
+
+    padding:0;
+}
+
+
+.tab{
+    padding:
+        12px 22px;
+
+    border-radius:
+        10px 10px 0 0;
+
+    background:#e9e9ed;
+
+    color:#666;
+
+    font-size:12px;
+    font-weight:800;
+
+    letter-spacing:.02em;
+
+    cursor:pointer;
+
+    user-select:none;
+
+    transition:
+        background .15s ease,
+        color .15s ease;
+}
+
+
+.tab:hover{
+    background:#ddddE4;
+
+    color:var(--black);
+}
+
+
+.tab.active{
+    background:var(--team-color);
+
+    color:white;
+}
+
+
+/* ==========================================
+   Tab Pages
+========================================== */
+
+.page{
+    display:none;
+}
+
+
+.page.active{
+    display:block;
+}
+
+
+/* ==========================================
+   Main Content Panel
+========================================== */
+
+.content{
+    position:relative;
+
+    padding:
+        30px 38px
+        42px;
+
+    border:
+        1px solid
+        var(--border);
+
+    border-top:
+        4px solid
+        var(--team-color);
+
+    border-radius:
+        0 14px 14px 14px;
+
+    background:white;
+
+    box-shadow:
+        0 10px 28px
+        rgba(13,24,33,.07);
+}
+
+
+.content h1,
+.content h2,
+.content h3{
+    color:var(--team-color);
+}
+
+
+.content h2{
+    margin:
+        28px 0 12px;
+
+    font-size:23px;
+}
+
+
+.content h2:first-child{
+    margin-top:0;
+}
+
+
+.content h3{
+    margin:
+        22px 0 10px;
+
+    font-size:18px;
+}
+
+
+.content p,
+.content li{
+    font-size:16px;
+
+    line-height:1.6;
+}
+
+
+.content ul,
+.content ol{
+    margin:
+        10px 0 18px 22px;
+}
+
+
+/* ==========================================
+   Flavor Text
+========================================== */
+
+.content > em:first-child,
+.content > i:first-child{
+    display:block;
+
+    margin-bottom:24px;
+
+    color:#666;
+
+    font-size:15px;
+
+    line-height:1.55;
+}
+
+
+/* ==========================================
+   Character Links
+========================================== */
+
+.content .character-link:hover{
+    text-decoration:none;
+}
+
+
+/* ==========================================
+   Example Cards
+========================================== */
+
+.example{
+    margin:
+        16px 0;
+
+    padding:
+        18px 20px;
+
+    border:
+        1px solid
+        var(--border);
+
+    border-left:
+        5px solid
+        var(--team-color);
+
+    border-radius:10px;
+
+    background:
+        var(--light-gray);
+
+    color:var(--black);
+
+    font-size:15px;
+
+    line-height:1.6;
+}
+
+
+/* ==========================================
+   Interaction Cards
+========================================== */
+
+.content .interaction-card{
+    position:relative;
+
+    display:flex;
+
+    align-items:center;
+    justify-content:space-between;
+
+    gap:18px;
+
+    min-height:68px;
+
+    margin-bottom:10px;
+
+    padding:
+        16px 18px
+        16px 20px;
+
+    border:
+        1px solid
+        var(--border);
+
+    border-left:
+        5px solid
+        var(--purple);
+
+    border-radius:12px;
+
+    background:white;
+
+    box-shadow:
+        0 4px 14px
+        rgba(13,24,33,.05);
+}
+
+
+.content .interaction-text{
+    min-width:0;
+
+    color:var(--black);
+
+    font-size:16px;
+
+    line-height:1.55;
+}
+
+
+.content .interaction-icons{
+    flex-shrink:0;
+
+    display:flex;
+
+    align-items:center;
+
+    gap:10px;
+}
+
+
+/* ==========================================
+   Responsive
+========================================== */
+
+@media(max-width:750px){
+
+    .character-header{
+        flex-direction:column;
+
+        gap:18px;
+
+        padding:
+            0 0 24px;
+
+        text-align:center;
+    }
+
+
+    .character-header img{
+        width:150px;
+        height:150px;
+    }
+
+
+    .character-title{
+        width:100%;
+    }
+
+
+    .tabs{
+        overflow-x:auto;
+    }
+
+
+    .tab{
+        flex-shrink:0;
+
+        padding:
+            11px 16px;
+    }
+
+
+    .content{
+        padding:
+            24px 22px
+            34px;
+    }
+
+}
