@@ -15,28 +15,6 @@
         rgba(13,24,33,.07);
 }
 
-
-/* ==========================================
-   Finder Header
-========================================== */
-
-.finder-header{
-    padding:22px 28px;
-
-    border-bottom:
-        1px solid var(--border);
-
-    color:var(--black);
-
-    font-family:
-        "Droid Sans",
-        Arial,
-        sans-serif;
-
-    font-size:22px;
-}
-
-
 /* ==========================================
    Selector Area
 ========================================== */
