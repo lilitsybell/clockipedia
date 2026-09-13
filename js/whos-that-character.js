@@ -770,6 +770,9 @@ function updateWhosThatCharacterStatus(){
 
 function finishWhosThatCharacterGame(){
 
+    saveWhosThatCharacterResult();
+
+
     const input =
         document.querySelector(
             "#whosThatCharacterInput"
@@ -1209,6 +1212,44 @@ else{
     button.classList.add(
         "has-puzzle"
     );
+
+
+    const result =
+        getWhosThatCharacterResult(
+            dateString
+        );
+
+
+    if(
+        result &&
+        result.completed
+    ){
+
+        const score =
+            document.createElement(
+                "span"
+            );
+
+
+        score.className =
+            "whos-that-character-calendar-score";
+
+
+        score.textContent =
+            result.score;
+
+
+        score.style.color =
+            getWhosThatCharacterScoreColor(
+                result.score
+            );
+
+
+        button.appendChild(
+            score
+        );
+
+    }
 
 
     button.addEventListener(
@@ -1727,5 +1768,99 @@ function formatWhosThatCharacterDate(
 
 
     return `${year}-${month}-${day}`;
+
+}
+/* ==========================================
+   Saved Puzzle Results
+========================================== */
+
+function getWhosThatCharacterStorageKey(
+    dateString
+){
+
+    return `whos-that-character-${dateString}`;
+
+}
+
+
+function saveWhosThatCharacterResult(){
+
+    const key =
+        getWhosThatCharacterStorageKey(
+            whosThatCharacterPuzzleDate
+        );
+
+
+    const result = {
+        completed:true,
+        score:whosThatCharacterScore
+    };
+
+
+    localStorage.setItem(
+        key,
+        JSON.stringify(result)
+    );
+
+}
+
+
+function getWhosThatCharacterResult(
+    dateString
+){
+
+    const key =
+        getWhosThatCharacterStorageKey(
+            dateString
+        );
+
+
+    const saved =
+        localStorage.getItem(
+            key
+        );
+
+
+    if(!saved){
+        return null;
+    }
+
+
+    try{
+
+        return JSON.parse(
+            saved
+        );
+
+    }
+    catch(error){
+
+        return null;
+
+    }
+
+}
+function getWhosThatCharacterScoreColor(
+    score
+){
+
+    const clampedScore =
+        Math.max(
+            0,
+            Math.min(
+                30,
+                score
+            )
+        );
+
+
+    const hue =
+        (
+            clampedScore /
+            30
+        ) * 120;
+
+
+    return `hsl(${hue}, 72%, 42%)`;
 
 }
