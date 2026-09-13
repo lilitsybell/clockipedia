@@ -1,129 +1,268 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <link rel="icon" type="image/png" href="../images/favicon.png">
+
     <meta charset="UTF-8">
-    <title>Script Generator</title>
-    <link rel="stylesheet" href="/css/style.css">
-</head>
-<body>
-<div id="sidebar"></div>
-<div id="content">
-    <div class="script-generator">
-        <!-- ===================================== -->
-        <!-- PAGE HEADER -->
-        <!-- ===================================== -->
-        <div class="generator-header">
-            Script Generator
-        </div>
-        <!-- ===================================== -->
-        <!-- SETTINGS PANEL -->
-        <!-- ===================================== -->
-        <div class="generator-panel">
-<div class="generator-controls">
-    <div class="generator-left-controls">
-        <div class="generator-setting">
-            <label>Include Character</label>
-            <div class="character-search-wrapper">
-<div class="character-search-wrapper">
-    <input 
-        id="characterSearch" 
-        placeholder="Search characters..."
+
+    <title>
+        Script Generator | Clockipedia
+    </title>
+
+    <link
+        rel="stylesheet"
+        href="/css/style-global.css"
     >
-    <span 
-        id="clearCharacterSearch"
-        class="clear-character"
-        style="display:none;">
-        ×
-    </span>
-</div>
-    <div
-        id="characterSearchResults"
-        class="character-search-results">
-    </div>
-</div>
-        </div>
-        <div class="generator-setting">
-            <label>Homebrew</label>
-            <button id="homebrewButton" class="generator-button">
-                Maybe
-            </button>
-        </div>
-        <div class="generator-setting">
-            <label>Script Size</label>
-            <button id="scriptSizeButton" class="generator-button">
-                Any
-            </button>
-        </div>
-    </div>
-    <button
-        id="generateScriptButton"
-        class="generator-button">
-        Generate Script
-    </button>
-</div>
-        </div>
-        <!-- ===================================== -->
-        <!-- RESULTS PANEL -->
-        <!-- ===================================== -->
-        <div class="generator-panel script-results">
-            <!-- Script Header -->
-<div
-    id="scriptHeader"
-    class="script-header">
-    <div class="script-header-info">
-        <div class="script-heading">
-            <h2 id="scriptTitle">
-                Unknown Script
-            </h2>
-            <span id="scriptAuthor">
-                by Unknown
-            </span>
-        </div>
-        <div id="scriptTags"></div>
-    </div>
-<div class="json-buttons">
-    <button
-        id="copyJsonButton"
-        class="icon-button"
-        title="Copy JSON">
-        <img src="/images/copy.png" alt="Copy JSON">
-    </button>
-    <button
-        id="downloadJsonButton"
-        class="icon-button"
-        title="Download JSON">
-        <img src="/images/download.png" alt="Download JSON">
-    </button>
-    <a
-        id="scriptAlmanac"
-        class="icon-button"
-        target="_blank"
-        title="View Almanac"
-        style="display:none;">
-        <img src="/images/website.png" alt="View Almanac">
-    </a>
-</div>
-</div>
 
-            <!-- Characters -->
+    <link
+        rel="stylesheet"
+        href="/css/scripts.css"
+    >
 
-            <div id="characterContainer"></div>
+    <link
+        rel="icon"
+        type="image/png"
+        href="/images/favicon.png"
+    >
+
+</head>
+
+
+<body>
+
+    <div id="sidebar"></div>
+
+
+    <main id="content">
+
+        <div class="site-page">
+
+
+            <!-- =================================
+                 Header
+            ================================== -->
+
+            <section class="site-header">
+
+                <span class="site-eyebrow">
+                    Clockipedia Tools
+                </span>
+
+                <h1>
+                    Script Generator
+                </h1>
+
+                <p>
+                    Find a curated Blood on the Clocktower
+                    script based on your preferences.
+                </p>
+
+            </section>
+
+
+            <!-- =================================
+                 Script Generator
+            ================================== -->
+
+            <div class="script-generator">
+
+
+                <!-- =================================
+                     Settings Panel
+                ================================== -->
+
+                <section class="generator-panel">
+
+                    <div class="generator-controls">
+
+
+                        <div class="generator-left-controls">
+
+
+                            <!-- Character -->
+
+                            <div class="generator-setting">
+
+                                <label for="characterSearch">
+                                    Include Character
+                                </label>
+
+                                <div class="character-search-wrapper">
+
+                                    <input
+                                        id="characterSearch"
+                                        placeholder="Search characters..."
+                                        autocomplete="off"
+                                    >
+
+                                    <span
+                                        id="clearCharacterSearch"
+                                        class="clear-character"
+                                        style="display:none;"
+                                    >
+                                        ×
+                                    </span>
+
+                                    <div
+                                        id="characterSearchResults"
+                                        class="character-search-results"
+                                    ></div>
+
+                                </div>
+
+                            </div>
+
+
+                            <!-- Homebrew -->
+
+                            <div class="generator-setting">
+
+                                <label>
+                                    Homebrew
+                                </label>
+
+                                <button
+                                    id="homebrewButton"
+                                    class="generator-button"
+                                >
+                                    Maybe
+                                </button>
+
+                            </div>
+
+
+                            <!-- Script Size -->
+
+                            <div class="generator-setting">
+
+                                <label>
+                                    Script Size
+                                </label>
+
+                                <button
+                                    id="scriptSizeButton"
+                                    class="generator-button"
+                                >
+                                    Any
+                                </button>
+
+                            </div>
+
+                        </div>
+
+
+                        <button
+                            id="generateScriptButton"
+                            class="generator-button generator-button-primary"
+                        >
+                            Generate Script
+                        </button>
+
+                    </div>
+
+                </section>
+
+
+                <!-- =================================
+                     Results Panel
+                ================================== -->
+
+                <section class="generator-panel script-results">
+
+
+                    <!-- Script Header -->
+
+                    <div
+                        id="scriptHeader"
+                        class="script-header"
+                    >
+
+                        <div class="script-header-info">
+
+                            <div class="script-heading">
+
+                                <h2 id="scriptTitle">
+                                    Unknown Script
+                                </h2>
+
+                                <span id="scriptAuthor">
+                                    by Unknown
+                                </span>
+
+                            </div>
+
+
+                            <div id="scriptTags"></div>
+
+                        </div>
+
+
+                        <div class="json-buttons">
+
+                            <button
+                                id="copyJsonButton"
+                                class="icon-button"
+                                title="Copy JSON"
+                            >
+                                <img
+                                    src="/images/copy.png"
+                                    alt="Copy JSON"
+                                >
+                            </button>
+
+
+                            <button
+                                id="downloadJsonButton"
+                                class="icon-button"
+                                title="Download JSON"
+                            >
+                                <img
+                                    src="/images/download.png"
+                                    alt="Download JSON"
+                                >
+                            </button>
+
+
+                            <a
+                                id="scriptAlmanac"
+                                class="icon-button"
+                                target="_blank"
+                                title="View Almanac"
+                                style="display:none;"
+                            >
+                                <img
+                                    src="/images/website.png"
+                                    alt="View Almanac"
+                                >
+                            </a>
+
+                        </div>
+
+                    </div>
+
+
+                    <!-- Characters -->
+
+                    <div id="characterContainer"></div>
+
+                </section>
+
+            </div>
 
         </div>
 
-    </div>
+    </main>
 
-</div>
 
-<script src="/js/characters.js"></script>
-<script src="/js/interaction-card.js"></script>
-<script src="/js/tooltip.js"></script>
-<script src="/js/search.js"></script>
-<script src="/js/sidebar.js"></script>
-<script src="/js/script-loader.js"></script>
-<script src="/js/script-renderer.js"></script>
-<script src="/js/script-generator.js"></script>
+    <script src="/js/characters.js"></script>
+    <script src="/js/interaction-card.js"></script>
+    <script src="/js/tooltip.js"></script>
+    <script src="/js/search.js"></script>
+    <script src="/js/sidebar.js"></script>
+    <script src="/js/script-loader.js"></script>
+    <script src="/js/script-renderer.js"></script>
+    <script src="/js/script-generator.js"></script>
 
 </body>
+
 </html>
