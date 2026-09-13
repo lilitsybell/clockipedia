@@ -726,15 +726,20 @@ saveWhosThatCharacterState();
 
 message.className =
     "whos-that-character-message hint";
+const singularTeam =
+    getWhosThatCharacterSingularTeam(
+        whosThatCharacterCurrent.team
+    );
+
+
 const article =
-    whosThatCharacterCurrent.team === "Outsider" ||
-    whosThatCharacterCurrent.team === "Outsiders"
+    singularTeam === "Outsider"
         ? "an"
         : "a";
 
 
 message.textContent =
-    `Not quite! Here's a hint: It's ${article} ${whosThatCharacterCurrent.team}.`;
+    `Not quite! Here's a hint: It's ${article} ${singularTeam}.`;
 
 
         input.value = "";
@@ -2106,5 +2111,33 @@ function showWhosThatCharacterCompletedState(
 
     reveal.style.opacity =
         "0";
+
+}
+function getWhosThatCharacterSingularTeam(
+    team
+){
+
+    const teams = {
+        Townsfolk:"Townsfolk",
+
+        Outsider:"Outsider",
+        Outsiders:"Outsider",
+
+        Minion:"Minion",
+        Minions:"Minion",
+
+        Demon:"Demon",
+        Demons:"Demon",
+
+        Traveller:"Traveller",
+        Travellers:"Traveller",
+
+        Fabled:"Fabled",
+
+        Loric:"Loric"
+    };
+
+
+    return teams[team] || team;
 
 }
