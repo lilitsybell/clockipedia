@@ -1,83 +1,184 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-<meta charset="UTF-8">
-<title>Clockipedia</title>
-<link rel="stylesheet" href="/css/style.css">
-<link rel="icon" type="image/png" href="/images/favicon.png">
-</head>
-<body>
-<div id="sidebar"></div>
-<main id="content">
-<div class="homepage">
-    <!-- HERO SECTION -->
-<section class="hero-section">
-    <img 
-        src="/images/clockipedia-condensed.png" 
-        class="hero-logo"
-        alt="Better BOTC Wiki"
+
+    <meta charset="UTF-8">
+
+    <title>
+        Clockipedia
+    </title>
+
+    <link
+        rel="stylesheet"
+        href="/css/style-global.css"
     >
-    <p class="hero-description">
-        a fan-made wiki site for Blood on the Clocktower
-    </p>
-</section>
-<section class="character-feature">
-    <div id="characterToken" class="character-token">
-        <div class="token-circle">
-            <div class="token-face">
-                <img
-                    id="tokenImage"
-                    src=""
-                    alt=""
-                >
-            </div>
-        </div>
-    </div>
-    <div id="interactionCard" class="home-interaction-card">
-        <div class="interaction-title">
-            <a id="interactionCharacter"></a>
-            <span id="interactionTeam"></span>
-        </div>
-        <div class="interaction-ability">
-            <p id="interactionAbility"></p>
-        </div>
-        <div class="interaction-fact">
-            <strong>Did you know?</strong>
-            <p id="interactionFact"></p>
-        </div>
-    </div>
-</section>
-<section class="daily-script">
-<div class="daily-script-info">
-    <div class="daily-script-label">
-        Script of the Day
-    </div>
-    <a id="dailyScriptName" href="/scripts.html"></a>
-    <p id="dailyScriptAuthor"></p>
-    <div id="dailyScriptTags"
-         class="daily-script-tags">
-    </div>
-</div>
-    <div class="daily-script-carousel">
-        <div class="daily-character-wheel-wrapper">
+
+    <link
+        rel="stylesheet"
+        href="/css/homepage.css"
+    >
+
+    <link
+        rel="icon"
+        type="image/png"
+        href="/images/favicon.png"
+    >
+
+</head>
+
+
+<body>
+
+<div id="sidebar"></div>
+
+<main id="content">
+
+    <div class="homepage">
+
+
+        <!-- =================================
+             Hero
+        ================================== -->
+
+        <section class="hero-section">
+
+            <img
+                src="/images/clockipedia-condensed.png"
+                class="hero-logo"
+                alt="Clockipedia"
+            >
+
+            <p class="hero-description">
+                a fan-made wiki site for Blood on the Clocktower
+            </p>
+
+        </section>
+
+
+        <!-- =================================
+             Random Character
+        ================================== -->
+
+        <section class="character-feature">
+
             <div
-                id="dailyParticleWheel"
-                class="daily-particle-wheel">
+                id="characterToken"
+                class="character-token"
+            >
+
+                <div class="token-circle">
+
+                    <div class="token-face">
+
+                        <img
+                            id="tokenImage"
+                            src=""
+                            alt=""
+                        >
+
+                    </div>
+
+                </div>
+
             </div>
+
+
             <div
-                id="dailyCharacterWheel"
-                class="daily-character-wheel">
+                id="interactionCard"
+                class="home-interaction-card"
+            >
+
+                <div class="interaction-title">
+
+                    <a id="interactionCharacter"></a>
+
+                    <span id="interactionTeam"></span>
+
+                </div>
+
+
+                <div class="interaction-ability">
+
+                    <p id="interactionAbility"></p>
+
+                </div>
+
+
+                <div class="interaction-fact">
+
+                    <strong>
+                        Did you know?
+                    </strong>
+
+                    <p id="interactionFact"></p>
+
+                </div>
+
             </div>
-        </div>
+
+        </section>
+
+
+        <!-- =================================
+             Script of the Day
+        ================================== -->
+
+        <section class="daily-script">
+
+            <div class="daily-script-info">
+
+                <div class="daily-script-label">
+                    Script of the Day
+                </div>
+
+                <a
+                    id="dailyScriptName"
+                    href="/scripts.html"
+                ></a>
+
+                <p id="dailyScriptAuthor"></p>
+
+                <div
+                    id="dailyScriptTags"
+                    class="daily-script-tags"
+                ></div>
+
+            </div>
+
+
+            <div class="daily-script-carousel">
+
+                <div class="daily-character-wheel-wrapper">
+
+                    <div
+                        id="dailyParticleWheel"
+                        class="daily-particle-wheel"
+                    ></div>
+
+                    <div
+                        id="dailyCharacterWheel"
+                        class="daily-character-wheel"
+                    ></div>
+
+                </div>
+
+            </div>
+
+        </section>
+
     </div>
-</section>
-</div>
+
 </main>
+
+
 <script src="/js/characters.js"></script>
 <script src="/js/interaction-card.js"></script>
 <script src="/js/tooltip.js"></script>
 <script src="/js/search.js"></script>
 <script src="/js/sidebar.js"></script>
 <script src="/js/homepage.js"></script>
+
 </body>
+
 </html>
