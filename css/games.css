@@ -337,11 +337,22 @@ span[data-color="purple"]{
 @media(max-width:700px){
 
 .game-card-connections,
-.game-card-name-every-character{
+.game-card-name-every-character,
+.game-card-whos-that-character{
     max-width:none;
 
     grid-template-columns:
         1fr;
+}
+   .game-card-whos-art{
+    min-height:220px;
+
+    padding:24px;
+}
+
+
+.game-card-whos-content{
+    padding:24px;
 }
    .game-card-name-art{
     min-height:220px;
@@ -635,6 +646,196 @@ span[data-color="purple"]{
 
 
 .game-card-name-every-character p{
+    margin:0;
+
+    color:var(--gray);
+
+    font-size:12px;
+
+    line-height:1.55;
+}
+/* ==========================================
+   Who's That Character Card
+========================================== */
+
+.game-card-whos-that-character{
+    width:100%;
+
+    display:grid;
+
+    grid-template-columns:
+        42% 58%;
+
+    overflow:hidden;
+
+    border:1px solid var(--border);
+    border-radius:18px;
+
+    background:white;
+
+    color:var(--black);
+
+    box-shadow:
+        0 10px 28px
+        rgba(13,24,33,.07);
+
+    transition:
+        transform .16s ease,
+        box-shadow .16s ease,
+        border-color .16s ease;
+}
+
+
+.game-card-whos-that-character:hover{
+    transform:translateY(-2px);
+
+    border-color:#c4c4d2;
+
+    box-shadow:
+        0 14px 34px
+        rgba(13,24,33,.10);
+}
+
+
+/* ==========================================
+   Who's That Character Artwork
+========================================== */
+
+.game-card-whos-art{
+    position:relative;
+
+    min-height:270px;
+
+    display:flex;
+    align-items:center;
+    justify-content:center;
+
+    overflow:hidden;
+
+    padding:28px;
+
+    background:#c9c8df;
+}
+
+
+/* mystery token */
+
+.whos-card-mystery-token{
+    position:relative;
+
+    z-index:2;
+
+    width:142px;
+    height:142px;
+
+    display:flex;
+    align-items:center;
+    justify-content:center;
+
+    border-radius:50%;
+
+    background:white;
+
+    box-shadow:
+        0 8px 20px
+        rgba(13,24,33,.15);
+
+    transform:rotate(-8deg);
+}
+
+
+.whos-card-mystery-inner{
+    width:116px;
+    height:116px;
+
+    display:flex;
+    align-items:center;
+    justify-content:center;
+
+    border-radius:50%;
+
+    background:var(--purple);
+
+    color:white;
+
+    font-family:
+        "Droid Sans",
+        Arial,
+        sans-serif;
+
+    font-size:72px;
+    font-weight:900;
+    line-height:1;
+}
+
+
+/* decorative rays */
+/* decorative rays */
+
+.whos-card-ray{
+    position:absolute;
+
+    width:220px;
+    height:44px;
+
+    border-radius:999px;
+
+    background:
+        rgba(255,255,255,.17);
+
+    transform-origin:center;
+}
+
+
+.whos-card-ray.ray-one{
+    transform:rotate(0deg);
+}
+
+
+.whos-card-ray.ray-two{
+    transform:rotate(45deg);
+}
+
+
+.whos-card-ray.ray-three{
+    transform:rotate(90deg);
+}
+
+
+.whos-card-ray.ray-four{
+    transform:rotate(135deg);
+}
+/* ==========================================
+   Who's That Character Content
+========================================== */
+
+.game-card-whos-content{
+    padding:28px 30px;
+
+    display:flex;
+    flex-direction:column;
+
+    justify-content:center;
+}
+
+
+.game-card-whos-that-character h2{
+    margin:0 0 8px;
+
+    color:var(--black);
+
+    font-family:
+        "Droid Sans",
+        Arial,
+        sans-serif;
+
+    font-size:25px;
+
+    line-height:1.08;
+}
+
+
+.game-card-whos-that-character p{
     margin:0;
 
     color:var(--gray);
