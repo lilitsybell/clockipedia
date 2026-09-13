@@ -28,24 +28,50 @@ document.addEventListener("DOMContentLoaded", () => {
 <a href="/games.html" class="nav-link"> Games </a>
         </nav>
     `;
-// Highlight current page
-const currentPage =
+// Highlight current section
+const currentPath =
     window.location.pathname
         .replace(/index\.html$/, "")
         .replace(/\/$/, "");
+
+
 document
     .querySelectorAll(".nav-link")
     .forEach(link => {
-        const linkPage =
+
+        const linkPath =
             new URL(link.href)
                 .pathname
                 .replace(/index\.html$/, "")
                 .replace(/\/$/, "");
-        if(linkPage === currentPage){
-            link.classList.add(
-                "active"
-            );
+
+
+        let isActive =
+            currentPath === linkPath;
+
+
+        // Character pages
+        if(
+            linkPath === "/characters.html" &&
+            currentPath.startsWith("/characters/")
+        ){
+            isActive = true;
         }
+
+
+        // Game pages
+        if(
+            linkPath === "/games.html" &&
+            currentPath.startsWith("/games/")
+        ){
+            isActive = true;
+        }
+
+
+        if(isActive){
+            link.classList.add("active");
+        }
+
     });
     // Character dropdown
     const characterToggle = document.querySelector(".character-toggle");
