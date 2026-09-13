@@ -261,14 +261,12 @@ span[data-color="purple"]{
     margin-top:18px;
 }
 
-
 .game-card-play,
 .game-card-make{
     width:100%;
     min-height:40px;
 
     display:flex;
-
     align-items:center;
     justify-content:center;
 
@@ -280,8 +278,9 @@ span[data-color="purple"]{
     letter-spacing:.065em;
 
     text-transform:uppercase;
-}
 
+    text-decoration:none;
+}
 
 .game-card-play{
     background:var(--purple);
@@ -327,68 +326,6 @@ span[data-color="purple"]{
 
 .game-card-or strong{
     font-weight:800;
-}
-
-
-/* ==========================================
-   Mobile
-========================================== */
-
-@media(max-width:700px){
-
-.game-card-connections,
-.game-card-name-every-character,
-.game-card-whos-that-character{
-    max-width:none;
-
-    grid-template-columns:
-        1fr;
-}
-   .game-card-whos-art{
-    min-height:220px;
-
-    padding:24px;
-}
-
-
-.game-card-whos-content{
-    padding:24px;
-}
-   .game-card-name-art{
-    min-height:220px;
-
-    padding:24px;
-}
-
-
-.game-card-name-content{
-    padding:24px;
-}
-
-
-    .game-card-connections-art{
-        min-height:220px;
-
-        padding:24px;
-    }
-
-
-    .connections-card-mini-board{
-        width:150px;
-        height:150px;
-    }
-
-
-    .game-card-connections-content{
-        padding:24px;
-    }
-.games-grid{
-    grid-template-columns:1fr;
-}
-}
-.game-card-play,
-.game-card-make{
-    text-decoration:none;
 }
 
 .game-card-play:hover{
@@ -877,4 +814,46 @@ span[data-color="purple"]{
     line-height:1;
 
     pointer-events:none;
+}
+/* ==========================================
+   Mobile
+========================================== */
+
+@media(max-width:700px){
+
+    .games-grid{
+        grid-template-columns:1fr;
+    }
+
+
+    .game-card-connections,
+    .game-card-name-every-character,
+    .game-card-whos-that-character{
+        max-width:none;
+
+        grid-template-columns:1fr;
+    }
+
+
+    .game-card-connections-art,
+    .game-card-name-art,
+    .game-card-whos-art{
+        min-height:220px;
+
+        padding:24px;
+    }
+
+
+    .game-card-connections-content,
+    .game-card-name-content,
+    .game-card-whos-content{
+        padding:24px;
+    }
+
+
+    .connections-card-mini-board{
+        width:150px;
+        height:150px;
+    }
+
 }
