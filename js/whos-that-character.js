@@ -127,6 +127,18 @@ function setupWhosThatCharacterGame(){
 
 function startWhosThatCharacterGame(){
 
+    const input =
+        document.querySelector(
+            "#whosThatCharacterInput"
+        );
+
+
+    const guessButton =
+        document.querySelector(
+            "#whosThatCharacterGuess"
+        );
+
+
     whosThatCharacterGameCharacters =
         generateWhosThatCharacterPuzzle(
             whosThatCharacterPuzzleDate
@@ -136,6 +148,14 @@ function startWhosThatCharacterGame(){
     whosThatCharacterIndex = 0;
 
     whosThatCharacterScore = 0;
+
+
+    input.disabled =
+        false;
+
+
+    guessButton.disabled =
+        false;
 
 
     loadWhosThatCharacterRound();
