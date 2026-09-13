@@ -945,13 +945,29 @@ function closeWhosThatCharacterArchive(){
 /* ==========================================
    Render Archive
 ========================================== */
-
 function renderWhosThatCharacterArchive(){
 
     const heading =
         document.querySelector(
             "#whosThatCharacterArchiveMonth"
         );
+
+
+    const calendar =
+        document.querySelector(
+            "#whosThatCharacterArchiveCalendar"
+        );
+
+
+    const year =
+        whosThatCharacterArchiveDate
+            .getFullYear();
+
+
+    const month =
+        whosThatCharacterArchiveDate
+            .getMonth();
+
 
     heading.textContent =
         whosThatCharacterArchiveDate
@@ -962,6 +978,197 @@ function renderWhosThatCharacterArchive(){
                     year:"numeric"
                 }
             );
+
+
+    calendar.innerHTML =
+        "";
+
+
+    const firstDay =
+        new Date(
+            year,
+            month,
+            1
+        );
+
+
+    const lastDay =
+        new Date(
+            year,
+            month + 1,
+            0
+        );
+
+
+    /*
+       Blank cells before the first
+       day of the month.
+    */
+
+    for(
+        let i = 0;
+        i < firstDay.getDay();
+        i++
+    ){
+
+        const blank =
+            document.createElement(
+                "div"
+            );
+
+
+        calendar.appendChild(
+            blank
+        );
+
+    }
+
+
+    const todayString =
+        getWhosThatCharacterToday();
+
+
+    for(
+        let day = 1;
+        day <= lastDay.getDate();
+        day++
+    ){
+
+        const date =
+            new Date(
+                year,
+                month,
+                day
+            );
+
+
+        const dateString =
+            formatWhosThatCharacterDate(
+                date
+            );
+
+
+        const button =
+            document.createElement(
+                "button"
+            );
+
+
+        button.type =
+            "button";
+
+
+        button.className =
+            "daily-calendar-day";
+
+
+        const number =
+            document.createElement(
+                "span"
+            );
+
+
+        number.className =
+            "daily-calendar-day-number";
+
+
+        number.textContent =
+            day;
+
+
+        button.appendChild(
+            number
+        );
+
+
+        /*
+           Before the game existed.
+        */
+
+        if(
+            dateString <
+            whosThatCharacterStartDate
+        ){
+
+            button.classList.add(
+                "no-puzzle"
+            );
+
+            button.disabled =
+                true;
+
+        }
+
+
+        /*
+           Future date.
+        */
+
+        else if(
+            dateString >
+            todayString
+        ){
+
+            button.classList.add(
+                "future"
+            );
+
+            button.disabled =
+                true;
+
+        }
+
+
+        /*
+           Valid daily puzzle.
+        */
+
+        else{
+
+            button.classList.add(
+                "has-puzzle"
+            );
+
+        }
+
+
+        /*
+           Today.
+        */
+
+        if(
+            dateString ===
+            todayString
+        ){
+
+            button.classList.add(
+                "today"
+            );
+
+        }
+
+
+        /*
+           Currently selected puzzle.
+        */
+
+        if(
+            dateString ===
+            whosThatCharacterPuzzleDate
+        ){
+
+            button.classList.add(
+                "current-puzzle"
+            );
+
+        }
+
+
+        calendar.appendChild(
+            button
+        );
+
+    }
 
 }
 /* ==========================================
@@ -1392,5 +1599,32 @@ function getWhosThatCharacterRotation(
     return Math.floor(
         random() * 361
     ) - 180;
+
+}
+function formatWhosThatCharacterDate(
+    date
+){
+
+    const year =
+        date.getFullYear();
+
+    const month =
+        String(
+            date.getMonth() + 1
+        ).padStart(
+            2,
+            "0"
+        );
+
+    const day =
+        String(
+            date.getDate()
+        ).padStart(
+            2,
+            "0"
+        );
+
+
+    return `${year}-${month}-${day}`;
 
 }
