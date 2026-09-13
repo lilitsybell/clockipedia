@@ -944,18 +944,24 @@ function openWhosThatCharacterArchive(){
             "#whosThatCharacterArchiveModal"
         );
 
-    const now =
-        new Date();
+
+    const selectedDate =
+        new Date(
+            `${whosThatCharacterPuzzleDate}T00:00:00`
+        );
+
 
     whosThatCharacterArchiveDate =
         new Date(
-            now.getFullYear(),
-            now.getMonth(),
+            selectedDate.getFullYear(),
+            selectedDate.getMonth(),
             1
         );
 
+
     modal.hidden =
         false;
+
 
     renderWhosThatCharacterArchive();
 
