@@ -31,11 +31,12 @@ function createInteractionCard(interaction){
             (interaction.math === "green"
                 ? "Mathematician registers this as normal."
                 : "Mathematician registers this as abnormal.");
-        mathTriangle = `
-        <span class="math-triangle ${interaction.math}"
-        data-info="${mathText.replace(/"/g, '&quot;')}">
-        </span>
-        `;
+mathTriangle = `
+<span
+    class="math-triangle ${interaction.math}"
+    data-info="${mathText.replace(/"/g, '&quot;')}"
+>▲</span>
+`;
     }
     if(interaction.reason){
         infoButtons += `
