@@ -20,7 +20,7 @@ let whosThatCharacterRotation = 0;
 let whosThatCharacterArchiveDate = null;
 
 const whosThatCharacterStartDate =
-    "2026-09-12";
+    "2026-09-07";
 
 let whosThatCharacterPuzzleDate =
     getWhosThatCharacterToday();
