@@ -1,44 +1,118 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-<meta charset="UTF-8">
-<title>Characters</title>
-<link rel="stylesheet" href="/css/style.css">
-<link rel="icon" type="image/png" href="/images/favicon.png">
+
+    <meta charset="UTF-8">
+
+    <title>
+        Characters | Clockipedia
+    </title>
+
+    <link
+        rel="stylesheet"
+        href="/css/style-global.css"
+    >
+
+    <link
+        rel="stylesheet"
+        href="/css/characters.css"
+    >
+
+    <link
+        rel="icon"
+        type="image/png"
+        href="/images/favicon.png"
+    >
+
 </head>
-<div id="sidebar"></div>
-<main id="content">
-<div class="character-library-controls">
-    <div>
-        <h1>Characters</h1>
-    </div>
-    <div class="character-library-sort">
-        <label for="character-library-sort">
-            Sort by:
-        </label>
-        <select id="character-library-sort">
-            <option value="team">
-                Team
-            </option>
-            <option value="alphabetical">
-                Alphabetical
-            </option>
-            <option value="edition">
-                Edition
-            </option>
-        </select>
-    </div>
-</div>
-<div id="characterLibrary"></div>
-            <!-- Characters will be generated here -->
-        </div>
-    </div>
-</main>
+
+
 <body>
-<script src="/js/characters.js"></script>
-<script src="/js/tooltip.js"></script>
-<script src="/js/search.js"></script>
-<script src="/js/sidebar.js"></script>
-<script src="/js/characters-library.js"></script>
+
+    <div id="sidebar"></div>
+
+
+    <main id="content">
+
+        <div class="site-page">
+
+
+            <!-- =================================
+                 Header
+            ================================== -->
+
+            <section class="site-header">
+
+                <span class="site-eyebrow">
+                    Clockipedia
+                </span>
+
+                <h1>
+                    Characters
+                </h1>
+
+                <p>
+                    Browse Blood on the Clocktower characters
+                    and their abilities.
+                </p>
+
+            </section>
+
+
+            <!-- =================================
+                 Library Controls
+            ================================== -->
+
+            <div class="character-library-controls">
+
+                <div></div>
+
+
+                <div class="character-library-sort">
+
+                    <label for="character-library-sort">
+                        Sort by:
+                    </label>
+
+                    <select id="character-library-sort">
+
+                        <option value="team">
+                            Team
+                        </option>
+
+                        <option value="alphabetical">
+                            Alphabetical
+                        </option>
+
+                        <option value="edition">
+                            Edition
+                        </option>
+
+                    </select>
+
+                </div>
+
+            </div>
+
+
+            <!-- =================================
+                 Character Library
+            ================================== -->
+
+            <div id="characterLibrary"></div>
+
+        </div>
+
+    </main>
+
+
+    <script src="/js/characters.js"></script>
+    <script src="/js/tooltip.js"></script>
+    <script src="/js/search.js"></script>
+    <script src="/js/sidebar.js"></script>
+    <script src="/js/characters-library.js"></script>
+
 </body>
+
 </html>
