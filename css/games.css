@@ -791,17 +791,32 @@ span[data-color="purple"]{
     justify-content:center;
 
     filter:
-        drop-shadow(4px 0 0 white)
-        drop-shadow(-4px 0 0 white)
-        drop-shadow(0 4px 0 white)
-        drop-shadow(0 -4px 0 white)
-        drop-shadow(3px 3px 0 white)
-        drop-shadow(-3px 3px 0 white)
-        drop-shadow(3px -3px 0 white)
-        drop-shadow(-3px -3px 0 white);
+        drop-shadow(3px 0 0 white)
+        drop-shadow(-3px 0 0 white)
+        drop-shadow(0 3px 0 white)
+        drop-shadow(0 -3px 0 white);
 }
+.whos-card-character-shape{
+    width:100%;
+    height:100%;
 
+    background:inherit;
 
+    -webkit-mask-image:
+        var(--card-character-image);
+
+    mask-image:
+        var(--card-character-image);
+
+    -webkit-mask-size:contain;
+    mask-size:contain;
+
+    -webkit-mask-position:center;
+    mask-position:center;
+
+    -webkit-mask-repeat:no-repeat;
+    mask-repeat:no-repeat;
+}
 .whos-card-character img{
     width:100%;
     height:100%;
