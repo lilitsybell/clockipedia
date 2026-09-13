@@ -1,4 +1,19 @@
 /* ==========================================
+   Archive Scores
+========================================== */
+
+.whos-that-character-calendar-score{
+    margin:auto 0;
+
+    font-family:"Droid Sans",Arial,sans-serif;
+
+    font-size:25px;
+    font-weight:900;
+    line-height:1;
+
+    pointer-events:none;
+}
+/* ==========================================
    Main Game Card
 ========================================== */
 
