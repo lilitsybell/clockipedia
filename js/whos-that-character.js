@@ -15,6 +15,8 @@ let whosThatCharacterScore = 0;
 
 const whosThatCharacterGameLength = 10;
 
+let whosThatCharacterRotation = 0;
+
 
 /* ==========================================
    Start Game
@@ -152,7 +154,10 @@ function loadWhosThatCharacterRound(){
 
 
     whosThatCharacterTries = 3;
-
+whosThatCharacterRotation =
+    Math.floor(
+        Math.random() * 71
+    ) - 35;
 
     showWhosThatCharacterSilhouette();
 
@@ -215,6 +220,16 @@ function showWhosThatCharacterSilhouette(){
 
     silhouette.style.opacity =
         "1";
+
+
+    /* Apply this round's random rotation */
+
+    silhouette.style.transform =
+        `rotate(${whosThatCharacterRotation}deg)`;
+
+
+    reveal.style.transform =
+        `rotate(${whosThatCharacterRotation}deg)`;
 
 
     reveal.src =
