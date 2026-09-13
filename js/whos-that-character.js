@@ -165,9 +165,10 @@ whosThatCharacterCurrent =
 
     whosThatCharacterTries = 3;
 whosThatCharacterRotation =
-    Math.floor(
-        Math.random() * 361
-    ) - 180;
+    getWhosThatCharacterRotation(
+        whosThatCharacterPuzzleDate,
+        whosThatCharacterIndex
+    );
 
     showWhosThatCharacterSilhouette();
 
@@ -1367,5 +1368,29 @@ function generateWhosThatCharacterPuzzle(
 
 
     return puzzle;
+
+}
+/* ==========================================
+   Daily Character Rotation
+========================================== */
+
+function getWhosThatCharacterRotation(
+    dateString,
+    index
+){
+
+    const seed =
+        getWhosThatCharacterSeed(
+            `${dateString}-${index}`
+        );
+
+    const random =
+        createWhosThatCharacterRandom(
+            seed
+        );
+
+    return Math.floor(
+        random() * 361
+    ) - 180;
 
 }
