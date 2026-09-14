@@ -1,66 +1,65 @@
 /* ==========================================
-   Calendar Page Header
+   Full Calendar Page
 ========================================== */
 
-.calendar-page-header{
-    max-width:1200px;
-    margin:0 auto;
-    padding:70px 40px 35px;
-}
-
-.calendar-page-label{
-    margin:0 0 8px;
-
-    font-size:13px;
-    font-weight:700;
-
-    letter-spacing:.12em;
-
-    color:#888;
-
-    text-transform:uppercase;
-}
-
-.calendar-page-header h1{
-    margin:0;
-
-    font-size:48px;
-    line-height:1;
-
-    color:#222;
-}
-
-.calendar-page-description{
-    max-width:650px;
-
-    margin:15px 0 0;
-
-    font-size:18px;
-    line-height:1.6;
-
-    color:#666;
+.ltfi-calendar-page-section{
+    overflow:hidden;
 }
 
 
 /* ==========================================
-   Calendar Panel
+   Calendar Toolbar
 ========================================== */
 
-.calendar-panel{
-    overflow:hidden;
+.calendar-toolbar{
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+    gap:30px;
+}
 
-    border:1px solid #dedede;
+.calendar-toolbar-controls{
+    display:flex;
+    align-items:center;
+    gap:8px;
+}
 
-    border-radius:18px;
+.calendar-nav-button,
+.calendar-today-button{
+    height:40px;
+
+    border:1px solid #ccc;
+    border-radius:9px;
 
     background:white;
 
-    box-shadow:
-        0 8px 24px
-        rgba(0,0,0,.06);
+    color:#333;
+
+    cursor:pointer;
+
+    font-family:inherit;
+    font-weight:600;
+
+    transition:
+        background .15s ease,
+        border-color .15s ease;
 }
 
+.calendar-nav-button{
+    width:42px;
+    font-size:19px;
+}
 
+.calendar-today-button{
+    padding:0 18px;
+    font-size:14px;
+}
+
+.calendar-nav-button:hover,
+.calendar-today-button:hover{
+    background:#f5f5f5;
+    border-color:#aaa;
+}
 /* ==========================================
    Toolbar
 ========================================== */
