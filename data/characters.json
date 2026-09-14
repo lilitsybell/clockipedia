@@ -1088,20 +1088,23 @@
     "image": "https://images.klutzbanana.com/characters_official/librarian_g.png",
     "ability": "You start knowing that 1 of 2 players is a particular Outsider. (Or that zero are in play.)",
     "flavor": "Certainly madam, under normal circumstances, you may borrow the Codex Malificarium from the library vaults. However, you do not seem to be a member.",
-    "purpose": "The [Librarian] knows an in play Outsider and who it might be.",
+    "purpose": "The [Librarian] learns an in-play Outsider and who it might be, or that no Outsiders are in play.",
     "summary": [
-             "ComingSoon",
-             "ComingSoon"
+             "On the [Librarian]'s first night, they learn 2 players and an Outsider character. One of those players is that Outsider.",
+             "The other player the [Librarian] learns may be any character type.",
+             "If there are no Outsiders in play, the [Librarian] learns that zero Outsiders are in play.",
+             "The Outsider the [Librarian] learns may be alive, dead, drunk, poisoned, sober, healthy, good, or evil."
              ],
     "run": {
            "First Night": [
-                "ComingSoon",
-                "ComingSoon"
+                "If there is an Outsider in play, the [Librarian] learns 2 players, at least one of whom is or registers as an Outsider. The [Librarian] learns which Outsider it is.",
+                "If there are no Outsiders in play, the [Librarian] learns that zero Outsiders are in play."
                 ]
            },
     "examples": [
-                "ComingSoon",
-                "ComingSoon"
+                "The [Librarian] learns 2 players: Alexie and Rosie, and 1 Outsider: the [Drunk]. Alexie is the [Drunk] and Rosie is the [Artist].",
+                "The [Librarian] learns 2 players: Nic and Clay, and 1 Outsider: the [Recluse]. Nic is the [Savant] and Clay is the [Recluse].",
+                "There are no Outsiders in play. The [Librarian] learns that zero Outsiders are in play."
                 ],
     "tags": ["Information"],
     "edition": "Trouble Brewing"
@@ -1113,28 +1116,33 @@
     "image": "https://images.klutzbanana.com/characters_official/lycanthrope_g.png",
     "ability": "Each night*, choose an alive player. If good, they die & the Demon doesn’t kill tonight. One good player registers as evil.",
     "flavor": "Beneath the thin veneer of civilization lies a howling madness.",
-    "purpose": "The [Lycanthrope] controls who dies at night.",
+    "purpose": "The [Lycanthrope] chooses who dies at night.",
     "summary": [
-             "ComingSoon",
-             "ComingSoon"
+             "Each night, except the first, the [Lycanthrope] chooses an alive player.",
+             "If the chosen player is good, they die and the Demon cannot kill that night.",
+             "If the chosen player is evil, they do not die and the Demon may kill normally.",
+             "The [Lycanthrope] may choose any alive player, even themself or a Traveller.",
+             "One good player is made the <b>Faux Paw</b> and registers as evil to all players. If the [Lycanthrope] chooses this player, they do not die and the Demon may kill normally.",
+             "The [Lycanthrope] only prevents the Demon from killing. Other characters may still cause deaths that night."
              ],
     "run": {
            "Setup": [
-                "ComingSoon",
-                "ComingSoon"
+                "The Storyteller chooses one good player to be the <b>Faux Paw</b>, who registers as evil to all players."
                 ],
            "Anytime": [
-                "ComingSoon",
-                "ComingSoon"
+                "If the <b>Faux Paw</b> becomes evil, the Storyteller chooses a new good player to be the <b>Faux Paw</b>."
                 ],
            "Other Nights": [
-                "ComingSoon",
-                "ComingSoon"
+                "The [Lycanthrope] chooses an alive player.",
+                "If the chosen player is good, they die and the Demon does not kill that night.",
+                "If the chosen player is evil or registers as evil, they do not die and the Demon may kill normally."
                 ]
            },
     "examples": [
-                "ComingSoon",
-                "ComingSoon"
+                "The [Lycanthrope] chooses the [Artist]. The [Artist] is good, so they die. The [Imp] chooses the [Clockmaker], but the [Clockmaker] does not die.",
+                "The [Lycanthrope] chooses the [Witch]. The [Witch] is evil, so they do not die. The [Imp] chooses the [Klutz], who dies.",
+                "The [Lycanthrope] chooses the [Savant], who is the <b>Faux Paw</b> and registers as evil. The [Savant] does not die. The [Imp] chooses the [Pixie], who dies.",
+                "The [Lycanthrope] chooses the [Artist], who dies. The [Assassin] chooses the [Savant]. The [Savant] also dies because the [Lycanthrope] only prevents the Demon from killing."
                 ],
     "tags": ["Death"],
     "edition": "Carousel"
