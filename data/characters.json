@@ -1261,22 +1261,26 @@
     "flavor": "And I shall hear, tho' soft you tread above me... And all my dreams will warm and sweeter be... If you'll not fail to tell me that you love me... I simply sleep in peace until you come to me.",
     "purpose": "The [Minstrel] makes everyone drunk, even evil players, if a Minion is executed.",
     "summary": [
-             "ComingSoon",
-             "ComingSoon"
+             "If a Minion dies by execution, all players except the [Minstrel] and Travellers become drunk until dusk the following day.",
+             "Players made drunk by the [Minstrel] remain drunk throughout the following night and day, becoming sober at dusk.",
+             "Good and evil players are both made drunk by the [Minstrel].",
+             "The executed player must be a Minion or register as a Minion when they die for the [Minstrel]'s ability to trigger.",
+             "An executed Minion must die for the [Minstrel]'s ability to trigger. If a Minion is executed but does not die, players do not become drunk.",
+             "If a Minion is already dead while being executed, the [Minstrel]'s ability does not trigger.",
+             "A Minion that dies in any other way does not trigger the [Minstrel]'s ability."
              ],
     "run": {
            "Anytime": [
-                "ComingSoon",
-                "ComingSoon"
-                ],
-           "Other Nights": [
-                "ComingSoon",
-                "ComingSoon"
+                "If a player who is or registers as a Minion dies by execution, all players except the [Minstrel] and Travellers immediately become drunk until dusk the following day."
                 ]
            },
     "examples": [
-                "ComingSoon",
-                "ComingSoon"
+                "The [Witch] is executed and dies. All players except the [Minstrel] and Travellers become drunk until dusk the following day. The [Kazali] chooses the [Banshee], but the [Banshee] does not die. The [Empath] neighbors two good players but receives a 1. The next day, the [Slayer] shoots the [Kazali] but the [Kazali] does not die.",
+                "The [Devil's Advocate] protects the [Assassin]. The [Assassin] is executed but does not die, so the [Minstrel]'s ability does not trigger.",
+                "The [Gossip] causes the [Godfather] to die at night. The [Minstrel]'s ability does not trigger because the [Godfather] did not die by execution.",
+                "The [Scarlet Woman] is executed and dies. That night, the [Shabaloth] is drunk and chooses 2 players, but neither player dies. No players are regurgitated. The next day, the [Shabaloth] remains drunk until dusk.",
+                "The [Psychopath] dies during the day due to the [Witch]. The [Psychopath] was not executed, so the [Minstrel]'s ability does not trigger.",
+                "The dead [Summoner] is nominated and executed. Because the [Summoner] was already dead, the [Minstrel]'s ability does not trigger."
                 ],
     "tags": ["Droisoning", "Death"],
     "edition": "Bad Moon Rising"
@@ -1290,18 +1294,24 @@
     "flavor": "Tis an ill and deathly wind that blows tonight. Come, my brother, take shelter in the abbey while the storm rages. By my word, or by my life, you will be safe.",
     "purpose": "The [Monk] protects players from ill effects of the Demon.",
     "summary": [
-             "ComingSoon",
-             "ComingSoon"
+             "Each night, except the first, the [Monk] chooses a player other than themself. That player is safe from the Demon that night.",
+             "A player who is safe from the Demon cannot be killed, poisoned, made drunk, or turned evil due to the Demon's ability.",
+             "The [Monk] may choose any player other than themself, including a dead player, an evil player, or a Traveller.",
+             "The [Monk] may choose the same player on multiple nights.",
+             "The chosen player is only safe from the Demon. Other characters' abilities may still affect or kill them."
              ],
     "run": {
            "Other Nights": [
-                "ComingSoon",
-                "ComingSoon"
+                "The [Monk] chooses a player other than themself. That player is safe from the Demon until dawn."
                 ]
            },
     "examples": [
-                "ComingSoon",
-                "ComingSoon"
+                "The [Monk] chooses the [Damsel]. The [Imp] chooses the [Damsel], but the [Damsel] does not die.",
+                "The [Monk] chooses the [Ravenkeeper]. The [Po] chooses the [Ravenkeeper]. The [Ravenkeeper] does not die and does not wake to use their ability.",
+                "The [Monk] chooses the [Artist]. The [Assassin] chooses the [Artist]. The [Artist] dies because the [Monk] only protects players from the Demon.",
+                "The [Monk] chooses the [Savant]. The [Pukka] chooses the [Savant]. The [Savant] is safe from the [Pukka]'s ability, is not poisoned, and will not die the next night.",
+                "The [Monk] chooses the [Poisoner]. The [Imp] chooses the [Poisoner], but the [Poisoner] does not die. The [Monk] may protect evil players.",
+                "The [Monk] chooses the [Philosopher]. The [Philosopher] neighbors the [No Dashii], but is not poisoned that night."
                 ],
     "tags": ["Mechanical", "Death"],
     "edition": "Trouble Brewing"
