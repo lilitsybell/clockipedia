@@ -1,0 +1,38 @@
+[
+    {
+        "title": "Example Birthday",
+        "type": "birthday",
+        "emoji": "🎂",
+        "start": "2026-04-15",
+        "repeat": "yearly"
+    },
+    {
+        "title": "YouTube Recording",
+        "type": "youtube",
+        "emoji": "📺",
+        "start": "2026-09-05",
+        "repeat": "biweekly"
+    },
+    {
+        "title": "Corporate Night",
+        "type": "corporate",
+        "emoji": "👔",
+        "start": "2026-09-03",
+        "repeat": "weekly"
+    },
+    {
+        "title": "Example Trip",
+        "type": "trip",
+        "emoji": "✈️",
+        "start": "2026-09-20",
+        "end": "2026-09-23",
+        "repeat": "none"
+    },
+    {
+        "title": "Game Night",
+        "type": "game",
+        "emoji": "🎲",
+        "start": "2026-09-26",
+        "repeat": "none"
+    }
+]
