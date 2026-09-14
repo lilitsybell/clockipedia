@@ -20,53 +20,7 @@ console.log("ltfi-calendar.js loaded");
     date for weekly and biweekly events.
 */
 
-const calendarEvents = [
-
-    /*
-    {
-        title:"Example Birthday",
-        type:"birthday",
-        emoji:"🎂",
-        start:"2026-04-15",
-        repeat:"yearly"
-    },
-
-    {
-        title:"YouTube Recording",
-        type:"youtube",
-        emoji:"📺",
-        start:"2026-09-05",
-        repeat:"biweekly"
-    },
-
-    {
-        title:"Corporate Night",
-        type:"corporate",
-        emoji:"👔",
-        start:"2026-09-03",
-        repeat:"weekly"
-    },
-
-    {
-        title:"Example Trip",
-        type:"trip",
-        emoji:"✈️",
-        start:"2026-09-20",
-        end:"2026-09-23",
-        repeat:"none"
-    },
-
-    {
-        title:"Game Night",
-        type:"game",
-        emoji:"🎲",
-        start:"2026-09-26",
-        repeat:"none"
-    }
-    */
-
-];
-
+let calendarEvents = [];
 
 /* ==========================================
    Elements
@@ -103,7 +57,23 @@ let currentDate =
 
 currentDate.setDate(1);
 
+async function loadCalendarEvents(){
 
+    const response =
+        await fetch(
+            "/ltfi/data/calendar-events.json"
+        );
+
+    if(!response.ok){
+        throw new Error(
+            "Failed to load calendar-events.json"
+        );
+    }
+
+    calendarEvents =
+        await response.json();
+
+}
 /* ==========================================
    Date Helpers
 ========================================== */
@@ -519,8 +489,24 @@ todayButton.addEventListener(
 );
 
 
-/* ==========================================
-   Initial Render
-========================================== */
+async function initializeCalendar(){
 
-renderCalendar();
+    try{
+
+        await loadCalendarEvents();
+
+        renderCalendar();
+
+    }catch(error){
+
+        console.error(
+            "Calendar failed to load:",
+            error
+        );
+
+    }
+
+}
+
+
+initializeCalendar();
