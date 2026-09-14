@@ -80,7 +80,91 @@
     color:
         var(--dark-text);
 }
+/* ==========================================
+   Calendar Events
+========================================== */
 
+.calendar-event-list{
+    display:flex;
+    flex-direction:column;
+    gap:5px;
+    margin-top:7px;
+}
+
+.calendar-event{
+    display:flex;
+    align-items:center;
+    gap:6px;
+
+    min-width:0;
+
+    padding:
+        6px 8px;
+
+    border-radius:7px;
+
+    font-size:12px;
+    font-weight:700;
+
+    line-height:1.2;
+
+    color:
+        var(--dark-text);
+
+    background:
+        var(--purple-light);
+}
+
+.calendar-event-emoji{
+    flex-shrink:0;
+}
+
+.calendar-event-title{
+    overflow:hidden;
+
+    white-space:nowrap;
+    text-overflow:ellipsis;
+}
+
+
+/* Birthday */
+
+.calendar-event.birthday{
+    background:
+        rgba(177,145,14,.14);
+}
+
+
+/* YouTube Recording */
+
+.calendar-event.youtube{
+    background:
+        rgba(181,101,118,.14);
+}
+
+
+/* Corporate Night */
+
+.calendar-event.corporate{
+    background:
+        rgba(60,49,87,.12);
+}
+
+
+/* Trips / Events */
+
+.calendar-event.trip{
+    background:
+        rgba(72,169,166,.15);
+}
+
+
+/* Game Night */
+
+.calendar-event.game{
+    background:
+        rgba(60,49,87,.10);
+}
 
 /* ==========================================
    Calendar Frame
