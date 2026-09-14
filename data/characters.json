@@ -1156,18 +1156,23 @@
     "flavor": "1... 2... Abra... 3... 4... Cadabra... *poof!*</br>And, as you can see, ladies and gentlemen, Captain Farnsworth’s bag of gold has disappeared! Gone! Without a trace! Thank you, and goodnight!",
     "purpose": "The [Magician] tricks Minions and Demons into thinking they are one of them.",
     "summary": [
-             "ComingSoon",
-             "ComingSoon"
+             "The Demon learns the [Magician] as if they were one of their Minions.",
+             "Minions learn the [Magician] as if they were the Demon.",
+             "The Demon does not know which of the players they learn is the [Magician].",
+             "Minions do not know which of the players they learn is the real Demon.",
+             "The [Magician] is still a good Townsfolk and does not learn who the evil players are.",
+             "The [Magician] does not register as evil, a Minion, or a Demon.",
+             "The [Magician] does not wake to learn anything."
              ],
     "run": {
            "First Night": [
-                "ComingSoon",
-                "ComingSoon"
+                "When the Demon learns their Minions, they also learn the [Magician] as if they were a Minion.",
+                "When the Minions learn the Demon, they also learn the [Magician] as if they were the Demon."
                 ]
            },
     "examples": [
-                "ComingSoon",
-                "ComingSoon"
+                "The [Imp] learns that Ben and CJ are their Minions. Ben is the [Poisoner] and CJ is the [Magician]. The [Imp] does not know which player is the actual Minion.",
+                "The [Witch] learns that Clover and Reece are the Demon. Clover is the [Riot] and Reece is the [Magician]. The [Witch] does not know which player is the actual Demon."
                 ],
     "tags": ["Mechanical"],
     "edition": "Carousel"
