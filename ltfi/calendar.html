@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <link
+        rel="icon"
+        type="image/png"
+        href="/ltfi/images/favicon.png"
+    >
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>
+        Calendar | Lock the Fuck In
+    </title>
+
+    <link
+        rel="stylesheet"
+        href="/ltfi/css/ltfi-global.css"
+    >
+
+    <link
+        rel="stylesheet"
+        href="/ltfi/css/ltfi-calendar.css"
+    >
+
+</head>
+
+
+<body>
+
+
+<!-- ==========================================
+     Navigation
+========================================== -->
+
+<header class="ltfi-header">
+
+    <nav class="ltfi-nav">
+
+        <a
+            class="ltfi-logo"
+            href="/ltfi/"
+        >
+            LOCK THE FUCK IN
+        </a>
+
+
+        <div class="ltfi-nav-links">
+
+            <a href="/ltfi/">
+                Home
+            </a>
+
+            <a
+                href="/ltfi/calendar.html"
+                class="active"
+            >
+                Calendar
+            </a>
+
+            <a href="/ltfi/scripts.html">
+                Scripts
+            </a>
+
+            <a href="/ltfi/convention/">
+                Convention
+            </a>
+
+        </div>
+
+    </nav>
+
+</header>
+
+
+<!-- ==========================================
+     Page Header
+========================================== -->
+
+<section class="calendar-page-header">
+
+    <p class="calendar-page-label">
+        COMMUNITY SCHEDULE
+    </p>
+
+    <h1>
+        Calendar
+    </h1>
+
+    <p class="calendar-page-description">
+        Recording days, game nights, birthdays,
+        trips, and community events.
+    </p>
+
+</section>
+
+
+<!-- ==========================================
+     Calendar
+========================================== -->
+
+<main class="ltfi-page">
+
+    <section class="calendar-panel">
+
+
+        <!-- Calendar Toolbar -->
+
+        <div class="calendar-toolbar">
+
+            <div class="calendar-toolbar-title">
+
+                <p class="ltfi-section-label">
+                    CALENDAR
+                </p>
+
+                <h2 id="calendar-title">
+                    September 2026
+                </h2>
+
+            </div>
+
+
+            <div class="calendar-toolbar-controls">
+
+                <button
+                    id="calendar-prev"
+                    class="calendar-nav-button"
+                    type="button"
+                    aria-label="Previous month"
+                >
+                    ←
+                </button>
+
+                <button
+                    id="calendar-today"
+                    class="calendar-today-button"
+                    type="button"
+                >
+                    Today
+                </button>
+
+                <button
+                    id="calendar-next"
+                    class="calendar-nav-button"
+                    type="button"
+                    aria-label="Next month"
+                >
+                    →
+                </button>
+
+            </div>
+
+        </div>
+
+
+        <!-- Weekday Labels -->
+
+        <div class="calendar-weekdays">
+
+            <div>Sun</div>
+            <div>Mon</div>
+            <div>Tue</div>
+            <div>Wed</div>
+            <div>Thu</div>
+            <div>Fri</div>
+            <div>Sat</div>
+
+        </div>
+
+
+        <!-- Calendar Grid -->
+
+        <div
+            id="calendar-grid"
+            class="calendar-grid"
+        ></div>
+
+
+    </section>
+
+</main>
+
+
+<!-- ==========================================
+     Footer
+========================================== -->
+
+<footer class="ltfi-footer">
+
+    <div>
+        LOCK THE FUCK IN
+    </div>
+
+    <div>
+        BOTC COMMUNITY
+    </div>
+
+</footer>
+
+
+<script src="/ltfi/js/ltfi-calendar.js"></script>
+
+</body>
+
+</html>
