@@ -1184,52 +1184,35 @@
     "image": "https://images.klutzbanana.com/characters_official/mathematician_g.png",
     "ability": "Each night, you learn how many players’ abilities worked abnormally (since dawn) due to another character's ability.",
     "flavor": "Any consistent formal system x, within which a certain amount of elementary arithmetic can be carried out is incomplete; that is, there are statements of the language of x which can neither be proved nor disproved in x. Ergo, you are drunk.",
-    "purpose": "The [Mathematician] learns how many players abilities are not working as intended.",
+    "purpose": "The [Mathematician] learns how many players' abilities are not working as intended.",
     "summary": [
-             "ComingSoon",
-             "ComingSoon"
+             "Each night, the [Mathematician] learns how many players' abilities have worked abnormally since dawn due to another character's ability.",
+             "The [Mathematician] does not learn which players or characters' abilities worked abnormally.",
+             "The [Mathematician] does not learn if their own ability malfunctioned.",
+             "Each player is counted only once, even if their ability works abnormally multiple times.",
+             "An ability is considered abnormal if another character's ability causes it to produce a result that it normally would not produce.",
+             "Drunk or poisoned players' abilities may be considered abnormal if the ability works abnormally because of the drunkenness or poisoning.",
+             "A character's ability behaving abnormally because of its own ability does not count.",
+             "The [Mathematician] only counts abilities that actually worked abnormally. Being drunk or poisoned does not automatically count if the player's ability did not attempt to do anything or if the ability yielded true information.",
+             "The [Mathematician] counts abnormalities that have occurred since dawn. At dawn, the count resets and new abnormalities begin being counted."
              ],
     "run": {
-           "Setup": [
-                "ComingSoon",
-                "ComingSoon"
-                ],
            "Anytime": [
-                "ComingSoon",
-                "ComingSoon"
-                ],
-           "First Night": [
-                "ComingSoon",
-                "ComingSoon"
+                "Whenever a player's ability works abnormally due to another character's ability, that player is marked with a [Mathematician] <b>ABNORMAL</b> reminder token.",
+                "Each player can only have one [Mathematician] <b>ABNORMAL</b> reminder token at a time."
                 ],
            "Every Night": [
-                "ComingSoon",
-                "ComingSoon"
-                ],
-           "First Day": [
-                "ComingSoon",
-                "ComingSoon"
+                "The [Mathematician] learns how many players have a [Mathematician] <b>ABNORMAL</b> reminder token."
                 ],
            "Every Day": [
-                "ComingSoon",
-                "Thing 2"
-                ],
-           "Other Nights": [
-                "ComingSoon",
-                "ComingSoon"
-                ],
-           "Other Days": [
-                "ComingSoon",
-                "ComingSoon"
-                ],
-           "End of Game": [
-                "ComingSoon",
-                "ComingSoon"
+                "At dawn, remove all [Mathematician] <b>ABNORMAL</b> reminder tokens."
                 ]
            },
     "examples": [
-                "ComingSoon",
-                "ComingSoon"
+                "The [Poisoner] chooses the [Flowergirl]. That day, the Demon votes, but the poisoned [Flowergirl] learns a no. The [Flowergirl]'s ability worked abnormally due to the [Poisoner].",
+                "The [Innkeeper] chooses the [Exorcist] and makes them drunk. The [Exorcist] chooses the Demon, but the Demon still wakes and attacks because the [Exorcist] is drunk. The [Exorcist]'s ability worked abnormally due to the [Innkeeper].",
+                "The [Pukka] chooses to poison the [Fortune Teller]. The [Fortune Teller] checks the [Chef] and the [Moonchild] and receives a no. The [Fortune Teller] does not count for the [Mathematician] because even though they were poisoned, the [Fortune Teller]'s ability did not work abnormally.",
+                "The [Widow] chooses to poison the [Savant], but the [Savant] dies before receiving any information that day. The [Savant] does not count for the [Mathematician] because their ability did not work abnormally."
                 ],
     "tags": ["Information", "Droisoning"],
     "edition": "Sects and Violets"
@@ -1243,22 +1226,28 @@
     "flavor": "We must put our differences aside, and cease this senseless killing. We are all taxpayers after all. Well, most of us.",
     "purpose": "The [Mayor] can win without killing the Demon and has extra protection.",
     "summary": [
-             "ComingSoon",
-             "ComingSoon"
+             "If exactly 3 players are alive and no execution occurs that day, the [Mayor]'s team wins.",
+             "In order for the [Mayor]'s team to win, no execution may happen, even if the player does not die or was already dead.",
+             "Travellers count as players. If there are 4 players alive, one of whom is a Traveller, and no execution occurs, the [Mayor]'s team does not win due to the [Mayor]'s ability.",
+             "If the [Mayor] would die at night, the Storyteller may choose another player to die instead, or may let the [Mayor] die as normal.",
+             "The player who dies instead of the [Mayor] may be good, evil, alive, dead, or a Traveller.",
+             "The player who dies instead is considered to be killed by the same character ability that would have killed the [Mayor]."
              ],
     "run": {
            "Every Night": [
-                "ComingSoon",
-                "ComingSoon"
+                "If the [Mayor] would die, the Storyteller may choose another player to die instead. If they do, the [Mayor] does not die."
                 ],
            "Every Day": [
-                "ComingSoon",
-                "Thing 2"
+                "If exactly 3 players are alive at the end of the day and no execution occurred, the [Mayor]'s team wins."
                 ]
            },
     "examples": [
-                "ComingSoon",
-                "ComingSoon"
+                "There are 3 players alive: the [Mayor], the [Ravenkeeper], and the [Ojo]. Nobody is executed that day, so the good team wins.",
+                "There are 3 players alive. The [Mayor] is nominated and receives enough votes to be executed, but does not die because they are protected by the [Devil's Advocate]. An execution occurred, so the [Mayor]'s team does not win from the [Mayor] ability.",
+                "The [Kazali] chooses the [Mayor] at night. The Storyteller chooses for the [Artist] to die instead. The [Mayor] remains alive.",
+                "The [Zombuul] chooses the [Mayor] at night. The Storyteller does not redirect the death, so the [Mayor] dies.",
+                "The [Vortox] chooses the [Mayor] at night. The Storyteller chooses for the [Sage] to die instead. The [Sage] learns that either the [Dreamer] or the [Godfather] is the Demon. The [Mayor] does not die.",
+                "There are 4 players alive: the [Barista], the [Lleech], the [Sweetheart], and the [Mayor]. Nobody is executed that day, but the good team does not win because there are more than 3 players alive. That night, the [Lleech] kills the [Mayor] and the Storyteller chooses that the [Mayor] dies. The evil team wins."
                 ],
     "tags": ["Mechanical", "Death"],
     "edition": "Trouble Brewing"
