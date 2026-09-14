@@ -1,12 +1,5 @@
 [
     {
-        "title": "Corey's Birthday",
-        "type": "birthday",
-        "emoji": "🎂",
-        "start": "2026-09-01",
-        "repeat": "yearly"
-    },
-    {
         "title": "YouTube",
         "type": "youtube",
         "emoji": "📺",
@@ -41,5 +34,82 @@
         "emoji": "🎲",
         "start": "2020-09-26",
         "repeat": "none"
-    }
+    },
+    {
+        "title": "Corey's Birthday",
+        "type": "birthday",
+        "emoji": "🎂",
+        "start": "2026-09-01",
+        "repeat": "yearly"
+    },
+    {
+        "title": "Clover's Birthday",
+        "type": "birthday",
+        "emoji": "🎂",
+        "start": "2026-09-12",
+        "repeat": "yearly"
+    },
+    {
+        "title": "CJ's Birthday",
+        "type": "birthday",
+        "emoji": "🎂",
+        "start": "2026-09-11",
+        "repeat": "yearly"
+    },
+    {
+        "title": "Broom's Birthday",
+        "type": "birthday",
+        "emoji": "🎂",
+        "start": "2026-07-14",
+        "repeat": "yearly"
+    },
+    {
+        "title": "Bell's Birthday",
+        "type": "birthday",
+        "emoji": "🎂",
+        "start": "2026-12-14",
+        "repeat": "yearly"
+    },
+    {
+        "title": "Eddie's Birthday",
+        "type": "birthday",
+        "emoji": "🎂",
+        "start": "2026-08-19",
+        "repeat": "yearly"
+    },
+    {
+        "title": "Alexie's Birthday",
+        "type": "birthday",
+        "emoji": "🎂",
+        "start": "2026-08-01",
+        "repeat": "yearly"
+    },
+    {
+        "title": "Josh's Birthday",
+        "type": "birthday",
+        "emoji": "🎂",
+        "start": "2026-07-20",
+        "repeat": "yearly"
+    },
+    {
+        "title": "Ben's Birthday",
+        "type": "birthday",
+        "emoji": "🎂",
+        "start": "2026-07-06",
+        "repeat": "yearly"
+    },
+    {
+        "title": "Clayzerr's Birthday",
+        "type": "birthday",
+        "emoji": "🎂",
+        "start": "2026-06-06",
+        "repeat": "yearly"
+    },
+    {
+        "title": "Blair's Birthday",
+        "type": "birthday",
+        "emoji": "🎂",
+        "start": "2026-01-10",
+        "repeat": "yearly"
+    },
 ]
