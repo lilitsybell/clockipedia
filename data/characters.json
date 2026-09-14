@@ -972,20 +972,19 @@
     "image": "https://images.klutzbanana.com/characters_official/investigator_g.png",
     "ability": "You start knowing that 1 of 2 players is a particular Minion.",
     "flavor": "It is a fine night for a stroll, wouldn't you say, Mister Morozov? Or should I say... BARON Morozov?",
-    "purpose": "The [Investigator] learns an in play Minion, and who it might be.",
+    "purpose": "The [Investigator] learns an in-play Minion, and who it might be.",
     "summary": [
-             "ComingSoon",
-             "ComingSoon"
+             "On the [Investigator]'s first night, they learn 2 players and a Minion character. One of those players is that Minion.",
+             "The other player the [Investigator] learns may be any character type."
              ],
     "run": {
            "First Night": [
-                "ComingSoon",
-                "ComingSoon"
+                "The [Investigator] learns 2 players, at least one of whom is or registers as a Minion. The [Investigator] learns which Minion it is."
                 ]
            },
     "examples": [
-                "ComingSoon",
-                "ComingSoon"
+                "The [Investigator] learns 2 players: Amon and Reece, and 1 Minion: the [Godfather]. Amon is the [Godfather] and Reece is the [Cult Leader].",
+                "The [Barber] dies. The [Shabaloth] chooses to swap the [Investigator] and [Nightwatchman] players' characters. The new [Investigator] learns 2 players: Eddie and Evin, and 1 Minion: the [Evil Twin]. Eddie is the [Mastermind] and Evin is the [Evil Twin]."
                 ],
     "tags": ["Information"],
     "edition": "Trouble Brewing"
@@ -997,24 +996,28 @@
     "image": "https://images.klutzbanana.com/characters_official/juggler_g.png",
     "ability": "On your 1st day, publicly guess up to 5 players' characters. That night, you learn how many you got correct.",
     "flavor": "For my next trick, as per request, I will need a flower, a bag of beans, a toy snake, a paintbrush, and a motorized gasoline-powered hedge trimming device. I warn you, this trick may be my last. Oh dear.",
-    "purpose": "The [Juggler] learns if they guessed up to 5 players' characters correctly.",
+    "purpose": "The [Juggler] learns how many of their character guesses are correct.",
     "summary": [
-             "ComingSoon",
-             "ComingSoon"
+             "On the [Juggler]'s first day, they may publicly guess the characters of up to 5 players.",
+             "The [Juggler] may make fewer than 5 guesses, or no guesses at all.",
+             "That night, the [Juggler] learns how many of their guesses were correct.",
+             "Each guess must include a player and a character.",
+             "The [Juggler] may guess any player: alive, dead, Traveller, or even themself.",
+             "The same player may be guessed more than once, but each guess counts toward the limit of 5 guesses.",
+             "If the [Juggler] is drunk or poisoned while guessing, but sober that night, the [Juggler] learns sober and healthy information."
              ],
     "run": {
            "First Day": [
-                "ComingSoon",
-                "ComingSoon"
+                "The [Juggler] may publicly guess up to 5 players' characters."
                 ],
            "Other Nights": [
-                "ComingSoon",
-                "ComingSoon"
+                "On the [Juggler]'s first night after making their guesses, the [Juggler] learns the number of correct guesses."
                 ]
            },
     "examples": [
-                "ComingSoon",
-                "ComingSoon"
+                "The [Juggler] guesses Petra as the [Artist], Michael as the [Clockmaker], Kenni as the [Flowergirl], Clay as the [Witch], and Sara as the [Vortox]. Petra is the [Artist] and Clay is the [Witch], but the other guesses are incorrect. That night, the [Juggler] learns a 2.",
+                "The [Juggler] guesses Ben as the [Savant], Ben as the [Artist], and Ben as the [Philosopher]. Ben is the [Artist]. That night, the [Juggler] learns a 1.",
+                "The [Juggler] guesses themself as the [Juggler] and makes no other guesses. That night, the [Juggler] learns a 1."
                 ],
     "tags": ["Information"],
     "edition": "Sects and Violets"
