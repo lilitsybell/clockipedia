@@ -1031,22 +1031,26 @@
     "flavor": "↑Betwixt the unknown strains of mortal strife→</br>And morbid night, sweet↓ with mystery and woe</br>←Lies unfettered joys of fate’s long and colored life</br>Who’s garden blooms with each painted Face to Show.",
     "purpose": "The [King] learns exactly which characters are still alive.",
     "summary": [
-             "ComingSoon",
-             "ComingSoon"
+             "The Demon learns which player is the [King].",
+             "Each night, if the number of dead players is equal to or greater than the number of living players, the [King] learns one alive character.",
+             "The Storyteller chooses which alive character the [King] learns.",
+             "The [King] may learn any alive character, including themself, a Traveller, or an evil character.",
+             "The [King] may learn the same character more than once.",
+             "If the number of dead players is less than the number of living players, the [King] does not wake to learn a character."
              ],
     "run": {
            "First Night": [
-                "ComingSoon",
-                "ComingSoon"
+                "The Demon learns which player the [King] is."
                 ],
-           "Other Nights": [
-                "ComingSoon",
-                "ComingSoon"
+           "Every Night": [
+                "If the number of dead players is equal to or greater than the number of living players, the [King] learns one alive character."
                 ]
            },
     "examples": [
-                "ComingSoon",
-                "ComingSoon"
+                "There are 5 living players and 5 dead players. The [King] learns the [Artist], who is alive.",
+                "There are 4 living players and 7 dead players. The [King] learns the [Po], who is alive.",
+                "There are 6 living players and 5 dead players. The [King] does not wake to learn a character.",
+                "There are 3 living players and 10 dead players. The [King] learns the [Drunk], who is alive and believes they are the [Banshee]."
                 ],
     "tags": ["Information"],
     "edition": "Carousel"
@@ -1060,18 +1064,19 @@
     "flavor": "When a man lies, he murders some part of the world.",
     "purpose": "The [Knight] learns two players that are not the Demon.",
     "summary": [
-             "ComingSoon",
-             "ComingSoon"
+             "On the [Knight]'s first night, they learn 2 players that are not the Demon.",
+             "The players the [Knight] learns may be any character type or alignment, and may be alive or dead, or even themself, as long as neither of the players are the Demon.",
+             "The [Knight] does not learn the characters or alignments of the players they are shown."
              ],
     "run": {
            "First Night": [
-                "ComingSoon",
-                "ComingSoon"
+                "The [Knight] learns 2 players that are not the Demon."
                 ]
            },
     "examples": [
-                "ComingSoon",
-                "ComingSoon"
+                "The [Knight] learns Meg and Rosie. Meg is the [Artist] and Rosie is the [Flowergirl].",
+                "The [Knight] learns Kenni and Clay. Kenni is the [Witch] and Clay is the [Savant].",
+                "The [Knight] learns Juniper and Jordan. Juniper is the [Recluse] and Jordan is the [Clockmaker]."
                 ],
     "tags": ["Information"],
     "edition": "Carousel"
