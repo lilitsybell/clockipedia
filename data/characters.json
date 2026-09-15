@@ -1825,28 +1825,32 @@
         "order": 0,
         "text": null}},
     "flavor": "Round and round the garden, go.<br>Little girls run to and fro.<br>Little boys climb up the tree.<br>Which of these should Pixie be?<br>Ladies smile and go to town. <br>Lords with axe chop forest down.<br>What’s yours is mine. What’s mine, divine.<br>Silly little Pixie, me.",
-    "purpose": "The [Pixie] learns and in play character and gains their ability.",
+    "purpose": "The [Pixie] learns an in-play Townsfolk and may gain their ability when they die.",
     "summary": [
-             "ComingSoon",
-             "ComingSoon"
+             "On the [Pixie]'s first night, they learn an in-play Townsfolk character.",
+             "The player who is the Townsfolk the [Pixie] learns may be good or evil.",
+             "The [Pixie] does not learn which player is that character.",
+             "If the [Pixie] is mad that they are the Townsfolk they learned, they gain that character's ability when that player dies.",
+             "The [Pixie] does not learn when they gain the ability.",
+             "If the ability would cause the [Pixie] to wake up, they wake when that character would normally wake.",
+             "If the [Pixie] is not sufficiently mad that they are the character they learned, they do not gain that character's ability when the player dies. The [Pixie] does not learn this.",
+             "The Storyteller chooses whether the [Pixie] was sufficiently mad or not.",
+             "The [Pixie] remains the [Pixie] after gaining the character's ability.",
+             "If the player who was the Townsfolk the [Pixie] learned changes character and then dies, the [Pixie] gains the ability of the original Townsfolk character, not the player's new character."
              ],
     "run": {
            "Anytime": [
-                "ComingSoon",
-                "ComingSoon"
+                "If the Townsfolk character learned by the [Pixie] dies, decide whether the [Pixie] has been sufficiently mad that they are that character. If so, the [Pixie] gains that character's ability."
                 ],
            "First Night": [
-                "ComingSoon",
-                "ComingSoon"
-                ],
-           "End of Game": [
-                "ComingSoon",
-                "ComingSoon"
+                "The [Pixie] learns an in-play Townsfolk character."
                 ]
            },
     "examples": [
-                "ComingSoon",
-                "ComingSoon"
+                "The [Pixie] learns the [Artist]. The [Pixie] spends the first day claiming to be the [Artist]. Later, the real [Artist] dies. The [Pixie] gains the [Artist]'s ability and may ask the Storyteller a question.",
+                "The [Pixie] learns the [Empath]. The [Pixie] claims to be the [Empath] and gives believable [Empath] information each day. The real [Empath] dies, so the [Pixie] gains the [Empath]'s ability.",
+                "The [Pixie] learns the [Clockmaker] but publicly claims to be the [Savant]. The real [Clockmaker] dies. The [Pixie] does not gain the [Clockmaker]'s ability because they were not mad that they were the [Clockmaker].",
+                "The [Pixie] learns the [Ravenkeeper] and is mad that they are the [Ravenkeeper]. The real [Ravenkeeper] dies at night and uses their ability. The [Pixie] then gains the [Ravenkeeper]'s ability."
                 ],
     "tags": ["Information", "Mechanical", "Death", "Madness"],
     "edition": "Carousel"
