@@ -604,20 +604,90 @@
 
 }
 /* ==========================================
-   Dragging
+   Character Reordering
 ========================================== */
 
-.night-order-character.dragging{
-    opacity:.35;
+.night-order-drag{
+    touch-action:none;
+}
+
+
+/* Row being moved */
+
+.night-order-character.is-dragging{
+    position:fixed;
+
+    z-index:10000;
+
+    margin:0;
+
+    pointer-events:none;
+
+    cursor:grabbing;
 
     border-color:
         var(--purple);
 
-    box-shadow:none;
+    box-shadow:
+        0 16px 38px
+        rgba(13,24,33,.20);
+
+    transform:
+        scale(1.015);
+
+    opacity:.96;
 }
 
-.night-order-character.dragging
-.night-order-drag{
-    color:
+
+/* Drop position */
+
+.night-order-placeholder{
+    position:relative;
+
+    margin:0;
+
+    border-radius:14px;
+
+    background:
+        rgba(102,102,153,.055);
+}
+
+.night-order-placeholder::before{
+    content:"";
+
+    position:absolute;
+
+    left:8px;
+    right:8px;
+    top:50%;
+
+    height:3px;
+
+    border-radius:999px;
+
+    background:
         var(--purple);
+
+    transform:
+        translateY(-50%);
+}
+
+.night-order-placeholder::after{
+    content:"";
+
+    position:absolute;
+
+    left:4px;
+    top:50%;
+
+    width:9px;
+    height:9px;
+
+    border-radius:50%;
+
+    background:
+        var(--purple);
+
+    transform:
+        translateY(-50%);
 }
