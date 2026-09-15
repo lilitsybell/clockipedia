@@ -25,7 +25,10 @@ let calendarEvents = [];
 /* ==========================================
    Elements
 ========================================== */
-
+const downloadButton =
+    document.getElementById(
+        "calendar-download"
+    );
 const calendarTitle =
     document.getElementById(
         "calendar-title"
@@ -507,6 +510,76 @@ async function initializeCalendar(){
     }
 
 }
+/* ==========================================
+   Download Calendar PNG
+========================================== */
 
+downloadButton.addEventListener(
+    "click",
+    async () => {
+
+        const calendarSection =
+            document.querySelector(
+                ".ltfi-calendar-page-section"
+            );
+
+        calendarSection.classList.add(
+            "calendar-exporting"
+        );
+
+        try{
+
+            const canvas =
+                await html2canvas(
+                    calendarSection,
+                    {
+                        scale:2,
+                        backgroundColor:"#f1f1f2"
+                    }
+                );
+
+            const monthName =
+                currentDate.toLocaleDateString(
+                    "en-US",
+                    {
+                        month:"long",
+                        year:"numeric"
+                    }
+                )
+                .replace(/\s+/g, "-")
+                .toLowerCase();
+
+            const link =
+                document.createElement(
+                    "a"
+                );
+
+            link.download =
+                `ltfi-calendar-${monthName}.png`;
+
+            link.href =
+                canvas.toDataURL(
+                    "image/png"
+                );
+
+            link.click();
+
+        }catch(error){
+
+            console.error(
+                "Calendar PNG failed:",
+                error
+            );
+
+        }finally{
+
+            calendarSection.classList.remove(
+                "calendar-exporting"
+            );
+
+        }
+
+    }
+);
 
 initializeCalendar();
