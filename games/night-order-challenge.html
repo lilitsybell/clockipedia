@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>
+        Night Order Challenge | Clockipedia
+    </title>
+
+    <link
+        rel="stylesheet"
+        href="/css/style-global.css"
+    >
+
+    <link
+        rel="stylesheet"
+        href="/css/night-order.css"
+    >
+
+</head>
+
+
+<body>
+
+
+<!-- ==========================================
+     Sidebar
+========================================== -->
+
+<div id="sidebar"></div>
+
+
+<!-- ==========================================
+     Main Content
+========================================== -->
+
+<main class="main-content">
+
+    <div class="night-order-page">
+
+
+        <!-- ==================================
+             Page Header
+        =================================== -->
+
+        <header class="night-order-header">
+
+            <p class="night-order-eyebrow">
+                DAILY CHALLENGE
+            </p>
+
+            <h1>
+                Night Order Challenge
+            </h1>
+
+            <p class="night-order-description">
+                Arrange the characters into the correct
+                Blood on the Clocktower night order.
+                After each guess, you'll learn how many
+                characters are in exactly the right position.
+            </p>
+
+        </header>
+
+
+        <!-- ==================================
+             Game
+        =================================== -->
+
+        <section class="night-order-game">
+
+            <div class="night-order-game-header">
+
+                <div>
+
+                    <p class="night-order-game-label">
+                        TODAY'S PUZZLE
+                    </p>
+
+                    <h2 id="night-type">
+                        Other Nights
+                    </h2>
+
+                </div>
+
+
+                <div class="night-order-attempts">
+
+                    <span>
+                        Attempts
+                    </span>
+
+                    <strong id="attempt-count">
+                        0
+                    </strong>
+
+                </div>
+
+            </div>
+
+
+            <!-- ==============================
+                 Night Sheet
+            =============================== -->
+
+            <div class="night-sheet">
+
+
+                <!-- Dusk -->
+
+                <div class="night-boundary dusk">
+
+                    <div class="night-boundary-icon">
+                        ☾
+                    </div>
+
+                    <div class="night-boundary-text">
+                        Dusk
+                    </div>
+
+                </div>
+
+
+                <!-- Character Rows -->
+
+                <div
+                    id="night-order-list"
+                    class="night-order-list"
+                ></div>
+
+
+                <!-- Dawn -->
+
+                <div class="night-boundary dawn">
+
+                    <div class="night-boundary-icon">
+                        ☀
+                    </div>
+
+                    <div class="night-boundary-text">
+                        Dawn
+                    </div>
+
+                </div>
+
+
+            </div>
+
+
+            <!-- ==============================
+                 Game Controls
+            =============================== -->
+
+            <div class="night-order-controls">
+
+                <div
+                    id="night-order-result"
+                    class="night-order-result"
+                ></div>
+
+                <button
+                    id="check-night-order"
+                    class="night-order-submit"
+                    type="button"
+                >
+                    Check Night Order
+                </button>
+
+            </div>
+
+
+        </section>
+
+
+    </div>
+
+</main>
+
+
+<!-- ==========================================
+     Scripts
+========================================== -->
+
+<script src="/js/sidebar.js"></script>
+<script src="/js/night-order.js"></script>
+
+
+</body>
+
+</html>
