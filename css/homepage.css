@@ -16,7 +16,7 @@
 .hero-section{
     background:white;
     text-align:center;
-    padding:10px 40px 15px;
+    padding:30px 40px 15px;
 }
 
 .hero-logo{
@@ -297,9 +297,12 @@
 /* ==========================================
    Script of the Day
 ========================================== */
-
 .daily-script{
     position:relative;
+
+    width:100%;
+    max-width:1100px;
+    margin:0 auto;
 
     display:flex;
     align-items:stretch;
