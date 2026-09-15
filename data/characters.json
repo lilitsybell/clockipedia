@@ -1637,7 +1637,8 @@
              "The chosen player learns that the [Nightwatchman] player is the [Nightwatchman].",
              "The [Nightwatchman] may use their ability on the first night or any later night.",
              "The [Nightwatchman] may choose any player, including themself, a dead player, an evil player, or a Traveller.",
-             "If there is a [Vortox] in play, the chosen player learns a different player and/or character."
+             "If there is a [Vortox] in play, the chosen player learns a different player and/or character.",
+             "The [Nightwatchman] and their chosen player do not learn if the other woke up."
              ],
     "run": {
            "Every Night": [
@@ -1670,18 +1671,22 @@
     "flavor": "Sarcasm is indeed the lowest form of wit. But speaking in response to your criticism, Sir, it is, nevertheless, a form of wit.",
     "purpose": "The [Noble] learns one evil player and two good players, but does not learn which is which.",
     "summary": [
-             "ComingSoon",
-             "ComingSoon"
+             "On the [Noble]'s first night, they learn 3 players. Exactly one of those players is or registers as evil.",
+             "The [Noble] does not learn which of the 3 players is evil.",
+             "The [Noble] does not learn the characters of any of the players they are shown.",
+             "The players the [Noble] learns may be any character type, including Travellers.",
+             "The players the [Noble] learns may be alive or dead."
              ],
     "run": {
            "First Night": [
-                "ComingSoon",
-                "ComingSoon"
+                "The [Noble] learns 3 players, exactly one of whom is or registers as evil."
                 ]
            },
     "examples": [
-                "ComingSoon",
-                "ComingSoon"
+                "The [Noble] learns Ben, Kenni, and Bell. Ben is the [Artist], Kenni is the [Poisoner], and Bell is the [Clockmaker].",
+                "The [Noble] learns Clover, Corey, and Rosie. Clover is the [Imp], while Corey and Rosie are good players.",
+                "The [Noble] learns Broom, Sunny, and Nic. Broom is the [Damsel] and Sunny is the [Alsaahir]. Nic is the [Recluse] and registers as evil, so none of the players the [Noble] learns are actually evil.",
+                "The [Noble] learns Carla, Meg, and Tyler. Carla is the [Politician], Meg is the good [Gangster], and Tyler is the evil [Innkeeper]."
                 ],
     "tags": ["Information"],
     "edition": "Carousel"
