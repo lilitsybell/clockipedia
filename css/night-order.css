@@ -823,7 +823,8 @@
 ========================================== */
 
 .daily-calendar-day.night-order-calendar-completed{
-    border-color:
+    border:
+        2px solid
         var(--score-color);
 
     background:
@@ -844,27 +845,56 @@
 .daily-calendar-day-number{
     color:
         var(--score-color);
+
+    font-size:17px;
+    font-weight:900;
 }
 
 
-/* Score */
+/* Tries */
 
 .night-order-calendar-score{
     display:block;
 
-    margin-top:4px;
+    margin-top:7px;
 
     color:
         var(--score-color);
 
-    font-size:9px;
+    font-size:11px;
     font-weight:900;
 
     line-height:1;
 
-    letter-spacing:.04em;
+    letter-spacing:.05em;
 
     text-transform:uppercase;
+}
+
+
+/* ==========================================
+   Today's Completed Puzzle
+========================================== */
+
+.daily-calendar-day.today.night-order-calendar-completed
+.daily-calendar-day-number{
+    display:inline-flex;
+
+    width:34px;
+    height:34px;
+
+    align-items:center;
+    justify-content:center;
+
+    border-radius:50%;
+
+    background:
+        var(--score-color);
+
+    color:white;
+
+    font-size:16px;
+    font-weight:900;
 }
 
 
