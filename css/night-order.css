@@ -731,3 +731,90 @@
     position:relative;
     z-index:1;
 }
+/* ==========================================
+   Final Score
+========================================== */
+
+.night-order-solved{
+    display:flex;
+    align-items:center;
+
+    gap:16px;
+}
+
+
+.night-order-score{
+    width:62px;
+    height:62px;
+
+    flex-shrink:0;
+
+    display:flex;
+    flex-direction:column;
+
+    align-items:center;
+    justify-content:center;
+
+    border:
+        2px solid
+        var(--score-color);
+
+    border-radius:14px;
+
+    background:
+        color-mix(
+            in srgb,
+            var(--score-color) 10%,
+            white
+        );
+
+    color:
+        var(--score-color);
+}
+
+
+.night-order-score span{
+    margin-bottom:1px;
+
+    font-size:8px;
+    font-weight:900;
+
+    letter-spacing:.08em;
+
+    text-transform:uppercase;
+}
+
+
+.night-order-score strong{
+    font-family:
+        "Droid Sans",
+        Arial,
+        sans-serif;
+
+    font-size:27px;
+    font-weight:700;
+
+    line-height:1;
+}
+
+
+.night-order-solved-text{
+    display:flex;
+    flex-direction:column;
+
+    gap:2px;
+}
+
+
+.night-order-solved-text strong{
+    color:var(--black);
+
+    font-size:15px;
+}
+
+
+.night-order-solved-text span{
+    color:var(--gray);
+
+    font-size:13px;
+}
