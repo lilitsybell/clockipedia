@@ -400,8 +400,7 @@
 .night-order-character-text{
     align-self:stretch;
 
-    display:flex;
-    align-items:center;
+    display:block;
 
     padding:
         16px 24px;
@@ -416,12 +415,19 @@
     line-height:1.45;
 }
 
+.night-order-character-text > *{
+    display:inline;
+}
+
 .night-order-character-text strong,
 .night-order-character-text b{
     display:inline;
 
-    font:inherit;
+    margin:0 .2em;
 
+    font-family:inherit;
+    font-size:inherit;
+    font-style:inherit;
     font-weight:700;
 
     line-height:inherit;
