@@ -121,20 +121,121 @@ function getEligibleCharacters(){
    Pick Test Characters
 ========================================== */
 
-function choosePuzzleCharacters(){
+/* ==========================================
+   Daily Puzzle
+========================================== */
 
-    const eligible =
-        getEligibleCharacters();
+let puzzleDate =
+    getTodayKey();
 
 
-    /*
-        Shuffle the eligible characters so
-        we see a different mixture while
-        testing the design.
-    */
+function getTodayKey(){
+
+    const today =
+        new Date();
+
+    return [
+        today.getFullYear(),
+        String(
+            today.getMonth() + 1
+        ).padStart(2,"0"),
+        String(
+            today.getDate()
+        ).padStart(2,"0")
+    ].join("-");
+
+}
+
+
+/* ==========================================
+   Seeded Random
+========================================== */
+
+function hashString(text){
+
+    let hash =
+        2166136261;
+
+
+    for(
+        let i = 0;
+        i < text.length;
+        i++
+    ){
+
+        hash ^=
+            text.charCodeAt(i);
+
+        hash =
+            Math.imul(
+                hash,
+                16777619
+            );
+
+    }
+
+
+    return hash >>> 0;
+
+}
+
+
+function seededRandom(seed){
+
+    let value =
+        seed >>> 0;
+
+
+    return function(){
+
+        value +=
+            0x6D2B79F5;
+
+
+        let result =
+            value;
+
+
+        result =
+            Math.imul(
+                result ^
+                result >>> 15,
+                result | 1
+            );
+
+
+        result ^=
+            result +
+            Math.imul(
+                result ^
+                result >>> 7,
+                result | 61
+            );
+
+
+        return (
+            (
+                result ^
+                result >>> 14
+            ) >>> 0
+        ) / 4294967296;
+
+    };
+
+}
+
+
+/* ==========================================
+   Seeded Shuffle
+========================================== */
+
+function seededShuffle(
+    array,
+    random
+){
 
     const shuffled =
-        [...eligible];
+        [...array];
 
 
     for(
@@ -146,7 +247,7 @@ function choosePuzzleCharacters(){
 
         const j =
             Math.floor(
-                Math.random() *
+                random() *
                 (i + 1)
             );
 
@@ -162,10 +263,308 @@ function choosePuzzleCharacters(){
     }
 
 
-puzzleCharacters =
-    shuffled.slice(
-        0,
-        puzzleSize
+    return shuffled;
+
+}
+
+
+/* ==========================================
+   Random Integer
+========================================== */
+
+function randomInteger(
+    min,
+    max,
+    random
+){
+
+    return (
+        Math.floor(
+            random() *
+            (
+                max -
+                min +
+                1
+            )
+        ) +
+        min
+    );
+
+}
+
+
+/* ==========================================
+   Team Group
+========================================== */
+
+function getPuzzleTeam(
+    character
+){
+
+    const team =
+        character.team;
+
+
+    if(team === "Townsfolk"){
+        return "townsfolk";
+    }
+
+
+    if(
+        team === "Outsider" ||
+        team === "Outsiders"
+    ){
+        return "outsiders";
+    }
+
+
+    if(
+        team === "Minion" ||
+        team === "Minions"
+    ){
+        return "minions";
+    }
+
+
+    if(
+        team === "Demon" ||
+        team === "Demons"
+    ){
+        return "demons";
+    }
+
+
+    if(
+        team === "Traveller" ||
+        team === "Travellers"
+    ){
+        return "travellers";
+    }
+
+
+    if(team === "Fabled"){
+        return "fabled";
+    }
+
+
+    if(team === "Loric"){
+        return "loric";
+    }
+
+
+    return null;
+
+}
+
+
+/* ==========================================
+   Choose Daily Night
+========================================== */
+
+function chooseDailyNight(
+    random
+){
+
+    return (
+        random() < .5
+            ? "firstNight"
+            : "otherNights"
+    );
+
+}
+
+
+/* ==========================================
+   Valid Team Composition
+========================================== */
+
+function createTeamCounts(
+    random
+){
+
+    const ranges = {
+
+        townsfolk:[3,6],
+        outsiders:[1,2],
+        minions:[1,3],
+        demons:[1,2],
+        travellers:[1,2],
+        fabled:[0,1],
+        loric:[0,1]
+
+    };
+
+
+    while(true){
+
+        const counts = {};
+
+
+        for(
+            const [
+                team,
+                range
+            ]
+            of Object.entries(ranges)
+        ){
+
+            counts[team] =
+                randomInteger(
+                    range[0],
+                    range[1],
+                    random
+                );
+
+        }
+
+
+        const total =
+            Object.values(
+                counts
+            )
+            .reduce(
+                (sum,count) =>
+                    sum + count,
+                0
+            );
+
+
+        if(total === 10){
+            return counts;
+        }
+
+    }
+
+}
+
+
+/* ==========================================
+   Choose Daily Puzzle
+========================================== */
+
+function choosePuzzleCharacters(){
+
+    const random =
+        seededRandom(
+            hashString(
+                `night-order-${puzzleDate}`
+            )
+        );
+
+
+    nightType =
+        chooseDailyNight(
+            random
+        );
+
+
+    const eligible =
+        getEligibleCharacters();
+
+
+    const charactersByTeam = {
+
+        townsfolk:[],
+        outsiders:[],
+        minions:[],
+        demons:[],
+        travellers:[],
+        fabled:[],
+        loric:[]
+
+    };
+
+
+    eligible.forEach(
+        character => {
+
+            const team =
+                getPuzzleTeam(
+                    character
+                );
+
+
+            if(
+                team &&
+                charactersByTeam[team]
+            ){
+
+                charactersByTeam[
+                    team
+                ].push(
+                    character
+                );
+
+            }
+
+        }
+    );
+
+
+    const counts =
+        createTeamCounts(
+            random
+        );
+
+
+    const selected =
+        [];
+
+
+    for(
+        const [
+            team,
+            count
+        ]
+        of Object.entries(counts)
+    ){
+
+        const shuffledTeam =
+            seededShuffle(
+                charactersByTeam[
+                    team
+                ],
+                random
+            );
+
+
+        selected.push(
+            ...shuffledTeam.slice(
+                0,
+                count
+            )
+        );
+
+    }
+
+    puzzleCharacters =
+        seededShuffle(
+            selected,
+            random
+        );
+
+
+    console.log(
+        "Puzzle date:",
+        puzzleDate
+    );
+
+    console.log(
+        "Night type:",
+        nightType
+    );
+
+    console.log(
+        "Team counts:",
+        counts
+    );
+
+    console.log(
+        "Starting order:",
+        puzzleCharacters.map(
+            character =>
+                character.name
+        )
     );
 
 }
