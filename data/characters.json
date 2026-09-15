@@ -11,7 +11,7 @@
         "text": null},
     "otherNights": {
         "order": 22,
-        "text": "The Acrobat chooses a player."}}
+        "text": "The Acrobat chooses a player."}},
     "flavor": "Ladies and gentlemen, hold fast to your hats, for I shall defy the very laws of gravity and dance upon the air, a marvel of agility and daring, all for your delight and wonder!",
     "purpose": "The [Acrobat] dies when they find a drunk or poisoned player.",
     "summary": ["Each night except the first, the [Acrobat] chooses a player. If the chosen player is sober and healthy, nothing happens. If the player is drunk or poisoned, the [Acrobat] dies.",
