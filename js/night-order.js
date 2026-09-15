@@ -1072,7 +1072,7 @@ function showCompletedResult(score){
             >
 
                 <span>
-                    Score
+                    Attempts
                 </span>
 
                 <strong>
@@ -1191,7 +1191,7 @@ async function shareNightOrderResult(){
     const text =
 `Night Order Challenge — ${formatPuzzleDate(puzzleDate)}
 ${nightName}
-Solved in ${savedPuzzle.score} ${savedPuzzle.score === 1 ? "try" : "tries"}!
+Solved in ${savedPuzzle.score} ${savedPuzzle.score === 1 ? "attempt" : "attempts"}!
 
 ${url}`;
 
@@ -2209,7 +2209,7 @@ if(completed){
         </span>
 
         <span class="night-order-calendar-score">
-            Tries: ${savedScore}
+            Attempts: ${savedScore}
         </span>
 
     `;
