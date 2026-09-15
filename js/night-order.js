@@ -28,7 +28,22 @@ const puzzleSize =
 /* ==========================================
    Elements
 ========================================== */
+const checkButton =
+    document.getElementById(
+        "check-night-order"
+    );
 
+const attemptCount =
+    document.getElementById(
+        "attempt-count"
+    );
+
+const resultDisplay =
+    document.getElementById(
+        "night-order-result"
+    );
+
+let attempts = 0;
 const nightOrderList =
     document.getElementById(
         "night-order-list"
@@ -361,7 +376,104 @@ function updateNightTypeHeading(){
             : "Other Nights";
 
 }
+/* ==========================================
+   Check Night Order
+========================================== */
 
+function checkNightOrder(){
+
+    const currentRows =
+        [
+            ...nightOrderList.querySelectorAll(
+                ".night-order-character"
+            )
+        ];
+
+
+    const currentOrder =
+        currentRows.map(
+            row =>
+                row.dataset.character
+        );
+
+
+    const correctOrder =
+        [...puzzleCharacters]
+        .sort(
+            (a,b) =>
+                a.nightOrder[nightType].order -
+                b.nightOrder[nightType].order
+        )
+        .map(
+            character =>
+                character.slug
+        );
+
+
+    let correctCount = 0;
+
+
+    currentOrder.forEach(
+        (slug,index) => {
+
+            if(
+                slug ===
+                correctOrder[index]
+            ){
+                correctCount++;
+            }
+
+        }
+    );
+
+
+    attempts++;
+
+    attemptCount.textContent =
+        attempts;
+
+
+    showNightOrderResult(
+        correctCount
+    );
+
+}
+/* ==========================================
+   Result
+========================================== */
+
+function showNightOrderResult(
+    correctCount
+){
+
+    if(
+        correctCount === puzzleSize
+    ){
+
+        resultDisplay.innerHTML = `
+            <strong>
+                Perfect!
+            </strong>
+            All ${puzzleSize} characters
+            are in the correct position.
+        `;
+
+        checkButton.disabled =
+            true;
+
+        return;
+
+    }
+
+
+    resultDisplay.innerHTML = `
+        <strong>
+            ${correctCount} of ${puzzleSize}
+        </strong>
+        characters are in the correct position.
+    `;
+
+}
 /* ==========================================
    Pointer Reordering
 ========================================== */
@@ -628,5 +740,8 @@ async function initializeNightOrder(){
 
 }
 
-
+checkButton.addEventListener(
+    "click",
+    checkNightOrder
+);
 initializeNightOrder();
