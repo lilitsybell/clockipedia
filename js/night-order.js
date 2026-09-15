@@ -275,8 +275,6 @@ function createCharacterRow(
 row.className =
     `night-order-character ${color}`;
 
-row.draggable = true;
-
 row.dataset.character =
     character.slug;
 
@@ -307,7 +305,7 @@ row.dataset.character =
 
 
         <div class="night-order-character-text">
-            ${night.text || ""}
+            ${formatNightOrderText(night.text)}
         </div>
 
 
@@ -365,90 +363,191 @@ function updateNightTypeHeading(){
 }
 
 /* ==========================================
-   Drag + Drop
+   Pointer Reordering
 ========================================== */
 
 let draggedRow = null;
+let dragPlaceholder = null;
 
+let dragOffsetY = 0;
+let dragStartX = 0;
+
+let originalWidth = 0;
+
+
+/* ==========================================
+   Start Drag
+========================================== */
 
 nightOrderList.addEventListener(
-    "dragstart",
+    "pointerdown",
     event => {
 
-        const row =
+        const handle =
             event.target.closest(
+                ".night-order-drag"
+            );
+
+        if(!handle){
+            return;
+        }
+
+
+        const row =
+            handle.closest(
                 ".night-order-character"
             );
 
-        if(!row) return;
+        if(!row){
+            return;
+        }
+
+
+        event.preventDefault();
+
+
+        const rect =
+            row.getBoundingClientRect();
 
 
         draggedRow =
             row;
 
+        dragOffsetY =
+            event.clientY -
+            rect.top;
 
-        row.classList.add(
-            "dragging"
+        dragStartX =
+            rect.left;
+
+        originalWidth =
+            rect.width;
+
+
+        /* Create placeholder */
+
+        dragPlaceholder =
+            document.createElement(
+                "div"
+            );
+
+        dragPlaceholder.className =
+            "night-order-placeholder";
+
+        dragPlaceholder.style.height =
+            `${rect.height}px`;
+
+
+        row.parentNode.insertBefore(
+            dragPlaceholder,
+            row
         );
 
 
-        event.dataTransfer.effectAllowed =
-            "move";
+        /* Lift actual row */
+
+        document.body.appendChild(
+            row
+        );
+
+
+        row.classList.add(
+            "is-dragging"
+        );
+
+
+        row.style.width =
+            `${originalWidth}px`;
+
+        row.style.left =
+            `${dragStartX}px`;
+
+        row.style.top =
+            `${
+                event.clientY -
+                dragOffsetY
+            }px`;
+
+
+        handle.setPointerCapture(
+            event.pointerId
+        );
 
     }
 );
 
 
-nightOrderList.addEventListener(
-    "dragend",
-    () => {
+/* ==========================================
+   Move Drag
+========================================== */
 
-        if(draggedRow){
-
-            draggedRow.classList.remove(
-                "dragging"
-            );
-
-        }
-
-
-        draggedRow =
-            null;
-
-    }
-);
-
-
-nightOrderList.addEventListener(
-    "dragover",
+document.addEventListener(
+    "pointermove",
     event => {
-
-        event.preventDefault();
-
 
         if(!draggedRow){
             return;
         }
 
 
-        const afterElement =
-            getDragAfterElement(
-                nightOrderList,
-                event.clientY
-            );
+        event.preventDefault();
 
 
-        if(afterElement === null){
+        draggedRow.style.top =
+            `${
+                event.clientY -
+                dragOffsetY
+            }px`;
 
-            nightOrderList.appendChild(
-                draggedRow
+
+        const rows =
+            [
+                ...nightOrderList
+                    .querySelectorAll(
+                        ".night-order-character"
+                    )
+            ];
+
+
+        let targetRow =
+            null;
+
+
+        for(
+            const row of rows
+        ){
+
+            const rect =
+                row.getBoundingClientRect();
+
+
+            if(
+                event.clientY <
+                rect.top +
+                rect.height / 2
+            ){
+
+                targetRow =
+                    row;
+
+                break;
+
+            }
+
+        }
+
+
+        if(targetRow){
+
+            nightOrderList.insertBefore(
+                dragPlaceholder,
+                targetRow
             );
 
         }else{
 
-            nightOrderList.insertBefore(
-                draggedRow,
-                afterElement
+            nightOrderList.appendChild(
+                dragPlaceholder
             );
 
         }
@@ -457,59 +556,82 @@ nightOrderList.addEventListener(
 );
 
 
-function getDragAfterElement(
-    container,
-    y
-){
+/* ==========================================
+   Finish Drag
+========================================== */
 
-    const rows =
-        [
-            ...container.querySelectorAll(
-                ".night-order-character:not(.dragging)"
-            )
-        ];
+document.addEventListener(
+    "pointerup",
+    () => {
 
-
-    return rows.reduce(
-        (
-            closest,
-            row
-        ) => {
-
-            const box =
-                row.getBoundingClientRect();
-
-
-            const offset =
-                y -
-                box.top -
-                box.height / 2;
-
-
-            if(
-                offset < 0 &&
-                offset >
-                closest.offset
-            ){
-
-                return {
-                    offset,
-                    element:row
-                };
-
-            }
-
-
-            return closest;
-
-        },
-        {
-            offset:
-                Number.NEGATIVE_INFINITY,
-
-            element:null
+        if(
+            !draggedRow ||
+            !dragPlaceholder
+        ){
+            return;
         }
-    ).element;
+
+
+        dragPlaceholder.replaceWith(
+            draggedRow
+        );
+
+
+        draggedRow.classList.remove(
+            "is-dragging"
+        );
+
+
+        draggedRow.style.width =
+            "";
+
+        draggedRow.style.left =
+            "";
+
+        draggedRow.style.top =
+            "";
+
+
+        draggedRow =
+            null;
+
+        dragPlaceholder =
+            null;
+
+    }
+);
+/* ==========================================
+   Night Order Text
+========================================== */
+
+function formatNightOrderText(text){
+
+    if(!text){
+        return "";
+    }
+
+    return text
+        .replace(
+            /<strong>\s*/g,
+            " <strong>"
+        )
+        .replace(
+            /\s*<\/strong>/g,
+            "</strong> "
+        )
+        .replace(
+            /<b>\s*/g,
+            " <b>"
+        )
+        .replace(
+            /\s*<\/b>/g,
+            "</b> "
+        )
+        .replace(
+            /\s{2,}/g,
+            " "
+        )
+        .trim();
 
 }
 /* ==========================================
