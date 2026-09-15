@@ -2007,7 +2007,7 @@ if(completed){
         </span>
 
         <span class="night-order-calendar-score">
-            Score ${savedScore}
+            Tries: ${savedScore}
         </span>
 
     `;
