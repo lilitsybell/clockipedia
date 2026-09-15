@@ -67,6 +67,27 @@
                 characters are in exactly the right position.
             </p>
 
+            <div class="daily-game-header-bottom">
+
+    <div
+        id="puzzleDetails"
+        class="daily-game-puzzle-details"
+    ></div>
+
+    <div class="daily-game-header-actions">
+
+        <button
+            id="archiveButton"
+            class="site-button-secondary"
+            type="button"
+        >
+            Archive
+        </button>
+
+    </div>
+
+</div>
+
         </header>
 
 
@@ -187,7 +208,110 @@
     </main>
 
 </div>
+<!-- ==========================================
+     Puzzle Archive
+========================================== -->
 
+<div
+    id="archiveModal"
+    class="daily-archive-modal"
+    hidden
+>
+
+    <div
+        id="archiveBackdrop"
+        class="daily-archive-backdrop"
+    ></div>
+
+
+    <div class="daily-archive-panel">
+
+        <div class="daily-archive-header">
+
+            <div>
+
+                <h2>
+                    Night Order Archive
+                </h2>
+
+                <p>
+                    Play a previous daily challenge.
+                </p>
+
+            </div>
+
+
+            <button
+                id="archiveClose"
+                class="daily-archive-close"
+                type="button"
+                aria-label="Close archive"
+            >
+                ×
+            </button>
+
+        </div>
+
+
+        <div class="daily-calendar-nav">
+
+            <button
+                id="archivePreviousMonth"
+                type="button"
+                aria-label="Previous month"
+            >
+                ‹
+            </button>
+
+            <h3 id="archiveMonth">
+                September 2026
+            </h3>
+
+            <button
+                id="archiveNextMonth"
+                type="button"
+                aria-label="Next month"
+            >
+                ›
+            </button>
+
+        </div>
+
+
+        <div class="daily-calendar-weekdays">
+
+            <span>Sun</span>
+            <span>Mon</span>
+            <span>Tue</span>
+            <span>Wed</span>
+            <span>Thu</span>
+            <span>Fri</span>
+            <span>Sat</span>
+
+        </div>
+
+
+        <div
+            id="archiveCalendar"
+            class="daily-calendar"
+        ></div>
+
+
+        <div class="daily-archive-footer">
+
+            <button
+                id="archiveToday"
+                class="daily-archive-today"
+                type="button"
+            >
+                Today's Puzzle
+            </button>
+
+        </div>
+
+    </div>
+
+</div>
 <!-- ==========================================
      Scripts
 ========================================== -->
