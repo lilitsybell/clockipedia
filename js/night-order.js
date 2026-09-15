@@ -305,7 +305,7 @@ row.dataset.character =
 
 
         <div class="night-order-character-text">
-            ${formatNightOrderText(night.text)}
+            ${night.text || ""}
         </div>
 
 
@@ -594,40 +594,7 @@ document.addEventListener(
 
     }
 );
-/* ==========================================
-   Night Order Text
-========================================== */
 
-function formatNightOrderText(text){
-
-    if(!text){
-        return "";
-    }
-
-    return text
-        .replace(
-            /<strong>\s*/g,
-            " <strong>"
-        )
-        .replace(
-            /\s*<\/strong>/g,
-            "</strong> "
-        )
-        .replace(
-            /<b>\s*/g,
-            " <b>"
-        )
-        .replace(
-            /\s*<\/b>/g,
-            "</b> "
-        )
-        .replace(
-            /\s{2,}/g,
-            " "
-        )
-        .trim();
-
-}
 /* ==========================================
    Initialize
 ========================================== */
