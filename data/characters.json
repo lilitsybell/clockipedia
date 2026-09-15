@@ -132,7 +132,7 @@
         "text": "Do whatever needs to be done to satisfy the Amnesiac's ability."},
     "otherNights": {
         "order": 69,
-        "text": Do whatever needs to be done to satisfy the Amnesiac's ability.}},
+        "text": "Do whatever needs to be done to satisfy the Amnesiac's ability."}},
     "flavor": "Wait. What. Who? Oh, ok. Wait. What?",
     "purpose": "The [Amnesiac] has a powerful ability, but does not know what it is.",
     "summary": [
@@ -513,7 +513,7 @@
     "nightOrder": {
     "firstNight": {
         "order": 60,
-        "text": Give a finger signal.},
+        "text": "Give a finger signal."},
     "otherNights": {
         "order": 0,
         "text": null}},
