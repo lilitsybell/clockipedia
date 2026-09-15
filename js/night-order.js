@@ -1297,21 +1297,41 @@ function restoreSolvedState(){
     const savedPuzzle =
         getSavedPuzzle();
 
+if(
+    !savedPuzzle ||
+    !savedPuzzle.solved
+){
 
-    if(
-        !savedPuzzle ||
-        !savedPuzzle.solved
-    ){
+    const shareButton =
+        document.getElementById(
+            "nightOrderShareButton"
+        );
 
-        checkButton.disabled =
-            false;
-
-        resultDisplay.innerHTML =
-            "";
-
-        return;
-
+    if(shareButton){
+        shareButton.remove();
     }
+
+    checkButton.disabled =
+        false;
+
+    resultDisplay.innerHTML = `
+
+        <strong
+            id="night-order-result-score"
+            class="night-order-result-score"
+        >
+            ? / ${puzzleSize}
+        </strong>
+
+        <span class="night-order-result-label">
+            Correct Positions
+        </span>
+
+    `;
+
+    return;
+
+}
 
 
     attempts =
@@ -1633,19 +1653,19 @@ function checkNightOrder(){
             attempts
         );
 
-    }else{
+}else{
 
-        resultDisplay.innerHTML = `
-            <strong>
-                ${correctCount} of ${puzzleSize}
-            </strong>
-            characters are in the correct position.
-        `;
+    const resultScore =
+        document.getElementById(
+            "night-order-result-score"
+        );
 
+    resultScore.textContent =
+        `${correctCount} / ${puzzleSize}`;
 
-        savePuzzleProgress();
+    savePuzzleProgress();
 
-    }
+}
 
 }
 
