@@ -1780,22 +1780,33 @@
     "flavor": "If anything is real, beer is real. Drink, for tomorrow we may die.",
     "purpose": "The [Philosopher] chooses which ability they have.",
     "summary": [
-             "ComingSoon",
-             "ComingSoon"
+             "Once per game, at night, the [Philosopher] may choose a good character and gain that character's ability.",
+             "The [Philosopher] gains the chosen character's ability but remains the [Philosopher].",
+             "The [Philosopher] always registers as the [Philosopher], not as the character they choose.",
+             "The [Philosopher] may choose a Townsfolk or Outsider. The [Philosopher] cannot choose a Traveller or any other character type.",
+             "If the chosen character is in play, that player becomes drunk.",
+             "If a player who is [Philosopher] drunk changes character, they are no longer [Philosopher] drunk.",
+             "If the chosen character enters play later, that player becomes drunk while the [Philosopher] has their ability.",
+             "If there are multiple copies of a character in play, only one of those players becomes [Philosopher] drunk.",
+             "If the [Philosopher] becomes drunk or poisoned, the player that is [Philosopher] drunk becomes sober until the [Philosopher] is sober and healthy again. If the [Philosopher] dies, the player that is [Philosopher] drunk becomes sober.",
+             "The [Philosopher] keeps the chosen ability for the rest of the game, unless another ability causes them to lose it.",
+             "If the chosen ability says \"you start knowing\" or otherwise acts at the beginning of the game, the [Philosopher] receives the appropriate information after any killing abilities are resolved.",
+             "The [Philosopher] wakes just before the character they chose wakes in night order.",
+             "If the [Philosopher] regains their ability via the [Bone Collector], or uses their ability twice via the [Barista], the [Philosopher] may choose a new ability, or the same ability as before.",
+             "If the [Philosopher]’s ability works while dead, such as the [Klutz]’s, it works if the [Philosopher] is dead. If the character is in play, the player becomes sober again."
              ],
     "run": {
            "Every Night": [
-                "ComingSoon",
-                "ComingSoon"
-                ],
-           "End of Game": [
-                "ComingSoon",
-                "ComingSoon"
+                "Once per game, the [Philosopher] may choose to use their ability. If they do, they choose a good character and gain that character's ability.",
+                "If the chosen character is in play, that player becomes drunk."
                 ]
            },
     "examples": [
-                "ComingSoon",
-                "ComingSoon"
+                "The [Philosopher] chooses the [Artist]. The [Philosopher] gains the [Artist]'s ability and may ask the Storyteller a question once during the game.",
+                "On the third night, the [Philosopher] chooses the [Princess]. The [Princess] is already in play, so the [Princess] becomes drunk. The [Philosopher] gains the [Princess]'s ability. That day, the [Philosopher] nominates and executes a player. On the fourth night, the [Vigormortis] attacks the [Shugenja], but the [Shugenja] does not die.",
+                "The [Philosopher] chooses the [Empath]. There is no [Empath] in play, so nobody becomes drunk. Each night, the [Philosopher] learns how many of their alive neighbors are evil.",
+                "On the second night, the [Philosopher] chooses the [Clockmaker]. The [Philosopher] immediately learns the number of steps from the Demon to its nearest Minion.",
+                "The [Philosopher] chooses the [Farmer]. Later, the [Philosopher] dies at night. The Storyteller chooses that the [Noble] becomes the [Farmer]."
                 ],
     "tags": ["Mechanical", "Droisoning"],
     "edition": "Sects and Violets"
