@@ -536,3 +536,21 @@
     }
 
 }
+/* ==========================================
+   Dragging
+========================================== */
+
+.night-order-character.dragging{
+    opacity:.35;
+
+    border-color:
+        var(--purple);
+
+    box-shadow:none;
+}
+
+.night-order-character.dragging
+.night-order-drag{
+    color:
+        var(--purple);
+}
