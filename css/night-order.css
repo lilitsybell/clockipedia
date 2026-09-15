@@ -643,29 +643,17 @@
             rgba(102,102,153,.015)
         );
 }
-/* Completed puzzle layout */
 
-.night-order-controls:has(.night-order-solved){
-    position:relative;
-    min-height:120px;
-}
+/* Completed puzzle layout */
 
 .night-order-controls:has(.night-order-solved)
 .night-order-result{
-    position:absolute;
-
-    left:50%;
-    top:50%;
-
     min-width:0;
     min-height:0;
 
     padding:0;
 
     background:transparent;
-
-    transform:
-        translate(-50%,-50%);
 }
 
 /* ==========================================
