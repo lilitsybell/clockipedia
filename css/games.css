@@ -1198,30 +1198,31 @@ span[data-color="purple"]{
     }
 
 
-    .game-card-connections,
-    .game-card-name-every-character,
-    .game-card-whos-that-character{
-        max-width:none;
+.game-card-connections,
+.game-card-name-every-character,
+.game-card-whos-that-character,
+.game-card-night-order{
+    max-width:none;
 
-        grid-template-columns:1fr;
-    }
-
-
-    .game-card-connections-art,
-    .game-card-name-art,
-    .game-card-whos-art{
-        min-height:220px;
-
-        padding:24px;
-    }
+    grid-template-columns:1fr;
+}
 
 
-    .game-card-connections-content,
-    .game-card-name-content,
-    .game-card-whos-content{
-        padding:24px;
-    }
+.game-card-connections-art,
+.game-card-name-art,
+.game-card-whos-art,
+.game-card-night-order-art{
+    min-height:220px;
 
+    padding:24px;
+}
+
+.game-card-connections-content,
+.game-card-name-content,
+.game-card-whos-content,
+.game-card-night-order-content{
+    padding:24px;
+}
 
     .connections-card-mini-board{
         width:150px;
