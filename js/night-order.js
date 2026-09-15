@@ -18,7 +18,7 @@ let puzzleCharacters = [];
     "otherNights"
 */
 
-const nightType =
+let nightType =
     "otherNights";
 
 const puzzleSize =
