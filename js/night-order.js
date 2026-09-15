@@ -1966,12 +1966,63 @@ function renderArchive(){
         button.className =
             "daily-calendar-day";
 
+const savedData =
+    getSavedNightOrderData();
 
-        button.innerHTML = `
-            <span class="daily-calendar-day-number">
-                ${day}
-            </span>
-        `;
+const savedPuzzle =
+    savedData[key];
+
+const completed =
+    savedPuzzle?.solved === true;
+
+const savedScore =
+    completed
+        ? savedPuzzle.score
+        : null;
+
+
+if(completed){
+
+    const scoreColor =
+        getScoreColor(
+            savedScore
+        );
+
+
+    button.classList.add(
+        "night-order-calendar-completed"
+    );
+
+
+    button.style.setProperty(
+        "--score-color",
+        scoreColor
+    );
+
+
+    button.innerHTML = `
+
+        <span class="daily-calendar-day-number">
+            ${day}
+        </span>
+
+        <span class="night-order-calendar-score">
+            Score ${savedScore}
+        </span>
+
+    `;
+
+}else{
+
+    button.innerHTML = `
+
+        <span class="daily-calendar-day-number">
+            ${day}
+        </span>
+
+    `;
+
+}
 
 
         const beforeFirstPuzzle =
