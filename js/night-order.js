@@ -147,27 +147,10 @@ function choosePuzzleCharacters(){
     }
 
 
-    puzzleCharacters =
-        shuffled.slice(
-            0,
-            puzzleSize
-        );
-
-
-    /*
-        IMPORTANT:
-
-        For this first design test we sort
-        them back into their CORRECT order.
-
-        Later we will remove this and show
-        them shuffled to the player.
-    */
-
-    puzzleCharacters.sort(
-        (a,b) =>
-            a.nightOrder[nightType].order -
-            b.nightOrder[nightType].order
+puzzleCharacters =
+    shuffled.slice(
+        0,
+        puzzleSize
     );
 
 }
@@ -289,13 +272,13 @@ function createCharacterRow(
             "div"
         );
 
+row.className =
+    `night-order-character ${color}`;
 
-    row.className =
-        `night-order-character ${color}`;
+row.draggable = true;
 
-
-    row.dataset.character =
-        character.slug;
+row.dataset.character =
+    character.slug;
 
 
     row.innerHTML = `
@@ -381,7 +364,154 @@ function updateNightTypeHeading(){
 
 }
 
+/* ==========================================
+   Drag + Drop
+========================================== */
 
+let draggedRow = null;
+
+
+nightOrderList.addEventListener(
+    "dragstart",
+    event => {
+
+        const row =
+            event.target.closest(
+                ".night-order-character"
+            );
+
+        if(!row) return;
+
+
+        draggedRow =
+            row;
+
+
+        row.classList.add(
+            "dragging"
+        );
+
+
+        event.dataTransfer.effectAllowed =
+            "move";
+
+    }
+);
+
+
+nightOrderList.addEventListener(
+    "dragend",
+    () => {
+
+        if(draggedRow){
+
+            draggedRow.classList.remove(
+                "dragging"
+            );
+
+        }
+
+
+        draggedRow =
+            null;
+
+    }
+);
+
+
+nightOrderList.addEventListener(
+    "dragover",
+    event => {
+
+        event.preventDefault();
+
+
+        if(!draggedRow){
+            return;
+        }
+
+
+        const afterElement =
+            getDragAfterElement(
+                nightOrderList,
+                event.clientY
+            );
+
+
+        if(afterElement === null){
+
+            nightOrderList.appendChild(
+                draggedRow
+            );
+
+        }else{
+
+            nightOrderList.insertBefore(
+                draggedRow,
+                afterElement
+            );
+
+        }
+
+    }
+);
+
+
+function getDragAfterElement(
+    container,
+    y
+){
+
+    const rows =
+        [
+            ...container.querySelectorAll(
+                ".night-order-character:not(.dragging)"
+            )
+        ];
+
+
+    return rows.reduce(
+        (
+            closest,
+            row
+        ) => {
+
+            const box =
+                row.getBoundingClientRect();
+
+
+            const offset =
+                y -
+                box.top -
+                box.height / 2;
+
+
+            if(
+                offset < 0 &&
+                offset >
+                closest.offset
+            ){
+
+                return {
+                    offset,
+                    element:row
+                };
+
+            }
+
+
+            return closest;
+
+        },
+        {
+            offset:
+                Number.NEGATIVE_INFINITY,
+
+            element:null
+        }
+    ).element;
+
+}
 /* ==========================================
    Initialize
 ========================================== */
