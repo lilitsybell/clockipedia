@@ -194,7 +194,23 @@
         0 2px 7px
         rgba(13,24,33,.045);
 }
+.night-boundary::before{
+    content:"";
 
+    position:absolute;
+
+    z-index:0;
+
+    top:0;
+    bottom:0;
+    left:0;
+
+    width:320px;
+
+    background:#f6f5f8;
+
+    pointer-events:none;
+}
 .night-boundary-icon{
     display:flex;
     align-items:center;
@@ -423,7 +439,8 @@
 .night-order-character-text b{
     display:inline;
 
-    margin:0 .2em;
+    margin:0;
+    padding:0;
 
     font-family:inherit;
     font-size:inherit;
@@ -707,4 +724,10 @@
 
     transform:
         translateY(-50%);
+}
+.night-boundary-icon,
+.night-boundary-text,
+.night-boundary-description{
+    position:relative;
+    z-index:1;
 }
