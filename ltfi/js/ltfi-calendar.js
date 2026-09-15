@@ -327,20 +327,36 @@ function renderCalendar(){
             1
         );
 
+const startDate =
+    new Date(
+        year,
+        month,
+        1 - firstDay.getDay()
+    );
 
-    const startDate =
-        new Date(
-            year,
-            month,
-            1 - firstDay.getDay()
-        );
+
+const lastDay =
+    new Date(
+        year,
+        month + 1,
+        0
+    );
 
 
-    for(
-        let i = 0;
-        i < 42;
-        i++
-    ){
+const totalCells =
+    Math.ceil(
+        (
+            firstDay.getDay() +
+            lastDay.getDate()
+        ) / 7
+    ) * 7;
+
+
+for(
+    let i = 0;
+    i < totalCells;
+    i++
+){
 
         const date =
             new Date(startDate);
