@@ -6,7 +6,43 @@
     padding:34px;
 }
 
+/* ==========================================
+   Calendar Download
+========================================== */
 
+.calendar-download-button{
+    height:40px;
+
+    padding:
+        0 16px;
+
+    border:none;
+
+    border-radius:10px;
+
+    background:
+        var(--dark-visual);
+
+    color:
+        var(--white);
+
+    cursor:pointer;
+
+    font-size:13px;
+    font-weight:700;
+}
+
+.calendar-download-button:hover{
+    opacity:.9;
+}
+
+
+/* Hide controls while creating PNG */
+
+.calendar-exporting
+.calendar-toolbar-controls{
+    visibility:hidden;
+}
 /* ==========================================
    Calendar Toolbar
 ========================================== */
