@@ -3481,11 +3481,11 @@
     "ability": "Each night, choose a living player (different to last night): if executed tomorrow, they don't die.",
     "nightOrder": {
     "firstNight": {
-        "order": 0,
-        "text": null},
+        "order": 40,
+        "text": "The Devil's Advocate chooses a living player."},
     "otherNights": {
-        "order": 0,
-        "text": null}},
+        "order": 26,
+        "text": "The Devil's Advocate chooses a living player."}},
     "flavor": "My client, should the objection be overruled, pleads innocent by virtue of the prosecution's non-observance of statute 27.B - incorrect or misleading conjugation of a verb. The fact that nine of the jury died last night is simply prima facie, which is, as Wills vs Thule set precedent for, further reason to acquit.",
     "purpose": "ComingSoon",
     "summary": [
@@ -3517,8 +3517,8 @@
     "ability": "You & an opposing player know each other. If the good player is executed, evil wins. Good can't win if you both live.",
     "nightOrder": {
     "firstNight": {
-        "order": 0,
-        "text": null},
+        "order": 41,
+        "text": "Wake both twins. Allow eye contact. Show the good twin's character token to the Evil Twin & vice versa."},
     "otherNights": {
         "order": 0,
         "text": null}},
@@ -3553,11 +3553,11 @@
     "ability": "Each night, choose a player: if you nominate & execute them, their team loses. All players know if you choose a new player.",
     "nightOrder": {
     "firstNight": {
-        "order": 0,
-        "text": null},
+        "order": 44,
+        "text": "The Fearmonger chooses a player. :reminder: Announce that the Fearmonger has chosen a player."},
     "otherNights": {
-        "order": 0,
-        "text": null}},
+        "order": 30,
+        "text": "The Fearmonger chooses a player. If the target is different to last night, announce that the Fearmonger has chosen a player."}},
     "flavor": "Beware of gazing long into the Abyss, lest the Abyss also gaze into you.",
     "purpose": "ComingSoon",
     "summary": [
@@ -3621,11 +3621,11 @@
     "ability": "You start knowing which Outsiders are in play. If 1 died today, choose a player tonight: they die. [-1 or +1 Outsider]",
     "nightOrder": {
     "firstNight": {
-        "order": 0,
-        "text": null},
+        "order": 38,
+        "text": "Show the character tokens of all in-play Outsiders."},
     "otherNights": {
-        "order": 0,
-        "text": null}},
+        "order": 57,
+        "text": "If an Outsider died today, the Godfather chooses a player."}},
     "flavor": "Normally, it's just business. But when you insult my daughter, you insult me. And when you insult me, you insult my family. You really should be more careful - it would be a shame if you had an unfortunate accident.",
     "purpose": "ComingSoon",
     "summary": [
@@ -3661,11 +3661,11 @@
     "ability": "Each night, choose 2 players: tomorrow, the 1st player is mad that the 2nd is evil, or one or both might die.",
     "nightOrder": {
     "firstNight": {
-        "order": 0,
-        "text": null},
+        "order": 45,
+        "text": "The Harpy chooses 2 players. Put the Harpy to sleep. Wake the 1st target. Show the <b>THIS CHARACTER SELECTED YOU</b> token, the Harpy token, then point to the 2nd target."},
     "otherNights": {
-        "order": 0,
-        "text": null}},
+        "order": 31,
+        "text": "The Harpy chooses 2 players. Put the Harpy to sleep. Wake the 1st target. Show the <b>THIS CHARACTER SELECTED YOU</b> token, the Harpy token, then point to the 2nd target."}},
     "flavor": "So fair a day I never did see, nor so fowl a presence hanging over me.",
     "purpose": "ComingSoon",
     "summary": [
@@ -3697,8 +3697,8 @@
     "ability": "You think you are a good character, but you are not. The Demon knows who you are. [You neighbor the Demon]",
     "nightOrder": {
     "firstNight": {
-        "order": 0,
-        "text": null},
+        "order": 27,
+        "text": "Wake the Demon. Show the <b>THIS PLAYER IS</b> & Marionette tokens. Point to the Marionette."},
     "otherNights": {
         "order": 0,
         "text": null}},
@@ -3769,11 +3769,11 @@
     "ability": "You start knowing a secret word. The 1st good player to say this word becomes evil that night.",
     "nightOrder": {
     "firstNight": {
-        "order": 0,
-        "text": null},
+        "order": 46,
+        "text": "Show the secret word."},
     "otherNights": {
-        "order": 0,
-        "text": null}},
+        "order": 32,
+        "text": "If a good player said the secret word, wake the player. Show the <b>YOU ARE</b> info token & give a thumbs-down."}},
     "flavor": "That which issues from the heart alone, will bend the hearts of others to your own.",
     "purpose": "ComingSoon",
     "summary": [
@@ -3805,11 +3805,11 @@
     "ability": "All players keep their eyes closed when voting and the vote tally is secret. Each night, choose if you are drunk until dusk.",
     "nightOrder": {
     "firstNight": {
-        "order": 0,
-        "text": null},
+        "order": 39,
+        "text": "The Organ Grinder either nods their head yes to be drunk, or shakes their head no to be sober."},
     "otherNights": {
-        "order": 0,
-        "text": null}},
+        "order": 25,
+        "text": "The Organ Grinder either nods their head yes to be drunk, or shakes their head no to be sober."}},
     "flavor": "Round and round the handles go. The more you dance the less you know.",
     "purpose": "ComingSoon",
     "summary": [
@@ -3844,8 +3844,8 @@
         "order": 0,
         "text": null},
     "otherNights": {
-        "order": 0,
-        "text": null}},
+        "order": 29,
+        "text": "The Pit-Hag chooses a player & a character. If they chose a character that is not in play: Put the Pit-Hag to sleep. Wake the target. Show the <b>YOU ARE</b> token & their new character token."}},
     "flavor": "Round about the cauldron go; In the poison'd entrails throw; Toad, that under cold stone; Days and nights has thirty-one; Sweated venom sleeping got; Boil thou first in the charmed pot.",
     "purpose": "ComingSoon",
     "summary": [
@@ -3873,11 +3873,11 @@
     "ability": "Each night, choose a player: they are poisoned tonight and tomorrow day.",
     "nightOrder": {
     "firstNight": {
-        "order": 0,
-        "text": null},
+        "order": 33,
+        "text": "The Poisoner chooses a player."},
     "otherNights": {
-        "order": 0,
-        "text": null}},
+        "order": 17,
+        "text": "The Poisoner chooses a player."}},
     "flavor": "Add compound Alpha to compound Beta... NOT TOO MUCH!",
     "purpose": "ComingSoon",
     "summary": [
@@ -3940,8 +3940,8 @@
         "order": 0,
         "text": null},
     "otherNights": {
-        "order": 0,
-        "text": null}},
+        "order": 33,
+        "text": "If the Scarlet Woman became the Demon today, show them the <b>YOU ARE</b> token, then the Demon token."}},
     "flavor": "You have shown me the secrets of the Council of the Purple Flame. We have lain together in fire and in lust and in beastly commune, and I am forever your servant. But tonight, my dear, I am your master.",
     "purpose": "ComingSoon",
     "summary": [
@@ -3969,11 +3969,11 @@
     "ability": "Each night, you see the Grimoire. You might register as good & as a Townsfolk or Outsider, even if dead.",
     "nightOrder": {
     "firstNight": {
-        "order": 0,
-        "text": null},
+        "order": 72,
+        "text": "Show the Grimoire for as long as the Spy needs."},
     "otherNights": {
-        "order": 0,
-        "text": null}},
+        "order": 92,
+        "text": "Show the Grimoire for as long as the Spy needs."}},
     "flavor": "Any brewmaster worth their liquor, knows no concoction pours trouble quicker, than one where spies seem double.",
     "purpose": "ComingSoon",
     "summary": [
@@ -4009,11 +4009,11 @@
     "ability": "You get 3 bluffs. On the 3rd night, choose a player: they become an evil Demon of your choice. [No Demon]",
     "nightOrder": {
     "firstNight": {
-        "order": 0,
-        "text": null},
+        "order": 23,
+        "text": "Show the <b>THESE CHARACTERS ARE NOT IN PLAY</b> token. Show 3 not-in-play good character tokens."},
     "otherNights": {
-        "order": 0,
-        "text": null}},
+        "order": 34,
+        "text": "Change the Summoner reminder token to the relevant night. If it is night 3, the Summoner chooses a player & a Demon character. Put the Summoner to sleep. Wake the target. Show the <b>YOU ARE</b> and Demon tokens & give a thumbs-down."}},
     "flavor": "Hail the guardians of the north; by my intellect, thou art cut. Hail the guardians of the east; by my will, thou art dominated. Hail the guardians of the south; by that which lies beyond, the mystery is revealed. Hail the guardians of the west; a shield in the darkness",
     "purpose": "ComingSoon",
     "summary": [
@@ -4052,8 +4052,8 @@
         "order": 0,
         "text": null},
     "otherNights": {
-        "order": 0,
-        "text": null}},
+        "order": 80,
+        "text": "Announce which player is the Vizier."}},
     "flavor": "An excellent decision, as always, sire. Such a petty crime as bumping into the Bishop indeed deserves your ‘justice’ and ‘mercy’. Take a stroll in the gardens. Visit the gallery and peruse the sculptures of Von Strauf. Relax, sire. Leave everything… to me.",
     "purpose": "ComingSoon",
     "summary": [
@@ -4085,8 +4085,8 @@
     "ability": "On your 1st night, look at the Grimoire & choose a player: they are poisoned. 1 good player knows a Widow is in play.",
     "nightOrder": {
     "firstNight": {
-        "order": 0,
-        "text": null},
+        "order": 34,
+        "text": "Show the Grimoire for as long as the Widow needs. The Widow chooses a player. Put the Widow to sleep. Wake the player marked *KNOW* & show the Widow token."},
     "otherNights": {
         "order": 0,
         "text": null}},
@@ -4117,11 +4117,11 @@
     "ability": "Each night, choose a player: if they nominate tomorrow, they die. If just 3 players live, you lose this ability.",
     "nightOrder": {
     "firstNight": {
-        "order": 0,
-        "text": null},
+        "order": 42,
+        "text": "The Witch chooses a player."},
     "otherNights": {
-        "order": 0,
-        "text": null}},
+        "order": 27,
+        "text": "The Witch chooses a player."}},
     "flavor": "Three drops of goat's blood. A lock of hair, torn in anger. The name is spoken, the shadow cast. Walk left foot first down that brambled path, and don't look back.",
     "purpose": "ComingSoon",
     "summary": [
@@ -4153,11 +4153,11 @@
     "ability": "Once per game, choose to make a wish. If granted, it might have a price & leave a clue as to its nature.",
     "nightOrder": {
     "firstNight": {
-        "order": 0,
-        "text": null},
+        "order": 36,
+        "text": "Do whatever needs to be done to satisfy the Wizard's ability."},
     "otherNights": {
-        "order": 0,
-        "text": null}},
+        "order": 20,
+        "text": "Do whatever needs to be done to satisfy the Wizard's ability."}},
     "flavor": "Every man and every woman is a star. Love is the law, love under will.",
     "purpose": "ComingSoon",
     "summary": [
@@ -4185,11 +4185,11 @@
     "ability": "You may choose to open your eyes at night. You wake when other evil players do.",
     "nightOrder": {
     "firstNight": {
-        "order": 0,
-        "text": null},
+        "order": 6,
+        "text": "Wake the Wraith whenever other evil players wake."},
     "otherNights": {
-        "order": 0,
-        "text": null}},
+        "order": 4,
+        "text": "Wake the Wraith whenever other evil players wake."}},
     "flavor": "Ra'āb ina pān ṣilli ša dāri. Rigim qallu ina šūri, šītu ša šunātīka iredde, u napšutka idlul ina pān maṣṣartī dāriti.",
     "purpose": "ComingSoon",
     "summary": [
@@ -4217,11 +4217,11 @@
     "ability": "On night X, all Townsfolk are poisoned until dusk. [X Outsiders]",
     "nightOrder": {
     "firstNight": {
-        "order": 0,
-        "text": null},
+        "order": 32,
+        "text": "If X is 1, mark the Xaan with the <b>X</b> reminder token."},
     "otherNights": {
-        "order": 0,
-        "text": null}},
+        "order": 16,
+        "text": "Change the Xaan reminder token to the relevant night. If it is night X, mark the Xaan with the <b>X</b> reminder token."}},
     "flavor": "Down they fall. One by one. By two, by three, by five.",
     "purpose": "ComingSoon",
     "summary": [
@@ -4256,8 +4256,8 @@
         "order": 0,
         "text": null},
     "otherNights": {
-        "order": 0,
-        "text": null}},
+        "order": 51,
+        "text": "The Al-Hadikhia chooses 3 players. In order, wake each target. They nod or shake their head. Put them to sleep before waking the next target."}},
     "flavor": "Alsukut min dhahab.",
     "purpose": "ComingSoon",
     "summary": [
@@ -4320,8 +4320,8 @@
         "order": 0,
         "text": null},
     "otherNights": {
-        "order": 0,
-        "text": null}},
+        "order": 45,
+        "text": "The Fang Gu chooses a player. If they chose an Outsider (once only): Replace the Outsider token with the spare Fang Gu token. Put the Fang Gu to sleep. Wake the target. Show the <b>YOU ARE</b> and Fang Gu tokens & give a thumbs-down."}},
     "flavor": "Your walls and your weapons are but smoke in dreams.",
     "purpose": "ComingSoon",
     "summary": [
@@ -4384,8 +4384,8 @@
         "order": 0,
         "text": null},
     "otherNights": {
-        "order": 0,
-        "text": null}},
+        "order": 40,
+        "text": "The Imp chooses a player. If the Imp chose themselves: Replace 1 alive Minion token with a spare Imp token. Put the old Imp to sleep. Wake the new Imp. Show the <b>YOU ARE</b> token, then show the Imp token."}},
     "flavor": "We must keep our wits sharp and our sword sharper. Evil walks among us, and will stop at nothing to destroy us good, simple folk, bringing our fine town to ruin. Trust no-one. But, if you must trust someone, trust me.",
     "purpose": "ComingSoon",
     "summary": [
@@ -4413,11 +4413,11 @@
     "ability": "Each night*, choose a player: they die. [You choose which players are which Minions. -? to +? Outsiders]",
     "nightOrder": {
     "firstNight": {
-        "order": 0,
-        "text": null},
+        "order": 8,
+        "text": "The Kazali chooses which players are which Minions. Wake each target. Show the <b>YOU ARE</b> and Minion tokens & give a thumbs-down."},
     "otherNights": {
-        "order": 0,
-        "text": null}},
+        "order": 55,
+        "text": "The Kazali chooses a player."}},
     "flavor": "Gon(z)a7les6. Take cau8tun. The mech4an4ion is iNvert10d. E99ors insy6tum. Reco{7}fig.",
     "purpose": "ComingSoon",
     "summary": [
@@ -4456,8 +4456,8 @@
         "order": 0,
         "text": null},
     "otherNights": {
-        "order": 0,
-        "text": null}},
+        "order": 39,
+        "text": "A player might die."}},
     "flavor": "We are the chill wind on a winter’s day. We are the shadow in the moonless night. We are the poison in your tea and the whisper in your ear. We are everywhere.",
     "purpose": "ComingSoon",
     "summary": [
@@ -4493,11 +4493,11 @@
     "ability": "If more than 1 good player is executed, evil wins. All players know you are in play. After day 5, evil wins.",
     "nightOrder": {
     "firstNight": {
-        "order": 0,
-        "text": null},
+        "order": 79,
+        "text": "Announce that the Leviathan is in play."},
     "otherNights": {
-        "order": 0,
-        "text": null}},
+        "order": 99,
+        "text": "Change the Leviathan reminder token to the relevant day. You may announce that the Leviathan is in play."}},
     "flavor": "To the last, I grapple with thee. From Hell’s heart, I stab at thee. For hate’s sake, I spit my last breath at thee.",
     "purpose": "ComingSoon",
     "summary": [
@@ -4533,11 +4533,11 @@
     "ability": "Each night, Minions choose who babysits Lil' Monsta & \"is the Demon\". Each night*, a player might die. [+1 Minion]",
     "nightOrder": {
     "firstNight": {
-        "order": 0,
-        "text": null},
+        "order": 30,
+        "text": "Wake the Minions. They choose a player. Put the Minions to sleep. Wake the target. Show the <b>YOU ARE</b> & Lil' Monsta tokens."},
     "otherNights": {
-        "order": 0,
-        "text": null}},
+        "order": 53,
+        "text": "Wake the Minions. They choose a player. Put the Minions to sleep. Wake the target. Show the <b>YOU ARE</b> & Lil' Monsta tokens. A player might die."}},
     "flavor": "Step 1: Be cute.<br>Step 2: World domination.<br>Step 3: Bweakfast.",
     "purpose": "ComingSoon",
     "summary": [
@@ -4577,11 +4577,11 @@
     "ability": "Each night*, choose a player: they die. You start by choosing a player: they are poisoned. You die if & only if they are dead.",
     "nightOrder": {
     "firstNight": {
-        "order": 0,
-        "text": null},
+        "order": 31,
+        "text": "The Lleech chooses a player."},
     "otherNights": {
-        "order": 0,
-        "text": null}},
+        "order": 52,
+        "text": "The Lleech chooses a player."}},
     "flavor": "Tasty, tasty, tasty, tasty, tasty, tasty, tasty, tasty brai- I mean pie! Yes. Tasty pie. That’s what I meant to say.",
     "purpose": "ComingSoon",
     "summary": [
@@ -4617,11 +4617,11 @@
     "ability": "Each night*, choose a player: they die. [Evil characters are in a line. You are in the middle. +1 Minion. -? to +? Outsiders]",
     "nightOrder": {
     "firstNight": {
-        "order": 0,
-        "text": null},
+        "order": 7,
+        "text": "Wake the Lord of Typhon's neighbors. Show the <b>YOU ARE</b> and Minion tokens & give a thumbs-down."},
     "otherNights": {
-        "order": 0,
-        "text": null}},
+        "order": 48,
+        "text": "The Lord of Typhon chooses a player."}},
     "flavor": "In the shadowed and forgotten corners of the cosmos, where the stars whisper secrets to the void, lies a truth so profound that the merest glimpse of it unravels the sanity of mortal minds.",
     "purpose": "ComingSoon",
     "summary": [
@@ -4660,8 +4660,8 @@
         "order": 0,
         "text": null},
     "otherNights": {
-        "order": 0,
-        "text": null}},
+        "order": 46,
+        "text": "The No Dashii chooses a player."}},
     "flavor": "By the sins of Arnoch, I feel thy laden stench. By the curs-ed sun and her foul legion of tiny grinning gods, I corrupt thee. By the blessed night and the hidden depths of the horrid and unholy sea, I end thy squalid life upon this plane.",
     "purpose": "ComingSoon",
     "summary": [
@@ -4696,8 +4696,8 @@
         "order": 0,
         "text": null},
     "otherNights": {
-        "order": 0,
-        "text": null}},
+        "order": 50,
+        "text": "The Ojo chooses a character."}},
     "flavor": "Like a bonfire on a moonless night... I see you, mortal.",
     "purpose": "ComingSoon",
     "summary": [
@@ -4728,8 +4728,8 @@
         "order": 0,
         "text": null},
     "otherNights": {
-        "order": 0,
-        "text": null}},
+        "order": 44,
+        "text": "The Po may choose a player OR chooses 3 players if they chose no-one last night."}},
     "flavor": "Would you like a flower? I'm so lonely.",
     "purpose": "ComingSoon",
     "summary": [
@@ -4757,11 +4757,11 @@
     "ability": "Each night, choose a player: they are poisoned. The previously poisoned player dies then becomes healthy.",
     "nightOrder": {
     "firstNight": {
-        "order": 0,
-        "text": null},
+        "order": 47,
+        "text": "The Pukka chooses a player."},
     "otherNights": {
-        "order": 0,
-        "text": null}},
+        "order": 42,
+        "text": "The Pukka chooses a player. The previously poisoned player dies then becomes healthy."}},
     "flavor": "You truly have been kind welcoming me into your beautiful home. I am so sorry I accidentally scratched you. A little thing. No matter. But please, take this golden toothpick as a humble token of my regret.",
     "purpose": "ComingSoon",
     "summary": [
@@ -4792,8 +4792,8 @@
         "order": 0,
         "text": null},
     "otherNights": {
-        "order": 0,
-        "text": null}},
+        "order": 97,
+        "text": "Change the Riot reminder token to the relevant day. :reminder: If it is night 3, you may wake the Minions. Show the <b>YOU ARE</b> & Riot tokens."}},
     "flavor": "Larga vida a la revolución! Mi revolucion!",
     "purpose": "ComingSoon",
     "summary": [
@@ -4828,8 +4828,8 @@
         "order": 0,
         "text": null},
     "otherNights": {
-        "order": 0,
-        "text": null}},
+        "order": 43,
+        "text": "A previously chosen player might be resurrected. The Shabaloth chooses 2 players."}},
     "flavor": "Blarg f'taag nm mataan! No sho gumtha m'sik na yuuu. Fluuuuuuuuurg h-sikkkh.",
     "purpose": "ComingSoon",
     "summary": [
@@ -4860,8 +4860,8 @@
         "order": 0,
         "text": null},
     "otherNights": {
-        "order": 0,
-        "text": null}},
+        "order": 49,
+        "text": "The Vigormortis chooses a player. If that player is a Minion, poison a neighboring Townsfolk."}},
     "flavor": "All doors are one door. All keys are one key. All cups are one cup, but whosoever drinketh of the water that I give shall never thirst, but the water shall be in him a well springing up into everlasting life.",
     "purpose": "ComingSoon",
     "summary": [
@@ -4896,8 +4896,8 @@
         "order": 0,
         "text": null},
     "otherNights": {
-        "order": 0,
-        "text": null}},
+        "order": 47,
+        "text": "The Vortox chooses a player."}},
     "flavor": "Black is White. Right is Wrong. Left is Right. Up is Long. Down is Sight. Short is Blind. Follow me. Answers find.",
     "purpose": "ComingSoon",
     "summary": [
@@ -4933,11 +4933,11 @@
     "ability": "You start knowing a secret phrase. For each time you said it publicly today, a player might die.",
     "nightOrder": {
     "firstNight": {
-        "order": 0,
-        "text": null},
+        "order": 17,
+        "text": "Show the Yaggababble their secret phrase."},
     "otherNights": {
-        "order": 0,
-        "text": null}},
+        "order": 54,
+        "text": "For each time the Yaggababble said their phrase today, a player might die."}},
     "flavor": "Murders inside the Rue Morgue? Фальшивые новости! Hounds on the Baskerville moor? Фальшивые новости! Death while sailing the Nile? Фальшивые новости!",
     "purpose": "ComingSoon",
     "summary": [
@@ -4972,8 +4972,8 @@
         "order": 0,
         "text": null},
     "otherNights": {
-        "order": 0,
-        "text": null}},
+        "order": 41,
+        "text": "If no one died today, the Zombuul chooses a player."}},
     "flavor": "I do not. Understand. Your ways. Fellow human. Show me. The dirt. Where the holy. Lay. Sleeping. I too. Must sleep. Soon.",
     "purpose": "ComingSoon",
     "summary": [
@@ -5005,8 +5005,8 @@
     "ability": "On your 1st night, you gain a Townsfolk ability (if good), or a Minion ability (if evil)",
     "nightOrder": {
     "firstNight": {
-        "order": 0,
-        "text": null},
+        "order": 9,
+        "text": "Show the <b>YOU ARE</b> info token, then a Townsfolk or Minion token. Swap the Apprentice & Townsfolk or Minion tokens."},
     "otherNights": {
         "order": 0,
         "text": null}},
@@ -5045,11 +5045,11 @@
     "ability": "Each night, until dusk, 1) a player becomes sober, healthy & gets true info, or 2) their ability works twice. They learn which.",
     "nightOrder": {
     "firstNight": {
-        "order": 0,
-        "text": null},
+        "order": 10,
+        "text": "Choose a player. Wake them, show the <b>THIS CHARACTER SELECTED YOU</b> & Barista tokens, then give a finger signal."},
     "otherNights": {
-        "order": 0,
-        "text": null}},
+        "order": 6,
+        "text": "Choose a player. Wake them, show the <b>THIS CHARACTER SELECTED YOU</b>. & Barista tokens, then give a finger signal."}},
     "flavor": "A cup of coffee with no cream, Monsieur? I’m terribly sorry, but we’re fresh out of cream — how about with no milk?",
     "purpose": "ComingSoon",
     "summary": [
@@ -5164,8 +5164,8 @@
         "order": 0,
         "text": null},
     "otherNights": {
-        "order": 0,
-        "text": null}},
+        "order": 10,
+        "text": "The Bone Collector might choose a dead player. If necessary, wake the chosen player to use their ability."}},
     "flavor": "I collect many things. Hair. Teeth. Clothes. Fragments of poems. The dreams of lost lovers. My secret arts are not for you to know but my fee is a mere pittance. Bring me the blood of a noblewoman who died of heartbreak under a full moon, and you shall have your answers.",
     "purpose": "ComingSoon",
     "summary": [
@@ -5201,11 +5201,11 @@
     "ability": "Each night, choose a player (not yourself): their vote counts as 3 votes tomorrow.",
     "nightOrder": {
     "firstNight": {
-        "order": 0,
-        "text": null},
+        "order": 11,
+        "text": "The Bureaucrat chooses a player."},
     "otherNights": {
-        "order": 0,
-        "text": null}},
+        "order": 7,
+        "text": "The Bureaucrat chooses a player."}},
     "flavor": "Sign here please. And here. And here. Aaaaaaaaand here. This should all be sorted and tallied by the end of the day, assuming everyone's signatures are legible. We haven't had a mix-up in the paperwork for ages. Yesterday noon, if memory serves...",
     "purpose": "ComingSoon",
     "summary": [
@@ -5280,8 +5280,8 @@
         "order": 0,
         "text": null},
     "otherNights": {
-        "order": 0,
-        "text": null}},
+        "order": 5,
+        "text": "Before dawn, choose a player not marked <b>NOT ME</b>. Wake the target. Show the <b>YOU ARE</b> info token & their new character token."}},
     "flavor": "Wire α To wire β. LigHt oN. BuZZer off. GAzOinks! Arms STra1ght. FingER 2 nose. hOooLd stiLL. BoiNgo-banGo! Ha-ha-ha!",
     "purpose": "ComingSoon",
     "summary": [
@@ -5464,8 +5464,8 @@
         "order": 0,
         "text": null},
     "otherNights": {
-        "order": 0,
-        "text": null}},
+        "order": 9,
+        "text": "The Harlot chooses a living player. Put the Harlot to sleep. Wake the chosen player, show them the <b>THIS CHARACTER SELECTED YOU</b> token, then the Harlot token. If that player nods their head, wake the Harlot and show them the chosen player's character token. Both players might die."}},
     "flavor": "Enchanté, Sailor. You look like you need someone to really listen to your troubles. I'm a good listener. Very, very good.",
     "purpose": "ComingSoon",
     "summary": [
@@ -5605,11 +5605,11 @@
     "ability": "Each night, choose a player (not yourself): their vote counts negatively tomorrow.",
     "nightOrder": {
     "firstNight": {
-        "order": 0,
-        "text": null},
+        "order": 12,
+        "text": "The Thief chooses a player."},
     "otherNights": {
-        "order": 0,
-        "text": null}},
+        "order": 8,
+        "text": "The Thief chooses a player."}},
     "flavor": "I aint done nuffink. I weren't even in dat alley last night! It weren't me what stole Mayor Bruno's briefcase wiv all dem fancy dockoments innit. Besides, it was too 'eavy to carry far.",
     "purpose": "ComingSoon",
     "summary": [
@@ -5681,8 +5681,8 @@
     "ability": "Something bad might happen to whoever is most responsible for the death of a new player.",
     "nightOrder": {
     "firstNight": {
-        "order": 0,
-        "text": null},
+        "order": 2,
+        "text": "Announce which players are protected by the Angel."},
     "otherNights": {
         "order": 0,
         "text": null}},
@@ -5717,8 +5717,8 @@
     "ability": "For the first 2 minutes of each day, veteran players may not talk.",
     "nightOrder": {
     "firstNight": {
-        "order": 0,
-        "text": null},
+        "order": 3,
+        "text": "Announce which players are affected by the Buddhist."},
     "otherNights": {
         "order": 0,
         "text": null}},
@@ -5864,8 +5864,8 @@
         "order": 0,
         "text": null},
     "otherNights": {
-        "order": 0,
-        "text": null}},
+        "order": 2,
+        "text": "One at a time: Wake each player marked <b>VISITOR</b> or <b>FALSE INFO</b>. Show the <b>THIS CHARACTER SELECTED YOU</b> & Duchess tokens, then give a finger signal."}},
     "flavor": "We shall entertain between the hours of 6 and 7 precisely. Tea at 6:15. Scones at 6:45. Do not be late. Formal wear applies, as always.",
     "purpose": "ComingSoon",
     "summary": [
@@ -6153,11 +6153,11 @@
     "ability": "The Demon may choose not to attack & must do this at least once per game. Evil players get normal starting info.",
     "nightOrder": {
     "firstNight": {
-        "order": 0,
-        "text": null},
+        "order": 4,
+        "text": "Resolve Minion Info and Demon Info, even though there are fewer than 7 players."},
     "otherNights": {
-        "order": 0,
-        "text": null}},
+        "order": 3,
+        "text": "If a Demon attack could end the game, and the Demon is marked <b>FINAL NIGHT: NO ATTACK</b>, do not wake the Demon."}},
     "flavor": "It buzzes! It walks down stairs! It keeps you warm at night! It tastes like sugar! The kiddies love it! Introducing... the brand new… Warm'o-buzzy-wuzzy-walk'a'bot-thingy-contraption! Fun for all ages!",
     "purpose": "ComingSoon",
     "summary": [
@@ -6441,8 +6441,8 @@
     "ability": "Name a good character. If in play, they can only die by execution, but evil players learn which player it is.",
     "nightOrder": {
     "firstNight": {
-        "order": 0,
-        "text": null},
+        "order": 5,
+        "text": "Announce which character is stormcaught. If that character is in play, mark that player as <b>STORMCAUGHT</b>. Wake each evil player and show them the character token, then the marked player.  If not in play, wake each evil player, show them the <b>THESE CHARACTERS ARE NOT IN PLAY</b> token & the relevant character token."},
     "otherNights": {
         "order": 0,
         "text": null}},
@@ -6481,11 +6481,11 @@
     "ability": "Players don't know their character or alignment. They learn them when they die.",
     "nightOrder": {
     "firstNight": {
-        "order": 0,
-        "text": null},
+        "order": 19,
+        "text": "Skip Minion Info and Demon Info."},
     "otherNights": {
-        "order": 0,
-        "text": null}},
+        "order": 74,
+        "text": "If a player died tonight, show the <b>YOU ARE</b> info token, their character token, & give a thumb signal."}},
     "flavor": "With thunder as my voice and lightning as my blade, I, the eternal guardian, feast upon the fools who dare approach the forbidden gate. Behold, my sacred goal! To purge the beetle from the belly of the rocky earth, to ensnare it in a net of stars on the hilltop where heaven meets earth.",
     "purpose": "ComingSoon",
     "summary": [
