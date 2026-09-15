@@ -383,20 +383,14 @@ nightOrderList.addEventListener(
     "pointerdown",
     event => {
 
-        const handle =
-            event.target.closest(
-                ".night-order-drag"
-            );
+const row =
+    event.target.closest(
+        ".night-order-character"
+    );
 
-        if(!handle){
-            return;
-        }
-
-
-        const row =
-            handle.closest(
-                ".night-order-character"
-            );
+if(!row){
+    return;
+}
 
         if(!row){
             return;
@@ -469,9 +463,9 @@ nightOrderList.addEventListener(
             }px`;
 
 
-        handle.setPointerCapture(
-            event.pointerId
-        );
+row.setPointerCapture(
+    event.pointerId
+);
 
     }
 );
