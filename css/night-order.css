@@ -3,15 +3,7 @@
 ========================================== */
 
 .night-order-game{
-    overflow:hidden;
-
-    border-radius:20px;
-
-    background:white;
-
-    box-shadow:
-        0 8px 25px
-        rgba(13,24,33,.10);
+    width:100%;
 }
 
 
@@ -452,43 +444,6 @@
     font-size:14px;
 }
 
-
-/* ==========================================
-   Submit Button
-========================================== */
-
-.night-order-submit{
-    min-height:46px;
-
-    padding:
-        0 24px;
-
-    border:0;
-
-    border-radius:11px;
-
-    background:var(--purple);
-
-    color:white;
-
-    cursor:pointer;
-
-    font-size:14px;
-    font-weight:700;
-
-    transition:
-        transform .15s ease,
-        opacity .15s ease;
-}
-
-.night-order-submit:hover{
-    transform:
-        translateY(-1px);
-
-    opacity:.92;
-}
-
-
 /* ==========================================
    Responsive
 ========================================== */
@@ -509,13 +464,6 @@
 
 
 @media(max-width:650px){
-
-    .night-order-page{
-        width:
-            calc(100% - 30px);
-
-        padding-top:30px;
-    }
 
     .night-order-game-header{
         padding:
