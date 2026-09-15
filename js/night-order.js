@@ -842,6 +842,100 @@ function checkNightOrder(){
 
 }
 /* ==========================================
+   Score Color
+========================================== */
+
+function getScoreColor(score){
+
+    /*
+        1  = green
+        ~17 = yellow
+        ~33 = orange
+        50+ = red
+    */
+
+    const clampedScore =
+        Math.min(
+            Math.max(score,1),
+            50
+        );
+
+
+    const progress =
+        (clampedScore - 1) / 49;
+
+
+    let hue;
+
+
+    if(progress <= .33){
+
+        /*
+            Green -> Yellow
+            120 -> 55
+        */
+
+        const localProgress =
+            progress / .33;
+
+        hue =
+            120 -
+            (
+                65 *
+                localProgress
+            );
+
+    }
+
+    else if(progress <= .66){
+
+        /*
+            Yellow -> Orange
+            55 -> 28
+        */
+
+        const localProgress =
+            (
+                progress -
+                .33
+            ) / .33;
+
+        hue =
+            55 -
+            (
+                27 *
+                localProgress
+            );
+
+    }
+
+    else{
+
+        /*
+            Orange -> Red
+            28 -> 0
+        */
+
+        const localProgress =
+            (
+                progress -
+                .66
+            ) / .34;
+
+        hue =
+            28 -
+            (
+                28 *
+                localProgress
+            );
+
+    }
+
+
+    return `hsl(${hue}, 72%, 42%)`;
+
+}
+/* ==========================================
    Result
 ========================================== */
 
@@ -849,25 +943,68 @@ function showNightOrderResult(
     correctCount
 ){
 
-    if(
-        correctCount === puzzleSize
-    ){
+if(
+    correctCount === puzzleSize
+){
 
-        resultDisplay.innerHTML = `
-            <strong>
-                Perfect!
-            </strong>
-            All ${puzzleSize} characters
-            are in the correct position.
-        `;
+    const score =
+        attempts;
 
-        checkButton.disabled =
-            true;
 
-        return;
+    const scoreColor =
+        getScoreColor(
+            score
+        );
 
-    }
 
+    resultDisplay.innerHTML = `
+
+        <div class="night-order-solved">
+
+            <div
+                class="night-order-score"
+                style="
+                    --score-color:
+                    ${scoreColor};
+                "
+            >
+
+                <span>
+                    Score
+                </span>
+
+                <strong>
+                    ${score}
+                </strong>
+
+            </div>
+
+
+            <div class="night-order-solved-text">
+
+                <strong>
+                    Night order complete!
+                </strong>
+
+                <span>
+                    All ${puzzleSize} characters
+                    are in the correct position.
+                </span>
+
+            </div>
+
+        </div>
+
+    `;
+
+
+    checkButton.disabled =
+        true;
+
+
+    return;
+
+}
 
     resultDisplay.innerHTML = `
         <strong>
