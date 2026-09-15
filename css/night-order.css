@@ -107,6 +107,7 @@
 
 .night-sheet{
     position:relative;
+   isolation:isolate;
 
     padding:
         25px 32px 30px;
@@ -144,10 +145,17 @@
 
     z-index:0;
 }
-.night-boundary,
+
 .night-order-list{
     position:relative;
+    z-index:1;
+}
+
+.night-boundary{
+    position:relative;
     z-index:2;
+
+    background:#f6f5f8;
 }
 
 /* ==========================================
@@ -607,10 +615,13 @@
    Character Reordering
 ========================================== */
 
-.night-order-drag{
+.night-order-character{
     touch-action:none;
 }
 
+.night-order-drag{
+    pointer-events:none;
+}
 
 /* Row being moved */
 
