@@ -1633,18 +1633,23 @@
     "flavor": "The night is cold and lonely, but I have the moon, the stars, the crisp wind and the soft thud of leather boots on cobbled stone for company. Yonder, candlelight flickers behind a murky window...",
     "purpose": "The [Nightwatchman] tells one player exactly who they are.",
     "summary": [
-             "ComingSoon",
-             "ComingSoon"
+             "Once per game, at night, the [Nightwatchman] may choose a player. That player learns who the [Nightwatchman] is.",
+             "The chosen player learns that the [Nightwatchman] player is the [Nightwatchman].",
+             "The [Nightwatchman] may use their ability on the first night or any later night.",
+             "The [Nightwatchman] may choose any player, including themself, a dead player, an evil player, or a Traveller.",
+             "If there is a [Vortox] in play, the chosen player learns a different player and/or character."
              ],
     "run": {
            "Every Night": [
-                "ComingSoon",
-                "ComingSoon"
+                "Once per game, the [Nightwatchman] may choose to use their ability. If they do, they choose a player. The chosen player wakes to learn that the [Nightwatchman] player is the [Nightwatchman]."
                 ]
            },
     "examples": [
-                "ComingSoon",
-                "ComingSoon"
+                "The [Nightwatchman] chooses the [Washerwoman]. The [Washerwoman] learns that the [Nightwatchman] player is the [Nightwatchman].",
+                "The [Nightwatchman] chooses the [Al-Hadikhia]. The [Al-Hadikhia] learns that the [Nightwatchman] player is the [Nightwatchman].",
+                "The [Nightwatchman] chooses the [Savant], but there is a [Vortox] in play. The [Savant] learns that the [Clockmaker] player is the [Nightwatchman].",
+                "The [Nightwatchman] chooses the [Matron], but there is a [Vortox] in play. The [Matron] learns that the [Nightwatchman] player is the [Investigator].",
+                "The [Nightwatchman] does not use their ability on the first night. On the third night, they choose the [Fortune Teller]. The [Fortune Teller] learns that the [Nightwatchman] player is the [Nightwatchman]."
                 ],
     "tags": ["Information"],
     "edition": "Carousel"
