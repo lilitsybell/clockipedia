@@ -1103,8 +1103,190 @@ function showCompletedResult(score){
     checkButton.disabled =
         true;
 
+
+    showNightOrderShareButton();
+
 }
 
+/* ==========================================
+   Share Button
+========================================== */
+
+function showNightOrderShareButton(){
+
+    let shareButton =
+        document.getElementById(
+            "nightOrderShareButton"
+        );
+
+
+    if(shareButton){
+        return;
+    }
+
+
+    shareButton =
+        document.createElement(
+            "button"
+        );
+
+
+    shareButton.id =
+        "nightOrderShareButton";
+
+
+    shareButton.className =
+        "site-button-secondary night-order-share-button";
+
+
+    shareButton.type =
+        "button";
+
+
+    shareButton.textContent =
+        "Share Results";
+
+
+    shareButton.addEventListener(
+        "click",
+        shareNightOrderResult
+    );
+
+
+    checkButton.insertAdjacentElement(
+        "beforebegin",
+        shareButton
+    );
+
+}
+
+/* ==========================================
+   Share Results
+========================================== */
+
+async function shareNightOrderResult(){
+
+    const savedPuzzle =
+        getSavedPuzzle();
+
+
+    if(
+        !savedPuzzle ||
+        !savedPuzzle.solved
+    ){
+        return;
+    }
+
+
+    const nightName =
+        nightType === "firstNight"
+            ? "First Night"
+            : "Other Nights";
+
+
+    const url =
+        "https://clockipedia.com/games/night-order-challenge.html";
+
+
+    const text =
+`Night Order Challenge — ${formatPuzzleDate(puzzleDate)}
+${nightName}
+Solved in ${savedPuzzle.score} ${savedPuzzle.score === 1 ? "try" : "tries"}!
+
+${url}`;
+
+
+    /*
+        Use the device's native
+        share menu when available.
+    */
+
+    if(navigator.share){
+
+        try{
+
+            await navigator.share({
+                text
+            });
+
+
+            return;
+
+        }catch(error){
+
+            if(
+                error.name ===
+                "AbortError"
+            ){
+                return;
+            }
+
+        }
+
+    }
+
+
+    /*
+        Otherwise copy the result.
+    */
+
+    try{
+
+        await navigator.clipboard.writeText(
+            text
+        );
+
+
+        showNightOrderShareConfirmation();
+
+    }catch(error){
+
+        console.error(
+            "Could not share Night Order results:",
+            error
+        );
+
+    }
+
+}
+
+
+/* ==========================================
+   Share Confirmation
+========================================== */
+
+function showNightOrderShareConfirmation(){
+
+    const shareButton =
+        document.getElementById(
+            "nightOrderShareButton"
+        );
+
+
+    if(!shareButton){
+        return;
+    }
+
+
+    const originalText =
+        shareButton.textContent;
+
+
+    shareButton.textContent =
+        "Copied!";
+
+
+    setTimeout(
+        () => {
+
+            shareButton.textContent =
+                originalText;
+
+        },
+        1600
+    );
+
+}
 
 /* ==========================================
    Restore Solved State
