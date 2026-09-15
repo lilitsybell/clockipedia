@@ -1421,36 +1421,47 @@ else{
         );
 
 
-    if(
-        result &&
-        result.completed
-    ){
+if(
+    result &&
+    result.completed
+){
 
-        const score =
-            document.createElement(
-                "span"
-            );
-
-
-        score.className =
-            "whos-that-character-calendar-score";
-
-
-        score.textContent =
-            result.score;
-
-
-        score.style.color =
-            getWhosThatCharacterScoreColor(
-                result.score
-            );
-
-
-        button.appendChild(
-            score
+    const scoreColor =
+        getWhosThatCharacterScoreColor(
+            result.score
         );
 
-    }
+
+    button.classList.add(
+        "whos-that-character-calendar-completed"
+    );
+
+
+    button.style.setProperty(
+        "--score-color",
+        scoreColor
+    );
+
+
+    const score =
+        document.createElement(
+            "span"
+        );
+
+
+    score.className =
+        "whos-that-character-calendar-score";
+
+
+    score.textContent =
+        `Score: ${result.score}`;
+
+
+    button.appendChild(
+        score
+    );
+
+}
 
 
     button.addEventListener(
