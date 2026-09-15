@@ -143,7 +143,6 @@
     opacity:.55;
 }
 
-
 /* ==========================================
    Dusk / Dawn
 ========================================== */
@@ -152,41 +151,89 @@
     position:relative;
     z-index:2;
 
-    min-height:60px;
+    min-height:72px;
+
+    display:grid;
+
+    grid-template-columns:
+        100px 190px 1fr;
+
+    align-items:center;
+
+    overflow:hidden;
+
+    border:
+        1px solid
+        #e4e4e8;
+
+    border-left:
+        4px solid
+        var(--purple);
+
+    border-radius:14px;
+
+    background:
+        rgba(102,102,153,.055);
+
+    box-shadow:
+        0 2px 7px
+        rgba(13,24,33,.045);
+}
+
+.night-boundary-icon{
+    display:flex;
+    align-items:center;
+    justify-content:center;
+
+    color:var(--purple);
+
+    font-size:32px;
+    line-height:1;
+}
+
+.night-boundary-text{
+    padding:
+        0 20px 0 10px;
+
+    color:var(--purple);
+
+    font-family:
+        "Droid Sans",
+        Arial,
+        sans-serif;
+
+    font-size:18px;
+    font-weight:700;
+
+    letter-spacing:.03em;
+    text-transform:uppercase;
+}
+
+.night-boundary-description{
+    align-self:stretch;
 
     display:flex;
     align-items:center;
 
-    gap:18px;
+    padding:
+        16px 24px;
+
+    border-left:
+        1px solid
+        #e4e4e8;
+
+    color:var(--gray);
+
+    font-size:13px;
 }
 
-.night-boundary-icon{
-    width:100px;
-
-    color:var(--purple);
-
-    font-size:36px;
-    line-height:1;
-
-    text-align:center;
-}
-
-.night-boundary-text{
-    color:var(--purple);
-
-    font-family:"Droid Sans", Arial, sans-serif;
-
-    font-size:20px;
-    font-weight:700;
-
-    letter-spacing:.04em;
-    text-transform:uppercase;
+.night-boundary.dusk{
+    margin-bottom:8px;
 }
 
 .night-boundary.dawn{
-    margin-top:4px;
+    margin-top:8px;
 }
-
 
 /* ==========================================
    Character List
@@ -354,7 +401,20 @@
     line-height:1.45;
 }
 
+.night-order-character-text strong,
+.night-order-character-text b{
+    display:inline;
 
+    font:inherit;
+
+    font-weight:700;
+
+    line-height:inherit;
+}
+
+.night-order-character-text span{
+    line-height:inherit;
+}
 /* ==========================================
    Drag Handle
 ========================================== */
