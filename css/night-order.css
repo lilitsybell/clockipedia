@@ -818,3 +818,74 @@
     }
 
 }
+/* ==========================================
+   Archive Scores
+========================================== */
+
+.daily-calendar-day.night-order-calendar-completed{
+    border-color:
+        var(--score-color);
+
+    background:
+        color-mix(
+            in srgb,
+            var(--score-color) 10%,
+            white
+        );
+
+    color:
+        var(--score-color);
+}
+
+
+/* Date Number */
+
+.daily-calendar-day.night-order-calendar-completed
+.daily-calendar-day-number{
+    color:
+        var(--score-color);
+}
+
+
+/* Score */
+
+.night-order-calendar-score{
+    display:block;
+
+    margin-top:4px;
+
+    color:
+        var(--score-color);
+
+    font-size:9px;
+    font-weight:900;
+
+    line-height:1;
+
+    letter-spacing:.04em;
+
+    text-transform:uppercase;
+}
+
+
+/* ==========================================
+   Today's Completed Puzzle
+========================================== */
+
+.daily-calendar-day.today.night-order-calendar-completed
+.daily-calendar-day-number{
+    display:inline-flex;
+
+    width:26px;
+    height:26px;
+
+    align-items:center;
+    justify-content:center;
+
+    border-radius:50%;
+
+    background:
+        var(--score-color);
+
+    color:white;
+}
