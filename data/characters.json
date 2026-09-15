@@ -1707,18 +1707,22 @@
     "flavor": "Only the chosen may gaze beyond the veil. The dead are restless, and they point in silence toward the icy north.",
     "purpose": "The [Oracle] learns how many evil players are dead.",
     "summary": [
-             "ComingSoon",
-             "ComingSoon"
+             "Each night, except the first, the [Oracle] learns how many dead players are evil.",
+             "The [Oracle] counts players based on their current alignment, not their character type.",
+             "The [Oracle] counts all dead players, including players who died on previous days or nights.",
+             "The [Oracle] also counts players that die in the night before the [Oracle] wakes."
              ],
     "run": {
            "Other Nights": [
-                "ComingSoon",
-                "ComingSoon"
+                "The [Oracle] learns the number of dead players who are or register as evil."
                 ]
            },
     "examples": [
-                "ComingSoon",
-                "ComingSoon"
+                "The [Witch] and [Magician] are dead. The [Witch] is evil and the [Magician] is good, so the [Oracle] learns a 1.",
+                "The [Fearmonger], [Beggar], and [Moonchild] are dead. The [Fearmonger] and [Beggar] are both evil, so the [Oracle] learns a 2.",
+                "The [Recluse] and [Savant] are dead and both are good. The [Recluse] registers as evil to the [Oracle], so the [Oracle] learns a 1.",
+                "The [Hatter] and [Marionette] are dead. The [Oracle] learns a 1.",
+                "The [Princess] is dead. The [Oracle] learns a 0. The next night, the [Princess] turns evil and the [Mathematician] dies. The [Oracle] learns a 1."
                 ],
     "tags": ["Information", "Death"],
     "edition": "Sects and Violets"
