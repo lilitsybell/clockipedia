@@ -1,22 +1,15 @@
 console.log("night-order.js loaded");
 
+
 let characters = {};
 let puzzleCharacters = [];
+
+let attempts = 0;
 
 
 /* ==========================================
    Settings
 ========================================== */
-
-/*
-    For now we're testing Other Nights.
-
-    Later the daily puzzle will automatically
-    choose between:
-
-    "firstNight"
-    "otherNights"
-*/
 
 let nightType =
     "otherNights";
@@ -24,10 +17,17 @@ let nightType =
 const puzzleSize =
     10;
 
+const firstPuzzleDate =
+    "2026-09-01";
+
+const nightOrderStorageKey =
+    "clockipedia-night-order";
+
 
 /* ==========================================
    Elements
 ========================================== */
+
 const checkButton =
     document.getElementById(
         "check-night-order"
@@ -43,7 +43,6 @@ const resultDisplay =
         "night-order-result"
     );
 
-let attempts = 0;
 const nightOrderList =
     document.getElementById(
         "night-order-list"
@@ -53,6 +52,17 @@ const nightTypeHeading =
     document.getElementById(
         "night-type"
     );
+
+
+/* ==========================================
+   Daily Puzzle
+========================================== */
+
+let puzzleDate =
+    getTodayKey();
+
+let archiveDate =
+    new Date();
 
 
 /* ==========================================
@@ -66,6 +76,7 @@ async function loadNightOrderCharacters(){
             "/data/characters.json"
         );
 
+
     if(!response.ok){
 
         throw new Error(
@@ -74,6 +85,7 @@ async function loadNightOrderCharacters(){
 
     }
 
+
     characters =
         await response.json();
 
@@ -81,72 +93,93 @@ async function loadNightOrderCharacters(){
 
 
 /* ==========================================
-   Get Eligible Characters
+   Date Helpers
 ========================================== */
-
-function getEligibleCharacters(){
-
-    return Object.entries(
-        characters
-    )
-    .filter(
-        ([slug, character]) => {
-
-            const night =
-                character.nightOrder?.[
-                    nightType
-                ];
-
-            return (
-                night &&
-                night.order > 0
-            );
-
-        }
-    )
-    .map(
-        ([slug, character]) => ({
-
-            slug,
-
-            ...character
-
-        })
-    );
-
-}
-
-
-/* ==========================================
-   Pick Test Characters
-========================================== */
-
-/* ==========================================
-   Daily Puzzle
-========================================== */
-
-let puzzleDate =
-    getTodayKey();
-const firstPuzzleDate =
-    "2026-09-01";
-
-let archiveDate =
-    new Date();
 
 function getTodayKey(){
 
     const today =
         new Date();
 
+
     return [
         today.getFullYear(),
+
         String(
             today.getMonth() + 1
-        ).padStart(2,"0"),
+        ).padStart(
+            2,
+            "0"
+        ),
+
         String(
             today.getDate()
-        ).padStart(2,"0")
+        ).padStart(
+            2,
+            "0"
+        )
+
     ].join("-");
+
+}
+
+
+function dateToKey(date){
+
+    return [
+        date.getFullYear(),
+
+        String(
+            date.getMonth() + 1
+        ).padStart(
+            2,
+            "0"
+        ),
+
+        String(
+            date.getDate()
+        ).padStart(
+            2,
+            "0"
+        )
+
+    ].join("-");
+
+}
+
+
+function keyToDate(key){
+
+    const [
+        year,
+        month,
+        day
+    ] =
+        key
+        .split("-")
+        .map(Number);
+
+
+    return new Date(
+        year,
+        month - 1,
+        day
+    );
+
+}
+
+
+function formatPuzzleDate(key){
+
+    return keyToDate(key)
+        .toLocaleDateString(
+            "en-US",
+            {
+                month:"long",
+                day:"numeric",
+                year:"numeric"
+            }
+        );
 
 }
 
@@ -169,6 +202,7 @@ function hashString(text){
 
         hash ^=
             text.charCodeAt(i);
+
 
         hash =
             Math.imul(
@@ -309,7 +343,9 @@ function getPuzzleTeam(
         character.team;
 
 
-    if(team === "Townsfolk"){
+    if(
+        team === "Townsfolk"
+    ){
         return "townsfolk";
     }
 
@@ -346,12 +382,16 @@ function getPuzzleTeam(
     }
 
 
-    if(team === "Fabled"){
+    if(
+        team === "Fabled"
+    ){
         return "fabled";
     }
 
 
-    if(team === "Loric"){
+    if(
+        team === "Loric"
+    ){
         return "loric";
     }
 
@@ -388,20 +428,34 @@ function createTeamCounts(
 
     const ranges = {
 
-        townsfolk:[3,6],
-        outsiders:[1,2],
-        minions:[1,3],
-        demons:[1,2],
-        travellers:[1,2],
-        fabled:[0,1],
-        loric:[0,1]
+        townsfolk:
+            [3,6],
+
+        outsiders:
+            [1,2],
+
+        minions:
+            [1,3],
+
+        demons:
+            [1,2],
+
+        travellers:
+            [1,2],
+
+        fabled:
+            [0,1],
+
+        loric:
+            [0,1]
 
     };
 
 
     while(true){
 
-        const counts = {};
+        const counts =
+            {};
 
 
         for(
@@ -409,7 +463,9 @@ function createTeamCounts(
                 team,
                 range
             ]
-            of Object.entries(ranges)
+            of Object.entries(
+                ranges
+            )
         ){
 
             counts[team] =
@@ -433,11 +489,53 @@ function createTeamCounts(
             );
 
 
-        if(total === 10){
+        if(
+            total ===
+            puzzleSize
+        ){
             return counts;
         }
 
     }
+
+}
+
+
+/* ==========================================
+   Get Eligible Characters
+========================================== */
+
+function getEligibleCharacters(){
+
+    return Object.entries(
+        characters
+    )
+    .filter(
+        ([slug,character]) => {
+
+            const night =
+                character
+                .nightOrder?.[
+                    nightType
+                ];
+
+
+            return (
+                night &&
+                night.order > 0
+            );
+
+        }
+    )
+    .map(
+        ([slug,character]) => ({
+
+            slug,
+
+            ...character
+
+        })
+    );
 
 }
 
@@ -520,7 +618,9 @@ function choosePuzzleCharacters(){
             team,
             count
         ]
-        of Object.entries(counts)
+        of Object.entries(
+            counts
+        )
     ){
 
         const shuffledTeam =
@@ -540,6 +640,7 @@ function choosePuzzleCharacters(){
         );
 
     }
+
 
     puzzleCharacters =
         seededShuffle(
@@ -569,6 +670,480 @@ function choosePuzzleCharacters(){
             character =>
                 character.name
         )
+    );
+
+}
+
+
+/* ==========================================
+   Saved Puzzle Progress
+========================================== */
+
+function getSavedNightOrderData(){
+
+    try{
+
+        return JSON.parse(
+            localStorage.getItem(
+                nightOrderStorageKey
+            )
+        ) || {};
+
+    }catch(error){
+
+        console.error(
+            "Could not read Night Order save:",
+            error
+        );
+
+
+        return {};
+
+    }
+
+}
+
+
+function getSavedPuzzle(){
+
+    const savedData =
+        getSavedNightOrderData();
+
+
+    return (
+        savedData[puzzleDate] ||
+        null
+    );
+
+}
+
+
+/* ==========================================
+   Save Progress
+========================================== */
+
+function savePuzzleProgress(){
+
+    const rows =
+        [
+            ...nightOrderList
+                .querySelectorAll(
+                    ".night-order-character"
+                )
+        ];
+
+
+    if(
+        rows.length !==
+        puzzleSize
+    ){
+        return;
+    }
+
+
+    const currentOrder =
+        rows.map(
+            row =>
+                row.dataset.character
+        );
+
+
+    const savedData =
+        getSavedNightOrderData();
+
+
+    const previousSave =
+        savedData[puzzleDate] ||
+        {};
+
+
+    savedData[puzzleDate] = {
+
+        order:
+            currentOrder,
+
+        attempts:
+            previousSave.solved
+                ? previousSave.attempts
+                : attempts,
+
+        solved:
+            previousSave.solved ===
+            true,
+
+        score:
+            previousSave.solved
+                ? previousSave.score
+                : null
+
+    };
+
+
+    try{
+
+        localStorage.setItem(
+            nightOrderStorageKey,
+            JSON.stringify(
+                savedData
+            )
+        );
+
+    }catch(error){
+
+        console.error(
+            "Could not save Night Order progress:",
+            error
+        );
+
+    }
+
+}
+
+
+/* ==========================================
+   Save Completed Puzzle
+========================================== */
+
+function saveCompletedPuzzle(){
+
+    const rows =
+        [
+            ...nightOrderList
+                .querySelectorAll(
+                    ".night-order-character"
+                )
+        ];
+
+
+    const savedData =
+        getSavedNightOrderData();
+
+
+    /*
+        If this date is already solved,
+        never overwrite the original score.
+    */
+
+    if(
+        savedData[puzzleDate]?.solved
+    ){
+        return;
+    }
+
+
+    savedData[puzzleDate] = {
+
+        order:
+            rows.map(
+                row =>
+                    row.dataset.character
+            ),
+
+        attempts:
+            attempts,
+
+        solved:
+            true,
+
+        score:
+            attempts
+
+    };
+
+
+    try{
+
+        localStorage.setItem(
+            nightOrderStorageKey,
+            JSON.stringify(
+                savedData
+            )
+        );
+
+    }catch(error){
+
+        console.error(
+            "Could not save completed puzzle:",
+            error
+        );
+
+    }
+
+}
+
+
+/* ==========================================
+   Restore Progress
+========================================== */
+
+function restorePuzzleProgress(){
+
+    const savedPuzzle =
+        getSavedPuzzle();
+
+
+    attempts =
+        0;
+
+
+    if(!savedPuzzle){
+
+        attemptCount.textContent =
+            "0";
+
+        return;
+
+    }
+
+
+    attempts =
+        Number(
+            savedPuzzle.attempts
+        ) || 0;
+
+
+    attemptCount.textContent =
+        attempts;
+
+
+    if(
+        !Array.isArray(
+            savedPuzzle.order
+        ) ||
+        savedPuzzle.order.length !==
+        puzzleSize
+    ){
+        return;
+    }
+
+
+    const characterMap =
+        new Map(
+            puzzleCharacters.map(
+                character => [
+                    character.slug,
+                    character
+                ]
+            )
+        );
+
+
+    const restoredCharacters =
+        savedPuzzle.order
+        .map(
+            slug =>
+                characterMap.get(
+                    slug
+                )
+        )
+        .filter(Boolean);
+
+
+    /*
+        Only restore the saved order
+        if all ten characters still
+        belong to this exact puzzle.
+    */
+
+    if(
+        restoredCharacters.length ===
+        puzzleSize
+    ){
+
+        puzzleCharacters =
+            restoredCharacters;
+
+    }
+
+}
+
+
+/* ==========================================
+   Score Color
+========================================== */
+
+function getScoreColor(score){
+
+    const clampedScore =
+        Math.min(
+            Math.max(
+                score,
+                1
+            ),
+            50
+        );
+
+
+    const progress =
+        (
+            clampedScore -
+            1
+        ) / 49;
+
+
+    let hue;
+
+
+    if(
+        progress <= .33
+    ){
+
+        const localProgress =
+            progress / .33;
+
+
+        hue =
+            120 -
+            (
+                65 *
+                localProgress
+            );
+
+    }
+
+    else if(
+        progress <= .66
+    ){
+
+        const localProgress =
+            (
+                progress -
+                .33
+            ) / .33;
+
+
+        hue =
+            55 -
+            (
+                27 *
+                localProgress
+            );
+
+    }
+
+    else{
+
+        const localProgress =
+            (
+                progress -
+                .66
+            ) / .34;
+
+
+        hue =
+            28 -
+            (
+                28 *
+                localProgress
+            );
+
+    }
+
+
+    return (
+        `hsl(${hue}, 72%, 42%)`
+    );
+
+}
+
+
+/* ==========================================
+   Completed Result
+========================================== */
+
+function showCompletedResult(score){
+
+    const scoreColor =
+        getScoreColor(
+            score
+        );
+
+
+    resultDisplay.innerHTML = `
+
+        <div class="night-order-solved">
+
+            <div
+                class="night-order-score"
+                style="
+                    --score-color:
+                    ${scoreColor};
+                "
+            >
+
+                <span>
+                    Score
+                </span>
+
+                <strong>
+                    ${score}
+                </strong>
+
+            </div>
+
+
+            <div class="night-order-solved-text">
+
+                <strong>
+                    Night order complete!
+                </strong>
+
+                <span>
+                    All ${puzzleSize} characters
+                    are in the correct position.
+                </span>
+
+            </div>
+
+        </div>
+
+    `;
+
+
+    checkButton.disabled =
+        true;
+
+}
+
+
+/* ==========================================
+   Restore Solved State
+========================================== */
+
+function restoreSolvedState(){
+
+    const savedPuzzle =
+        getSavedPuzzle();
+
+
+    if(
+        !savedPuzzle ||
+        !savedPuzzle.solved
+    ){
+
+        checkButton.disabled =
+            false;
+
+        resultDisplay.innerHTML =
+            "";
+
+        return;
+
+    }
+
+
+    attempts =
+        Number(
+            savedPuzzle.attempts
+        ) || 0;
+
+
+    attemptCount.textContent =
+        attempts;
+
+
+    showCompletedResult(
+        savedPuzzle.score
     );
 
 }
@@ -690,11 +1265,13 @@ function createCharacterRow(
             "div"
         );
 
-row.className =
-    `night-order-character ${color}`;
 
-row.dataset.character =
-    character.slug;
+    row.className =
+        `night-order-character ${color}`;
+
+
+    row.dataset.character =
+        character.slug;
 
 
     row.innerHTML = `
@@ -779,17 +1356,36 @@ function updateNightTypeHeading(){
             : "Other Nights";
 
 }
+
+
 /* ==========================================
    Check Night Order
 ========================================== */
 
 function checkNightOrder(){
 
+    /*
+        A completed puzzle should
+        never accept more attempts.
+    */
+
+    const savedPuzzle =
+        getSavedPuzzle();
+
+
+    if(
+        savedPuzzle?.solved
+    ){
+        return;
+    }
+
+
     const currentRows =
         [
-            ...nightOrderList.querySelectorAll(
-                ".night-order-character"
-            )
+            ...nightOrderList
+                .querySelectorAll(
+                    ".night-order-character"
+                )
         ];
 
 
@@ -804,8 +1400,12 @@ function checkNightOrder(){
         [...puzzleCharacters]
         .sort(
             (a,b) =>
-                a.nightOrder[nightType].order -
-                b.nightOrder[nightType].order
+                a.nightOrder[
+                    nightType
+                ].order -
+                b.nightOrder[
+                    nightType
+                ].order
         )
         .map(
             character =>
@@ -813,7 +1413,8 @@ function checkNightOrder(){
         );
 
 
-    let correctCount = 0;
+    let correctCount =
+        0;
 
 
     currentOrder.forEach(
@@ -823,7 +1424,9 @@ function checkNightOrder(){
                 slug ===
                 correctOrder[index]
             ){
+
                 correctCount++;
+
             }
 
         }
@@ -832,199 +1435,57 @@ function checkNightOrder(){
 
     attempts++;
 
+
     attemptCount.textContent =
         attempts;
 
 
-    showNightOrderResult(
-        correctCount
-    );
+    if(
+        correctCount ===
+        puzzleSize
+    ){
 
-}
-/* ==========================================
-   Score Color
-========================================== */
+        saveCompletedPuzzle();
 
-function getScoreColor(score){
-
-    /*
-        1  = green
-        ~17 = yellow
-        ~33 = orange
-        50+ = red
-    */
-
-    const clampedScore =
-        Math.min(
-            Math.max(score,1),
-            50
+        showCompletedResult(
+            attempts
         );
 
+    }else{
 
-    const progress =
-        (clampedScore - 1) / 49;
+        resultDisplay.innerHTML = `
+            <strong>
+                ${correctCount} of ${puzzleSize}
+            </strong>
+            characters are in the correct position.
+        `;
 
 
-    let hue;
-
-
-    if(progress <= .33){
-
-        /*
-            Green -> Yellow
-            120 -> 55
-        */
-
-        const localProgress =
-            progress / .33;
-
-        hue =
-            120 -
-            (
-                65 *
-                localProgress
-            );
+        savePuzzleProgress();
 
     }
 
-    else if(progress <= .66){
-
-        /*
-            Yellow -> Orange
-            55 -> 28
-        */
-
-        const localProgress =
-            (
-                progress -
-                .33
-            ) / .33;
-
-        hue =
-            55 -
-            (
-                27 *
-                localProgress
-            );
-
-    }
-
-    else{
-
-        /*
-            Orange -> Red
-            28 -> 0
-        */
-
-        const localProgress =
-            (
-                progress -
-                .66
-            ) / .34;
-
-        hue =
-            28 -
-            (
-                28 *
-                localProgress
-            );
-
-    }
-
-
-    return `hsl(${hue}, 72%, 42%)`;
-
-}
-/* ==========================================
-   Result
-========================================== */
-
-function showNightOrderResult(
-    correctCount
-){
-
-if(
-    correctCount === puzzleSize
-){
-
-    const score =
-        attempts;
-
-
-    const scoreColor =
-        getScoreColor(
-            score
-        );
-
-
-    resultDisplay.innerHTML = `
-
-        <div class="night-order-solved">
-
-            <div
-                class="night-order-score"
-                style="
-                    --score-color:
-                    ${scoreColor};
-                "
-            >
-
-                <span>
-                    Score
-                </span>
-
-                <strong>
-                    ${score}
-                </strong>
-
-            </div>
-
-
-            <div class="night-order-solved-text">
-
-                <strong>
-                    Night order complete!
-                </strong>
-
-                <span>
-                    All ${puzzleSize} characters
-                    are in the correct position.
-                </span>
-
-            </div>
-
-        </div>
-
-    `;
-
-
-    checkButton.disabled =
-        true;
-
-
-    return;
-
 }
 
-    resultDisplay.innerHTML = `
-        <strong>
-            ${correctCount} of ${puzzleSize}
-        </strong>
-        characters are in the correct position.
-    `;
 
-}
 /* ==========================================
    Pointer Reordering
 ========================================== */
 
-let draggedRow = null;
-let dragPlaceholder = null;
+let draggedRow =
+    null;
 
-let dragOffsetY = 0;
-let dragStartX = 0;
+let dragPlaceholder =
+    null;
 
-let originalWidth = 0;
+let dragOffsetY =
+    0;
+
+let dragStartX =
+    0;
+
+let originalWidth =
+    0;
 
 
 /* ==========================================
@@ -1035,14 +1496,23 @@ nightOrderList.addEventListener(
     "pointerdown",
     event => {
 
-const row =
-    event.target.closest(
-        ".night-order-character"
-    );
+        /*
+            Don't allow completed
+            puzzles to be changed.
+        */
 
-if(!row){
-    return;
-}
+        if(
+            getSavedPuzzle()?.solved
+        ){
+            return;
+        }
+
+
+        const row =
+            event.target.closest(
+                ".night-order-character"
+            );
+
 
         if(!row){
             return;
@@ -1059,26 +1529,29 @@ if(!row){
         draggedRow =
             row;
 
+
         dragOffsetY =
             event.clientY -
             rect.top;
 
+
         dragStartX =
             rect.left;
+
 
         originalWidth =
             rect.width;
 
-
-        /* Create placeholder */
 
         dragPlaceholder =
             document.createElement(
                 "div"
             );
 
+
         dragPlaceholder.className =
             "night-order-placeholder";
+
 
         dragPlaceholder.style.height =
             `${rect.height}px`;
@@ -1089,8 +1562,6 @@ if(!row){
             row
         );
 
-
-        /* Lift actual row */
 
         document.body.appendChild(
             row
@@ -1105,8 +1576,10 @@ if(!row){
         row.style.width =
             `${originalWidth}px`;
 
+
         row.style.left =
             `${dragStartX}px`;
+
 
         row.style.top =
             `${
@@ -1115,9 +1588,9 @@ if(!row){
             }px`;
 
 
-row.setPointerCapture(
-    event.pointerId
-);
+        row.setPointerCapture(
+            event.pointerId
+        );
 
     }
 );
@@ -1231,8 +1704,10 @@ document.addEventListener(
         draggedRow.style.width =
             "";
 
+
         draggedRow.style.left =
             "";
+
 
         draggedRow.style.top =
             "";
@@ -1241,11 +1716,22 @@ document.addEventListener(
         draggedRow =
             null;
 
+
         dragPlaceholder =
             null;
 
+
+        /*
+            Save the new card order
+            immediately.
+        */
+
+        savePuzzleProgress();
+
     }
 );
+
+
 /* ==========================================
    Puzzle Archive
 ========================================== */
@@ -1302,61 +1788,6 @@ const puzzleDetails =
 
 
 /* ==========================================
-   Date Helpers
-========================================== */
-
-function dateToKey(date){
-
-    return [
-        date.getFullYear(),
-        String(
-            date.getMonth() + 1
-        ).padStart(2,"0"),
-        String(
-            date.getDate()
-        ).padStart(2,"0")
-    ].join("-");
-
-}
-
-
-function keyToDate(key){
-
-    const [
-        year,
-        month,
-        day
-    ] =
-        key
-        .split("-")
-        .map(Number);
-
-
-    return new Date(
-        year,
-        month - 1,
-        day
-    );
-
-}
-
-
-function formatPuzzleDate(key){
-
-    return keyToDate(key)
-        .toLocaleDateString(
-            "en-US",
-            {
-                month:"long",
-                day:"numeric",
-                year:"numeric"
-            }
-        );
-
-}
-
-
-/* ==========================================
    Puzzle Details
 ========================================== */
 
@@ -1374,8 +1805,11 @@ function updatePuzzleDetails(){
 
 
     puzzleDetails.innerHTML = `
+
         <strong>
-            ${formatPuzzleDate(puzzleDate)}
+            ${formatPuzzleDate(
+                puzzleDate
+            )}
         </strong>
 
         <span class="daily-game-meta-divider">
@@ -1385,6 +1819,7 @@ function updatePuzzleDetails(){
         <span>
             ${nightName}
         </span>
+
     `;
 
 }
@@ -1401,9 +1836,14 @@ function openArchive(){
             puzzleDate
         );
 
-    archiveDate.setDate(1);
+
+    archiveDate.setDate(
+        1
+    );
+
 
     renderArchive();
+
 
     archiveModal.hidden =
         false;
@@ -1427,6 +1867,7 @@ function renderArchive(){
 
     const year =
         archiveDate.getFullYear();
+
 
     const month =
         archiveDate.getMonth();
@@ -1465,8 +1906,8 @@ function renderArchive(){
 
 
     /*
-        Blank cells before the
-        first day of the month.
+        Blank cells before
+        the first day.
     */
 
     for(
@@ -1480,6 +1921,7 @@ function renderArchive(){
                 "div"
             );
 
+
         archiveCalendar.appendChild(
             blank
         );
@@ -1488,7 +1930,7 @@ function renderArchive(){
 
 
     /*
-        Calendar days
+        Calendar days.
     */
 
     for(
@@ -1548,6 +1990,7 @@ function renderArchive(){
                 "no-puzzle"
             );
 
+
             button.disabled =
                 true;
 
@@ -1558,6 +2001,7 @@ function renderArchive(){
             button.classList.add(
                 "future"
             );
+
 
             button.disabled =
                 true;
@@ -1665,41 +2109,48 @@ function updateArchiveNavigation(){
 }
 
 
+/* ==========================================
+   Load Puzzle Date
+========================================== */
+
 function loadPuzzleDate(key){
 
     puzzleDate =
         key;
 
 
-    /* Reset game state */
-
-    attempts =
-        0;
-
-    attemptCount.textContent =
-        "0";
-
-    resultDisplay.innerHTML =
-        "";
-
-    checkButton.disabled =
-        false;
-
-
-    /* Generate this date's puzzle */
+    /*
+        Start from the deterministic
+        puzzle for this date.
+    */
 
     choosePuzzleCharacters();
 
+
+    /*
+        Then restore this player's
+        saved state for this date.
+    */
+
+    restorePuzzleProgress();
+
+
     updateNightTypeHeading();
+
 
     renderNightOrder();
 
+
     updatePuzzleDetails();
+
+
+    restoreSolvedState();
 
 
     closeArchive();
 
 }
+
 
 /* ==========================================
    Archive Events
@@ -1731,6 +2182,7 @@ archivePreviousMonth.addEventListener(
             archiveDate.getMonth() - 1
         );
 
+
         renderArchive();
 
     }
@@ -1744,6 +2196,7 @@ archiveNextMonth.addEventListener(
         archiveDate.setMonth(
             archiveDate.getMonth() + 1
         );
+
 
         renderArchive();
 
@@ -1761,6 +2214,8 @@ archiveToday.addEventListener(
 
     }
 );
+
+
 /* ==========================================
    Initialize
 ========================================== */
@@ -1771,13 +2226,33 @@ async function initializeNightOrder(){
 
         await loadNightOrderCharacters();
 
-choosePuzzleCharacters();
 
-updateNightTypeHeading();
+        /*
+            Generate today's official
+            deterministic puzzle.
+        */
 
-renderNightOrder();
+        choosePuzzleCharacters();
 
-updatePuzzleDetails();
+
+        /*
+            Restore this player's
+            progress if they have any.
+        */
+
+        restorePuzzleProgress();
+
+
+        updateNightTypeHeading();
+
+
+        renderNightOrder();
+
+
+        updatePuzzleDetails();
+
+
+        restoreSolvedState();
 
 
         console.log(
@@ -1796,8 +2271,15 @@ updatePuzzleDetails();
 
 }
 
+
+/* ==========================================
+   Events
+========================================== */
+
 checkButton.addEventListener(
     "click",
     checkNightOrder
 );
+
+
 initializeNightOrder();
