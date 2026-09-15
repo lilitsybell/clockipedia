@@ -141,6 +141,13 @@
         );
 
     opacity:.55;
+
+    z-index:0;
+}
+.night-boundary,
+.night-order-list{
+    position:relative;
+    z-index:2;
 }
 
 /* ==========================================
