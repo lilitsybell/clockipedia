@@ -1743,7 +1743,7 @@
     "flavor": "Distrust all in whom the impulse to punish is powerful.",
     "purpose": "The [Pacifist] saves good players from execution.",
     "summary": [
-             "When a good player is executed, the Storyteller chooses if that player lives or dies.",
+             "When a good player is executed, the Storyteller chooses whether that player lives or dies.",
              "Evil players cannot be saved from execution by the [Pacifist].",
              "A player saved by the [Pacifist] was still executed, even though they did not die.",
              "The [Pacifist] may save multiple good players throughout the game."
@@ -1757,8 +1757,9 @@
                 "The [Gambler] is executed. The Storyteller chooses for the [Pacifist] to protect the [Gambler], so the [Gambler] does not die.",
                 "The [Minstrel] is executed. The Storyteller chooses not to protect the [Minstrel], so the [Minstrel] dies.",
                 "The [Assassin] is executed and dies. The [Pacifist] cannot protect the [Assassin] because the [Assassin] is evil.",
-                "The good [Goblin] is executed. The Storyteller chooses for the [Pacifist] to protect the [Goblin], so the [Goblin] does not die.",
-                "The evil [Innkeeper] is executed and dies. The [Pacifist] cannot protect the [Innkeeper] because the [Innkeeper] is evil."
+                "The good [Harpy] is executed. The Storyteller chooses for the [Pacifist] to protect the [Harpy], so the [Harpy] does not die.",
+                "The evil [Cult Leader] is executed and dies. The [Pacifist] cannot protect the [Cult Leader] because the [Cult Leader] is evil.",
+                "The [Sage] is executed. The [Sage] is the [Lycanthrope]'s <b>Faux Paw</b> and registers as evil, so they cannot be protected by the [Pacifist] and die."
                 ],
     "tags": ["Mechanical", "Death"],
     "edition": "Bad Moon Rising"
