@@ -622,7 +622,7 @@
 ========================================== */
 
 .night-order-controls{
-    min-height:90px;
+    min-height:120px;
 
     padding:20px 32px;
 
@@ -636,15 +636,80 @@
         1px solid
         var(--border);
 
-    background:white;
+    background:
+        linear-gradient(
+            135deg,
+            rgba(102,102,153,.055),
+            rgba(102,102,153,.015)
+        );
 }
+
+
+/* ==========================================
+   Current Result
+========================================== */
 
 .night-order-result{
-    color:#666;
+    min-width:210px;
+    min-height:82px;
 
-    font-size:14px;
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+    justify-content:center;
+
+    padding:14px 28px;
+
+    border-radius:13px;
+
+    background:var(--purple);
+
+    color:white;
+
+    text-align:center;
 }
 
+.night-order-result-score{
+    display:block;
+
+    font-family:
+        "Droid Sans",
+        Arial,
+        sans-serif;
+
+    font-size:34px;
+    font-weight:700;
+    line-height:1;
+}
+
+.night-order-result-label{
+    display:block;
+
+    margin-top:6px;
+
+    font-size:10px;
+    font-weight:900;
+
+    line-height:1;
+
+    letter-spacing:.08em;
+
+    text-transform:uppercase;
+}
+
+
+/* ==========================================
+   Control Buttons
+========================================== */
+
+.night-order-control-buttons{
+    margin-left:auto;
+
+    display:flex;
+    align-items:center;
+
+    gap:10px;
+}
 
 /* ==========================================
    Final Score
