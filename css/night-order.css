@@ -51,7 +51,10 @@
 
     color:var(--black);
 
-    font-family:"Droid Sans", Arial, sans-serif;
+    font-family:
+        "Droid Sans",
+        Arial,
+        sans-serif;
 
     font-size:26px;
 }
@@ -107,13 +110,13 @@
 
 .night-sheet{
     position:relative;
-   isolation:isolate;
+
+    isolation:isolate;
 
     padding:
         25px 32px 30px;
 
-    background:
-        #fafafa;
+    background:#fafafa;
 }
 
 
@@ -146,17 +149,6 @@
     z-index:0;
 }
 
-.night-order-list{
-    position:relative;
-    z-index:1;
-}
-
-.night-boundary{
-    position:relative;
-    z-index:2;
-
-    background:#f6f5f8;
-}
 
 /* ==========================================
    Dusk / Dawn
@@ -164,6 +156,7 @@
 
 .night-boundary{
     position:relative;
+
     z-index:2;
 
     min-height:72px;
@@ -194,6 +187,13 @@
         0 2px 7px
         rgba(13,24,33,.045);
 }
+
+
+/*
+    Covers the vertical night line
+    underneath Dusk and Dawn.
+*/
+
 .night-boundary::before{
     content:"";
 
@@ -211,6 +211,15 @@
 
     pointer-events:none;
 }
+
+.night-boundary-icon,
+.night-boundary-text,
+.night-boundary-description{
+    position:relative;
+
+    z-index:1;
+}
+
 .night-boundary-icon{
     display:flex;
     align-items:center;
@@ -266,12 +275,14 @@
     margin-top:8px;
 }
 
+
 /* ==========================================
    Character List
 ========================================== */
 
 .night-order-list{
     position:relative;
+
     z-index:2;
 
     display:flex;
@@ -315,6 +326,8 @@
         rgba(13,24,33,.045);
 
     cursor:grab;
+
+    touch-action:none;
 
     transition:
         transform .15s ease,
@@ -360,6 +373,7 @@
 
 .night-order-character-art img{
     position:relative;
+
     z-index:2;
 
     width:82px;
@@ -389,7 +403,10 @@
 
     color:var(--black);
 
-    font-family:"Droid Sans", Arial, sans-serif;
+    font-family:
+        "Droid Sans",
+        Arial,
+        sans-serif;
 
     font-size:18px;
     line-height:1.15;
@@ -453,6 +470,8 @@
 .night-order-character-text span{
     line-height:inherit;
 }
+
+
 /* ==========================================
    Drag Handle
 ========================================== */
@@ -471,6 +490,7 @@
     letter-spacing:-2px;
 
     user-select:none;
+    pointer-events:none;
 }
 
 .night-order-character:hover
@@ -515,6 +535,89 @@
 
 
 /* ==========================================
+   Character Reordering
+========================================== */
+
+.night-order-character.is-dragging{
+    position:fixed;
+
+    z-index:10000;
+
+    margin:0;
+
+    pointer-events:none;
+
+    cursor:grabbing;
+
+    border-color:
+        var(--purple);
+
+    box-shadow:
+        0 16px 38px
+        rgba(13,24,33,.20);
+
+    transform:
+        scale(1.015);
+
+    opacity:.96;
+}
+
+
+/* Drop Position */
+
+.night-order-placeholder{
+    position:relative;
+
+    margin:0;
+
+    border-radius:14px;
+
+    background:
+        rgba(102,102,153,.055);
+}
+
+.night-order-placeholder::before{
+    content:"";
+
+    position:absolute;
+
+    left:8px;
+    right:8px;
+    top:50%;
+
+    height:3px;
+
+    border-radius:999px;
+
+    background:
+        var(--purple);
+
+    transform:
+        translateY(-50%);
+}
+
+.night-order-placeholder::after{
+    content:"";
+
+    position:absolute;
+
+    left:4px;
+    top:50%;
+
+    width:9px;
+    height:9px;
+
+    border-radius:50%;
+
+    background:
+        var(--purple);
+
+    transform:
+        translateY(-50%);
+}
+
+
+/* ==========================================
    Game Controls
 ========================================== */
 
@@ -541,6 +644,90 @@
 
     font-size:14px;
 }
+
+
+/* ==========================================
+   Final Score
+========================================== */
+
+.night-order-solved{
+    display:flex;
+    align-items:center;
+
+    gap:16px;
+}
+
+.night-order-score{
+    width:62px;
+    height:62px;
+
+    flex-shrink:0;
+
+    display:flex;
+    flex-direction:column;
+
+    align-items:center;
+    justify-content:center;
+
+    border:
+        2px solid
+        var(--score-color);
+
+    border-radius:14px;
+
+    background:
+        color-mix(
+            in srgb,
+            var(--score-color) 10%,
+            white
+        );
+
+    color:
+        var(--score-color);
+}
+
+.night-order-score span{
+    margin-bottom:1px;
+
+    font-size:8px;
+    font-weight:900;
+
+    letter-spacing:.08em;
+
+    text-transform:uppercase;
+}
+
+.night-order-score strong{
+    font-family:
+        "Droid Sans",
+        Arial,
+        sans-serif;
+
+    font-size:27px;
+    font-weight:700;
+
+    line-height:1;
+}
+
+.night-order-solved-text{
+    display:flex;
+    flex-direction:column;
+
+    gap:2px;
+}
+
+.night-order-solved-text strong{
+    color:var(--black);
+
+    font-size:15px;
+}
+
+.night-order-solved-text span{
+    color:var(--gray);
+
+    font-size:13px;
+}
+
 
 /* ==========================================
    Responsive
@@ -617,15 +804,12 @@
         grid-row:1;
     }
 
-    .night-boundary-icon{
-        width:72px;
-    }
-
     .night-order-controls{
         padding:
             18px 20px;
 
         align-items:stretch;
+
         flex-direction:column;
     }
 
@@ -633,188 +817,4 @@
         width:100%;
     }
 
-}
-/* ==========================================
-   Character Reordering
-========================================== */
-
-.night-order-character{
-    touch-action:none;
-}
-
-.night-order-drag{
-    pointer-events:none;
-}
-
-/* Row being moved */
-
-.night-order-character.is-dragging{
-    position:fixed;
-
-    z-index:10000;
-
-    margin:0;
-
-    pointer-events:none;
-
-    cursor:grabbing;
-
-    border-color:
-        var(--purple);
-
-    box-shadow:
-        0 16px 38px
-        rgba(13,24,33,.20);
-
-    transform:
-        scale(1.015);
-
-    opacity:.96;
-}
-
-
-/* Drop position */
-
-.night-order-placeholder{
-    position:relative;
-
-    margin:0;
-
-    border-radius:14px;
-
-    background:
-        rgba(102,102,153,.055);
-}
-
-.night-order-placeholder::before{
-    content:"";
-
-    position:absolute;
-
-    left:8px;
-    right:8px;
-    top:50%;
-
-    height:3px;
-
-    border-radius:999px;
-
-    background:
-        var(--purple);
-
-    transform:
-        translateY(-50%);
-}
-
-.night-order-placeholder::after{
-    content:"";
-
-    position:absolute;
-
-    left:4px;
-    top:50%;
-
-    width:9px;
-    height:9px;
-
-    border-radius:50%;
-
-    background:
-        var(--purple);
-
-    transform:
-        translateY(-50%);
-}
-.night-boundary-icon,
-.night-boundary-text,
-.night-boundary-description{
-    position:relative;
-    z-index:1;
-}
-/* ==========================================
-   Final Score
-========================================== */
-
-.night-order-solved{
-    display:flex;
-    align-items:center;
-
-    gap:16px;
-}
-
-
-.night-order-score{
-    width:62px;
-    height:62px;
-
-    flex-shrink:0;
-
-    display:flex;
-    flex-direction:column;
-
-    align-items:center;
-    justify-content:center;
-
-    border:
-        2px solid
-        var(--score-color);
-
-    border-radius:14px;
-
-    background:
-        color-mix(
-            in srgb,
-            var(--score-color) 10%,
-            white
-        );
-
-    color:
-        var(--score-color);
-}
-
-
-.night-order-score span{
-    margin-bottom:1px;
-
-    font-size:8px;
-    font-weight:900;
-
-    letter-spacing:.08em;
-
-    text-transform:uppercase;
-}
-
-
-.night-order-score strong{
-    font-family:
-        "Droid Sans",
-        Arial,
-        sans-serif;
-
-    font-size:27px;
-    font-weight:700;
-
-    line-height:1;
-}
-
-
-.night-order-solved-text{
-    display:flex;
-    flex-direction:column;
-
-    gap:2px;
-}
-
-
-.night-order-solved-text strong{
-    color:var(--black);
-
-    font-size:15px;
-}
-
-
-.night-order-solved-text span{
-    color:var(--gray);
-
-    font-size:13px;
 }
