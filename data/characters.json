@@ -4049,11 +4049,11 @@
     "ability": "All players know you are the Vizier. You cannot die during the day. If good voted, you may choose to execute immediately.",
     "nightOrder": {
     "firstNight": {
-        "order": 0,
-        "text": null},
-    "otherNights": {
         "order": 80,
-        "text": "Announce which player is the Vizier."}},
+        "text": "Announce which player is the Vizier."},
+    "otherNights": {
+        "order": 0,
+        "text": null}},
     "flavor": "An excellent decision, as always, sire. Such a petty crime as bumping into the Bishop indeed deserves your ‘justice’ and ‘mercy’. Take a stroll in the gardens. Visit the gallery and peruse the sculptures of Von Strauf. Relax, sire. Leave everything… to me.",
     "purpose": "ComingSoon",
     "summary": [
