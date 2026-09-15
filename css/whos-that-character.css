@@ -72,16 +72,86 @@
    Archive Scores
 ========================================== */
 
-.whos-that-character-calendar-score{
-    margin:auto 0;
+.daily-calendar-day.whos-that-character-calendar-completed{
+    border:
+        2px solid
+        var(--score-color);
 
-    font-family:"Droid Sans",Arial,sans-serif;
+    background:
+        color-mix(
+            in srgb,
+            var(--score-color) 10%,
+            white
+        );
 
-    font-size:25px;
+    color:
+        var(--score-color);
+}
+
+
+/* Date Number */
+
+.daily-calendar-day.whos-that-character-calendar-completed
+.daily-calendar-day-number{
+    color:
+        var(--score-color);
+
+    font-size:17px;
     font-weight:900;
+}
+
+
+/* Tries */
+
+.whos-that-character-calendar-score{
+    display:block;
+
+    margin-top:7px;
+
+    color:
+        var(--score-color);
+
+    font-family:
+        "Roboto",
+        Arial,
+        sans-serif;
+
+    font-size:11px;
+    font-weight:900;
+
     line-height:1;
 
+    letter-spacing:.05em;
+
+    text-transform:uppercase;
+
     pointer-events:none;
+}
+
+
+/* ==========================================
+   Today's Completed Puzzle
+========================================== */
+
+.daily-calendar-day.today.whos-that-character-calendar-completed
+.daily-calendar-day-number{
+    display:inline-flex;
+
+    width:34px;
+    height:34px;
+
+    align-items:center;
+    justify-content:center;
+
+    border-radius:50%;
+
+    background:
+        var(--score-color);
+
+    color:white;
+
+    font-size:16px;
+    font-weight:900;
 }
 /* ==========================================
    Main Game Card
