@@ -43,6 +43,15 @@
 .calendar-toolbar-controls{
     visibility:hidden;
 }
+
+/* Remove Today highlight from PNG */
+
+.calendar-exporting
+.calendar-day.today
+.calendar-day-number{
+    background:transparent;
+    color:var(--dark-text);
+}
 /* ==========================================
    Calendar Toolbar
 ========================================== */
