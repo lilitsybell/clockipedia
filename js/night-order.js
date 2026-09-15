@@ -127,7 +127,11 @@ function getEligibleCharacters(){
 
 let puzzleDate =
     getTodayKey();
+const firstPuzzleDate =
+    "2026-09-01";
 
+let archiveDate =
+    new Date();
 
 function getTodayKey(){
 
@@ -1105,7 +1109,521 @@ document.addEventListener(
 
     }
 );
+/* ==========================================
+   Puzzle Archive
+========================================== */
 
+const archiveButton =
+    document.getElementById(
+        "archiveButton"
+    );
+
+const archiveModal =
+    document.getElementById(
+        "archiveModal"
+    );
+
+const archiveBackdrop =
+    document.getElementById(
+        "archiveBackdrop"
+    );
+
+const archiveClose =
+    document.getElementById(
+        "archiveClose"
+    );
+
+const archivePreviousMonth =
+    document.getElementById(
+        "archivePreviousMonth"
+    );
+
+const archiveNextMonth =
+    document.getElementById(
+        "archiveNextMonth"
+    );
+
+const archiveMonth =
+    document.getElementById(
+        "archiveMonth"
+    );
+
+const archiveCalendar =
+    document.getElementById(
+        "archiveCalendar"
+    );
+
+const archiveToday =
+    document.getElementById(
+        "archiveToday"
+    );
+
+const puzzleDetails =
+    document.getElementById(
+        "puzzleDetails"
+    );
+
+
+/* ==========================================
+   Date Helpers
+========================================== */
+
+function dateToKey(date){
+
+    return [
+        date.getFullYear(),
+        String(
+            date.getMonth() + 1
+        ).padStart(2,"0"),
+        String(
+            date.getDate()
+        ).padStart(2,"0")
+    ].join("-");
+
+}
+
+
+function keyToDate(key){
+
+    const [
+        year,
+        month,
+        day
+    ] =
+        key
+        .split("-")
+        .map(Number);
+
+
+    return new Date(
+        year,
+        month - 1,
+        day
+    );
+
+}
+
+
+function formatPuzzleDate(key){
+
+    return keyToDate(key)
+        .toLocaleDateString(
+            "en-US",
+            {
+                month:"long",
+                day:"numeric",
+                year:"numeric"
+            }
+        );
+
+}
+
+
+/* ==========================================
+   Puzzle Details
+========================================== */
+
+function updatePuzzleDetails(){
+
+    if(!puzzleDetails){
+        return;
+    }
+
+
+    const nightName =
+        nightType === "firstNight"
+            ? "First Night"
+            : "Other Nights";
+
+
+    puzzleDetails.innerHTML = `
+        <strong>
+            ${formatPuzzleDate(puzzleDate)}
+        </strong>
+
+        <span class="daily-game-meta-divider">
+            •
+        </span>
+
+        <span>
+            ${nightName}
+        </span>
+    `;
+
+}
+
+
+/* ==========================================
+   Open / Close Archive
+========================================== */
+
+function openArchive(){
+
+    archiveDate =
+        keyToDate(
+            puzzleDate
+        );
+
+    archiveDate.setDate(1);
+
+    renderArchive();
+
+    archiveModal.hidden =
+        false;
+
+}
+
+
+function closeArchive(){
+
+    archiveModal.hidden =
+        true;
+
+}
+
+
+/* ==========================================
+   Render Archive
+========================================== */
+
+function renderArchive(){
+
+    const year =
+        archiveDate.getFullYear();
+
+    const month =
+        archiveDate.getMonth();
+
+
+    archiveMonth.textContent =
+        archiveDate
+        .toLocaleDateString(
+            "en-US",
+            {
+                month:"long",
+                year:"numeric"
+            }
+        );
+
+
+    archiveCalendar.innerHTML =
+        "";
+
+
+    const firstDay =
+        new Date(
+            year,
+            month,
+            1
+        );
+
+
+    const daysInMonth =
+        new Date(
+            year,
+            month + 1,
+            0
+        )
+        .getDate();
+
+
+    /*
+        Blank cells before the
+        first day of the month.
+    */
+
+    for(
+        let i = 0;
+        i < firstDay.getDay();
+        i++
+    ){
+
+        const blank =
+            document.createElement(
+                "div"
+            );
+
+        archiveCalendar.appendChild(
+            blank
+        );
+
+    }
+
+
+    /*
+        Calendar days
+    */
+
+    for(
+        let day = 1;
+        day <= daysInMonth;
+        day++
+    ){
+
+        const date =
+            new Date(
+                year,
+                month,
+                day
+            );
+
+
+        const key =
+            dateToKey(
+                date
+            );
+
+
+        const button =
+            document.createElement(
+                "button"
+            );
+
+
+        button.type =
+            "button";
+
+
+        button.className =
+            "daily-calendar-day";
+
+
+        button.innerHTML = `
+            <span class="daily-calendar-day-number">
+                ${day}
+            </span>
+        `;
+
+
+        const beforeFirstPuzzle =
+            key <
+            firstPuzzleDate;
+
+
+        const future =
+            key >
+            getTodayKey();
+
+
+        if(beforeFirstPuzzle){
+
+            button.classList.add(
+                "no-puzzle"
+            );
+
+            button.disabled =
+                true;
+
+        }
+
+        else if(future){
+
+            button.classList.add(
+                "future"
+            );
+
+            button.disabled =
+                true;
+
+        }
+
+        else{
+
+            button.classList.add(
+                "has-puzzle"
+            );
+
+
+            button.addEventListener(
+                "click",
+                () => {
+
+                    loadPuzzleDate(
+                        key
+                    );
+
+                }
+            );
+
+        }
+
+
+        if(
+            key ===
+            getTodayKey()
+        ){
+
+            button.classList.add(
+                "today"
+            );
+
+        }
+
+
+        if(
+            key ===
+            puzzleDate
+        ){
+
+            button.classList.add(
+                "current-puzzle"
+            );
+
+        }
+
+
+        archiveCalendar.appendChild(
+            button
+        );
+
+    }
+
+
+    updateArchiveNavigation();
+
+}
+
+
+/* ==========================================
+   Archive Navigation
+========================================== */
+
+function updateArchiveNavigation(){
+
+    const firstDate =
+        keyToDate(
+            firstPuzzleDate
+        );
+
+
+    const firstMonth =
+        new Date(
+            firstDate.getFullYear(),
+            firstDate.getMonth(),
+            1
+        );
+
+
+    const today =
+        new Date();
+
+
+    const currentMonth =
+        new Date(
+            today.getFullYear(),
+            today.getMonth(),
+            1
+        );
+
+
+    archivePreviousMonth.disabled =
+        archiveDate <=
+        firstMonth;
+
+
+    archiveNextMonth.disabled =
+        archiveDate >=
+        currentMonth;
+
+}
+
+
+function loadPuzzleDate(key){
+
+    puzzleDate =
+        key;
+
+
+    /* Reset game state */
+
+    attempts =
+        0;
+
+    attemptCount.textContent =
+        "0";
+
+    resultDisplay.innerHTML =
+        "";
+
+    checkButton.disabled =
+        false;
+
+
+    /* Generate this date's puzzle */
+
+    choosePuzzleCharacters();
+
+    updateNightTypeHeading();
+
+    renderNightOrder();
+
+    updatePuzzleDetails();
+
+
+    closeArchive();
+
+}
+
+/* ==========================================
+   Archive Events
+========================================== */
+
+archiveButton.addEventListener(
+    "click",
+    openArchive
+);
+
+
+archiveClose.addEventListener(
+    "click",
+    closeArchive
+);
+
+
+archiveBackdrop.addEventListener(
+    "click",
+    closeArchive
+);
+
+
+archivePreviousMonth.addEventListener(
+    "click",
+    () => {
+
+        archiveDate.setMonth(
+            archiveDate.getMonth() - 1
+        );
+
+        renderArchive();
+
+    }
+);
+
+
+archiveNextMonth.addEventListener(
+    "click",
+    () => {
+
+        archiveDate.setMonth(
+            archiveDate.getMonth() + 1
+        );
+
+        renderArchive();
+
+    }
+);
+
+
+archiveToday.addEventListener(
+    "click",
+    () => {
+
+        loadPuzzleDate(
+            getTodayKey()
+        );
+
+    }
+);
 /* ==========================================
    Initialize
 ========================================== */
@@ -1116,11 +1634,13 @@ async function initializeNightOrder(){
 
         await loadNightOrderCharacters();
 
-        choosePuzzleCharacters();
+choosePuzzleCharacters();
 
-        updateNightTypeHeading();
+updateNightTypeHeading();
 
-        renderNightOrder();
+renderNightOrder();
+
+updatePuzzleDetails();
 
 
         console.log(
