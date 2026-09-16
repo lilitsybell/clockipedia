@@ -16,9 +16,10 @@
     "purpose": "The [Acrobat] dies when they find a drunk or poisoned player.",
     "summary": ["Each night except the first, the [Acrobat] chooses a player. If the chosen player is sober and healthy, nothing happens. If the player is drunk or poisoned, the [Acrobat] dies.",
                 "If the [Acrobat] is drunk or poisoned, they cannot die to their own ability.",
-                "The [Acrobat] may choose any player, dead or alive, even themself.",
+                "The [Acrobat] may choose any player, dead or alive, including themself.",
                 "If the chosen player is sober and healthy at the time the [Acrobat] picks, but becomes drunk or poisoned later in the night, the [Acrobat] dies.",
-                "The [Acrobat] does not learn if the player they selected was drunk, or poisoned, or both.",
+                "If the chosen player is drunk or poisoned, but becomes sober and healthy before the end of the night, the [Acrobat] still dies.",
+                "The [Acrobat] does not learn whether the player they chose was drunk, poisoned, or both.",
                 "The [Drunk] registers as drunk to the [Acrobat]."],
     "run": {
            "Other Nights": ["Each night except the first, the [Acrobat] chooses a player. If the player is drunk or poisoned at any point during the night, the [Acrobat] dies."]
@@ -49,23 +50,23 @@
     "purpose": "The [Alchemist] has a Minion ability. In general, Minion abilities are much more powerful than normal Townsfolk abilities.",
     "summary": [
              "The Storyteller chooses which Minion ability the [Alchemist] has.",
-             "The [Alchemist] can have the ability of a Minion that is in-play or out-of-play.",
-             "If the [Alchemist]’s Minion ability modifies game setup, this happens.",
-             "The [Alchemist] is a Townsfolk and registers as such.",
+             "The [Alchemist] can have the ability of a Minion that is in play or out of play.",
+             "The [Alchemist] has the Minion ability, but does not become that Minion character.",
+             "If the [Alchemist]'s Minion ability modifies game setup, this happens.",
              "The [Alchemist] learns which ability they have on the first night.",
-             "The [Alchemist] does not wake for Minion information. This includes but is not limited to learning who the Demon is, learning if they were chosen by the [Preacher], and learning if there is a [Damsel] in play.",
+             "The [Alchemist] does not wake for normal Minion information, such as learning who the Demon is, learning if they were chosen by the [Preacher], or learning if there is a [Damsel] in play.",
              "The Storyteller may tell the [Alchemist] to choose differently. This must happen as soon as the [Alchemist] makes their choice."
              ],
     "run": {
            "Setup": [
-                "If the [Alchemist]’s Minion ability adds or removes characters, modify the setup.",
+                "If the [Alchemist]'s Minion ability adds or removes characters, modify the setup.",
                 "[Baron]: Add 2 Outsiders.",
                 "[Godfather]: Add or subtract 1 Outsider.",
                 "[Summoner]: Do not put a Demon in.",
                 "[Xaan]: Add or subtract any number of Outsiders."
                 ],
            "Anytime": [
-                "Any time the Minion who has the same ability as the [Alchemist] would act, the [Alchemist] acts. This includes announcements, passive abilities, and active abilities."
+                "The [Alchemist]'s ability functions at the same time and in the same way as the Minion ability they have, including announcements, passive abilities, and active abilities."
                 ],
            "First Night": [
                 "During the [Alchemist]'s first night, the Storyteller tells them which Minion ability they have."
@@ -96,19 +97,19 @@
         "order": 0,
         "text": null}},
     "flavor": "I am here because of you, and you are here because of me.",
-    "purpose": "If the [Alsaahir] guesses the evil team correctly, they win.",
+    "purpose": "If the [Alsaahir] correctly identifies all Minions and Demons, their team wins.",
     "summary": [
              "The [Alsaahir] must guess publicly and during the day. The [Alsaahir] does not need to use their ability if they choose not to.",
              "The [Alsaahir] may only make one guess each day. They may not change their mind after a guess.",
              "Any player may pretend to be the [Alsaahir].",
-             "The [Alsaahir] must guess all current Minions and Demons correctly to win. This includes good, evil, dead, and alive players.",
-             "The [Alsaahir] does not need to guess evil Townsfolk, Outsiders, or Travellers.",
+             "The [Alsaahir] must correctly guess all players who are currently Minions and Demons. This includes Minions and Demons who are good or evil, alive or dead.",
+             "The [Alsaahir] only needs to guess Minions and Demons. Evil Townsfolk, Outsiders, and Travellers do not need to be guessed.",
              "If the [Alsaahir] guesses correctly, the game immediately ends and the [Alsaahir]'s team wins.",
              "If a player registers as both a Minion and a Demon (such as [Legion] or [Lil' Monsta]), the [Alsaahir] must guess them as a Demon."
              ],
     "run": {
            "Every Day": [
-                "Each day, the [Alsaahir] may publicly attempt a guess at who the current Minions and Demon(s) are.",
+                "Each day, the [Alsaahir] may publicly guess which players are Minions and which are Demons.",
                 "If the [Alsaahir] guesses correctly, their team immediately wins.",
                 "If the [Alsaahir] guesses incorrectly, nothing happens."
                 ]},
@@ -137,22 +138,23 @@
     "purpose": "The [Amnesiac] has a powerful ability, but does not know what it is.",
     "summary": [
              "The Storyteller chooses what ability the [Amnesiac] has. It should be unique and more powerful than a regular Townsfolk ability.",
+             "The [Amnesiac]'s ability may cause them to wake, make choices, learn information, or have a passive effect, depending on the ability created by the Storyteller.",
              "The [Amnesiac] may privately visit the Storyteller once per day to guess what their ability is. The Storyteller tells them how hot (correct) or cold (wrong) they are.",
-             "The guess can be anything the [Amnesiac] wants to ask, and as specific or vague as they want."
+             "The [Amnesiac]'s guess may be as specific or vague as they want."
              ],
     "run": {
            "Setup": [
                 "During setup, the Storyteller decides which ability the [Amnesiac] has."
                 ],
            "Anytime": [
-                "The Storyteller does whatever they need to do to satisfy the [Amnesiac] ability. That might be waking them at night to learn information or make a choice or it could be a passive effect."
+                "The Storyteller does whatever they need to do to satisfy the [Amnesiac]'s ability. This might include waking them at night to learn information or make a choice, or giving them a passive effect."
                 ],
            "Every Day": [
-                "Every day, the [Amnesiac] may privately make a guess as to what their ability is or is about. They may ask any question they'd like, as long as it can be answered via \"hot\", \"cold\" or somewhere inbetween. The Storyteller should not give the [Amnesiac] any hints or clues to what their ability is. If the [Amnesiac] guesses correctly, the Storyteller gives them a \"bingo\"."
+                "Each day, the [Amnesiac] may privately guess what their ability is or what it does. The Storyteller tells them how accurate their guess is using \"hot\", \"cold\", or somewhere in between. The Storyteller should not give the [Amnesiac] additional hints or clues about their ability. If the [Amnesiac] guesses correctly, the Storyteller tells them \"bingo\"."
                 ]
            },
     "examples": [
-                "The [Amnesiac] has the ability \"Each night, choose a player. They cannot die tonight or tomorrow.\". The [Amnesiac] wakes and chooses a player. That day, the [Amnesiac] asks if they have a protective ability. The Storyteller gives them a \"hot\".",
+                "The [Amnesiac] has the ability \"Each night, choose a player. They cannot die tonight or tomorrow.\" The [Amnesiac] wakes and chooses a player. That day, the [Amnesiac] asks if they have a protective ability. The Storyteller gives them a \"hot\".",
                 "The [Amnesiac] has the ability \"Each night, learn which characters selected you.\" The first night, the [Village Idiot] chooses the [Amnesiac]. The [Amnesiac] is woken and shown the [Village Idiot] token. The [Amnesiac] asks if they learn which characters chose them at night and the Storyteller gives them a \"bingo\"."
                 ],
     "tags": [],
@@ -174,18 +176,19 @@
     "flavor": "Mon Dieu! C'est lumineux! My work, she is... how you say... Magnifique! Dieu est révélé! Oui.",
     "purpose": "The [Artist] can learn the answer to any one question.",
     "summary": [
-             "The [Artist] may ask any question they'd like. It does not need to be related to the game.",
+             "The [Artist] may use their ability once per game.",
+             "The [Artist] may ask any yes-or-no question. It does not need to be related to the game.",
              "The Storyteller may only answer with \"yes\", \"no\", or \"I don't know\".",
              "The question must be asked in private and during the day."
              ],
     "run": {
            "Every Day": [
-                "During any time of the day, the [Artist] may ask the Storyteller for a private chat. The [Artist] may then ask any one \"yes\" or \"no\" question. The Storyteller must answer honestly to the best of their ability with \"yes\", \"no\", or \"I don't know\"."
+                "Once per game, the [Artist] may privately ask the Storyteller any yes-or-no question. The Storyteller answers honestly to the best of their ability with \"yes\", \"no\", or \"I don't know\"."
                 ]
            },
     "examples": [
                 "The [Artist] asks if the Demon is on the top half of the Grimoire. The Storyteller specifies which players that includes, then answers honestly with \"yes\".",
-                "The [Artist] asks if any Minion is a Dodgers fan. The [Storyteller] answers honestly with \"I don't know\"."
+                "The [Artist] asks if any Minion is a Dodgers fan. The Storyteller answers honestly with \"I don't know\"."
                 ],
     "tags": ["Information"],
     "edition": "Sects and Violets"
@@ -204,27 +207,29 @@
         "order": 0,
         "text": null}},
     "flavor": "Let us disperse with unnecessary conjecture and silly paranoia. There is a perfectly rational explanation for everything. Yes, a teacup may indeed be orbiting the planet, too small to see, but I shall drink my tea from the very real china in my very real hands.",
-    "purpose": "The [Atheist] knows exactly who to execute to win.",
+    "purpose": "The [Atheist] knows that there is no evil team and that executing the Storyteller will win the game.",
     "summary": [
-             "If the [Atheist] is in play on setup, there are no evil players. This includes evil Townsfolk, Outsiders, and Travellers.",
-             "The Storyteller may break any rule of the game they wish. This includes but is not limited to: having duplicate in play characters, lying about information, killing players when they wouldn't have died otherwise, and changing players' characters.",
+             "If the [Atheist] is in play during setup, there are no evil players, including evil Townsfolk, evil Outsiders, and evil Travellers.",
+             "The Storyteller may break any game rule. This includes having duplicate in-play characters, giving incorrect information, killing players who would not normally die, and changing players' characters.",
              "The good team wins if the Storyteller is executed. The Storyteller nomination works like a normal player nomination. A 50% majority is required and may be lifted. If an [Atheist] or [Atheist] ability is created during the game, the good team wins if they execute either the Storyteller or the last living Demon.",
              "The good team loses if the Storyteller is not executed. If an [Atheist] or [Atheist] ability is created during the game, the good team loses if they execute neither the Storyteller nor the last living Demon."
              ],
     "run": {
            "Setup": [
-                "There are no evil players. This includes Minions, Demons, evil Townsfolk, evil Outsiders, and evil Travellers.",
+                "There are no evil characters or players during setup. This includes Minions, Demons, evil Townsfolk, evil Outsiders, and evil Travellers.",
                 "The Storyteller may choose to use any number of Townsfolk and Outsiders to equal the player count and may use duplicate tokens."
                 ],
            "Anytime": [
                 "The Storyteller may choose to create any information they wish to simulate an evil team. They may kill players at any time as they see fit."
                 ],
            "End of Game": [
-                "The game ends if the Storyteller is executed. The good team wins, no matter which team the [Atheist] is on."
+                "If the [Atheist] was in play during setup, the good team wins if the Storyteller is executed.",
+                "If an [Atheist] or [Atheist] ability was created during the game, the good team wins if either the Storyteller or the last living Demon is executed.",
+                "The good team loses if neither of their valid win conditions occurs."
                 ]
            },
     "examples": [
-                "The [Fortune Teller] receives a yes on the [Lycanthrope] and the [Artist], even though neither is the Red Herring. The [Lycanthrope] fails to kill the [Moonchild], and the Storyteller kills the [Banshee] instead, announcing the [Banshee] has died. When only three players are alive, the [Tinker] is executed and the good team loses.",
+                "The [Fortune Teller] receives a yes on the [Lycanthrope] and the [Artist], even though neither is the Red Herring. The [Lycanthrope] fails to kill the [Moonchild], and the Storyteller kills the [Banshee] instead, announcing that the [Banshee] has died. When only three players are alive, the [Tinker] is executed and the good team loses.",
                 "On the second night, the [Pit-Hag] changes the [Minstrel] into the [Atheist]. The Demon kills the [Nightwatchman] and the Storyteller kills the [Steward]. That day, the new [Atheist] nominates the Storyteller and the Storyteller is executed. The good team wins and the evil team loses."
                 ],
     "tags": ["Mechanical"],
@@ -242,22 +247,23 @@
         "text": "Point to any player."},
     "otherNights": {
         "order": 85,
-        "text": "Point to a player with a different character type to the previously shown player."}},
+        "text": "Point to a player with a different character type from the previously shown player."}},
     "flavor": "More heat! Higher! Higher! Più alto! Ahhh... it is so beautiful from up here, don't you agree? Can you see the children fishing by the river, under the willow? Can you see the glint of the sun on the circus tent-poles? What's this? An old man, alone, passed out in the vineyard? Less heat! Lower! Lower! Vai più in basso!",
     "purpose": "The [Balloonist] learns players of different character types.",
     "summary": [
-             "Each night, the [Balloonist] learns the name of a player that is a different character type than the name they learned last night.",
+             "Each night, the [Balloonist] learns the name of a player whose character type is different from the player they learned the previous night.",
              "The [Balloonist] only learns the name of the player. The [Balloonist] must figure out which character type the player is to use their information.",
-             "The [Balloonist] may learn any player, alive or dead, good or evil, even a Traveller. The [Balloonist] may learn a player they have already learned previously.",
-             "During Setup, the Storyteller may choose to add an Outsider to the game. If they do, the Outsider replaces a Townsfolk."
+             "The [Balloonist] may learn any player, alive or dead, good or evil, even a Traveller.",
+             "The [Balloonist] may learn a player they have learned before.",
+             "The [Balloonist] may learn the same player on consecutive nights if that player changed character type between those nights.",
+             "If an Outsider is added during setup, they replace a Townsfolk."
              ],
     "run": {
            "Setup": [
-                "The Storyteller may choose to add an Outsider to the game, but does not have to. If they do, the Outsider replaces a Townsfolk."
+                "The Storyteller may choose to add an Outsider to the game. If an Outsider is added, they replace a Townsfolk."
                 ],
            "Every Night": [
-                "Every night, the [Balloonist] learns a player. This player must be a different character type to the player they learned the night before.",
-                "If the player was a different character type the night before, the [Balloonist] may learn the same player again this night."
+                "The [Balloonist] learns a player. This player must be a different character type from the player they learned the night before."
                 ]
            },
     "examples": [
@@ -284,26 +290,26 @@
     "flavor": "Gorm do shúile, dearg do ghruaig, ní bheidh sé i bhfad, is a mbeidh tú san uaigh.",
     "purpose": "The [Banshee] becomes very powerful when killed by the Demon, nominating and voting twice while dead.",
     "summary": [
-             "If the Demon kills the [Banshee], the [Banshee] is able to nominate twice per day, and their vote may count as two votes.",
+             "If the Demon kills the [Banshee], the [Banshee] may nominate twice per day and vote twice per nomination.",
              "If the Demon kills the [Banshee], the Storyteller announces the [Banshee] has died immediately.",
-             "The Storyteller does not announce which player the Banshee is.",
-             "While dead, the [Banshee] may vote once by raising one hand, or twice by raising two hands.",
-             "The [Banshee] does not need a vote token to vote if they were killed by the Demon.",
-             "While alive, the [Banshee] nominates and votes as normal. If the [Banshee] dies, and it wasn't due to the Demon, the [Banshee] does not gain this ability."
+             "The Storyteller does not announce which player the [Banshee] is.",
+             "While dead, the [Banshee] may vote once by raising one hand, or twice by raising 2 hands.",
+             "The [Banshee] does not need a vote token to vote if they gained their ability.",
+             "While alive, the [Banshee] nominates and votes as normal.",
+             "If the [Banshee] dies for any reason other than being killed by the Demon, they do not gain this ability.",
+             "The [Banshee] may only vote once during a Traveller's exile, whether or not they have their ability."
              ],
     "run": {
            "Anytime": [
                 "If the Demon kills the [Banshee], the Storyteller announces the [Banshee] has died. The [Banshee] may now nominate twice per day and vote twice per nomination."
                 ],
            "Every Day": [
-                "If the dead [Banshee] has their ability and wishes to nominate, the Storyteller allows this. The [Banshee] may do this twice per day.",
-                "If the dead [Banshee] has their ability, they may vote on any nomination without using a dead vote. They may raise one hand to cast one vote, or two hands to cast two votes. There is no limit to which nominations they may vote on.",
-                "The [Banshee] may only vote once during the exile of a Traveller, no matter if they have their ability or not."
+                "If the dead [Banshee] has their ability and wishes to nominate, the Storyteller allows this. The [Banshee] may do this twice per day."
                 ]
            },
     "examples": [
                 "The [Banshee] is killed by the [Imp]. The Storyteller immediately announces the [Banshee] has died, but does not say which player. The next day, the dead [Banshee] nominates the [Virgin], who has their ability. The [Banshee] is executed, and nominates the [Widow] the next day.",
-                "There are two Outsiders and a [Xaan] in play. On the second night, the [Lord of Typhon] kills the [Banshee]. No announcement is made. A few days later, the [Banshee] attempts to nominate the [Lord of Typhon]. The Storyteller reminds them that dead players cannot nominate.",
+                "There are 2 Outsiders and a [Xaan] in play. On the second night, the [Lord of Typhon] kills the [Banshee]. No announcement is made. A few days later, the [Banshee] attempts to nominate the [Lord of Typhon]. The Storyteller reminds them that dead players cannot nominate.",
                 "The [Godfather] kills the [Banshee]. There is no announcement and the [Banshee] does not use their ability.",
                 "The [Ojo] kills the [Banshee]. The Storyteller announces the [Banshee] has died. The next night, the [Poisoner] chooses the dead [Banshee]. That day, the [Banshee] tries to vote twice, but the Storyteller only counts one vote and removes the [Banshee]'s vote token.",
                 "The Demon with the [Boffin] [Golem] ability nominates the [Banshee] and the [Banshee] dies. The Storyteller announces the [Banshee] has died."
@@ -325,32 +331,32 @@
         "order": 88,
         "text": "If the player marked <b>KNOW</b> died today or tonight, point to the new player marked <b>KNOW</b>."}},
     "flavor": "Alone, I walk these streets, paved with the sick stench of corruption. Its thickness worms its way into my nostrils, unbidden, burning with revulsion. And anticipation. The illness of this wretched place grows each night. And I... I am the cure.",
-    "purpose": "The [Bounty Hunter] learns exactly who the evil players are, but also creates an evil Townsfolk.",
+    "purpose": "The [Bounty Hunter] learns who evil players are, but causes a Townsfolk to become evil.",
     "summary": [
              "The [Bounty Hunter] starts knowing the name of one evil player. When that player dies, they learn a new name that night.",
-             "It does not matter how the player dies. As long as the player dies and is dead, the [Bounty Hunter] learns a new name.",
+             "It does not matter how the learned player dies. If they die, the [Bounty Hunter] learns another evil player that night.",
              "The [Bounty Hunter] only learns the player's name, not their character or character type.",
-             "The [Bounty Hunter] can learn any character type, even Travellers, as long as the player is evil.",
+             "The [Bounty Hunter] may learn any evil player, including an evil Townsfolk, Outsider, Minion, Demon, Traveller, or themself.",
              "The [Bounty Hunter] cannot learn the same name twice.",
              "If there are no more evil players to learn, the [Bounty Hunter] learns a \"0\".",
              "During setup, one Townsfolk player is evil. That player knows they are evil."
              ],
     "run": {
            "Setup": [
-                "One Townsfolk is made evil, even if the [Bounty Hunter] is drunk or poisoned. The Townsfolk becomes the evil version of their character (eg. evil [Seamstress]).",
+                "One Townsfolk becomes evil, even if the [Bounty Hunter] is drunk or poisoned."
                 "The evil player learns that they are evil on the first night, even if they are drunk, poisoned, or dead."
                 ],
            "First Night": [
                 "The [Bounty Hunter] learns any evil player."
                 ],
-           "Every Night": [
-                "If the player the [Bounty Hunter] learned has died, the [Bounty Hunter] learns the name of another evil player."
+           "Other Nights": [
+                "If the player most recently learned by the [Bounty Hunter] died, the [Bounty Hunter] learns another evil player."
                 ]
            },
     "examples": [
-                "During setup, the Storyteller chooses the [Monk] will be evil. On the first night, the [Monk] wakes to learn they are the evil [Monk]. The [Bounty Hunter] wakes and learns the [Mezepheles] player.",
-                "On the third day, the [Zombuul], who was learned by the [Bounty Hunter], is executed and dies. The [Bounty Hunter] learns the [Baron] player that night.",
-                "The [Bounty Hunter] neighbors the [No Dashii]. The Storyteller chooses for the [Balloonist] to be evil, and tells the [Balloonist] they are the evil [Balloonist]. The poisoned [Bounty Hunter] learns the [Barber] player."
+                "During setup, the Storyteller chooses the [Monk] to be evil. On the first night, the [Monk] wakes to learn they are the evil [Monk]. The [Bounty Hunter] wakes and learns the [Mezepheles].",
+                "On the third day, the [Zombuul], who was learned by the [Bounty Hunter], is executed and dies. The [Bounty Hunter] learns the [Baron] that night.",
+                "The [Bounty Hunter] neighbors the [No Dashii]. The Storyteller chooses the [Balloonist] to be evil and tells the [Balloonist] that they are evil. The poisoned [Bounty Hunter] learns the [Barber]."
                 ],
     "tags": ["Information", "Death"],
     "edition": "Carousel"
@@ -414,11 +420,11 @@
              "The [Chambermaid] is not told which player(s) woke, only how many of them woke.",
              "The [Chambermaid] only detects players that woke due to their own ability. If they woke due to a different ability, such as being told they were chosen by the [Cerenovus] or [Exorcist], or to be told there is a [Widow] in play, the [Chambermaid] does not learn this.",
              "The [Chambermaid] only detects players that woke that night. If they woke a previous night, or will wake on a future night, the [Chambermaid] does not learn this.",
-             "If a player is drunk or poisoned the [Chambermaid] still learns that they woke up."
+             "If a player is drunk or poisoned, the [Chambermaid] still learns that they woke up."
              ],
     "run": {
            "Every Night": [
-                "Each night, if there are 2 or more alive players for the [Chambermaid] to choose, the [Chambermaid] wakes and chooses two players. They learn a 0, 1, or 2, correlating with how many of the chosen players woke due to their own ability that night."
+                "Each night, if there are 2 or more alive players for the [Chambermaid] to choose, the [Chambermaid] wakes and chooses 2 players. They learn a 0, 1, or 2, correlating with how many of the chosen players woke due to their own ability that night."
                 ]
            },
     "examples": [
@@ -446,10 +452,10 @@
     "flavor": "This evening's reservations seem odd. Never before has Mrs Mayweather kept company with that scamp from Hudson Lane. Yet, tonight, they have a table for two. Strange.",
     "purpose": "The [Chef] learns how many evil players are sitting next to each other.",
     "summary": [
-             "A pair of evil players is when two evil players are sitting next to each other.",
+             "A pair of evil players is when 2 evil players are sitting next to each other.",
              "The [Chef] counts spaces between evil players. If there were three evil players in a line, the [Chef] would receive a 2.",
              "If there are multiple separate pairs, the [Chef] learns all pairs, not just the longest line of evils.",
-             "The [Spy] and the [Recluse] register to the [Chef] twice, once for each of their neighbors. If a [Spy] or [Recluse] is sitting between two evil players, the [Chef] could receive a 0, 1, or 2.",
+             "The [Spy] and the [Recluse] register to the [Chef] twice, once for each of their neighbors. If a [Spy] or [Recluse] is sitting between 2 evil players, the [Chef] could receive a 0, 1, or 2.",
              "Travellers count as players and register to the [Chef]. This may affect the [Chef]'s number, so they should keep in mind when and where Travellers are sitting."
              ],
     "run": {
@@ -458,7 +464,7 @@
                 ]
            },
     "examples": [
-                "The [Lord of Typhon] is sitting between two Minions. The [Chef] learns a 2.",
+                "The [Lord of Typhon] is sitting between 2 Minions. The [Chef] learns a 2.",
                 "The [Spy] is sitting next to the [Xaan]. Across from them, the [Po] is sitting next to the [Goblin]. The [Chef] could learn a 1 or a 2.",
                 "No evil players are next to each other. The [Chef] learns a 0.",
                 "The good [Gangster] is sitting between the [Poisoner] and the [Widow]. The [Chef] learns a 0."
@@ -520,8 +526,8 @@
     "flavor": "Do not disturb me. The tick must continue, for the circle is a symbol of life and contains all things - all answers - in its divine machinery. I must work.",
     "purpose": "The [Clockmaker] learns how close the Demon is to their closest Minion.",
     "summary": [
-             "On the [Clockmaker]'s first night, they learn how many steps the Demon is to its nearest Minion, clockwise, or counterclockwise.",
-             "The number of steps is equal to the number of players between the Demon and its nearest Minion +1."
+             "On the [Clockmaker]'s first night, they learn how many steps the Demon is to its nearest Minion, clockwise or counterclockwise.",
+             "The number of steps is equal to the number of players between the Demon and its nearest Minion plus 1."
              ],
     "run": {
            "First Night": [
@@ -550,7 +556,7 @@
         "order": 18,
         "text": "The Courtier might choose a character."}},
     "flavor": "I am more afraid of an army of one hundred sheep led by a lion than an army of one hundred lions led by a sheep.",
-    "purpose": "The [Courtier] may drunk any character, even if they don't know which player it is.",
+    "purpose": "The [Courtier] may make any character drunk, even if they don't know which player it is.",
     "summary": [
              "Once per game, the [Courtier] can choose one character to immediately become drunk for 3 nights and 3 days.",
              "The [Courtier] chooses a character, not a player.",
@@ -571,7 +577,7 @@
            },
     "examples": [
                 "The [Poisoner] chooses to poison the [Courtier]. The same night, the [Courtier] chooses the [Lleech]. The [Lleech] stays sober and kills the [Nightwatchman] that night and the [Barber] the next night.",
-                "The [Courtier] chooses the [Scarlet Woman]. Two days later, the [Slayer] kills the [Lord of Typhon]. The game ends and the good team wins.",
+                "The [Courtier] chooses the [Scarlet Woman]. 2 days later, the [Slayer] kills the [Lord of Typhon]. The game ends and the good team wins.",
                 "On the first night, the [Courtier] chooses the [Godfather]. The [Godfather] incorrectly learns that the [Golem], [Sweetheart], and [Drunk] are in play. On the 2nd day, the [Sweetheart] dies. The drunk [Godfather] chooses a player to kill, but the player does not die."
                 ],
     "tags": ["Droisoning"],
@@ -610,7 +616,7 @@
     "examples": [
                 "The good [Cult Leader] is sitting between the [Widow] and the [Fearmonger]. The [Cult Leader] becomes evil and learns this.",
                 "The good [Cult Leader] declares they are forming a cult. All players raise their hand except for the [Zealot]. The Storyteller announces a cult was not formed and goes on with the day.",
-                "The good [Cult Leader] is sitting between the [Farmer] and the [Sage], who is the faux paw to the [Lycanthrope]. Even though, both neighbors are good, the [Sage] registers as evil and the [Cult Leader] becomes evil and learns this.",
+                "The good [Cult Leader] is sitting between the [Farmer] and the [Sage], who is the faux paw to the [Lycanthrope]. Even though both neighbors are good, the [Sage] registers as evil and the [Cult Leader] becomes evil and learns this.",
                 "The evil [Cult Leader] is sitting between the [Virgin] and the [Xaan]. The [Cult Leader] becomes good and learns this.",
                 "The evil [Cult Leader] declares they are forming a cult. All players raise their hand except for the [Recluse] and the [Harpy]. The [Recluse] registers as evil, and the Storyteller declares that a cult was formed and that the evil team has won."
                 ],
@@ -631,7 +637,7 @@
         "order": 79,
         "text": "The Dreamer points to a player. Show 1 good & 1 evil character token, 1 of which is their character."}},
     "flavor": "I remember the Clockmaker. The sky was red and it was raining fractal triangles. There was a smell of violets and a bubbling sound. A woman with glowing eyes and a scraggly beard was hissing at the sky. Then, I awoke.",
-    "purpose": "The [Dreamer] learns two characters a player might be.",
+    "purpose": "The [Dreamer] learns 2 characters a player might be.",
     "summary": [
              "Each night, the [Dreamer] chooses a player and learns a good character and an evil character, one of which is that player's character.",
              "The [Dreamer] cannot choose themself or a Traveller.",
@@ -713,10 +719,10 @@
                 ]
            },
     "examples": [
-                "On the first night, the [Courtier] chooses the [Ojo]. The Demon is already the [Ojo], so nothing happens.",
-                "On the third night, the [Courtier] chooses the [Lleech]. The Storyteller wakes the [Vortox] and tells them they are now the [Lleech]. That night, the new [Lleech] chooses a host and a player to kill.",
-                "On the first night, the [Courtier] chooses [Psychopath] and [Wizard]. There is already a [Psychopath] and [Vizier] in play. The [Vizier] learns they are now the [Wizard].",
-                "On the second night, the [Courtier] chooses [Assassin], [Marionette], and [Godfather]. There are only 2 Minions in play, but there is a [Lord of Typhon] on the script. The Storyteller chooses to leave the [Marionette] as the [Marionette], and tells the [Boomdandy] they are now the [Godfather]. The new [Godfather] learns which Outsiders are in play that night."
+                "On the first night, the [Engineer] chooses the [Ojo]. The Demon is already the [Ojo], so nothing happens.",
+                "On the third night, the [Engineer] chooses the [Lleech]. The Storyteller wakes the [Vortox] and tells them they are now the [Lleech]. That night, the new [Lleech] chooses a host and a player to kill.",
+                "On the first night, the [Engineer] chooses [Psychopath] and [Wizard]. There is already a [Psychopath] and [Vizier] in play. The [Vizier] learns they are now the [Wizard].",
+                "On the second night, the [Engineer] chooses [Assassin], [Marionette], and [Godfather]. There are only 2 Minions in play, but there is a [Lord of Typhon] on the script. The Storyteller chooses to leave the [Marionette] as the [Marionette], and tells the [Boomdandy] they are now the [Godfather]. The new [Godfather] learns which Outsiders are in play that night."
                 ],
     "tags": ["Mechanical"],
     "edition": "Carousel"
@@ -859,7 +865,7 @@
                 ]
            },
     "examples": [
-                "There are two nominations and the [Shabaloth] voted on both of them, but neither were executed. That night, the [Flowergirl] learns a yes.",
+                "There are 2 nominations and the [Shabaloth] voted on both of them, but neither were executed. That night, the [Flowergirl] learns a yes.",
                 "The [Leviathan] does not vote on any nominations. The [Snake Charmer] votes on the second nomination. That night, the [Snake Charmer] chooses the [Leviathan] and they swap characters and alignments. Since the previous [Leviathan] did not vote, the [Flowergirl] learns a no.",
                 "The [Gunslinger] is up for exile. The [Ojo] votes for the exile. The [Ojo] does not vote on any other nominations. That night, the [Flowergirl] learns a no."
                 ],
@@ -882,9 +888,9 @@
     "flavor": "I sense great evil in your soul! But... that could just be your perfume. I am allergic to Elderberry.",
     "purpose": "The [Fortune Teller] learns who may and may not be the Demon.",
     "summary": [
-             "Each night, the [Fortune Teller] chooses two players and learns if at least one of them is a Demon or if neither of them is a Demon.",
+             "Each night, the [Fortune Teller] chooses 2 players and learns if at least one of them is a Demon or if neither of them is a Demon.",
              "One good player registers as the Demon to the [Fortune Teller]. If that player becomes evil, a different player registers as the Demon to the [Fortune Teller].",
-             "The [Fortune Teller] may choose any two players, alive, dead, Travellers, or themself.",
+             "The [Fortune Teller] may choose any 2 players, alive, dead, Travellers, or themself.",
              "The [Fortune Teller] learns any Demon, dead or alive."
              ],
     "run": {
@@ -893,7 +899,7 @@
                 "The <b>Red Herring</b> does not know they are the <b>Red Herring</b>."
                 ],
            "Every Night": [
-                "The [Fortune Teller] chooses two players. If at least one is or registers as the Demon, the [Fortune Teller] learns a yes. Otherwise, the [Fortune Teller] learns a no."
+                "The [Fortune Teller] chooses 2 players. If at least one is or registers as the Demon, the [Fortune Teller] learns a yes. Otherwise, the [Fortune Teller] learns a no."
                 ]
            },
     "examples": [
@@ -920,7 +926,7 @@
         "order": 0,
         "text": null}},
     "flavor": "...and the King said 'What?! I've never even owned a pair of rubber pantaloons, let alone a custard cannon!' Ho-ho! Jolly day!",
-    "purpose": "The [Fool] has two lives.",
+    "purpose": "The [Fool] has 2 lives.",
     "summary": [
              "The first time the [Fool] would die for any reason, they do not.",
              "If the [Fool] is protected by another ability, they do not use their ability. The [Fool] must be about to die for their ability to be used."
@@ -1170,9 +1176,9 @@
         "order": 19,
         "text": "The Innkeeper chooses 2 players."}},
     "flavor": "Come inside, fair traveller, and rest your weary bones. Drink and be merry, for the legions of the Dark One shall not harass thee tonight.",
-    "purpose": "The [Innkeeper] protects two players from death every night, but causes one of them to be drunk.",
+    "purpose": "The [Innkeeper] protects 2 players from death every night, but causes one of them to be drunk.",
     "summary": [
-             "The [Innkeeper] protects two players from dying in any way that night, but one of those players becomes drunk in the process.",
+             "The [Innkeeper] protects 2 players from dying in any way that night, but one of those players becomes drunk in the process.",
              "Players chosen by the [Innkeeper] are only safe at night."
              ],
     "run": {
@@ -1240,9 +1246,9 @@
              "The [Juggler] may make fewer than 5 guesses, or no guesses at all.",
              "That night, the [Juggler] learns how many of their guesses were correct.",
              "Each guess must include a player and a character.",
-             "The [Juggler] may guess any player: alive, dead, Traveller, or even themself.",
+             "The [Juggler] may guess any player, including alive, dead, Traveller, or themself.",
              "The same player may be guessed more than once, but each guess counts toward the limit of 5 guesses.",
-             "If the [Juggler] is drunk or poisoned while guessing, but sober that night, the [Juggler] learns sober and healthy information."
+             "If the [Juggler] is drunk or poisoned while guessing, but is sober and healthy that night, the [Juggler] learns sober and healthy information."
              ],
     "run": {
            "First Day": [
@@ -1314,10 +1320,10 @@
         "order": 0,
         "text": null}},
     "flavor": "When a man lies, he murders some part of the world.",
-    "purpose": "The [Knight] learns two players that are not the Demon.",
+    "purpose": "The [Knight] learns 2 players that are not the Demon.",
     "summary": [
              "On the [Knight]'s first night, they learn 2 players that are not the Demon.",
-             "The players the [Knight] learns may be any character type or alignment, and may be alive or dead, or even themself, as long as neither of the players are the Demon.",
+             "The players the [Knight] learns may be any character type or alignment, and may be alive or dead, as long as neither player is the Demon.",
              "The [Knight] does not learn the characters or alignments of the players they are shown."
              ],
     "run": {
@@ -1387,7 +1393,7 @@
              "Each night, except the first, the [Lycanthrope] chooses an alive player.",
              "If the chosen player is good, they die and the Demon cannot kill that night.",
              "If the chosen player is evil, they do not die and the Demon may kill normally.",
-             "The [Lycanthrope] may choose any alive player, even themself or a Traveller.",
+             "The [Lycanthrope] may choose any alive player, including themself or a Traveller.",
              "One good player is made the <b>Faux Paw</b> and registers as evil to all players. If the [Lycanthrope] chooses this player, they do not die and the Demon may kill normally.",
              "The [Lycanthrope] only prevents the Demon from killing. Other characters may still cause deaths that night."
              ],
@@ -1569,7 +1575,7 @@
                 ]
            },
     "examples": [
-                "The [Witch] is executed and dies. All players except the [Minstrel] and Travellers become drunk until dusk the following day. The [Kazali] chooses the [Banshee], but the [Banshee] does not die. The [Empath] neighbors two good players but receives a 1. The next day, the [Slayer] shoots the [Kazali] but the [Kazali] does not die.",
+                "The [Witch] is executed and dies. All players except the [Minstrel] and Travellers become drunk until dusk the following day. The [Kazali] chooses the [Banshee], but the [Banshee] does not die. The [Empath] neighbors 2 good players but receives a 1. The next day, the [Slayer] shoots the [Kazali] but the [Kazali] does not die.",
                 "The [Devil's Advocate] protects the [Assassin]. The [Assassin] is executed but does not die, so the [Minstrel]'s ability does not trigger.",
                 "The [Gossip] causes the [Godfather] to die at night. The [Minstrel]'s ability does not trigger because the [Godfather] did not die by execution.",
                 "The [Scarlet Woman] is executed and dies. That night, the [Shabaloth] is drunk and chooses 2 players, but neither player dies. No players are regurgitated. The next day, the [Shabaloth] remains drunk until dusk.",
@@ -1669,7 +1675,7 @@
         "order": 0,
         "text": null}},
     "flavor": "Sarcasm is indeed the lowest form of wit. But speaking in response to your criticism, Sir, it is, nevertheless, a form of wit.",
-    "purpose": "The [Noble] learns one evil player and two good players, but does not learn which is which.",
+    "purpose": "The [Noble] learns one evil player and 2 good players, but does not learn which is which.",
     "summary": [
              "On the [Noble]'s first night, they learn 3 players. Exactly one of those players is or registers as evil.",
              "The [Noble] does not learn which of the 3 players is evil.",
@@ -1892,7 +1898,7 @@
     "examples": [
                 "The [Pukka], [Poisoner], and [Xaan] are in play with the [Poppy Grower]. On the first night, the [Poisoner] and [Xaan] do not learn who the [Pukka] is, and the [Pukka] does not learn who the [Poisoner] or [Xaan] are. The [Pukka] still learns 3 not-in-play good characters.",
                 "The [Poppy Grower] is executed and dies. That night, the Minions learn that Bell and Carla are Demons. Bell is the dead [Fang Gu] and Carla is the alive [Fang Gu]. Bell and Carla both learn the Minions.",
-                "The [Poppy Grower] is in play. The [Leviathan] uses the [Barber] ability and swaps two players: the [Assassin] and the [High Priestess]. The new [Assassin] kills the [Poppy Grower]. Even though the [Assassin] is good, they are still a Minion and learn the Demon."
+                "The [Poppy Grower] is in play. The [Leviathan] uses the [Barber] ability and swaps 2 players: the [Assassin] and the [High Priestess]. The new [Assassin] kills the [Poppy Grower]. Even though the [Assassin] is good, they are still a Minion and learn the Demon."
                 ],
     "tags": ["Mechanical", "Death"],
     "edition": "Carousel"
@@ -2121,7 +2127,7 @@
              "The [Sailor] may choose any alive player, including an evil player, a Traveller, or the [Sailor] themself.",
              "If the [Sailor] accidentally chooses a dead player, the Storyteller prompts them to choose a different player.",
              "The [Sailor] may choose the same player on multiple nights.",
-             "The Storyteller chooses which of the two players becomes drunk.",
+             "The Storyteller chooses which of the 2 players becomes drunk.",
              "While sober and healthy, the [Sailor] cannot die.",
              "If the [Sailor] is drunk or poisoned, they may die normally."
              ],
@@ -2199,7 +2205,7 @@
         "order": 83,
         "text": "The Seamstress might choose 2 players. Nod or shake your head."}},
     "flavor": "Did you hear that stranger in the cashmere coat put the word on our young Belle? And she said yes? Well, that's nothing compared to what Harry and that juggler got up to at the fair! The things I could say if I was a tattletale... my, yes.",
-    "purpose": "The [Seamstress] learns if two players are on the same team.",
+    "purpose": "The [Seamstress] learns if 2 players are on the same team.",
     "summary": [
              "Once per game, at night, the [Seamstress] may choose 2 players and learn whether they are the same alignment.",
              "The [Seamstress] may use their ability on the first night or any later night.",
@@ -2589,8 +2595,8 @@
            },
     "examples": [
                 "There is 1 [Village Idiot] in play. Each night, they choose a player and learn that player's alignment.",
-                "There are 2 [Village Idiot]s in play. One is sober and the other is drunk.",
-                "There are 3 [Village Idiot]s in play. Two are sober and one is drunk.",
+                "There are 2 [Village Idiot]s in play. 1 is sober and the other is drunk.",
+                "There are 3 [Village Idiot]s in play. 2 are sober and one is drunk.",
                 "The sober [Village Idiot] chooses the [Artist]. The [Artist] is good, so the [Village Idiot] learns good.",
                 "The sober [Village Idiot] chooses the [Poisoner]. The [Poisoner] is evil, so the [Village Idiot] learns evil.",
                 "The drunk [Village Idiot] chooses the good [Savant]. The Storyteller tells the drunk [Village Idiot] that the [Savant] is evil."
@@ -2688,7 +2694,7 @@
         "order": 60,
         "text": "If the Barber died today or tonight, show the Demon the <b>THIS CHARACTER SELECTED YOU</b> & Barber tokens. If the Demon chose 2 players, wake one at a time. Show the <b>YOU ARE</b> token & their new character token."}},
     "flavor": "Did you know that barbery and surgery were once the same profession? No? Well, now you do.",
-    "purpose": "When the [Barber] dies, the Demon may swap two players' characters.",
+    "purpose": "When the [Barber] dies, the Demon may swap 2 players' characters.",
     "summary": [
              "ComingSoon",
              "ComingSoon"
