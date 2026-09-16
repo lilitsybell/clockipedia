@@ -2076,18 +2076,27 @@
     "flavor": "These mountainous tomes guard the secret, I am sure of it! Twixt word and word, it lies in wait. More candles, boy! More ink! These notes may look arcane, but the infernal puzzle is revealing itself.",
     "purpose": "If the Demon kills the [Sage], the [Sage] learns who the Demon may be.",
     "summary": [
-             "ComingSoon",
-             "ComingSoon"
+             "If the Demon kills the [Sage], the [Sage] learns 2 players, one of whom is the Demon.",
+             "The [Sage] does not learn which of the 2 players is the Demon.",
+             "The other player shown to the [Sage] may be any player, including an evil player, a dead player, a Traveller, or the [Sage] themself.",
+             "The [Sage]'s ability only triggers if the Demon causes the [Sage] to die.",
+             "If the [Sage] dies from another character's ability, their ability does not trigger.",
+             "If the Demon chooses the [Sage] but the [Sage] does not die, the [Sage]'s ability does not trigger.",
+             "If the Demon has another character ability, such as from the [Boffin], and uses it to kill the [Sage], the [Sage]'s ability triggers.",
+             "If the Demon nominates and executes the [Sage], the [Sage]'s ability does not trigger."
              ],
     "run": {
-           "Every Night": [
-                "ComingSoon",
-                "ComingSoon"
+           "Other Nights": [
+                "If the Demon killed the [Sage] that night, the [Sage] learns 2 players, one of whom is the Demon."
                 ]
            },
     "examples": [
-                "ComingSoon",
-                "ComingSoon"
+                "The [Vortox] chooses the [Sage]. The [Sage] dies and learns the [Wizard] and the [Slayer].",
+                "The [Fang Gu] chooses the [Sage]. The [Sage] dies and learns the [Fang Gu] and the [Baron].",
+                "The [Assassin] chooses the [Sage]. The [Sage] dies and does not wake because the [Assassin] is not the Demon.",
+                "The [Gossip] causes the [Sage] to die at night. The [Sage] does not wake because the Demon did not kill them.",
+                "The [Imp] chooses the [Sage], but the [Monk] made the [Sage] safe from the Demon. The [Sage] does not die and does not use their ability.",
+                "The [Lord of Typhon] with the [Boffin] [Lycanthrope] ability chooses the [Sage]. The [Sage] dies and learns the [Drunk] and the [Lord of Typhon]."
                 ],
     "tags": ["Information", "Death"],
     "edition": "Sects and Violets"
