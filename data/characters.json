@@ -2115,24 +2115,32 @@
         "order": 13,
         "text": "The Sailor chooses a living player."}},
     "flavor": "I'll drink any one of yer under the table! You! The chatterbox! Reckon you can take me? No? Howza 'bout you, Grandma? You ever tried Old McKillys Extra Spiced Rum before? Guaranteed to put hairs on yer chest! Step aboard, aye!",
-    "purpose": "The [Sailor] cannot die.",
+    "purpose": "The [Sailor] cannot die, but either they or another player becomes drunk.",
     "summary": [
-             "ComingSoon",
-             "ComingSoon"
+             "Each night, the [Sailor] chooses an alive player. Either the [Sailor] or the chosen player becomes drunk until dusk.",
+             "The [Sailor] may choose any alive player, including an evil player, a Traveller, or the [Sailor] themself.",
+             "If the [Sailor] accidentally chooses a dead player, the Storyteller prompts them to choose a different player."
+             "The [Sailor] may choose the same player on multiple nights.",
+             "The Storyteller chooses which of the two players becomes drunk.",
+             "While sober and healthy, the [Sailor] cannot die.",
+             "If the [Sailor] is drunk or poisoned, they may die normally."
              ],
     "run": {
            "Anytime": [
-                "ComingSoon",
-                "ComingSoon"
+                "If the sober and healthy [Sailor] would die, they do not die."
                 ],
            "Every Night": [
-                "ComingSoon",
-                "ComingSoon"
+                "The [Sailor] chooses an alive player. Either the [Sailor] or the chosen player becomes drunk until dusk."
                 ]
            },
     "examples": [
-                "ComingSoon",
-                "ComingSoon"
+                "The [Sailor] chooses the [Gambler]. The Storyteller makes the [Gambler] drunk. The [Gambler] guesses the [Mezepheles] is the [Noble] and does not die.",
+                "The [Sailor] chooses the [Assassin]. The Storyteller makes the [Sailor] drunk, so the [Assassin] remains sober and healthy. The [Assassin] chooses the [Lycanthrope], who dies.",
+                "The sober and healthy [Sailor] is executed. The [Sailor] does not die.",
+                "The [Lleech] chooses the sober and healthy [Sailor]. The [Sailor] does not die.",
+                "The [Godfather] chooses the sober and healthy [Sailor]. The [Sailor] does not die.",
+                "The [Sailor] chooses the [Courtier]. The Storyteller makes the [Sailor] drunk. Later that night, the [Lleech] kills the [Sailor]. Because the [Sailor] is drunk, they die.",
+                "The [Sailor] chooses themself. The [Sailor] becomes drunk until dusk."
                 ],
     "tags": ["Droisoning", "Death"],
     "edition": "Bad Moon Rising"
