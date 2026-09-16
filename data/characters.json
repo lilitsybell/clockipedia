@@ -2398,18 +2398,23 @@
     "flavor": "How DARE you accuse Her Ladyship of wrongdoing? I’ve known her my entire life! All nine years!",
     "purpose": "The [Steward] learns 1 good player.",
     "summary": [
-             "ComingSoon",
-             "ComingSoon"
+             "On the [Steward]'s first night, they learn 1 good player.",
+             "The Storyteller chooses which good player the [Steward] learns.",
+             "The [Steward] learns the player, but does not learn that player's character.",
+             "The player the [Steward] learns may be any good player, including a dead player, a good Minion or Demon, a Traveller, or themself.",
+             "If the player the [Steward] learned later becomes evil, the [Steward] does not learn of the alignment change or learn a new player."
              ],
     "run": {
            "First Night": [
-                "ComingSoon",
-                "ComingSoon"
+                "The [Steward] learns 1 good player."
                 ]
            },
     "examples": [
-                "ComingSoon",
-                "ComingSoon"
+                "The [Steward] learns Corey. Corey is the good [Artist].",
+                "The [Steward] learns Bell. Bell is the good [Recluse].",
+                "The [Steward] learns CJ. CJ is the good [Barista].",
+                "The [Steward] learns Petra. Petra is the good [Pit-Hag].",
+                "The [Steward] learns Evin. Evin is the good [Cult Leader]. Later, Evin becomes evil. The [Steward] does not learn that Evin's alignment changed."
                 ],
     "tags": ["Information"],
     "edition": "Carousel"
@@ -2430,18 +2435,26 @@
     "flavor": "If you are cold, tea will warm you. If you are too heated, tea will cool you. If you are depressed, tea will cheer you. If you are excited, tea will calm you.",
     "purpose": "The [Tea Lady] protects their neighbors from death, but only if they are both good.",
     "summary": [
-             "ComingSoon",
-             "ComingSoon"
+             "The [Tea Lady]'s 2 alive neighbors cannot die if both of those players are good.",
+             "The [Tea Lady]'s protected neighbors may be any good players, including good Minions, Demons, and Travellers.",
+             "Dead players are skipped when determining the [Tea Lady]'s alive neighbors.",
+             "If either of the [Tea Lady]'s alive neighbors is evil, neither neighbor is protected by the [Tea Lady].",
+             "The [Tea Lady]'s protected neighbors cannot die for any reason, including execution or another character's ability.",
+             "The [Tea Lady] does not protect themself from death.",
+             "If one of the [Tea Lady]'s alive neighbors dies, the next alive player in that direction becomes the [Tea Lady]'s new alive neighbor."
              ],
     "run": {
            "Anytime": [
-                "ComingSoon",
-                "ComingSoon"
+                "If both of the [Tea Lady]'s alive neighbors are good, neither of those players can die."
                 ]
            },
     "examples": [
-                "ComingSoon",
-                "ComingSoon"
+                "The [Tea Lady] has the [Noble] and the [Village Idiot] as their alive neighbors. Both are good, so neither can die.",
+                "The good [Tinker] and the evil [Judge] are the [Tea Lady]'s alive neighbors. Neither player is protected by the [Tea Lady].",
+                "The [Tea Lady]'s alive neighbors are the [Drunk] and the [Investigator], who are both good. The [Drunk] is executed but does not die.",
+                "The [Tea Lady]'s alive neighbors are the [General] and the [Monk], who are both good. The [Shabaloth] chooses both players, but neither dies.",
+                "The [Tea Lady]'s alive neighbors are the [Banshee] and the [Gambler], who are both good. The [Tea Lady] is executed and dies.",
+                "The [Tea Lady]'s alive neighbors are the good [Organ Grinder] and the good [Barista]. The [Barista] is exiled, but does not die."
                 ],
     "tags": ["Death"],
     "edition": "Bad Moon Rising"
@@ -2462,22 +2475,30 @@
     "flavor": "Hear ye! Hear ye! Witchcraft in the labyrinth! Genius savant reveals all! Town in danger! Hear Ye!",
     "purpose": "The [Town Crier] learns if Minions nominate.",
     "summary": [
-             "ComingSoon",
-             "ComingSoon"
+             "Each night except the first, the [Town Crier] learns whether a Minion nominated that day.",
+             "If at least 1 Minion nominated that day, the [Town Crier] learns a yes.",
+             "If no Minions nominated that day, the [Town Crier] learns a no.",
+             "The [Town Crier] learns whether any Minion nominated, but does not learn which Minion nominated or how many Minions nominated.",
+             "A Minion only needs to nominate for the [Town Crier] to learn a yes. It does not matter who they nominated or whether that nomination resulted in an execution.",
+             "A good Minion nominating may cause the [Town Crier] to learn a yes.",
+             "If a player is a Minion when they nominate, but then is changed into a different character type, the [Town Crier] still learns a Minion nominated that day.",
+             "A Minion calling for the exile of a Traveller does not count as nominating."
              ],
     "run": {
            "Every Day": [
-                "ComingSoon",
-                "Thing 2"
+                "At dawn, the <b>MINIONS NOT NOMINATED</b> reminder token is placed by the [Town Crier]. If a Minion nominates, the <b>MINIONS NOT NOMINATED</b> reminder token is removed and the <b>MINION NOMINATED</b> reminder token is placed by the [Town Crier]."
                 ],
            "Other Nights": [
-                "ComingSoon",
-                "ComingSoon"
+                "If a Minion nominated that day, the [Town Crier] learns a yes. If no Minions nominated that day, the [Town Crier] learns a no."
                 ]
            },
     "examples": [
-                "ComingSoon",
-                "ComingSoon"
+                "The [Boffin] nominates the [Washerwoman]. That night, the [Town Crier] learns a yes.",
+                "The [Empath] nominates the [Widow]. No Minions nominate that day, so the [Town Crier] learns a no.",
+                "The [Baron] nominates the [Heretic], but the [Heretic] is not executed. That night, the [Town Crier] learns a yes.",
+                "The good [Mastermind] nominates the [Undertaker]. That night, the [Town Crier] learns a yes.",
+                "The [Assassin] calls for the exile of the [Bone Collector]. No Minions nominate that day. That night, the [Town Crier] learns a no.",
+                "The [Scarlet Woman] nominates the [Fisherman]. No other Minions nominate. Later, the [Po] is executed and the [Scarlet Woman] becomes the [Po]. That night, the [Town Crier] learns a yes, because the new [Po] was a Minion when they nominated."
                 ],
     "tags": ["Information"],
     "edition": "Sects and Violets"
