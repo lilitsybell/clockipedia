@@ -2240,18 +2240,23 @@
     "flavor": "これは夢。それも夢。すべて夢です。",
     "purpose": "The [Shugenja] learns which way to look for evil players.",
     "summary": [
-             "ComingSoon",
-             "ComingSoon"
+             "On the [Shugenja]'s first night, they learn whether their closest evil player is clockwise or anti-clockwise from them.",
+             "The [Shugenja] learns a direction, not which player is evil.",
+             "If the closest evil players in each direction are the same distance from the [Shugenja], the Storyteller may give either direction.",
+             "The closest evil player may be any character type, including a Traveller.",
+             "The closest evil player may be alive or dead.",
+             "If the [Shugenja] is evil, the [Shugenja] does not count themself."
              ],
     "run": {
            "First Night": [
-                "ComingSoon",
-                "ComingSoon"
+                "The [Shugenja] learns whether the closest evil player is clockwise or anti-clockwise from them. If the closest evil players in each direction are equally distant, the Storyteller may give either direction."
                 ]
            },
     "examples": [
-                "ComingSoon",
-                "ComingSoon"
+                "The closest evil player clockwise from the [Shugenja] is the [Poisoner], who is 2 seats away. The closest evil player anti-clockwise is 4 seats away. The [Shugenja] learns clockwise.",
+                "The [Organ Grinder] is 3 seats clockwise from the [Shugenja] and the [Witch] is 2 seats anti-clockwise. The [Shugenja] learns anti-clockwise.",
+                "The [Baron] is 2 seats clockwise from the [Shugenja] and the [Vigormortis] is 2 seats anti-clockwise. The evil players are equidistant, so the Storyteller chooses to tell the [Shugenja] clockwise.",
+                "The evil [Cult Leader] is sitting directly clockwise from the [Shugenja]. The [Vizier] is 3 seats anti-clockwise. The [Shugenja] learns clockwise."
                 ],
     "tags": ["Information"],
     "edition": "Carousel"
