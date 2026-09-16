@@ -2519,18 +2519,30 @@
     "flavor": "Hmmm....what have we here? The left boot is worn down to the heel, with flint shavings under the tongue. This is the garb of a Military man.",
     "purpose": "The [Undertaker] learns exactly which character died from execution today.",
     "summary": [
-             "ComingSoon",
-             "ComingSoon"
+             "Each night except the first, if a player died by execution that day, the [Undertaker] learns that player's character.",
+             "The [Undertaker] learns the character of the player who died by execution, not their alignment.",
+             "The executed player may be any character type or alignment.",
+             "If a player is executed but does not die, the [Undertaker] does not learn their character.",
+             "If nobody is executed, the [Undertaker] does not learn any information.",
+             "If a player dies during the day without being executed, the [Undertaker] does not learn their character.",
+             "A Traveller being exiled does not count as dying by execution.",
+             "If the [Drunk], [Marionette], or [Lunatic] is executed and dies, the [Undertaker] is shown that character token, not the token for the character that the player thought they were.",
+             "If multiple players die by execution, the Storyteller chooses which player's character to show the [Undertaker].",
+             "If the player who died by execution changes character before the [Undertaker] learns information, the [Undertaker] is shown the character the player was when they were executed."
              ],
     "run": {
            "Other Nights": [
-                "ComingSoon",
-                "ComingSoon"
+                "If a player died by execution that day, the [Undertaker] learns that player's character."
                 ]
            },
     "examples": [
-                "ComingSoon",
-                "ComingSoon"
+                "The [Acrobat] is executed and dies. That night, the [Undertaker] learns the [Acrobat].",
+                "The [Witch] is executed and dies. That night, the [Undertaker] learns the [Witch].",
+                "The [Damsel] is executed and dies. That night, the [Undertaker] learns the [Damsel].",
+                "The [Fool] is executed but does not die. That night, the [Undertaker] does not learn any information.",
+                "The [Tinker] dies during the day due to their own ability. No players are executed. That night, the [Undertaker] does not learn any information.",
+                "The [Barista] is exiled and dies. No players are executed. That night, the [Undertaker] does not learn any information.",
+                "The [Bounty Hunter] is executed and dies. The [Pit-Hag] chooses to change the dead [Bounty Hunter] into the [Fortune Teller]. The [Undertaker] learns the [Bounty Hunter]."
                 ],
     "tags": ["Information", "Death"],
     "edition": "Trouble Brewing"
@@ -2551,22 +2563,37 @@
     "flavor": "Roses are blue, and violets are red, Please reverse what I just said.",
     "purpose": "The [Village Idiot]s learn exactly which team a player is on, but one is drunk.",
     "summary": [
-             "ComingSoon",
-             "ComingSoon"
+             "Each night, each [Village Idiot] chooses a player and learns that player's alignment.",
+             "The [Village Idiot] may choose any player, including themself, a dead player, or a Traveller.",
+             "The [Village Idiot] may choose the same player on multiple nights.",
+             "There may be 1, 2, or 3 [Village Idiot]s in play.",
+             "If extra [Village Idiot]s are added, they may only replace other Townsfolk characters.",
+             "Up to 3 [Village Idiot] tokens may be in play. If the [Drunk] or [Marionette] believe they are the [Village Idiot], only up to 2 actual [Village Idiot]s may be in play.",
+             "If there is only 1 [Village Idiot], that [Village Idiot] is sober and healthy due to their own ability.",
+             "If extra [Village Idiot]s are added during setup, 1 of the extra [Village Idiot]s is drunk.",
+             "The Storyteller chooses which [Village Idiot] is the drunk [Village Idiot].",
+             "The drunk [Village Idiot] does not know that they are drunk and may receive incorrect information.",
+             "The other [Village Idiot]s are sober and healthy due to the [Village Idiot]'s ability.",
+             "Each [Village Idiot] wakes separately and does not learn which players the other [Village Idiot]s chose.",
+             "If all sober [Village Idiot]s leave play, the remaining drunk [Village Idiot] remains drunk.",
+             "If a sober [Village Idiot] becomes drunk or poisoned by other means, the drunk [Village Idiot] remains drunk.",
+             "[Village Idiot] cannot be a bluff if there is at least one player seeing the [Village Idiot] token (regardless of whether they are the [Drunk], [Marionette], or not)"
              ],
     "run": {
            "Setup": [
-                "ComingSoon",
-                "ComingSoon"
+                "There may be 1, 2, or 3 [Village Idiot]s in play. If any extra [Village Idiot]s are added, make 1 of the extra [Village Idiot]s drunk."
                 ],
            "Every Night": [
-                "ComingSoon",
-                "ComingSoon"
+                "Each [Village Idiot] wakes separately in any order. Each chooses a player and learns that player's alignment."
                 ]
            },
     "examples": [
-                "ComingSoon",
-                "ComingSoon"
+                "There is 1 [Village Idiot] in play. Each night, they choose a player and learn that player's alignment.",
+                "There are 2 [Village Idiot]s in play. One is sober and the other is drunk.",
+                "There are 3 [Village Idiot]s in play. Two are sober and one is drunk.",
+                "The sober [Village Idiot] chooses the [Artist]. The [Artist] is good, so the [Village Idiot] learns good.",
+                "The sober [Village Idiot] chooses the [Poisoner]. The [Poisoner] is evil, so the [Village Idiot] learns evil.",
+                "The drunk [Village Idiot] chooses the good [Savant]. The Storyteller tells the drunk [Village Idiot] that the [Savant] is evil."
                 ],
     "tags": ["Information", "Droisoning"],
     "edition": "Carousel"
