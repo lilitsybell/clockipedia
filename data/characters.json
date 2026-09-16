@@ -343,7 +343,7 @@
              ],
     "run": {
            "Setup": [
-                "One Townsfolk becomes evil, even if the [Bounty Hunter] is drunk or poisoned."
+                "One Townsfolk becomes evil, even if the [Bounty Hunter] is drunk or poisoned.",
                 "The evil player learns that they are evil on the first night, even if they are drunk, poisoned, or dead."
                 ],
            "First Night": [
