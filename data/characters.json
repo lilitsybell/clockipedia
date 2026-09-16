@@ -2201,18 +2201,25 @@
     "flavor": "Did you hear that stranger in the cashmere coat put the word on our young Belle? And she said yes? Well, that's nothing compared to what Harry and that juggler got up to at the fair! The things I could say if I was a tattletale... my, yes.",
     "purpose": "The [Seamstress] learns if two players are on the same team.",
     "summary": [
-             "ComingSoon",
-             "ComingSoon"
+             "Once per game, at night, the [Seamstress] may choose 2 players and learn whether they are the same alignment.",
+             "The [Seamstress] may use their ability on the first night or any later night.",
+             "The [Seamstress] can choose any player that is not themself, including dead players and Travellers.",
+             "If both chosen players are good or both are evil, the [Seamstress] learns a yes.",
+             "If one chosen player is good and the other is evil, the [Seamstress] learns a no.",
+             "The [Seamstress] learns the players' current alignments, regardless of their character types."
              ],
     "run": {
            "Every Night": [
-                "ComingSoon",
-                "ComingSoon"
+                "Once per game, the [Seamstress] may choose 2 players other than themself. If the chosen players have the same alignment, the [Seamstress] learns a yes. If they have different alignments, the [Seamstress] learns a no."
                 ]
            },
     "examples": [
-                "ComingSoon",
-                "ComingSoon"
+                "The [Seamstress] chooses the [Artist] and the [Savant]. The [Seamstress] learns a yes.",
+                "The [Seamstress] chooses the [Clockmaker] and the [Poisoner]. The [Seamstress] learns a no.",
+                "The [Seamstress] chooses the evil [Cult Leader] and the [Imp]. The [Seamstress] learns a yes.",
+                "The [Seamstress] chooses the good [Voudon] and the evil [Savant]. The [Seamstress] learns a no.",
+                "The [Seamstress] chooses the [Spy] and the [Sailor]. The [Spy] registers as good and the [Seamstress] learns a yes.",
+                "The [Seamstress] does not use their ability on the first or second nights. On the third night, they choose the [Artist] and the [Witch] and learn a no."
                 ],
     "tags": ["Information"],
     "edition": "Sects and Violets"
