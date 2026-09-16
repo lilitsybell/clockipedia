@@ -1952,22 +1952,33 @@
     "flavor": "Our words are hounds, bound by silken threads, dear lords. Let kindness weave them true, lest the reigns unravel and rend our court.",
     "purpose": "The [Princess] stops the Demon from killing for one night.",
     "summary": [
-             "ComingSoon",
-             "ComingSoon"
+             "On the [Princess]'s first day, if they nominate the player who is executed, the Demon does not kill that night.",
+             "The [Princess] must be the player who nominated the executed player.",
+             "The executed player may be good or evil, and may be alive or already dead.",
+             "Exiled Travellers do not count for the [Princess]'s ability.",
+             "The executed player does not need to die for the [Princess]'s ability to work.",
+             "The Demon still wakes and uses their ability normally, but their ability cannot cause a player to die that night.",
+             "The Demon does not learn that they will not kill that night.",
+             "The [Princess] only prevents deaths caused by the Demon. Other characters may still cause players to die.",
+             "The [Princess]'s ability only applies on their first day.",
+             "The [Princess] only stops the Demon from killing. Other abilities, such as poisoning or resurrections, still occur."
              ],
     "run": {
            "First Day": [
-                "ComingSoon",
-                "ComingSoon"
+                "If the [Princess] nominates a player who is executed, the Demon does not kill that night."
                 ],
            "Other Nights": [
-                "ComingSoon",
-                "ComingSoon"
+                "If the [Princess]'s ability triggered that day, the Demon wakes normally and uses their ability, but does not cause any players to die."
                 ]
            },
     "examples": [
-                "ComingSoon",
-                "ComingSoon"
+                "On the [Princess]'s first day, the [Princess] nominates the [Courtier]. The [Courtier] is executed and dies. That night, the [Vigormortis] chooses the [Politician], but the [Politician] does not die.",
+                "On the [Princess]'s first day, the [Princess] nominates the [Boffin]. The [Boffin] is executed and dies. That night, the [Kazali] chooses a player, but that player does not die.",
+                "On the [Princess]'s first day, the [Princess] nominates the [Fool]. The [Fool] is executed but does not die. The [Princess]'s ability still triggers because the [Fool] was executed.",
+                "On the [Princess]'s first day, the [Princess] nominates the [General], but the [General] is not executed. Another player nominates the [Chambermaid], who is executed. The [Princess]'s ability does not trigger.",
+                "On the [Princess]'s second day, the [Princess] nominates the [Gossip]. The [Gossip] is executed and dies. The [Princess]'s ability does not trigger because it is no longer their first day.",
+                "On the [Princess]'s first day, the [Princess] nominates the [Ogre]. The [Ogre] is executed and dies. That night, the [Godfather] chooses the [Virgin]. The [Virgin] dies because the [Princess] only prevents the Demon from killing.",
+                "On the [Princess]'s first day, the [Princess] nominates the [Tinker]. The [Tinker] is executed and dies. That night, the [Pukka] wakes and chooses to poison a player. The player the [Pukka] chose previously does not die."
                 ],
     "tags": ["Mechanical", "Death"],
     "edition": "Carousel"
@@ -1988,18 +1999,26 @@
     "flavor": "The process is simple. Attach the hydraulic confabulator to the modified chi matrix amplifier, add 20 CCs of pseudodorafine, keep his Z levels above 20%, and your husband will be fine. Now, all we need is a lightning strike.",
     "purpose": "The [Professor] may resurrect one player.",
     "summary": [
-             "ComingSoon",
-             "ComingSoon"
+             "Once per game, the [Professor] may choose a dead player.",
+             "If the chosen player is a Townsfolk, they become alive again.",
+             "If the chosen player is not a Townsfolk, they remain dead.",
+             "The [Professor] may choose any dead player, including a good player, an evil player, or a Traveller.",
+             "If the [Professor] accidentally chooses an alive player, the Storyteller prompts them to choose a different player.",
+             "If there are no dead players when the [Professor] chooses to use their ability, the Storyteller lets them know and the [Professor] loses their ability.",
+             "A resurrected player keeps their character and alignment.",
+             "A resurrected player regains their ability and may use it normally. If it was a once per game ability, that player may use it again."
              ],
     "run": {
            "Other Nights": [
-                "ComingSoon",
-                "ComingSoon"
+                "Once per game, the [Professor] may choose a dead player. If the chosen player is a Townsfolk, they become alive again."
                 ]
            },
     "examples": [
-                "ComingSoon",
-                "ComingSoon"
+                "The [Professor] chooses the dead [Exorcist]. The [Exorcist] is a Townsfolk, so they become alive again.",
+                "The [Professor] chooses the dead [Saint]. The [Saint] is an Outsider, so they remain dead. The [Professor] has used their ability and cannot choose another player on a later night.",
+                "The [Professor] chooses the dead evil [Gambler]. The [Gambler] is a Townsfolk, so they become alive again and remain evil.",
+                "The [Professor] chooses the dead [Goblin]. The [Goblin] is a Minion, so they remain dead.",
+                "The [Professor] chooses the dead [Artist]. The [Artist] becomes alive again and may use their ability again, even if they used it before they died."
                 ],
     "tags": ["Resurrection"],
     "edition": "Bad Moon Rising"
@@ -2018,52 +2037,25 @@
         "order": 75,
         "text": "If the Ravenkeeper died tonight, the Ravenkeeper chooses a player. Show that player's character token."}},
     "flavor": "My birds will avenge me! Fly! Fly, my sweet and dutiful pets! To the manor and to the river! To the alleys and to the salons! Fly!",
-    "purpose": "When the [Ravenkeeper] dies, they learn one player's character.",
+    "purpose": "When the [Ravenkeeper] dies at night, they learn one player's character.",
     "summary": [
-             "ComingSoon",
-             "ComingSoon"
+             "If the [Ravenkeeper] dies at night, they choose a player and learn that player's character.",
+             "It does not matter what caused the [Ravenkeeper] to die at night.",
+             "The [Ravenkeeper] may choose any player, including themself, a dead player, an evil player, or a Traveller.",
+             "The [Ravenkeeper] learns the chosen player's character, not their alignment.",
+             "If the [Ravenkeeper] dies during the day, they do not use their ability."
              ],
     "run": {
-           "Setup": [
-                "ComingSoon",
-                "ComingSoon"
-                ],
-           "Anytime": [
-                "ComingSoon",
-                "ComingSoon"
-                ],
-           "First Night": [
-                "ComingSoon",
-                "ComingSoon"
-                ],
-           "Every Night": [
-                "ComingSoon",
-                "ComingSoon"
-                ],
-           "First Day": [
-                "ComingSoon",
-                "ComingSoon"
-                ],
-           "Every Day": [
-                "ComingSoon",
-                "Thing 2"
-                ],
            "Other Nights": [
-                "ComingSoon",
-                "ComingSoon"
-                ],
-           "Other Days": [
-                "ComingSoon",
-                "ComingSoon"
-                ],
-           "End of Game": [
-                "ComingSoon",
-                "ComingSoon"
+                "If the [Ravenkeeper] died that night, they choose a player and learn that player's character."
                 ]
            },
     "examples": [
-                "ComingSoon",
-                "ComingSoon"
+                "The [Fang Gu] chooses the [Ravenkeeper]. The [Ravenkeeper] dies, chooses the [Harpy], and learns the [Harpy].",
+                "The [Ravenkeeper] is executed and dies. They do not wake that night because they died during the day.",
+                "The [Assassin] chooses the [Ravenkeeper]. The [Ravenkeeper] dies, chooses the [Mutant], and learns the [Mutant].",
+                "The [Ravenkeeper] dies at night due to the [Gossip]. The [Ravenkeeper] chooses the [Tea Lady] and learns the [Tea Lady].",
+                "The [Ravenkeeper] dies at night and chooses themself. The [Ravenkeeper] learns the [Ravenkeeper]."
                 ],
     "tags": ["Information", "Death"],
     "edition": "Trouble Brewing"
