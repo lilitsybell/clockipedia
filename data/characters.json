@@ -2614,18 +2614,23 @@
     "flavor": "I am pure. Let those who are without sin cast themselves down and suffer in my stead. My reputation shall not be stained with your venomous accusations.",
     "purpose": "The [Virgin] may confirm one player as a [Townsfolk].",
     "summary": [
-             "ComingSoon",
-             "ComingSoon"
+             "If the player who first nominates the [Virgin] is a Townsfolk, that player is immediately executed.",
+             "If the player who first nominates the [Virgin] is not a Townsfolk, nothing happens, but the [Virgin]'s ability is still used.",
+             "The nominator is executed before votes are counted on the [Virgin]'s nomination.",
+             "The first player to nominate the [Virgin] may be by any player, including evil players, Travellers, or themself."
              ],
     "run": {
            "Every Day": [
-                "ComingSoon",
-                "Thing 2"
+                "The first time the [Virgin] is nominated, if the nominator is a Townsfolk, the nominator is immediately executed. Otherwise, nothing happens. The [Virgin]'s ability is used either way."
                 ]
            },
     "examples": [
-                "ComingSoon",
-                "ComingSoon"
+                "The [General] nominates the [Virgin]. The [General] is immediately executed and dies.",
+                "The [Cacklejack] nominates the [Virgin]. Nothing happens because the [Cacklejack] is not a Townsfolk. The [Virgin]'s ability is now used.",
+                "The [Plague Doctor] nominates the [Virgin]. Nothing happens because the [Plague Doctor] is an Outsider. The [Virgin]'s ability is now used.",
+                "The [Fool] nominates the [Virgin]. The [Fool] is immediately executed but does not die because of the [Fool]'s ability.",
+                "The [Virgin] nominates themself. The [Virgin] is a Townsfolk, so the [Virgin] is immediately executed.",
+                "The [Al-Hadikhia] nominates the [Virgin], so nothing happens. Later, the [Mathematician] nominates the [Virgin]. Nothing happens because the [Virgin]'s ability was already used."
                 ],
     "tags": ["Mechanical", "Public"],
     "edition": "Trouble Brewing"
@@ -2644,20 +2649,27 @@
         "order": 0,
         "text": null}},
     "flavor": "Bloodstains on a dinner jacket? No, this is cooking sherry. How careless.",
-    "purpose": "The [Washerwoman] learns 1 in play Townsfolk, and who it might be.",
+    "purpose": "The [Washerwoman] learns 1 in-play Townsfolk, and who it might be.",
     "summary": [
-             "ComingSoon",
-             "ComingSoon"
+             "On the [Washerwoman]'s first night, they learn a Townsfolk character and 2 players, one of whom is that character.",
+             "The Storyteller chooses which Townsfolk character the [Washerwoman] learns.",
+             "The [Washerwoman] does not learn which of the 2 players is the Townsfolk character.",
+             "The Townsfolk the [Washerwoman] learns may be evil or dead.",
+             "The other player shown to the [Washerwoman] may be any player.",
+             "The [Washerwoman] may be shown themself as one of the 2 players.",
+             "The Townsfolk character shown to the [Washerwoman] may be the [Washerwoman]."
              ],
     "run": {
            "First Night": [
-                "ComingSoon",
-                "ComingSoon"
+                "The [Washerwoman] learns a Townsfolk character and 2 players, one of whom is that character."
                 ]
            },
     "examples": [
-                "ComingSoon",
-                "ComingSoon"
+                "The [Washerwoman] learns the [Steward] and is shown Corey and Bell. Corey is the [Steward] and Bell is the [Poisoner].",
+                "The [Washerwoman] learns the [Professor] and is shown Ben and Carla. Ben is the [Exorcist] and Carla is the [Professor].",
+                "The [Washerwoman] learns the [Bounty Hunter] and is shown themself and Evin. Evin is the [Bounty Hunter].",
+                "The [Washerwoman] learns the [Juggler] and is shown Clayzerr and CJ. Clayzerr is the [Beggar] and CJ is the evil [Juggler].",
+                "The [Washerwoman] learns the [Atheist] and is shown Liv and Nate. Liv is the [Drunk] and Nate is the [Spy], who registers as the [Atheist]."
                 ],
     "tags": ["Information"],
     "edition": "Trouble Brewing"
