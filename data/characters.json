@@ -2161,18 +2161,26 @@
     "flavor": "Seventy-two matchsticks on the floor... the sun sets early but the moon is unchanged... a torn piece of cloth... evil in the manor house... three by three... the one we trusted is not what he seems... green light means magnesium... residue, but the pattern is wrong... Seventy-two matchsticks on the floor...",
     "purpose": "The [Savant] learns true and false information from the Storyteller, but must figure out which is which.",
     "summary": [
-             "ComingSoon",
-             "ComingSoon"
+             "Each day, the [Savant] may privately visit the Storyteller and learn 2 statements.",
+             "Exactly one statement is true and the other statement is false.",
+             "The [Savant] does not learn which statement is true and which is false.",
+             "The Storyteller chooses both statements.",
+             "The statements may be about characters, players, alignments, events, or any other information.",
+             "The information the [Savant] learns does not need to be about the game.",
+             "The [Savant] may receive information every day while they have their ability.",
+             "The [Savant] does not have to visit the Storyteller each day."
              ],
     "run": {
            "Every Day": [
-                "ComingSoon",
-                "Thing 2"
+                "If the [Savant] privately visits the Storyteller, the Storyteller tells them 2 statements. Exactly one statement is true and the other is false."
                 ]
            },
     "examples": [
-                "ComingSoon",
-                "ComingSoon"
+                "The [Savant] learns \"The [Artist] is evil\" and \"The [Poisoner] is sitting next to the [Clockmaker].\" Exactly one of these statements is true.",
+                "The [Savant] learns \"There are 2 Minions alive\" and \"The Demon nominated yesterday.\" Exactly one of these statements is true.",
+                "The [Savant] learns \"Ben is a Townsfolk\" and \"Carla is good.\" Ben is the [Artist] and Carla is the [Poisoner], so the first statement is true and the second statement is false.",
+                "The [Savant] learns \"Corey is drunk or poisoned\" and \"Apples are purple.\" Corey is sitting next to the [No Dashii].",
+                "On the first day, the [Savant] chooses not to visit the Storyteller. On the second day, the [Savant] visits the Storyteller and receives 2 statements as normal."
                 ],
     "tags": ["Information"],
     "edition": "Sects and Violets"
