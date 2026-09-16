@@ -2277,18 +2277,26 @@
     "flavor": "Die.",
     "purpose": "The [Slayer] may kill the Demon.",
     "summary": [
-             "ComingSoon",
-             "ComingSoon"
+             "Once per game, during the day, the [Slayer] may publicly choose a player.",
+             "If the chosen player is the Demon, that player dies.",
+             "If the chosen player is not the Demon, nothing happens.",
+             "The [Slayer] uses their once-per-game ability when they publicly choose a player, even if that player does not die.",
+             "The [Slayer] may choose any player, including themself, a dead player, or a Traveller.",
+             "If the [Slayer] chooses a dead Demon, no announcement is made because the Demon is already dead.",
+             "The [Slayer]'s choice must be made publicly for their ability to work."
              ],
     "run": {
            "Every Day": [
-                "ComingSoon",
-                "Thing 2"
+                "Once per game, if the [Slayer] publicly chooses a player, that player dies if they are the Demon."
                 ]
            },
     "examples": [
-                "ComingSoon",
-                "ComingSoon"
+                "The [Slayer] publicly chooses the [Vigormortis]. The [Vigormortis] dies.",
+                "The [Slayer] publicly chooses the [Mastermind]. Nothing happens because the [Mastermind] is not the Demon.",
+                "The [Slayer] publicly chooses the [Imp], but the [Slayer] is poisoned. The [Imp] does not die and the [Slayer] has used their ability.",
+                "The [Slayer] privately tells the Storyteller that they choose the [Riot]. Nothing happens because the [Slayer] did not publicly choose a player.",
+                "The [Slayer] publicly chooses the dead [Fang Gu]. The [Fang Gu] is already dead, so nothing happens.",
+                "The [Slayer] publicly chooses the [Recluse]. The [Recluse] registers as the Demon and dies."
                 ],
     "tags": ["Death", "Public"],
     "edition": "Trouble Brewing"
@@ -2309,18 +2317,29 @@
     "flavor": "Effendi... I am but a humble man, but my pipe is golden and a single tune will tame the wildest djinn, Inshallah. They say that greed hangs more men than rope. But not I, Effendi... not I.",
     "purpose": "The [Snake Charmer] learns exactly who isn't the Demon.",
     "summary": [
-             "ComingSoon",
-             "ComingSoon"
+             "Each night, the [Snake Charmer] chooses an alive player.",
+             "If the chosen player is not the Demon, nothing happens.",
+             "If the chosen player is the Demon, the [Snake Charmer] becomes that Demon character and becomes their alignment.",
+             "The chosen Demon becomes the good [Snake Charmer].",
+             "The new [Snake Charmer] is poisoned.",
+             "If the new poisoned [Snake Charmer] changes character, they are no longer poisoned.",
+             "Both players learn their new character and alignment when the swap occurs.",
+             "The [Snake Charmer] may choose any alive player, including Travellers and themself.",
+             "The [Snake Charmer] may choose the same player on multiple nights."
              ],
     "run": {
            "Every Night": [
-                "ComingSoon",
-                "ComingSoon"
+                "The [Snake Charmer] chooses an alive player.",
+                "If they choose the Demon, the [Snake Charmer] becomes that Demon character and takes their alignment. The chosen Demon becomes the [Snake Charmer] and takes the [Snake Charmer]'s alignment, then becomes poisoned. Both players learn their new character and alignment."
                 ]
            },
     "examples": [
-                "ComingSoon",
-                "ComingSoon"
+                "The [Snake Charmer] chooses the [Empath]. Nothing happens because the [Empath] is not the Demon.",
+                "The [Snake Charmer] chooses the [Vortox]. The [Snake Charmer] becomes the evil [Vortox], and the [Vortox] becomes the good poisoned [Snake Charmer].",
+                "The [Snake Charmer] chooses the [Ojo]. The [Snake Charmer] becomes the evil [Ojo], and the [Ojo] becomes the good poisoned [Snake Charmer]. The new [Ojo] acts at the [Ojo]'s normal point in the night.",
+                "The [Snake Charmer] chooses the good [Yaggababble]. The [Snake Charmer] becomes the good [Yaggababble] and the [Yaggababble] becomes the good poisoned [Snake Charmer].",
+                "The [Snake Charmer] chooses the [Cerenovus]. Nothing happens. On the following night, the [Snake Charmer] chooses the [Cerenovus] again, and nothing happens.",
+                "The [Snake Charmer] chooses themself. Nothing happens because the [Snake Charmer] is not the Demon."
                 ],
     "tags": ["Mechanical"],
     "edition": "Sects and Violets"
@@ -2341,18 +2360,24 @@
     "flavor": "As David said to Goliath, as Theseus said to the Minotaur, as Arjuna said to Bhagadatta... No.",
     "purpose": "The [Soldier] is safe from all ill effects of the Demon.",
     "summary": [
-             "ComingSoon",
-             "ComingSoon"
+             "The Demon cannot kill the [Soldier] with their ability.",
+             "The Demon cannot make the [Soldier] drunk or poisoned with their ability.",
+             "The Demon cannot change the [Soldier]'s alignment with their ability.",
+             "The [Soldier] is only safe from the Demon. Other characters' abilities may affect or kill the [Soldier].",
+             "The [Soldier] may still be executed and die, even if the Demon was the nominator."
              ],
     "run": {
            "Anytime": [
-                "ComingSoon",
-                "ComingSoon"
+                "If the [Soldier] would be killed, poisoned, or become a different alignment due to the Demon, they are not."
                 ]
            },
     "examples": [
-                "ComingSoon",
-                "ComingSoon"
+                "The [Imp] chooses the [Soldier]. The [Soldier] does not die.",
+                "The [No Dashii] is sitting next to the [Soldier]. The [Soldier] is not poisoned by the [No Dashii].",
+                "The [Pukka] chooses the [Soldier]. The [Soldier] does not become poisoned and does not die from the [Pukka]'s ability.",
+                "The [Godfather] chooses the [Soldier]. The [Soldier] dies because the [Godfather] is not the Demon.",
+                "The [Soldier] is executed. The [Soldier] dies because they are only safe from the Demon.",
+                "The [Poisoner] chooses the [Soldier]. Later that night, the Demon chooses the [Soldier]. Because the [Soldier] is poisoned, they may die."
                 ],
     "tags": ["Mechanical", "Death"],
     "edition": "Trouble Brewing"
