@@ -1913,18 +1913,25 @@
     "flavor": "It is better to be rich and healthy than poor and sick.",
     "purpose": "The [Preacher] stops Minions from having an ability.",
     "summary": [
-             "ComingSoon",
-             "ComingSoon"
+             "Each night, the [Preacher] chooses a player. If the chosen player is a Minion, that player learns that the [Preacher] chose them and loses their ability.",
+             "If the chosen player is not a Minion, nothing happens and the chosen player does not learn that the [Preacher] chose them.",
+             "Minions previously chosen by the [Preacher] continue to have no ability when the [Preacher] chooses another player.",
+             "The [Preacher] may choose any player, including themself, a dead player, a Traveller, or a player they have already chosen.",
+             "A Minion with no ability due to the [Preacher] is still a Minion and registers as such.",
+             "If the [Preacher] is ever drunk or poisoned, the chosen Minions regain their abilities until the [Preacher] is sober and healthy again.",
+             "If the [Preacher] dies or leaves play, the Minions regain their abilities."
              ],
     "run": {
            "Every Night": [
-                "ComingSoon",
-                "ComingSoon"
+                "The [Preacher] chooses a player.",
+                "If the chosen player is a Minion, that player wakes and learns that the [Preacher] chose them. That Minion, and all Minions previously chosen by the [Preacher], have no ability."
                 ]
            },
     "examples": [
-                "ComingSoon",
-                "ComingSoon"
+                "The [Preacher] chooses the [Pit-Hag]. The [Pit-Hag] learns that the [Preacher] chose them and loses their ability.",
+                "The [Preacher] chooses the [Fool]. Nothing happens, and the [Fool] does not learn that the [Preacher] chose them.",
+                "On the first night, the [Preacher] chooses the [Psychopath]. The [Psychopath] loses their ability. On the second night, the [Preacher] chooses the [Cerenovus]. The [Cerenovus] loses their ability and the [Psychopath] still has no ability.",
+                "The [Preacher] chooses the [Spy]. The [Spy] loses their ability, but remains the [Spy] and remains evil."
                 ],
     "tags": ["Mechanical"],
     "edition": "Carousel"
