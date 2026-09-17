@@ -230,7 +230,7 @@
                 ]
            },
     "examples": [
-                "The [Fortune Teller] receives a yes on the [Lycanthrope] and the [Artist], even though neither is the Red Herring. The [Lycanthrope] fails to kill the [Moonchild], and the Storyteller kills the [Banshee] instead, announcing that the [Banshee] has died. When only three players are alive, the [Tinker] is executed and the good team loses.",
+                "The [Fortune Teller] receives a yes on the [Lycanthrope] and the [Artist], even though neither is the Red Herring. The [Lycanthrope] fails to kill the [Moonchild], and the Storyteller kills the [Banshee] instead, announcing that the [Banshee] has died. When only 3 players are alive, the [Tinker] is executed and the good team loses.",
                 "On the second night, the [Pit-Hag] changes the [Minstrel] into the [Atheist]. The Demon kills the [Nightwatchman] and the Storyteller kills the [Steward]. That day, the new [Atheist] nominates the Storyteller and the Storyteller is executed. The good team wins and the evil team loses."
                 ],
     "tags": ["Mechanical"],
@@ -380,17 +380,17 @@
     "summary": [
              "If a good player dies by execution, the [Cannibal] immediately gains their ability.",
              "If an evil player dies by execution, the [Cannibal] is poisoned until another player dies by execution, and does not gain any ability. The Storyteller may simulate the [Cannibal] gaining an ability.",
-             "If a good player with an evil ability (eg. good Cerenovus) is executed, the [Cannibal] gains that ability.",
+             "If a good player with an evil ability dies by execution, the [Cannibal] gains that evil ability.",
              "The [Cannibal] does not learn which ability they have.",
-             "Whenever a new player dies by execution, the [Cannibal] gains the new ability and loses the old one.",
+             "When a new good player dies by execution, the [Cannibal] gains that player's ability and loses the ability they previously had.",
              "In order to gain an ability, the player must be good and die to execution. Players who died in other ways, or survived an execution, will not grant the [Cannibal] any ability.",
              "If no player dies by execution, the [Cannibal] continues to have the ability they most recently gained.",
-             "If the [Cannibal] has an ability that works on death (eg. [Ravenkeeper], [Recluse], [Banshee]) and the [Cannibal] dies, they keep that ability after death, even if a new player is executed."
+             "If the [Cannibal] dies while they have an ability that functions while dead (e.g., [Ravenkeeper], [Recluse], or [Banshee]), the [Cannibal] keeps that ability after death, even if another player later dies by execution."
              ],
     "run": {
            "Anytime": [
-                "If a good player is executed, the [Cannibal] gains their ability immediately. If an evil player is executed, the [Cannibal] is poisoned until another player is executed.",
-                "The [Cannibal]'s ability works the same as if they were that character. The Storyteller does whatever they need to do to satisfy the [Cannibal]'s ability."
+                "If a good player dies by execution, the [Cannibal] immediately gains their ability. If an evil player dies by execution, the [Cannibal] is poisoned until a good player dies by execution.",
+                "The [Cannibal]'s gained ability works as though the [Cannibal] were that character. The Storyteller does whatever is necessary to run that ability."
                 ]
            },
     "examples": [
@@ -417,22 +417,22 @@
     "flavor": "I ain't seen nothin' untoward, Milady. Begging your pardon, but if I did see somethin', it certainly weren't the master o' the house sneaking into the professor's laboratory 'round eleven o'clock and mixing up fancy potions, just like you said, Miss.",
     "purpose": "The [Chambermaid] learns who wakes at night.",
     "summary": [
+             "The [Chambermaid] learns how many of the 2 chosen players woke, but not which players woke.",
              "The [Chambermaid] must choose alive players. If the [Chambermaid] accidentally picks a dead player, the [Chambermaid] is asked to choose again.",
-             "The [Chambermaid] is not told which player(s) woke, only how many of them woke.",
-             "The [Chambermaid] only detects players that woke due to their own ability. If they woke due to a different ability, such as being told they were chosen by the [Cerenovus] or [Exorcist], or to be told there is a [Widow] in play, the [Chambermaid] does not learn this.",
+             "The [Chambermaid] only detects players who woke due to their own ability. Waking because of another character's ability, such as being chosen by the [Cerenovus] or [Exorcist], or learning that a [Widow] is in play, does not count.",
              "The [Chambermaid] only detects players that woke that night. If they woke a previous night, or will wake on a future night, the [Chambermaid] does not learn this.",
-             "If a player is drunk or poisoned, the [Chambermaid] still learns that they woke up."
+             "A drunk or poisoned player still counts if they woke due to their own ability."
              ],
     "run": {
            "Every Night": [
-                "Each night, if there are 2 or more alive players for the [Chambermaid] to choose, the [Chambermaid] wakes and chooses 2 players. They learn a 0, 1, or 2, correlating with how many of the chosen players woke due to their own ability that night."
+                "Each night, if there are at least 2 valid players for the [Chambermaid] to choose, the [Chambermaid] chooses 2 alive players other than themself and learns how many woke due to their own ability that night."
                 ]
            },
     "examples": [
                 "On the second night, the [Chambermaid] chooses the [Shugenja] and the [Witch] and learns a 1.",
                 "On the third night, the [Exorcist] chooses the [Kazali]. The [Chambermaid] chooses the [Kazali] and the [Soldier] and learns a 0.",
                 "On the first night, the [Chambermaid] chooses the [Minstrel] and the [Goon]. The [Chambermaid] becomes [Goon] drunk and learns a 1.",
-                "On the fifth night, the only three players left are the [Zombuul], who registers as dead, the [Mayor], and the [Chambermaid]. Since there is only one valid choice for the [Chambermaid] to make, the [Chambermaid] does not wake."
+                "On the fifth night, the only 3 players left are the [Zombuul], who registers as dead, the [Mayor], and the [Chambermaid]. Since there is only one valid choice for the [Chambermaid] to make, the [Chambermaid] does not wake."
                 ],
     "tags": ["Information"],
     "edition": "Bad Moon Rising"
@@ -453,15 +453,16 @@
     "flavor": "This evening's reservations seem odd. Never before has Mrs Mayweather kept company with that scamp from Hudson Lane. Yet, tonight, they have a table for two. Strange.",
     "purpose": "The [Chef] learns how many evil players are sitting next to each other.",
     "summary": [
-             "A pair of evil players is when 2 evil players are sitting next to each other.",
-             "The [Chef] counts spaces between evil players. If there were three evil players in a line, the [Chef] would receive a 2.",
-             "If there are multiple separate pairs, the [Chef] learns all pairs, not just the longest line of evils.",
-             "The [Spy] and the [Recluse] register to the [Chef] twice, once for each of their neighbors. If a [Spy] or [Recluse] is sitting between 2 evil players, the [Chef] could receive a 0, 1, or 2.",
-             "Travellers count as players and register to the [Chef]. This may affect the [Chef]'s number, so they should keep in mind when and where Travellers are sitting."
+             "An evil pair is 2 evil players sitting next to each other.",
+             "The [Chef] counts players by alignment, not by character type.",
+             "Each pair of neighboring evil players counts as 1 evil pair. For example, 3 evil players sitting consecutively form 2 evil pairs.",
+             "If there are multiple separate pairs, each pair is counted, not just the longest line of evil players.",
+             "The [Spy] and [Recluse] may register as good or evil to the [Chef]. They may register differently for each neighboring pair.",
+             "Travellers are included when counting evil pairs. Their alignment may therefore affect the number the [Chef] learns."
              ],
     "run": {
            "First Night": [
-                "The [Chef] wakes and learns a number correlating to the number of evil pairs."
+                "The [Chef] learns the number of pairs of neighboring evil players."
                 ]
            },
     "examples": [
@@ -489,21 +490,23 @@
     "flavor": "I saw it, I did. I was in the pews, tidying the hymn books, when a dreadful tune started from the pipe organ. The organist had a long cloak, and long fingers on the keys. And a hat that looked… just like… yours.",
     "purpose": "The [Choirboy] learns who the Demon is if the Demon kills the [King].",
     "summary": [
-             "If the [Choirboy] is in play during setup, the [King] is also in play and the player with the [King] token cannot be the [Drunk] or the [Marionette].",
-             "If the Demon kills the [King] using their ability, the [Choirboy] learns who the Demon is. The Demon must kill the [King] using a character ability. Nominating the [King] does not count.",
-             "The Demon must kill the [King] in order for the [Choirboy] to learn who the Demon is. If the [King] is attacked, but doesn't die, the [Choirboy] learns nothing.",
-             "The [Choirboy] does not learn which type of Demon the Demon is."
+             "If the [Choirboy] is in play during setup, the [King] is also in play.",
+             "The player who receives the [King] token during setup cannot be the [Drunk] or [Marionette].",
+             "If the Demon kills the [King] using a character ability, the [Choirboy] learns which player is the Demon.",
+             "If the [King] does not die, the [Choirboy] does not learn anything.",
+             "If the Demon nominates the [King] and the [King] is executed, the [Choirboy]'s ability does not trigger.",
+             "The [Choirboy] learns the Demon player, but does not learn their Demon character."
              ],
     "run": {
            "Setup": [
                 "If the [Choirboy] is added to the bag, the [King] is also added to the bag. If the [King] was already in the bag, a second [King] is not added. The [Choirboy] does not affect Outsider count and cannot cause an Outsider to be removed."
                 ],
-           "Every Night": [
-                "If the Demon kills the [King] using any character ability, the [Choirboy] wakes up that night to learn who the Demon is."
+           "Other Nights": [
+                "If the Demon killed the [King] using a character ability that night, the [Choirboy] learns which player is the Demon."
                 ]
            },
     "examples": [
-                "The [Kazali] chooses to kill the [King]. That same night, the [Choirboy] learns who the [Kazali] player is.",
+                "The [Kazali] kills the [King]. That same night, the [Choirboy] learns which player is the [Kazali].",
                 "The [Po] chooses the [King], the [Choirboy], and the [Butler]. Since the [Choirboy] wakes after the Demon step, the [Choirboy] learns nothing.",
                 "The [Lycanthrope] chooses the [King] and the [King] dies. The [Choirboy] learns nothing.",
                 "The [Imp] with the [Boffin] [Moonchild] chooses themself to die. The next morning, the now dead [Imp] chooses the [King]. The [King] dies that night and the [Choirboy] learns who the new [Imp] is."
@@ -525,14 +528,17 @@
         "order": 0,
         "text": null}},
     "flavor": "Do not disturb me. The tick must continue, for the circle is a symbol of life and contains all things - all answers - in its divine machinery. I must work.",
-    "purpose": "The [Clockmaker] learns how close the Demon is to their closest Minion.",
+    "purpose": "The [Clockmaker] learns how far the Demon is from their nearest Minion.",
     "summary": [
-             "On the [Clockmaker]'s first night, they learn how many steps the Demon is to its nearest Minion, clockwise or counterclockwise.",
-             "The number of steps is equal to the number of players between the Demon and its nearest Minion plus 1."
+             "On the [Clockmaker]'s first night, they learn the number of steps from the Demon to their nearest Minion, counting in whichever direction is shorter.",
+             "The Demon and Minions may be good or evil.",
+             "Each player between the Demon and their nearest Minion, including the Minion, adds 1 to the [Clockmaker]'s number. A Minion sitting directly next to the Demon gives a 1.",
+             "If there are no Minions in play, the [Clockmaker] learns a 0.",
+             "Dead players are still counted when determining the number of steps."
              ],
     "run": {
            "First Night": [
-                "The [Clockmaker] learns a number equal to the steps between the Demon and its nearest Minion."
+                "The [Clockmaker] learns the number of steps from the Demon to their nearest Minion."
                 ]
            },
     "examples": [
@@ -559,27 +565,27 @@
     "flavor": "I am more afraid of an army of one hundred sheep led by a lion than an army of one hundred lions led by a sheep.",
     "purpose": "The [Courtier] may make any character drunk, even if they don't know which player it is.",
     "summary": [
-             "Once per game, the [Courtier] can choose one character to immediately become drunk for 3 nights and 3 days.",
+             "Once per game, the [Courtier] may choose a character. If that character is in play, that player becomes drunk for 3 nights and 3 days.",
              "The [Courtier] chooses a character, not a player.",
-             "The [Courtier] does not learn if they were successful or who they made drunk.",
+             "The [Courtier] does not learn whether their chosen character is in play or which player they made drunk.",
              "If the drunk or poisoned [Courtier] chooses a character, that character is not drunk, even if the [Courtier] later becomes sober and healthy.",
-             "If the [Courtier] made a character drunk, but the [Courtier] becomes drunk or poisoned, the player they made drunk becomes sober again. If the [Courtier] becomes sober and healthy again before the three nights and three days have ended, that player becomes drunk yet again. The 3 nights and days do not pause while the [Courtier] is drunk or poisoned.",
+             "If the [Courtier] makes a player drunk but later becomes drunk or poisoned, that player becomes sober and healthy. If the [Courtier] becomes sober and healthy again before the 3 nights and 3 days have ended, that player becomes drunk again. The duration continues while the [Courtier] is drunk or poisoned.",
              "The [Courtier] must choose a playable character. Fabled and Loric characters cannot be chosen.",
              "If a player who is [Courtier] drunk becomes a different character, they continue to be [Courtier] drunk.",
-             "If the [Courtier] chooses a character that is not in play, but becomes in play before the three nights and days are up, that player is not [Courtier] drunk.",
+             "If the [Courtier] chooses a character that is not in play, and that character later enters play during the 3 nights and 3 days, the new player is not [Courtier] drunk.",
              "If there are multiple copies of a character in play, only one of those players is made [Courtier] drunk.",
-             "If the [Courtier] is the first in the night to choose the [Goon], the [Courtier] becomes [Goon] drunk and the [Goon] becomes good and is not made [Courtier] drunk."
+             "If the [Courtier] is the first character that night to choose the [Goon], the [Courtier] becomes drunk and the [Goon] becomes the [Courtier]'s alignment. The [Goon] does not become [Courtier] drunk."
              ],
     "run": {
            "Every Night": [
                 "The [Courtier] chooses whether or not to use their ability.",
-                "If the [Courtier] chooses to use their ability, they must choose a playable character. If they do, and that character is in play, that player is drunk for three nights and three days starting immediately."
+                "If the [Courtier] chooses to use their ability, they must choose a playable character. If they do, and that character is in play, that player is drunk for 3 nights and 3 days starting immediately."
                 ]
            },
     "examples": [
                 "The [Poisoner] chooses to poison the [Courtier]. The same night, the [Courtier] chooses the [Lleech]. The [Lleech] stays sober and kills the [Nightwatchman] that night and the [Barber] the next night.",
                 "The [Courtier] chooses the [Scarlet Woman]. 2 days later, the [Slayer] kills the [Lord of Typhon]. The game ends and the good team wins.",
-                "On the first night, the [Courtier] chooses the [Godfather]. The [Godfather] incorrectly learns that the [Golem], [Sweetheart], and [Drunk] are in play. On the 2nd day, the [Sweetheart] dies. The drunk [Godfather] chooses a player to kill, but the player does not die."
+                "On the first night, the [Courtier] chooses the [Godfather]. The drunk [Godfather] is told that the [Golem], [Sweetheart], and [Drunk] are in play. On the 2nd day, the [Sweetheart] dies. The drunk [Godfather] chooses a player to kill, but the player does not die."
                 ],
     "tags": ["Droisoning"],
     "edition": "Bad Moon Rising"
@@ -830,7 +836,7 @@
     "examples": [
                 "On the first day, the [Fisherman] visits the Storyteller. The Storyteller tells the [Fisherman] to nominate Liv. Liv is the [Virgin].",
                 "On the final day, the [Fisherman] visits the Storyteller. The Storyteller tells the [Fisherman] to execute Chelsea. Chelsea is the [Lleech] host.",
-                "On the first day, the [Fisherman] visits the Storyteller. The Storyteller tells the [Fisherman] \"three blind mice\". The Storyteller is hinting that there are three evil players and a [Poppy Grower] in play.",
+                "On the first day, the [Fisherman] visits the Storyteller. The Storyteller tells the [Fisherman] \"3 blind mice\". The Storyteller is hinting that there are 3 evil players and a [Poppy Grower] in play.",
                 "On the second day, the [Fisherman] visits the Storyteller. The Storyteller tells the [Fisherman] to ignore Corey's information. Corey is the [Drunk]."
                 ],
     "tags": ["Information"],
