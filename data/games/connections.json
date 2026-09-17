@@ -1,4 +1,14 @@
 [
+    {"id": 26, "author": "Bell", "date": "2026-10-01",
+        "groups": [
+            {"name": "demons that don't choose players", "color": "green",
+                "characters": ["yaggababble", "ojo", "lilmonsta", "legion"]},
+            {"name": "shaped like an x", "color": "yellow",
+                "characters": ["fiddler", "bonecollector", "farmer", "seamstress"]},
+            {"name": "storyteller can force you to choose differently", "color": "blue",
+                "characters": ["professor", "alchemist", "wizard", "chambermaid"]},
+            {"name": "unconventional protection", "color": "purple",
+                "characters": ["gnome", "angel", "deviant", "ventriloquist"]}]},
     {"id": 25, "author": "Ben", "date": "2026-09-30",
         "groups": [
             {"name": "\"if the demon kills\"", "color": "yellow",
