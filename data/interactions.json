@@ -1,5 +1,85 @@
 [
     {
+        "text":"If the [Snake Charmer] poisoned [Snake Charmer] becomes [Vigormortis] poisoned, they are still [Snake Charmer] poisoned when they are no longer [Vigormortis] poisoned.",
+        "math":"red",
+        "reason":"A drunk or poisoned character does not have an ability, but regains it when they are no longer drunk or poisoned. Their ability does not reset.",
+        "mathInfo":"If the [Snake Charmer] chooses the Demon, but does not become the Demon because of being drunk or poisoned due to another character's ability, the [Snake Charmer]'s ability malfunctioned."},
+    {
+        "text":"If the [Snake Charmer] poisoned [Snake Charmer] becomes [Pukka] poisoned, they are still [Snake Charmer] poisoned when they are no longer [Pukka] poisoned.",
+        "math":"red",
+        "reason":"A drunk or poisoned character does not have an ability, but regains it when they are no longer drunk or poisoned. Their ability does not reset.",
+        "mathInfo":"If the [Snake Charmer] chooses the Demon, but does not become the Demon because of being drunk or poisoned due to another character's ability, the [Snake Charmer]'s ability malfunctioned."},
+    {
+        "text":"If the [Snake Charmer] poisoned [Snake Charmer] becomes [No Dashii] poisoned, they are still [Snake Charmer] poisoned when they are no longer [No Dashii] poisoned.",
+        "math":"red",
+        "reason":"A drunk or poisoned character does not have an ability, but regains it when they are no longer drunk or poisoned. Their ability does not reset.",
+        "mathInfo":"If the [Snake Charmer] chooses the Demon, but does not become the Demon because of being drunk or poisoned due to another character's ability, the [Snake Charmer]'s ability malfunctioned."},
+    {
+        "text":"If the [Snake Charmer] poisoned [Snake Charmer] becomes [Lleech] poisoned, they are still [Snake Charmer] poisoned when they are no longer [Lleech] poisoned.",
+        "math":"red",
+        "reason":"A drunk or poisoned character does not have an ability, but regains it when they are no longer drunk or poisoned. Their ability does not reset.",
+        "mathInfo":"If the [Snake Charmer] chooses the Demon, but does not become the Demon because of being drunk or poisoned due to another character's ability, the [Snake Charmer]'s ability malfunctioned."},
+    {
+        "text":"If the [Snake Charmer] poisoned [Snake Charmer] becomes [Xaan] poisoned, they are still [Snake Charmer] poisoned when they are no longer [Xaan] poisoned.",
+        "math":"red",
+        "reason":"A drunk or poisoned character does not have an ability, but regains it when they are no longer drunk or poisoned. Their ability does not reset.",
+        "mathInfo":"If the [Snake Charmer] chooses the Demon, but does not become the Demon because of being drunk or poisoned due to another character's ability, the [Snake Charmer]'s ability malfunctioned."},
+    {
+        "text":"If the [Snake Charmer] poisoned [Snake Charmer] becomes [Widow] poisoned, they are still [Snake Charmer] poisoned when they are no longer [Widow] poisoned.",
+        "math":"red",
+        "reason":"A drunk or poisoned character does not have an ability, but regains it when they are no longer drunk or poisoned. Their ability does not reset.",
+        "mathInfo":"If the [Snake Charmer] chooses the Demon, but does not become the Demon because of being drunk or poisoned due to another character's ability, the [Snake Charmer]'s ability malfunctioned."},
+    {
+        "text":"If the [Snake Charmer] poisoned [Snake Charmer] becomes [Poisoner] poisoned, they are still [Snake Charmer] poisoned when they are no longer [Poisoner] poisoned.",
+        "math":"red",
+        "reason":"A drunk or poisoned character does not have an ability, but regains it when they are no longer drunk or poisoned. Their ability does not reset.",
+        "mathInfo":"If the [Snake Charmer] chooses the Demon, but does not become the Demon because of being drunk or poisoned due to another character's ability, the [Snake Charmer]'s ability malfunctioned."},
+    {
+        "text":"If the [Snake Charmer] poisoned [Snake Charmer] becomes [Sweetheart] drunk, they are still [Snake Charmer] poisoned when they are no longer [Sweetheart] drunk.",
+        "math":"red",
+        "reason":"A drunk or poisoned character does not have an ability, but regains it when they are no longer drunk or poisoned. Their ability does not reset.",
+        "mathInfo":"If the [Snake Charmer] chooses the Demon, but does not become the Demon because of being drunk or poisoned due to another character's ability, the [Snake Charmer]'s ability malfunctioned."},
+    {
+        "text":"If the [Snake Charmer] poisoned [Snake Charmer] becomes [Puzzlemaster] drunk, they are still [Snake Charmer] poisoned when they are no longer [Puzzlemaster] drunk.",
+        "math":"red",
+        "reason":"A drunk or poisoned character does not have an ability, but regains it when they are no longer drunk or poisoned. Their ability does not reset.",
+        "mathInfo":"If the [Snake Charmer] chooses the Demon, but does not become the Demon because of being drunk or poisoned due to another character's ability, the [Snake Charmer]'s ability malfunctioned."},
+    {
+        "text":"If the [Snake Charmer] poisoned [Snake Charmer] becomes [Goon] drunk, they are still [Snake Charmer] poisoned when they are no longer [Goon] drunk.",
+        "math":"red",
+        "reason":"A drunk or poisoned character does not have an ability, but regains it when they are no longer drunk or poisoned. Their ability does not reset.",
+        "mathInfo":"If the [Snake Charmer] chooses the Demon, but does not become the Demon because of being drunk or poisoned due to another character's ability, the [Snake Charmer]'s ability malfunctioned."},
+    {
+        "text":"If the [Snake Charmer] poisoned [Snake Charmer] becomes [Courtier] drunk, they are still [Snake Charmer] poisoned when they are no longer [Courtier] drunk.",
+        "math":"red",
+        "reason":"A drunk or poisoned character does not have an ability, but regains it when they are no longer drunk or poisoned. Their ability does not reset.",
+        "mathInfo":"If the [Snake Charmer] chooses the Demon, but does not become the Demon because of being drunk or poisoned due to another character's ability, the [Snake Charmer]'s ability malfunctioned."},
+    {
+        "text":"If the [Snake Charmer] poisoned [Snake Charmer] becomes [Sailor] drunk, they are still [Snake Charmer] poisoned when they are no longer [Sailor] drunk.",
+        "math":"red",
+        "reason":"A drunk or poisoned character does not have an ability, but regains it when they are no longer drunk or poisoned. Their ability does not reset.",
+        "mathInfo":"If the [Snake Charmer] chooses the Demon, but does not become the Demon because of being drunk or poisoned due to another character's ability, the [Snake Charmer]'s ability malfunctioned."},
+    {
+        "text":"If the [Snake Charmer] poisoned [Snake Charmer] becomes [Philosopher] drunk, they are still [Snake Charmer] poisoned when they are no longer [Philosopher] drunk.",
+        "math":"red",
+        "reason":"A drunk or poisoned character does not have an ability, but regains it when they are no longer drunk or poisoned. Their ability does not reset.",
+        "mathInfo":"If the [Snake Charmer] chooses the Demon, but does not become the Demon because of being drunk or poisoned due to another character's ability, the [Snake Charmer]'s ability malfunctioned."},
+    {
+        "text":"If the [Snake Charmer] poisoned [Snake Charmer] becomes [Minstrel] drunk, they are still [Snake Charmer] poisoned when they are no longer [Minstrel] drunk.",
+        "math":"red",
+        "reason":"A drunk or poisoned character does not have an ability, but regains it when they are no longer drunk or poisoned. Their ability does not reset.",
+        "mathInfo":"If the [Snake Charmer] chooses the Demon, but does not become the Demon because of being drunk or poisoned due to another character's ability, the [Snake Charmer]'s ability malfunctioned."},
+    {
+        "text":"If the [Snake Charmer] poisoned [Snake Charmer] becomes [Innkeeper] drunk, they are still [Snake Charmer] poisoned when they are no longer [Innkeeper] drunk.",
+        "math":"red",
+        "reason":"A drunk or poisoned character does not have an ability, but regains it when they are no longer drunk or poisoned. Their ability does not reset.",
+        "mathInfo":"If the [Snake Charmer] chooses the Demon, but does not become the Demon because of being drunk or poisoned due to another character's ability, the [Snake Charmer]'s ability malfunctioned."},
+    {
+        "text":"If the [Snake Charmer] poisoned [Snake Charmer] becomes [Courtier] drunk, they are still [Snake Charmer] poisoned when they are no longer [Courtier] drunk.",
+        "math":"red",
+        "reason":"A drunk or poisoned character does not have an ability, but regains it when they are no longer drunk or poisoned. Their ability does not reset.",
+        "mathInfo":"If the [Snake Charmer] chooses the Demon, but does not become the Demon because of being drunk or poisoned due to another character's ability, the [Snake Charmer]'s ability malfunctioned."},
+    {
         "text":"If the [Snake Charmer] poisoned [Snake Charmer] chooses the [Zombuul], nothing happens",
         "math":"green",
         "reason":"A drunk or poisoned character does not have an ability.",
