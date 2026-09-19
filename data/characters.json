@@ -604,17 +604,17 @@
         "order": 90,
         "text": "The Cult Leader might change alignment. If so, show the <b>YOU ARE</b> info token & give a thumb signal."}},
     "flavor": "Thinking themselves wise, they became fools.",
-    "purpose": "The [Cult Leader]'s team is able to win if they get everyone to agree they should.",
+    "purpose": "The [Cult Leader] changes alignment based on their neighbors and can win by convincing all good players to join their cult.",
     "summary": [
-             "Every night, the [Cult Leader] becomes the alignment of one of their neighbors.",
-             "Once per day, at any time, the [Cult Leader] may attempt to publicly form a cult. If all alive and dead good players agree, the [Cult Leader]'s team wins.",
+             "Each night, the [Cult Leader] becomes the alignment of one of their alive neighbors.",
+             "Once per day, the [Cult Leader] may publicly attempt to form a cult. If all good players, alive and dead, choose to join, the [Cult Leader]'s team wins.",
              "The [Cult Leader] only wakes to learn their alignment if their alignment has changed."
              ],
     "run": {
            "Every Night": [
                 "If both of the [Cult Leader]'s alive neighbors are good, the [Cult Leader] becomes good. If the [Cult Leader] was previously evil, they learn that they are now good.",
                 "If both of the [Cult Leader]'s alive neighbors are evil, the [Cult Leader] becomes evil. If the [Cult Leader] was previously good, they learn that they are now evil.",
-                "If one of the [Cult Leader]'s alive neighbors is evil, and the other is good, the Storyteller chooses which alignment the [Cult Leader] becomes. If the [Cult Leader] changes alignment, they learn this."
+                "If one alive neighbor is good and the other is evil, the Storyteller chooses which alignment the [Cult Leader] becomes. If their alignment changes, they learn this."
                 ],
            "Every Day": [
                 "The [Cult Leader] may publicly choose to form a cult. The Storyteller announces this and has the players vote. This does not use a vote token. If all good players, alive and dead, vote to form the cult, the [Cult Leader]'s team immediately wins. If not all good players vote to form the cult, nothing happens."
@@ -625,7 +625,7 @@
                 "The good [Cult Leader] declares they are forming a cult. All players raise their hand except for the [Zealot]. The Storyteller announces a cult was not formed and goes on with the day.",
                 "The good [Cult Leader] is sitting between the [Farmer] and the [Sage], who is the faux paw to the [Lycanthrope]. Even though both neighbors are good, the [Sage] registers as evil and the [Cult Leader] becomes evil and learns this.",
                 "The evil [Cult Leader] is sitting between the [Virgin] and the [Xaan]. The [Cult Leader] becomes good and learns this.",
-                "The evil [Cult Leader] declares they are forming a cult. All players raise their hand except for the [Recluse] and the [Harpy]. The [Recluse] registers as evil, and the Storyteller declares that a cult was formed and that the evil team has won."
+                "The evil [Cult Leader] declares that they are forming a cult. All players raise their hand except for the [Recluse] and the [Harpy]. The [Recluse] registers as evil, and the Storyteller declares that a cult was formed and that the evil team has won."
                 ],
     "tags": ["Mechanical", "Public"],
     "edition": "Carousel"
@@ -646,13 +646,14 @@
     "flavor": "I remember the Clockmaker. The sky was red and it was raining fractal triangles. There was a smell of violets and a bubbling sound. A woman with glowing eyes and a scraggly beard was hissing at the sky. Then, I awoke.",
     "purpose": "The [Dreamer] learns 2 characters a player might be.",
     "summary": [
-             "Each night, the [Dreamer] chooses a player and learns a good character and an evil character, one of which is that player's character.",
+             "Each night, the [Dreamer] chooses a player and learns 1 good character and 1 evil character. The chosen player is or registers as one of those characters.",
              "The [Dreamer] cannot choose themself or a Traveller.",
-             "The alignment of the player does not matter. The [Dreamer] will always see a good character and an evil character."
+             "The [Dreamer] may choose an alive or dead player.",
+             "The chosen player's alignment does not determine which characters are shown. The [Dreamer] always learns 1 good character and 1 evil character."
              ],
     "run": {
            "Every Night": [
-                "The [Dreamer] chooses a player. If the player is a good character, the [Dreamer] learns that character and any evil character. If the player is an evil character, the [Dreamer] learns any good character and that evil character."
+                "The [Dreamer] chooses a player other than themself or a Traveller. The [Dreamer] learns 1 good character and 1 evil character, one of which is or registers as the chosen player's character."
                 ]
            },
     "examples": [
@@ -679,17 +680,20 @@
     "flavor": "My skin prickles. Something is not right here. I can feel it.",
     "purpose": "The [Empath] learns how many of their alive neighbors are evil.",
     "summary": [
-             "The [Empath] learns how many of their alive neighbors are evil, but not which ones.",
-             "The [Empath] only sees alive neighbors. If their closest neighbor is dead, they see the next closest neighbor."
-             ],
+                "Each night, the [Empath] learns how many of their 2 alive neighbors are evil, but not which neighbors are evil.",
+                "Dead players are skipped when determining the [Empath]'s 2 alive neighbors.",
+                "The [Empath] counts players by alignment, not by character type.",
+                "Travellers may be the [Empath]'s neighbors and are counted according to their alignment.",
+                "Characters that can misregister, such as the [Recluse] and the [Spy], may register as a different alignment to the [Empath]."
+                ],
     "run": {
            "Every Night": [
-                "The [Empath] learns a 0, 1, or 2, depending on how many of their alive neighbors are evil."
+                "The [Empath] learns a 0, 1, or 2, depending on how many of their 2 alive neighbors are evil."
                 ]
            },
     "examples": [
                 "The [Empath] is sitting between the [Soldier] and the [Magician]. The [Empath] learns a 0.",
-                "The [Empath] is sitting between the alive [Savant] and the alive [Saint]. The [Shabaloth] kills the [Savant]. The [Empath]'s new closest living neighbors are the evil [Gunslinger] and the [Saint]. The [Empath] learns a 1.",
+                "The [Empath] is sitting between the alive [Savant] and the alive [Saint]. The [Shabaloth] kills the [Savant]. The [Empath]'s new alive neighbors are the evil [Gunslinger] and the [Saint]. The [Empath] learns a 1.",
                 "The [Empath] is sitting between the [Minstrel] and the [Pixie]. That night, the [Minstrel] becomes evil due to the [Mezepheles] ability. The [Empath] learns a 1.",
                 "The [Empath] is sitting between the evil [Judge] and the [Wizard]. The [Empath] learns a 2."
                 ],
