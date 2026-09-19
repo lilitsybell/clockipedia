@@ -1,4 +1,14 @@
 [
+    {"id": 27, "author": "Bell", "date": "2026-10-02",
+        "groups": [
+            {"name": "interacts with dead players", "color": "yellow",
+                "characters": ["undertaker", "oracle", "beggar", "cannibal"]},
+            {"name": "triggers upon execution", "color": "green",
+                "characters": ["saint", "scapegoat", "minstrel", "mastermind"]},
+            {"name": "can choose to turn a player evil", "color": "blue",
+                "characters": ["gardener", "summoner", "kazali", "mezepheles"]},
+            {"name": "toys", "color": "purple",
+                "characters": ["toymaker", "eviltwin", "pixie", "ventriloquist"]}]},
     {"id": 26, "author": "Bell", "date": "2026-10-01",
         "groups": [
             {"name": "demons that don't choose players", "color": "green",
