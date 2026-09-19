@@ -230,7 +230,7 @@
                 ]
            },
     "examples": [
-                "The [Fortune Teller] receives a yes on the [Lycanthrope] and the [Artist], even though neither is the Red Herring. The [Lycanthrope] fails to kill the [Moonchild], and the Storyteller kills the [Banshee] instead, announcing that the [Banshee] has died. When only 3 players are alive, the [Tinker] is executed and the good team loses.",
+                "The [Fortune Teller] receives a yes on the [Lycanthrope] and the [Artist], even though neither is the <b>Red Herring</b>. The [Lycanthrope] fails to kill the [Moonchild], and the Storyteller kills the [Banshee] instead, announcing that the [Banshee] has died. When only 3 players are alive, the [Tinker] is executed and the good team loses.",
                 "On the second night, the [Pit-Hag] changes the [Minstrel] into the [Atheist]. The Demon kills the [Nightwatchman] and the Storyteller kills the [Steward]. That day, the new [Atheist] nominates the Storyteller and the Storyteller is executed. The good team wins and the evil team loses."
                 ],
     "tags": ["Mechanical"],
