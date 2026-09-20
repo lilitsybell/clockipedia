@@ -2390,6 +2390,11 @@ function commitPendingUpdate(){
 pendingEliminations.clear();
 
 pendingAbilityEdits = [];
+erratanomiconData.meta.game =
+    (
+        erratanomiconData.meta.game ||
+        1
+    ) + 1;
 
 pendingUpdate = null;
 
