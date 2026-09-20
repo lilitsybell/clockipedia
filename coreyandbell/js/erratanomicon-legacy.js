@@ -424,6 +424,40 @@ function getSimilarityScore(
 
     return score;
 }
+function getReplacementBonus(
+    candidateSlug
+){
+
+    let bonus = 0;
+
+    if(
+        candidateSlug ===
+            "huntsman" &&
+        willCharacterRemain(
+            "damsel"
+        )
+    ){
+
+        bonus += 100;
+
+    }
+
+    if(
+        candidateSlug ===
+            "choirboy" &&
+        willCharacterRemain(
+            "king"
+        )
+    ){
+
+        bonus += 100;
+
+    }
+
+
+    return bonus;
+
+}
 function getReplacementCharacter(
     oldCharacter
 ){
@@ -1579,11 +1613,15 @@ if(
             }
 
 
-            console.log(
-                "Pending eliminations:",
-                [...pendingEliminations]
-            );
-            saveErratanomiconLocalState();
+console.log(
+    "Pending eliminations:",
+    [...pendingEliminations]
+);
+
+pendingUpdate = null;
+
+
+saveErratanomiconLocalState();
 
         }
     );
