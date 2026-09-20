@@ -1424,7 +1424,12 @@ function skipPendingReplacement(
 }
 function openUpdateModal(){
 
-    buildPendingUpdate();
+    if(!pendingUpdate){
+
+        buildPendingUpdate();
+
+    }
+
 
     renderUpdateModal();
 
@@ -1439,12 +1444,7 @@ function openUpdateModal(){
 
 }
 
-
 function closeUpdateModal(){
-
-    pendingUpdate =
-        null;
-
 
     document
         .getElementById(
@@ -2349,10 +2349,16 @@ function commitPendingUpdate(){
         }
     );
 
-    pendingEliminations.clear();
+pendingEliminations.clear();
+
+pendingAbilityEdits = [];
+
+pendingUpdate = null;
+
+
 saveErratanomiconLocalState();
-    renderErratanomiconScript();
-    pendingAbilityEdits = [];
+
+renderErratanomiconScript();
 
 }
 function buildErratanomiconExport(){
