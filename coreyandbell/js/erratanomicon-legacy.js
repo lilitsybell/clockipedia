@@ -260,29 +260,101 @@ const scriptTeams = [
 ];
 const similarityWeights = {
 
+    /*
+        Very strong mechanical similarities
+    */
+
     "Madness":10,
-    "Madness About Character":5,
-    "Madness About Alignment":5,
-
-    "Information":7,
-    "Character Information":8,
-    "Alignment Information":8,
-
     "Droisoning":10,
+    "Protection":10,
+    "Safe / Cannot Die":10,
+    "Resurrection":10,
+
+    "You Start Knowing":9,
+    "Neighbor":9,
+
     "Drunkenness":8,
     "Poisoning":8,
 
+    "Character Information":8,
+    "Alignment Information":8,
+
+    "Ability Copying":8,
+    "Ability Gain":8,
+    "Ability Loss":8,
+
+    "Demon Replacement":8,
+
+
+    /*
+        Strong similarities
+    */
+
+    "Information":7,
     "Death":7,
-    "Protection":8,
-    "Resurrection":10,
+    "Extra Death":7,
+
+    "Demon Detection":7,
+    "Minion Detection":7,
+    "Evil Detection":7,
+    "Good Detection":7,
+
+    "Demon Protection":7,
+    "Demon Support":7,
+
+    "Character Change":7,
+    "Alignment Change":7,
+
+
+    /*
+        More specific supporting mechanics
+    */
+
+    "Madness About Character":5,
+    "Madness About Alignment":5,
+
+    "False Information":5,
 
     "Execution":5,
     "Nomination":5,
     "Voting":5,
 
+    "Death Trigger":5,
+    "Execution Trigger":5,
+    "Nomination Trigger":5,
+    "Voting Trigger":5,
+
+    "Registration":5,
+
+    "Setup":5,
+    "Outsider Modification":5,
+    "Minion Modification":5,
+    "Demon Modification":5,
+
+    "Dead Players":4,
+    "Living Players":4,
+
+    "Pairs":4,
+    "Distance":4,
+
+    "Public":3,
+    "Private":3,
+
+
+    /*
+        Choice mechanics matter,
+        but shouldn't dominate a match.
+    */
+
     "Player Choice":2,
     "Character Choice":2,
     "Storyteller Choice":2,
+
+
+    /*
+        Timing is useful mostly as
+        a tiebreaker.
+    */
 
     "Night":1,
     "Day":1,
