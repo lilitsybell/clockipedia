@@ -273,36 +273,29 @@ function createScriptCharacter(
             "article"
         );
 
-
-
     article.className =
         "erratanomicon-character";
-
-
 
     article.dataset.character =
         character.slug;
 
-
+    const image =
+        Array.isArray(
+            character.image
+        )
+            ? character.image[0]
+            : character.image;
 
     article.innerHTML = `
 
         <div class="erratanomicon-character-token">
 
-<img
-    src="${
-        Array.isArray(
-            character.image
-        )
-            ? character.image[0]
-            : character.image
-    }"
-    alt="${character.name}"
->
+            <img
+                src="${image}"
+                alt="${character.name}"
+            >
 
         </div>
-
-
 
         <div class="erratanomicon-character-info">
 
@@ -310,9 +303,9 @@ function createScriptCharacter(
                 ${character.name}
             </h3>
 
-            <div class="erratanomicon-character-ability">
-                ${character.ability || ""}
-            </div>
+            <div
+                class="erratanomicon-character-ability"
+            ></div>
 
         </div>
 
@@ -320,11 +313,197 @@ function createScriptCharacter(
 
 
 
+    const abilityElement =
+        article.querySelector(
+            ".erratanomicon-character-ability"
+        );
+
+    renderAbilityWords(
+        abilityElement,
+        character
+    );
+
+
+
     return article;
+}
+function renderAbilityWords(
+    container,
+    character
+){
+
+    container.innerHTML =
+        "";
+
+    const words =
+        (character.ability || "")
+        .split(/\s+/)
+        .filter(Boolean);
+
+
+
+    words.forEach(
+        (word,index) => {
+
+            const wordButton =
+                document.createElement(
+                    "button"
+                );
+
+            wordButton.type =
+                "button";
+
+            wordButton.className =
+                "erratanomicon-word";
+
+            wordButton.textContent =
+                word;
+
+            wordButton.addEventListener(
+                "click",
+                () => {
+
+                    editAbilityWord(
+                        container,
+                        character,
+                        index
+                    );
+
+                }
+            );
+
+            container.appendChild(
+                wordButton
+            );
+
+        }
+    );
 
 }
 
 
+function editAbilityWord(
+    container,
+    character,
+    wordIndex
+){
+
+    const words =
+        (character.ability || "")
+        .split(/\s+/)
+        .filter(Boolean);
+
+    const buttons =
+        container.querySelectorAll(
+            ".erratanomicon-word"
+        );
+
+    const wordButton =
+        buttons[
+            wordIndex
+        ];
+
+    if(!wordButton){
+        return;
+    }
+
+
+
+    const input =
+        document.createElement(
+            "input"
+        );
+
+    input.type =
+        "text";
+
+    input.className =
+        "erratanomicon-word-input";
+
+    input.value =
+        words[
+            wordIndex
+        ];
+
+    input.size =
+        Math.max(
+            words[wordIndex].length,
+            2
+        );
+
+
+
+    wordButton.replaceWith(
+        input
+    );
+
+    input.focus();
+    input.select();
+
+
+
+    function saveWord(){
+
+        const newWord =
+            input.value.trim();
+
+        if(newWord){
+            words[wordIndex] =
+                newWord;
+        }
+
+        character.ability =
+            words.join(" ");
+
+        renderAbilityWords(
+            container,
+            character
+        );
+
+    }
+
+
+
+    function cancelEdit(){
+
+        renderAbilityWords(
+            container,
+            character
+        );
+
+    }
+
+
+
+    input.addEventListener(
+        "keydown",
+        event => {
+
+            if(
+                event.key ===
+                "Enter"
+            ){
+                saveWord();
+            }
+
+            if(
+                event.key ===
+                "Escape"
+            ){
+                cancelEdit();
+            }
+
+        }
+    );
+
+
+
+    input.addEventListener(
+        "blur",
+        saveWord
+    );
+
+}
 
 /* ==========================================
    Create Team Section
