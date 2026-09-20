@@ -368,6 +368,7 @@
 .erratanomicon-script-controls{
     display:flex;
     justify-content:flex-end;
+    gap:10px;
     margin-bottom:18px;
 }
 .erratanomicon-remove-character{
