@@ -699,13 +699,15 @@ if(slug === "erratanomicon"){
         ...characterData
     } = character;
 
+    characterData.team =
+        characterData.team.toLowerCase();
+
     script.push(
         characterData
     );
 
     return;
 }
-
 
             /*
                 Normal Erratanomicon character.
