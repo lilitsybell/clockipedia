@@ -215,50 +215,12 @@ function getScriptTeam(
 ========================================== */
 
 const scriptTeams = [
-
-    {
-        id:
-            "townsfolk",
-
-        name:
-            "Townsfolk"
-    },
-
-    {
-        id:
-            "outsiders",
-
-        name:
-            "Outsiders"
-    },
-
-    {
-        id:
-            "minions",
-
-        name:
-            "Minions"
-    },
-
-    {
-        id:
-            "demons",
-
-        name:
-            "Demons"
-    },
-
-    {
-        id:
-            "loric",
-
-        name:
-            "Loric"
-    }
-
+    { id:"loric", name:"Loric" },
+    { id:"townsfolk", name:"Townsfolk" },
+    { id:"outsiders", name:"Outsiders" },
+    { id:"minions", name:"Minions" },
+    { id:"demons", name:"Demons" }
 ];
-
-
 
 /* ==========================================
    Create Character
@@ -317,11 +279,26 @@ function createScriptCharacter(
         article.querySelector(
             ".erratanomicon-character-ability"
         );
+if(
+    getScriptTeam(character) ===
+    "loric"
+){
+
+    abilityElement.classList.add(
+        "erratanomicon-loric-ability"
+    );
+
+    abilityElement.textContent =
+        character.ability || "";
+
+}else{
 
     renderAbilityWords(
         abilityElement,
         character
     );
+
+}
 
 
 
@@ -408,7 +385,11 @@ function editAbilityWord(
     }
 
 
+const wordWidth =
+    wordButton.offsetWidth;
 
+const wordHeight =
+    wordButton.offsetHeight;
     const input =
         document.createElement(
             "input"
@@ -424,14 +405,11 @@ function editAbilityWord(
         words[
             wordIndex
         ];
+input.style.width =
+    `${wordWidth}px`;
 
-    input.size =
-        Math.max(
-            words[wordIndex].length,
-            2
-        );
-
-
+input.style.height =
+    `${wordHeight}px`;
 
     wordButton.replaceWith(
         input
