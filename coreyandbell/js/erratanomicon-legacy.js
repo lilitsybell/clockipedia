@@ -2350,14 +2350,10 @@ function commitPendingUpdate(){
     pendingAbilityEdits = [];
 
 }
-function downloadErratanomiconScript(){
+function buildErratanomiconExport(){
 
     const script = [];
 
-
-    /*
-        Script metadata
-    */
 
     script.push({
         id:"_meta",
@@ -2369,11 +2365,6 @@ function downloadErratanomiconScript(){
             "Corey and Bell"
     });
 
-
-    /*
-        Add each character using its
-        current data, including edited abilities.
-    */
 
     erratanomiconData.characters.forEach(
         slug => {
@@ -2392,48 +2383,43 @@ function downloadErratanomiconScript(){
                 Custom Loric
             */
 
-if(slug === "erratanomicon"){
+            if(slug === "erratanomicon"){
 
-    const {
-        slug:unusedSlug,
-        ...characterData
-    } = character;
-
-
-    /*
-        Store the permanent removed-character
-        state inside the Loric ID.
-    */
-
-    const saveState =
-        encodeRemovedCharacters();
-
-    characterData.id =
-        `el1_${saveState}`;
+                const {
+                    slug:unusedSlug,
+                    ...characterData
+                } = character;
 
 
-    characterData.team =
-        characterData.team.toLowerCase();
+                const saveState =
+                    encodeRemovedCharacters();
 
 
-    script.push(
-        characterData
-    );
+                characterData.id =
+                    `el1_${saveState}`;
 
-    return;
-}
+                characterData.team =
+                    characterData.team
+                        .toLowerCase();
+
+
+                script.push(
+                    characterData
+                );
+
+                return;
+            }
+
 
             /*
-                Normal Erratanomicon character.
-
-                The character already contains
-                its full BOTC character data.
+                Normal character
             */
 
             const {
                 slug:unusedSlug,
                 ...characterData
             } = character;
+
 
             script.push(
                 characterData
@@ -2443,16 +2429,18 @@ if(slug === "erratanomicon"){
     );
 
 
-    /*
-        Create downloadable JSON
-    */
+    return JSON.stringify(
+        script,
+        null,
+        2
+    );
+
+}
+function downloadErratanomiconScript(){
 
     const json =
-        JSON.stringify(
-            script,
-            null,
-            2
-        );
+        buildErratanomiconExport();
+
 
     const blob =
         new Blob(
@@ -2463,21 +2451,25 @@ if(slug === "erratanomicon"){
             }
         );
 
+
     const url =
         URL.createObjectURL(
             blob
         );
+
 
     const link =
         document.createElement(
             "a"
         );
 
+
     link.href =
         url;
 
     link.download =
         "erratanomicon-legacy.json";
+
 
     document.body.appendChild(
         link
@@ -2487,9 +2479,38 @@ if(slug === "erratanomicon"){
 
     link.remove();
 
+
     URL.revokeObjectURL(
         url
     );
+
+}
+async function copyErratanomiconScript(){
+
+    const json =
+        buildErratanomiconExport();
+
+
+    try{
+
+        await navigator.clipboard.writeText(
+            json
+        );
+
+
+        return true;
+
+    }catch(error){
+
+        console.error(
+            "Copy JSON failed:",
+            error
+        );
+
+
+        return false;
+
+    }
 
 }
 function importErratanomiconScript(
@@ -2792,11 +2813,42 @@ if(updateDownloadButton){
     );
 
 }
+const confirmCopyButton =
+    document.getElementById(
+        "confirmErratanomiconCopy"
+    );
 const confirmDownloadButton =
     document.getElementById(
         "confirmErratanomiconDownload"
     );
+if(confirmCopyButton){
 
+    confirmCopyButton.addEventListener(
+        "click",
+        async () => {
+
+            commitPendingUpdate();
+
+            const copied =
+                await copyErratanomiconScript();
+
+
+            if(copied){
+
+                closeUpdateModal();
+
+            }else{
+
+                alert(
+                    "The JSON could not be copied."
+                );
+
+            }
+
+        }
+    );
+
+}
 
 if(confirmDownloadButton){
 
