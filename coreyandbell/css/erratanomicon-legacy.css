@@ -371,26 +371,51 @@
     gap:10px;
     margin-bottom:18px;
 }
-.erratanomicon-remove-character{
-    margin-top:7px;
-    padding:0;
+/* ===========================
+   Elimination Button
+=========================== */
 
-    border:0;
-    background:none;
-
-    color:var(--gray);
-
-    font-family:"Roboto",Arial,sans-serif;
-    font-size:9px;
-    font-weight:800;
-    letter-spacing:.05em;
-    text-transform:uppercase;
-
-    cursor:pointer;
+.erratanomicon-character{
+    position:relative;
 }
 
-.erratanomicon-remove-character:hover{
-    color:var(--red);
+.erratanomicon-eliminate-character{
+    position:absolute;
+    top:50%;
+    right:16px;
+
+    width:34px;
+    height:34px;
+
+    transform:translateY(-50%);
+
+    border:2px solid #d8d8d8;
+    border-radius:50%;
+
+    background:white;
+
+    cursor:pointer;
+
+    transition:
+        background .15s ease,
+        border-color .15s ease,
+        transform .15s ease;
+}
+
+.erratanomicon-eliminate-character:hover{
+    border-color:var(--red);
+
+    transform:
+        translateY(-50%)
+        scale(1.06);
+}
+
+.erratanomicon-eliminate-character.selected{
+    border-color:var(--red);
+    background:var(--red);
+}
+.erratanomicon-character{
+    padding-right:65px;
 }
 /* ===========================
    Character Graveyard
