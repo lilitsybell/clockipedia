@@ -5,6 +5,7 @@
     "name": "Acrobat",
     "team": "Townsfolk",
     "image": "https://images.klutzbanana.com/characters_official/acrobat_g.png",
+    "imageEvil": "https://images.klutzbanana.com/characters_official/acrobat_e.png",
     "ability": "Each night*, choose a player: if they are or become drunk or poisoned tonight, you die.",
     "nightOrder": {
     "firstNight": {
@@ -39,6 +40,7 @@
     "name": "Alchemist",
     "team": "Townsfolk",
     "image": "https://images.klutzbanana.com/characters_official/alchemist_g.png",
+    "imageEvil": "https://images.klutzbanana.com/characters_official/alchemist_e.png",
     "ability": "You have a Minion ability. When using this, the Storyteller may prompt you to choose differently.",
     "nightOrder": {
     "firstNight": {
@@ -89,6 +91,7 @@
     "name": "Alsaahir",
     "team": "Townsfolk",
     "image": "https://images.klutzbanana.com/characters_official/alsaahir_g.png",
+    "imageEvil": "https://images.klutzbanana.com/characters_official/alsaahir_e.png",
     "ability": "Each day, if you publicly guess which players are Minion(s) and which are Demon(s), good wins.",
     "nightOrder": {
     "firstNight": {
@@ -127,6 +130,7 @@
     "name": "Amnesiac",
     "team": "Townsfolk",
     "image": "https://images.klutzbanana.com/characters_official/amnesiac_g.png",
+    "imageEvil": "https://images.klutzbanana.com/characters_official/amnesiac_e.png",
     "ability": "You do not know what your ability is. Each day, privately guess what it is: you learn how accurate you are.",
     "nightOrder": {
     "firstNight": {
@@ -166,6 +170,7 @@
     "name": "Artist",
     "team": "Townsfolk",
     "image": "https://images.klutzbanana.com/characters_official/artist_g.png",
+    "imageEvil": "https://images.klutzbanana.com/characters_official/artist_e.png",
     "ability": "Once per game, during the day, privately ask the Storyteller any yes/no question.",
     "nightOrder": {
     "firstNight": {
@@ -199,6 +204,7 @@
     "name": "Atheist",
     "team": "Townsfolk",
     "image": "https://images.klutzbanana.com/characters_official/atheist_g.png",
+    "imageEvil": "https://images.klutzbanana.com/characters_official/atheist_e.png",
     "ability": "The Storyteller can break the game rules, and if executed, good wins, even if you are dead. [No evil characters]",
     "nightOrder": {
     "firstNight": {
@@ -241,6 +247,7 @@
     "name": "Balloonist",
     "team": "Townsfolk",
     "image": "https://images.klutzbanana.com/characters_official/balloonist_g.png",
+    "imageEvil": "https://images.klutzbanana.com/characters_official/balloonist_e.png",
     "ability": "Each night, you learn a player of a different character type than last night. [+0 or +1 Outsider]",
     "nightOrder": {
     "firstNight": {
@@ -280,6 +287,7 @@
     "name": "Banshee",
     "team": "Townsfolk",
     "image": "https://images.klutzbanana.com/characters_official/banshee_g.png",
+    "imageEvil": "https://images.klutzbanana.com/characters_official/banshee_e.png",
     "ability": "If the Demon kills you, all players learn this. From now on, you may nominate twice per day and vote twice per nomination.",
     "nightOrder": {
     "firstNight": {
@@ -323,6 +331,7 @@
     "name": "Bounty Hunter",
     "team": "Townsfolk",
     "image": "https://images.klutzbanana.com/characters_official/bountyhunter_g.png",
+    "imageEvil": "https://images.klutzbanana.com/characters_official/bountyhunter_e.png",
     "ability": "You start knowing 1 evil player. If the player you know dies, you learn another evil player tonight. [1 Townsfolk is evil]",
     "nightOrder": {
     "firstNight": {
@@ -367,6 +376,7 @@
     "name": "Cannibal",
     "team": "Townsfolk",
     "image": "https://images.klutzbanana.com/characters_official/cannibal_g.png",
+    "imageEvil": "https://images.klutzbanana.com/characters_official/cannibal_e.png",
     "ability": "You have the ability of the recently killed executee. If they are evil, you are poisoned until a good player dies by execution.",
     "nightOrder": {
     "firstNight": {
@@ -406,6 +416,7 @@
     "name": "Chambermaid",
     "team": "Townsfolk",
     "image": "https://images.klutzbanana.com/characters_official/chambermaid_g.png",
+    "imageEvil": "https://images.klutzbanana.com/characters_official/chambermaid_e.png",
     "ability": "Each night, choose 2 alive players (not yourself): you learn how many woke tonight due to their ability.",
     "nightOrder": {
     "firstNight": {
@@ -442,6 +453,7 @@
     "name": "Chef",
     "team": "Townsfolk",
     "image": "https://images.klutzbanana.com/characters_official/chef_g.png",
+    "imageEvil": "https://images.klutzbanana.com/characters_official/chef_e.png",
     "ability": "You start knowing how many pairs of evil players there are.",
     "nightOrder": {
     "firstNight": {
@@ -479,6 +491,7 @@
     "name": "Choirboy",
     "team": "Townsfolk",
     "image": "https://images.klutzbanana.com/characters_official/choirboy_g.png",
+    "imageEvil": "https://images.klutzbanana.com/characters_official/choirboy_e.png",
     "ability": "If the Demon kills the King, you learn which player is the Demon. [+the King]",
     "nightOrder": {
     "firstNight": {
@@ -519,6 +532,7 @@
     "name": "Clockmaker",
     "team": "Townsfolk",
     "image": "https://images.klutzbanana.com/characters_official/clockmaker_g.png",
+    "imageEvil": "https://images.klutzbanana.com/characters_official/clockmaker_e.png",
     "ability": "You start knowing how many steps from the Demon to its nearest Minion.",
     "nightOrder": {
     "firstNight": {
@@ -554,6 +568,7 @@
     "name": "Courtier",
     "team": "Townsfolk",
     "image": "https://images.klutzbanana.com/characters_official/courtier_g.png",
+    "imageEvil": "https://images.klutzbanana.com/characters_official/courtier_e.png",
     "ability": "Once per game, at night, choose a character: they are drunk for 3 nights & 3 days.",
     "nightOrder": {
     "firstNight": {
@@ -595,6 +610,7 @@
     "name": "Cult Leader",
     "team": "Townsfolk",
     "image": "https://images.klutzbanana.com/characters_official/cultleader_g.png",
+    "imageEvil": "https://images.klutzbanana.com/characters_official/cultleader_e.png",
     "ability": "Each night, you become the alignment of an alive neighbor. If all good players choose to join your cult, your team wins.",
     "nightOrder": {
     "firstNight": {
@@ -635,6 +651,7 @@
     "name": "Dreamer",
     "team": "Townsfolk",
     "image": "https://images.klutzbanana.com/characters_official/dreamer_g.png",
+    "imageEvil": "https://images.klutzbanana.com/characters_official/dreamer_e.png",
     "ability": "Each night, choose a player (not yourself or Travellers): you learn 1 good & 1 evil character, 1 of which is correct.",
     "nightOrder": {
     "firstNight": {
@@ -669,6 +686,7 @@
     "name": "Empath",
     "team": "Townsfolk",
     "image": "https://images.klutzbanana.com/characters_official/empath_g.png",
+    "imageEvil": "https://images.klutzbanana.com/characters_official/empath_e.png",
     "ability": "Each night, you learn how many of your 2 alive neighbors are evil.",
     "nightOrder": {
     "firstNight": {
@@ -705,6 +723,7 @@
     "name": "Engineer",
     "team": "Townsfolk",
     "image": "https://images.klutzbanana.com/characters_official/engineer_g.png",
+    "imageEvil": "https://images.klutzbanana.com/characters_official/engineer_e.png",
     "ability": "Once per game, at night, choose which Minions or which Demon is in play.",
     "nightOrder": {
     "firstNight": {
@@ -744,6 +763,7 @@
     "name": "Exorcist",
     "team": "Townsfolk",
     "image": "https://images.klutzbanana.com/characters_official/exorcist_g.png",
+    "imageEvil": "https://images.klutzbanana.com/characters_official/exorcist_e.png",
     "ability": "Each night*, choose a player (different to last night): the Demon, if chosen, learns who you are then doesn't wake tonight.",
     "nightOrder": {
     "firstNight": {
@@ -780,6 +800,7 @@
     "name": "Farmer",
     "team": "Townsfolk",
     "image": "https://images.klutzbanana.com/characters_official/farmer_g.png",
+    "imageEvil": "https://images.klutzbanana.com/characters_official/farmer_e.png",
     "ability": "When you die at night, an alive good player becomes a Farmer.",
     "nightOrder": {
     "firstNight": {
@@ -818,6 +839,7 @@
     "name": "Fisherman",
     "team": "Townsfolk",
     "image": "https://images.klutzbanana.com/characters_official/fisherman_g.png",
+    "imageEvil": "https://images.klutzbanana.com/characters_official/fisherman_e.png",
     "ability": "Once per game, during the day, visit the Storyteller for some advice to help your team win.",
     "nightOrder": {
     "firstNight": {
@@ -852,6 +874,7 @@
     "name": "Flowergirl",
     "team": "Townsfolk",
     "image": "https://images.klutzbanana.com/characters_official/flowergirl_g.png",
+    "imageEvil": "https://images.klutzbanana.com/characters_official/flowergirl_e.png",
     "ability": "Each night*, you learn if a Demon voted today.",
     "nightOrder": {
     "firstNight": {
@@ -889,6 +912,7 @@
     "name": "Fortune Teller",
     "team": "Townsfolk",
     "image": "https://images.klutzbanana.com/characters_official/fortuneteller_g.png",
+    "imageEvil": "https://images.klutzbanana.com/characters_official/fortuneteller_e.png",
     "ability": "Each night, choose 2 players: you learn if either is a Demon. There is a good player that registers as a Demon to you.",
     "nightOrder": {
     "firstNight": {
@@ -930,6 +954,7 @@
     "name": "Fool",
     "team": "Townsfolk",
     "image": "https://images.klutzbanana.com/characters_official/fool_g.png",
+    "imageEvil": "https://images.klutzbanana.com/characters_official/fool_e.png",
     "ability": "The 1st time you die, you don't.",
     "nightOrder": {
     "firstNight": {
@@ -962,6 +987,7 @@
     "name": "Gambler",
     "team": "Townsfolk",
     "image": "https://images.klutzbanana.com/characters_official/gambler_g.png",
+    "imageEvil": "https://images.klutzbanana.com/characters_official/gambler_e.png",
     "ability": "Each night*, choose a player & guess their character: if you guess wrong, you die.",
     "nightOrder": {
     "firstNight": {
@@ -997,6 +1023,7 @@
     "name": "General",
     "team": "Townsfolk",
     "image": "https://images.klutzbanana.com/characters_official/general_g.png",
+    "imageEvil": "https://images.klutzbanana.com/characters_official/general_e.png",
     "ability": "Each night, you learn which alignment the Storyteller believes is winning: good, evil, or neither.",
     "nightOrder": {
     "firstNight": {
@@ -1032,6 +1059,7 @@
     "name": "Gossip",
     "team": "Townsfolk",
     "image": "https://images.klutzbanana.com/characters_official/gossip_g.png",
+    "imageEvil": "https://images.klutzbanana.com/characters_official/gossip_e.png",
     "ability": "Each day, you may make a public statement. Tonight, if it was true, a player dies.",
     "nightOrder": {
     "firstNight": {
@@ -1067,6 +1095,7 @@
     "name": "Grandmother",
     "team": "Townsfolk",
     "image": "https://images.klutzbanana.com/characters_official/grandmother_g.png",
+    "imageEvil": "https://images.klutzbanana.com/characters_official/grandmother_e.png",
     "ability": "You start knowing a good player & their character. If the Demon kills them, you die too.",
     "nightOrder": {
     "firstNight": {
@@ -1106,6 +1135,7 @@
     "name": "High Priestess",
     "team": "Townsfolk",
     "image": "https://images.klutzbanana.com/characters_official/highpriestess_g.png",
+    "imageEvil": "https://images.klutzbanana.com/characters_official/highpriestess_e.png",
     "ability": "Each night, learn which player the Storyteller believes you should talk to most.",
     "nightOrder": {
     "firstNight": {
@@ -1139,6 +1169,7 @@
     "name": "Huntsman",
     "team": "Townsfolk",
     "image": "https://images.klutzbanana.com/characters_official/huntsman_g.png",
+    "imageEvil": "https://images.klutzbanana.com/characters_official/huntsman_e.png",
     "ability": "Once per game, at night, choose a living player: the Damsel, if chosen, becomes a not-in-play Townsfolk. [+the Damsel]",
     "nightOrder": {
     "firstNight": {
@@ -1180,6 +1211,7 @@
     "name": "Innkeeper",
     "team": "Townsfolk",
     "image": "https://images.klutzbanana.com/characters_official/innkeeper_g.png",
+    "imageEvil": "https://images.klutzbanana.com/characters_official/innkeeper_e.png",
     "ability": "Each night*, choose 2 players: they can't die tonight, but 1 is drunk until dusk.",
     "nightOrder": {
     "firstNight": {
@@ -1213,6 +1245,7 @@
     "name": "Investigator",
     "team": "Townsfolk",
     "image": "https://images.klutzbanana.com/characters_official/investigator_g.png",
+    "imageEvil": "https://images.klutzbanana.com/characters_official/investigator_e.png",
     "ability": "You start knowing that 1 of 2 players is a particular Minion.",
     "nightOrder": {
     "firstNight": {
@@ -1244,6 +1277,7 @@
     "name": "Juggler",
     "team": "Townsfolk",
     "image": "https://images.klutzbanana.com/characters_official/juggler_g.png",
+    "imageEvil": "https://images.klutzbanana.com/characters_official/juggler_e.png",
     "ability": "On your 1st day, publicly guess up to 5 players' characters. That night, you learn how many you got correct.",
     "nightOrder": {
     "firstNight": {
@@ -1284,6 +1318,7 @@
     "name": "King",
     "team": "Townsfolk",
     "image": "https://images.klutzbanana.com/characters_official/king_g.png",
+    "imageEvil": "https://images.klutzbanana.com/characters_official/king_e.png",
     "ability": "Each night, if the dead equal or outnumber the living, you learn 1 alive character. The Demon knows you are the King.",
     "nightOrder": {
     "firstNight": {
@@ -1324,6 +1359,7 @@
     "name": "Knight",
     "team": "Townsfolk",
     "image": "https://images.klutzbanana.com/characters_official/knight_g.png",
+    "imageEvil": "https://images.klutzbanana.com/characters_official/knight_e.png",
     "ability": "You start knowing 2 players that are not the Demon.",
     "nightOrder": {
     "firstNight": {
@@ -1357,6 +1393,7 @@
     "name": "Librarian",
     "team": "Townsfolk",
     "image": "https://images.klutzbanana.com/characters_official/librarian_g.png",
+    "imageEvil": "https://images.klutzbanana.com/characters_official/librarian_e.png",
     "ability": "You start knowing that 1 of 2 players is a particular Outsider. (Or that zero are in play.)",
     "nightOrder": {
     "firstNight": {
@@ -1392,6 +1429,7 @@
     "name": "Lycanthrope",
     "team": "Townsfolk",
     "image": "https://images.klutzbanana.com/characters_official/lycanthrope_g.png",
+    "imageEvil": "https://images.klutzbanana.com/characters_official/lycanthrope_e.png",
     "ability": "Each night*, choose an alive player. If good, they die & the Demon doesn’t kill tonight. One good player registers as evil.",
     "nightOrder": {
     "firstNight": {
@@ -1437,6 +1475,7 @@
     "name": "Magician",
     "team": "Townsfolk",
     "image": "https://images.klutzbanana.com/characters_official/magician_g.png",
+    "imageEvil": "https://images.klutzbanana.com/characters_official/magician_e.png",
     "ability": "The Demon thinks you are a Minion. Minions think you are a Demon.",
     "nightOrder": {
     "firstNight": {
@@ -1474,6 +1513,7 @@
     "name": "Mathematician",
     "team": "Townsfolk",
     "image": "https://images.klutzbanana.com/characters_official/mathematician_g.png",
+    "imageEvil": "https://images.klutzbanana.com/characters_official/mathematician_e.png",
     "ability": "Each night, you learn how many players’ abilities worked abnormally (since dawn) due to another character's ability.",
     "nightOrder": {
     "firstNight": {
@@ -1521,6 +1561,7 @@
     "name": "Mayor",
     "team": "Townsfolk",
     "image": "https://images.klutzbanana.com/characters_official/mayor_g.png",
+    "imageEvil": "https://images.klutzbanana.com/characters_official/mayor_e.png",
     "ability": "If only 3 players live & no execution occurs, your team wins. If you die at night, another player might die instead.",
     "nightOrder": {
     "firstNight": {
@@ -1563,6 +1604,7 @@
     "name": "Minstrel",
     "team": "Townsfolk",
     "image": "https://images.klutzbanana.com/characters_official/minstrel_g.png",
+    "imageEvil": "https://images.klutzbanana.com/characters_official/minstrel_e.png",
     "ability": "When a Minion dies by execution, all other players (except Travellers) are drunk until dusk tomorrow.",
     "nightOrder": {
     "firstNight": {
@@ -1603,6 +1645,7 @@
     "name": "Monk",
     "team": "Townsfolk",
     "image": "https://images.klutzbanana.com/characters_official/monk_g.png",
+    "imageEvil": "https://images.klutzbanana.com/characters_official/monk_e.png",
     "ability": "Each night*, choose a player (not yourself): they are safe from the Demon tonight.",
     "nightOrder": {
     "firstNight": {
@@ -1641,6 +1684,7 @@
     "name": "Nightwatchman",
     "team": "Townsfolk",
     "image": "https://images.klutzbanana.com/characters_official/nightwatchman_g.png",
+    "imageEvil": "https://images.klutzbanana.com/characters_official/nightwatchman_e.png",
     "ability": "Once per game, at night, choose a player: they learn you are the Nightwatchman.",
     "nightOrder": {
     "firstNight": {
@@ -1679,6 +1723,7 @@
     "name": "Noble",
     "team": "Townsfolk",
     "image": "https://images.klutzbanana.com/characters_official/noble_g.png",
+    "imageEvil": "https://images.klutzbanana.com/characters_official/noble_e.png",
     "ability": "You start knowing 3 players, 1 and only 1 of which is evil.",
     "nightOrder": {
     "firstNight": {
@@ -1715,6 +1760,7 @@
     "name": "Oracle",
     "team": "Townsfolk",
     "image": "https://images.klutzbanana.com/characters_official/oracle_g.png",
+    "imageEvil": "https://images.klutzbanana.com/characters_official/oracle_e.png",
     "ability": "Each night*, you learn how many dead players are evil.",
     "nightOrder": {
     "firstNight": {
@@ -1751,6 +1797,7 @@
     "name": "Pacifist",
     "team": "Townsfolk",
     "image": "https://images.klutzbanana.com/characters_official/pacifist_g.png",
+    "imageEvil": "https://images.klutzbanana.com/characters_official/pacifist_e.png",
     "ability": "Executed good players might not die.",
     "nightOrder": {
     "firstNight": {
@@ -1788,6 +1835,7 @@
     "name": "Philosopher",
     "team": "Townsfolk",
     "image": "https://images.klutzbanana.com/characters_official/philosopher_g.png",
+    "imageEvil": "https://images.klutzbanana.com/characters_official/philosopher_e.png",
     "ability": "Once per game, at night, choose a good character: gain that ability. If this character is in play, they are drunk.",
     "nightOrder": {
     "firstNight": {
@@ -1835,6 +1883,7 @@
     "name": "Pixie",
     "team": "Townsfolk",
     "image": "https://images.klutzbanana.com/characters_official/pixie_g.png",
+    "imageEvil": "https://images.klutzbanana.com/characters_official/pixie_e.png",
     "ability": "You start knowing 1 in-play Townsfolk. If you were mad that you were this character, you gain their ability when they die.",
     "nightOrder": {
     "firstNight": {
@@ -1879,6 +1928,7 @@
     "name": "Poppy Grower",
     "team": "Townsfolk",
     "image": "https://images.klutzbanana.com/characters_official/poppygrower_g.png",
+    "imageEvil": "https://images.klutzbanana.com/characters_official/poppygrower_e.png",
     "ability": "Minions & Demons do not know each other. If you die, they learn who each other are that night.",
     "nightOrder": {
     "firstNight": {
@@ -1921,6 +1971,7 @@
     "name": "Preacher",
     "team": "Townsfolk",
     "image": "https://images.klutzbanana.com/characters_official/preacher_g.png",
+    "imageEvil": "https://images.klutzbanana.com/characters_official/preacher_e.png",
     "ability": "Each night, choose a player: a Minion, if chosen, learns this. All chosen Minions have no ability.",
     "nightOrder": {
     "firstNight": {
@@ -1960,6 +2011,7 @@
     "name": "Princess",
     "team": "Townsfolk",
     "image": "https://images.klutzbanana.com/characters_official/princess_g.png",
+    "imageEvil": "https://images.klutzbanana.com/characters_official/princess_e.png",
     "ability": "On your 1st day, if you nominated & executed a player, the Demon doesn't kill tonight.",
     "nightOrder": {
     "firstNight": {
@@ -2007,6 +2059,7 @@
     "name": "Professor",
     "team": "Townsfolk",
     "image": "https://images.klutzbanana.com/characters_official/professor_g.png",
+    "imageEvil": "https://images.klutzbanana.com/characters_official/professor_e.png",
     "ability": "Once per game, at night*, choose a dead player: if they are a Townsfolk, they are resurrected.",
     "nightOrder": {
     "firstNight": {
@@ -2047,6 +2100,7 @@
     "name": "Ravenkeeper",
     "team": "Townsfolk",
     "image": "https://images.klutzbanana.com/characters_official/ravenkeeper_g.png",
+    "imageEvil": "https://images.klutzbanana.com/characters_official/ravenkeeper_e.png",
     "ability": "If you die at night, you are woken to choose a player: you learn their character.",
     "nightOrder": {
     "firstNight": {
@@ -2084,6 +2138,7 @@
     "name": "Sage",
     "team": "Townsfolk",
     "image": "https://images.klutzbanana.com/characters_official/sage_g.png",
+    "imageEvil": "https://images.klutzbanana.com/characters_official/sage_e.png",
     "ability": "If the Demon kills you, you learn that it is 1 of 2 players.",
     "nightOrder": {
     "firstNight": {
@@ -2125,6 +2180,7 @@
     "name": "Sailor",
     "team": "Townsfolk",
     "image": "https://images.klutzbanana.com/characters_official/sailor_g.png",
+    "imageEvil": "https://images.klutzbanana.com/characters_official/sailor_e.png",
     "ability": "Each night, choose an alive player: either you or they are drunk until dusk. You can't die.",
     "nightOrder": {
     "firstNight": {
@@ -2169,6 +2225,7 @@
     "name": "Savant",
     "team": "Townsfolk",
     "image": "https://images.klutzbanana.com/characters_official/savant_g.png",
+    "imageEvil": "https://images.klutzbanana.com/characters_official/savant_e.png",
     "ability": "Each day, you may visit the Storyteller to learn 2 things in private: 1 is true & 1 is false.",
     "nightOrder": {
     "firstNight": {
@@ -2209,6 +2266,7 @@
     "name": "Seamstress",
     "team": "Townsfolk",
     "image": "https://images.klutzbanana.com/characters_official/seamstress_g.png",
+    "imageEvil": "https://images.klutzbanana.com/characters_official/seamstress_e.png",
     "ability": "Once per game, at night, choose 2 players (not yourself): you learn if they are the same alignment.",
     "nightOrder": {
     "firstNight": {
@@ -2248,6 +2306,7 @@
     "name": "Shugenja",
     "team": "Townsfolk",
     "image": "https://images.klutzbanana.com/characters_official/shugenja_g.png",
+    "imageEvil": "https://images.klutzbanana.com/characters_official/shugenja_e.png",
     "ability": "You start knowing if your closest evil player is clockwise or anti-clockwise. If equidistant, this info is arbitrary.",
     "nightOrder": {
     "firstNight": {
@@ -2285,6 +2344,7 @@
     "name": "Slayer",
     "team": "Townsfolk",
     "image": "https://images.klutzbanana.com/characters_official/slayer_g.png",
+    "imageEvil": "https://images.klutzbanana.com/characters_official/slayer_e.png",
     "ability": "Once per game, during the day, publicly choose a player: if they are the Demon, they die.",
     "nightOrder": {
     "firstNight": {
@@ -2325,6 +2385,7 @@
     "name": "Snake Charmer",
     "team": "Townsfolk",
     "image": "https://images.klutzbanana.com/characters_official/snakecharmer_g.png",
+    "imageEvil": "https://images.klutzbanana.com/characters_official/snakecharmer_e.png",
     "ability": "Each night, choose an alive player: a chosen Demon swaps characters & alignments with you & is then poisoned.",
     "nightOrder": {
     "firstNight": {
@@ -2368,6 +2429,7 @@
     "name": "Soldier",
     "team": "Townsfolk",
     "image": "https://images.klutzbanana.com/characters_official/soldier_g.png",
+    "imageEvil": "https://images.klutzbanana.com/characters_official/soldier_e.png",
     "ability": "You are safe from the Demon.",
     "nightOrder": {
     "firstNight": {
@@ -2406,6 +2468,7 @@
     "name": "Steward",
     "team": "Townsfolk",
     "image": "https://images.klutzbanana.com/characters_official/steward_g.png",
+    "imageEvil": "https://images.klutzbanana.com/characters_official/steward_e.png",
     "ability": "You start knowing 1 good player.",
     "nightOrder": {
     "firstNight": {
@@ -2443,6 +2506,7 @@
     "name": "Tea Lady",
     "team": "Townsfolk",
     "image": "https://images.klutzbanana.com/characters_official/tealady_g.png",
+    "imageEvil": "https://images.klutzbanana.com/characters_official/tealady_e.png",
     "ability": "If both your alive neighbors are good, they can't die.",
     "nightOrder": {
     "firstNight": {
@@ -2483,6 +2547,7 @@
     "name": "Town Crier",
     "team": "Townsfolk",
     "image": "https://images.klutzbanana.com/characters_official/towncrier_g.png",
+    "imageEvil": "https://images.klutzbanana.com/characters_official/towncrier_e.png",
     "ability": "Each night*, you learn if a Minion nominated today.",
     "nightOrder": {
     "firstNight": {
