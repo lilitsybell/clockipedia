@@ -3372,4 +3372,79 @@ if(
     );
 
 }
+const howToRunButton =
+    document.getElementById(
+        "openErratanomiconHowToRun"
+    );
+
+const howToRunModal =
+    document.getElementById(
+        "erratanomiconHowToRunModal"
+    );
+
+const closeHowToRunButton =
+    document.getElementById(
+        "closeErratanomiconHowToRun"
+    );
+
+const howToRunBackdrop =
+    document.querySelector(
+        "[data-how-to-close]"
+    );
+
+
+function openHowToRun(){
+
+    if(!howToRunModal){
+        return;
+    }
+
+    howToRunModal.classList.remove(
+        "hidden"
+    );
+
+}
+
+
+function closeHowToRun(){
+
+    if(!howToRunModal){
+        return;
+    }
+
+    howToRunModal.classList.add(
+        "hidden"
+    );
+
+}
+
+
+if(howToRunButton){
+
+    howToRunButton.addEventListener(
+        "click",
+        openHowToRun
+    );
+
+}
+
+
+if(closeHowToRunButton){
+
+    closeHowToRunButton.addEventListener(
+        "click",
+        closeHowToRun
+    );
+
+}
+
+
+if(howToRunBackdrop){
+
+    howToRunBackdrop.addEventListener(
+        "click",
+        closeHowToRun
+    );
+
+}
 initializeErratanomicon();
