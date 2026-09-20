@@ -384,35 +384,36 @@
     top:50%;
     right:16px;
 
-    width:34px;
-    height:34px;
+    width:38px;
+    height:38px;
+
+    padding:0;
 
     transform:translateY(-50%);
 
-    border:2px solid #d8d8d8;
-    border-radius:50%;
+    border:0;
 
-    background:white;
+    background:
+        transparent
+        url("/images/icons/elimination-skull-gray.png")
+        center / contain
+        no-repeat;
 
     cursor:pointer;
 
     transition:
-        background .15s ease,
-        border-color .15s ease,
         transform .15s ease;
 }
 
 .erratanomicon-eliminate-character:hover{
-    border-color:var(--red);
-
     transform:
         translateY(-50%)
-        scale(1.06);
+        scale(1.08);
 }
 
 .erratanomicon-eliminate-character.selected{
-    border-color:var(--red);
-    background:var(--red);
+    background-image:
+        url("/images/icons/elimination-skull-red.png");
 }
 .erratanomicon-character{
     padding-right:65px;
