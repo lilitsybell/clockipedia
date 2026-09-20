@@ -663,3 +663,53 @@
         1px solid
         var(--border);
 }
+/* ===========================
+   Skipped Characters
+=========================== */
+
+.erratanomicon-skipped-characters{
+    display:flex;
+    flex-wrap:wrap;
+    gap:14px;
+
+    margin-top:14px;
+}
+
+.erratanomicon-skipped-character{
+    width:90px;
+
+    padding:10px;
+
+    border:1px solid var(--border);
+    border-radius:10px;
+
+    background:var(--light-gray);
+
+    text-align:center;
+}
+
+.erratanomicon-skipped-character img{
+    display:block;
+
+    width:60px;
+    height:60px;
+
+    margin:0 auto 6px;
+
+    object-fit:contain;
+
+    filter:
+        grayscale(.6)
+        saturate(.65);
+
+    opacity:.8;
+}
+
+.erratanomicon-skipped-character strong{
+    display:block;
+
+    color:var(--gray);
+
+    font-size:10px;
+    line-height:1.2;
+}
