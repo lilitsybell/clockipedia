@@ -678,7 +678,7 @@ downloadGoodButton.addEventListener(
 
         downloadToken(
             goodCanvas,
-            "g"
+            "erratanomicon_g"
         );
 
     }
@@ -692,7 +692,7 @@ downloadEvilButton.addEventListener(
 
         downloadToken(
             evilCanvas,
-            "e"
+            "erratanomicon_e"
         );
 
     }
