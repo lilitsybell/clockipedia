@@ -659,11 +659,11 @@ function buildPendingUpdate(){
     }
 
 
-    pendingUpdate = {
-        removals,
-        replacements:{}
-    };
-
+pendingUpdate = {
+    removals,
+    replacements:{},
+    skipped:[]
+};
 
     /*
         Roll the surprise replacements.
@@ -717,6 +717,15 @@ function choosePendingReplacement(
             removedCharacters
         );
 
+pendingUpdate.skipped.forEach(
+    slug => {
+
+        unavailable.add(
+            slug
+        );
+
+    }
+);
 
     /*
         Anything being removed during this
@@ -1038,6 +1047,111 @@ function renderUpdateModal(){
         }
     );
 
+    /*
+    Skipped Characters
+*/
+
+if(
+    pendingUpdate.skipped.length >
+    0
+){
+
+    const skippedHeading =
+        document.createElement(
+            "h3"
+        );
+
+    skippedHeading.textContent =
+        "Skipped Characters";
+
+    container.appendChild(
+        skippedHeading
+    );
+
+
+    const skippedNote =
+        document.createElement(
+            "p"
+        );
+
+    skippedNote.className =
+        "erratanomicon-update-note";
+
+    skippedNote.textContent =
+        "These characters were rejected as replacements and will be added to the graveyard.";
+
+    container.appendChild(
+        skippedNote
+    );
+
+
+    const skippedList =
+        document.createElement(
+            "div"
+        );
+
+    skippedList.className =
+        "erratanomicon-skipped-characters";
+
+
+    pendingUpdate.skipped.forEach(
+        slug => {
+
+            const character =
+                officialCharacters[
+                    slug
+                ];
+
+            if(!character){
+                return;
+            }
+
+
+            const image =
+                Array.isArray(
+                    character.image
+                )
+                    ? character.image[0]
+                    : character.image;
+
+
+            const item =
+                document.createElement(
+                    "div"
+                );
+
+            item.className =
+                "erratanomicon-skipped-character";
+
+
+            item.innerHTML = `
+
+                <img
+                    src="${image}"
+                    alt="${character.name}"
+                >
+
+                <strong>
+                    ${character.name}
+                </strong>
+
+            `;
+
+
+            skippedList.appendChild(
+                item
+            );
+
+        }
+    );
+
+
+    container.appendChild(
+        skippedList
+    );
+
+}
+
 }
 function createReplacementReveal(
     removal
@@ -1201,31 +1315,27 @@ function skipPendingReplacement(
 
 
     /*
-        The rejected replacement becomes
-        permanently eliminated as part of
-        this update.
+        Remember this character as permanently
+        eliminated, but do NOT treat it as a
+        script character that needs replacing.
     */
 
     if(
-        !pendingUpdate.removals.some(
-            removal =>
-                removal.slug ===
-                skippedSlug
+        !pendingUpdate.skipped.includes(
+            skippedSlug
         )
     ){
 
-        pendingUpdate.removals.push({
-            slug:skippedSlug,
-            reason:
-                "Skipped as a replacement."
-        });
+        pendingUpdate.skipped.push(
+            skippedSlug
+        );
 
     }
 
 
     /*
-        Remove the old roll before finding
-        another replacement.
+        Clear the current replacement before
+        rolling another one.
     */
 
     pendingUpdate.replacements[
