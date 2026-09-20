@@ -365,3 +365,8 @@
 
     outline:none;
 }
+.erratanomicon-script-controls{
+    display:flex;
+    justify-content:flex-end;
+    margin-bottom:18px;
+}
