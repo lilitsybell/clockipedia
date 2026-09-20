@@ -652,10 +652,10 @@
 .erratanomicon-skip-replacement:hover{
     color:var(--red);
 }
-
 .erratanomicon-modal-footer{
     display:flex;
     justify-content:flex-end;
+    gap:10px;
 
     margin-top:30px;
     padding-top:20px;
