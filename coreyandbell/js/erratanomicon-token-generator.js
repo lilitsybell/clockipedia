@@ -437,7 +437,7 @@ async function drawCharacterImage(
 
 
     const splotchSize =
-        canvas.width * .88;
+        canvas.width * 1;
 
 
 
