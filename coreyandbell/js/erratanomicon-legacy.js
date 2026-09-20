@@ -692,15 +692,19 @@ function downloadErratanomiconScript(){
                 Custom Loric
             */
 
-            if(slug === "erratanomicon"){
+if(slug === "erratanomicon"){
 
-                script.push({
-                    ...character,
-                    id:"erratanomicon"
-                });
+    const {
+        slug:unusedSlug,
+        ...characterData
+    } = character;
 
-                return;
-            }
+    script.push(
+        characterData
+    );
+
+    return;
+}
 
 
             /*
