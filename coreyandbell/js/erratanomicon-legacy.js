@@ -11,7 +11,7 @@ let pendingEliminations =
     new Set();
 let pendingUpdate =
     null;
-
+let pendingAbilityEdits = [];
 
 /* ==========================================
    Elements
@@ -976,21 +976,87 @@ function renderUpdateModal(){
         editsHeading
     );
 
+if(
+    pendingAbilityEdits.length ===
+    0
+){
 
-    const editsNote =
+    const empty =
         document.createElement(
             "p"
         );
 
-    editsNote.className =
+    empty.className =
         "erratanomicon-update-note";
 
-    editsNote.textContent =
-        "All ability changes made during this game will be saved.";
+    empty.textContent =
+        "No abilities were edited this game.";
 
     container.appendChild(
-        editsNote
+        empty
     );
+
+}else{
+
+    const editList =
+        document.createElement(
+            "div"
+        );
+
+    editList.className =
+        "erratanomicon-ability-edit-list";
+
+
+    pendingAbilityEdits.forEach(
+        edit => {
+
+            const item =
+                document.createElement(
+                    "div"
+                );
+
+            item.className =
+                "erratanomicon-ability-edit";
+
+
+            item.innerHTML = `
+
+                <strong>
+                    ${edit.character}
+                </strong>
+
+                <div class="erratanomicon-ability-edit-change">
+
+                    <span class="erratanomicon-edit-old">
+                        ${edit.from}
+                    </span>
+
+                    <span class="erratanomicon-edit-arrow">
+                        →
+                    </span>
+
+                    <span class="erratanomicon-edit-new">
+                        ${edit.to}
+                    </span>
+
+                </div>
+
+            `;
+
+
+            editList.appendChild(
+                item
+            );
+
+        }
+    );
+
+
+    container.appendChild(
+        editList
+    );
+
+}
 
 
     /*
@@ -1682,23 +1748,60 @@ input.addEventListener(
 
     function saveWord(){
 
-        const newWord =
-            input.value.trim();
+    const oldWord =
+        words[
+            wordIndex
+        ];
 
-        if(newWord){
-            words[wordIndex] =
-                newWord;
-        }
+    const newWord =
+        input.value.trim();
 
-        character.ability =
-            words.join(" ");
 
-        renderAbilityWords(
-            container,
-            character
-        );
+    if(
+        newWord &&
+        newWord !== oldWord
+    ){
+
+        /*
+            Record exactly what changed
+            during this game.
+        */
+
+        pendingAbilityEdits.push({
+
+            slug:
+                character.slug,
+
+            character:
+                character.name,
+
+            from:
+                oldWord,
+
+            to:
+                newWord
+
+        });
+
+
+        words[
+            wordIndex
+        ] =
+            newWord;
 
     }
+
+
+    character.ability =
+        words.join(" ");
+
+
+    renderAbilityWords(
+        container,
+        character
+    );
+
+}
 
 
 
@@ -2241,21 +2344,10 @@ function commitPendingUpdate(){
         }
     );
 
-
-    /*
-        This game's elimination selections
-        are now finished.
-    */
-
     pendingEliminations.clear();
 
-
-    /*
-        Redraw the page so the new characters
-        appear and the graveyard updates.
-    */
-
     renderErratanomiconScript();
+    pendingAbilityEdits = [];
 
 }
 function downloadErratanomiconScript(){
