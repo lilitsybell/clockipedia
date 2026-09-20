@@ -63,41 +63,45 @@ async function loadTokenCharacters(){
 }
 
 
-
 /* ==========================================
    Build Character Dropdown
 ========================================== */
 
-const excludedTeams =
-    new Set([
-        "traveller",
-        "travellers",
-        "loric",
-        "fabled"
-    ]);
+function buildCharacterDropdown(){
 
-const characters =
-    Object.entries(
-        tokenCharacters
-    )
-    .map(
-        ([slug,character]) => ({
-            slug,
-            ...character
-        })
-    )
-    .filter(
-        character =>
-            !excludedTeams.has(
-                character.team.toLowerCase()
-            )
-    )
-    .sort(
-        (a,b) =>
-            a.name.localeCompare(
-                b.name
-            )
-    );
+    const excludedTeams =
+        new Set([
+            "traveller",
+            "travellers",
+            "loric",
+            "fabled"
+        ]);
+
+
+
+    const characters =
+        Object.entries(
+            tokenCharacters
+        )
+        .map(
+            ([slug,character]) => ({
+                slug,
+                ...character
+            })
+        )
+        .filter(
+            character =>
+                !excludedTeams.has(
+                    character.team.toLowerCase()
+                )
+        )
+        .sort(
+            (a,b) =>
+                a.name.localeCompare(
+                    b.name
+                )
+        );
+
 
 
     characters.forEach(
@@ -126,9 +130,6 @@ const characters =
     );
 
 }
-
-
-
 /* ==========================================
    Clear Canvas
 ========================================== */
