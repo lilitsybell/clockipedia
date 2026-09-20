@@ -4,7 +4,7 @@ console.log(
 
 let erratanomiconData = {};
 let officialCharacters = {};
-
+let erratanomiconSimilarity = {};
 let erratanomiconCharacterOrder = [];
 let removedCharacters = new Set();
 
@@ -27,20 +27,26 @@ const scriptContainer =
 
 async function loadErratanomiconData(){
 
-    const [
-        scriptResponse,
-        characterResponse
-    ] =
-        await Promise.all([
+const [
+    scriptResponse,
+    characterResponse,
+    similarityResponse
+] =
+    await Promise.all([
 
-            fetch(
-                "/coreyandbell/data/erratanomicon-legacy.json"
-            ),
-fetch(
-    "/coreyandbell/data/erratanomicon-characters.json"
-)
+        fetch(
+            "/coreyandbell/data/erratanomicon-legacy.json"
+        ),
 
-        ]);
+        fetch(
+            "/coreyandbell/data/erratanomicon-characters.json"
+        ),
+
+        fetch(
+            "/coreyandbell/data/erratanomicon-similarity.json"
+        )
+
+    ]);
 
 
 
@@ -66,7 +72,14 @@ fetch(
 
     erratanomiconData =
         await scriptResponse.json();
+if(!similarityResponse.ok){
+    throw new Error(
+        "Failed to load Erratanomicon similarity data."
+    );
+}
 
+erratanomiconSimilarity =
+    await similarityResponse.json();
 
 
 const characterList =
