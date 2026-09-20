@@ -400,11 +400,11 @@ input.value =
         wordIndex
     ];
 
-input.size =
-    Math.max(
-        words[wordIndex].length,
-        2
-    );
+const originalWidth =
+    wordButton.offsetWidth;
+
+input.style.width =
+    `${originalWidth}px`;
 
 wordButton.replaceWith(
     input
@@ -412,7 +412,23 @@ wordButton.replaceWith(
 
 input.focus();
 input.select();
+input.addEventListener(
+    "input",
+    () => {
 
+        input.style.width =
+            "1px";
+
+        input.style.width =
+            `${
+                Math.max(
+                    originalWidth,
+                    input.scrollWidth
+                )
+            }px`;
+
+    }
+);
 
     function saveWord(){
 
