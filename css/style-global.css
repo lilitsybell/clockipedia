@@ -2638,3 +2638,230 @@ li{
     }
 
 }
+/* ==========================================
+   Mobile Navigation
+========================================== */
+
+.mobile-sidebar-header{
+    display:none;
+}
+
+
+@media(max-width:700px){
+
+    /* ------------------------------------------
+       Sidebar becomes top navigation
+    ------------------------------------------ */
+
+    #sidebar{
+        position:sticky;
+
+        top:0;
+        left:auto;
+
+        z-index:1000;
+
+        width:100%;
+        height:auto;
+
+        padding:0;
+
+        overflow:visible;
+
+        border-bottom:
+            1px solid
+            var(--border);
+
+        background:white;
+    }
+
+
+    /* ------------------------------------------
+       Mobile Header
+    ------------------------------------------ */
+
+    .mobile-sidebar-header{
+        height:64px;
+
+        display:flex;
+
+        align-items:center;
+        justify-content:space-between;
+
+        gap:20px;
+
+        padding:
+            8px 15px;
+    }
+
+
+    /* Mobile Logo */
+
+    .mobile-logo{
+        display:block;
+
+        width:165px;
+
+        text-decoration:none;
+    }
+
+
+    .mobile-logo img{
+        width:100%;
+
+        display:block;
+    }
+
+
+    /* ------------------------------------------
+       Hamburger
+    ------------------------------------------ */
+
+    .mobile-menu-toggle{
+        width:42px;
+        height:42px;
+
+        display:flex;
+
+        flex-direction:column;
+
+        align-items:center;
+        justify-content:center;
+
+        gap:5px;
+
+        flex-shrink:0;
+
+        padding:0;
+
+        border:0;
+        border-radius:9px;
+
+        background:
+            rgba(102,102,153,.08);
+
+        cursor:pointer;
+    }
+
+
+    .mobile-menu-toggle span{
+        width:20px;
+        height:2px;
+
+        display:block;
+
+        border-radius:2px;
+
+        background:
+            var(--purple);
+
+        transition:
+            transform .18s ease,
+            opacity .18s ease;
+    }
+
+
+    /* Turn hamburger into X */
+
+    #sidebar.mobile-open
+    .mobile-menu-toggle span:nth-child(1){
+        transform:
+            translateY(7px)
+            rotate(45deg);
+    }
+
+
+    #sidebar.mobile-open
+    .mobile-menu-toggle span:nth-child(2){
+        opacity:0;
+    }
+
+
+    #sidebar.mobile-open
+    .mobile-menu-toggle span:nth-child(3){
+        transform:
+            translateY(-7px)
+            rotate(-45deg);
+    }
+
+
+    /* ------------------------------------------
+       Collapsed Menu
+    ------------------------------------------ */
+
+    .sidebar-content{
+        display:none;
+
+        padding:
+            12px 15px
+            18px;
+
+        border-top:
+            1px solid
+            var(--border);
+
+        background:white;
+    }
+
+
+    #sidebar.mobile-open
+    .sidebar-content{
+        display:block;
+    }
+
+
+    /* Desktop logo isn't needed inside menu */
+
+    .sidebar-content > .logo{
+        display:none;
+    }
+
+
+    /* ------------------------------------------
+       Search
+    ------------------------------------------ */
+
+    .sidebar-content .search-box{
+        margin-bottom:12px;
+    }
+
+
+    .sidebar-content .search-box input{
+        height:44px;
+    }
+
+
+    /* ------------------------------------------
+       Navigation
+    ------------------------------------------ */
+
+    .sidebar-nav{
+        gap:3px;
+    }
+
+
+    .nav-link{
+        padding:
+            11px 12px;
+
+        font-size:16px;
+    }
+
+
+    .nav-link:hover{
+        transform:none;
+    }
+
+
+    /* ------------------------------------------
+       Main Content
+    ------------------------------------------ */
+
+    #content{
+        min-height:
+            calc(100vh - 64px);
+
+        margin-left:0;
+    }
+
+}
