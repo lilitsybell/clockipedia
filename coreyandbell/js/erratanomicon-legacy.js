@@ -1308,6 +1308,255 @@ if(slug === "erratanomicon"){
     );
 
 }
+function importErratanomiconScript(
+    file
+){
+
+    const reader =
+        new FileReader();
+
+
+    reader.addEventListener(
+        "load",
+        () => {
+
+            try{
+
+                const importedScript =
+                    JSON.parse(
+                        reader.result
+                    );
+
+
+                if(
+                    !Array.isArray(
+                        importedScript
+                    )
+                ){
+                    throw new Error(
+                        "Script is not a JSON array."
+                    );
+                }
+
+
+                /*
+                    Find the Erratanomicon.
+
+                    We identify it by name because
+                    its ID now contains save data.
+                */
+
+                const importedErratanomicon =
+                    importedScript.find(
+                        entry =>
+                            typeof entry ===
+                                "object" &&
+                            entry.name ===
+                                "Erratanomicon"
+                    );
+
+
+                if(
+                    !importedErratanomicon
+                ){
+                    throw new Error(
+                        "This script does not contain the Erratanomicon."
+                    );
+                }
+
+
+                /*
+                    Restore the permanent
+                    removed-character state.
+                */
+
+                if(
+                    importedErratanomicon.id
+                        .startsWith(
+                            "el1_"
+                        )
+                ){
+
+                    decodeRemovedCharacters(
+                        importedErratanomicon.id
+                            .slice(4)
+                    );
+
+                }else{
+
+                    removedCharacters.clear();
+
+                }
+
+
+                /*
+                    Build the new current roster.
+                */
+
+                const importedRoster =
+                    [];
+
+
+                importedScript.forEach(
+                    entry => {
+
+                        if(
+                            typeof entry !==
+                            "object" ||
+                            !entry ||
+                            entry.id ===
+                                "_meta"
+                        ){
+                            return;
+                        }
+
+
+                        /*
+                            Erratanomicon is handled
+                            separately because its ID
+                            is the save-state code.
+                        */
+
+                        if(
+                            entry.name ===
+                                "Erratanomicon"
+                        ){
+
+                            importedRoster.push(
+                                "erratanomicon"
+                            );
+
+                            return;
+
+                        }
+
+
+                        /*
+                            Our Erratanomicon character
+                            IDs use this prefix.
+                        */
+
+                        if(
+                            !entry.id ||
+                            !entry.id.startsWith(
+                                "erratanomicon_"
+                            )
+                        ){
+                            return;
+                        }
+
+
+                        const slug =
+                            entry.id.replace(
+                                "erratanomicon_",
+                                ""
+                            );
+
+
+                        /*
+                            Update the database object
+                            with the imported version.
+
+                            This restores edited abilities
+                            and all other exported data.
+                        */
+
+                        officialCharacters[
+                            slug
+                        ] = {
+                            ...entry,
+                            slug
+                        };
+
+
+                        importedRoster.push(
+                            slug
+                        );
+
+                    }
+                );
+
+
+                if(
+                    importedRoster.length ===
+                    0
+                ){
+                    throw new Error(
+                        "No Erratanomicon characters were found."
+                    );
+                }
+
+
+                /*
+                    Restore the imported Loric data
+                    while keeping our internal slug.
+                */
+
+                erratanomiconData
+                    .customCharacters
+                    .erratanomicon = {
+
+                        ...importedErratanomicon,
+
+                        id:
+                            "erratanomicon",
+
+                        team:
+                            "Loric",
+
+                        slug:
+                            "erratanomicon"
+
+                    };
+
+
+                /*
+                    Replace the current roster.
+                */
+
+                erratanomiconData.characters =
+                    importedRoster;
+
+
+                /*
+                    Redraw everything.
+                */
+
+                renderErratanomiconScript();
+
+
+                console.log(
+                    "Imported Erratanomicon script."
+                );
+
+                console.log(
+                    "Removed characters:",
+                    [...removedCharacters]
+                );
+
+
+            }catch(error){
+
+                console.error(
+                    "Import failed:",
+                    error
+                );
+
+                alert(
+                    "That file could not be loaded as an Erratanomicon Legacy script."
+                );
+
+            }
+
+        }
+    );
+
+
+    reader.readAsText(
+        file
+    );
+
+}
 /* ==========================================
    Initialize
 ========================================== */
@@ -1356,6 +1605,62 @@ if(downloadButton){
     downloadButton.addEventListener(
         "click",
         downloadErratanomiconScript
+    );
+
+}
+const importButton =
+    document.getElementById(
+        "importErratanomiconScript"
+    );
+
+const importFileInput =
+    document.getElementById(
+        "importErratanomiconFile"
+    );
+
+
+if(
+    importButton &&
+    importFileInput
+){
+
+    importButton.addEventListener(
+        "click",
+        () => {
+
+            importFileInput.click();
+
+        }
+    );
+
+
+    importFileInput.addEventListener(
+        "change",
+        () => {
+
+            const file =
+                importFileInput
+                    .files[0];
+
+            if(!file){
+                return;
+            }
+
+
+            importErratanomiconScript(
+                file
+            );
+
+
+            /*
+                Allows selecting the same
+                file again later.
+            */
+
+            importFileInput.value =
+                "";
+
+        }
     );
 
 }
