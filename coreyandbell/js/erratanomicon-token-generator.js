@@ -32,9 +32,58 @@ const evilCanvas =
     document.getElementById(
         "evilTokenCanvas"
     );
+const downloadGoodButton =
+    document.getElementById(
+        "downloadGoodToken"
+    );
+
+const downloadEvilButton =
+    document.getElementById(
+        "downloadEvilToken"
+    );
+
+/* ==========================================
+   Download Token
+========================================== */
+
+function downloadToken(
+    canvas,
+    type
+){
+
+    const slug =
+        characterSelect.value;
 
 
 
+    if(!slug){
+        return;
+    }
+
+
+
+    const link =
+        document.createElement(
+            "a"
+        );
+
+
+
+    link.download =
+        `${slug}_${type}.png`;
+
+
+
+    link.href =
+        canvas.toDataURL(
+            "image/png"
+        );
+
+
+
+    link.click();
+
+}
 /* ==========================================
    Load Characters
 ========================================== */
@@ -592,7 +641,11 @@ await drawCharacterImage(
     slug,
     splotchAttempt
 );
+downloadGoodButton.disabled =
+    false;
 
+downloadEvilButton.disabled =
+    false;
 
     }catch(error){
 
@@ -619,7 +672,31 @@ generateButton.addEventListener(
     generateSelectedCharacter
 );
 
+downloadGoodButton.addEventListener(
+    "click",
+    () => {
 
+        downloadToken(
+            goodCanvas,
+            "g"
+        );
+
+    }
+);
+
+
+
+downloadEvilButton.addEventListener(
+    "click",
+    () => {
+
+        downloadToken(
+            evilCanvas,
+            "e"
+        );
+
+    }
+);
 
 /* ==========================================
    Initialize
