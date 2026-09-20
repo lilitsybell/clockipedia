@@ -127,6 +127,51 @@ if(mobileMenuToggle){
     );
 
 }
+    function closeMobileMenu(){
+
+    sidebar.classList.remove(
+        "mobile-open"
+    );
+
+    if(mobileMenuToggle){
+
+        mobileMenuToggle.setAttribute(
+            "aria-expanded",
+            "false"
+        );
+
+        mobileMenuToggle.setAttribute(
+            "aria-label",
+            "Open navigation"
+        );
+
+    }
+
+}
+
+
+sidebar
+    .querySelectorAll(".nav-link")
+    .forEach(link => {
+
+        link.addEventListener(
+            "click",
+            closeMobileMenu
+        );
+
+    });
+    window.addEventListener(
+    "resize",
+    () => {
+
+        if(
+            window.innerWidth > 700
+        ){
+            closeMobileMenu();
+        }
+
+    }
+);
 // Highlight current section
 const currentPath =
     window.location.pathname
