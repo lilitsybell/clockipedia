@@ -2480,10 +2480,19 @@ async function initializeErratanomicon(){
 }
 
 
-downloadButton.addEventListener(
-    "click",
-    openUpdateModal
-);
+const updateDownloadButton =
+    document.getElementById(
+        "downloadErratanomiconScript"
+    );
+
+if(updateDownloadButton){
+
+    updateDownloadButton.addEventListener(
+        "click",
+        openUpdateModal
+    );
+
+}
 const closeUpdateButton =
     document.getElementById(
         "closeErratanomiconModal"
