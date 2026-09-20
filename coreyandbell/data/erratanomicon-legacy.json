@@ -1,9 +1,14 @@
 {
-    "meta": {
-        "name": "Erratanomicon Legacy",
-        "author": "Corey and Bell",
-        "id": "erratanomicon-legacy"
-    },
+"meta": {
+    "name": "Erratanomicon Legacy",
+    "author": "Corey and Bell",
+    "id": "erratanomicon-legacy",
+    "game": 1,
+    "logo": "https://clockipedia.com/coreyandbell/data/erratanomicon-images/erratanomicon-logo.png",
+    "hideTitle": true,
+    "background": "https://clockipedia.com/coreyandbell/data/erratanomicon-images/erratanomicon-background.png",
+    "almanac": "https://clockipedia.com/coreyandbell/erratanomicon-legacy"
+},
     "characters": [
         "chef",
         "noble",
@@ -36,8 +41,8 @@
         "erratanomicon": {
             "id": "erratanomicon",
             "name": "Erratanomicon",
-            "team": "Loric",
-            "image": "https://i.ibb.co/0VBL0wMp/image.png",
+            "team": "loric",
+            "image": "https://clockipedia.com/coreyandbell/data/erratanomicon-images/erratanomicon-loric.png",
             "ability": "Each night, the Demon may select a good character and change 1 word of their ability. If accepted, the Demon does not wake tonight. If in play, the player learns this. This may happen as many times as the number of Minions in the player count."
         }
     }
