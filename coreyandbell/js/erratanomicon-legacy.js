@@ -2,10 +2,11 @@ console.log(
     "erratanomicon-legacy.js loaded"
 );
 
-
-
 let erratanomiconData = {};
 let officialCharacters = {};
+
+let erratanomiconCharacterOrder = [];
+let removedCharacters = new Set();
 
 
 
@@ -71,15 +72,38 @@ fetch(
 const characterList =
     await characterResponse.json();
 
+
+/*
+    This order is our permanent save-state
+    index for all 138 characters.
+
+    IMPORTANT:
+    Do not reorder erratanomicon-characters.json
+    after legacy games have started.
+*/
+
+erratanomiconCharacterOrder =
+    characterList.map(
+        character =>
+            character.id.replace(
+                "erratanomicon_",
+                ""
+            )
+    );
+
+
 officialCharacters =
     Object.fromEntries(
         characterList.map(
             character => [
+
                 character.id.replace(
                     "erratanomicon_",
                     ""
                 ),
+
                 character
+
             ]
         )
     );
@@ -648,7 +672,157 @@ function renderErratanomiconScript(){
     );
 
 }
+function encodeRemovedCharacters(){
 
+    const bytes =
+        new Uint8Array(
+            Math.ceil(
+                erratanomiconCharacterOrder.length /
+                8
+            )
+        );
+
+
+    erratanomiconCharacterOrder.forEach(
+        (slug,index) => {
+
+            if(
+                !removedCharacters.has(
+                    slug
+                )
+            ){
+                return;
+            }
+
+
+            const byteIndex =
+                Math.floor(
+                    index / 8
+                );
+
+            const bitIndex =
+                index % 8;
+
+
+            bytes[byteIndex] |=
+                1 << bitIndex;
+
+        }
+    );
+
+
+    let binary = "";
+
+    bytes.forEach(
+        byte => {
+
+            binary +=
+                String.fromCharCode(
+                    byte
+                );
+
+        }
+    );
+
+
+    return btoa(binary)
+        .replace(/\+/g,"-")
+        .replace(/\//g,"_")
+        .replace(/=+$/,"");
+
+}
+function decodeRemovedCharacters(
+    encoded
+){
+
+    removedCharacters.clear();
+
+
+    if(!encoded){
+        return;
+    }
+
+
+    let base64 =
+        encoded
+        .replace(/-/g,"+")
+        .replace(/_/g,"/");
+
+
+    while(
+        base64.length % 4
+    ){
+        base64 += "=";
+    }
+
+
+    let binary;
+
+    try{
+
+        binary =
+            atob(
+                base64
+            );
+
+    }catch(error){
+
+        console.warn(
+            "Invalid Erratanomicon save state.",
+            error
+        );
+
+        return;
+
+    }
+
+
+    for(
+        let index = 0;
+        index <
+            erratanomiconCharacterOrder.length;
+        index++
+    ){
+
+        const byteIndex =
+            Math.floor(
+                index / 8
+            );
+
+        const bitIndex =
+            index % 8;
+
+
+        if(
+            byteIndex >=
+            binary.length
+        ){
+            break;
+        }
+
+
+        const byte =
+            binary.charCodeAt(
+                byteIndex
+            );
+
+
+        if(
+            byte &
+            (1 << bitIndex)
+        ){
+
+            removedCharacters.add(
+                erratanomiconCharacterOrder[
+                    index
+                ]
+            );
+
+        }
+
+    }
+
+}
 
 function downloadErratanomiconScript(){
 
