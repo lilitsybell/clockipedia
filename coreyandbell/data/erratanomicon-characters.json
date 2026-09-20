@@ -1,0 +1,22 @@
+{
+    "chef": {
+        "id": "green_chef",
+        "officialId": "chef",
+        "name": "Chef",
+        "team": "townsfolk",
+
+        "image": {
+            "good": "/coreyandbell/images/erratanomicon/chef-good.png",
+            "evil": "/coreyandbell/images/erratanomicon/chef-evil.png"
+        },
+
+        "ability": "You start knowing how many pairs of evil players there are.",
+
+        "flavor": "...",
+
+        "firstNight": 55,
+        "firstNightReminder": "Give a finger signal.",
+
+        "setup": false
+    }
+}
