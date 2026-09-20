@@ -1,5 +1,15 @@
 [
     {
+        "text":"If the [Boffin] grants the [Lleech] the [Courtier] ability, and the [Lleech] chooses [Lleech], and the [Lleech] host is dead, and the [Boffin] become drunk, poisoned, dead, or out of play, the [Lleech] immediately dies.",
+        "math":"red",
+        "reason":"If the Lleech's host is dead, the Lleech is also dead. If the Lleech was drunk or poisoned when the host died, the Lleech dies as soon as they are sober and healthy.",
+        "mathInfo":"If the Lleech is alive and their host is not, the Lleech's ability is malfunctioning."},
+    {
+        "text":"If the [Courtier] chooses [Lleech], and the [Lleech] host is dead, and the [Courtier] become drunk, poisoned, dead, or out of play, the [Lleech] immediately dies.",
+        "math":"red",
+        "reason":"If the Lleech's host is dead, the Lleech is also dead. If the Lleech was drunk or poisoned when the host died, the Lleech dies as soon as they are sober and healthy.",
+        "mathInfo":"If the Lleech is alive and their host is not, the Lleech's ability is malfunctioning."},
+    {
         "text":"If the [Snake Charmer] poisoned [Snake Charmer] becomes [Vigormortis] poisoned, they are still [Snake Charmer] poisoned when they are no longer [Vigormortis] poisoned.",
         "math":"red",
         "reason":"A drunk or poisoned character does not have an ability, but regains it when they are no longer drunk or poisoned. Their ability does not reset.",
