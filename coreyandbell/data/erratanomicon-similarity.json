@@ -1,15 +1,896 @@
 {
-    "cerenovus": [
+    "acrobat": [
+        "Night",
+        "Player Choice",
+        "Droisoning",
+        "Drunkenness",
+        "Poisoning",
+        "Death",
+        "Death Trigger"
+    ],
+    "alchemist": [
+        "Storyteller Choice"
+    ],
+    "alsaahir": [
+        "Day",
+        "Public"
+    ],
+    "amnesiac": [
+        "Day",
+        "Information",
+        "Private"
+    ],
+    "artist": [
+        "Day",
+        "Once Per Game",
+        "Private"
+    ],
+    "atheist": [
+        "Death",
+        "Execution",
+        "Execution Trigger",
+        "Setup"
+    ],
+    "balloonist": [
+        "Night",
+        "Information",
+        "Character Information",
+        "Setup",
+        "Outsider Modification"
+    ],
+    "banshee": [
+        "Information",
+        "Demon Detection",
+        "Death",
+        "Nomination",
+        "Voting",
+        "Nomination Trigger",
+        "Voting Trigger",
+        "Public"
+    ],
+    "bountyhunter": [
+        "Information",
+        "You Start Knowing",
+        "Alignment Information",
+        "Death",
+        "Death Trigger",
+        "Setup"
+    ],
+    "cannibal": [
+        "Droisoning",
+        "Poisoning",
+        "Death",
+        "Execution",
+        "Execution Trigger",
+        "Ability Copying"
+    ],
+    "chambermaid": [
+        "Night",
+        "Player Choice",
+        "Information",
+        "Living Players"
+    ],
+    "chef": [
+        "Information",
+        "You Start Knowing",
+        "Alignment Information",
+        "Pairs"
+    ],
+    "choirboy": [
+        "Information",
+        "Demon Detection",
+        "Death",
+        "Setup"
+    ],
+    "clockmaker": [
+        "Information",
+        "You Start Knowing",
+        "Demon Detection",
+        "Minion Detection",
+        "Distance"
+    ],
+    "courtier": [
+        "Once Per Game",
+        "Character Choice",
+        "Droisoning",
+        "Drunkenness"
+    ],
+    "cultleader": [
+        "Night",
+        "Neighbor"
+    ],
+    "dreamer": [
+        "Night",
+        "Player Choice",
+        "Information",
+        "Character Information",
+        "Alignment Information"
+    ],
+    "empath": [
+        "Night",
+        "Neighbor",
+        "Information",
+        "Alignment Information"
+    ],
+    "engineer": [
+        "Once Per Game",
+        "Character Choice",
+        "Minion Modification",
+        "Demon Modification"
+    ],
+    "exorcist": [
+        "Night",
+        "Player Choice",
+        "Demon Detection"
+    ],
+    "farmer": [
+        "Death",
+        "Death Trigger",
+        "Character Change"
+    ],
+    "fisherman": [
+        "Day",
+        "Once Per Game"
+    ],
+    "flowergirl": [
+        "Night",
+        "Information",
+        "Demon Detection",
+        "Voting",
+        "Voting Trigger"
+    ],
+    "fool": [
+        "Death",
+        "Protection",
+        "Safe / Cannot Die"
+    ],
+    "fortuneteller": [
+        "Night",
+        "Player Choice",
+        "Information",
+        "Alignment Information",
+        "Demon Detection",
+        "Registration"
+    ],
+    "gambler": [
+        "Night",
+        "Player Choice",
+        "Death",
+        "Death Trigger"
+    ],
+    "general": [
+        "Night",
+        "Information",
+        "Alignment Information"
+    ],
+    "gossip": [
+        "Day",
+        "Death",
+        "Death Trigger"
+    ],
+    "grandmother": [
+        "Information",
+        "You Start Knowing",
+        "Character Information",
+        "Alignment Information",
+        "Demon Detection",
+        "Death",
+        "Death Trigger"
+    ],
+    "highpriestess": [
+        "Night",
+        "Information"
+    ],
+    "huntsman": [
+        "Once Per Game",
+        "Player Choice",
+        "Character Change",
+        "Setup",
+        "Living Players"
+    ],
+    "innkeeper": [
+        "Night",
+        "Player Choice",
+        "Droisoning",
+        "Drunkenness",
+        "Protection",
+        "Safe / Cannot Die",
+        "Death"
+    ],
+    "investigator": [
+        "Information",
+        "You Start Knowing",
+        "Minion Detection",
+        "Character Information"
+    ],
+    "juggler": [
+        "Day",
+        "Information",
+        "Character Information",
+        "Public"
+    ],
+    "king": [
+        "Night",
+        "Information",
+        "Character Information",
+        "Demon Detection",
+        "Death"
+    ],
+    "knight": [
+        "Information",
+        "You Start Knowing",
+        "Demon Detection"
+    ],
+    "librarian": [
+        "Information",
+        "You Start Knowing",
+        "Character Information"
+    ],
+    "lycanthrope": [
+        "Night",
+        "Player Choice",
+        "Death",
+        "Death Trigger",
+        "Registration",
+        "Living Players",
+        "Demon Protection"
+    ],
+    "magician": [],
+    "mathematician": [
+        "Night",
+        "Information",
+        "Character Information"
+    ],
+    "mayor": [
+        "Death",
+        "Execution",
+        "Execution Trigger",
+        "Living Players"
+    ],
+    "minstrel": [
+        "Droisoning",
+        "Drunkenness",
+        "Death",
+        "Execution",
+        "Execution Trigger"
+    ],
+    "monk": [
+        "Night",
+        "Player Choice",
+        "Protection",
+        "Safe / Cannot Die",
+        "Demon Protection"
+    ],
+    "nightwatchman": [
+        "Once Per Game",
+        "Player Choice",
+        "Information"
+    ],
+    "noble": [
+        "Information",
+        "You Start Knowing",
+        "Alignment Information"
+    ],
+    "oracle": [
+        "Night",
+        "Information",
+        "Alignment Information",
+        "Death",
+        "Dead Players"
+    ],
+    "pacifist": [
+        "Protection",
+        "Safe / Cannot Die",
+        "Death",
+        "Execution"
+    ],
+    "philosopher": [
+        "Once Per Game",
+        "Droisoning",
+        "Drunkenness",
+        "Ability Gain"
+    ],
+    "pixie": [
+        "Information",
+        "You Start Knowing",
+        "Character Information",
         "Madness",
         "Madness About Character",
-        "Player Choice",
-        "Night"
+        "Death",
+        "Death Trigger",
+        "Ability Gain"
     ],
-
+    "poppygrower": [
+        "Information",
+        "Demon Detection",
+        "Minion Detection",
+        "Death",
+        "Death Trigger"
+    ],
+    "preacher": [
+        "Night",
+        "Player Choice",
+        "Minion Detection",
+        "Ability Loss"
+    ],
+    "princess": [
+        "Day",
+        "Execution",
+        "Nomination",
+        "Execution Trigger",
+        "Nomination Trigger",
+        "Demon Protection"
+    ],
+    "professor": [
+        "Once Per Game",
+        "Death",
+        "Resurrection",
+        "Dead Players"
+    ],
+    "ravenkeeper": [
+        "Player Choice",
+        "Information",
+        "Character Information",
+        "Death",
+        "Death Trigger"
+    ],
+    "sage": [
+        "Information",
+        "Demon Detection",
+        "Death"
+    ],
+    "sailor": [
+        "Night",
+        "Player Choice",
+        "Droisoning",
+        "Drunkenness",
+        "Protection",
+        "Safe / Cannot Die",
+        "Death",
+        "Living Players"
+    ],
+    "savant": [
+        "Day",
+        "Information",
+        "Private"
+    ],
+    "seamstress": [
+        "Once Per Game",
+        "Player Choice",
+        "Information",
+        "Alignment Information"
+    ],
+    "shugenja": [
+        "Information",
+        "You Start Knowing",
+        "Alignment Information",
+        "Distance"
+    ],
+    "slayer": [
+        "Day",
+        "Once Per Game",
+        "Player Choice",
+        "Death",
+        "Death Trigger",
+        "Public"
+    ],
+    "snakecharmer": [
+        "Night",
+        "Player Choice",
+        "Droisoning",
+        "Poisoning",
+        "Character Change",
+        "Alignment Change",
+        "Living Players"
+    ],
+    "soldier": [
+        "Protection",
+        "Safe / Cannot Die",
+        "Demon Protection"
+    ],
+    "steward": [
+        "Information",
+        "You Start Knowing",
+        "Alignment Information"
+    ],
+    "tealady": [
+        "Neighbor",
+        "Protection",
+        "Safe / Cannot Die",
+        "Death",
+        "Death Trigger"
+    ],
+    "towncrier": [
+        "Night",
+        "Information",
+        "Minion Detection",
+        "Nomination",
+        "Nomination Trigger"
+    ],
+    "undertaker": [
+        "Night",
+        "Information",
+        "Character Information",
+        "Death",
+        "Execution"
+    ],
+    "villageidiot": [
+        "Night",
+        "Player Choice",
+        "Droisoning",
+        "Drunkenness",
+        "Information",
+        "Alignment Information",
+        "Setup"
+    ],
+    "virgin": [
+        "Execution",
+        "Nomination",
+        "Execution Trigger",
+        "Nomination Trigger"
+    ],
+    "washerwoman": [
+        "Information",
+        "You Start Knowing",
+        "Character Information"
+    ],
+    "barber": [
+        "Player Choice",
+        "Death",
+        "Death Trigger"
+    ],
+    "butler": [
+        "Night",
+        "Player Choice",
+        "Voting",
+        "Voting Trigger"
+    ],
+    "damsel": [
+        "Minion Detection",
+        "Public"
+    ],
+    "drunk": [
+        "Droisoning",
+        "Drunkenness",
+        "Character Information",
+        "Setup"
+    ],
+    "golem": [
+        "Once Per Game",
+        "Death",
+        "Nomination",
+        "Death Trigger",
+        "Nomination Trigger"
+    ],
+    "goon": [
+        "Night",
+        "Droisoning",
+        "Drunkenness",
+        "Alignment Change"
+    ],
+    "hatter": [
+        "Death",
+        "Death Trigger",
+        "Character Change"
+    ],
+    "heretic": [
+        "Death"
+    ],
+    "hermit": [
+        "Setup",
+        "Outsider Modification"
+    ],
+    "klutz": [
+        "Player Choice",
+        "Information",
+        "Alignment Information",
+        "Death",
+        "Death Trigger",
+        "Living Players",
+        "Public"
+    ],
+    "lunatic": [
+        "Information"
+    ],
+    "moonchild": [
+        "Player Choice",
+        "Information",
+        "Alignment Information",
+        "Death",
+        "Death Trigger",
+        "Living Players",
+        "Public"
+    ],
+    "mutant": [
+        "Madness",
+        "Madness About Character",
+        "Execution",
+        "Execution Trigger"
+    ],
+    "ogre": [
+        "Player Choice",
+        "Droisoning",
+        "Drunkenness",
+        "Poisoning",
+        "Alignment Information",
+        "Alignment Change"
+    ],
+    "plaguedoctor": [
+        "Death",
+        "Death Trigger",
+        "Ability Gain"
+    ],
+    "politician": [
+        "Death",
+        "Alignment Change",
+        "Dead Players"
+    ],
+    "puzzlemaster": [
+        "Droisoning",
+        "Drunkenness",
+        "Information",
+        "False Information",
+        "Demon Detection",
+        "Death",
+        "Death Trigger"
+    ],
+    "recluse": [
+        "Death",
+        "Registration",
+        "Dead Players"
+    ],
+    "saint": [
+        "Death",
+        "Execution",
+        "Execution Trigger"
+    ],
+    "snitch": [],
+    "sweetheart": [
+        "Droisoning",
+        "Drunkenness",
+        "Death",
+        "Death Trigger"
+    ],
+    "tinker": [
+        "Death"
+    ],
+    "zealot": [
+        "Nomination",
+        "Voting",
+        "Nomination Trigger",
+        "Voting Trigger"
+    ],
+    "assassin": [
+        "Once Per Game",
+        "Player Choice",
+        "Death",
+        "Death Trigger"
+    ],
+    "baron": [
+        "Setup",
+        "Outsider Modification"
+    ],
+    "boffin": [
+        "Droisoning",
+        "Drunkenness",
+        "Poisoning",
+        "Character Information",
+        "Demon Detection",
+        "Ability Copying",
+        "Demon Support"
+    ],
+    "boomdandy": [
+        "Death",
+        "Extra Death",
+        "Execution",
+        "Death Trigger",
+        "Execution Trigger"
+    ],
+    "cerenovus": [
+        "Night",
+        "Player Choice",
+        "Madness",
+        "Madness About Character",
+        "Execution"
+    ],
+    "devilsadvocate": [
+        "Night",
+        "Player Choice",
+        "Protection",
+        "Safe / Cannot Die",
+        "Death",
+        "Execution",
+        "Death Trigger",
+        "Execution Trigger",
+        "Living Players"
+    ],
+    "eviltwin": [
+        "Execution",
+        "Execution Trigger",
+        "Demon Support"
+    ],
+    "fearmonger": [
+        "Night",
+        "Player Choice",
+        "Execution",
+        "Nomination",
+        "Nomination Trigger",
+        "Public"
+    ],
+    "goblin": [
+        "Execution",
+        "Nomination",
+        "Execution Trigger",
+        "Nomination Trigger",
+        "Public"
+    ],
+    "godfather": [
+        "Information",
+        "You Start Knowing",
+        "Player Choice",
+        "Death",
+        "Death Trigger",
+        "Setup",
+        "Outsider Modification"
+    ],
     "harpy": [
+        "Night",
+        "Player Choice",
         "Madness",
         "Madness About Alignment",
+        "Death",
+        "Demon Support"
+    ],
+    "marionette": [
+        "Neighbor",
+        "Information",
+        "Setup",
+        "Demon Support"
+    ],
+    "mastermind": [
+        "Death",
+        "Execution",
+        "Execution Trigger",
+        "Demon Support"
+    ],
+    "mezepheles": [
+        "Information",
+        "You Start Knowing",
+        "Alignment Information",
+        "Alignment Change",
+        "Demon Support"
+    ],
+    "organgrinder": [
+        "Night",
+        "Droisoning",
+        "Drunkenness",
+        "Voting",
+        "Voting Trigger"
+    ],
+    "pithag": [
+        "Night",
         "Player Choice",
-        "Night"
+        "Madness",
+        "Madness About Character",
+        "Demon Support"
+    ],
+    "poisoner": [
+        "Night",
+        "Player Choice",
+        "Droisoning",
+        "Poisoning"
+    ],
+    "psychopath": [
+        "Day",
+        "Player Choice",
+        "Death",
+        "Execution",
+        "Nomination",
+        "Death Trigger",
+        "Execution Trigger",
+        "Nomination Trigger",
+        "Public"
+    ],
+    "scarletwoman": [
+        "Death",
+        "Death Trigger",
+        "Demon Modification",
+        "Demon Replacement",
+        "Demon Support"
+    ],
+    "spy": [
+        "Night",
+        "Death",
+        "Registration",
+        "Dead Players"
+    ],
+    "summoner": [
+        "Player Choice",
+        "Character Change",
+        "Setup",
+        "Demon Modification",
+        "Demon Support"
+    ],
+    "vizier": [
+        "Day",
+        "Protection",
+        "Safe / Cannot Die",
+        "Death",
+        "Execution",
+        "Voting",
+        "Death Trigger",
+        "Voting Trigger",
+        "Public"
+    ],
+    "widow": [
+        "Player Choice",
+        "Droisoning",
+        "Poisoning",
+        "Information"
+    ],
+    "witch": [
+        "Night",
+        "Player Choice",
+        "Death",
+        "Nomination",
+        "Death Trigger",
+        "Nomination Trigger",
+        "Ability Loss",
+        "Living Players"
+    ],
+    "wizard": [
+        "Once Per Game"
+    ],
+    "wraith": [
+        "Demon Support"
+    ],
+    "xaan": [
+        "Droisoning",
+        "Poisoning",
+        "Setup"
+    ],
+    "alhadikhia": [
+        "Night",
+        "Player Choice",
+        "Information",
+        "Death",
+        "Extra Death",
+        "Death Trigger",
+        "Public"
+    ],
+    "fanggu": [
+        "Night",
+        "Player Choice",
+        "Death",
+        "Character Change",
+        "Setup",
+        "Outsider Modification",
+        "Demon Replacement"
+    ],
+    "imp": [
+        "Night",
+        "Player Choice",
+        "Death",
+        "Death Trigger",
+        "Demon Replacement"
+    ],
+    "kazali": [
+        "Night",
+        "Player Choice",
+        "Character Choice",
+        "Death",
+        "Setup",
+        "Minion Modification"
+    ],
+    "legion": [
+        "Night",
+        "Death",
+        "Execution",
+        "Voting",
+        "Execution Trigger",
+        "Voting Trigger",
+        "Registration",
+        "Setup"
+    ],
+    "leviathan": [
+        "Execution",
+        "Execution Trigger",
+        "Public"
+    ],
+    "lilmonsta": [
+        "Night",
+        "Death",
+        "Setup",
+        "Minion Modification"
+    ],
+    "lleech": [
+        "Night",
+        "Player Choice",
+        "Droisoning",
+        "Poisoning",
+        "Death",
+        "Death Trigger"
+    ],
+    "lordoftyphon": [
+        "Night",
+        "Player Choice",
+        "Death",
+        "Setup"
+    ],
+    "nodashii": [
+        "Night",
+        "Player Choice",
+        "Neighbor",
+        "Droisoning",
+        "Poisoning",
+        "Death"
+    ],
+    "ojo": [
+        "Night",
+        "Character Choice",
+        "Storyteller Choice",
+        "Death",
+        "Death Trigger"
+    ],
+    "po": [
+        "Night",
+        "Player Choice",
+        "Death",
+        "Extra Death",
+        "Death Trigger"
+    ],
+    "pukka": [
+        "Night",
+        "Player Choice",
+        "Droisoning",
+        "Poisoning",
+        "Death"
+    ],
+    "riot": [
+        "Death",
+        "Nomination",
+        "Living Players"
+    ],
+    "shabaloth": [
+        "Night",
+        "Player Choice",
+        "Death",
+        "Extra Death",
+        "Resurrection",
+        "Dead Players"
+    ],
+    "vigormortis": [
+        "Night",
+        "Player Choice",
+        "Neighbor",
+        "Droisoning",
+        "Poisoning",
+        "Death",
+        "Setup",
+        "Outsider Modification",
+        "Minion Modification"
+    ],
+    "vortox": [
+        "Night",
+        "Day",
+        "Player Choice",
+        "False Information",
+        "Death",
+        "Execution",
+        "Death Trigger",
+        "Execution Trigger"
+    ],
+    "yaggababble": [
+        "Information",
+        "You Start Knowing",
+        "Death",
+        "Public"
+    ],
+    "zombuul": [
+        "Night",
+        "Player Choice",
+        "Death",
+        "Death Trigger",
+        "Registration"
     ]
 }
