@@ -5,7 +5,8 @@ console.log(
 
 
 let tokenCharacters = {};
-
+let splotchAttempt = 0;
+let lastSelectedCharacter = null;
 
 
 /* ==========================================
@@ -299,23 +300,19 @@ function createRandom(
 
 
 /* ==========================================
-   Draw Green Brush Splotch
-========================================== */
-/* ==========================================
-   Draw Paint Blob
-========================================== */
-
-/* ==========================================
    Get Erratanomicon Splotch
 ========================================== */
 
 function getSplotchInfo(
-    seed
+    seed,
+    attempt = 0
 ){
 
     const random =
         createRandom(
-            hashString(seed)
+            hashString(
+                `${seed}-${attempt}`
+            )
         );
 
 
@@ -370,7 +367,8 @@ function getSplotchInfo(
 async function drawCharacterImage(
     canvas,
     image,
-    seed
+    seed,
+    attempt
 ){
 
     const context =
@@ -393,10 +391,11 @@ async function drawCharacterImage(
         Get this character's splotch.
     */
 
-    const splotchInfo =
-        getSplotchInfo(
-            seed
-        );
+const splotchInfo =
+    getSplotchInfo(
+        seed,
+        attempt
+    );
 
 
 
@@ -514,7 +513,22 @@ async function generateSelectedCharacter(){
     if(!slug){
         return;
     }
+if(
+    slug ===
+    lastSelectedCharacter
+){
 
+    splotchAttempt++;
+
+}else{
+
+    lastSelectedCharacter =
+        slug;
+
+    splotchAttempt =
+        0;
+
+}
 
 
     const character =
@@ -566,7 +580,8 @@ async function generateSelectedCharacter(){
 await drawCharacterImage(
     goodCanvas,
     goodImage,
-    `${slug}-good`
+    slug,
+    splotchAttempt
 );
 
 
@@ -574,7 +589,8 @@ await drawCharacterImage(
 await drawCharacterImage(
     evilCanvas,
     evilImage,
-    `${slug}-evil`
+    slug,
+    splotchAttempt
 );
 
 
