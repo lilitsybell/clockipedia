@@ -156,19 +156,30 @@ function clearCanvas(
 /* ==========================================
    Get Token Images
 ========================================== */
+/* ==========================================
+   Get Token Images
+========================================== */
 
 function getTokenImages(
     character
 ){
 
-    const goodImage =
+    const baseImage =
         character.image;
 
 
 
+    const goodImage =
+        baseImage.replace(
+            /_[ge](\.[a-zA-Z]+)$/,
+            "_g$1"
+        );
+
+
+
     const evilImage =
-        goodImage.replace(
-            /_g(\.[a-zA-Z]+)$/,
+        baseImage.replace(
+            /_[ge](\.[a-zA-Z]+)$/,
             "_e$1"
         );
 
@@ -180,7 +191,6 @@ function getTokenImages(
     };
 
 }
-
 /* ==========================================
    Load Image
 ========================================== */
@@ -295,77 +305,11 @@ function createRandom(
    Draw Paint Blob
 ========================================== */
 
-function drawPaintBlob(
-    context,
-    random,
-    x,
-    y,
-    radius
-){
-
-    const points = 18;
-
-    context.beginPath();
-
-    for(
-        let i = 0;
-        i < points;
-        i++
-    ){
-
-        const angle =
-            (
-                Math.PI * 2 * i
-            ) / points;
-
-        const variation =
-            .72 +
-            random() * .5;
-
-        const currentRadius =
-            radius * variation;
-
-        const px =
-            x +
-            Math.cos(angle) *
-            currentRadius;
-
-        const py =
-            y +
-            Math.sin(angle) *
-            currentRadius;
-
-        if(i === 0){
-
-            context.moveTo(
-                px,
-                py
-            );
-
-        }else{
-
-            context.lineTo(
-                px,
-                py
-            );
-
-        }
-
-    }
-
-    context.closePath();
-    context.fill();
-
-}
-
-
-
 /* ==========================================
-   Draw Green Paint
+   Get Erratanomicon Splotch
 ========================================== */
 
-function drawGreenSplotch(
-    context,
+function getSplotchInfo(
     seed
 ){
 
@@ -376,309 +320,57 @@ function drawGreenSplotch(
 
 
 
-    const green =
-        "#819900";
-
-
-
-    context.save();
-
-    context.fillStyle =
-        green;
-
-
-
-    /*
-        Main paint patches.
-
-        These are intentionally separated
-        rather than forming one giant blob.
-    */
-
-    const blobCount =
-        3 +
-        Math.floor(
-            random() * 3
-        );
-
-
-
-    for(
-        let i = 0;
-        i < blobCount;
-        i++
-    ){
-
-        const angle =
-            random() *
-            Math.PI *
-            2;
-
-        const distance =
-            95 +
-            random() * 115;
-
-        const x =
-            300 +
-            Math.cos(angle) *
-            distance;
-
-        const y =
-            300 +
-            Math.sin(angle) *
-            distance;
-
-        const radius =
-            45 +
-            random() * 55;
-
-
-
-        drawPaintBlob(
-            context,
-            random,
-            x,
-            y,
-            radius
-        );
-
-    }
-
-
-
-    /*
-        Medium splatters
-    */
-
-    const mediumCount =
-        35 +
+    const number =
+        1 +
         Math.floor(
             random() * 25
         );
 
 
 
-    for(
-        let i = 0;
-        i < mediumCount;
-        i++
-    ){
-
-        const angle =
-            random() *
-            Math.PI *
-            2;
-
-        const distance =
-            110 +
-            random() * 175;
-
-        const x =
-            300 +
-            Math.cos(angle) *
-            distance;
-
-        const y =
-            300 +
-            Math.sin(angle) *
-            distance;
-
-        const radius =
-            2 +
-            random() * 9;
-
-
-
-        context.globalAlpha =
-            .55 +
-            random() * .45;
-
-
-
-        context.beginPath();
-
-        context.arc(
-            x,
-            y,
-            radius,
-            0,
-            Math.PI * 2
-        );
-
-        context.fill();
-
-    }
-
-
-
-    /*
-        Fine paint speckles
-    */
-
-    const speckCount =
-        180 +
+    const rotation =
         Math.floor(
-            random() * 120
-        );
+            random() * 4
+        ) * 90;
 
 
 
-    for(
-        let i = 0;
-        i < speckCount;
-        i++
-    ){
-
-        const angle =
-            random() *
-            Math.PI *
-            2;
-
-        const distance =
-            120 +
-            random() * 210;
-
-        const x =
-            300 +
-            Math.cos(angle) *
-            distance;
-
-        const y =
-            300 +
-            Math.sin(angle) *
-            distance;
-
-        const radius =
-            .5 +
-            random() * 2.4;
+    const flipX =
+        random() < .5
+            ? -1
+            : 1;
 
 
 
-        context.globalAlpha =
-            .3 +
-            random() * .7;
+    const flipY =
+        random() < .5
+            ? -1
+            : 1;
 
 
 
-        context.beginPath();
+    return {
 
-        context.arc(
-            x,
-            y,
-            radius,
-            0,
-            Math.PI * 2
-        );
+        src:
+            `/images/erratanomicon/erratanomicon-splotch-${number}.png`,
 
-        context.fill();
+        rotation,
 
-    }
+        flipX,
 
+        flipY
 
-
-    /*
-        Dry brush scratches
-    */
-
-    const streakCount =
-        25 +
-        Math.floor(
-            random() * 20
-        );
-
-
-
-    context.lineCap =
-        "round";
-
-
-
-    for(
-        let i = 0;
-        i < streakCount;
-        i++
-    ){
-
-        const angle =
-            random() *
-            Math.PI *
-            2;
-
-        const distance =
-            130 +
-            random() * 160;
-
-        const x =
-            300 +
-            Math.cos(angle) *
-            distance;
-
-        const y =
-            300 +
-            Math.sin(angle) *
-            distance;
-
-        const length =
-            15 +
-            random() * 55;
-
-        const strokeAngle =
-            random() *
-            Math.PI *
-            2;
-
-
-
-        context.globalAlpha =
-            .25 +
-            random() * .5;
-
-        context.lineWidth =
-            1 +
-            random() * 4;
-
-
-
-        context.beginPath();
-
-        context.moveTo(
-            x,
-            y
-        );
-
-        context.lineTo(
-            x +
-            Math.cos(
-                strokeAngle
-            ) *
-            length,
-
-            y +
-            Math.sin(
-                strokeAngle
-            ) *
-            length
-        );
-
-        context.strokeStyle =
-            green;
-
-        context.stroke();
-
-    }
-
-
-
-    context.restore();
+    };
 
 }
 /* ==========================================
    Draw Character
 ========================================== */
 
-function drawCharacterImage(
+async function drawCharacterImage(
     canvas,
-    image
+    image,
+    seed
 ){
 
     const context =
@@ -694,17 +386,84 @@ function drawCharacterImage(
         canvas.width,
         canvas.height
     );
-drawGreenSplotch(
-    context,
-    image.src
-);
 
+
+
+    /*
+        Get this character's splotch.
+    */
+
+    const splotchInfo =
+        getSplotchInfo(
+            seed
+        );
+
+
+
+    const splotchImage =
+        await loadImage(
+            splotchInfo.src
+        );
+
+
+
+    /*
+        Draw splotch.
+    */
+
+    context.save();
+
+
+
+    context.translate(
+        canvas.width / 2,
+        canvas.height / 2
+    );
+
+
+
+    context.rotate(
+        splotchInfo.rotation *
+        Math.PI / 180
+    );
+
+
+
+    context.scale(
+        splotchInfo.flipX,
+        splotchInfo.flipY
+    );
+
+
+
+    const splotchSize =
+        canvas.width * .88;
+
+
+
+    context.drawImage(
+        splotchImage,
+        -splotchSize / 2,
+        -splotchSize / 2,
+        splotchSize,
+        splotchSize
+    );
+
+
+
+    context.restore();
+
+
+
+    /*
+        Draw official character artwork.
+    */
 
     const maxWidth =
-        canvas.width * 1;
+        canvas.width * .86;
 
     const maxHeight =
-        canvas.height * 1;
+        canvas.height * .86;
 
 
 
@@ -804,19 +563,19 @@ async function generateSelectedCharacter(){
             ]);
 
 
+await drawCharacterImage(
+    goodCanvas,
+    goodImage,
+    `${slug}-good`
+);
 
-        drawCharacterImage(
-            goodCanvas,
-            goodImage
-        );
 
 
-
-        drawCharacterImage(
-            evilCanvas,
-            evilImage
-        );
-
+await drawCharacterImage(
+    evilCanvas,
+    evilImage,
+    `${slug}-evil`
+);
 
 
     }catch(error){
