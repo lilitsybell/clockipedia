@@ -2160,7 +2160,104 @@ function decodeRemovedCharacters(
     }
 
 }
+function commitPendingUpdate(){
 
+    if(!pendingUpdate){
+        return;
+    }
+
+
+    /*
+        Permanently eliminate every character
+        that was actually removed from the script.
+    */
+
+    pendingUpdate.removals.forEach(
+        removal => {
+
+            removedCharacters.add(
+                removal.slug
+            );
+
+        }
+    );
+
+
+    /*
+        Skipped replacement candidates are also
+        permanently eliminated.
+    */
+
+    pendingUpdate.skipped.forEach(
+        slug => {
+
+            removedCharacters.add(
+                slug
+            );
+
+        }
+    );
+
+
+    /*
+        Replace each removed script character
+        with its finalized replacement.
+    */
+
+    pendingUpdate.removals.forEach(
+        removal => {
+
+            const replacementSlug =
+                pendingUpdate
+                    .replacements[
+                        removal.slug
+                    ];
+
+
+            if(!replacementSlug){
+                return;
+            }
+
+
+            const index =
+                erratanomiconData
+                    .characters
+                    .indexOf(
+                        removal.slug
+                    );
+
+
+            if(index === -1){
+                return;
+            }
+
+
+            erratanomiconData
+                .characters[
+                    index
+                ] =
+                    replacementSlug;
+
+        }
+    );
+
+
+    /*
+        This game's elimination selections
+        are now finished.
+    */
+
+    pendingEliminations.clear();
+
+
+    /*
+        Redraw the page so the new characters
+        appear and the graveyard updates.
+    */
+
+    renderErratanomiconScript();
+
+}
 function downloadErratanomiconScript(){
 
     const script = [];
@@ -2600,6 +2697,28 @@ if(updateDownloadButton){
     updateDownloadButton.addEventListener(
         "click",
         openUpdateModal
+    );
+
+}
+const confirmDownloadButton =
+    document.getElementById(
+        "confirmErratanomiconDownload"
+    );
+
+
+if(confirmDownloadButton){
+
+    confirmDownloadButton.addEventListener(
+        "click",
+        () => {
+
+            commitPendingUpdate();
+
+            closeUpdateModal();
+
+            downloadErratanomiconScript();
+
+        }
     );
 
 }
