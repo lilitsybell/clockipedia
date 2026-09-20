@@ -97,8 +97,8 @@ function getErratanomiconCharacter(
 ){
 
     /*
-        Custom characters take priority.
-        Currently this is just Erratanomicon.
+        Erratanomicon itself is still stored
+        as a custom character in the script file.
     */
 
     const customCharacter =
@@ -106,8 +106,6 @@ function getErratanomiconCharacter(
             .customCharacters?.[
                 slug
             ];
-
-
 
     if(customCharacter){
 
@@ -121,18 +119,16 @@ function getErratanomiconCharacter(
 
 
     /*
-        Otherwise use Clockipedia's
-        official character data.
+        All normal characters come directly
+        from erratanomicon-characters.json.
     */
 
-    const officialCharacter =
+    const character =
         officialCharacters[
             slug
         ];
 
-
-
-    if(!officialCharacter){
+    if(!character){
 
         console.warn(
             `Character not found: ${slug}`
@@ -146,12 +142,10 @@ function getErratanomiconCharacter(
 
     return {
         slug,
-        ...officialCharacter
+        ...character
     };
 
 }
-
-
 
 /* ==========================================
    Normalize Team
@@ -295,10 +289,16 @@ function createScriptCharacter(
 
         <div class="erratanomicon-character-token">
 
-            <img
-                src="${character.image}"
-                alt="${character.name}"
-            >
+<img
+    src="${
+        Array.isArray(
+            character.image
+        )
+            ? character.image[0]
+            : character.image
+    }"
+    alt="${character.name}"
+>
 
         </div>
 
