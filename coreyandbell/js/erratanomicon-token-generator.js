@@ -180,12 +180,116 @@ function getTokenImages(
 
 }
 
+/* ==========================================
+   Load Image
+========================================== */
 
+function loadImage(
+    src
+){
+
+    return new Promise(
+        (resolve,reject) => {
+
+            const image =
+                new Image();
+
+            image.crossOrigin =
+                "anonymous";
+
+            image.onload =
+                () => resolve(
+                    image
+                );
+
+            image.onerror =
+                () => reject(
+                    new Error(
+                        `Failed to load image: ${src}`
+                    )
+                );
+
+            image.src =
+                src;
+
+        }
+    );
+
+}
+
+
+
+/* ==========================================
+   Draw Character
+========================================== */
+
+function drawCharacterImage(
+    canvas,
+    image
+){
+
+    const context =
+        canvas.getContext(
+            "2d"
+        );
+
+
+
+    context.clearRect(
+        0,
+        0,
+        canvas.width,
+        canvas.height
+    );
+
+
+
+    const maxWidth =
+        canvas.width * .72;
+
+    const maxHeight =
+        canvas.height * .72;
+
+
+
+    const scale =
+        Math.min(
+            maxWidth / image.width,
+            maxHeight / image.height
+        );
+
+
+
+    const width =
+        image.width * scale;
+
+    const height =
+        image.height * scale;
+
+
+
+    const x =
+        (canvas.width - width) / 2;
+
+    const y =
+        (canvas.height - height) / 2;
+
+
+
+    context.drawImage(
+        image,
+        x,
+        y,
+        width,
+        height
+    );
+
+}
 /* ==========================================
    Generate
 ========================================== */
 
-function generateSelectedCharacter(){
+async function generateSelectedCharacter(){
 
     const slug =
         characterSelect.value;
@@ -203,22 +307,14 @@ function generateSelectedCharacter(){
             slug
         ];
 
-const images =
-    getTokenImages(
-        character
-    );
 
 
+    const images =
+        getTokenImages(
+            character
+        );
 
-console.log(
-    "Good token:",
-    images.good
-);
 
-console.log(
-    "Evil token:",
-    images.evil
-);
 
     console.log(
         "Generating:",
@@ -228,17 +324,60 @@ console.log(
 
 
 
-    clearCanvas(
-        goodCanvas
-    );
+    try{
 
-    clearCanvas(
-        evilCanvas
-    );
+        generateButton.disabled =
+            true;
+
+
+
+        const [
+            goodImage,
+            evilImage
+        ] =
+            await Promise.all([
+
+                loadImage(
+                    images.good
+                ),
+
+                loadImage(
+                    images.evil
+                )
+
+            ]);
+
+
+
+        drawCharacterImage(
+            goodCanvas,
+            goodImage
+        );
+
+
+
+        drawCharacterImage(
+            evilCanvas,
+            evilImage
+        );
+
+
+
+    }catch(error){
+
+        console.error(
+            "Token generation failed:",
+            error
+        );
+
+    }finally{
+
+        generateButton.disabled =
+            false;
+
+    }
 
 }
-
-
 
 /* ==========================================
    Events
