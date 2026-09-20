@@ -9,7 +9,8 @@ let erratanomiconCharacterOrder = [];
 let removedCharacters = new Set();
 let pendingEliminations =
     new Set();
-
+let pendingUpdate =
+    null;
 
 
 /* ==========================================
@@ -21,7 +22,25 @@ const scriptContainer =
         "erratanomiconScript"
     );
 
+const characterDependencies = {
 
+    damsel:[
+        {
+            dependent:"huntsman",
+            reason:
+                "Removed because Damsel was removed."
+        }
+    ],
+
+    king:[
+        {
+            dependent:"choirboy",
+            reason:
+                "Removed because King was removed."
+        }
+    ]
+
+};
 
 /* ==========================================
    Load Data
@@ -540,86 +559,722 @@ function getReplacementCharacter(
         chosen.slug
     ];
 }
-function removeAndReplaceCharacter(
-    character
+function buildPendingUpdate(){
+
+    /*
+        Start with the characters the user
+        explicitly selected this game.
+    */
+
+    const removals =
+        [...pendingEliminations].map(
+            slug => ({
+                slug,
+                reason:null
+            })
+        );
+
+
+    /*
+        Add dependency removals.
+
+        This loops because it also allows
+        dependency chains later if we ever
+        add more rules.
+    */
+
+    let addedDependency =
+        true;
+
+
+    while(addedDependency){
+
+        addedDependency =
+            false;
+
+
+        [...removals].forEach(
+            removal => {
+
+                const dependencies =
+                    characterDependencies[
+                        removal.slug
+                    ] || [];
+
+
+                dependencies.forEach(
+                    dependency => {
+
+                        /*
+                            The dependent only matters
+                            if it is currently in play.
+                        */
+
+                        if(
+                            !erratanomiconData
+                                .characters
+                                .includes(
+                                    dependency.dependent
+                                )
+                        ){
+                            return;
+                        }
+
+
+                        /*
+                            Don't add it twice.
+                        */
+
+                        const alreadyRemoved =
+                            removals.some(
+                                existing =>
+                                    existing.slug ===
+                                    dependency.dependent
+                            );
+
+
+                        if(alreadyRemoved){
+                            return;
+                        }
+
+
+                        removals.push({
+                            slug:
+                                dependency.dependent,
+
+                            reason:
+                                dependency.reason
+                        });
+
+
+                        addedDependency =
+                            true;
+
+                    }
+                );
+
+            }
+        );
+
+    }
+
+
+    pendingUpdate = {
+        removals,
+        replacements:{}
+    };
+
+
+    /*
+        Roll the surprise replacements.
+
+        We do this only now, when the
+        update screen is opened.
+    */
+
+    removals.forEach(
+        removal => {
+
+            pendingUpdate
+                .replacements[
+                    removal.slug
+                ] =
+                    choosePendingReplacement(
+                        removal.slug
+                    );
+
+        }
+    );
+
+}
+function choosePendingReplacement(
+    removedSlug
 ){
 
-    const oldSlug =
-        character.slug;
+    const oldCharacter =
+        officialCharacters[
+            removedSlug
+        ];
 
-
-    const replacement =
-        getReplacementCharacter(
-            character
-        );
-
-
-    if(!replacement){
-
-        alert(
-            `No replacement is available for ${character.name}.`
-        );
-
-        return;
+    if(!oldCharacter){
+        return null;
     }
 
 
-    /*
-        Permanently retire the old character.
-    */
-
-    removedCharacters.add(
-        oldSlug
-    );
+    const oldTeam =
+        getScriptTeam(
+            oldCharacter
+        );
 
 
     /*
-        Replace it in the current script roster.
+        Anything already permanently dead
+        cannot return.
     */
 
-    const index =
-        erratanomiconData
-            .characters
-            .indexOf(
-                oldSlug
+    const unavailable =
+        new Set(
+            removedCharacters
+        );
+
+
+    /*
+        Anything being removed during this
+        update is also unavailable.
+    */
+
+    pendingUpdate.removals.forEach(
+        removal => {
+
+            unavailable.add(
+                removal.slug
             );
 
+        }
+    );
 
-    if(index === -1){
+
+    /*
+        Characters currently remaining on
+        the script cannot be duplicated.
+    */
+
+    erratanomiconData
+        .characters
+        .forEach(
+            slug => {
+
+                if(
+                    !pendingUpdate.removals
+                        .some(
+                            removal =>
+                                removal.slug ===
+                                slug
+                        )
+                ){
+                    unavailable.add(
+                        slug
+                    );
+                }
+
+            }
+        );
+
+
+    /*
+        Don't use a replacement already
+        rolled for another removal.
+    */
+
+    Object.values(
+        pendingUpdate.replacements
+    )
+    .filter(Boolean)
+    .forEach(
+        replacement => {
+
+            unavailable.add(
+                replacement
+            );
+
+        }
+    );
+
+
+    const candidates =
+        erratanomiconCharacterOrder
+        .filter(
+            slug => {
+
+                if(
+                    unavailable.has(
+                        slug
+                    )
+                ){
+                    return false;
+                }
+
+
+                const character =
+                    officialCharacters[
+                        slug
+                    ];
+
+                if(!character){
+                    return false;
+                }
+
+
+                if(
+                    getScriptTeam(
+                        character
+                    ) !==
+                    oldTeam
+                ){
+                    return false;
+                }
+
+
+                /*
+                    Huntsman may only enter
+                    if Damsel will be on the
+                    resulting script.
+
+                    Choirboy follows the
+                    same rule with King.
+                */
+
+                if(
+                    slug === "huntsman" &&
+                    !willCharacterRemain(
+                        "damsel"
+                    )
+                ){
+                    return false;
+                }
+
+
+                if(
+                    slug === "choirboy" &&
+                    !willCharacterRemain(
+                        "king"
+                    )
+                ){
+                    return false;
+                }
+
+
+                return true;
+
+            }
+        );
+
+
+    if(
+        candidates.length === 0
+    ){
+        return null;
+    }
+
+
+    const scored =
+        candidates.map(
+            slug => ({
+                slug,
+                score:
+                    getSimilarityScore(
+                        removedSlug,
+                        slug
+                    )
+            })
+        );
+
+
+    const highestScore =
+        Math.max(
+            ...scored.map(
+                candidate =>
+                    candidate.score
+            )
+        );
+
+
+    const best =
+        scored.filter(
+            candidate =>
+                candidate.score ===
+                highestScore
+        );
+
+
+    return best[
+        Math.floor(
+            Math.random() *
+            best.length
+        )
+    ].slug;
+
+}
+function willCharacterRemain(
+    slug
+){
+
+    /*
+        Is it currently on the script?
+    */
+
+    if(
+        erratanomiconData
+            .characters
+            .includes(
+                slug
+            )
+    ){
+
+        /*
+            Then make sure it isn't being
+            removed in this update.
+        */
+
+        return !pendingUpdate
+            .removals
+            .some(
+                removal =>
+                    removal.slug ===
+                    slug
+            );
+
+    }
+
+
+    /*
+        Or has it already been selected as
+        one of this update's replacements?
+    */
+
+    return Object.values(
+        pendingUpdate.replacements
+    ).includes(
+        slug
+    );
+
+}
+function renderUpdateModal(){
+
+    const container =
+        document.getElementById(
+            "erratanomiconUpdateSummary"
+        );
+
+
+    container.innerHTML =
+        "";
+
+
+    /*
+        Ability edits
+    */
+
+    const editsHeading =
+        document.createElement(
+            "h3"
+        );
+
+    editsHeading.textContent =
+        "Ability Edits";
+
+    container.appendChild(
+        editsHeading
+    );
+
+
+    const editsNote =
+        document.createElement(
+            "p"
+        );
+
+    editsNote.className =
+        "erratanomicon-update-note";
+
+    editsNote.textContent =
+        "All ability changes made during this game will be saved.";
+
+    container.appendChild(
+        editsNote
+    );
+
+
+    /*
+        Character replacements
+    */
+
+    const replacementHeading =
+        document.createElement(
+            "h3"
+        );
+
+    replacementHeading.textContent =
+        "Character Replacements";
+
+    container.appendChild(
+        replacementHeading
+    );
+
+
+    if(
+        pendingUpdate.removals.length ===
+        0
+    ){
+
+        const empty =
+            document.createElement(
+                "p"
+            );
+
+        empty.className =
+            "erratanomicon-update-note";
+
+        empty.textContent =
+            "No characters were eliminated this game.";
+
+        container.appendChild(
+            empty
+        );
+
+        return;
+
+    }
+
+
+    pendingUpdate.removals.forEach(
+        removal => {
+
+            container.appendChild(
+                createReplacementReveal(
+                    removal
+                )
+            );
+
+        }
+    );
+
+}
+function createReplacementReveal(
+    removal
+){
+
+    const oldCharacter =
+        officialCharacters[
+            removal.slug
+        ];
+
+    const replacementSlug =
+        pendingUpdate
+            .replacements[
+                removal.slug
+            ];
+
+    const replacement =
+        replacementSlug
+            ? officialCharacters[
+                replacementSlug
+            ]
+            : null;
+
+
+    const card =
+        document.createElement(
+            "div"
+        );
+
+    card.className =
+        "erratanomicon-replacement-card";
+
+
+    const oldImage =
+        Array.isArray(
+            oldCharacter.image
+        )
+            ? oldCharacter.image[0]
+            : oldCharacter.image;
+
+
+    const newImage =
+        replacement
+            ? (
+                Array.isArray(
+                    replacement.image
+                )
+                    ? replacement.image[0]
+                    : replacement.image
+            )
+            : "";
+
+
+    card.innerHTML = `
+
+        <div class="erratanomicon-replacement-old">
+
+            <img
+                src="${oldImage}"
+                alt="${oldCharacter.name}"
+            >
+
+            <strong>
+                ${oldCharacter.name}
+            </strong>
+
+            ${
+                removal.reason
+                    ? `
+                        <span class="erratanomicon-dependency-note">
+                            ${removal.reason}
+                        </span>
+                    `
+                    : ""
+            }
+
+        </div>
+
+
+        <div class="erratanomicon-replacement-arrow">
+            →
+        </div>
+
+
+        <div class="erratanomicon-replacement-new">
+
+            ${
+                replacement
+                    ? `
+
+                        <button
+                            class="erratanomicon-skip-replacement"
+                            type="button"
+                        >
+                            Skip & Eliminate Character
+                        </button>
+
+                        <img
+                            src="${newImage}"
+                            alt="${replacement.name}"
+                        >
+
+                        <strong>
+                            ${replacement.name}
+                        </strong>
+
+                    `
+                    : `
+
+                        <strong>
+                            No replacement available
+                        </strong>
+
+                    `
+            }
+
+        </div>
+
+    `;
+
+
+    const skipButton =
+        card.querySelector(
+            ".erratanomicon-skip-replacement"
+        );
+
+
+    if(skipButton){
+
+        skipButton.addEventListener(
+            "click",
+            () => {
+
+                skipPendingReplacement(
+                    removal.slug
+                );
+
+            }
+        );
+
+    }
+
+
+    return card;
+
+}
+function skipPendingReplacement(
+    removedSlug
+){
+
+    const skippedSlug =
+        pendingUpdate
+            .replacements[
+                removedSlug
+            ];
+
+
+    if(!skippedSlug){
         return;
     }
 
 
-    const replacementSlug =
-        replacement.id.replace(
-            "erratanomicon_",
-            ""
-        );
+    /*
+        The rejected replacement becomes
+        permanently eliminated as part of
+        this update.
+    */
 
+    if(
+        !pendingUpdate.removals.some(
+            removal =>
+                removal.slug ===
+                skippedSlug
+        )
+    ){
 
-    erratanomiconData
-        .characters[
-            index
-        ] =
-            replacementSlug;
+        pendingUpdate.removals.push({
+            slug:skippedSlug,
+            reason:
+                "Skipped as a replacement."
+        });
+
+    }
 
 
     /*
-        Re-render the script.
+        Remove the old roll before finding
+        another replacement.
     */
 
-    renderErratanomiconScript();
+    pendingUpdate.replacements[
+        removedSlug
+    ] = null;
 
 
-    console.log(
-        `${character.name} removed. ` +
-        `Replacement: ${replacement.name}`
-    );
+    pendingUpdate.replacements[
+        removedSlug
+    ] =
+        choosePendingReplacement(
+            removedSlug
+        );
 
-    console.log(
-        "Removed characters:",
-        [...removedCharacters]
-    );
+
+    renderUpdateModal();
+
+}
+function openUpdateModal(){
+
+    buildPendingUpdate();
+
+    renderUpdateModal();
+
+
+    document
+        .getElementById(
+            "erratanomiconUpdateModal"
+        )
+        .classList.remove(
+            "hidden"
+        );
+
+}
+
+
+function closeUpdateModal(){
+
+    pendingUpdate =
+        null;
+
+
+    document
+        .getElementById(
+            "erratanomiconUpdateModal"
+        )
+        .classList.add(
+            "hidden"
+        );
 
 }
 /* ==========================================
@@ -1825,10 +2480,39 @@ async function initializeErratanomicon(){
 }
 
 
-const downloadButton =
+downloadButton.addEventListener(
+    "click",
+    openUpdateModal
+);
+const closeUpdateButton =
     document.getElementById(
-        "downloadErratanomiconScript"
+        "closeErratanomiconModal"
     );
+
+const modalBackdrop =
+    document.querySelector(
+        ".erratanomicon-modal-backdrop"
+    );
+
+
+if(closeUpdateButton){
+
+    closeUpdateButton.addEventListener(
+        "click",
+        closeUpdateModal
+    );
+
+}
+
+
+if(modalBackdrop){
+
+    modalBackdrop.addEventListener(
+        "click",
+        closeUpdateModal
+    );
+
+}
 
 if(downloadButton){
 
