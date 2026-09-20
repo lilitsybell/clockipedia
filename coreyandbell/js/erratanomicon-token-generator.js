@@ -291,6 +291,78 @@ function createRandom(
 /* ==========================================
    Draw Green Brush Splotch
 ========================================== */
+/* ==========================================
+   Draw Paint Blob
+========================================== */
+
+function drawPaintBlob(
+    context,
+    random,
+    x,
+    y,
+    radius
+){
+
+    const points = 18;
+
+    context.beginPath();
+
+    for(
+        let i = 0;
+        i < points;
+        i++
+    ){
+
+        const angle =
+            (
+                Math.PI * 2 * i
+            ) / points;
+
+        const variation =
+            .72 +
+            random() * .5;
+
+        const currentRadius =
+            radius * variation;
+
+        const px =
+            x +
+            Math.cos(angle) *
+            currentRadius;
+
+        const py =
+            y +
+            Math.sin(angle) *
+            currentRadius;
+
+        if(i === 0){
+
+            context.moveTo(
+                px,
+                py
+            );
+
+        }else{
+
+            context.lineTo(
+                px,
+                py
+            );
+
+        }
+
+    }
+
+    context.closePath();
+    context.fill();
+
+}
+
+
+
+/* ==========================================
+   Draw Green Paint
+========================================== */
 
 function drawGreenSplotch(
     context,
@@ -304,155 +376,294 @@ function drawGreenSplotch(
 
 
 
+    const green =
+        "#819900";
+
+
+
     context.save();
 
-    context.translate(
-        300,
-        300
-    );
-
-
-
-    const rotation =
-        (
-            random() * 18 -
-            9
-        ) *
-        Math.PI / 180;
-
-    context.rotate(
-        rotation
-    );
-
-
-
     context.fillStyle =
-        "#80a52b";
+        green;
 
 
 
     /*
-        Main irregular paint body
+        Main paint patches.
+
+        These are intentionally separated
+        rather than forming one giant blob.
     */
 
-    context.beginPath();
+    const blobCount =
+        3 +
+        Math.floor(
+            random() * 3
+        );
 
-    const points = 34;
+
 
     for(
         let i = 0;
-        i < points;
+        i < blobCount;
         i++
     ){
 
         const angle =
-            (
-                Math.PI * 2 * i
-            ) / points;
+            random() *
+            Math.PI *
+            2;
 
-
-
-        const horizontal =
-            215 +
-            random() * 55;
-
-        const vertical =
-            190 +
-            random() * 60;
-
-
+        const distance =
+            95 +
+            random() * 115;
 
         const x =
+            300 +
             Math.cos(angle) *
-            horizontal;
+            distance;
 
         const y =
+            300 +
             Math.sin(angle) *
-            vertical;
+            distance;
+
+        const radius =
+            45 +
+            random() * 55;
 
 
 
-        if(i === 0){
-
-            context.moveTo(
-                x,
-                y
-            );
-
-        }else{
-
-            context.lineTo(
-                x,
-                y
-            );
-
-        }
+        drawPaintBlob(
+            context,
+            random,
+            x,
+            y,
+            radius
+        );
 
     }
-
-    context.closePath();
-    context.fill();
 
 
 
     /*
-        Rough brush streaks around
-        the outside.
+        Medium splatters
     */
+
+    const mediumCount =
+        35 +
+        Math.floor(
+            random() * 25
+        );
+
+
 
     for(
         let i = 0;
-        i < 45;
+        i < mediumCount;
         i++
     ){
 
-        const side =
-            random() < .5
-                ? -1
-                : 1;
+        const angle =
+            random() *
+            Math.PI *
+            2;
 
-
+        const distance =
+            110 +
+            random() * 175;
 
         const x =
-            side *
-            (
-                190 +
-                random() * 85
-            );
+            300 +
+            Math.cos(angle) *
+            distance;
 
         const y =
-            -180 +
-            random() * 360;
+            300 +
+            Math.sin(angle) *
+            distance;
 
-
-
-        const width =
-            25 +
-            random() * 80;
-
-        const height =
-            3 +
-            random() * 13;
+        const radius =
+            2 +
+            random() * 9;
 
 
 
         context.globalAlpha =
-            .35 +
-            random() * .55;
+            .55 +
+            random() * .45;
 
 
 
-        context.fillRect(
-            x -
-            (
-                side < 0
-                    ? width
-                    : 0
-            ),
+        context.beginPath();
+
+        context.arc(
+            x,
             y,
-            width,
-            height
+            radius,
+            0,
+            Math.PI * 2
         );
+
+        context.fill();
+
+    }
+
+
+
+    /*
+        Fine paint speckles
+    */
+
+    const speckCount =
+        180 +
+        Math.floor(
+            random() * 120
+        );
+
+
+
+    for(
+        let i = 0;
+        i < speckCount;
+        i++
+    ){
+
+        const angle =
+            random() *
+            Math.PI *
+            2;
+
+        const distance =
+            120 +
+            random() * 210;
+
+        const x =
+            300 +
+            Math.cos(angle) *
+            distance;
+
+        const y =
+            300 +
+            Math.sin(angle) *
+            distance;
+
+        const radius =
+            .5 +
+            random() * 2.4;
+
+
+
+        context.globalAlpha =
+            .3 +
+            random() * .7;
+
+
+
+        context.beginPath();
+
+        context.arc(
+            x,
+            y,
+            radius,
+            0,
+            Math.PI * 2
+        );
+
+        context.fill();
+
+    }
+
+
+
+    /*
+        Dry brush scratches
+    */
+
+    const streakCount =
+        25 +
+        Math.floor(
+            random() * 20
+        );
+
+
+
+    context.lineCap =
+        "round";
+
+
+
+    for(
+        let i = 0;
+        i < streakCount;
+        i++
+    ){
+
+        const angle =
+            random() *
+            Math.PI *
+            2;
+
+        const distance =
+            130 +
+            random() * 160;
+
+        const x =
+            300 +
+            Math.cos(angle) *
+            distance;
+
+        const y =
+            300 +
+            Math.sin(angle) *
+            distance;
+
+        const length =
+            15 +
+            random() * 55;
+
+        const strokeAngle =
+            random() *
+            Math.PI *
+            2;
+
+
+
+        context.globalAlpha =
+            .25 +
+            random() * .5;
+
+        context.lineWidth =
+            1 +
+            random() * 4;
+
+
+
+        context.beginPath();
+
+        context.moveTo(
+            x,
+            y
+        );
+
+        context.lineTo(
+            x +
+            Math.cos(
+                strokeAngle
+            ) *
+            length,
+
+            y +
+            Math.sin(
+                strokeAngle
+            ) *
+            length
+        );
+
+        context.strokeStyle =
+            green;
+
+        context.stroke();
 
     }
 
@@ -460,11 +671,7 @@ function drawGreenSplotch(
 
     context.restore();
 
-    context.globalAlpha =
-        1;
-
 }
-
 /* ==========================================
    Draw Character
 ========================================== */
@@ -494,10 +701,10 @@ drawGreenSplotch(
 
 
     const maxWidth =
-        canvas.width * .72;
+        canvas.width * 1;
 
     const maxHeight =
-        canvas.height * .72;
+        canvas.height * 1;
 
 
 
