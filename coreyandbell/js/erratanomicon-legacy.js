@@ -140,10 +140,10 @@ function getErratanomiconCharacter(
 
 
 
-    return {
-        slug,
-        ...character
-    };
+character.slug =
+    slug;
+
+return character;
 
 }
 
