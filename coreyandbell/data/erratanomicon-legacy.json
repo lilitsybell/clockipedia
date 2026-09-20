@@ -1,0 +1,44 @@
+{
+    "meta": {
+        "name": "Erratanomicon Legacy",
+        "author": "Corey and Bell",
+        "id": "erratanomicon-legacy"
+    },
+    "characters": [
+        "chef",
+        "noble",
+        "grandmother",
+        "librarian",
+        "chambermaid",
+        "monk",
+        "gambler",
+        "exorcist",
+        "gossip",
+        "savant",
+        "fisherman",
+        "soldier",
+        "cannibal",
+        "drunk",
+        "tinker",
+        "sweetheart",
+        "mutant",
+        "godfather",
+        "spy",
+        "cerenovus",
+        "assassin",
+        "imp",
+        "shabaloth",
+        "po",
+        "vigormortis",
+        "erratanomicon"
+    ],
+    "customCharacters": {
+        "erratanomicon": {
+            "id": "erratanomicon",
+            "name": "Erratanomicon",
+            "team": "Loric",
+            "image": "https://i.ibb.co/0VBL0wMp/image.png",
+            "ability": "Each night, the Demon may select a good character and change 1 word of their ability. If accepted, the Demon does not wake tonight. If in play, the player learns this. This may happen as many times as the number of Minions in the player count."
+        }
+    }
+}
