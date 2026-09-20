@@ -1215,8 +1215,22 @@ if(slug === "erratanomicon"){
         ...characterData
     } = character;
 
+
+    /*
+        Store the permanent removed-character
+        state inside the Loric ID.
+    */
+
+    const saveState =
+        encodeRemovedCharacters();
+
+    characterData.id =
+        `el1_${saveState}`;
+
+
     characterData.team =
         characterData.team.toLowerCase();
+
 
     script.push(
         characterData
