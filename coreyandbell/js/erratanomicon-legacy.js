@@ -2054,9 +2054,30 @@ function renderCharacterGraveyard(){
 /* ==========================================
    Render Script
 ========================================== */
+function renderLegacyNumber(){
 
+    const element =
+        document.getElementById(
+            "erratanomiconLegacyNumber"
+        );
+
+
+    if(!element){
+        return;
+    }
+
+
+    const gameNumber =
+        erratanomiconData.meta?.game ||
+        1;
+
+
+    element.textContent =
+        `Legacy Game ${gameNumber}`;
+
+}
 function renderErratanomiconScript(){
-
+renderLegacyNumber();
     scriptContainer.innerHTML =
         "";
 
@@ -3190,7 +3211,73 @@ const importFileInput =
         "importErratanomiconFile"
     );
 
+const copyCurrentButton =
+    document.getElementById(
+        "copyCurrentErratanomiconScript"
+    );
 
+
+if(copyCurrentButton){
+
+    copyCurrentButton.addEventListener(
+        "click",
+        async () => {
+
+            const copied =
+                await copyErratanomiconScript();
+
+
+            if(!copied){
+
+                alert(
+                    "The JSON could not be copied."
+                );
+
+                return;
+
+            }
+
+
+            const originalText =
+                copyCurrentButton.textContent;
+
+
+            copyCurrentButton.textContent =
+                "Copied!";
+
+
+            setTimeout(
+                () => {
+
+                    copyCurrentButton.textContent =
+                        originalText;
+
+                },
+                1200
+            );
+
+        }
+    );
+
+}
+const downloadCurrentButton =
+    document.getElementById(
+        "downloadCurrentErratanomiconScript"
+    );
+
+
+if(downloadCurrentButton){
+
+    downloadCurrentButton.addEventListener(
+        "click",
+        () => {
+
+            downloadErratanomiconScript();
+
+        }
+    );
+
+}
 if(
     importButton &&
     importFileInput
