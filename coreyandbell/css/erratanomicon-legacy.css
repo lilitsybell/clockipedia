@@ -1,0 +1,312 @@
+/* ==========================================
+   Erratanomicon Legacy
+========================================== */
+
+.erratanomicon-page{
+    max-width:950px;
+}
+
+
+/* ==========================================
+   Header
+========================================== */
+
+.erratanomicon-header{
+    text-align:center;
+}
+
+.erratanomicon-header p{
+    margin-left:auto;
+    margin-right:auto;
+}
+
+
+/* ==========================================
+   Script
+========================================== */
+
+.erratanomicon-script{
+    overflow:hidden;
+
+    border:
+        1px solid
+        var(--border);
+
+    border-radius:
+        var(--card-radius);
+
+    background:white;
+
+    box-shadow:
+        0 10px 28px
+        rgba(13,24,33,.07);
+}
+
+
+/* ==========================================
+   Team Sections
+========================================== */
+
+.erratanomicon-team{
+    padding:
+        0 30px 24px;
+}
+
+.erratanomicon-team +
+.erratanomicon-team{
+    border-top:
+        1px solid
+        var(--border);
+}
+
+
+/* ==========================================
+   Team Heading
+========================================== */
+
+.erratanomicon-team-heading{
+    min-height:52px;
+
+    display:flex;
+    align-items:center;
+
+    gap:10px;
+}
+
+.erratanomicon-team-heading h2{
+    margin:0;
+
+    font-family:
+        "Droid Sans",
+        Arial,
+        sans-serif;
+
+    font-size:17px;
+    font-weight:700;
+
+    letter-spacing:.04em;
+
+    text-transform:uppercase;
+}
+
+.erratanomicon-team-heading span{
+    min-width:24px;
+    height:24px;
+
+    display:inline-flex;
+    align-items:center;
+    justify-content:center;
+
+    border-radius:50%;
+
+    font-size:10px;
+    font-weight:900;
+}
+
+
+/* ==========================================
+   Team Colors
+========================================== */
+
+.erratanomicon-team-townsfolk
+.erratanomicon-team-heading{
+    color:var(--blue);
+}
+
+.erratanomicon-team-outsiders
+.erratanomicon-team-heading{
+    color:var(--blue);
+}
+
+.erratanomicon-team-minions
+.erratanomicon-team-heading{
+    color:var(--red);
+}
+
+.erratanomicon-team-demons
+.erratanomicon-team-heading{
+    color:var(--red);
+}
+
+.erratanomicon-team-loric
+.erratanomicon-team-heading{
+    color:var(--lime);
+}
+
+.erratanomicon-team-heading span{
+    background:currentColor;
+    color:white;
+}
+
+
+/* ==========================================
+   Character List
+========================================== */
+
+.erratanomicon-character-list{
+    display:flex;
+    flex-direction:column;
+}
+
+
+/* ==========================================
+   Character
+========================================== */
+
+.erratanomicon-character{
+    min-height:76px;
+
+    display:grid;
+
+    grid-template-columns:
+        66px
+        minmax(0,1fr);
+
+    align-items:center;
+
+    gap:15px;
+
+    padding:
+        8px 4px;
+}
+
+.erratanomicon-character +
+.erratanomicon-character{
+    border-top:
+        1px solid
+        rgba(13,24,33,.07);
+}
+
+
+/* ==========================================
+   Character Token
+========================================== */
+
+.erratanomicon-character-token{
+    width:62px;
+    height:62px;
+
+    display:flex;
+    align-items:center;
+    justify-content:center;
+
+    position:relative;
+
+    flex-shrink:0;
+}
+
+.erratanomicon-character-token img{
+    display:block;
+
+    width:58px;
+    height:58px;
+
+    object-fit:contain;
+}
+
+
+/* ==========================================
+   Character Information
+========================================== */
+
+.erratanomicon-character-info{
+    min-width:0;
+}
+
+.erratanomicon-character-info h3{
+    margin:
+        0 0 3px;
+
+    font-family:
+        "Droid Sans",
+        Arial,
+        sans-serif;
+
+    font-size:15px;
+    font-weight:700;
+
+    line-height:1.2;
+}
+
+.erratanomicon-character-ability{
+    max-width:760px;
+
+    color:#555;
+
+    font-size:13px;
+    line-height:1.45;
+}
+
+
+/* ==========================================
+   Character Team Colors
+========================================== */
+
+.erratanomicon-team-townsfolk
+.erratanomicon-character-info h3,
+
+.erratanomicon-team-outsiders
+.erratanomicon-character-info h3{
+    color:var(--blue);
+}
+
+.erratanomicon-team-minions
+.erratanomicon-character-info h3,
+
+.erratanomicon-team-demons
+.erratanomicon-character-info h3{
+    color:var(--red);
+}
+
+.erratanomicon-team-loric
+.erratanomicon-character-info h3{
+    color:var(--lime);
+}
+
+
+/* ==========================================
+   Loading / Error
+========================================== */
+
+.erratanomicon-loading,
+.erratanomicon-error{
+    padding:50px 30px;
+
+    color:var(--gray);
+
+    text-align:center;
+
+    font-size:14px;
+}
+
+
+/* ==========================================
+   Mobile
+========================================== */
+
+@media(max-width:700px){
+
+    .erratanomicon-team{
+        padding:
+            0 18px 20px;
+    }
+
+    .erratanomicon-character{
+        grid-template-columns:
+            58px
+            minmax(0,1fr);
+
+        gap:12px;
+    }
+
+    .erratanomicon-character-token{
+        width:54px;
+        height:54px;
+    }
+
+    .erratanomicon-character-token img{
+        width:52px;
+        height:52px;
+    }
+
+}
