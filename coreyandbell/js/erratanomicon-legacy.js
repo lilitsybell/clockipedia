@@ -948,7 +948,118 @@ function createTeamSection(
 
 }
 
+function renderCharacterGraveyard(){
 
+    const graveyard =
+        document.getElementById(
+            "erratanomiconGraveyard"
+        );
+
+    const container =
+        document.getElementById(
+            "erratanomiconGraveyardCharacters"
+        );
+
+
+    if(
+        !graveyard ||
+        !container
+    ){
+        return;
+    }
+
+
+    container.innerHTML =
+        "";
+
+
+    /*
+        Hide the entire graveyard until
+        at least one character has died.
+    */
+
+    if(
+        removedCharacters.size === 0
+    ){
+
+        graveyard.classList.add(
+            "hidden"
+        );
+
+        return;
+
+    }
+
+
+    graveyard.classList.remove(
+        "hidden"
+    );
+
+
+    /*
+        Use the permanent database order
+        rather than removal order.
+    */
+
+    erratanomiconCharacterOrder
+        .filter(
+            slug =>
+                removedCharacters.has(
+                    slug
+                )
+        )
+        .forEach(
+            slug => {
+
+                const character =
+                    officialCharacters[
+                        slug
+                    ];
+
+                if(!character){
+                    return;
+                }
+
+
+                const item =
+                    document.createElement(
+                        "div"
+                    );
+
+                item.className =
+                    "erratanomicon-graveyard-character";
+
+
+                const image =
+                    Array.isArray(
+                        character.image
+                    )
+                        ? character.image[0]
+                        : character.image;
+
+
+                item.innerHTML = `
+
+                    <img
+                        src="${image}"
+                        alt="${character.name}"
+                    >
+
+                    <span>
+                        ${character.name}
+                    </span>
+
+                `;
+
+
+                container.appendChild(
+                    item
+                );
+
+            }
+        );
+
+}
 
 /* ==========================================
    Render Script
@@ -1012,7 +1123,7 @@ function renderErratanomiconScript(){
         "Erratanomicon characters:",
         scriptCharacters
     );
-
+renderCharacterGraveyard();
 }
 function encodeRemovedCharacters(){
 
