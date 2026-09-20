@@ -1,11 +1,11 @@
 [
     {
-        "text":"If the [Boffin] grants the [Lleech] the [Courtier] ability, and the [Lleech] chooses [Lleech], and the [Lleech] host is dead, and the [Boffin] become drunk, poisoned, dead, or out of play, the [Lleech] immediately dies. (This may leave only 1 player alive. If it does, the good team wins.)",
+        "text":"If the [Boffin] grants the [Lleech] the [Courtier] ability, and the [Lleech] chooses [Lleech], and the [Lleech] host is dead, and the [Boffin] becomes drunk, poisoned, dead, or out of play, the [Lleech] immediately dies. (This may leave only 1 player alive. If it does, the good team wins.)",
         "math":"red",
         "reason":"If the Lleech's host is dead, the Lleech is also dead. If the Lleech was drunk or poisoned when the host died, the Lleech dies as soon as they are sober and healthy.",
         "mathInfo":"If the Lleech is alive and their host is not, the Lleech's ability is malfunctioning."},
     {
-        "text":"If the [Courtier] chooses [Lleech], and the [Lleech] host is dead, and the [Courtier] become drunk, poisoned, dead, or out of play, the [Lleech] immediately dies. (This may leave only 1 player alive. If it does, the good team wins.)",
+        "text":"If the [Courtier] chooses [Lleech], and the [Lleech] host is dead, and the [Courtier] becomes drunk, poisoned, dead, or out of play, the [Lleech] immediately dies. (This may leave only 1 player alive. If it does, the good team wins.)",
         "math":"red",
         "reason":"If the Lleech's host is dead, the Lleech is also dead. If the Lleech was drunk or poisoned when the host died, the Lleech dies as soon as they are sober and healthy.",
         "mathInfo":"If the Lleech is alive and their host is not, the Lleech's ability is malfunctioning."},
