@@ -650,7 +650,128 @@ function renderErratanomiconScript(){
 }
 
 
+function downloadErratanomiconScript(){
 
+    const script = [];
+
+
+    /*
+        Script metadata
+    */
+
+    script.push({
+        id:"_meta",
+        name:
+            erratanomiconData.meta?.name ||
+            "Erratanomicon Legacy",
+        author:
+            erratanomiconData.meta?.author ||
+            "Corey and Bell"
+    });
+
+
+    /*
+        Add each character using its
+        current data, including edited abilities.
+    */
+
+    erratanomiconData.characters.forEach(
+        slug => {
+
+            const character =
+                getErratanomiconCharacter(
+                    slug
+                );
+
+            if(!character){
+                return;
+            }
+
+
+            /*
+                Custom Loric
+            */
+
+            if(slug === "erratanomicon"){
+
+                script.push({
+                    ...character,
+                    id:"erratanomicon"
+                });
+
+                return;
+            }
+
+
+            /*
+                Normal Erratanomicon character.
+
+                The character already contains
+                its full BOTC character data.
+            */
+
+            const {
+                slug:unusedSlug,
+                ...characterData
+            } = character;
+
+            script.push(
+                characterData
+            );
+
+        }
+    );
+
+
+    /*
+        Create downloadable JSON
+    */
+
+    const json =
+        JSON.stringify(
+            script,
+            null,
+            2
+        );
+
+    const blob =
+        new Blob(
+            [json],
+            {
+                type:
+                    "application/json"
+            }
+        );
+
+    const url =
+        URL.createObjectURL(
+            blob
+        );
+
+    const link =
+        document.createElement(
+            "a"
+        );
+
+    link.href =
+        url;
+
+    link.download =
+        "erratanomicon-legacy.json";
+
+    document.body.appendChild(
+        link
+    );
+
+    link.click();
+
+    link.remove();
+
+    URL.revokeObjectURL(
+        url
+    );
+
+}
 /* ==========================================
    Initialize
 ========================================== */
@@ -689,5 +810,17 @@ async function initializeErratanomicon(){
 }
 
 
+const downloadButton =
+    document.getElementById(
+        "downloadErratanomiconScript"
+    );
 
+if(downloadButton){
+
+    downloadButton.addEventListener(
+        "click",
+        downloadErratanomiconScript
+    );
+
+}
 initializeErratanomicon();
