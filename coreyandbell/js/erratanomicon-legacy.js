@@ -2523,14 +2523,6 @@ if(modalBackdrop){
 
 }
 
-if(downloadButton){
-
-    downloadButton.addEventListener(
-        "click",
-        downloadErratanomiconScript
-    );
-
-}
 const importButton =
     document.getElementById(
         "importErratanomiconScript"
