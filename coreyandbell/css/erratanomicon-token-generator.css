@@ -1,0 +1,182 @@
+/* ==========================================
+   Token Generator
+========================================== */
+
+.token-generator{
+    overflow:hidden;
+}
+
+
+/* ==========================================
+   Controls
+========================================== */
+
+.token-generator-controls{
+    display:flex;
+    align-items:flex-end;
+
+    gap:14px;
+
+    padding:24px 28px;
+
+    border-bottom:
+        1px solid
+        var(--border);
+
+    background:
+        rgba(102,102,153,.035);
+}
+
+.token-generator-controls label{
+    align-self:center;
+
+    color:var(--black);
+
+    font-size:11px;
+    font-weight:900;
+
+    letter-spacing:.06em;
+
+    text-transform:uppercase;
+}
+
+.token-generator-controls select{
+    width:240px;
+    height:40px;
+
+    padding:0 12px;
+
+    border:
+        1px solid
+        var(--border);
+
+    border-radius:9px;
+
+    background:white;
+
+    color:var(--black);
+
+    font-family:
+        "Roboto",
+        Arial,
+        sans-serif;
+
+    font-size:13px;
+}
+
+.token-generator-buttons{
+    display:flex;
+    align-items:center;
+
+    gap:10px;
+}
+
+
+/* ==========================================
+   Preview Area
+========================================== */
+
+.token-generator-preview{
+    display:grid;
+
+    grid-template-columns:
+        repeat(2,minmax(0,1fr));
+
+    gap:40px;
+
+    padding:40px;
+}
+
+
+/* ==========================================
+   Preview Column
+========================================== */
+
+.token-preview-column{
+    min-width:0;
+
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+
+    gap:12px;
+}
+
+.token-preview-label{
+    color:var(--gray);
+
+    font-size:10px;
+    font-weight:900;
+
+    letter-spacing:.1em;
+
+    text-transform:uppercase;
+}
+
+
+/* ==========================================
+   Canvas
+========================================== */
+
+.token-preview-column canvas{
+    display:block;
+
+    width:100%;
+    max-width:360px;
+    height:auto;
+
+    border:
+        1px solid
+        rgba(13,24,33,.08);
+
+    border-radius:16px;
+
+    background:
+        repeating-conic-gradient(
+            #f7f7f7 0% 25%,
+            white 0% 50%
+        )
+        50% / 24px 24px;
+
+    box-shadow:
+        0 8px 22px
+        rgba(13,24,33,.08);
+}
+
+
+/* ==========================================
+   Mobile
+========================================== */
+
+@media(max-width:700px){
+
+    .token-generator-controls{
+        align-items:stretch;
+        flex-direction:column;
+    }
+
+    .token-generator-controls label{
+        align-self:flex-start;
+    }
+
+    .token-generator-controls select{
+        width:100%;
+    }
+
+    .token-generator-buttons{
+        width:100%;
+    }
+
+    .token-generator-buttons .site-button{
+        width:100%;
+    }
+
+    .token-generator-preview{
+        grid-template-columns:1fr;
+
+        gap:30px;
+
+        padding:25px;
+    }
+
+}
