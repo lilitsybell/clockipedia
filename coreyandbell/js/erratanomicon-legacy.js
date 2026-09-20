@@ -12,6 +12,8 @@ let pendingEliminations =
 let pendingUpdate =
     null;
 let pendingAbilityEdits = [];
+const ERRATANOMICON_STORAGE_KEY =
+    "erratanomiconLegacySave";
 
 /* ==========================================
    Elements
@@ -1581,6 +1583,7 @@ if(
                 "Pending eliminations:",
                 [...pendingEliminations]
             );
+            saveErratanomiconLocalState();
 
         }
     );
@@ -1794,7 +1797,7 @@ input.addEventListener(
 
     character.ability =
         words.join(" ");
-
+saveErratanomiconLocalState();
 
     renderAbilityWords(
         container,
@@ -2269,12 +2272,6 @@ function commitPendingUpdate(){
         return;
     }
 
-
-    /*
-        Permanently eliminate every character
-        that was actually removed from the script.
-    */
-
     pendingUpdate.removals.forEach(
         removal => {
 
@@ -2285,12 +2282,6 @@ function commitPendingUpdate(){
         }
     );
 
-
-    /*
-        Skipped replacement candidates are also
-        permanently eliminated.
-    */
-
     pendingUpdate.skipped.forEach(
         slug => {
 
@@ -2300,13 +2291,6 @@ function commitPendingUpdate(){
 
         }
     );
-
-
-    /*
-        Replace each removed script character
-        with its finalized replacement.
-    */
-
     pendingUpdate.removals.forEach(
         removal => {
 
@@ -2345,7 +2329,7 @@ function commitPendingUpdate(){
     );
 
     pendingEliminations.clear();
-
+saveErratanomiconLocalState();
     renderErratanomiconScript();
     pendingAbilityEdits = [];
 
@@ -2543,14 +2527,6 @@ function importErratanomiconScript(
                     );
                 }
 
-
-                /*
-                    Find the Erratanomicon.
-
-                    We identify it by name because
-                    its ID now contains save data.
-                */
-
                 const importedErratanomicon =
                     importedScript.find(
                         entry =>
@@ -2569,12 +2545,6 @@ function importErratanomiconScript(
                     );
                 }
 
-
-                /*
-                    Restore the permanent
-                    removed-character state.
-                */
-
                 if(
                     importedErratanomicon.id
                         .startsWith(
@@ -2592,12 +2562,6 @@ function importErratanomiconScript(
                     removedCharacters.clear();
 
                 }
-
-
-                /*
-                    Build the new current roster.
-                */
-
                 const importedRoster =
                     [];
 
@@ -2722,11 +2686,10 @@ function importErratanomiconScript(
                 erratanomiconData.characters =
                     importedRoster;
 
+pendingEliminations.clear();
+pendingAbilityEdits = [];
 
-                /*
-                    Redraw everything.
-                */
-
+saveErratanomiconLocalState();
                 renderErratanomiconScript();
 
 
@@ -2762,6 +2725,254 @@ function importErratanomiconScript(
     );
 
 }
+function startNewErratanomiconGame(){
+
+    const confirmed =
+        window.confirm(
+            "Start a new Erratanomicon Legacy game? This will erase the locally saved legacy on this browser."
+        );
+
+
+    if(!confirmed){
+        return;
+    }
+
+
+    try{
+
+        localStorage.removeItem(
+            ERRATANOMICON_STORAGE_KEY
+        );
+
+    }catch(error){
+
+        console.warn(
+            "Could not clear Erratanomicon local save.",
+            error
+        );
+
+    }
+
+
+    /*
+        Reloading now causes the page to use
+        the original JSON files again.
+    */
+
+    window.location.reload();
+
+}
+function saveErratanomiconLocalState(){
+
+    /*
+        Store the complete browser state needed
+        to survive an accidental refresh.
+    */
+
+    const characterAbilities = {};
+
+
+    Object.entries(
+        officialCharacters
+    ).forEach(
+        ([slug,character]) => {
+
+            characterAbilities[
+                slug
+            ] =
+                character.ability;
+
+        }
+    );
+
+
+    const state = {
+
+        characters:
+            [...erratanomiconData.characters],
+
+        removedCharacters:
+            [...removedCharacters],
+
+        pendingEliminations:
+            [...pendingEliminations],
+
+        pendingAbilityEdits:
+            pendingAbilityEdits.map(
+                edit => ({
+                    ...edit
+                })
+            ),
+
+        characterAbilities
+
+    };
+
+
+    try{
+
+        localStorage.setItem(
+            ERRATANOMICON_STORAGE_KEY,
+            JSON.stringify(
+                state
+            )
+        );
+
+    }catch(error){
+
+        console.warn(
+            "Could not save Erratanomicon state locally.",
+            error
+        );
+
+    }
+
+}
+function restoreErratanomiconLocalState(){
+
+    let saved;
+
+
+    try{
+
+        saved =
+            localStorage.getItem(
+                ERRATANOMICON_STORAGE_KEY
+            );
+
+    }catch(error){
+
+        console.warn(
+            "Could not read Erratanomicon local save.",
+            error
+        );
+
+        return false;
+
+    }
+
+
+    if(!saved){
+        return false;
+    }
+
+
+    try{
+
+        const state =
+            JSON.parse(
+                saved
+            );
+
+
+        /*
+            Restore current script roster.
+        */
+
+        if(
+            Array.isArray(
+                state.characters
+            )
+        ){
+
+            erratanomiconData.characters =
+                [...state.characters];
+
+        }
+
+
+        /*
+            Restore permanent graveyard.
+        */
+
+        removedCharacters =
+            new Set(
+                state.removedCharacters ||
+                []
+            );
+
+
+        /*
+            Restore characters selected for
+            elimination during this game.
+        */
+
+        pendingEliminations =
+            new Set(
+                state.pendingEliminations ||
+                []
+            );
+
+
+        /*
+            Restore this game's edit history.
+        */
+
+        pendingAbilityEdits =
+            Array.isArray(
+                state.pendingAbilityEdits
+            )
+                ? state.pendingAbilityEdits
+                : [];
+
+
+        /*
+            Restore edited ability text.
+        */
+
+        if(
+            state.characterAbilities &&
+            typeof state.characterAbilities ===
+                "object"
+        ){
+
+            Object.entries(
+                state.characterAbilities
+            ).forEach(
+                ([slug,ability]) => {
+
+                    if(
+                        officialCharacters[
+                            slug
+                        ] &&
+                        typeof ability ===
+                            "string"
+                    ){
+
+                        officialCharacters[
+                            slug
+                        ].ability =
+                            ability;
+
+                    }
+
+                }
+            );
+
+        }
+
+
+        console.log(
+            "Restored Erratanomicon local save."
+        );
+
+
+        return true;
+
+
+    }catch(error){
+
+        console.warn(
+            "Erratanomicon local save was invalid.",
+            error
+        );
+
+
+        return false;
+
+    }
+
+}
 /* ==========================================
    Initialize
 ========================================== */
@@ -2770,11 +2981,11 @@ async function initializeErratanomicon(){
 
     try{
 
-        await loadErratanomiconData();
+await loadErratanomiconData();
 
+restoreErratanomiconLocalState();
 
-
-        renderErratanomiconScript();
+renderErratanomiconScript();
 
     }catch(error){
 
@@ -2895,7 +3106,20 @@ if(modalBackdrop){
     );
 
 }
+const newGameButton =
+    document.getElementById(
+        "newErratanomiconGame"
+    );
 
+
+if(newGameButton){
+
+    newGameButton.addEventListener(
+        "click",
+        startNewErratanomiconGame
+    );
+
+}
 const importButton =
     document.getElementById(
         "importErratanomiconScript"
