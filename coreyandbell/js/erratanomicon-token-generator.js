@@ -141,7 +141,33 @@ function clearCanvas(
     );
 
 }
+/* ==========================================
+   Get Token Images
+========================================== */
 
+function getTokenImages(
+    character
+){
+
+    const goodImage =
+        character.image;
+
+
+
+    const evilImage =
+        goodImage.replace(
+            /_g(\.[a-zA-Z]+)$/,
+            "_e$1"
+        );
+
+
+
+    return {
+        good:goodImage,
+        evil:evilImage
+    };
+
+}
 
 
 /* ==========================================
@@ -166,7 +192,22 @@ function generateSelectedCharacter(){
             slug
         ];
 
+const images =
+    getTokenImages(
+        character
+    );
 
+
+
+console.log(
+    "Good token:",
+    images.good
+);
+
+console.log(
+    "Evil token:",
+    images.evil
+);
 
     console.log(
         "Generating:",
