@@ -1,9 +1,15 @@
 {
     "cerenovus": [
-        "Madness"
+        "Madness",
+        "Madness About Character",
+        "Player Choice",
+        "Night"
     ],
 
     "harpy": [
-        "Madness"
+        "Madness",
+        "Madness About Alignment",
+        "Player Choice",
+        "Night"
     ]
 }
