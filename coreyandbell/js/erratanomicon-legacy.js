@@ -258,7 +258,296 @@ const scriptTeams = [
     { id:"minions", name:"Minions" },
     { id:"demons", name:"Demons" }
 ];
+const similarityWeights = {
 
+    "Madness":10,
+    "Madness About Character":5,
+    "Madness About Alignment":5,
+
+    "Information":7,
+    "Character Information":8,
+    "Alignment Information":8,
+
+    "Droisoning":10,
+    "Drunkenness":8,
+    "Poisoning":8,
+
+    "Death":7,
+    "Protection":8,
+    "Resurrection":10,
+
+    "Execution":5,
+    "Nomination":5,
+    "Voting":5,
+
+    "Player Choice":2,
+    "Character Choice":2,
+    "Storyteller Choice":2,
+
+    "Night":1,
+    "Day":1,
+    "Once Per Game":1
+
+};
+function getSimilarityScore(
+    oldSlug,
+    newSlug
+){
+
+    const oldTags =
+        erratanomiconSimilarity[
+            oldSlug
+        ] || [];
+
+    const newTags =
+        erratanomiconSimilarity[
+            newSlug
+        ] || [];
+
+    let score = 0;
+
+
+    oldTags.forEach(
+        tag => {
+
+            if(
+                newTags.includes(
+                    tag
+                )
+            ){
+
+                score +=
+                    similarityWeights[
+                        tag
+                    ] || 1;
+
+            }
+
+        }
+    );
+
+
+    return score;
+}
+function getReplacementCharacter(
+    oldCharacter
+){
+
+    const oldSlug =
+        oldCharacter.slug;
+
+    const oldTeam =
+        getScriptTeam(
+            oldCharacter
+        );
+
+
+    const currentCharacters =
+        new Set(
+            erratanomiconData
+                .characters
+        );
+
+
+    const candidates =
+        erratanomiconCharacterOrder
+        .filter(
+            slug => {
+
+                /*
+                    Can't bring back a
+                    permanently removed character.
+                */
+
+                if(
+                    removedCharacters.has(
+                        slug
+                    )
+                ){
+                    return false;
+                }
+
+
+                /*
+                    Can't add somebody who is
+                    already on the script.
+                */
+
+                if(
+                    currentCharacters.has(
+                        slug
+                    )
+                ){
+                    return false;
+                }
+
+
+                const character =
+                    officialCharacters[
+                        slug
+                    ];
+
+                if(!character){
+                    return false;
+                }
+
+
+                /*
+                    Replacement must be
+                    the same team.
+                */
+
+                return (
+                    getScriptTeam(
+                        character
+                    ) ===
+                    oldTeam
+                );
+
+            }
+        );
+
+
+    if(
+        candidates.length === 0
+    ){
+        return null;
+    }
+
+
+    const scoredCandidates =
+        candidates.map(
+            slug => ({
+
+                slug,
+
+                score:
+                    getSimilarityScore(
+                        oldSlug,
+                        slug
+                    )
+
+            })
+        );
+
+
+    const highestScore =
+        Math.max(
+            ...scoredCandidates.map(
+                candidate =>
+                    candidate.score
+            )
+        );
+
+
+    const bestCandidates =
+        scoredCandidates.filter(
+            candidate =>
+                candidate.score ===
+                highestScore
+        );
+
+
+    /*
+        Random choice between equally
+        good replacements.
+    */
+
+    const chosen =
+        bestCandidates[
+            Math.floor(
+                Math.random() *
+                bestCandidates.length
+            )
+        ];
+
+
+    return officialCharacters[
+        chosen.slug
+    ];
+}
+function removeAndReplaceCharacter(
+    character
+){
+
+    const oldSlug =
+        character.slug;
+
+
+    const replacement =
+        getReplacementCharacter(
+            character
+        );
+
+
+    if(!replacement){
+
+        alert(
+            `No replacement is available for ${character.name}.`
+        );
+
+        return;
+    }
+
+
+    /*
+        Permanently retire the old character.
+    */
+
+    removedCharacters.add(
+        oldSlug
+    );
+
+
+    /*
+        Replace it in the current script roster.
+    */
+
+    const index =
+        erratanomiconData
+            .characters
+            .indexOf(
+                oldSlug
+            );
+
+
+    if(index === -1){
+        return;
+    }
+
+
+    const replacementSlug =
+        replacement.id.replace(
+            "erratanomicon_",
+            ""
+        );
+
+
+    erratanomiconData
+        .characters[
+            index
+        ] =
+            replacementSlug;
+
+
+    /*
+        Re-render the script.
+    */
+
+    renderErratanomiconScript();
+
+
+    console.log(
+        `${character.name} removed. ` +
+        `Replacement: ${replacement.name}`
+    );
+
+    console.log(
+        "Removed characters:",
+        [...removedCharacters]
+    );
+
+}
 /* ==========================================
    Create Character
 ========================================== */
@@ -311,7 +600,47 @@ function createScriptCharacter(
     `;
 
 
+if(
+    getScriptTeam(character) !==
+    "loric"
+){
 
+    const removeButton =
+        document.createElement(
+            "button"
+        );
+
+    removeButton.type =
+        "button";
+
+    removeButton.className =
+        "erratanomicon-remove-character";
+
+    removeButton.textContent =
+        "Remove & Replace";
+
+
+    removeButton.addEventListener(
+        "click",
+        () => {
+
+            removeAndReplaceCharacter(
+                character
+            );
+
+        }
+    );
+
+
+    article
+        .querySelector(
+            ".erratanomicon-character-info"
+        )
+        .appendChild(
+            removeButton
+        );
+
+}
     const abilityElement =
         article.querySelector(
             ".erratanomicon-character-ability"
