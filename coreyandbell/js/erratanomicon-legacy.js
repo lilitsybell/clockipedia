@@ -35,10 +35,9 @@ async function loadErratanomiconData(){
             fetch(
                 "/coreyandbell/data/erratanomicon-legacy.json"
             ),
-
-            fetch(
-                "/data/characters.json"
-            )
+fetch(
+    "/coreyandbell/data/erratanomicon-characters.json"
+)
 
         ]);
 
@@ -69,8 +68,21 @@ async function loadErratanomiconData(){
 
 
 
-    officialCharacters =
-        await characterResponse.json();
+const characterList =
+    await characterResponse.json();
+
+officialCharacters =
+    Object.fromEntries(
+        characterList.map(
+            character => [
+                character.id.replace(
+                    "erratanomicon_",
+                    ""
+                ),
+                character
+            ]
+        )
+    );
 
 }
 
