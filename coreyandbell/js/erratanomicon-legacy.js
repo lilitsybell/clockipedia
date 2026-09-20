@@ -7,6 +7,8 @@ let officialCharacters = {};
 let erratanomiconSimilarity = {};
 let erratanomiconCharacterOrder = [];
 let removedCharacters = new Set();
+let pendingEliminations =
+    new Set();
 
 
 
@@ -671,46 +673,91 @@ function createScriptCharacter(
 
     `;
 
-
 if(
     getScriptTeam(character) !==
     "loric"
 ){
 
-    const removeButton =
+    const eliminateButton =
         document.createElement(
             "button"
         );
 
-    removeButton.type =
+    eliminateButton.type =
         "button";
 
-    removeButton.className =
-        "erratanomicon-remove-character";
+    eliminateButton.className =
+        "erratanomicon-eliminate-character";
 
-    removeButton.textContent =
-        "Remove & Replace";
+    eliminateButton.setAttribute(
+        "aria-label",
+        `Eliminate ${character.name}`
+    );
 
 
-    removeButton.addEventListener(
+    /*
+        Keep the button red if this
+        character is already selected.
+    */
+
+    if(
+        pendingEliminations.has(
+            character.slug
+        )
+    ){
+        eliminateButton.classList.add(
+            "selected"
+        );
+    }
+
+
+    eliminateButton.addEventListener(
         "click",
         () => {
 
-            removeAndReplaceCharacter(
-                character
+            const slug =
+                character.slug;
+
+
+            if(
+                pendingEliminations.has(
+                    slug
+                )
+            ){
+
+                pendingEliminations.delete(
+                    slug
+                );
+
+                eliminateButton.classList.remove(
+                    "selected"
+                );
+
+            }else{
+
+                pendingEliminations.add(
+                    slug
+                );
+
+                eliminateButton.classList.add(
+                    "selected"
+                );
+
+            }
+
+
+            console.log(
+                "Pending eliminations:",
+                [...pendingEliminations]
             );
 
         }
     );
 
 
-    article
-        .querySelector(
-            ".erratanomicon-character-info"
-        )
-        .appendChild(
-            removeButton
-        );
+    article.appendChild(
+        eliminateButton
+    );
 
 }
     const abilityElement =
