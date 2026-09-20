@@ -310,3 +310,58 @@
     }
 
 }
+.erratanomicon-character-ability{
+    display:flex;
+    flex-wrap:wrap;
+    align-items:center;
+    gap:4px;
+    margin-top:5px;
+}
+
+.erratanomicon-word{
+    display:inline-flex;
+    align-items:center;
+    min-height:26px;
+    padding:3px 6px;
+
+    border:1px solid #d8d8d8;
+    border-radius:4px;
+
+    background:#fafafa;
+    color:var(--black);
+
+    font-family:"Roboto",Arial,sans-serif;
+    font-size:13px;
+    line-height:1.2;
+
+    cursor:pointer;
+
+    transition:
+        border-color .12s ease,
+        background .12s ease,
+        transform .12s ease;
+}
+
+.erratanomicon-word:hover{
+    border-color:var(--purple-light);
+    background:#f3f2fa;
+    transform:translateY(-1px);
+}
+
+.erratanomicon-word-input{
+    height:26px;
+    min-width:35px;
+    padding:3px 6px;
+
+    border:2px solid var(--purple);
+    border-radius:4px;
+
+    background:white;
+    color:var(--black);
+
+    font-family:"Roboto",Arial,sans-serif;
+    font-size:13px;
+    line-height:1.2;
+
+    outline:none;
+}
