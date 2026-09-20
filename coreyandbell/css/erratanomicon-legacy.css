@@ -370,3 +370,24 @@
     justify-content:flex-end;
     margin-bottom:18px;
 }
+.erratanomicon-remove-character{
+    margin-top:7px;
+    padding:0;
+
+    border:0;
+    background:none;
+
+    color:var(--gray);
+
+    font-family:"Roboto",Arial,sans-serif;
+    font-size:9px;
+    font-weight:800;
+    letter-spacing:.05em;
+    text-transform:uppercase;
+
+    cursor:pointer;
+}
+
+.erratanomicon-remove-character:hover{
+    color:var(--red);
+}
