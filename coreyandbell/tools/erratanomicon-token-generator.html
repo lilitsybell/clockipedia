@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>
+        Erratanomicon Token Generator
+    </title>
+
+    <link
+        rel="stylesheet"
+        href="/css/style-global.css"
+    >
+
+    <link
+        rel="stylesheet"
+        href="/coreyandbell/css/erratanomicon-token-generator.css"
+    >
+
+</head>
+
+
+<body>
+
+
+<div id="sidebar"></div>
+
+
+<div id="content">
+
+    <main class="site-page">
+
+
+        <header class="site-header">
+
+            <span class="site-eyebrow">
+                COREY & BELL TOOLS
+            </span>
+
+            <h1>
+                Erratanomicon Token Generator
+            </h1>
+
+            <p>
+                Generate Erratanomicon versions of official
+                Blood on the Clocktower character artwork.
+            </p>
+
+        </header>
+
+
+        <section class="site-card token-generator">
+
+
+            <!-- ==============================
+                 Controls
+            =============================== -->
+
+            <div class="token-generator-controls">
+
+                <label for="tokenCharacter">
+                    Character
+                </label>
+
+                <select id="tokenCharacter">
+                    <option value="">
+                        Select a character...
+                    </option>
+                </select>
+
+
+                <div class="token-generator-buttons">
+
+                    <button
+                        id="generateToken"
+                        class="site-button"
+                        type="button"
+                    >
+                        Generate Splotch
+                    </button>
+
+                </div>
+
+            </div>
+
+
+            <!-- ==============================
+                 Preview
+            =============================== -->
+
+            <div class="token-generator-preview">
+
+                <div class="token-preview-column">
+
+                    <span class="token-preview-label">
+                        Good
+                    </span>
+
+                    <canvas
+                        id="goodTokenCanvas"
+                        width="600"
+                        height="600"
+                    ></canvas>
+
+                </div>
+
+
+                <div class="token-preview-column">
+
+                    <span class="token-preview-label">
+                        Evil
+                    </span>
+
+                    <canvas
+                        id="evilTokenCanvas"
+                        width="600"
+                        height="600"
+                    ></canvas>
+
+                </div>
+
+            </div>
+
+
+        </section>
+
+
+    </main>
+
+</div>
+
+
+<script src="/js/sidebar.js"></script>
+
+<script
+    src="/coreyandbell/js/erratanomicon-token-generator.js"
+></script>
+
+
+</body>
+
+</html>
