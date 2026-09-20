@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>
+        Erratanomicon Character Generator
+    </title>
+
+    <link
+        rel="stylesheet"
+        href="/css/style-global.css"
+    >
+
+</head>
+
+<body>
+
+<div id="sidebar"></div>
+
+<div id="content">
+
+    <main class="site-page">
+
+        <header class="site-header">
+
+            <span class="site-eyebrow">
+                COREY & BELL TOOLS
+            </span>
+
+            <h1>
+                Erratanomicon Character Generator
+            </h1>
+
+            <p>
+                Generate the Erratanomicon character database
+                from Clockipedia's existing character data.
+            </p>
+
+        </header>
+
+        <section class="site-card">
+
+            <div style="padding:30px;">
+
+                <button
+                    id="generateCharacters"
+                    class="site-button"
+                    type="button"
+                >
+                    Generate Character JSON
+                </button>
+
+                <pre
+                    id="generatorOutput"
+                    style="
+                        margin-top:25px;
+                        padding:20px;
+                        overflow:auto;
+                        max-height:600px;
+                        border:1px solid var(--border);
+                        border-radius:10px;
+                        background:#fafafa;
+                        font-size:12px;
+                        line-height:1.5;
+                    "
+                ></pre>
+
+            </div>
+
+        </section>
+
+    </main>
+
+</div>
+
+<script src="/js/sidebar.js"></script>
+
+<script
+    src="/coreyandbell/js/erratanomicon-character-generator.js"
+></script>
+
+</body>
+</html>
