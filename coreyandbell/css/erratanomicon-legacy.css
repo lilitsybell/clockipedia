@@ -776,3 +776,25 @@
 
     font-weight:700;
 }
+/* ===========================
+   Legacy Game Number
+=========================== */
+
+.erratanomicon-legacy-number{
+    margin:0 0 24px;
+
+    padding:10px 14px;
+
+    border:1px solid var(--border);
+    border-left:4px solid var(--purple);
+
+    border-radius:8px;
+
+    background:white;
+
+    color:var(--black);
+
+    font-family:"Droid Sans",Arial,sans-serif;
+    font-size:14px;
+    font-weight:700;
+}
