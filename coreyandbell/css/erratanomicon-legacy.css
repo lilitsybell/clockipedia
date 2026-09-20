@@ -713,3 +713,65 @@
     font-size:10px;
     line-height:1.2;
 }
+/* ===========================
+   Ability Edit History
+=========================== */
+
+.erratanomicon-ability-edit-list{
+    display:flex;
+    flex-direction:column;
+    gap:8px;
+}
+
+.erratanomicon-ability-edit{
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+    gap:20px;
+
+    padding:10px 12px;
+
+    border:1px solid var(--border);
+    border-radius:9px;
+
+    background:var(--light-gray);
+}
+
+.erratanomicon-ability-edit > strong{
+    color:var(--black);
+    font-size:12px;
+}
+
+.erratanomicon-ability-edit-change{
+    display:flex;
+    align-items:center;
+    gap:8px;
+
+    font-size:12px;
+}
+
+.erratanomicon-edit-old{
+    padding:3px 6px;
+
+    border-radius:4px;
+
+    background:#f8e8e8;
+    color:var(--red);
+
+    text-decoration:line-through;
+}
+
+.erratanomicon-edit-arrow{
+    color:var(--gray);
+}
+
+.erratanomicon-edit-new{
+    padding:3px 6px;
+
+    border-radius:4px;
+
+    background:#eef0fa;
+    color:var(--purple);
+
+    font-weight:700;
+}
