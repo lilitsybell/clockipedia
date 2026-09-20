@@ -349,6 +349,8 @@
 }
 
 .erratanomicon-word-input{
+    height:26px;
+    min-width:35px;
     padding:3px 6px;
 
     border:2px solid var(--purple);
@@ -360,6 +362,6 @@
     font-family:"Roboto",Arial,sans-serif;
     font-size:13px;
     line-height:1.2;
-box-sizing:border-box;
+
     outline:none;
 }
