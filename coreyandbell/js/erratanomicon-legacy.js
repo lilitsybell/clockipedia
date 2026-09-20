@@ -384,40 +384,34 @@ function editAbilityWord(
         return;
     }
 
-
-const wordWidth =
-    wordButton.offsetWidth;
-
-const wordHeight =
-    wordButton.offsetHeight;
-    const input =
-        document.createElement(
-            "input"
-        );
-
-    input.type =
-        "text";
-
-    input.className =
-        "erratanomicon-word-input";
-
-    input.value =
-        words[
-            wordIndex
-        ];
-input.style.width =
-    `${wordWidth}px`;
-
-input.style.height =
-    `${wordHeight}px`;
-
-    wordButton.replaceWith(
-        input
+const input =
+    document.createElement(
+        "input"
     );
 
-    input.focus();
-    input.select();
+input.type =
+    "text";
 
+input.className =
+    "erratanomicon-word-input";
+
+input.value =
+    words[
+        wordIndex
+    ];
+
+input.size =
+    Math.max(
+        words[wordIndex].length,
+        2
+    );
+
+wordButton.replaceWith(
+    input
+);
+
+input.focus();
+input.select();
 
 
     function saveWord(){
