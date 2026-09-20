@@ -2339,15 +2339,37 @@ function buildErratanomiconExport(){
     const script = [];
 
 
-    script.push({
-        id:"_meta",
-        name:
-            erratanomiconData.meta?.name ||
-            "Erratanomicon Legacy",
-        author:
-            erratanomiconData.meta?.author ||
-            "Corey and Bell"
-    });
+const gameNumber =
+    erratanomiconData.meta?.game ||
+    1;
+
+
+script.push({
+
+    id:"_meta",
+
+    name:
+        `Erratanomicon Legacy Game ${gameNumber}`,
+
+    author:
+        erratanomiconData.meta?.author ||
+        "Corey and Bell",
+
+    logo:
+        erratanomiconData.meta?.logo ||
+        "https://clockipedia.com/coreyandbell/data/erratanomicon-images/erratanomicon-logo.png",
+
+    hideTitle:true,
+
+    background:
+        erratanomiconData.meta?.background ||
+        "https://clockipedia.com/coreyandbell/data/erratanomicon-images/erratanomicon-background.png",
+
+    almanac:
+        erratanomiconData.meta?.almanac ||
+        "https://clockipedia.com/coreyandbell/erratanomicon-legacy"
+
+});
 
 
     erratanomiconData.characters.forEach(
@@ -2526,7 +2548,34 @@ function importErratanomiconScript(
                         "Script is not a JSON array."
                     );
                 }
+const importedMeta =
+    importedScript.find(
+        entry =>
+            typeof entry ===
+                "object" &&
+            entry?.id ===
+                "_meta"
+    );
 
+
+if(importedMeta){
+
+    const gameMatch =
+        importedMeta.name?.match(
+            /^Erratanomicon Legacy Game (\d+)$/
+        );
+
+
+    if(gameMatch){
+
+        erratanomiconData.meta.game =
+            Number(
+                gameMatch[1]
+            );
+
+    }
+
+}
                 const importedErratanomicon =
                     importedScript.find(
                         entry =>
@@ -2786,10 +2835,14 @@ function saveErratanomiconLocalState(){
     );
 
 
-    const state = {
+const state = {
 
-        characters:
-            [...erratanomiconData.characters],
+    game:
+        erratanomiconData.meta?.game ||
+        1,
+
+    characters:
+        [...erratanomiconData.characters],
 
         removedCharacters:
             [...removedCharacters],
@@ -2859,15 +2912,22 @@ function restoreErratanomiconLocalState(){
 
     try{
 
-        const state =
-            JSON.parse(
-                saved
-            );
+const state =
+    JSON.parse(
+        saved
+    );
 
+if(
+    Number.isInteger(
+        state.game
+    ) &&
+    state.game > 0
+){
 
-        /*
-            Restore current script roster.
-        */
+    erratanomiconData.meta.game =
+        state.game;
+
+}
 
         if(
             Array.isArray(
