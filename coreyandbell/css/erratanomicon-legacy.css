@@ -347,11 +347,11 @@
     background:#f3f2fa;
     transform:translateY(-1px);
 }
-
 .erratanomicon-word-input{
     height:26px;
-    min-width:35px;
+    min-width:0;
     padding:3px 6px;
+    box-sizing:border-box;
 
     border:2px solid var(--purple);
     border-radius:4px;
