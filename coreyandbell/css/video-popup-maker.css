@@ -600,3 +600,104 @@ body{
 
     cursor:pointer;
 }
+/* ==========================================
+   Export
+========================================== */
+
+.popup-export{
+    width:100%;
+    max-width:620px;
+
+    margin:
+        22px auto
+        0;
+
+    padding:
+        18px 20px;
+
+    display:flex;
+
+    align-items:center;
+    justify-content:space-between;
+
+    gap:20px;
+
+    border:
+        1px solid
+        var(--border);
+
+    border-radius:12px;
+
+    background:white;
+
+    box-shadow:
+        0 5px 20px
+        rgba(0,0,0,.05);
+}
+
+
+.popup-export-content h2{
+    margin:
+        0 0
+        4px;
+
+    color:var(--black);
+
+    font-family:
+        "Droid Sans",
+        Arial,
+        sans-serif;
+
+    font-size:17px;
+}
+
+
+.popup-export-content p{
+    margin:0;
+
+    color:#777;
+
+    font-size:11px;
+}
+
+
+.popup-download-button{
+    flex-shrink:0;
+
+    padding:
+        10px 16px;
+
+    border:0;
+
+    border-radius:7px;
+
+    background:
+        var(--purple);
+
+    color:white;
+
+    font-family:
+        "Roboto",
+        Arial,
+        sans-serif;
+
+    font-size:12px;
+    font-weight:700;
+
+    cursor:pointer;
+
+    transition:
+        opacity .15s ease,
+        transform .15s ease;
+}
+
+
+.popup-download-button:hover{
+    opacity:.9;
+}
+
+
+.popup-download-button:active{
+    transform:
+        translateY(1px);
+}
