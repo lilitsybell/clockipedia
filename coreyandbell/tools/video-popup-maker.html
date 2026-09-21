@@ -1,0 +1,431 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>
+        Video Popup Maker | Corey & Bell
+    </title>
+
+    <link
+        rel="stylesheet"
+        href="/css/style-global.css"
+    >
+
+    <link
+        rel="stylesheet"
+        href="/coreyandbell/css/video-popup-maker.css"
+    >
+
+    <link
+        rel="icon"
+        type="image/png"
+        href="/images/favicon.png"
+    >
+
+</head>
+
+
+<body>
+
+
+<main class="popup-maker-page">
+
+
+    <!-- ==========================================
+         Header
+    =========================================== -->
+
+    <header class="popup-maker-header">
+
+        <span class="site-eyebrow">
+            COREY & BELL
+        </span>
+
+        <h1>
+            Video Popup Maker
+        </h1>
+
+        <p>
+            Create character information cards
+            for video overlays.
+        </p>
+
+    </header>
+
+
+
+    <!-- ==========================================
+         Workspace
+    =========================================== -->
+
+    <div class="popup-maker-workspace">
+
+
+        <!-- ======================================
+             Editor
+        ======================================= -->
+
+        <section class="popup-editor">
+
+            <div class="popup-editor-header">
+
+                <h2>
+                    Popup
+                </h2>
+
+            </div>
+
+
+            <!-- Player -->
+
+            <div class="popup-field">
+
+                <label for="popupPlayer">
+                    Player Name
+                </label>
+
+                <input
+                    id="popupPlayer"
+                    type="text"
+                    value="Pear"
+                >
+
+            </div>
+
+
+            <!-- Character -->
+
+            <div class="popup-field">
+
+                <label for="popupCharacter">
+                    Character
+                </label>
+
+                <select id="popupCharacter">
+
+                    <option value="">
+                        Loading characters...
+                    </option>
+
+                </select>
+
+            </div>
+
+
+            <!-- Custom Icon -->
+
+            <div class="popup-field">
+
+                <label for="popupCustomIcon">
+                    Custom Character Icon URL
+                </label>
+
+                <input
+                    id="popupCustomIcon"
+                    type="url"
+                    placeholder="Optional"
+                >
+
+                <span class="popup-field-note">
+                    Leave blank to use the normal
+                    character icon.
+                </span>
+
+            </div>
+
+
+            <!-- Ability -->
+
+            <div class="popup-field">
+
+                <label for="popupAbility">
+                    Ability
+                </label>
+
+                <textarea
+                    id="popupAbility"
+                    rows="4"
+                ></textarea>
+
+            </div>
+
+
+            <!-- Information -->
+
+            <div class="popup-editor-section">
+
+                <div class="popup-editor-section-header">
+
+                    <h3>
+                        Information
+                    </h3>
+
+                    <button
+                        id="addInformation"
+                        class="popup-small-button"
+                        type="button"
+                    >
+                        + Add
+                    </button>
+
+                </div>
+
+
+                <div class="popup-field">
+
+                    <label for="popupInfoHeading">
+                        Heading
+                    </label>
+
+                    <input
+                        id="popupInfoHeading"
+                        type="text"
+                        value="FIRST NIGHT"
+                    >
+
+                </div>
+
+
+                <div id="popupInformationRows">
+
+                    <div class="popup-information-row">
+
+                        <input
+                            class="popup-information-text"
+                            type="text"
+                            value="Corey"
+                        >
+
+                        <select
+                            class="popup-information-marker"
+                        >
+                            <option value="">
+                                None
+                            </option>
+
+                            <option value="drunk">
+                                Drunk
+                            </option>
+
+                            <option value="poisoned">
+                                Poisoned
+                            </option>
+                        </select>
+
+                        <button
+                            class="popup-remove-information"
+                            type="button"
+                            aria-label="Remove information"
+                        >
+                            ×
+                        </button>
+
+                    </div>
+
+
+                    <div class="popup-information-row">
+
+                        <input
+                            class="popup-information-text"
+                            type="text"
+                            value="alexie"
+                        >
+
+                        <select
+                            class="popup-information-marker"
+                        >
+                            <option value="">
+                                None
+                            </option>
+
+                            <option value="drunk">
+                                Drunk
+                            </option>
+
+                            <option value="poisoned">
+                                Poisoned
+                            </option>
+                        </select>
+
+                        <button
+                            class="popup-remove-information"
+                            type="button"
+                            aria-label="Remove information"
+                        >
+                            ×
+                        </button>
+
+                    </div>
+
+
+                    <div class="popup-information-row">
+
+                        <input
+                            class="popup-information-text"
+                            type="text"
+                            value="Reece"
+                        >
+
+                        <select
+                            class="popup-information-marker"
+                        >
+                            <option value="">
+                                None
+                            </option>
+
+                            <option
+                                value="drunk"
+                                selected
+                            >
+                                Drunk
+                            </option>
+
+                            <option value="poisoned">
+                                Poisoned
+                            </option>
+                        </select>
+
+                        <button
+                            class="popup-remove-information"
+                            type="button"
+                            aria-label="Remove information"
+                        >
+                            ×
+                        </button>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+        </section>
+
+
+
+        <!-- ======================================
+             Preview
+        ======================================= -->
+
+        <section class="popup-preview-area">
+
+            <div class="popup-preview-label">
+                PREVIEW
+            </div>
+
+
+            <div
+                id="popupPreview"
+                class="video-popup-card"
+            >
+
+
+                <!-- Character Icon -->
+
+                <div class="video-popup-character">
+
+                    <img
+                        id="previewCharacterIcon"
+                        src=""
+                        alt=""
+                    >
+
+                </div>
+
+
+                <!-- Popup Content -->
+
+                <div class="video-popup-content">
+
+
+                    <div class="video-popup-title">
+
+                        <span id="previewPlayer">
+                            Pear
+                        </span>
+
+                        <span class="video-popup-character-name">
+                            Noble
+                        </span>
+
+                    </div>
+
+
+                    <div
+                        id="previewAbility"
+                        class="video-popup-ability"
+                    >
+                        You start knowing 3 players,
+                        1 and only 1 of which is Corey.
+                    </div>
+
+
+                    <div class="video-popup-divider"></div>
+
+
+                    <div class="video-popup-information">
+
+                        <div
+                            id="previewInfoHeading"
+                            class="video-popup-info-heading"
+                        >
+                            FIRST NIGHT
+                        </div>
+
+
+                        <div id="previewInformation">
+
+                            <div class="video-popup-info-row">
+                                Corey
+                            </div>
+
+                            <div class="video-popup-info-row">
+                                alexie
+                            </div>
+
+                            <div class="video-popup-info-row">
+
+                                Reece
+
+                                <span class="video-popup-marker">
+                                    DRUNK
+                                </span>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+
+                </div>
+
+
+            </div>
+
+        </section>
+
+
+    </div>
+
+
+</main>
+
+
+<script
+    src="/coreyandbell/js/video-popup-maker.js"
+></script>
+
+
+</body>
+
+</html>
