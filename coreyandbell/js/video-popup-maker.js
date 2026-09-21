@@ -6,7 +6,6 @@ console.log(
 let popupCharacters = {};
 
 
-
 /* ==========================================
    Elements
 ========================================== */
@@ -31,6 +30,21 @@ const customIconInput =
         "popupCustomIcon"
     );
 
+const infoHeadingInput =
+    document.getElementById(
+        "popupInfoHeading"
+    );
+
+const informationRows =
+    document.getElementById(
+        "popupInformationRows"
+    );
+
+const addInformationButton =
+    document.getElementById(
+        "addInformation"
+    );
+
 
 const previewPlayer =
     document.getElementById(
@@ -52,6 +66,15 @@ const previewAbility =
         "previewAbility"
     );
 
+const previewInfoHeading =
+    document.getElementById(
+        "previewInfoHeading"
+    );
+
+const previewInformation =
+    document.getElementById(
+        "previewInformation"
+    );
 
 
 /* ==========================================
@@ -96,7 +119,6 @@ const popupTeamColors = {
 };
 
 
-
 /* ==========================================
    Load Characters
 ========================================== */
@@ -116,15 +138,12 @@ async function loadPopupCharacters(){
 
     }
 
-
     popupCharacters =
         await response.json();
-
 
     populateCharacterSelect();
 
 }
-
 
 
 /* ==========================================
@@ -135,12 +154,10 @@ function populateCharacterSelect(){
 
     characterSelect.innerHTML = "";
 
-
     const characters =
         Object.entries(
             popupCharacters
         );
-
 
     characters.sort(
         (a,b) =>
@@ -148,7 +165,6 @@ function populateCharacterSelect(){
                 b[1].name
             )
     );
-
 
     characters.forEach(
         ([slug,character]) => {
@@ -171,12 +187,6 @@ function populateCharacterSelect(){
         }
     );
 
-
-    /*
-        Start with Noble for our
-        test popup.
-    */
-
     if(popupCharacters.noble){
 
         characterSelect.value =
@@ -184,11 +194,9 @@ function populateCharacterSelect(){
 
     }
 
-
     updateSelectedCharacter();
 
 }
-
 
 
 /* ==========================================
@@ -200,42 +208,29 @@ function updateSelectedCharacter(){
     const slug =
         characterSelect.value;
 
-
     const character =
         popupCharacters[slug];
-
 
     if(!character){
         return;
     }
 
-
     previewCharacterName.textContent =
         character.name;
-
 
     abilityInput.value =
         character.ability || "";
 
-
     previewAbility.textContent =
         character.ability || "";
-
-
-    /*
-        Custom URL overrides the
-        normal character icon.
-    */
 
     previewCharacterIcon.src =
         customIconInput.value.trim() ||
         character.image ||
         "";
 
-
     previewCharacterIcon.alt =
         character.name;
-
 
     previewCharacterName.style.color =
         popupTeamColors[
@@ -246,9 +241,153 @@ function updateSelectedCharacter(){
 }
 
 
+/* ==========================================
+   Information Preview
+========================================== */
+
+function updateInformationPreview(){
+
+    previewInfoHeading.textContent =
+        infoHeadingInput.value;
+
+    previewInformation.innerHTML =
+        "";
+
+    const rows =
+        informationRows.querySelectorAll(
+            ".popup-information-row"
+        );
+
+    rows.forEach(row => {
+
+        const text =
+            row.querySelector(
+                ".popup-information-text"
+            ).value;
+
+        const marker =
+            row.querySelector(
+                ".popup-information-marker"
+            ).value;
+
+        if(
+            !text.trim() &&
+            !marker
+        ){
+            return;
+        }
+
+        const previewRow =
+            document.createElement(
+                "div"
+            );
+
+        previewRow.className =
+            "video-popup-info-row";
+
+
+        const textElement =
+            document.createElement(
+                "span"
+            );
+
+        textElement.textContent =
+            text;
+
+        previewRow.appendChild(
+            textElement
+        );
+
+
+        if(marker){
+
+            const markerElement =
+                document.createElement(
+                    "span"
+                );
+
+            markerElement.className =
+                "video-popup-marker";
+
+            markerElement.textContent =
+                marker === "drunk"
+                    ? "DRUNK"
+                    : "POISONED";
+
+            previewRow.appendChild(
+                markerElement
+            );
+
+        }
+
+        previewInformation.appendChild(
+            previewRow
+        );
+
+    });
+
+}
+
 
 /* ==========================================
-   Live Player Name
+   Create Information Row
+========================================== */
+
+function createInformationRow(){
+
+    const row =
+        document.createElement(
+            "div"
+        );
+
+    row.className =
+        "popup-information-row";
+
+    row.innerHTML = `
+
+        <input
+            class="popup-information-text"
+            type="text"
+            placeholder="Information"
+        >
+
+        <select
+            class="popup-information-marker"
+        >
+
+            <option value="">
+                None
+            </option>
+
+            <option value="drunk">
+                Drunk
+            </option>
+
+            <option value="poisoned">
+                Poisoned
+            </option>
+
+        </select>
+
+        <button
+            class="popup-remove-information"
+            type="button"
+            aria-label="Remove information"
+        >
+            ×
+        </button>
+
+    `;
+
+    informationRows.appendChild(
+        row
+    );
+
+}
+
+
+/* ==========================================
+   Player Name
 ========================================== */
 
 playerInput.addEventListener(
@@ -263,9 +402,8 @@ playerInput.addEventListener(
 );
 
 
-
 /* ==========================================
-   Live Ability
+   Ability
 ========================================== */
 
 abilityInput.addEventListener(
@@ -277,7 +415,6 @@ abilityInput.addEventListener(
 
     }
 );
-
 
 
 /* ==========================================
@@ -293,11 +430,9 @@ customIconInput.addEventListener(
                 characterSelect.value
             ];
 
-
         if(!character){
             return;
         }
-
 
         previewCharacterIcon.src =
             customIconInput.value.trim() ||
@@ -308,7 +443,6 @@ customIconInput.addEventListener(
 );
 
 
-
 /* ==========================================
    Character Change
 ========================================== */
@@ -316,11 +450,6 @@ customIconInput.addEventListener(
 characterSelect.addEventListener(
     "change",
     () => {
-
-        /*
-            Changing characters resets
-            the custom icon override.
-        */
 
         customIconInput.value =
             "";
@@ -330,6 +459,64 @@ characterSelect.addEventListener(
     }
 );
 
+
+/* ==========================================
+   Information Events
+========================================== */
+
+infoHeadingInput.addEventListener(
+    "input",
+    updateInformationPreview
+);
+
+
+informationRows.addEventListener(
+    "input",
+    updateInformationPreview
+);
+
+
+informationRows.addEventListener(
+    "change",
+    updateInformationPreview
+);
+
+
+informationRows.addEventListener(
+    "click",
+    event => {
+
+        const removeButton =
+            event.target.closest(
+                ".popup-remove-information"
+            );
+
+        if(!removeButton){
+            return;
+        }
+
+        removeButton
+            .closest(
+                ".popup-information-row"
+            )
+            .remove();
+
+        updateInformationPreview();
+
+    }
+);
+
+
+addInformationButton.addEventListener(
+    "click",
+    () => {
+
+        createInformationRow();
+
+        updateInformationPreview();
+
+    }
+);
 
 
 /* ==========================================
@@ -341,6 +528,8 @@ async function initializePopupMaker(){
     try{
 
         await loadPopupCharacters();
+
+        updateInformationPreview();
 
     }
     catch(error){
