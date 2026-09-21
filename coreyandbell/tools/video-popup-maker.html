@@ -160,100 +160,90 @@
 
             <!-- Information -->
 
-            <div class="popup-editor-section">
+<div class="popup-editor-section">
 
-                <div class="popup-editor-section-header">
+    <div class="popup-editor-section-header">
 
-                    <h3>
-                        Information
-                    </h3>
+        <h3>
+            Information
+        </h3>
 
-                    <button
-                        id="addInformation"
-                        class="popup-small-button"
-                        type="button"
-                    >
-                        + Add
-                    </button>
+        <button
+            id="addInformationSection"
+            class="popup-small-button"
+            type="button"
+        >
+            + Add Section
+        </button>
 
-                </div>
+    </div>
 
 
-                <div class="popup-field">
+    <div id="popupInformationSections">
 
-                    <label for="popupInfoHeading">
-                        Heading
-                    </label>
+
+        <!-- ==================================
+             Information Section
+        =================================== -->
+
+        <div class="popup-information-section">
+
+            <div class="popup-information-section-header">
+
+                <input
+                    class="popup-info-heading"
+                    type="text"
+                    value="FIRST NIGHT"
+                    placeholder="Heading"
+                >
+
+                <button
+                    class="popup-remove-section"
+                    type="button"
+                    aria-label="Remove section"
+                >
+                    ×
+                </button>
+
+            </div>
+
+
+            <div class="popup-information-rows">
+
+                <div class="popup-information-row">
 
                     <input
-                        id="popupInfoHeading"
+                        class="popup-information-text"
                         type="text"
-                        value="FIRST NIGHT"
+                        value="Corey, alexie, Reece [Drunk]"
                     >
 
-                </div>
-
-
-                <div id="popupInformationRows">
-
-<div class="popup-information-row">
-
-    <input
-        class="popup-information-text"
-        type="text"
-        value="Corey"
-    >
-
-    <button
-        class="popup-remove-information"
-        type="button"
-        aria-label="Remove information"
-    >
-        ×
-    </button>
-
-</div>
-
-<div class="popup-information-row">
-
-    <input
-        class="popup-information-text"
-        type="text"
-        value="alexie"
-    >
-
-    <button
-        class="popup-remove-information"
-        type="button"
-        aria-label="Remove information"
-    >
-        ×
-    </button>
-
-</div>
-
-<div class="popup-information-row">
-
-    <input
-        class="popup-information-text"
-        type="text"
-        value="Reece [Drunk]"
-    >
-
-    <button
-        class="popup-remove-information"
-        type="button"
-        aria-label="Remove information"
-    >
-        ×
-    </button>
-
-</div>
+                    <button
+                        class="popup-remove-information"
+                        type="button"
+                        aria-label="Remove information"
+                    >
+                        ×
+                    </button>
 
                 </div>
 
             </div>
 
+
+            <button
+                class="popup-add-information"
+                type="button"
+            >
+                + Add Row
+            </button>
+
+        </div>
+
+
+    </div>
+
+</div>
 
         </section>
 
