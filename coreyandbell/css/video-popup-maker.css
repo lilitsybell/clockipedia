@@ -503,3 +503,15 @@ body{
     }
 
 }
+.video-popup-inline-icon{
+    width:28px;
+    height:28px;
+
+    display:inline-block;
+
+    flex-shrink:0;
+
+    object-fit:contain;
+
+    vertical-align:middle;
+}
