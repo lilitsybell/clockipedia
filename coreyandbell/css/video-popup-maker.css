@@ -308,7 +308,7 @@ body{
         0;
 
     padding:
-        20px 24px;
+        16px 24px;
 
     border:
         1px solid
@@ -335,10 +335,10 @@ body{
     display:grid;
 
     grid-template-columns:
-        90px
+        76px
         minmax(0,1fr);
 
-    gap:18px;
+    gap:16px;
 
     align-items:center;
 }
