@@ -9,7 +9,15 @@ let popupCharacters = {};
 /* ==========================================
    Elements
 ========================================== */
+const popupPreview =
+    document.getElementById(
+        "popupPreview"
+    );
 
+const downloadPopupButton =
+    document.getElementById(
+        "downloadPopup"
+    );
 const characterSelect =
     document.getElementById(
         "popupCharacter"
@@ -823,7 +831,152 @@ addInformationSectionButton.addEventListener(
     "click",
     createInformationSection
 );
+/* ==========================================
+   Export Popup
+========================================== */
 
+async function downloadPopup(){
+
+    if(!popupPreview){
+        return;
+    }
+
+
+    /*
+        Wait for all images inside the
+        popup to finish loading.
+    */
+
+    const images =
+        popupPreview.querySelectorAll(
+            "img"
+        );
+
+
+    await Promise.all(
+        [...images].map(image => {
+
+            if(image.complete){
+                return Promise.resolve();
+            }
+
+            return new Promise(resolve => {
+
+                image.addEventListener(
+                    "load",
+                    resolve,
+                    {
+                        once:true
+                    }
+                );
+
+                image.addEventListener(
+                    "error",
+                    resolve,
+                    {
+                        once:true
+                    }
+                );
+
+            });
+
+        })
+    );
+
+
+    /*
+        Render the popup at 2x resolution.
+    */
+
+    const canvas =
+        await html2canvas(
+            popupPreview,
+            {
+                scale:2,
+
+                backgroundColor:null,
+
+                useCORS:true,
+
+                logging:false
+            }
+        );
+
+
+    /*
+        Create filename.
+    */
+
+    const playerName =
+        playerInput.value
+            .trim()
+            .toLowerCase()
+            .replace(
+                /[^a-z0-9]+/g,
+                "-"
+            )
+            .replace(
+                /^-|-$/g,
+                ""
+            ) ||
+        "player";
+
+
+    const character =
+        popupCharacters[
+            characterSelect.value
+        ];
+
+
+    const characterName =
+        (
+            character?.name ||
+            "character"
+        )
+            .toLowerCase()
+            .replace(
+                /[^a-z0-9]+/g,
+                "-"
+            )
+            .replace(
+                /^-|-$/g,
+                ""
+            );
+
+
+    /*
+        Download PNG.
+    */
+
+    const link =
+        document.createElement(
+            "a"
+        );
+
+
+    link.download =
+        `${playerName}-${characterName}.png`;
+
+
+    link.href =
+        canvas.toDataURL(
+            "image/png"
+        );
+
+
+    link.click();
+
+}
+
+
+/* ==========================================
+   Download Button
+========================================== */
+
+downloadPopupButton.addEventListener(
+    "click",
+    downloadPopup
+);
 /* ==========================================
    Initialize
 ========================================== */
