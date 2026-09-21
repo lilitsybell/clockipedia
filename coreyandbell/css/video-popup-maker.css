@@ -230,20 +230,17 @@ body{
     cursor:pointer;
 }
 
-
 .popup-information-row{
     display:grid;
 
     grid-template-columns:
         minmax(0,1fr)
-        90px
         28px;
 
     gap:6px;
 
     margin-bottom:7px;
 }
-
 
 .popup-information-row input,
 .popup-information-row select{
