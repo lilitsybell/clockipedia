@@ -240,7 +240,152 @@ function updateSelectedCharacter(){
 
 }
 
+function renderInformationText(
+    container,
+    text
+){
 
+    const characterPattern =
+        /\[([^\]]+)\]/g;
+
+    let lastIndex = 0;
+
+    let match;
+
+
+    while(
+        (
+            match =
+                characterPattern.exec(
+                    text
+                )
+        ) !== null
+    ){
+
+        /*
+            Add normal text before
+            the bracketed character.
+        */
+
+        if(
+            match.index >
+            lastIndex
+        ){
+
+            container.appendChild(
+                document.createTextNode(
+                    text.slice(
+                        lastIndex,
+                        match.index
+                    )
+                )
+            );
+
+        }
+
+
+        const characterName =
+            match[1].trim();
+
+
+        const characterEntry =
+            Object.entries(
+                popupCharacters
+            ).find(
+                ([slug,character]) =>
+                    character.name
+                        .toLowerCase() ===
+                    characterName
+                        .toLowerCase()
+            );
+
+
+        /*
+            If the character exists,
+            render its icon.
+        */
+
+        if(characterEntry){
+
+            const [
+                slug,
+                character
+            ] = characterEntry;
+
+
+            const icon =
+                document.createElement(
+                    "img"
+                );
+
+
+            icon.className =
+                "video-popup-inline-icon";
+
+
+            icon.src =
+                character.image;
+
+
+            icon.alt =
+                character.name;
+
+
+            icon.title =
+                character.name;
+
+
+            container.appendChild(
+                icon
+            );
+
+        }
+
+
+        /*
+            If it isn't a recognized
+            character, leave the
+            original [text] visible.
+        */
+
+        else{
+
+            container.appendChild(
+                document.createTextNode(
+                    match[0]
+                )
+            );
+
+        }
+
+
+        lastIndex =
+            characterPattern.lastIndex;
+
+    }
+
+
+    /*
+        Add remaining text after the
+        final character.
+    */
+
+    if(
+        lastIndex <
+        text.length
+    ){
+
+        container.appendChild(
+            document.createTextNode(
+                text.slice(
+                    lastIndex
+                )
+            )
+        );
+
+    }
+
+}
 /* ==========================================
    Information Preview
 ========================================== */
@@ -260,22 +405,18 @@ function updateInformationPreview(){
 
     rows.forEach(row => {
 
-        const text =
+        const input =
             row.querySelector(
                 ".popup-information-text"
-            ).value;
+            );
 
-        const marker =
-            row.querySelector(
-                ".popup-information-marker"
-            ).value;
+        const text =
+            input.value;
 
-        if(
-            !text.trim() &&
-            !marker
-        ){
+        if(!text.trim()){
             return;
         }
+
 
         const previewRow =
             document.createElement(
@@ -286,39 +427,11 @@ function updateInformationPreview(){
             "video-popup-info-row";
 
 
-        const textElement =
-            document.createElement(
-                "span"
-            );
-
-        textElement.textContent =
-            text;
-
-        previewRow.appendChild(
-            textElement
+        renderInformationText(
+            previewRow,
+            text
         );
 
-
-        if(marker){
-
-            const markerElement =
-                document.createElement(
-                    "span"
-                );
-
-            markerElement.className =
-                "video-popup-marker";
-
-            markerElement.textContent =
-                marker === "drunk"
-                    ? "DRUNK"
-                    : "POISONED";
-
-            previewRow.appendChild(
-                markerElement
-            );
-
-        }
 
         previewInformation.appendChild(
             previewRow
@@ -327,12 +440,6 @@ function updateInformationPreview(){
     });
 
 }
-
-
-/* ==========================================
-   Create Information Row
-========================================== */
-
 function createInformationRow(){
 
     const row =
@@ -348,26 +455,8 @@ function createInformationRow(){
         <input
             class="popup-information-text"
             type="text"
-            placeholder="Information"
+            placeholder="Information — use [Character] for icons"
         >
-
-        <select
-            class="popup-information-marker"
-        >
-
-            <option value="">
-                None
-            </option>
-
-            <option value="drunk">
-                Drunk
-            </option>
-
-            <option value="poisoned">
-                Poisoned
-            </option>
-
-        </select>
 
         <button
             class="popup-remove-information"
@@ -384,7 +473,6 @@ function createInformationRow(){
     );
 
 }
-
 
 /* ==========================================
    Player Name
