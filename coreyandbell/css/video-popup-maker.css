@@ -303,27 +303,25 @@ body{
     position:relative;
 
     width:100%;
-    max-width:850px;
-
-    min-height:330px;
+    max-width:720px;
 
     display:flex;
 
-    align-items:stretch;
+    align-items:center;
 
     margin:
-        50px auto
+        30px auto
         0;
 
     padding:
-        32px 38px
-        32px 185px;
+        22px 28px
+        22px 145px;
 
     border:
         1px solid
         rgba(0,0,0,.12);
 
-    border-radius:22px;
+    border-radius:18px;
 
     background:
         linear-gradient(
@@ -333,11 +331,9 @@ body{
         );
 
     box-shadow:
-        0 20px 45px
-        rgba(13,24,33,.18);
+        0 15px 35px
+        rgba(13,24,33,.16);
 }
-
-
 /* ==========================================
    Character
 ========================================== */
@@ -346,15 +342,14 @@ body{
     position:absolute;
 
     top:50%;
-    left:-35px;
+    left:22px;
 
-    width:190px;
-    height:190px;
+    width:100px;
+    height:100px;
 
     transform:
         translateY(-50%);
 }
-
 
 .video-popup-character img{
     width:100%;
@@ -388,7 +383,7 @@ body{
 
     gap:10px;
 
-    margin-bottom:12px;
+    margin-bottom:7px;
 
     color:var(--black);
 
@@ -429,13 +424,16 @@ body{
     height:1px;
 
     margin:
-        22px 0
-        17px;
+        14px 0
+        12px;
 
     background:
         rgba(0,0,0,.12);
 }
-
+.video-popup-info-section + 
+.video-popup-info-section{
+    margin-top:14px;
+}
 
 /* ==========================================
    Learned Information
@@ -514,7 +512,7 @@ body{
    margin-right:-11px;
 }
 .popup-information-section{
-    margin-bottom:18px;
+    margin-bottom:28px;
 
     padding:12px;
 
