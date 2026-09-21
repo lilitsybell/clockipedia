@@ -447,7 +447,7 @@ body{
 ========================================== */
 
 .video-popup-info-heading{
-    margin-bottom:-5px;
+    margin-bottom:0px;
 
     color:var(--purple);
 
