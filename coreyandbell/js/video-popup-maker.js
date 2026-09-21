@@ -30,21 +30,15 @@ const customIconInput =
         "popupCustomIcon"
     );
 
-const infoHeadingInput =
+const informationSections =
     document.getElementById(
-        "popupInfoHeading"
+        "popupInformationSections"
     );
 
-const informationRows =
+const addInformationSectionButton =
     document.getElementById(
-        "popupInformationRows"
+        "addInformationSection"
     );
-
-const addInformationButton =
-    document.getElementById(
-        "addInformation"
-    );
-
 
 const previewPlayer =
     document.getElementById(
@@ -64,11 +58,6 @@ const previewCharacterIcon =
 const previewAbility =
     document.getElementById(
         "previewAbility"
-    );
-
-const previewInfoHeading =
-    document.getElementById(
-        "previewInfoHeading"
     );
 
 const previewInformation =
@@ -392,55 +381,153 @@ function renderInformationText(
 
 function updateInformationPreview(){
 
-    previewInfoHeading.textContent =
-        infoHeadingInput.value;
-
     previewInformation.innerHTML =
         "";
 
-    const rows =
-        informationRows.querySelectorAll(
-            ".popup-information-row"
-        );
-
-    rows.forEach(row => {
-
-        const input =
-            row.querySelector(
-                ".popup-information-text"
+    const sections =
+        informationSections
+            .querySelectorAll(
+                ".popup-information-section"
             );
 
-        const text =
-            input.value;
 
-        if(!text.trim()){
+    sections.forEach(section => {
+
+        const headingInput =
+            section.querySelector(
+                ".popup-info-heading"
+            );
+
+        const heading =
+            headingInput.value.trim();
+
+
+        const rows =
+            section.querySelectorAll(
+                ".popup-information-row"
+            );
+
+
+        /*
+            Don't render completely
+            empty sections.
+        */
+
+        const hasInformation =
+            [...rows].some(row => {
+
+                const input =
+                    row.querySelector(
+                        ".popup-information-text"
+                    );
+
+                return (
+                    input &&
+                    input.value.trim()
+                );
+
+            });
+
+
+        if(
+            !heading &&
+            !hasInformation
+        ){
             return;
         }
 
 
-        const previewRow =
+        const previewSection =
             document.createElement(
                 "div"
             );
 
-        previewRow.className =
-            "video-popup-info-row";
+        previewSection.className =
+            "video-popup-info-section";
 
 
-        renderInformationText(
-            previewRow,
-            text
-        );
+        /*
+            Section heading
+        */
+
+        if(heading){
+
+            const previewHeading =
+                document.createElement(
+                    "div"
+                );
+
+            previewHeading.className =
+                "video-popup-info-heading";
+
+            previewHeading.textContent =
+                heading;
+
+            previewSection.appendChild(
+                previewHeading
+            );
+
+        }
+
+
+        /*
+            Information rows
+        */
+
+        rows.forEach(row => {
+
+            const input =
+                row.querySelector(
+                    ".popup-information-text"
+                );
+
+            const text =
+                input.value.trim();
+
+
+            if(!text){
+                return;
+            }
+
+
+            const previewRow =
+                document.createElement(
+                    "div"
+                );
+
+            previewRow.className =
+                "video-popup-info-row";
+
+
+            renderInformationText(
+                previewRow,
+                text
+            );
+
+
+            previewSection.appendChild(
+                previewRow
+            );
+
+        });
 
 
         previewInformation.appendChild(
-            previewRow
+            previewSection
         );
 
     });
 
 }
-function createInformationRow(){
+function createInformationRow(
+    section
+){
+
+    const rows =
+        section.querySelector(
+            ".popup-information-rows"
+        );
+
 
     const row =
         document.createElement(
@@ -449,6 +536,7 @@ function createInformationRow(){
 
     row.className =
         "popup-information-row";
+
 
     row.innerHTML = `
 
@@ -468,9 +556,99 @@ function createInformationRow(){
 
     `;
 
-    informationRows.appendChild(
+
+    rows.appendChild(
         row
     );
+
+
+    row.querySelector(
+        ".popup-information-text"
+    ).focus();
+
+}
+function createInformationSection(){
+
+    const section =
+        document.createElement(
+            "div"
+        );
+
+    section.className =
+        "popup-information-section";
+
+
+    section.innerHTML = `
+
+        <div
+            class="popup-information-section-header"
+        >
+
+            <input
+                class="popup-info-heading"
+                type="text"
+                placeholder="Heading"
+            >
+
+            <button
+                class="popup-remove-section"
+                type="button"
+                aria-label="Remove section"
+            >
+                ×
+            </button>
+
+        </div>
+
+
+        <div
+            class="popup-information-rows"
+        >
+
+            <div
+                class="popup-information-row"
+            >
+
+                <input
+                    class="popup-information-text"
+                    type="text"
+                    placeholder="Information — use [Character] for icons"
+                >
+
+                <button
+                    class="popup-remove-information"
+                    type="button"
+                    aria-label="Remove information"
+                >
+                    ×
+                </button>
+
+            </div>
+
+        </div>
+
+
+        <button
+            class="popup-add-information"
+            type="button"
+        >
+            + Add Row
+        </button>
+
+    `;
+
+
+    informationSections.appendChild(
+        section
+    );
+
+
+    section.querySelector(
+        ".popup-info-heading"
+    ).focus();
+
+
+    updateInformationPreview();
 
 }
 
@@ -547,65 +725,104 @@ characterSelect.addEventListener(
     }
 );
 
-
 /* ==========================================
    Information Events
 ========================================== */
 
-infoHeadingInput.addEventListener(
+informationSections.addEventListener(
     "input",
     updateInformationPreview
 );
 
 
-informationRows.addEventListener(
-    "input",
-    updateInformationPreview
-);
-
-
-informationRows.addEventListener(
-    "change",
-    updateInformationPreview
-);
-
-
-informationRows.addEventListener(
+informationSections.addEventListener(
     "click",
     event => {
 
-        const removeButton =
+
+        /*
+            Add row
+        */
+
+        const addRowButton =
+            event.target.closest(
+                ".popup-add-information"
+            );
+
+
+        if(addRowButton){
+
+            const section =
+                addRowButton.closest(
+                    ".popup-information-section"
+                );
+
+            createInformationRow(
+                section
+            );
+
+            updateInformationPreview();
+
+            return;
+
+        }
+
+
+        /*
+            Remove row
+        */
+
+        const removeRowButton =
             event.target.closest(
                 ".popup-remove-information"
             );
 
-        if(!removeButton){
+
+        if(removeRowButton){
+
+            removeRowButton
+                .closest(
+                    ".popup-information-row"
+                )
+                .remove();
+
+            updateInformationPreview();
+
             return;
+
         }
 
-        removeButton
-            .closest(
-                ".popup-information-row"
-            )
-            .remove();
 
-        updateInformationPreview();
+        /*
+            Remove entire section
+        */
+
+        const removeSectionButton =
+            event.target.closest(
+                ".popup-remove-section"
+            );
+
+
+        if(removeSectionButton){
+
+            removeSectionButton
+                .closest(
+                    ".popup-information-section"
+                )
+                .remove();
+
+            updateInformationPreview();
+
+        }
 
     }
 );
 
 
-addInformationButton.addEventListener(
+addInformationSectionButton.addEventListener(
     "click",
-    () => {
-
-        createInformationRow();
-
-        updateInformationPreview();
-
-    }
+    createInformationSection
 );
-
 
 /* ==========================================
    Initialize
