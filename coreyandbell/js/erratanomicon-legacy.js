@@ -1336,6 +1336,81 @@ function getCompletedFinalTeam(){
     return null;
 
 }
+function renderLegacyCompleteNotice(){
+
+    const notice =
+        document.getElementById(
+            "erratanomiconCompleteNotice"
+        );
+
+
+    if(!notice){
+        return;
+    }
+
+
+    const completedTeam =
+        getCompletedFinalTeam();
+
+
+    if(!completedTeam){
+
+        notice.classList.add(
+            "hidden"
+        );
+
+        notice.innerHTML =
+            "";
+
+        return;
+
+    }
+
+
+    const teamNames = {
+        townsfolk:"Townsfolk",
+        outsiders:"Outsider",
+        minions:"Minion",
+        demons:"Demon"
+    };
+
+
+    const teamName =
+        teamNames[
+            completedTeam
+        ] || completedTeam;
+
+
+    notice.innerHTML = `
+
+        <img
+            src="/images/icons/final-crown.png"
+            alt=""
+        >
+
+        <div>
+
+            <strong>
+                ERRATANOMICON LEGACY COMPLETE
+            </strong>
+
+            <span>
+                The ${teamName} character pool has been
+                completely exhausted. This legacy has entered
+                Sandbox Mode. You can continue playing,
+                editing abilities, and updating the script.
+            </span>
+
+        </div>
+
+    `;
+
+
+    notice.classList.remove(
+        "hidden"
+    );
+
+}
 function canAddIvoryDraftCharacter(
     candidateSlug
 ){
@@ -2613,11 +2688,12 @@ function renderLegacyNumber(){
 
 }
 function renderErratanomiconScript(){
-renderLegacyNumber();
+
+    renderLegacyNumber();
+    renderLegacyCompleteNotice();
+
     scriptContainer.innerHTML =
         "";
-
-
 
     const scriptCharacters =
         erratanomiconData.characters
