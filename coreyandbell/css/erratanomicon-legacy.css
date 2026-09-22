@@ -59,11 +59,6 @@
         var(--border);
 }
 
-/* Fabled */
-
-.erratanomicon-team-fabled .erratanomicon-team-title{
-    color:var(--copper);
-}
 /* ==========================================
    Team Heading
 ========================================== */
@@ -137,11 +132,15 @@
     color:var(--lime);
 }
 
+.erratanomicon-team-fabled
+.erratanomicon-team-heading{
+    color:var(--copper);
+}
+
 .erratanomicon-team-heading span{
     background:currentColor;
     color:white;
 }
-
 
 /* ==========================================
    Character List
@@ -266,7 +265,10 @@
 .erratanomicon-character-info h3{
     color:var(--lime);
 }
-
+.erratanomicon-team-fabled
+.erratanomicon-character-info h3{
+    color:var(--copper);
+}
 
 /* ==========================================
    Loading / Error
