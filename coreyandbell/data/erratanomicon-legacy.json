@@ -29,6 +29,21 @@
         }
     ]
 },
+    "spiritofivory": {
+    "id": "spiritofivory",
+    "name": "Spirit of Ivory",
+    "image": [
+        "https://images.klutzbanana.com/characters_official/spiritofivory.png"
+    ],
+    "team": "fabled",
+    "edition": "fabled",
+    "ability": "There can't be more than 1 extra evil player. If there is an alignment changing character on the script, the Demon cannot create another alignment changing character.",
+    "flavor": "The Wasteland calls. Bones rise to flesh, then fall to dust. The great spirit grows. The great spirit watches. The great spirit guides. The human listens, or the human is no more.",
+    "reminders": [
+        "No More Evil"
+    ],
+    "setup": false
+},
     "characters": [
         "chef",
         "noble",
