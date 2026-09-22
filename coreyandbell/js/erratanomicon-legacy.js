@@ -995,6 +995,13 @@ if(
     return false;
 }
 
+if(
+    willCharacterRemain(
+        slug
+    )
+){
+    return false;
+}
                 /*
                     A character skipped during
                     this update cannot immediately
