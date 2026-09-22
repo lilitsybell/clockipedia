@@ -1080,6 +1080,7 @@
     display:inline-flex;
     align-items:center;
     justify-content:center;
+    gap:6px;
 
     padding:6px 10px;
     margin-bottom:8px;
@@ -1096,4 +1097,11 @@
     line-height:1;
 
     text-transform:uppercase;
+}
+
+.erratanomicon-final-label img{
+    width:18px;
+    height:18px;
+
+    object-fit:contain;
 }
