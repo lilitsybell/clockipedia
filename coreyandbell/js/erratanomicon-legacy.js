@@ -1718,9 +1718,16 @@ ${
         replacementSlug
     )
         ? `
-            <span class="erratanomicon-final-label">
-                FINAL CHARACTER
-            </span>
+<span class="erratanomicon-final-label">
+
+    <img
+        src="/images/icons/final-crown.png"
+        alt=""
+    >
+
+    FINAL CHARACTER
+
+</span>
         `
         : `
             <button
