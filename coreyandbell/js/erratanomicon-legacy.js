@@ -638,345 +638,6 @@ function getReplacementBonus(
     return bonus;
 
 }
-function getReplacementCharacter(
-    oldCharacter
-){
-
-    const oldSlug =
-        oldCharacter.slug;
-
-    const oldTeam =
-        getScriptTeam(
-            oldCharacter
-        );
-
-
-    const currentCharacters =
-        new Set(
-            erratanomiconData
-                .characters
-        );
-
-
-    const candidates =
-        erratanomiconCharacterOrder
-        .filter(
-            slug => {
-
-                /*
-                    Can't bring back a
-                    permanently removed character.
-                */
-
-                if(
-                    removedCharacters.has(
-                        slug
-                    )
-                ){
-                    return false;
-                }
-
-
-                /*
-                    Can't add somebody who is
-                    already on the script.
-                */
-
-                if(
-                    currentCharacters.has(
-                        slug
-                    )
-                ){
-                    return false;
-                }
-
-
-                const character =
-                    officialCharacters[
-                        slug
-                    ];
-
-                if(!character){
-                    return false;
-                }
-
-
-                /*
-                    Replacement must be
-                    the same team.
-                */
-
-                return (
-                    getScriptTeam(
-                        character
-                    ) ===
-                    oldTeam
-                );
-
-            }
-        );
-
-
-if(
-    candidates.length === 0
-){
-
-    /*
-        The normal pool is empty.
-
-        Allow a previously eliminated
-        character of the same team to
-        return from the graveyard.
-    */
-
-    const graveyardCandidates =
-        erratanomiconCharacterOrder
-        .filter(
-            slug => {
-
-                /*
-                    It must actually be
-                    in the graveyard.
-                */
-
-                if(
-                    !removedCharacters.has(
-                        slug
-                    )
-                ){
-                    return false;
-                }
-
-
-                /*
-                    Don't bring back a character
-                    that was skipped during
-                    this update.
-                */
-
-                if(
-                    pendingUpdate.skipped.includes(
-                        slug
-                    )
-                ){
-                    return false;
-                }
-
-
-                /*
-                    Don't duplicate a replacement
-                    already selected this update.
-                */
-
-                if(
-                    Object.values(
-                        pendingUpdate.replacements
-                    ).includes(
-                        slug
-                    )
-                ){
-                    return false;
-                }
-
-
-                /*
-                    Don't duplicate a character
-                    currently on the script.
-                */
-
-                if(
-                    erratanomiconData
-                        .characters
-                        .includes(
-                            slug
-                        )
-                ){
-                    return false;
-                }
-
-
-                const character =
-                    officialCharacters[
-                        slug
-                    ];
-
-
-                if(!character){
-                    return false;
-                }
-
-
-                /*
-                    Replacement must still
-                    be the same team.
-                */
-
-                if(
-                    getScriptTeam(
-                        character
-                    ) !==
-                    oldTeam
-                ){
-                    return false;
-                }
-
-
-                /*
-                    Keep the existing
-                    dependency rules.
-                */
-
-                if(
-                    slug === "huntsman" &&
-                    !willCharacterRemain(
-                        "damsel"
-                    )
-                ){
-                    return false;
-                }
-
-
-                if(
-                    slug === "choirboy" &&
-                    !willCharacterRemain(
-                        "king"
-                    )
-                ){
-                    return false;
-                }
-
-
-                /*
-                    Keep the Spirit of Ivory
-                    restriction too.
-                */
-
-                if(
-                    !canAddIvoryDraftCharacter(
-                        slug
-                    )
-                ){
-                    return false;
-                }
-
-
-                return true;
-
-            }
-        );
-
-
-    /*
-        If even the graveyard has no valid
-        character, there truly is no
-        replacement available.
-    */
-
-    if(
-        graveyardCandidates.length === 0
-    ){
-        return null;
-    }
-
-
-    /*
-        Score graveyard characters using
-        the same similarity system as
-        normal replacements.
-    */
-
-    const scoredGraveyard =
-        graveyardCandidates.map(
-            slug => ({
-                slug,
-
-                score:
-                    getSimilarityScore(
-                        removedSlug,
-                        slug
-                    )
-            })
-        );
-
-
-    const highestGraveyardScore =
-        Math.max(
-            ...scoredGraveyard.map(
-                candidate =>
-                    candidate.score
-            )
-        );
-
-
-    const bestGraveyard =
-        scoredGraveyard.filter(
-            candidate =>
-                candidate.score ===
-                highestGraveyardScore
-        );
-
-
-    return bestGraveyard[
-        Math.floor(
-            Math.random() *
-            bestGraveyard.length
-        )
-    ].slug;
-
-}
-
-
-    const scoredCandidates =
-        candidates.map(
-            slug => ({
-
-                slug,
-
-                score:
-                    getSimilarityScore(
-                        oldSlug,
-                        slug
-                    )
-
-            })
-        );
-
-
-    const highestScore =
-        Math.max(
-            ...scoredCandidates.map(
-                candidate =>
-                    candidate.score
-            )
-        );
-
-
-    const bestCandidates =
-        scoredCandidates.filter(
-            candidate =>
-                candidate.score ===
-                highestScore
-        );
-
-
-    /*
-        Random choice between equally
-        good replacements.
-    */
-
-    const chosen =
-        bestCandidates[
-            Math.floor(
-                Math.random() *
-                bestCandidates.length
-            )
-        ];
-
-
-    return officialCharacters[
-        chosen.slug
-    ];
-}
 function buildPendingUpdate(){
 
     /*
@@ -1285,12 +946,199 @@ return true;
         );
 
 
+if(
+    candidates.length === 0
+){
+
+    /*
+        The normal pool for this team
+        has been exhausted.
+
+        Allow a previously eliminated
+        character to return.
+    */
+
+    const graveyardCandidates =
+        erratanomiconCharacterOrder
+        .filter(
+            slug => {
+
+                /*
+                    Must actually be
+                    in the graveyard.
+                */
+
+                if(
+                    !removedCharacters.has(
+                        slug
+                    )
+                ){
+                    return false;
+                }
+
+
+                /*
+                    A character skipped during
+                    this update cannot immediately
+                    come back.
+                */
+
+                if(
+                    pendingUpdate.skipped.includes(
+                        slug
+                    )
+                ){
+                    return false;
+                }
+
+
+                /*
+                    Don't use the same character
+                    for two replacements during
+                    this update.
+                */
+
+                if(
+                    Object.values(
+                        pendingUpdate.replacements
+                    )
+                    .filter(Boolean)
+                    .includes(
+                        slug
+                    )
+                ){
+                    return false;
+                }
+
+
+                const character =
+                    officialCharacters[
+                        slug
+                    ];
+
+
+                if(!character){
+                    return false;
+                }
+
+
+                /*
+                    Must be the same team.
+                */
+
+                if(
+                    getScriptTeam(
+                        character
+                    ) !==
+                    oldTeam
+                ){
+                    return false;
+                }
+
+
+                /*
+                    Keep dependency rules.
+                */
+
+                if(
+                    slug === "huntsman" &&
+                    !willCharacterRemain(
+                        "damsel"
+                    )
+                ){
+                    return false;
+                }
+
+
+                if(
+                    slug === "choirboy" &&
+                    !willCharacterRemain(
+                        "king"
+                    )
+                ){
+                    return false;
+                }
+
+
+                /*
+                    Keep the Spirit of Ivory
+                    restriction.
+                */
+
+                if(
+                    !canAddIvoryDraftCharacter(
+                        slug
+                    )
+                ){
+                    return false;
+                }
+
+
+                return true;
+
+            }
+        );
+
+
+    /*
+        If nothing valid exists even in
+        the graveyard, there really is
+        no replacement.
+    */
+
     if(
-        candidates.length === 0
+        graveyardCandidates.length === 0
     ){
         return null;
     }
 
+
+    /*
+        Score returning characters using
+        the same similarity system.
+    */
+
+    const scoredGraveyard =
+        graveyardCandidates.map(
+            slug => ({
+
+                slug,
+
+                score:
+                    getSimilarityScore(
+                        removedSlug,
+                        slug
+                    )
+
+            })
+        );
+
+
+    const highestGraveyardScore =
+        Math.max(
+            ...scoredGraveyard.map(
+                candidate =>
+                    candidate.score
+            )
+        );
+
+
+    const bestGraveyard =
+        scoredGraveyard.filter(
+            candidate =>
+                candidate.score ===
+                highestGraveyardScore
+        );
+
+
+    return bestGraveyard[
+        Math.floor(
+            Math.random() *
+            bestGraveyard.length
+        )
+    ].slug;
+
+}
 
     const scored =
         candidates.map(
