@@ -1030,3 +1030,45 @@
     font-size:30px;
 }
 }
+/* ===========================
+   Final Legacy Notice
+=========================== */
+
+.erratanomicon-final-notice{
+    display:flex;
+    align-items:center;
+    gap:16px;
+
+    margin:20px 0;
+    padding:18px 20px;
+
+    border:2px solid var(--purple);
+    border-radius:12px;
+
+    background:rgba(102,102,153,.08);
+}
+
+.erratanomicon-final-notice img{
+    width:48px;
+    height:48px;
+    flex-shrink:0;
+    object-fit:contain;
+}
+
+.erratanomicon-final-notice div{
+    display:flex;
+    flex-direction:column;
+    gap:4px;
+}
+
+.erratanomicon-final-notice strong{
+    color:var(--purple);
+
+    font-size:14px;
+    letter-spacing:.08em;
+}
+
+.erratanomicon-final-notice span{
+    font-size:14px;
+    line-height:1.4;
+}
