@@ -438,12 +438,12 @@
 
 .erratanomicon-final-marker{
     position:absolute;
-    right:20px;
+    right:13px;
     top:50%;
     transform:translateY(-50%);
 
-    width:34px;
-    height:34px;
+    width:45px;
+    height:45px;
 
     object-fit:contain;
 
