@@ -2906,9 +2906,59 @@ script.push({
         "https://clockipedia.com/coreyandbell/erratanomicon-legacy"
 
 });
+const exportCharacters =
+    [...erratanomiconData.characters]
+    .sort(
+        (a,b) => {
+
+            /*
+                Keep Erratanomicon first.
+            */
+
+            if(a === "erratanomicon"){
+                return -1;
+            }
+
+            if(b === "erratanomicon"){
+                return 1;
+            }
 
 
-    erratanomiconData.characters.forEach(
+            /*
+                Keep Spirit of Ivory second.
+            */
+
+            if(a === "spiritofivory-e"){
+                return -1;
+            }
+
+            if(b === "spiritofivory-e"){
+                return 1;
+            }
+
+
+            /*
+                Everything else follows the
+                character-sheet display order.
+            */
+
+            const aRank =
+                erratanomiconDisplayRank.has(a)
+                    ? erratanomiconDisplayRank.get(a)
+                    : Number.MAX_SAFE_INTEGER;
+
+            const bRank =
+                erratanomiconDisplayRank.has(b)
+                    ? erratanomiconDisplayRank.get(b)
+                    : Number.MAX_SAFE_INTEGER;
+
+
+            return aRank - bRank;
+
+        }
+    );
+
+    exportCharacters.forEach(
         slug => {
 
             const character =
