@@ -1549,7 +1549,7 @@ function createScriptCharacter(
 
 if(
     character.slug !== "erratanomicon" &&
-    character.slug !== "spiritofivory"
+    character.slug !== "spiritofivory-e"
 ){
 
     const eliminateButton =
@@ -1645,7 +1645,7 @@ saveErratanomiconLocalState();
         );
 if(
     character.slug === "erratanomicon" ||
-    character.slug === "spiritofivory"
+    character.slug === "spiritofivory-e"
 ){
 
     abilityElement.classList.add(
