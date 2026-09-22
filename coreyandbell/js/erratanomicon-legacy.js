@@ -754,6 +754,7 @@ function buildPendingUpdate(){
 pendingUpdate = {
     removals,
     replacements:{},
+    finalReplacements:[],
     skipped:[]
 };
 
