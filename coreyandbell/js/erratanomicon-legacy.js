@@ -2954,7 +2954,21 @@ const exportCharacters =
                 slug:unusedSlug,
                 ...characterData
             } = character;
+/*
+    Final Characters keep their normal
+    internal slug, but receive a special
+    export ID so their Final status
+    survives downloads and imports.
+*/
 
+if(
+    finalCharacters.has(
+        slug
+    )
+){
+    characterData.id =
+        `${characterData.id}_final`;
+}
 
             script.push(
                 characterData
