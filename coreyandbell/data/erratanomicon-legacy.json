@@ -1,13 +1,33 @@
 {
-"meta": {
-    "name": "Erratanomicon Legacy",
-    "author": "Corey and Bell",
-    "id": "erratanomicon-legacy",
-    "game": 1,
-    "logo": "https://clockipedia.com/coreyandbell/data/erratanomicon-images/erratanomicon-logo.png",
-    "hideTitle": true,
-    "background": "https://clockipedia.com/coreyandbell/data/erratanomicon-images/erratanomicon-background.png",
-    "almanac": "https://clockipedia.com/coreyandbell/erratanomicon-legacy"
+"erratanomicon": {
+    "id": "erratanomicon",
+    "name": "Erratanomicon",
+    "image": [
+        "https://clockipedia.com/images/erratanomicon/erratanomicon-loric.png"
+    ],
+    "team": "loric",
+    "ability": "Each night, the Demon may select a good character and change 1 word of their ability. If accepted, the Demon does not wake tonight. If in play, the player learns this. This may happen as many times as the number of Minions in the player count.",
+    "flavor": "The Demon __ cha(nges) __ abilit_(ies) to  __ cause __the ultimate __ good team ___ defeat.",
+    "firstNight": 1,
+    "firstNightReminder": "Wake the Demon. Show the *EDIT AN ABILITY?* token. The Demon might choose a character and change one word of the ability. If you accept it, nod. Put the Demon to sleep. :reminder: If in play, wake the edited player and tell them the new edit. :reminder:",
+    "otherNight": 1,
+    "otherNightReminder": "Wake the Demon. Show the *EDIT AN ABILITY?* token. The Demon might choose a character and change one word of the ability. If you accept it, nod. Put the Demon to sleep. :reminder: If in play, wake the edited player and tell them the new edit. :reminder:",
+    "remindersGlobal": [
+        "Does Not Wake",
+        "Edited",
+        "Edited",
+        "Edited",
+        "Edited"
+    ],
+    "special": [
+        {
+            "type": "signal",
+            "name": "card",
+            "value": "Edit an ability?",
+            "time": "night",
+            "global": "demon"
+        }
+    ]
 },
     "characters": [
         "chef",
