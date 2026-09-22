@@ -1672,21 +1672,33 @@ function createReplacementReveal(
                 replacement
                     ? `
 
-                        <button
-                            class="erratanomicon-skip-replacement"
-                            type="button"
-                        >
-                            Skip & Eliminate Character
-                        </button>
+${
+    pendingUpdate.finalReplacements.includes(
+        replacementSlug
+    )
+        ? `
+            <span class="erratanomicon-final-label">
+                FINAL CHARACTER
+            </span>
+        `
+        : `
+            <button
+                class="erratanomicon-skip-replacement"
+                type="button"
+            >
+                Skip & Eliminate Character
+            </button>
+        `
+}
 
-                        <img
-                            src="${newImage}"
-                            alt="${replacement.name}"
-                        >
+<img
+    src="${newImage}"
+    alt="${replacement.name}"
+>
 
-                        <strong>
-                            ${replacement.name}
-                        </strong>
+<strong>
+    ${replacement.name}
+</strong>
 
                     `
                     : `
@@ -2703,6 +2715,16 @@ function commitPendingUpdate(){
 
         }
     );
+
+pendingUpdate.finalReplacements.forEach(
+    slug => {
+
+        finalCharacters.add(
+            slug
+        );
+
+    }
+);
     pendingUpdate.removals.forEach(
         removal => {
 
