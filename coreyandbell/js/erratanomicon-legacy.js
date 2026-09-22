@@ -1263,6 +1263,79 @@ function willCharacterRemain(
     );
 
 }
+function getCompletedFinalTeam(){
+
+    const normalTeams = [
+        "townsfolk",
+        "outsiders",
+        "minions",
+        "demons"
+    ];
+
+
+    for(
+        const team of normalTeams
+    ){
+
+        const teamCharacters =
+            erratanomiconData.characters
+            .filter(
+                slug => {
+
+                    const character =
+                        getErratanomiconCharacter(
+                            slug
+                        );
+
+                    return (
+                        character &&
+                        getScriptTeam(
+                            character
+                        ) === team
+                    );
+
+                }
+            );
+
+
+        /*
+            A team only counts as complete
+            if it actually has characters
+            on the current script.
+        */
+
+        if(
+            teamCharacters.length === 0
+        ){
+            continue;
+        }
+
+
+        /*
+            The legacy ends when every
+            current character on one team
+            is a Final Character.
+        */
+
+        const allFinal =
+            teamCharacters.every(
+                slug =>
+                    finalCharacters.has(
+                        slug
+                    )
+            );
+
+
+        if(allFinal){
+            return team;
+        }
+
+    }
+
+
+    return null;
+
+}
 function canAddIvoryDraftCharacter(
     candidateSlug
 ){
