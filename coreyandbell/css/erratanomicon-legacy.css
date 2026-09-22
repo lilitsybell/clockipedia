@@ -428,8 +428,15 @@
    Final Characters
 =========================== */
 
+.erratanomicon-character-final{
+    position:relative;
+}
+
 .erratanomicon-final-marker{
-    flex-shrink:0;
+    position:absolute;
+    right:20px;
+    top:50%;
+    transform:translateY(-50%);
 
     display:flex;
     align-items:center;
@@ -448,10 +455,6 @@
     line-height:1;
 
     user-select:none;
-}
-
-.erratanomicon-character-final{
-    position:relative;
 }
 /* ===========================
    Character Graveyard
