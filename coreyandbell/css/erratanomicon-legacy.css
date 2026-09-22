@@ -59,7 +59,11 @@
         var(--border);
 }
 
+/* Fabled */
 
+.erratanomicon-team-fabled .erratanomicon-team-title{
+    color:var(--copper);
+}
 /* ==========================================
    Team Heading
 ========================================== */
