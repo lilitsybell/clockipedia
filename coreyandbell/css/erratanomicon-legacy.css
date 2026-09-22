@@ -425,6 +425,35 @@
     padding-right:65px;
 }
 /* ===========================
+   Final Characters
+=========================== */
+
+.erratanomicon-final-marker{
+    flex-shrink:0;
+
+    display:flex;
+    align-items:center;
+    justify-content:center;
+
+    padding:7px 12px;
+
+    border:2px solid var(--purple);
+    border-radius:999px;
+
+    color:var(--purple);
+
+    font-size:12px;
+    font-weight:700;
+    letter-spacing:.08em;
+    line-height:1;
+
+    user-select:none;
+}
+
+.erratanomicon-character-final{
+    position:relative;
+}
+/* ===========================
    Character Graveyard
 =========================== */
 
