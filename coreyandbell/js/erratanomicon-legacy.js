@@ -1427,6 +1427,47 @@ if(
         Character replacements
     */
 
+if(
+    pendingUpdate.finalReplacements.length >
+    0
+){
+
+    const finalNotice =
+        document.createElement(
+            "div"
+        );
+
+    finalNotice.className =
+        "erratanomicon-final-notice";
+
+    finalNotice.innerHTML = `
+
+        <img
+            src="/images/icons/final-crown.png"
+            alt=""
+        >
+
+        <div>
+
+            <strong>
+                THE LEGACY IS ENDING
+            </strong>
+
+            <span>
+                A team's character pool has been exhausted.
+                An original Erratanomicon character has returned
+                as a Final Character and can no longer be eliminated.
+            </span>
+
+        </div>
+
+    `;
+
+    container.appendChild(
+        finalNotice
+    );
+
+}
     const replacementHeading =
         document.createElement(
             "h3"
