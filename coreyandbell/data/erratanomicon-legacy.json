@@ -1,50 +1,8 @@
 {
-"erratanomicon": {
-    "id": "erratanomicon",
-    "name": "Erratanomicon",
-    "image": [
-        "https://clockipedia.com/images/erratanomicon/erratanomicon-loric.png"
-    ],
-    "team": "loric",
-    "ability": "Each night, the Demon may select a good character and change 1 word of their ability. If accepted, the Demon does not wake tonight. If in play, the player learns this. This may happen as many times as the number of Minions in the player count.",
-    "flavor": "The Demon __ cha(nges) __ abilit_(ies) to  __ cause __the ultimate __ good team ___ defeat.",
-    "firstNight": 1,
-    "firstNightReminder": "Wake the Demon. Show the *EDIT AN ABILITY?* token. The Demon might choose a character and change one word of the ability. If you accept it, nod. Put the Demon to sleep. :reminder: If in play, wake the edited player and tell them the new edit. :reminder:",
-    "otherNight": 1,
-    "otherNightReminder": "Wake the Demon. Show the *EDIT AN ABILITY?* token. The Demon might choose a character and change one word of the ability. If you accept it, nod. Put the Demon to sleep. :reminder: If in play, wake the edited player and tell them the new edit. :reminder:",
-    "remindersGlobal": [
-        "Does Not Wake",
-        "Edited",
-        "Edited",
-        "Edited",
-        "Edited"
-    ],
-    "special": [
-        {
-            "type": "signal",
-            "name": "card",
-            "value": "Edit an ability?",
-            "time": "night",
-            "global": "demon"
-        }
-    ]
-},
-    "spiritofivory": {
-    "id": "spiritofivory",
-    "name": "Spirit of Ivory",
-    "image": [
-        "https://images.klutzbanana.com/characters_official/spiritofivory.png"
-    ],
-    "team": "fabled",
-    "edition": "fabled",
-    "ability": "There can't be more than 1 extra evil player. If there is an alignment changing character on the script, the Demon cannot create another alignment changing character.",
-    "flavor": "The Wasteland calls. Bones rise to flesh, then fall to dust. The great spirit grows. The great spirit watches. The great spirit guides. The human listens, or the human is no more.",
-    "reminders": [
-        "No More Evil"
-    ],
-    "setup": false
-},
     "characters": [
+        "erratanomicon",
+        "spiritofivory-e",
+
         "chef",
         "noble",
         "grandmother",
@@ -69,16 +27,56 @@
         "imp",
         "shabaloth",
         "po",
-        "vigormortis",
-        "erratanomicon"
+        "vigormortis"
     ],
+
     "customCharacters": {
+
         "erratanomicon": {
             "id": "erratanomicon",
             "name": "Erratanomicon",
+            "image": [
+                "https://clockipedia.com/images/erratanomicon/erratanomicon-loric.png"
+            ],
             "team": "loric",
-            "image": "https://clockipedia.com/coreyandbell/data/erratanomicon-images/erratanomicon-loric.png",
-            "ability": "Each night, the Demon may select a good character and change 1 word of their ability. If accepted, the Demon does not wake tonight. If in play, the player learns this. This may happen as many times as the number of Minions in the player count."
+            "ability": "Each night, the Demon may select a good character and change 1 word of their ability. If accepted, the Demon does not wake tonight. If in play, the player learns this. This may happen as many times as the number of Minions in the player count.",
+            "flavor": "The Demon __ cha(nges) __ abilit_(ies) to  __ cause __the ultimate __ good team ___ defeat.",
+            "firstNight": 1,
+            "firstNightReminder": "Wake the Demon. Show the *EDIT AN ABILITY?* token. The Demon might choose a character and change one word of the ability. If you accept it, nod. Put the Demon to sleep. :reminder: If in play, wake the edited player and tell them the new edit. :reminder:",
+            "otherNight": 1,
+            "otherNightReminder": "Wake the Demon. Show the *EDIT AN ABILITY?* token. The Demon might choose a character and change one word of the ability. If you accept it, nod. Put the Demon to sleep. :reminder: If in play, wake the edited player and tell them the new edit. :reminder:",
+            "remindersGlobal": [
+                "Does Not Wake",
+                "Edited",
+                "Edited",
+                "Edited",
+                "Edited"
+            ],
+            "special": [
+                {
+                    "type": "signal",
+                    "name": "card",
+                    "value": "Edit an ability?",
+                    "time": "night",
+                    "global": "demon"
+                }
+            ]
+        },
+
+        "spiritofivory": {
+            "id": "spiritofivory-e",
+            "name": "Spirit of Ivory",
+            "image": [
+                "https://images.klutzbanana.com/characters_official/spiritofivory.png"
+            ],
+            "team": "fabled",
+            "edition": "fabled",
+            "ability": "There can't be more than 1 extra evil player. If there is an alignment changing character on the script, the Demon cannot create another alignment changing character.",
+            "flavor": "The Wasteland calls. Bones rise to flesh, then fall to dust. The great spirit grows. The great spirit watches. The great spirit guides. The human listens, or the human is no more.",
+            "reminders": [
+                "No More Evil"
+            ],
+            "setup": false
         }
     }
 }
