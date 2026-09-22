@@ -2575,16 +2575,41 @@ renderLegacyNumber();
     scriptTeams.forEach(
         team => {
 
-            const teamCharacters =
-                scriptCharacters.filter(
-                    character =>
-                        getScriptTeam(
-                            character
-                        ) ===
-                        team.id
-                );
+const teamCharacters =
+    scriptCharacters
+    .filter(
+        character =>
+            getScriptTeam(
+                character
+            ) ===
+            team.id
+    )
+    .sort(
+        (a,b) => {
+
+            const aRank =
+                erratanomiconDisplayRank.has(
+                    a.slug
+                )
+                    ? erratanomiconDisplayRank.get(
+                        a.slug
+                    )
+                    : Number.MAX_SAFE_INTEGER;
+
+            const bRank =
+                erratanomiconDisplayRank.has(
+                    b.slug
+                )
+                    ? erratanomiconDisplayRank.get(
+                        b.slug
+                    )
+                    : Number.MAX_SAFE_INTEGER;
 
 
+            return aRank - bRank;
+
+        }
+    );
 
             if(
                 teamCharacters.length ===
