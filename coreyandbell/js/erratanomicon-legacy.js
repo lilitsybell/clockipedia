@@ -1882,7 +1882,10 @@ function createScriptCharacter(
 
 if(
     character.slug !== "erratanomicon" &&
-    character.slug !== "spiritofivory-e"
+    character.slug !== "spiritofivory-e" &&
+    !finalCharacters.has(
+        character.slug
+    )
 ){
 
     const eliminateButton =
