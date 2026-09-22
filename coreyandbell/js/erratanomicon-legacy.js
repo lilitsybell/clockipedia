@@ -2660,7 +2660,9 @@ function commitPendingUpdate(){
                 return;
             }
 
-
+removedCharacters.delete(
+    replacementSlug
+);
             erratanomiconData
                 .characters[
                     index
