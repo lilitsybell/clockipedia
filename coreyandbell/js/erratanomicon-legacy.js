@@ -3154,6 +3154,8 @@ if(importedMeta){
                     removedCharacters.clear();
 
                 }
+                const importedFinalCharacters =
+    new Set();
                 const importedRoster =
                     [];
 
@@ -3213,11 +3215,43 @@ if(
                         }
 
 
-                        const slug =
-                            entry.id.replace(
-                                "erratanomicon_",
-                                ""
-                            );
+/*
+    Final Characters are exported with
+    IDs such as:
+
+    erratanomicon_po_final
+
+    Strip the Final suffix before
+    restoring the normal internal slug.
+*/
+
+const isFinal =
+    entry.id.endsWith(
+        "_final"
+    );
+
+const baseId =
+    isFinal
+        ? entry.id.slice(
+            0,
+            -6
+        )
+        : entry.id;
+
+const slug =
+    baseId.replace(
+        "erratanomicon_",
+        ""
+    );
+
+
+if(isFinal){
+
+    importedFinalCharacters.add(
+        slug
+    );
+
+}
 
 
                         /*
@@ -3281,8 +3315,18 @@ if(
                     Replace the current roster.
                 */
 
-                erratanomiconData.characters =
-                    importedRoster;
+erratanomiconData.characters =
+    importedRoster;
+
+
+/*
+    Restore Final Character status from
+    the imported script.
+*/
+
+finalCharacters =
+    importedFinalCharacters;
+
 
 pendingEliminations.clear();
 pendingAbilityEdits = [];
