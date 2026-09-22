@@ -457,22 +457,15 @@ body{
     letter-spacing:.12em;
 }
 
-
 .video-popup-info-row{
-    display:flex;
-
-    align-items:center;
-
-    gap:8px;
-
     min-height:25px;
 
     color:var(--black);
 
     font-size:15px;
     font-weight:500;
+    line-height:1.55;
 }
-
 
 .video-popup-marker{
     padding:
@@ -511,12 +504,15 @@ body{
 .video-popup-inline-icon{
     width:36px;
     height:36px;
+
     display:inline-block;
-    flex-shrink:0;
+
     object-fit:contain;
+
     vertical-align:middle;
-   margin-left:-11px;
-   margin-right:-11px;
+
+    margin:
+        -8px -9px;
 }
 .popup-information-section{
     margin-bottom:28px;
