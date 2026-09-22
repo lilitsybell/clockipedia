@@ -1158,13 +1158,26 @@ if(
                 highestGraveyardScore
         );
 
-
-    return bestGraveyard[
+const finalReplacement =
+    bestGraveyard[
         Math.floor(
             Math.random() *
             bestGraveyard.length
         )
     ].slug;
+
+if(
+    !pendingUpdate.finalReplacements.includes(
+        finalReplacement
+    )
+){
+    pendingUpdate.finalReplacements.push(
+        finalReplacement
+    );
+}
+
+
+return finalReplacement;
 
 }
 
