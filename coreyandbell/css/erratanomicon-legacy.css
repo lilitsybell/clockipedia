@@ -1105,3 +1105,51 @@
 
     object-fit:contain;
 }
+/* ===========================
+   Legacy Complete / Sandbox
+=========================== */
+
+.erratanomicon-complete-notice{
+    display:flex;
+    align-items:center;
+    gap:18px;
+
+    margin:0 0 28px;
+    padding:20px 22px;
+
+    border:2px solid var(--purple);
+    border-radius:14px;
+
+    background:rgba(102,102,153,.08);
+}
+
+.erratanomicon-complete-notice.hidden{
+    display:none;
+}
+
+.erratanomicon-complete-notice img{
+    width:54px;
+    height:54px;
+    flex-shrink:0;
+
+    object-fit:contain;
+}
+
+.erratanomicon-complete-notice > div{
+    display:flex;
+    flex-direction:column;
+    gap:5px;
+}
+
+.erratanomicon-complete-notice strong{
+    color:var(--purple);
+
+    font-size:15px;
+    font-weight:700;
+    letter-spacing:.08em;
+}
+
+.erratanomicon-complete-notice span{
+    font-size:14px;
+    line-height:1.45;
+}
