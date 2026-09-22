@@ -3294,7 +3294,41 @@ if(
                 [...state.characters];
 
         }
+/*
+    Spirit of Ivory was added after some
+    legacy games had already started.
 
+    Make sure older local saves receive it.
+*/
+
+if(
+    !erratanomiconData.characters.includes(
+        "spiritofivory-e"
+    )
+){
+
+    const erratanomiconIndex =
+        erratanomiconData.characters.indexOf(
+            "erratanomicon"
+        );
+
+    if(erratanomiconIndex !== -1){
+
+        erratanomiconData.characters.splice(
+            erratanomiconIndex + 1,
+            0,
+            "spiritofivory-e"
+        );
+
+    }else{
+
+        erratanomiconData.characters.unshift(
+            "spiritofivory-e"
+        );
+
+    }
+
+}
 
         /*
             Restore permanent graveyard.
