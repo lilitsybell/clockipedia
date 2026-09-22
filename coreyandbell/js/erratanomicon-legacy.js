@@ -6,6 +6,8 @@ let erratanomiconData = {};
 let officialCharacters = {};
 let erratanomiconSimilarity = {};
 let erratanomiconCharacterOrder = [];
+let originalErratanomiconRoster =
+    new Set();
 let removedCharacters = new Set();
 let pendingEliminations =
     new Set();
@@ -268,6 +270,15 @@ const [
 
     erratanomiconData =
         await scriptResponse.json();
+
+originalErratanomiconRoster =
+    new Set(
+        erratanomiconData.characters.filter(
+            slug =>
+                slug !== "erratanomicon" &&
+                slug !== "spiritofivory-e"
+        )
+    );
 if(!similarityResponse.ok){
     throw new Error(
         "Failed to load Erratanomicon similarity data."
@@ -976,6 +987,13 @@ if(
                     return false;
                 }
 
+if(
+    !originalErratanomiconRoster.has(
+        slug
+    )
+){
+    return false;
+}
 
                 /*
                     A character skipped during
