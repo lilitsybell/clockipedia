@@ -1895,14 +1895,20 @@ if(
 
     const finalMarker =
         document.createElement(
-            "div"
+            "img"
         );
 
     finalMarker.className =
         "erratanomicon-final-marker";
 
-    finalMarker.textContent =
-        "FINAL";
+    finalMarker.src =
+        "/images/icons/final-crown.png";
+
+    finalMarker.alt =
+        "Final Character";
+
+    finalMarker.title =
+        "Final Character";
 
     article.appendChild(
         finalMarker
