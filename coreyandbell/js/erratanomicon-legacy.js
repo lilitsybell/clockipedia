@@ -3234,11 +3234,17 @@ if(importedMeta){
 
                         }
 
+if(
+    entry.id === "spiritofivory-e"
+){
 
-                        /*
-                            Our Erratanomicon character
-                            IDs use this prefix.
-                        */
+    importedRoster.push(
+        "spiritofivory-e"
+    );
+
+    return;
+
+}
 
                         if(
                             !entry.id ||
