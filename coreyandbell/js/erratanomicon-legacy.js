@@ -3379,11 +3379,14 @@ const state = {
     characters:
         [...erratanomiconData.characters],
 
-        removedCharacters:
-            [...removedCharacters],
+removedCharacters:
+    [...removedCharacters],
 
-        pendingEliminations:
-            [...pendingEliminations],
+finalCharacters:
+    [...finalCharacters],
+
+pendingEliminations:
+    [...pendingEliminations],
 
         pendingAbilityEdits:
             pendingAbilityEdits.map(
@@ -3519,7 +3522,21 @@ if(
                 state.removedCharacters ||
                 []
             );
+/*
+    Restore Final Characters.
 
+    Older saves do not have this field,
+    so they simply restore with none.
+*/
+
+finalCharacters =
+    new Set(
+        Array.isArray(
+            state.finalCharacters
+        )
+            ? state.finalCharacters
+            : []
+    );
 
         /*
             Restore characters selected for
