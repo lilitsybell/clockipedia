@@ -1499,10 +1499,9 @@ if(
     /*
         Character replacements
     */
-
 if(
-    pendingUpdate.finalReplacements.length >
-    0
+    finalCharacters.size > 0 ||
+    pendingUpdate.finalReplacements.length > 0
 ){
 
     const finalNotice =
@@ -1522,15 +1521,15 @@ if(
 
         <div>
 
-            <strong>
-                THE LEGACY IS ENDING
-            </strong>
+<strong>
+    THE LEGACY IS ENDING
+</strong>
 
-            <span>
-                A team's character pool has been exhausted.
-                An original Erratanomicon character has returned
-                as a Final Character and can no longer be eliminated.
-            </span>
+<span>
+    At least one team has exhausted its available
+    character pool. Final Characters have begun to
+    appear and can no longer be eliminated.
+</span>
 
         </div>
 
