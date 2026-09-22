@@ -43,7 +43,24 @@ const characterDependencies = {
     ]
 
 };
+/* ==========================================
+   Spirit of Ivory
+========================================== */
 
+const ivoryDraftCharacters =
+    new Set([
+        "lordoftyphon",
+        "mezepheles",
+        "fanggu",
+        "bountyhunter",
+        "goon",
+        "cultleader",
+        "legion",
+        "politician",
+        "ogre",
+        "philosopher",
+        "pithag"
+    ]);
 /* ==========================================
    Load Data
 ========================================== */
@@ -886,17 +903,25 @@ pendingUpdate.skipped.forEach(
                 }
 
 
-                if(
-                    slug === "choirboy" &&
-                    !willCharacterRemain(
-                        "king"
-                    )
-                ){
-                    return false;
-                }
+if(
+    slug === "choirboy" &&
+    !willCharacterRemain(
+        "king"
+    )
+){
+    return false;
+}
+
+if(
+    !canAddIvoryDraftCharacter(
+        slug
+    )
+){
+    return false;
+}
 
 
-                return true;
+return true;
 
             }
         );
@@ -989,6 +1014,55 @@ function willCharacterRemain(
     ).includes(
         slug
     );
+
+}
+function canAddIvoryDraftCharacter(
+    candidateSlug
+){
+
+    /*
+        Characters outside the Ivory
+        group are always fine.
+    */
+
+    if(
+        !ivoryDraftCharacters.has(
+            candidateSlug
+        )
+    ){
+        return true;
+    }
+
+
+    /*
+        Check whether another Ivory character
+        will remain on the resulting script.
+    */
+
+    for(
+        const slug of
+        ivoryDraftCharacters
+    ){
+
+        if(
+            slug === candidateSlug
+        ){
+            continue;
+        }
+
+
+        if(
+            willCharacterRemain(
+                slug
+            )
+        ){
+            return false;
+        }
+
+    }
+
+
+    return true;
 
 }
 function renderUpdateModal(){
