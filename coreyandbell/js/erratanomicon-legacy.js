@@ -256,15 +256,21 @@ function getScriptTeam(
 
 
 
-    if(
-        team === "loric"
-    ){
-        return "loric";
-    }
+if(
+    team === "loric"
+){
+    return "loric";
+}
 
 
+if(
+    team === "fabled"
+){
+    return "fabled";
+}
 
-    return null;
+
+return null;
 
 }
 
@@ -276,6 +282,7 @@ function getScriptTeam(
 
 const scriptTeams = [
     { id:"loric", name:"Loric" },
+    { id:"fabled", name:"Fabled" },
     { id:"townsfolk", name:"Townsfolk" },
     { id:"outsiders", name:"Outsiders" },
     { id:"minions", name:"Minions" },
@@ -1541,8 +1548,8 @@ function createScriptCharacter(
     `;
 
 if(
-    getScriptTeam(character) !==
-    "loric"
+    character.slug !== "erratanomicon" &&
+    character.slug !== "spiritofivory"
 ){
 
     const eliminateButton =
@@ -1637,8 +1644,8 @@ saveErratanomiconLocalState();
             ".erratanomicon-character-ability"
         );
 if(
-    getScriptTeam(character) ===
-    "loric"
+    character.slug === "erratanomicon" ||
+    character.slug === "spiritofivory"
 ){
 
     abilityElement.classList.add(
