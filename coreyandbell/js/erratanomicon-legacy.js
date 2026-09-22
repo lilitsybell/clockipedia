@@ -9,6 +9,8 @@ let erratanomiconCharacterOrder = [];
 let originalErratanomiconRoster =
     new Set();
 let removedCharacters = new Set();
+let finalCharacters =
+    new Set();
 let pendingEliminations =
     new Set();
 let pendingUpdate =
