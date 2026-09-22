@@ -432,29 +432,23 @@
     position:relative;
 }
 
+.erratanomicon-character-final{
+    position:relative;
+}
+
 .erratanomicon-final-marker{
     position:absolute;
     right:20px;
     top:50%;
     transform:translateY(-50%);
 
-    display:flex;
-    align-items:center;
-    justify-content:center;
+    width:34px;
+    height:34px;
 
-    padding:7px 12px;
-
-    border:2px solid var(--purple);
-    border-radius:999px;
-
-    color:var(--purple);
-
-    font-size:12px;
-    font-weight:700;
-    letter-spacing:.08em;
-    line-height:1;
+    object-fit:contain;
 
     user-select:none;
+    pointer-events:none;
 }
 /* ===========================
    Character Graveyard
