@@ -1,4 +1,12 @@
 {
+    "meta": {
+        "game": 1,
+        "author": "Corey and Bell",
+        "logo": "https://clockipedia.com/coreyandbell/data/erratanomicon-images/erratanomicon-logo.png",
+        "background": "https://clockipedia.com/coreyandbell/data/erratanomicon-images/erratanomicon-background.png",
+        "almanac": "https://clockipedia.com/coreyandbell/erratanomicon-legacy"
+    },
+
     "characters": [
         "erratanomicon",
         "spiritofivory-e",
