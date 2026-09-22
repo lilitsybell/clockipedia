@@ -1847,7 +1847,15 @@ function createScriptCharacter(
 
     article.dataset.character =
         character.slug;
-
+if(
+    finalCharacters.has(
+        character.slug
+    )
+){
+    article.classList.add(
+        "erratanomicon-character-final"
+    );
+}
     const image =
         Array.isArray(
             character.image
@@ -1879,7 +1887,28 @@ function createScriptCharacter(
         </div>
 
     `;
+if(
+    finalCharacters.has(
+        character.slug
+    )
+){
 
+    const finalMarker =
+        document.createElement(
+            "div"
+        );
+
+    finalMarker.className =
+        "erratanomicon-final-marker";
+
+    finalMarker.textContent =
+        "FINAL";
+
+    article.appendChild(
+        finalMarker
+    );
+
+}
 if(
     character.slug !== "erratanomicon" &&
     character.slug !== "spiritofivory-e" &&
