@@ -15,7 +15,6 @@
 
     /* Dashboard Palette */
     --gold:#FFC857;
-    --peach:#E9724C;
     --cherry:#C5283D;
     --green:#7AC74F;
     --blue:#255F85;
@@ -112,13 +111,12 @@ body{
     display:grid;
 
     grid-template-columns:
-        repeat(4, 1fr);
+        repeat(5, 1fr);
 
     gap:22px;
 
     margin-bottom:25px;
 }
-
 
 .summary-card{
     min-height:135px;
@@ -128,39 +126,18 @@ body{
     border:none;
     border-radius:18px;
 
+    background:var(--gold);
+
     box-shadow:none;
 }
 
-
-/* Remove old bottom stripe */
-
-.summary-card::after{
-    display:none;
-}
-
-
-.summary-card:nth-child(1){
-    background:var(--gold);
-}
-
-.summary-card:nth-child(2){
-    background:var(--peach);
-}
-
-.summary-card:nth-child(3){
-    background:var(--green);
-}
-
-.summary-card:nth-child(4){
-    background:var(--blue);
-}
 
 .summary-label{
     display:block;
 
     margin-bottom:25px;
 
-    font-size:16px;
+    font-size:15px;
     font-weight:700;
 
     color:#111;
@@ -176,33 +153,7 @@ body{
 
     letter-spacing:-1.5px;
 
-    color:#050505;
-}
-
-
-.summary-card:nth-child(1)
-.summary-label,
-.summary-card:nth-child(1)
-.summary-value,
-
-.summary-card:nth-child(2)
-.summary-label,
-.summary-card:nth-child(2)
-.summary-value,
-
-.summary-card:nth-child(3)
-.summary-label,
-.summary-card:nth-child(3)
-.summary-value{
-    color:#111111;
-}
-
-
-.summary-card:nth-child(4)
-.summary-label,
-.summary-card:nth-child(4)
-.summary-value{
-    color:white;
+    color:#111;
 }
 
 /* ==========================================
