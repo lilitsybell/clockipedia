@@ -591,7 +591,7 @@ function buildGameHistory(){
 
         row.innerHTML = `
             <td
-                colspan="7"
+                colspan="9"
                 class="history-empty"
             >
                 No games have been added yet.
@@ -639,7 +639,13 @@ function buildGameHistory(){
                 }
             </td>
 
-
+<td>
+    ${
+        game.character
+            ? game.character
+            : "—"
+    }
+</td>
             <td>
                 ${createStatusPill(
                     game.result,
@@ -663,19 +669,25 @@ function buildGameHistory(){
                 )}
             </td>
 
+<td class="vote-number">
+    ${Number(
+        game.playersPutOnBlock || 0
+    )}
+</td>
 
-            <td class="vote-number">
-                ${Number(
-                    game.goodBlockVotes || 0
-                )}
-            </td>
+
+<td class="vote-number">
+    ${Number(
+        game.goodBlockVotes || 0
+    )}
+</td>
 
 
-            <td class="vote-number">
-                ${Number(
-                    game.evilBlockVotes || 0
-                )}
-            </td>
+<td class="vote-number">
+    ${Number(
+        game.evilBlockVotes || 0
+    )}
+</td>
 
         `;
 
