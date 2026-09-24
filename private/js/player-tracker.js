@@ -347,16 +347,15 @@ function getPercentage(
 /* ==========================================
    Charts
 ========================================== */
-
 function buildCharts(){
 
     buildResultsChart();
     buildDemonChart();
     buildDeadVoteChart();
     buildBlockVoteChart();
+    buildEvilNominationChart();
 
 }
-
 
 /* ==========================================
    Game Results
@@ -649,6 +648,73 @@ function buildBlockVoteChart(){
 
             "Evil"
         );
+
+}
+/* ==========================================
+   Evil Nominations
+========================================== */
+
+function buildEvilNominationChart(){
+
+    const evilPlayersNominated =
+        trackerGames.reduce(
+            (total, game) =>
+                total +
+                Number(
+                    game.evilPlayersNominated || 0
+                ),
+            0
+        );
+
+
+    const evilNominationsVotedOn =
+        trackerGames.reduce(
+            (total, game) =>
+                total +
+                Number(
+                    game.evilNominationsVotedOn || 0
+                ),
+            0
+        );
+
+
+    const notVotedOn =
+        Math.max(
+            0,
+            evilPlayersNominated -
+            evilNominationsVotedOn
+        );
+
+
+    const percentage =
+        getPercentage(
+            evilNominationsVotedOn,
+            evilPlayersNominated
+        );
+
+
+    createPieChart(
+        "evilNominationChart",
+
+        [
+            "Voted On",
+            "Not Voted On"
+        ],
+
+        [
+            evilNominationsVotedOn,
+            notVotedOn
+        ],
+
+        [
+            "#C5283D",
+            "#FFC857"
+        ],
+
+        percentage,
+
+        "Voted On"
+    );
 
 }
 /* ==========================================
