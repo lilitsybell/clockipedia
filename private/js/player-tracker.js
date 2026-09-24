@@ -341,18 +341,18 @@ function buildCharts(){
 /* ==========================================
    Game Results
 ========================================== */
+/* ==========================================
+   Game Results
+========================================== */
 
 function buildResultsChart(){
-const winPercentage =
-    getPercentage(
-        wins,
-        wins + losses
-    );
+
     const wins =
         trackerGames.filter(
             game =>
                 game.result === "Win"
         ).length;
+
 
     const losses =
         trackerGames.filter(
@@ -361,31 +361,37 @@ const winPercentage =
         ).length;
 
 
-createPieChart(
-    "resultsChart",
+    const winPercentage =
+        getPercentage(
+            wins,
+            wins + losses
+        );
 
-    [
-        "Wins",
-        "Losses"
-    ],
 
-    [
-        wins,
-        losses
-    ],
+    createPieChart(
+        "resultsChart",
 
-    [
-        "#95ad3d",
-        "#c52222"
-    ],
+        [
+            "Wins",
+            "Losses"
+        ],
 
-    winPercentage,
+        [
+            wins,
+            losses
+        ],
 
-    "Games Won"
-);
+        [
+            "#95ad3d",
+            "#c52222"
+        ],
+
+        winPercentage,
+
+        "Games Won"
+    );
 
 }
-
 
 /* ==========================================
    Demon Candidate
