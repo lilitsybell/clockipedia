@@ -1,9 +1,56 @@
 /* ==========================================
-   Player Tracker
+   Player Tracker Dashboard
 ========================================== */
 
+@import url(
+    'https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap'
+);
+
+
+:root{
+
+    --black:#111111;
+
+    --background:#f1f1f1;
+
+    --white:#ffffff;
+
+    --orange:#ff6938;
+    --peach:#fac39f;
+    --cream:#efefc9;
+
+    --blue:#075b93;
+    --blue-light:#2370a3;
+
+    --green:#95ad3d;
+    --red:#c52222;
+    --gray:#9b9d9f;
+
+    --border:#e6e6e6;
+
+}
+
+
+*{
+    box-sizing:border-box;
+}
+
+
+html,
 body{
-    background:#f3f4f8;
+    margin:0;
+    padding:0;
+}
+
+
+body{
+    min-height:100vh;
+
+    background:var(--background);
+
+    font-family:"Inter", sans-serif;
+
+    color:var(--black);
 }
 
 
@@ -12,9 +59,12 @@ body{
 ========================================== */
 
 .tracker-page{
-    width:min(1500px, calc(100% - 80px));
-    margin:0 auto;
-    padding:55px 0 80px;
+    width:100%;
+    max-width:none;
+
+    margin:0;
+
+    padding:0 32px 50px;
 }
 
 
@@ -24,37 +74,38 @@ body{
 
 .tracker-header{
     display:flex;
-    align-items:flex-end;
+    align-items:center;
     justify-content:space-between;
-    margin-bottom:35px;
+
+    height:96px;
+
+    margin:0 -32px 30px;
+    padding:0 32px;
+
+    background:white;
+
+    border-bottom:1px solid #ededed;
 }
+
 
 .tracker-eyebrow{
-    display:block;
-    margin-bottom:6px;
-
-    font-size:12px;
-    font-weight:700;
-    letter-spacing:2px;
-
-    color:var(--purple);
+    display:none;
 }
+
 
 .tracker-header h1{
     margin:0;
 
-    font-family:"Droid Sans", sans-serif;
-    font-size:38px;
-    line-height:1.1;
+    font-size:31px;
+    font-weight:800;
+    line-height:1;
 
-    color:var(--black);
+    letter-spacing:-1px;
 }
 
-.tracker-header p{
-    margin:8px 0 0;
 
-    font-size:15px;
-    color:#7d8190;
+.tracker-header p{
+    display:none;
 }
 
 
@@ -64,72 +115,94 @@ body{
 
 .tracker-summary{
     display:grid;
-    grid-template-columns:repeat(4, 1fr);
+
+    grid-template-columns:
+        repeat(4, 1fr);
+
     gap:22px;
 
-    margin-bottom:28px;
+    margin-bottom:25px;
 }
+
 
 .summary-card{
-    position:relative;
+    min-height:135px;
 
-    min-height:145px;
-    padding:25px 28px;
+    padding:23px 25px;
 
-    overflow:hidden;
+    border:none;
+    border-radius:18px;
 
-    background:white;
-    border-radius:14px;
-    border:1px solid #e5e6eb;
-
-    box-shadow:
-        0 5px 18px rgba(13,24,33,.05);
+    box-shadow:none;
 }
+
+
+/* Remove old bottom stripe */
 
 .summary-card::after{
-    content:"";
-
-    position:absolute;
-    left:0;
-    right:0;
-    bottom:0;
-
-    height:5px;
-
-    background:var(--purple);
+    display:none;
 }
 
-.summary-card:nth-child(2)::after{
+
+.summary-card:nth-child(1){
+    background:var(--peach);
+}
+
+
+.summary-card:nth-child(2){
+    background:var(--cream);
+}
+
+
+.summary-card:nth-child(3){
     background:var(--blue);
 }
 
-.summary-card:nth-child(3)::after{
-    background:var(--copper);
+
+.summary-card:nth-child(4){
+    background:var(--blue-light);
 }
 
-.summary-card:nth-child(4)::after{
-    background:var(--red);
-}
 
 .summary-label{
     display:block;
 
-    margin-bottom:17px;
+    margin-bottom:25px;
 
-    font-size:13px;
-    font-weight:600;
+    font-size:16px;
+    font-weight:700;
 
-    color:#777c89;
+    color:#111;
 }
+
 
 .summary-value{
     display:block;
 
-    font-family:"Droid Sans", sans-serif;
-    font-size:36px;
+    font-size:43px;
+    font-weight:500;
     line-height:1;
 
-    color:var(--black);
+    letter-spacing:-1.5px;
+
+    color:#050505;
+}
+
+
+/* White text on blue cards */
+
+.summary-card:nth-child(3)
+.summary-label,
+
+.summary-card:nth-child(3)
+.summary-value,
+
+.summary-card:nth-child(4)
+.summary-label,
+
+.summary-card:nth-child(4)
+.summary-value{
+    color:white;
 }
 
 
@@ -139,40 +212,47 @@ body{
 
 .tracker-charts{
     display:grid;
-    grid-template-columns:repeat(4, 1fr);
+
+    grid-template-columns:
+        repeat(4, 1fr);
+
     gap:22px;
 
-    margin-bottom:28px;
+    margin-bottom:25px;
 }
+
 
 .chart-card{
     min-width:0;
-    padding:24px;
+
+    padding:25px 25px 20px;
 
     background:white;
 
-    border:1px solid #e5e6eb;
-    border-radius:14px;
+    border:none;
+    border-radius:18px;
 
-    box-shadow:
-        0 5px 18px rgba(13,24,33,.05);
+    box-shadow:none;
 }
+
 
 .chart-card h2{
-    margin:0 0 20px;
+    margin:0 0 15px;
 
-    font-family:"Droid Sans", sans-serif;
-    font-size:17px;
+    font-size:20px;
+    font-weight:700;
 
-    color:var(--black);
+    letter-spacing:-.4px;
 }
+
 
 .chart-wrapper{
     position:relative;
 
     width:100%;
-    height:245px;
+    height:285px;
 }
+
 
 .chart-wrapper canvas{
     width:100% !important;
@@ -189,45 +269,51 @@ body{
 
     background:white;
 
-    border:1px solid #e5e6eb;
-    border-radius:14px;
+    border:none;
+    border-radius:18px;
 
-    box-shadow:
-        0 5px 18px rgba(13,24,33,.05);
+    box-shadow:none;
 }
+
 
 .history-header{
     display:flex;
     align-items:center;
     justify-content:space-between;
 
-    padding:25px 28px;
+    padding:25px 28px 20px;
 
-    border-bottom:1px solid #ececf0;
+    border-bottom:none;
 }
+
 
 .history-header .tracker-eyebrow{
-    margin-bottom:4px;
+    display:none;
 }
+
 
 .history-header h2{
     margin:0;
 
-    font-family:"Droid Sans", sans-serif;
-    font-size:22px;
+    font-size:21px;
+    font-weight:700;
 
-    color:var(--black);
+    letter-spacing:-.4px;
 }
 
 
 /* ==========================================
-   History Table
+   Table
 ========================================== */
 
 .history-table-wrapper{
     width:100%;
+
     overflow-x:auto;
+
+    padding:0 20px 20px;
 }
+
 
 .history-table{
     width:100%;
@@ -235,38 +321,135 @@ body{
     border-collapse:collapse;
 }
 
+
 .history-table th{
-    padding:15px 22px;
+    padding:14px 12px;
 
     text-align:left;
 
     font-size:11px;
     font-weight:700;
-    letter-spacing:.8px;
-    text-transform:uppercase;
 
-    color:#8a8e9b;
-    background:#fafafd;
+    letter-spacing:0;
 
-    border-bottom:1px solid #ececf0;
+    text-transform:none;
+
+    color:#111;
+
+    background:white;
+
+    border-bottom:1px solid #dddddd;
 }
+
 
 .history-table td{
-    padding:18px 22px;
+    padding:14px 12px;
 
-    font-size:14px;
+    font-size:12px;
 
-    color:#454956;
+    color:#222;
 
-    border-bottom:1px solid #f0f0f3;
+    border-bottom:
+        1px solid #e7e7e7;
 }
+
 
 .history-table tbody tr:last-child td{
     border-bottom:none;
 }
 
+
 .history-table tbody tr:hover{
-    background:#fafafd;
+    background:#fafafa;
+}
+
+
+/* ==========================================
+   Video Link
+========================================== */
+
+.video-link{
+    font-weight:600;
+
+    color:var(--blue);
+
+    text-decoration:none;
+}
+
+
+.video-link:hover{
+    text-decoration:underline;
+}
+
+
+/* ==========================================
+   Status Pills
+========================================== */
+
+.status-pill{
+    display:inline-flex;
+
+    align-items:center;
+    justify-content:center;
+
+    min-width:65px;
+
+    padding:5px 9px;
+
+    border-radius:4px;
+
+    font-size:9px;
+    font-weight:800;
+
+    text-transform:uppercase;
+
+    white-space:nowrap;
+}
+
+
+.status-green{
+    color:#44561c;
+    background:#e9efc7;
+}
+
+
+.status-red{
+    color:white;
+    background:var(--orange);
+}
+
+
+.status-blue{
+    color:white;
+    background:var(--blue-light);
+}
+
+
+.status-gray{
+    color:#555;
+    background:#e4e4e4;
+}
+
+
+/* ==========================================
+   Vote Numbers
+========================================== */
+
+.vote-number{
+    font-weight:600;
+}
+
+
+/* ==========================================
+   Empty State
+========================================== */
+
+.history-empty{
+    padding:50px !important;
+
+    text-align:center;
+
+    color:#888 !important;
 }
 
 
@@ -277,134 +460,56 @@ body{
 @media(max-width:1100px){
 
     .tracker-summary{
-        grid-template-columns:repeat(2, 1fr);
+        grid-template-columns:
+            repeat(2,1fr);
     }
 
     .tracker-charts{
-        grid-template-columns:repeat(2, 1fr);
+        grid-template-columns:
+            repeat(2,1fr);
     }
 
 }
 
 
-@media(max-width:700px){
+@media(max-width:650px){
 
     .tracker-page{
-        width:calc(100% - 30px);
-        padding-top:30px;
+        padding:
+            0 15px 30px;
     }
 
-    .tracker-header h1{
-        font-size:30px;
+
+    .tracker-header{
+        height:80px;
+
+        margin:
+            0 -15px 20px;
+
+        padding:
+            0 20px;
     }
+
+
+    .tracker-header h1{
+        font-size:26px;
+    }
+
 
     .tracker-summary{
         grid-template-columns:1fr;
+        gap:15px;
     }
+
 
     .tracker-charts{
         grid-template-columns:1fr;
+        gap:15px;
     }
+
 
     .summary-card{
-        min-height:125px;
+        min-height:120px;
     }
 
-}
-/* ==========================================
-   Game History Details
-========================================== */
-
-.video-link{
-    display:inline-flex;
-    align-items:center;
-
-    font-weight:600;
-    text-decoration:none;
-
-    color:var(--purple);
-
-    transition:.15s ease;
-}
-
-.video-link:hover{
-    opacity:.7;
-}
-
-
-/* ==========================================
-   Status Pills
-========================================== */
-
-.status-pill{
-    display:inline-flex;
-    align-items:center;
-    justify-content:center;
-
-    min-width:70px;
-
-    padding:6px 11px;
-
-    border-radius:20px;
-
-    font-size:11px;
-    font-weight:700;
-    line-height:1;
-
-    white-space:nowrap;
-}
-
-
-/* Green */
-
-.status-green{
-    color:#5d7426;
-    background:#edf3dc;
-}
-
-
-/* Red */
-
-.status-red{
-    color:#9b3030;
-    background:#f8e1e1;
-}
-
-
-/* Blue */
-
-.status-blue{
-    color:#285b9e;
-    background:#e3edf9;
-}
-
-
-/* Gray */
-
-.status-gray{
-    color:#686b74;
-    background:#ececef;
-}
-
-
-/* ==========================================
-   Vote Numbers
-========================================== */
-
-.vote-number{
-    font-weight:700;
-    color:var(--black) !important;
-}
-
-
-/* ==========================================
-   Empty History
-========================================== */
-
-.history-empty{
-    padding:45px !important;
-
-    text-align:center;
-
-    color:#959799 !important;
 }
