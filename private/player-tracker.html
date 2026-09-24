@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>Game Analysis Dashboard</title>
+
+    <link
+        rel="stylesheet"
+        href="/css/style-global.css"
+    >
+
+    <link
+        rel="stylesheet"
+        href="/css/player-tracker.css"
+    >
+
+</head>
+
+
+<body>
+
+<main class="tracker-page">
+
+    <!-- ==========================================
+         Header
+    =========================================== -->
+
+    <header class="tracker-header">
+
+        <div>
+            <span class="tracker-eyebrow">
+                GAME ANALYSIS
+            </span>
+
+            <h1>
+                Player Dashboard
+            </h1>
+        </div>
+
+        <div class="tracker-game-count">
+            <span>Games Tracked</span>
+            <strong id="gamesTracked">0</strong>
+        </div>
+
+    </header>
+
+
+    <!-- ==========================================
+         Summary
+    =========================================== -->
+
+    <section class="tracker-summary">
+
+        <article class="summary-card summary-games">
+
+            <span class="summary-label">
+                Games Tracked
+            </span>
+
+            <strong
+                class="summary-value"
+                id="summaryGames"
+            >
+                0
+            </strong>
+
+        </article>
+
+
+        <article class="summary-card summary-win">
+
+            <span class="summary-label">
+                Win Rate
+            </span>
+
+            <strong
+                class="summary-value"
+                id="summaryWinRate"
+            >
+                0%
+            </strong>
+
+        </article>
+
+
+        <article class="summary-card summary-demon">
+
+            <span class="summary-label">
+                Correct Demon Rate
+            </span>
+
+            <strong
+                class="summary-value"
+                id="summaryDemonRate"
+            >
+                0%
+            </strong>
+
+        </article>
+
+
+        <article class="summary-card summary-votes">
+
+            <span class="summary-label">
+                Evil Block Vote Rate
+            </span>
+
+            <strong
+                class="summary-value"
+                id="summaryEvilVoteRate"
+            >
+                0%
+            </strong>
+
+        </article>
+
+    </section>
+
+
+    <!-- ==========================================
+         Charts
+    =========================================== -->
+
+    <section class="tracker-charts">
+
+        <article class="chart-card">
+
+            <div class="chart-heading">
+                <h2>Game Results</h2>
+                <span id="gameResultsTotal">0 games</span>
+            </div>
+
+            <div class="chart-container">
+                <canvas id="resultsChart"></canvas>
+            </div>
+
+        </article>
+
+
+        <article class="chart-card">
+
+            <div class="chart-heading">
+                <h2>Demon Candidate</h2>
+                <span id="demonTotal">0 games</span>
+            </div>
+
+            <div class="chart-container">
+                <canvas id="demonChart"></canvas>
+            </div>
+
+        </article>
+
+
+        <article class="chart-card">
+
+            <div class="chart-heading">
+                <h2>Dead Vote</h2>
+                <span id="deadVoteTotal">0 games</span>
+            </div>
+
+            <div class="chart-container">
+                <canvas id="deadVoteChart"></canvas>
+            </div>
+
+        </article>
+
+
+        <article class="chart-card">
+
+            <div class="chart-heading">
+                <h2>Block Votes</h2>
+                <span id="blockVoteTotal">0 votes</span>
+            </div>
+
+            <div class="chart-container">
+                <canvas id="blockVoteChart"></canvas>
+            </div>
+
+        </article>
+
+    </section>
+
+
+    <!-- ==========================================
+         Game History
+    =========================================== -->
+
+    <section class="history-card">
+
+        <div class="history-heading">
+
+            <div>
+                <span class="tracker-eyebrow">
+                    GAME LOG
+                </span>
+
+                <h2>Game History</h2>
+            </div>
+
+        </div>
+
+
+        <div class="history-table-wrapper">
+
+            <table class="history-table">
+
+                <thead>
+
+                    <tr>
+                        <th>Game</th>
+                        <th>Video</th>
+                        <th>Result</th>
+                        <th>Demon</th>
+                        <th>Dead Vote</th>
+                        <th>Good Votes</th>
+                        <th>Evil Votes</th>
+                    </tr>
+
+                </thead>
+
+                <tbody id="gameHistory">
+
+                    <!-- JavaScript will build this -->
+
+                </tbody>
+
+            </table>
+
+        </div>
+
+    </section>
+
+</main>
+
+
+<!-- Chart.js -->
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+<!-- Player Tracker -->
+<script src="/js/player-tracker.js"></script>
+
+</body>
+
+</html>
