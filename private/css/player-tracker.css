@@ -1,0 +1,313 @@
+/* ==========================================
+   Player Tracker
+========================================== */
+
+body{
+    background:#f3f4f8;
+}
+
+
+/* ==========================================
+   Page
+========================================== */
+
+.tracker-page{
+    width:min(1500px, calc(100% - 80px));
+    margin:0 auto;
+    padding:55px 0 80px;
+}
+
+
+/* ==========================================
+   Header
+========================================== */
+
+.tracker-header{
+    display:flex;
+    align-items:flex-end;
+    justify-content:space-between;
+    margin-bottom:35px;
+}
+
+.tracker-eyebrow{
+    display:block;
+    margin-bottom:6px;
+
+    font-size:12px;
+    font-weight:700;
+    letter-spacing:2px;
+
+    color:var(--purple);
+}
+
+.tracker-header h1{
+    margin:0;
+
+    font-family:"Droid Sans", sans-serif;
+    font-size:38px;
+    line-height:1.1;
+
+    color:var(--black);
+}
+
+.tracker-header p{
+    margin:8px 0 0;
+
+    font-size:15px;
+    color:#7d8190;
+}
+
+
+/* ==========================================
+   Summary Cards
+========================================== */
+
+.tracker-summary{
+    display:grid;
+    grid-template-columns:repeat(4, 1fr);
+    gap:22px;
+
+    margin-bottom:28px;
+}
+
+.summary-card{
+    position:relative;
+
+    min-height:145px;
+    padding:25px 28px;
+
+    overflow:hidden;
+
+    background:white;
+    border-radius:14px;
+    border:1px solid #e5e6eb;
+
+    box-shadow:
+        0 5px 18px rgba(13,24,33,.05);
+}
+
+.summary-card::after{
+    content:"";
+
+    position:absolute;
+    left:0;
+    right:0;
+    bottom:0;
+
+    height:5px;
+
+    background:var(--purple);
+}
+
+.summary-card:nth-child(2)::after{
+    background:var(--blue);
+}
+
+.summary-card:nth-child(3)::after{
+    background:var(--copper);
+}
+
+.summary-card:nth-child(4)::after{
+    background:var(--red);
+}
+
+.summary-label{
+    display:block;
+
+    margin-bottom:17px;
+
+    font-size:13px;
+    font-weight:600;
+
+    color:#777c89;
+}
+
+.summary-value{
+    display:block;
+
+    font-family:"Droid Sans", sans-serif;
+    font-size:36px;
+    line-height:1;
+
+    color:var(--black);
+}
+
+
+/* ==========================================
+   Charts
+========================================== */
+
+.tracker-charts{
+    display:grid;
+    grid-template-columns:repeat(4, 1fr);
+    gap:22px;
+
+    margin-bottom:28px;
+}
+
+.chart-card{
+    min-width:0;
+    padding:24px;
+
+    background:white;
+
+    border:1px solid #e5e6eb;
+    border-radius:14px;
+
+    box-shadow:
+        0 5px 18px rgba(13,24,33,.05);
+}
+
+.chart-card h2{
+    margin:0 0 20px;
+
+    font-family:"Droid Sans", sans-serif;
+    font-size:17px;
+
+    color:var(--black);
+}
+
+.chart-wrapper{
+    position:relative;
+
+    width:100%;
+    height:245px;
+}
+
+.chart-wrapper canvas{
+    width:100% !important;
+    height:100% !important;
+}
+
+
+/* ==========================================
+   Game History
+========================================== */
+
+.history-card{
+    overflow:hidden;
+
+    background:white;
+
+    border:1px solid #e5e6eb;
+    border-radius:14px;
+
+    box-shadow:
+        0 5px 18px rgba(13,24,33,.05);
+}
+
+.history-header{
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+
+    padding:25px 28px;
+
+    border-bottom:1px solid #ececf0;
+}
+
+.history-header .tracker-eyebrow{
+    margin-bottom:4px;
+}
+
+.history-header h2{
+    margin:0;
+
+    font-family:"Droid Sans", sans-serif;
+    font-size:22px;
+
+    color:var(--black);
+}
+
+
+/* ==========================================
+   History Table
+========================================== */
+
+.history-table-wrapper{
+    width:100%;
+    overflow-x:auto;
+}
+
+.history-table{
+    width:100%;
+
+    border-collapse:collapse;
+}
+
+.history-table th{
+    padding:15px 22px;
+
+    text-align:left;
+
+    font-size:11px;
+    font-weight:700;
+    letter-spacing:.8px;
+    text-transform:uppercase;
+
+    color:#8a8e9b;
+    background:#fafafd;
+
+    border-bottom:1px solid #ececf0;
+}
+
+.history-table td{
+    padding:18px 22px;
+
+    font-size:14px;
+
+    color:#454956;
+
+    border-bottom:1px solid #f0f0f3;
+}
+
+.history-table tbody tr:last-child td{
+    border-bottom:none;
+}
+
+.history-table tbody tr:hover{
+    background:#fafafd;
+}
+
+
+/* ==========================================
+   Responsive
+========================================== */
+
+@media(max-width:1100px){
+
+    .tracker-summary{
+        grid-template-columns:repeat(2, 1fr);
+    }
+
+    .tracker-charts{
+        grid-template-columns:repeat(2, 1fr);
+    }
+
+}
+
+
+@media(max-width:700px){
+
+    .tracker-page{
+        width:calc(100% - 30px);
+        padding-top:30px;
+    }
+
+    .tracker-header h1{
+        font-size:30px;
+    }
+
+    .tracker-summary{
+        grid-template-columns:1fr;
+    }
+
+    .tracker-charts{
+        grid-template-columns:1fr;
+    }
+
+    .summary-card{
+        min-height:125px;
+    }
+
+}
