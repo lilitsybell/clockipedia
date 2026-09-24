@@ -284,24 +284,6 @@ function updateSummaryCards(){
 
 }
 
-/* ------------------------------------------
-   Players Put On Block
------------------------------------------- */
-
-const playersPutOnBlock =
-    trackerGames.reduce(
-        (total, game) =>
-            total +
-            Number(
-                game.playersPutOnBlock || 0
-            ),
-        0
-    );
-
-document
-    .querySelector("#playersPutOnBlock")
-    .textContent =
-    playersPutOnBlock;
 /* ==========================================
    Helpers
 ========================================== */
