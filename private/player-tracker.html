@@ -10,7 +10,7 @@
         content="width=device-width, initial-scale=1.0"
     >
 
-    <title>Game Analysis Dashboard</title>
+    <title>Player Tracker</title>
 
     <link
         rel="stylesheet"
@@ -22,12 +22,19 @@
         href="/css/player-tracker.css"
     >
 
+    <link
+        rel="icon"
+        type="image/png"
+        href="/images/favicon.png"
+    >
+
 </head>
 
 
 <body>
 
 <main class="tracker-page">
+
 
     <!-- ==========================================
          Header
@@ -36,30 +43,32 @@
     <header class="tracker-header">
 
         <div>
+
             <span class="tracker-eyebrow">
                 GAME ANALYSIS
             </span>
 
             <h1>
-                Player Dashboard
+                Player Tracker
             </h1>
-        </div>
 
-        <div class="tracker-game-count">
-            <span>Games Tracked</span>
-            <strong id="gamesTracked">0</strong>
+            <p>
+                Game history and statistics
+            </p>
+
         </div>
 
     </header>
 
 
+
     <!-- ==========================================
-         Summary
+         Summary Cards
     =========================================== -->
 
     <section class="tracker-summary">
 
-        <article class="summary-card summary-games">
+        <article class="summary-card">
 
             <span class="summary-label">
                 Games Tracked
@@ -67,15 +76,15 @@
 
             <strong
                 class="summary-value"
-                id="summaryGames"
+                id="gamesTracked"
             >
-                0
+                —
             </strong>
 
         </article>
 
 
-        <article class="summary-card summary-win">
+        <article class="summary-card">
 
             <span class="summary-label">
                 Win Rate
@@ -83,15 +92,15 @@
 
             <strong
                 class="summary-value"
-                id="summaryWinRate"
+                id="winRate"
             >
-                0%
+                —
             </strong>
 
         </article>
 
 
-        <article class="summary-card summary-demon">
+        <article class="summary-card">
 
             <span class="summary-label">
                 Correct Demon Rate
@@ -99,15 +108,15 @@
 
             <strong
                 class="summary-value"
-                id="summaryDemonRate"
+                id="demonRate"
             >
-                0%
+                —
             </strong>
 
         </article>
 
 
-        <article class="summary-card summary-votes">
+        <article class="summary-card">
 
             <span class="summary-label">
                 Evil Block Vote Rate
@@ -115,14 +124,15 @@
 
             <strong
                 class="summary-value"
-                id="summaryEvilVoteRate"
+                id="evilVoteRate"
             >
-                0%
+                —
             </strong>
 
         </article>
 
     </section>
+
 
 
     <!-- ==========================================
@@ -133,12 +143,11 @@
 
         <article class="chart-card">
 
-            <div class="chart-heading">
-                <h2>Game Results</h2>
-                <span id="gameResultsTotal">0 games</span>
-            </div>
+            <h2>
+                Game Results
+            </h2>
 
-            <div class="chart-container">
+            <div class="chart-wrapper">
                 <canvas id="resultsChart"></canvas>
             </div>
 
@@ -147,12 +156,11 @@
 
         <article class="chart-card">
 
-            <div class="chart-heading">
-                <h2>Demon Candidate</h2>
-                <span id="demonTotal">0 games</span>
-            </div>
+            <h2>
+                Demon Candidate
+            </h2>
 
-            <div class="chart-container">
+            <div class="chart-wrapper">
                 <canvas id="demonChart"></canvas>
             </div>
 
@@ -161,12 +169,11 @@
 
         <article class="chart-card">
 
-            <div class="chart-heading">
-                <h2>Dead Vote</h2>
-                <span id="deadVoteTotal">0 games</span>
-            </div>
+            <h2>
+                Dead Vote
+            </h2>
 
-            <div class="chart-container">
+            <div class="chart-wrapper">
                 <canvas id="deadVoteChart"></canvas>
             </div>
 
@@ -175,12 +182,11 @@
 
         <article class="chart-card">
 
-            <div class="chart-heading">
-                <h2>Block Votes</h2>
-                <span id="blockVoteTotal">0 votes</span>
-            </div>
+            <h2>
+                Block Votes
+            </h2>
 
-            <div class="chart-container">
+            <div class="chart-wrapper">
                 <canvas id="blockVoteChart"></canvas>
             </div>
 
@@ -189,20 +195,25 @@
     </section>
 
 
+
     <!-- ==========================================
          Game History
     =========================================== -->
 
     <section class="history-card">
 
-        <div class="history-heading">
+        <div class="history-header">
 
             <div>
+
                 <span class="tracker-eyebrow">
                     GAME LOG
                 </span>
 
-                <h2>Game History</h2>
+                <h2>
+                    Game History
+                </h2>
+
             </div>
 
         </div>
@@ -215,7 +226,7 @@
                 <thead>
 
                     <tr>
-                        <th>Game</th>
+                        <th>Date</th>
                         <th>Video</th>
                         <th>Result</th>
                         <th>Demon</th>
@@ -226,9 +237,10 @@
 
                 </thead>
 
+
                 <tbody id="gameHistory">
 
-                    <!-- JavaScript will build this -->
+                    <!-- Built by JavaScript -->
 
                 </tbody>
 
@@ -238,14 +250,16 @@
 
     </section>
 
+
 </main>
 
 
 <!-- Chart.js -->
 <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 
-<!-- Player Tracker -->
+<!-- Dashboard -->
 <script src="/js/player-tracker.js"></script>
+
 
 </body>
 
