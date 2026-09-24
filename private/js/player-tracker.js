@@ -363,10 +363,10 @@ function buildResultsChart(){
             losses
         ],
 
-        [
-            "#95ad3d",
-            "#c52222"
-        ],
+[
+    "#7AC74F", // Win
+    "#C5283D"  // Loss
+],
 
         winPercentage,
 
@@ -423,11 +423,11 @@ function buildDemonChart(){
             none
         ],
 
-        [
-            "#95ad3d",
-            "#c52222",
-            "#9b9d9f"
-        ],
+[
+    "#7AC74F", // Correct
+    "#C5283D", // Wrong
+    "#FFC857"  // No Candidate
+],
 
         wrongPercentage,
 
@@ -483,11 +483,11 @@ function buildDeadVoteChart(){
             unused
         ],
 
-        [
-            "#c52222",
-            "#2370a3",
-            "#9b9d9f"
-        ],
+[
+    "#C5283D", // Evil
+    "#255F85", // Good
+    "#FFC857"  // Unused
+],
 
         evilPercentage,
 
@@ -602,10 +602,10 @@ function buildBlockVoteChart(){
                 displayedGoodVotes
             ],
 
-            [
-                "#c52222",
-                "#2370a3"
-            ],
+[
+    "#C5283D", // Evil
+    "#255F85"  // Good
+],
 
             evilPercentage,
 
