@@ -311,3 +311,100 @@ body{
     }
 
 }
+/* ==========================================
+   Game History Details
+========================================== */
+
+.video-link{
+    display:inline-flex;
+    align-items:center;
+
+    font-weight:600;
+    text-decoration:none;
+
+    color:var(--purple);
+
+    transition:.15s ease;
+}
+
+.video-link:hover{
+    opacity:.7;
+}
+
+
+/* ==========================================
+   Status Pills
+========================================== */
+
+.status-pill{
+    display:inline-flex;
+    align-items:center;
+    justify-content:center;
+
+    min-width:70px;
+
+    padding:6px 11px;
+
+    border-radius:20px;
+
+    font-size:11px;
+    font-weight:700;
+    line-height:1;
+
+    white-space:nowrap;
+}
+
+
+/* Green */
+
+.status-green{
+    color:#5d7426;
+    background:#edf3dc;
+}
+
+
+/* Red */
+
+.status-red{
+    color:#9b3030;
+    background:#f8e1e1;
+}
+
+
+/* Blue */
+
+.status-blue{
+    color:#285b9e;
+    background:#e3edf9;
+}
+
+
+/* Gray */
+
+.status-gray{
+    color:#686b74;
+    background:#ececef;
+}
+
+
+/* ==========================================
+   Vote Numbers
+========================================== */
+
+.vote-number{
+    font-weight:700;
+    color:var(--black) !important;
+}
+
+
+/* ==========================================
+   Empty History
+========================================== */
+
+.history-empty{
+    padding:45px !important;
+
+    text-align:center;
+
+    color:#959799 !important;
+}
