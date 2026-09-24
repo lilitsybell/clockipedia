@@ -26,9 +26,10 @@ async function initializePlayerTracker(){
 
     try{
 
-        await loadTrackerGames();
+await loadTrackerGames();
 
-        updateSummaryCards();
+updateSummaryCards();
+buildCharts();
 
     }
     catch(error){
@@ -198,6 +199,343 @@ function getPercentage(
     return (
         percentage.toFixed(1) +
         "%"
+    );
+
+}
+/* ==========================================
+   Charts
+========================================== */
+
+function buildCharts(){
+
+    buildResultsChart();
+    buildDemonChart();
+    buildDeadVoteChart();
+    buildBlockVoteChart();
+
+}
+
+
+/* ==========================================
+   Game Results
+========================================== */
+
+function buildResultsChart(){
+
+    const wins =
+        trackerGames.filter(
+            game =>
+                game.result === "Win"
+        ).length;
+
+    const losses =
+        trackerGames.filter(
+            game =>
+                game.result === "Loss"
+        ).length;
+
+
+    createPieChart(
+        "resultsChart",
+
+        [
+            "Wins",
+            "Losses"
+        ],
+
+        [
+            wins,
+            losses
+        ],
+
+        [
+            "#8EA742",
+            "#b52323"
+        ]
+    );
+
+}
+
+
+/* ==========================================
+   Demon Candidate
+========================================== */
+
+function buildDemonChart(){
+
+    const correct =
+        trackerGames.filter(
+            game =>
+                game.demon === "Correct"
+        ).length;
+
+    const wrong =
+        trackerGames.filter(
+            game =>
+                game.demon === "Wrong"
+        ).length;
+
+    const none =
+        trackerGames.filter(
+            game =>
+                game.demon === "None"
+        ).length;
+
+
+    createPieChart(
+        "demonChart",
+
+        [
+            "Correct",
+            "Wrong",
+            "No Candidate"
+        ],
+
+        [
+            correct,
+            wrong,
+            none
+        ],
+
+        [
+            "#8EA742",
+            "#b52323",
+            "#959799"
+        ]
+    );
+
+}
+
+
+/* ==========================================
+   Dead Vote
+========================================== */
+
+function buildDeadVoteChart(){
+
+    const evil =
+        trackerGames.filter(
+            game =>
+                game.deadVote === "Evil"
+        ).length;
+
+    const good =
+        trackerGames.filter(
+            game =>
+                game.deadVote === "Good"
+        ).length;
+
+    const unused =
+        trackerGames.filter(
+            game =>
+                game.deadVote === "Unused"
+        ).length;
+
+
+    createPieChart(
+        "deadVoteChart",
+
+        [
+            "Evil",
+            "Good",
+            "Unused"
+        ],
+
+        [
+            evil,
+            good,
+            unused
+        ],
+
+        [
+            "#b52323",
+            "#2f6fc4",
+            "#959799"
+        ]
+    );
+
+}
+
+
+/* ==========================================
+   Block Votes
+========================================== */
+
+function buildBlockVoteChart(){
+
+    const goodVotes =
+        trackerGames.reduce(
+            (total, game) =>
+                total +
+                Number(
+                    game.goodBlockVotes || 0
+                ),
+            0
+        );
+
+    const evilVotes =
+        trackerGames.reduce(
+            (total, game) =>
+                total +
+                Number(
+                    game.evilBlockVotes || 0
+                ),
+            0
+        );
+
+
+    createPieChart(
+        "blockVoteChart",
+
+        [
+            "Evil",
+            "Good"
+        ],
+
+        [
+            evilVotes,
+            goodVotes
+        ],
+
+        [
+            "#b52323",
+            "#2f6fc4"
+        ]
+    );
+
+}
+
+
+/* ==========================================
+   Create Pie Chart
+========================================== */
+
+function createPieChart(
+    canvasID,
+    labels,
+    data,
+    colors
+){
+
+    const canvas =
+        document.getElementById(
+            canvasID
+        );
+
+    if(!canvas){
+        return;
+    }
+
+
+    new Chart(
+        canvas,
+        {
+
+            type:"doughnut",
+
+            data:{
+
+                labels:labels,
+
+                datasets:[
+                    {
+
+                        data:data,
+
+                        backgroundColor:colors,
+
+                        borderWidth:0,
+
+                        hoverOffset:5
+
+                    }
+                ]
+
+            },
+
+
+            options:{
+
+                responsive:true,
+
+                maintainAspectRatio:false,
+
+                cutout:"68%",
+
+                plugins:{
+
+                    legend:{
+
+                        position:"bottom",
+
+                        labels:{
+
+                            usePointStyle:true,
+
+                            pointStyle:"circle",
+
+                            boxWidth:8,
+
+                            boxHeight:8,
+
+                            padding:18,
+
+                            font:{
+                                size:12
+                            }
+
+                        }
+
+                    },
+
+                    tooltip:{
+
+                        callbacks:{
+
+                            label:function(context){
+
+                                const values =
+                                    context.dataset.data;
+
+                                const total =
+                                    values.reduce(
+                                        (sum, value) =>
+                                            sum + value,
+                                        0
+                                    );
+
+                                const value =
+                                    context.raw;
+
+                                const percentage =
+                                    total
+                                        ? (
+                                            value /
+                                            total *
+                                            100
+                                        ).toFixed(1)
+                                        : 0;
+
+                                return (
+                                    context.label +
+                                    ": " +
+                                    value +
+                                    " (" +
+                                    percentage +
+                                    "%)"
+                                );
+
+                            }
+
+                        }
+
+                    }
+
+                }
+
+            }
+
+        }
     );
 
 }
