@@ -513,3 +513,39 @@ body{
     }
 
 }
+/* ==========================================
+   Block Total
+========================================== */
+
+.chart-card-header{
+    display:flex;
+    align-items:flex-start;
+    justify-content:space-between;
+    gap:20px;
+}
+
+.chart-card-header h2{
+    margin:0;
+}
+
+.block-total{
+    display:flex;
+    align-items:baseline;
+    gap:5px;
+
+    white-space:nowrap;
+}
+
+.block-total strong{
+    font-size:20px;
+    font-weight:800;
+
+    color:var(--black);
+}
+
+.block-total span{
+    font-size:10px;
+    font-weight:500;
+
+    color:#888;
+}
