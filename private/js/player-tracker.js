@@ -281,7 +281,45 @@ function updateSummaryCards(){
         .querySelector("#evilVoteRate")
         .textContent =
         evilVoteRate;
+/* ------------------------------------------
+   Evil Nomination Vote Rate
+------------------------------------------ */
 
+const evilPlayersNominated =
+    trackerGames.reduce(
+        (total, game) =>
+            total +
+            Number(
+                game.evilPlayersNominated || 0
+            ),
+        0
+    );
+
+
+const evilNominationsVotedOn =
+    trackerGames.reduce(
+        (total, game) =>
+            total +
+            Number(
+                game.evilNominationsVotedOn || 0
+            ),
+        0
+    );
+
+
+const evilNominationVoteRate =
+    getPercentage(
+        evilNominationsVotedOn,
+        evilPlayersNominated
+    );
+
+
+document
+    .querySelector(
+        "#evilNominationVoteRate"
+    )
+    .textContent =
+    evilNominationVoteRate;
 }
 
 /* ==========================================
