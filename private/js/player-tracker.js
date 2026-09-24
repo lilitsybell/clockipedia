@@ -48,16 +48,29 @@ buildGameHistory();
 /* ==========================================
    Load Games
 ========================================== */
-
 async function loadTrackerGames(){
 
     const response =
-        await fetch(PLAYER_TRACKER_URL);
+        await fetch(
+            PLAYER_TRACKER_URL,
+            {
+                method:"GET",
+                redirect:"follow",
+                cache:"no-store"
+            }
+        );
+
+    console.log(
+        "Tracker response:",
+        response.status,
+        response.url
+    );
 
     if(!response.ok){
 
         throw new Error(
-            "Failed to load player tracker data"
+            "Failed to load player tracker data: " +
+            response.status
         );
 
     }
@@ -71,7 +84,6 @@ async function loadTrackerGames(){
     );
 
 }
-
 
 /* ==========================================
    Summary Cards
