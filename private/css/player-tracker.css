@@ -10,22 +10,17 @@
 :root{
 
     --black:#111111;
-
-    --background:#f1f1f1;
-
+    --background:#f2f2f2;
     --white:#ffffff;
 
-    --orange:#ff6938;
-    --peach:#fac39f;
-    --cream:#efefc9;
+    /* Dashboard Palette */
+    --gold:#FFC857;
+    --peach:#E9724C;
+    --cherry:#C5283D;
+    --green:#7AC74F;
+    --blue:#255F85;
 
-    --blue:#075b93;
-    --blue-light:#2370a3;
-
-    --green:#95ad3d;
-    --red:#c52222;
-    --gray:#9b9d9f;
-
+    --gray:#9B9D9F;
     --border:#e6e6e6;
 
 }
@@ -145,24 +140,20 @@ body{
 
 
 .summary-card:nth-child(1){
+    background:var(--gold);
+}
+
+.summary-card:nth-child(2){
     background:var(--peach);
 }
 
-
-.summary-card:nth-child(2){
-    background:var(--cream);
-}
-
-
 .summary-card:nth-child(3){
-    background:var(--blue);
+    background:var(--green);
 }
-
 
 .summary-card:nth-child(4){
-    background:var(--blue-light);
+    background:var(--blue);
 }
-
 
 .summary-label{
     display:block;
@@ -189,22 +180,30 @@ body{
 }
 
 
-/* White text on blue cards */
+.summary-card:nth-child(1)
+.summary-label,
+.summary-card:nth-child(1)
+.summary-value,
+
+.summary-card:nth-child(2)
+.summary-label,
+.summary-card:nth-child(2)
+.summary-value,
 
 .summary-card:nth-child(3)
 .summary-label,
-
 .summary-card:nth-child(3)
-.summary-value,
+.summary-value{
+    color:#111111;
+}
+
 
 .summary-card:nth-child(4)
 .summary-label,
-
 .summary-card:nth-child(4)
 .summary-value{
     color:white;
 }
-
 
 /* ==========================================
    Charts
@@ -396,7 +395,7 @@ body{
 
     padding:5px 9px;
 
-    border-radius:4px;
+    border-radius:6px;
 
     font-size:9px;
     font-weight:800;
@@ -407,29 +406,42 @@ body{
 }
 
 
+/* Win / Correct */
+
 .status-green{
-    color:#44561c;
-    background:#e9efc7;
+    color:#244414;
+
+    background:
+        rgba(122,199,79,.24);
 }
 
+
+/* Loss / Wrong / Evil */
 
 .status-red{
     color:white;
-    background:var(--orange);
+
+    background:var(--cherry);
 }
 
+
+/* Good */
 
 .status-blue{
     color:white;
-    background:var(--blue-light);
+
+    background:var(--blue);
 }
 
+
+/* None / Unused */
 
 .status-gray{
-    color:#555;
-    background:#e4e4e4;
-}
+    color:#6b5010;
 
+    background:
+        rgba(255,200,87,.45);
+}
 
 /* ==========================================
    Vote Numbers
@@ -514,42 +526,6 @@ body{
 
 }
 /* ==========================================
-   Block Total
-========================================== */
-
-.chart-card-header{
-    display:flex;
-    align-items:flex-start;
-    justify-content:space-between;
-    gap:20px;
-}
-
-.chart-card-header h2{
-    margin:0;
-}
-
-.block-total{
-    display:flex;
-    align-items:baseline;
-    gap:5px;
-
-    white-space:nowrap;
-}
-
-.block-total strong{
-    font-size:20px;
-    font-weight:800;
-
-    color:var(--black);
-}
-
-.block-total span{
-    font-size:10px;
-    font-weight:500;
-
-    color:#888;
-}
-/* ==========================================
    Block Vote Controls
 ========================================== */
 
@@ -595,11 +571,20 @@ body{
     color:#777;
 
     cursor:pointer;
+
+    transition:
+        background .15s ease,
+        color .15s ease;
+}
+
+
+.vote-toggle-button:hover{
+    color:var(--blue);
 }
 
 
 .vote-toggle-button.active{
-    background:#111;
+    background:var(--blue);
 
     color:white;
 }
@@ -607,7 +592,9 @@ body{
 
 .block-stats{
     display:flex;
-    gap:15px;
+    align-items:center;
+
+    gap:16px;
 
     margin-bottom:4px;
 
@@ -618,7 +605,10 @@ body{
 
 
 .block-stats strong{
+    margin-right:3px;
+
     color:#111;
 
     font-size:11px;
+    font-weight:800;
 }
