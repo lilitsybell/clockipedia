@@ -178,21 +178,41 @@
 
     <div class="chart-card-header">
 
-        <h2>
-            Block Votes
-        </h2>
+        <h2>Block Votes</h2>
 
-        <div class="block-total">
+        <div class="vote-toggle">
 
-            <strong id="playersPutOnBlock">
-                —
-            </strong>
+            <button
+                class="vote-toggle-button active"
+                data-mode="all"
+                type="button"
+            >
+                All
+            </button>
 
-            <span>
-                players put on block
-            </span>
+            <button
+                class="vote-toggle-button"
+                data-mode="adjusted"
+                type="button"
+            >
+                Adjusted
+            </button>
 
         </div>
+
+    </div>
+
+    <div class="block-stats">
+
+        <span>
+            <strong id="playersPutOnBlock">—</strong>
+            put on block
+        </span>
+
+        <span>
+            <strong id="blockVotesCast">—</strong>
+            votes cast
+        </span>
 
     </div>
 
