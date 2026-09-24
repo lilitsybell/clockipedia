@@ -396,24 +396,21 @@ function buildResultsChart(){
 /* ==========================================
    Demon Candidate
 ========================================== */
-
 function buildDemonChart(){
-const wrongPercentage =
-    getPercentage(
-        wrong,
-        correct + wrong
-    );
+
     const correct =
         trackerGames.filter(
             game =>
                 game.demon === "Correct"
         ).length;
 
+
     const wrong =
         trackerGames.filter(
             game =>
                 game.demon === "Wrong"
         ).length;
+
 
     const none =
         trackerGames.filter(
@@ -422,56 +419,58 @@ const wrongPercentage =
         ).length;
 
 
-createPieChart(
-    "demonChart",
+    const wrongPercentage =
+        getPercentage(
+            wrong,
+            correct + wrong
+        );
 
-    [
-        "Correct",
-        "Wrong",
-        "No Candidate"
-    ],
 
-    [
-        correct,
-        wrong,
-        none
-    ],
+    createPieChart(
+        "demonChart",
 
-    [
-        "#95ad3d",
-        "#c52222",
-        "#9b9d9f"
-    ],
+        [
+            "Correct",
+            "Wrong",
+            "No Candidate"
+        ],
 
-    wrongPercentage,
+        [
+            correct,
+            wrong,
+            none
+        ],
 
-    "Wrong"
-);
+        [
+            "#95ad3d",
+            "#c52222",
+            "#9b9d9f"
+        ],
+
+        wrongPercentage,
+
+        "Wrong"
+    );
 
 }
-
-
 /* ==========================================
    Dead Vote
 ========================================== */
-
 function buildDeadVoteChart(){
-const evilPercentage =
-    getPercentage(
-        evil,
-        evil + good
-    );
+
     const evil =
         trackerGames.filter(
             game =>
                 game.deadVote === "Evil"
         ).length;
 
+
     const good =
         trackerGames.filter(
             game =>
                 game.deadVote === "Good"
         ).length;
+
 
     const unused =
         trackerGames.filter(
@@ -480,35 +479,40 @@ const evilPercentage =
         ).length;
 
 
-createPieChart(
-    "deadVoteChart",
+    const evilPercentage =
+        getPercentage(
+            evil,
+            evil + good
+        );
 
-    [
-        "Evil",
-        "Good",
-        "Unused"
-    ],
 
-    [
-        evil,
-        good,
-        unused
-    ],
+    createPieChart(
+        "deadVoteChart",
 
-    [
-        "#c52222",
-        "#2370a3",
-        "#9b9d9f"
-    ],
+        [
+            "Evil",
+            "Good",
+            "Unused"
+        ],
 
-    evilPercentage,
+        [
+            evil,
+            good,
+            unused
+        ],
 
-    "Evil"
-);
+        [
+            "#c52222",
+            "#2370a3",
+            "#9b9d9f"
+        ],
+
+        evilPercentage,
+
+        "Evil"
+    );
 
 }
-
-
 /* ==========================================
    Block Votes
 ========================================== */
