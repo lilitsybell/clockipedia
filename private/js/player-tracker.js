@@ -10,7 +10,99 @@ const PLAYER_TRACKER_URL =
 
 
 let trackerGames = [];
+let blockVoteChart = null;
 
+let blockVoteMode = "all";
+
+
+/* ==========================================
+   Doughnut Center Text
+========================================== */
+
+const centerTextPlugin = {
+
+    id:"centerText",
+
+    afterDraw(chart){
+
+        const options =
+            chart.options.plugins.centerText;
+
+        if(
+            !options ||
+            !options.display
+        ){
+            return;
+        }
+
+        const {
+            ctx,
+            chartArea
+        } = chart;
+
+
+        if(!chartArea){
+            return;
+        }
+
+
+        const centerX =
+            (
+                chartArea.left +
+                chartArea.right
+            ) / 2;
+
+        const centerY =
+            (
+                chartArea.top +
+                chartArea.bottom
+            ) / 2;
+
+
+        ctx.save();
+
+        ctx.textAlign = "center";
+        ctx.textBaseline = "middle";
+
+
+        /* Percentage */
+
+        ctx.fillStyle = "#111111";
+
+        ctx.font =
+            '700 28px Inter, sans-serif';
+
+        ctx.fillText(
+            options.text || "—",
+            centerX,
+            centerY - 8
+        );
+
+
+        /* Label */
+
+        ctx.fillStyle = "#777777";
+
+        ctx.font =
+            '600 9px Inter, sans-serif';
+
+        ctx.fillText(
+            (
+                options.label || ""
+            ).toUpperCase(),
+            centerX,
+            centerY + 17
+        );
+
+
+        ctx.restore();
+
+    }
+
+};
+
+
+Chart.register(centerTextPlugin);
 
 /* ==========================================
    Initialize
@@ -251,7 +343,11 @@ function buildCharts(){
 ========================================== */
 
 function buildResultsChart(){
-
+const winPercentage =
+    getPercentage(
+        wins,
+        wins + losses
+    );
     const wins =
         trackerGames.filter(
             game =>
@@ -265,24 +361,28 @@ function buildResultsChart(){
         ).length;
 
 
-    createPieChart(
-        "resultsChart",
+createPieChart(
+    "resultsChart",
 
-        [
-            "Wins",
-            "Losses"
-        ],
+    [
+        "Wins",
+        "Losses"
+    ],
 
-        [
-            wins,
-            losses
-        ],
+    [
+        wins,
+        losses
+    ],
 
-        [
-            "#8EA742",
-            "#b52323"
-        ]
-    );
+    [
+        "#95ad3d",
+        "#c52222"
+    ],
+
+    winPercentage,
+
+    "Games Won"
+);
 
 }
 
@@ -292,7 +392,11 @@ function buildResultsChart(){
 ========================================== */
 
 function buildDemonChart(){
-
+const wrongPercentage =
+    getPercentage(
+        wrong,
+        correct + wrong
+    );
     const correct =
         trackerGames.filter(
             game =>
@@ -312,27 +416,31 @@ function buildDemonChart(){
         ).length;
 
 
-    createPieChart(
-        "demonChart",
+createPieChart(
+    "demonChart",
 
-        [
-            "Correct",
-            "Wrong",
-            "No Candidate"
-        ],
+    [
+        "Correct",
+        "Wrong",
+        "No Candidate"
+    ],
 
-        [
-            correct,
-            wrong,
-            none
-        ],
+    [
+        correct,
+        wrong,
+        none
+    ],
 
-        [
-            "#8EA742",
-            "#b52323",
-            "#959799"
-        ]
-    );
+    [
+        "#95ad3d",
+        "#c52222",
+        "#9b9d9f"
+    ],
+
+    wrongPercentage,
+
+    "Wrong"
+);
 
 }
 
@@ -342,7 +450,11 @@ function buildDemonChart(){
 ========================================== */
 
 function buildDeadVoteChart(){
-
+const evilPercentage =
+    getPercentage(
+        evil,
+        evil + good
+    );
     const evil =
         trackerGames.filter(
             game =>
@@ -362,27 +474,31 @@ function buildDeadVoteChart(){
         ).length;
 
 
-    createPieChart(
-        "deadVoteChart",
+createPieChart(
+    "deadVoteChart",
 
-        [
-            "Evil",
-            "Good",
-            "Unused"
-        ],
+    [
+        "Evil",
+        "Good",
+        "Unused"
+    ],
 
-        [
-            evil,
-            good,
-            unused
-        ],
+    [
+        evil,
+        good,
+        unused
+    ],
 
-        [
-            "#b52323",
-            "#2f6fc4",
-            "#959799"
-        ]
-    );
+    [
+        "#c52222",
+        "#2370a3",
+        "#9b9d9f"
+    ],
+
+    evilPercentage,
+
+    "Evil"
+);
 
 }
 
@@ -390,7 +506,6 @@ function buildDeadVoteChart(){
 /* ==========================================
    Block Votes
 ========================================== */
-
 function buildBlockVoteChart(){
 
     const goodVotes =
@@ -403,6 +518,18 @@ function buildBlockVoteChart(){
             0
         );
 
+
+    const harmlessVotes =
+        trackerGames.reduce(
+            (total, game) =>
+                total +
+                Number(
+                    game.harmlessVotes || 0
+                ),
+            0
+        );
+
+
     const evilVotes =
         trackerGames.reduce(
             (total, game) =>
@@ -414,28 +541,86 @@ function buildBlockVoteChart(){
         );
 
 
-    createPieChart(
-        "blockVoteChart",
+    const playersPutOnBlock =
+        trackerGames.reduce(
+            (total, game) =>
+                total +
+                Number(
+                    game.playersPutOnBlock || 0
+                ),
+            0
+        );
 
-        [
-            "Evil",
-            "Good"
-        ],
 
-        [
+    const adjustedGoodVotes =
+        Math.max(
+            0,
+            goodVotes - harmlessVotes
+        );
+
+
+    const displayedGoodVotes =
+        blockVoteMode === "adjusted"
+            ? adjustedGoodVotes
+            : goodVotes;
+
+
+    const totalDisplayedVotes =
+        displayedGoodVotes +
+        evilVotes;
+
+
+    const evilPercentage =
+        getPercentage(
             evilVotes,
-            goodVotes
-        ],
+            totalDisplayedVotes
+        );
 
-        [
-            "#b52323",
-            "#2f6fc4"
-        ]
-    );
+
+    document
+        .querySelector("#playersPutOnBlock")
+        .textContent =
+        playersPutOnBlock;
+
+
+    document
+        .querySelector("#blockVotesCast")
+        .textContent =
+        goodVotes + evilVotes;
+
+
+    if(blockVoteChart){
+
+        blockVoteChart.destroy();
+
+    }
+
+
+    blockVoteChart =
+        createPieChart(
+            "blockVoteChart",
+
+            [
+                "Evil",
+                "Good"
+            ],
+
+            [
+                evilVotes,
+                displayedGoodVotes
+            ],
+
+            [
+                "#c52222",
+                "#2370a3"
+            ],
+
+            evilPercentage,
+
+            "Evil"
+        );
 
 }
-
-
 /* ==========================================
    Create Pie Chart
 ========================================== */
@@ -444,7 +629,9 @@ function createPieChart(
     canvasID,
     labels,
     data,
-    colors
+    colors,
+    centerText,
+    centerLabel
 ){
 
     const canvas =
@@ -457,7 +644,7 @@ function createPieChart(
     }
 
 
-    new Chart(
+    return new Chart(
         canvas,
         {
 
@@ -492,13 +679,23 @@ function createPieChart(
 
                 cutout:"68%",
 
-                plugins:{
+plugins:{
 
-                    legend:{
+    centerText:{
 
-                        position:"bottom",
+        display:true,
 
-                        labels:{
+        text:centerText,
+
+        label:centerLabel
+
+    },
+
+    legend:{
+
+        position:"bottom",
+
+        labels:{
 
                             usePointStyle:true,
 
@@ -873,3 +1070,43 @@ function safeURL(url){
     return "https://" + url;
 
 }
+/* ==========================================
+   Block Vote Toggle
+========================================== */
+
+document.addEventListener(
+    "click",
+    event => {
+
+        const button =
+            event.target.closest(
+                ".vote-toggle-button"
+            );
+
+        if(!button){
+            return;
+        }
+
+
+        blockVoteMode =
+            button.dataset.mode;
+
+
+        document
+            .querySelectorAll(
+                ".vote-toggle-button"
+            )
+            .forEach(item => {
+
+                item.classList.toggle(
+                    "active",
+                    item === button
+                );
+
+            });
+
+
+        buildBlockVoteChart();
+
+    }
+);
