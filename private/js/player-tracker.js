@@ -30,6 +30,7 @@ await loadTrackerGames();
 
 updateSummaryCards();
 buildCharts();
+buildGameHistory();
 
     }
     catch(error){
@@ -537,5 +538,297 @@ function createPieChart(
 
         }
     );
+
+}
+/* ==========================================
+   Game History
+========================================== */
+
+function buildGameHistory(){
+
+    const tbody =
+        document.querySelector("#gameHistory");
+
+    if(!tbody){
+        return;
+    }
+
+    tbody.innerHTML = "";
+
+
+    /* ------------------------------------------
+       Sort newest to oldest
+    ------------------------------------------ */
+
+    const sortedGames =
+        [...trackerGames].sort(
+            (a, b) =>
+                new Date(b.date) -
+                new Date(a.date)
+        );
+
+
+    /* ------------------------------------------
+       Empty State
+    ------------------------------------------ */
+
+    if(sortedGames.length === 0){
+
+        const row =
+            document.createElement("tr");
+
+        row.innerHTML = `
+            <td
+                colspan="7"
+                class="history-empty"
+            >
+                No games have been added yet.
+            </td>
+        `;
+
+        tbody.appendChild(row);
+
+        return;
+
+    }
+
+
+    /* ------------------------------------------
+       Build Rows
+    ------------------------------------------ */
+
+    sortedGames.forEach(game => {
+
+        const row =
+            document.createElement("tr");
+
+
+        row.innerHTML = `
+
+            <td>
+                ${formatGameDate(game.date)}
+            </td>
+
+
+            <td>
+                ${
+                    game.youtube
+                        ? `
+                            <a
+                                class="video-link"
+                                href="${safeURL(game.youtube)}"
+                                target="_blank"
+                                rel="noopener noreferrer"
+                            >
+                                Watch Game
+                            </a>
+                        `
+                        : "—"
+                }
+            </td>
+
+
+            <td>
+                ${createStatusPill(
+                    game.result,
+                    getResultClass(game.result)
+                )}
+            </td>
+
+
+            <td>
+                ${createStatusPill(
+                    getDemonLabel(game.demon),
+                    getDemonClass(game.demon)
+                )}
+            </td>
+
+
+            <td>
+                ${createStatusPill(
+                    game.deadVote,
+                    getVoteClass(game.deadVote)
+                )}
+            </td>
+
+
+            <td class="vote-number">
+                ${Number(
+                    game.goodBlockVotes || 0
+                )}
+            </td>
+
+
+            <td class="vote-number">
+                ${Number(
+                    game.evilBlockVotes || 0
+                )}
+            </td>
+
+        `;
+
+
+        tbody.appendChild(row);
+
+    });
+
+}
+
+
+/* ==========================================
+   Format Date
+========================================== */
+
+function formatGameDate(dateString){
+
+    if(!dateString){
+        return "—";
+    }
+
+    const parts =
+        dateString.split("-");
+
+    if(parts.length !== 3){
+        return dateString;
+    }
+
+    const year =
+        Number(parts[0]);
+
+    const month =
+        Number(parts[1]);
+
+    const day =
+        Number(parts[2]);
+
+
+    const date =
+        new Date(
+            year,
+            month - 1,
+            day
+        );
+
+
+    return date.toLocaleDateString(
+        "en-US",
+        {
+            month:"short",
+            day:"numeric",
+            year:"numeric"
+        }
+    );
+
+}
+
+
+/* ==========================================
+   Status Pills
+========================================== */
+
+function createStatusPill(
+    text,
+    className
+){
+
+    if(!text){
+        return "—";
+    }
+
+    return `
+        <span class="status-pill ${className}">
+            ${text}
+        </span>
+    `;
+
+}
+
+
+/* ==========================================
+   Result Classes
+========================================== */
+
+function getResultClass(result){
+
+    if(result === "Win"){
+        return "status-green";
+    }
+
+    if(result === "Loss"){
+        return "status-red";
+    }
+
+    return "status-gray";
+
+}
+
+
+/* ==========================================
+   Demon Classes
+========================================== */
+
+function getDemonClass(demon){
+
+    if(demon === "Correct"){
+        return "status-green";
+    }
+
+    if(demon === "Wrong"){
+        return "status-red";
+    }
+
+    return "status-gray";
+
+}
+
+
+function getDemonLabel(demon){
+
+    if(demon === "None"){
+        return "No Candidate";
+    }
+
+    return demon;
+
+}
+
+
+/* ==========================================
+   Vote Classes
+========================================== */
+
+function getVoteClass(vote){
+
+    if(vote === "Evil"){
+        return "status-red";
+    }
+
+    if(vote === "Good"){
+        return "status-blue";
+    }
+
+    return "status-gray";
+
+}
+
+
+/* ==========================================
+   YouTube URL
+========================================== */
+
+function safeURL(url){
+
+    if(!url){
+        return "#";
+    }
+
+    if(
+        url.startsWith("http://") ||
+        url.startsWith("https://")
+    ){
+        return url;
+    }
+
+    return "https://" + url;
 
 }
