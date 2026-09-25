@@ -11,9 +11,11 @@ const PLAYER_TRACKER_URL =
 let trackerGames = [];
 
 let blockVoteChart = null;
+let deadVoteChart = null;
 let timelineChart = null;
 
 let blockVoteMode = "all";
+let deadVoteMode = "all";
 
 
 /* ==========================================
