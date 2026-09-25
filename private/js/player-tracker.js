@@ -1205,3 +1205,68 @@ document.addEventListener(
 
     }
 );
+/* ==========================================
+   Chart View Tabs
+========================================== */
+
+document.addEventListener(
+    "click",
+    event => {
+
+        const button =
+            event.target.closest(
+                ".chart-view-tab"
+            );
+
+        if(!button){
+            return;
+        }
+
+
+        const view =
+            button.dataset.chartView;
+
+
+        /* ------------------------------------------
+           Update Tab Buttons
+        ------------------------------------------ */
+
+        document
+            .querySelectorAll(
+                ".chart-view-tab"
+            )
+            .forEach(tab => {
+
+                tab.classList.toggle(
+                    "active",
+                    tab === button
+                );
+
+            });
+
+
+        /* ------------------------------------------
+           Update Chart Panels
+        ------------------------------------------ */
+
+        document
+            .querySelector(
+                "#overviewChartView"
+            )
+            .classList.toggle(
+                "active",
+                view === "overview"
+            );
+
+
+        document
+            .querySelector(
+                "#timelineChartView"
+            )
+            .classList.toggle(
+                "active",
+                view === "timeline"
+            );
+
+    }
+);
