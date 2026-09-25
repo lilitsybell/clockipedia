@@ -1836,8 +1836,9 @@ document.addEventListener(
 
         const button =
             event.target.closest(
-                ".vote-toggle-button"
+                ".vote-toggle-button:not(.dead-vote-toggle-button)"
             );
+
 
         if(!button){
             return;
@@ -1850,13 +1851,13 @@ document.addEventListener(
 
         document
             .querySelectorAll(
-                ".vote-toggle-button"
+                ".vote-toggle-button:not(.dead-vote-toggle-button)"
             )
-            .forEach(item => {
+            .forEach(toggle => {
 
-                item.classList.toggle(
+                toggle.classList.toggle(
                     "active",
-                    item === button
+                    toggle === button
                 );
 
             });
