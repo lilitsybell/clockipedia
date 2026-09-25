@@ -142,15 +142,14 @@ buildGameHistory();
 ========================================== */
 async function loadTrackerGames(){
 
-    const response =
-        await fetch(
-            PLAYER_TRACKER_URL,
-            {
-                method:"GET",
-                redirect:"follow",
-                cache:"no-store"
-            }
-        );
+const response =
+    await fetch(
+        PLAYER_TRACKER_URL + "?t=" + Date.now(),
+        {
+            method:"GET",
+            cache:"no-cache"
+        }
+    );
 
     console.log(
         "Tracker response:",
