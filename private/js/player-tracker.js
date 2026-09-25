@@ -8,9 +8,10 @@ console.log("player-tracker.js loaded");
 const PLAYER_TRACKER_URL =
     "https://script.google.com/macros/s/AKfycbwX_AkorFBwswE-liivQCX7Cxya9OfJVho6uttZHsO1Ou-yu6jqKmvmyk1Dj4dV4tY/exec";
 
-
 let trackerGames = [];
+
 let blockVoteChart = null;
+let timelineChart = null;
 
 let blockVoteMode = "all";
 
@@ -353,12 +354,9 @@ function buildCharts(){
     buildDeadVoteChart();
     buildBlockVoteChart();
     buildEvilNominationChart();
+    buildTimelineChart();
 
 }
-
-/* ==========================================
-   Game Results
-========================================== */
 /* ==========================================
    Game Results
 ========================================== */
@@ -714,6 +712,642 @@ function buildEvilNominationChart(){
 
         "Voted On"
     );
+
+}
+/* ==========================================
+   Performance by Game
+========================================== */
+
+function buildTimelineChart(){
+
+    const canvas =
+        document.getElementById(
+            "timelineChart"
+        );
+
+    if(!canvas){
+        return;
+    }
+
+
+    /* ------------------------------------------
+       Sort Oldest to Newest
+    ------------------------------------------ */
+
+    const games =
+        [...trackerGames].sort(
+            (a, b) =>
+                new Date(a.date) -
+                new Date(b.date)
+        );
+
+
+    /* ------------------------------------------
+       Running Totals
+    ------------------------------------------ */
+
+    let correctDeadVotes = 0;
+    let totalDeadVotes = 0;
+
+    let correctDemonCandidates = 0;
+    let totalDemonCandidates = 0;
+
+    let correctBlockVotes = 0;
+    let totalAdjustedBlockVotes = 0;
+
+    let evilNominationsVotedOn = 0;
+    let evilPlayersNominated = 0;
+
+
+    /* ------------------------------------------
+       Chart Data
+    ------------------------------------------ */
+
+    const labels = [];
+
+    const deadVoteData = [];
+    const demonData = [];
+    const blockVoteData = [];
+    const nominationData = [];
+
+
+    games.forEach(
+        (game, index) => {
+
+
+            /* ----------------------------------
+               Game Label
+            ---------------------------------- */
+
+            labels.push(
+                "Game " + (index + 1)
+            );
+
+
+            /* ----------------------------------
+               Dead Vote
+
+               Evil = correct
+               Good = incorrect
+               Unused/blank = ignored
+            ---------------------------------- */
+
+            if(
+                game.deadVote === "Evil"
+            ){
+
+                correctDeadVotes++;
+                totalDeadVotes++;
+
+            }
+            else if(
+                game.deadVote === "Good"
+            ){
+
+                totalDeadVotes++;
+
+            }
+
+
+            deadVoteData.push(
+                totalDeadVotes > 0
+                    ? (
+                        correctDeadVotes /
+                        totalDeadVotes
+                    ) * 100
+                    : null
+            );
+
+
+            /* ----------------------------------
+               Demon Candidate
+
+               Correct = correct
+               Wrong = incorrect
+               None/blank = ignored
+            ---------------------------------- */
+
+            if(
+                game.demon === "Correct"
+            ){
+
+                correctDemonCandidates++;
+                totalDemonCandidates++;
+
+            }
+            else if(
+                game.demon === "Wrong"
+            ){
+
+                totalDemonCandidates++;
+
+            }
+
+
+            demonData.push(
+                totalDemonCandidates > 0
+                    ? (
+                        correctDemonCandidates /
+                        totalDemonCandidates
+                    ) * 100
+                    : null
+            );
+
+
+            /* ----------------------------------
+               Adjusted Block Votes
+            ---------------------------------- */
+
+            const evilBlockVotes =
+                Number(
+                    game.evilBlockVotes || 0
+                );
+
+
+            const goodBlockVotes =
+                Number(
+                    game.goodBlockVotes || 0
+                );
+
+
+            const harmlessVotes =
+                Number(
+                    game.harmlessVotes || 0
+                );
+
+
+            const adjustedGoodVotes =
+                Math.max(
+                    0,
+                    goodBlockVotes -
+                    harmlessVotes
+                );
+
+
+            correctBlockVotes +=
+                evilBlockVotes;
+
+
+            totalAdjustedBlockVotes +=
+                evilBlockVotes +
+                adjustedGoodVotes;
+
+
+            blockVoteData.push(
+                totalAdjustedBlockVotes > 0
+                    ? (
+                        correctBlockVotes /
+                        totalAdjustedBlockVotes
+                    ) * 100
+                    : null
+            );
+
+
+            /* ----------------------------------
+               Evil Nominations
+            ---------------------------------- */
+
+            const nominated =
+                Number(
+                    game.evilPlayersNominated || 0
+                );
+
+
+            const votedOn =
+                Number(
+                    game.evilNominationsVotedOn || 0
+                );
+
+
+            evilPlayersNominated +=
+                nominated;
+
+
+            evilNominationsVotedOn +=
+                votedOn;
+
+
+            nominationData.push(
+                evilPlayersNominated > 0
+                    ? (
+                        evilNominationsVotedOn /
+                        evilPlayersNominated
+                    ) * 100
+                    : null
+            );
+
+        }
+    );
+
+
+    /* ------------------------------------------
+       Destroy Existing Chart
+    ------------------------------------------ */
+
+    if(timelineChart){
+
+        timelineChart.destroy();
+
+    }
+
+
+    /* ------------------------------------------
+       Create Chart
+    ------------------------------------------ */
+
+    timelineChart =
+        new Chart(
+            canvas,
+            {
+
+                type:"line",
+
+
+                data:{
+
+                    labels:labels,
+
+                    datasets:[
+
+
+                        /* Dead Vote */
+
+                        {
+                            label:
+                                "Correct Dead Vote",
+
+                            data:
+                                deadVoteData,
+
+                            borderColor:
+                                "#C5283D",
+
+                            backgroundColor:
+                                "#C5283D",
+
+                            borderWidth:3,
+
+                            pointRadius:3,
+
+                            pointHoverRadius:6,
+
+                            tension:.25,
+
+                            spanGaps:true
+                        },
+
+
+                        /* Demon Candidate */
+
+                        {
+                            label:
+                                "Correct Demon Candidate",
+
+                            data:
+                                demonData,
+
+                            borderColor:
+                                "#7AC74F",
+
+                            backgroundColor:
+                                "#7AC74F",
+
+                            borderWidth:3,
+
+                            pointRadius:3,
+
+                            pointHoverRadius:6,
+
+                            tension:.25,
+
+                            spanGaps:true
+                        },
+
+
+                        /* Block Votes */
+
+                        {
+                            label:
+                                "Correct Block Votes",
+
+                            data:
+                                blockVoteData,
+
+                            borderColor:
+                                "#255F85",
+
+                            backgroundColor:
+                                "#255F85",
+
+                            borderWidth:3,
+
+                            pointRadius:3,
+
+                            pointHoverRadius:6,
+
+                            tension:.25,
+
+                            spanGaps:true
+                        },
+
+
+                        /* Evil Nominations */
+
+                        {
+                            label:
+                                "Evil Nominations Voted On",
+
+                            data:
+                                nominationData,
+
+                            borderColor:
+                                "#FFC857",
+
+                            backgroundColor:
+                                "#FFC857",
+
+                            borderWidth:3,
+
+                            pointRadius:3,
+
+                            pointHoverRadius:6,
+
+                            tension:.25,
+
+                            spanGaps:true
+                        }
+
+                    ]
+
+                },
+
+
+                options:{
+
+                    responsive:true,
+
+                    maintainAspectRatio:false,
+
+
+                    interaction:{
+
+                        mode:"index",
+
+                        intersect:false
+
+                    },
+
+
+                    scales:{
+
+
+                        /* X Axis */
+
+                        x:{
+
+                            grid:{
+
+                                display:false
+
+                            },
+
+                            ticks:{
+
+                                color:"#888888",
+
+                                font:{
+
+                                    size:10
+
+                                },
+
+                                maxRotation:0,
+
+                                autoSkip:true,
+
+                                maxTicksLimit:15
+
+                            },
+
+                            title:{
+
+                                display:true,
+
+                                text:"Game",
+
+                                color:"#777777",
+
+                                font:{
+
+                                    size:11,
+                                    weight:"600"
+
+                                }
+
+                            }
+
+                        },
+
+
+                        /* Y Axis */
+
+                        y:{
+
+                            min:0,
+
+                            max:100,
+
+                            ticks:{
+
+                                stepSize:25,
+
+                                callback:
+                                    value =>
+                                        value + "%",
+
+                                color:"#888888",
+
+                                font:{
+
+                                    size:10
+
+                                }
+
+                            },
+
+                            grid:{
+
+                                color:
+                                    "#eeeeee"
+
+                            },
+
+                            title:{
+
+                                display:true,
+
+                                text:"Percentage",
+
+                                color:"#777777",
+
+                                font:{
+
+                                    size:11,
+                                    weight:"600"
+
+                                }
+
+                            }
+
+                        }
+
+                    },
+
+
+                    plugins:{
+
+
+                        /* Disable doughnut center plugin */
+
+                        centerText:{
+
+                            display:false
+
+                        },
+
+
+                        /* Legend */
+
+                        legend:{
+
+                            position:"top",
+
+                            align:"start",
+
+                            labels:{
+
+                                usePointStyle:true,
+
+                                pointStyle:"circle",
+
+                                boxWidth:8,
+
+                                boxHeight:8,
+
+                                padding:20,
+
+                                font:{
+
+                                    size:11,
+                                    weight:"600"
+
+                                }
+
+                            }
+
+                        },
+
+
+                        /* Tooltip */
+
+                        tooltip:{
+
+                            callbacks:{
+
+
+                                title:function(items){
+
+                                    if(
+                                        !items.length
+                                    ){
+                                        return "";
+                                    }
+
+
+                                    const index =
+                                        items[0]
+                                            .dataIndex;
+
+
+                                    const game =
+                                        games[index];
+
+
+                                    return (
+                                        "Game " +
+                                        (index + 1) +
+                                        " • " +
+                                        formatGameDate(
+                                            game.date
+                                        )
+                                    );
+
+                                },
+
+
+                                afterTitle:function(items){
+
+                                    if(
+                                        !items.length
+                                    ){
+                                        return "";
+                                    }
+
+
+                                    const game =
+                                        games[
+                                            items[0]
+                                                .dataIndex
+                                        ];
+
+
+                                    return (
+                                        game.character ||
+                                        ""
+                                    );
+
+                                },
+
+
+                                label:function(context){
+
+                                    const value =
+                                        context.raw;
+
+
+                                    if(
+                                        value === null
+                                    ){
+
+                                        return (
+                                            context.dataset
+                                                .label +
+                                            ": —"
+                                        );
+
+                                    }
+
+
+                                    return (
+                                        context.dataset
+                                            .label +
+                                        ": " +
+                                        value.toFixed(1) +
+                                        "%"
+                                    );
+
+                                }
+
+                            }
+
+                        }
+
+                    }
+
+                }
+
+            }
+        );
 
 }
 /* ==========================================
