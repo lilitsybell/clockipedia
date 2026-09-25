@@ -243,21 +243,43 @@
 
             <!-- Dead Vote -->
 
-            <article class="chart-card">
+<article class="chart-card">
 
-                <h2>
-                    Dead Vote
-                </h2>
+    <div class="chart-card-header">
 
-                <div class="chart-wrapper">
+        <h2>
+            Dead Vote
+        </h2>
 
-                    <canvas
-                        id="deadVoteChart"
-                    ></canvas>
+        <div class="vote-toggle">
 
-                </div>
+            <button
+                class="dead-vote-toggle-button active"
+                data-mode="all"
+                type="button"
+            >
+                All
+            </button>
 
-            </article>
+            <button
+                class="dead-vote-toggle-button"
+                data-mode="adjusted"
+                type="button"
+            >
+                Adjusted
+            </button>
+
+        </div>
+
+    </div>
+
+    <div class="chart-wrapper">
+
+        <canvas id="deadVoteChart"></canvas>
+
+    </div>
+
+</article>
 
 
 
