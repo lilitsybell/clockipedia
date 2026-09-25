@@ -476,59 +476,119 @@ function buildDemonChart(){
 ========================================== */
 function buildDeadVoteChart(){
 
-    const evil =
-        trackerGames.filter(
-            game =>
-                game.deadVote === "Evil"
-        ).length;
+    let evil = 0;
+    let good = 0;
+    let unused = 0;
 
 
-    const good =
-        trackerGames.filter(
-            game =>
-                game.deadVote === "Good"
-        ).length;
+    trackerGames.forEach(game => {
+
+        const deadVote =
+            game.deadVote;
 
 
-    const unused =
-        trackerGames.filter(
-            game =>
-                game.deadVote === "Unused"
-        ).length;
+        /* ----------------------------------
+           Evil Dead Vote
+        ---------------------------------- */
+
+        if(deadVote === "Evil"){
+
+            evil++;
+
+            return;
+
+        }
 
 
-    const evilPercentage =
-        getPercentage(
-            evil,
-            evil + good
+        /* ----------------------------------
+           Good Dead Vote
+        ---------------------------------- */
+
+        if(deadVote === "Good"){
+
+            /*
+             * In Adjusted mode, ignore
+             * Good votes where voting on
+             * the Demon was not possible.
+             */
+
+            if(
+                deadVoteMode === "adjusted" &&
+                game.harmlessDeadVote === "Yes"
+            ){
+
+                return;
+
+            }
+
+
+            good++;
+
+            return;
+
+        }
+
+
+        /* ----------------------------------
+           Unused Dead Vote
+        ---------------------------------- */
+
+        if(deadVote === "Unused"){
+
+            unused++;
+
+        }
+
+    });
+
+
+    const applicableVotes =
+        evil + good;
+
+
+    const percentage =
+        applicableVotes > 0
+            ? (
+                evil /
+                applicableVotes *
+                100
+            ).toFixed(1) + "%"
+            : "—";
+
+
+    if(deadVoteChart){
+
+        deadVoteChart.destroy();
+
+    }
+
+
+    deadVoteChart =
+        createPieChart(
+            "deadVoteChart",
+
+            [
+                "Evil",
+                "Good",
+                "Unused"
+            ],
+
+            [
+                evil,
+                good,
+                unused
+            ],
+
+            [
+                "#C5283D",
+                "#255F85",
+                "#FFC857"
+            ],
+
+            percentage,
+
+            "Evil"
         );
-
-
-    createPieChart(
-        "deadVoteChart",
-
-        [
-            "Evil",
-            "Good",
-            "Unused"
-        ],
-
-        [
-            evil,
-            good,
-            unused
-        ],
-
-[
-    "#C5283D", // Evil
-    "#255F85", // Good
-    "#FFC857"  // Unused
-],
-
-        evilPercentage,
-
-        "Evil"
-    );
 
 }
 /* ==========================================
@@ -1881,6 +1941,47 @@ document.addEventListener(
                 "active",
                 view === "timeline"
             );
+
+    }
+);
+/* ==========================================
+   Dead Vote Toggle
+========================================== */
+
+document.addEventListener(
+    "click",
+    event => {
+
+        const button =
+            event.target.closest(
+                ".dead-vote-toggle-button"
+            );
+
+
+        if(!button){
+            return;
+        }
+
+
+        deadVoteMode =
+            button.dataset.mode;
+
+
+        document
+            .querySelectorAll(
+                ".dead-vote-toggle-button"
+            )
+            .forEach(toggle => {
+
+                toggle.classList.toggle(
+                    "active",
+                    toggle === button
+                );
+
+            });
+
+
+        buildDeadVoteChart();
 
     }
 );
