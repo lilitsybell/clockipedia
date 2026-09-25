@@ -718,6 +718,10 @@ function buildEvilNominationChart(){
    Performance by Game
 ========================================== */
 
+/* ==========================================
+   Performance by Game
+========================================== */
+
 function buildTimelineChart(){
 
     const canvas =
@@ -740,23 +744,6 @@ function buildTimelineChart(){
                 new Date(a.date) -
                 new Date(b.date)
         );
-
-
-    /* ------------------------------------------
-       Running Totals
-    ------------------------------------------ */
-
-    let correctDeadVotes = 0;
-    let totalDeadVotes = 0;
-
-    let correctDemonCandidates = 0;
-    let totalDemonCandidates = 0;
-
-    let correctBlockVotes = 0;
-    let totalAdjustedBlockVotes = 0;
-
-    let evilNominationsVotedOn = 0;
-    let evilPlayersNominated = 0;
 
 
     /* ------------------------------------------
@@ -787,75 +774,74 @@ function buildTimelineChart(){
             /* ----------------------------------
                Dead Vote
 
-               Evil = correct
-               Good = incorrect
-               Unused/blank = ignored
+               Evil = 100%
+               Good = 0%
+               Unused/blank = no data
             ---------------------------------- */
+
+            let deadVotePercentage =
+                null;
+
 
             if(
                 game.deadVote === "Evil"
             ){
 
-                correctDeadVotes++;
-                totalDeadVotes++;
+                deadVotePercentage = 100;
 
             }
             else if(
                 game.deadVote === "Good"
             ){
 
-                totalDeadVotes++;
+                deadVotePercentage = 0;
 
             }
 
 
             deadVoteData.push(
-                totalDeadVotes > 0
-                    ? (
-                        correctDeadVotes /
-                        totalDeadVotes
-                    ) * 100
-                    : null
+                deadVotePercentage
             );
 
 
             /* ----------------------------------
                Demon Candidate
 
-               Correct = correct
-               Wrong = incorrect
-               None/blank = ignored
+               Correct = 100%
+               Wrong = 0%
+               None/blank = no data
             ---------------------------------- */
+
+            let demonPercentage =
+                null;
+
 
             if(
                 game.demon === "Correct"
             ){
 
-                correctDemonCandidates++;
-                totalDemonCandidates++;
+                demonPercentage = 100;
 
             }
             else if(
                 game.demon === "Wrong"
             ){
 
-                totalDemonCandidates++;
+                demonPercentage = 0;
 
             }
 
 
             demonData.push(
-                totalDemonCandidates > 0
-                    ? (
-                        correctDemonCandidates /
-                        totalDemonCandidates
-                    ) * 100
-                    : null
+                demonPercentage
             );
 
 
             /* ----------------------------------
                Adjusted Block Votes
+
+               Calculated independently
+               for this game only
             ---------------------------------- */
 
             const evilBlockVotes =
@@ -884,56 +870,55 @@ function buildTimelineChart(){
                 );
 
 
-            correctBlockVotes +=
-                evilBlockVotes;
-
-
-            totalAdjustedBlockVotes +=
+            const adjustedBlockTotal =
                 evilBlockVotes +
                 adjustedGoodVotes;
 
 
-            blockVoteData.push(
-                totalAdjustedBlockVotes > 0
+            const blockVotePercentage =
+                adjustedBlockTotal > 0
                     ? (
-                        correctBlockVotes /
-                        totalAdjustedBlockVotes
+                        evilBlockVotes /
+                        adjustedBlockTotal
                     ) * 100
-                    : null
+                    : null;
+
+
+            blockVoteData.push(
+                blockVotePercentage
             );
 
 
             /* ----------------------------------
                Evil Nominations
+
+               Calculated independently
+               for this game only
             ---------------------------------- */
 
-            const nominated =
+            const evilPlayersNominated =
                 Number(
                     game.evilPlayersNominated || 0
                 );
 
 
-            const votedOn =
+            const evilNominationsVotedOn =
                 Number(
                     game.evilNominationsVotedOn || 0
                 );
 
 
-            evilPlayersNominated +=
-                nominated;
-
-
-            evilNominationsVotedOn +=
-                votedOn;
-
-
-            nominationData.push(
+            const nominationPercentage =
                 evilPlayersNominated > 0
                     ? (
                         evilNominationsVotedOn /
                         evilPlayersNominated
                     ) * 100
-                    : null
+                    : null;
+
+
+            nominationData.push(
+                nominationPercentage
             );
 
         }
@@ -987,9 +972,9 @@ function buildTimelineChart(){
 
                             borderWidth:3,
 
-                            pointRadius:3,
+                            pointRadius:4,
 
-                            pointHoverRadius:6,
+                            pointHoverRadius:7,
 
                             tension:.25,
 
@@ -1014,9 +999,9 @@ function buildTimelineChart(){
 
                             borderWidth:3,
 
-                            pointRadius:3,
+                            pointRadius:4,
 
-                            pointHoverRadius:6,
+                            pointHoverRadius:7,
 
                             tension:.25,
 
@@ -1041,9 +1026,9 @@ function buildTimelineChart(){
 
                             borderWidth:3,
 
-                            pointRadius:3,
+                            pointRadius:4,
 
-                            pointHoverRadius:6,
+                            pointHoverRadius:7,
 
                             tension:.25,
 
@@ -1068,9 +1053,9 @@ function buildTimelineChart(){
 
                             borderWidth:3,
 
-                            pointRadius:3,
+                            pointRadius:4,
 
-                            pointHoverRadius:6,
+                            pointHoverRadius:7,
 
                             tension:.25,
 
@@ -1177,8 +1162,7 @@ function buildTimelineChart(){
 
                             grid:{
 
-                                color:
-                                    "#eeeeee"
+                                color:"#eeeeee"
 
                             },
 
@@ -1207,16 +1191,12 @@ function buildTimelineChart(){
                     plugins:{
 
 
-                        /* Disable doughnut center plugin */
-
                         centerText:{
 
                             display:false
 
                         },
 
-
-                        /* Legend */
 
                         legend:{
 
@@ -1247,8 +1227,6 @@ function buildTimelineChart(){
 
                         },
 
-
-                        /* Tooltip */
 
                         tooltip:{
 
