@@ -414,6 +414,10 @@ function buildResultsChart(){
 /* ==========================================
    Demon Candidate
 ========================================== */
+/* ==========================================
+   Demon Candidate
+========================================== */
+
 function buildDemonChart(){
 
     const correct =
@@ -437,9 +441,9 @@ function buildDemonChart(){
         ).length;
 
 
-    const wrongPercentage =
+    const correctPercentage =
         getPercentage(
-            wrong,
+            correct,
             correct + wrong
         );
 
@@ -459,15 +463,15 @@ function buildDemonChart(){
             none
         ],
 
-[
-    "#7AC74F", // Correct
-    "#C5283D", // Wrong
-    "#FFC857"  // No Candidate
-],
+        [
+            "#7AC74F",
+            "#C5283D",
+            "#FFC857"
+        ],
 
-        wrongPercentage,
+        correctPercentage,
 
-        "Wrong"
+        "Correct"
     );
 
 }
