@@ -478,7 +478,6 @@ function buildDeadVoteChart(){
 
     let evil = 0;
     let good = 0;
-    let unused = 0;
 
 
     trackerGames.forEach(game => {
@@ -524,19 +523,6 @@ function buildDeadVoteChart(){
 
             good++;
 
-            return;
-
-        }
-
-
-        /* ----------------------------------
-           Unused Dead Vote
-        ---------------------------------- */
-
-        if(deadVote === "Unused"){
-
-            unused++;
-
         }
 
     });
@@ -569,20 +555,17 @@ function buildDeadVoteChart(){
 
             [
                 "Evil",
-                "Good",
-                "Unused"
+                "Good"
             ],
 
             [
                 evil,
-                good,
-                unused
+                good
             ],
 
             [
                 "#C5283D",
-                "#255F85",
-                "#FFC857"
+                "#255F85"
             ],
 
             percentage,
@@ -833,37 +816,41 @@ function buildTimelineChart(){
             );
 
 
-            /* ----------------------------------
-               Dead Vote
+/* ----------------------------------
+   Adjusted Dead Vote
 
-               Evil = 100%
-               Good = 0%
-               Unused/blank = no data
-            ---------------------------------- */
+   Evil = 100%
+   Good = 0%
 
-            let deadVotePercentage =
-                null;
+   Harmless Good votes,
+   Unused votes, and blanks
+   are excluded.
+---------------------------------- */
 
-
-            if(
-                game.deadVote === "Evil"
-            ){
-
-                deadVotePercentage = 100;
-
-            }
-            else if(
-                game.deadVote === "Good"
-            ){
-
-                deadVotePercentage = 0;
-
-            }
+let deadVotePercentage =
+    null;
 
 
-            deadVoteData.push(
-                deadVotePercentage
-            );
+if(
+    game.deadVote === "Evil"
+){
+
+    deadVotePercentage = 100;
+
+}
+else if(
+    game.deadVote === "Good" &&
+    game.harmlessDeadVote !== "Yes"
+){
+
+    deadVotePercentage = 0;
+
+}
+
+
+deadVoteData.push(
+    deadVotePercentage
+);
 
 
             /* ----------------------------------
