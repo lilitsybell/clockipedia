@@ -28,6 +28,7 @@
 
 <body>
 
+
 <main class="tracker-page">
 
 
@@ -63,6 +64,9 @@
 
     <section class="tracker-summary">
 
+
+        <!-- Games Tracked -->
+
         <article class="summary-card">
 
             <span class="summary-label">
@@ -78,6 +82,9 @@
 
         </article>
 
+
+
+        <!-- Win Rate -->
 
         <article class="summary-card">
 
@@ -95,6 +102,9 @@
         </article>
 
 
+
+        <!-- Correct Demon Rate -->
+
         <article class="summary-card">
 
             <span class="summary-label">
@@ -111,6 +121,9 @@
         </article>
 
 
+
+        <!-- Evil Block Vote Rate -->
+
         <article class="summary-card">
 
             <span class="summary-label">
@@ -125,127 +138,267 @@
             </strong>
 
         </article>
-<article class="summary-card">
 
-    <span class="summary-label">
-        Nominated Evil Players Voted On
-    </span>
 
-    <strong
-        class="summary-value"
-        id="evilNominationVoteRate"
-    >
-        —
-    </strong>
 
-</article>
+        <!-- Evil Nomination Vote Rate -->
+
+        <article class="summary-card">
+
+            <span class="summary-label">
+                Nominated Evil Players Voted On
+            </span>
+
+            <strong
+                class="summary-value"
+                id="evilNominationVoteRate"
+            >
+                —
+            </strong>
+
+        </article>
+
+
     </section>
 
 
 
     <!-- ==========================================
-         Charts
+         Chart View Tabs
     =========================================== -->
 
-    <section class="tracker-charts">
+    <div class="chart-view-tabs">
 
-        <article class="chart-card">
+        <button
+            class="chart-view-tab active"
+            type="button"
+            data-chart-view="overview"
+        >
+            Overview
+        </button>
 
-            <h2>
-                Game Results
-            </h2>
+        <button
+            class="chart-view-tab"
+            type="button"
+            data-chart-view="timeline"
+        >
+            By Game
+        </button>
 
-            <div class="chart-wrapper">
-                <canvas id="resultsChart"></canvas>
+    </div>
+
+
+
+    <!-- ==========================================
+         Overview Charts
+    =========================================== -->
+
+    <div
+        class="chart-view-panel active"
+        id="overviewChartView"
+    >
+
+        <section class="tracker-charts">
+
+
+            <!-- Game Results -->
+
+            <article class="chart-card">
+
+                <h2>
+                    Game Results
+                </h2>
+
+                <div class="chart-wrapper">
+
+                    <canvas
+                        id="resultsChart"
+                    ></canvas>
+
+                </div>
+
+            </article>
+
+
+
+            <!-- Demon Candidate -->
+
+            <article class="chart-card">
+
+                <h2>
+                    Demon Candidate
+                </h2>
+
+                <div class="chart-wrapper">
+
+                    <canvas
+                        id="demonChart"
+                    ></canvas>
+
+                </div>
+
+            </article>
+
+
+
+            <!-- Dead Vote -->
+
+            <article class="chart-card">
+
+                <h2>
+                    Dead Vote
+                </h2>
+
+                <div class="chart-wrapper">
+
+                    <canvas
+                        id="deadVoteChart"
+                    ></canvas>
+
+                </div>
+
+            </article>
+
+
+
+            <!-- Block Votes -->
+
+            <article class="chart-card">
+
+                <div class="chart-card-header">
+
+                    <h2>
+                        Block Votes
+                    </h2>
+
+
+                    <div class="vote-toggle">
+
+                        <button
+                            class="vote-toggle-button active"
+                            data-mode="all"
+                            type="button"
+                        >
+                            All
+                        </button>
+
+                        <button
+                            class="vote-toggle-button"
+                            data-mode="adjusted"
+                            type="button"
+                        >
+                            Adjusted
+                        </button>
+
+                    </div>
+
+                </div>
+
+
+                <div class="block-stats">
+
+                    <span>
+
+                        <strong id="playersPutOnBlock">
+                            —
+                        </strong>
+
+                        put on block
+
+                    </span>
+
+
+                    <span>
+
+                        <strong id="blockVotesCast">
+                            —
+                        </strong>
+
+                        votes cast
+
+                    </span>
+
+                </div>
+
+
+                <div class="chart-wrapper">
+
+                    <canvas
+                        id="blockVoteChart"
+                    ></canvas>
+
+                </div>
+
+            </article>
+
+
+
+            <!-- Evil Nominations -->
+
+            <article class="chart-card">
+
+                <h2>
+                    Evil Nominations
+                </h2>
+
+                <div class="chart-wrapper">
+
+                    <canvas
+                        id="evilNominationChart"
+                    ></canvas>
+
+                </div>
+
+            </article>
+
+
+        </section>
+
+    </div>
+
+
+
+    <!-- ==========================================
+         By Game Chart
+    =========================================== -->
+
+    <div
+        class="chart-view-panel"
+        id="timelineChartView"
+    >
+
+        <article class="timeline-chart-card">
+
+
+            <div class="timeline-chart-header">
+
+                <div>
+
+                    <h2>
+                        Performance by Game
+                    </h2>
+
+                    <p>
+                        Cumulative percentages through each game
+                    </p>
+
+                </div>
+
             </div>
+
+
+            <div class="timeline-chart-wrapper">
+
+                <canvas
+                    id="timelineChart"
+                ></canvas>
+
+            </div>
+
 
         </article>
 
-
-        <article class="chart-card">
-
-            <h2>
-                Demon Candidate
-            </h2>
-
-            <div class="chart-wrapper">
-                <canvas id="demonChart"></canvas>
-            </div>
-
-        </article>
-
-
-        <article class="chart-card">
-
-            <h2>
-                Dead Vote
-            </h2>
-
-            <div class="chart-wrapper">
-                <canvas id="deadVoteChart"></canvas>
-            </div>
-
-        </article>
-
-<article class="chart-card">
-
-    <div class="chart-card-header">
-
-        <h2>Block Votes</h2>
-
-        <div class="vote-toggle">
-
-            <button
-                class="vote-toggle-button active"
-                data-mode="all"
-                type="button"
-            >
-                All
-            </button>
-
-            <button
-                class="vote-toggle-button"
-                data-mode="adjusted"
-                type="button"
-            >
-                Adjusted
-            </button>
-
-        </div>
-
     </div>
-
-    <div class="block-stats">
-
-        <span>
-            <strong id="playersPutOnBlock">—</strong>
-            put on block
-        </span>
-
-        <span>
-            <strong id="blockVotesCast">—</strong>
-            votes cast
-        </span>
-
-    </div>
-
-    <div class="chart-wrapper">
-        <canvas id="blockVoteChart"></canvas>
-    </div>
-
-</article>
-<article class="chart-card">
-
-    <h2>
-        Evil Nominations
-    </h2>
-
-    <div class="chart-wrapper">
-        <canvas id="evilNominationChart"></canvas>
-    </div>
-
-</article>
-    </section>
 
 
 
@@ -254,6 +407,7 @@
     =========================================== -->
 
     <section class="history-card">
+
 
         <div class="history-header">
 
@@ -272,23 +426,53 @@
         </div>
 
 
+
         <div class="history-table-wrapper">
 
             <table class="history-table">
 
+
                 <thead>
 
-<tr>
-    <th>Date</th>
-    <th>Video</th>
-    <th>Character</th>
-    <th>Result</th>
-    <th>Demon</th>
-    <th>Dead Vote</th>
-    <th>On Block</th>
-    <th>Good Votes</th>
-    <th>Evil Votes</th>
-</tr>
+                    <tr>
+
+                        <th>
+                            Date
+                        </th>
+
+                        <th>
+                            Video
+                        </th>
+
+                        <th>
+                            Character
+                        </th>
+
+                        <th>
+                            Result
+                        </th>
+
+                        <th>
+                            Demon
+                        </th>
+
+                        <th>
+                            Dead Vote
+                        </th>
+
+                        <th>
+                            On Block
+                        </th>
+
+                        <th>
+                            Good Votes
+                        </th>
+
+                        <th>
+                            Evil Votes
+                        </th>
+
+                    </tr>
 
                 </thead>
 
@@ -299,9 +483,11 @@
 
                 </tbody>
 
+
             </table>
 
         </div>
+
 
     </section>
 
@@ -309,10 +495,19 @@
 </main>
 
 
-<!-- Chart.js -->
+
+<!-- ==========================================
+     Chart.js
+========================================== -->
+
 <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 
-<!-- Dashboard -->
+
+
+<!-- ==========================================
+     Player Tracker
+========================================== -->
+
 <script src="/private/js/player-tracker.js"></script>
 
 
