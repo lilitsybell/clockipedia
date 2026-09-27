@@ -9,6 +9,16 @@
                 "characters": ["bigwig", "godofug", "banshee", "organgrinder"]},
             {"name": "last of its type in sao order", "color": "purple",
                 "characters": ["atheist", "puzzlemaster", "boffin", "leviathan"]}]},
+    {"id": 30, "author": "Bell", "date": "2026-10-05",
+        "groups": [
+            {"name": "public announcements", "color": "yellow",
+                "characters": ["alhadikhia", "fearmonger", "banshee", "gnome"]},
+            {"name": "ability text includes \"talk\"", "color": "green",
+                "characters": ["highpriestess", "matron", "hellslibrarian", "buddhist"]},
+            {"name": "passive abilities fully controlled by the storyteller", "color": "blue",
+                "characters": ["barista", "pacifist", "tinker", "bishop"]},
+            {"name": "character icon wears a hat", "color": "purple",
+                "characters": ["toymaker", "knaves", "organgrinder", "lilmonsta"]}]},
     {"id": 29, "author": "MrRabbit", "date": "2026-10-04",
         "groups": [
             {"name": "characters that cannot kill", "color": "yellow",
