@@ -1,4 +1,14 @@
 [
+    {"id": 31, "author": "MrRabbit", "date": "2026-10-06",
+        "groups": [
+            {"name": "might survive exile/execution", "color": "yellow",
+                "characters": ["ventriloquist", "sailor", "pacifist", "deviant"]},
+            {"name": "storyteller directed kills", "color": "green",
+                "characters": ["yaggababble", "doomsayer", "lilmonsta", "gossip"]},
+            {"name": "unique visual app mechanics", "color": "blue",
+                "characters": ["bigwig", "godofug", "banshee", "organgrinder"]},
+            {"name": "last of its type in sao order", "color": "purple",
+                "characters": ["atheist", "puzzlemaster", "boffin", "leviathan"]}]},
     {"id": 29, "author": "MrRabbit", "date": "2026-10-04",
         "groups": [
             {"name": "characters that cannot kill", "color": "yellow",
