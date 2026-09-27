@@ -1,5 +1,15 @@
 [
-    {"id": 27, "author": "Bell", "date": "2026-10-02",
+    {"id": 29, "author": "MrRabbit", "date": "2026-10-04",
+        "groups": [
+            {"name": "characters that cannot kill", "color": "yellow",
+                "characters": ["bountyhunter", "leviathan", "mezepheles", "puzzlemaster"]},
+            {"name": "characters that kill themselves", "color": "green",
+                "characters": ["acrobat", "gambler", "grandmother", "harlot"]},
+            {"name": "characters that kill publicly", "color": "blue",
+                "characters": ["gossip", "psychopath", "slayer", "yaggababble"]},
+            {"name": "toys", "color": "purple",
+                "characters": ["golem", "virgin", "vizier", "witch"]}]},
+    {"id": 28, "author": "Bell", "date": "2026-10-03",
         "groups": [
             {"name": "interacts with dead players", "color": "yellow",
                 "characters": ["undertaker", "oracle", "beggar", "cannibal"]},
@@ -9,6 +19,16 @@
                 "characters": ["gardener", "summoner", "kazali", "mezepheles"]},
             {"name": "toys", "color": "purple",
                 "characters": ["toymaker", "eviltwin", "pixie", "ventriloquist"]}]},
+    {"id": 27, "author": "Corey", "date": "2026-10-02",
+        "groups": [
+            {"name": "first four characters in trouble brewing", "color": "yellow",
+                "characters": ["chef", "librarian", "washerwoman", "investigator"]},
+            {"name": "causes character change", "color": "green",
+                "characters": ["riot", "hatter", "engineer", "cacklejack"]},
+            {"name": "\"register as\" in ability text", "color": "blue",
+                "characters": ["spy", "legion", "recluse", "zombuul"]},
+            {"name": "striped outsider icons", "color": "purple",
+                "characters": ["barber", "hermit", "mutant", "politician"]}]},
     {"id": 26, "author": "Bell", "date": "2026-10-01",
         "groups": [
             {"name": "demons that don't choose players", "color": "green",
