@@ -8,7 +8,7 @@ console.log("storyteller-trainer.js loaded");
 const trainerPlayerCount = 12;
 
 let trainerCharacters = {};
-
+let selectedTrainerCharacters = [];
 
 /* ==========================================
    Initialize
@@ -182,10 +182,11 @@ function buildCharacterSelection(){
             <div class="character-choice-list">
                 ${characters.map(
                     ([slug, character]) => `
-                        <div
-                            class="character-choice"
-                            data-character="${slug}"
-                        >
+<button
+    class="character-choice"
+    data-character="${slug}"
+    type="button"
+>
 
                             <img
                                 src="${character.image}"
@@ -196,7 +197,7 @@ function buildCharacterSelection(){
                                 ${character.name}
                             </span>
 
-                        </div>
+                        </button>
                     `
                 ).join("")}
             </div>
@@ -204,6 +205,176 @@ function buildCharacterSelection(){
 
 
         container.appendChild(group);
+
+    });
+container
+    .querySelectorAll(".character-choice")
+    .forEach(button => {
+
+        button.addEventListener(
+            "click",
+            () => {
+
+                toggleTrainerCharacter(
+                    button.dataset.character
+                );
+
+            }
+        );
+
+    });
+}
+/* ==========================================
+   Toggle Character
+========================================== */
+
+function toggleTrainerCharacter(slug){
+
+    const existingIndex =
+        selectedTrainerCharacters.indexOf(slug);
+
+
+    /* Remove character */
+
+    if(existingIndex !== -1){
+
+        selectedTrainerCharacters.splice(
+            existingIndex,
+            1
+        );
+
+    }
+
+
+    /* Add character */
+
+    else{
+
+        if(
+            selectedTrainerCharacters.length >=
+            trainerPlayerCount
+        ){
+            return;
+        }
+
+        selectedTrainerCharacters.push(slug);
+
+    }
+
+
+    updateCharacterSelection();
+
+}
+/* ==========================================
+   Update Character Selection
+========================================== */
+
+function updateCharacterSelection(){
+
+    document
+        .querySelectorAll(".character-choice")
+        .forEach(button => {
+
+            const slug =
+                button.dataset.character;
+
+            const selected =
+                selectedTrainerCharacters.includes(
+                    slug
+                );
+
+
+            button.classList.toggle(
+                "selected",
+                selected
+            );
+
+        });
+
+
+    const count =
+        document.querySelector("#selected-count");
+
+    if(count){
+
+        count.textContent =
+            `${selectedTrainerCharacters.length} / ${trainerPlayerCount}`;
+
+    }
+
+
+    const continueButton =
+        document.querySelector("#continue-setup");
+
+    if(continueButton){
+
+        continueButton.disabled =
+            selectedTrainerCharacters.length !==
+            trainerPlayerCount;
+
+    }
+
+
+    updatePlayerTokens();
+
+}
+/* ==========================================
+   Update Player Tokens
+========================================== */
+
+function updatePlayerTokens(){
+
+    const players =
+        document.querySelectorAll(
+            ".trainer-player"
+        );
+
+
+    players.forEach((player, index) => {
+
+        const avatar =
+            player.querySelector(
+                ".trainer-player-avatar"
+            );
+
+
+        const slug =
+            selectedTrainerCharacters[index];
+
+
+        /* No character selected for this seat */
+
+        if(!slug){
+
+            avatar.innerHTML =
+                `<span>${index + 1}</span>`;
+
+            avatar.classList.remove(
+                "has-character"
+            );
+
+            return;
+
+        }
+
+
+        const character =
+            trainerCharacters[slug];
+
+        if(!character) return;
+
+
+        avatar.innerHTML = `
+            <img
+                src="${character.image}"
+                alt="${character.name}"
+            >
+        `;
+
+
+        avatar.classList.add(
+            "has-character"
+        );
 
     });
 
