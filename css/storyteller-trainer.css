@@ -1,0 +1,385 @@
+/* ==========================================
+   Storyteller Trainer
+========================================== */
+
+.trainer-page{
+    margin-left:260px;
+    min-height:100vh;
+    background:#f3f7f0;
+    padding:30px 40px 60px;
+}
+
+
+/* ==========================================
+   Header
+========================================== */
+
+.trainer-header{
+    max-width:1400px;
+    margin:0 auto 25px;
+
+    display:flex;
+    align-items:flex-end;
+    justify-content:space-between;
+    gap:30px;
+}
+
+.trainer-eyebrow{
+    display:block;
+
+    margin-bottom:4px;
+
+    font-family:"Roboto", sans-serif;
+    font-size:12px;
+    font-weight:700;
+    letter-spacing:2px;
+
+    color:var(--purple);
+}
+
+.trainer-header h1{
+    margin:0;
+
+    font-family:"Droid Sans", sans-serif;
+    font-size:36px;
+    line-height:1.1;
+
+    color:var(--black);
+}
+
+
+/* ==========================================
+   Phase Indicator
+========================================== */
+
+.trainer-phase{
+    display:flex;
+    align-items:center;
+    gap:12px;
+
+    padding:9px 15px;
+
+    background:white;
+
+    border:1px solid var(--border);
+    border-radius:10px;
+}
+
+.phase-label{
+    padding:5px 8px;
+
+    background:var(--purple);
+    color:white;
+
+    border-radius:5px;
+
+    font-family:"Roboto", sans-serif;
+    font-size:11px;
+    font-weight:700;
+    letter-spacing:1px;
+}
+
+.phase-name{
+    font-family:"Roboto", sans-serif;
+    font-size:14px;
+    font-weight:500;
+
+    color:var(--black);
+}
+
+
+/* ==========================================
+   Game Area
+========================================== */
+
+.trainer-game{
+    max-width:1400px;
+    margin:0 auto 30px;
+
+    display:flex;
+    align-items:center;
+    justify-content:center;
+
+    min-height:680px;
+
+    position:relative;
+
+    overflow:hidden;
+
+    background:white;
+
+    border:1px solid var(--border);
+    border-radius:16px;
+}
+
+
+/* ==========================================
+   Town Square
+========================================== */
+
+.town-square{
+    width:min(610px, 70vw);
+    aspect-ratio:1 / 1;
+
+    position:relative;
+
+    display:flex;
+    align-items:center;
+    justify-content:center;
+
+    border-radius:50%;
+
+    background:
+        radial-gradient(
+            circle at center,
+            rgba(102,102,153,.06) 0%,
+            rgba(102,102,153,.06) 35%,
+            transparent 35.5%
+        ),
+        repeating-radial-gradient(
+            circle at center,
+            transparent 0,
+            transparent 72px,
+            rgba(102,102,153,.07) 73px,
+            transparent 74px
+        ),
+        #fafafa;
+
+    border:3px solid var(--purple);
+
+    box-shadow:
+        0 0 0 10px rgba(102,102,153,.06),
+        0 12px 35px rgba(13,24,33,.10);
+}
+
+
+/* ==========================================
+   Decorative Inner Circle
+========================================== */
+
+.town-square::before{
+    content:"";
+
+    position:absolute;
+
+    width:72%;
+    height:72%;
+
+    border-radius:50%;
+
+    border:1px dashed rgba(102,102,153,.28);
+
+    pointer-events:none;
+}
+
+.town-square::after{
+    content:"";
+
+    position:absolute;
+
+    width:44%;
+    height:44%;
+
+    border-radius:50%;
+
+    border:1px solid rgba(102,102,153,.14);
+
+    pointer-events:none;
+}
+
+
+/* ==========================================
+   Center Label
+========================================== */
+
+.town-square-center{
+    position:relative;
+    z-index:2;
+
+    width:145px;
+    height:145px;
+
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+    justify-content:center;
+
+    text-align:center;
+
+    border-radius:50%;
+
+    background:white;
+
+    border:2px solid var(--purple);
+
+    box-shadow:0 5px 18px rgba(13,24,33,.10);
+
+    color:var(--black);
+}
+
+.town-square-center strong{
+    font-family:"Droid Sans", sans-serif;
+    font-size:21px;
+}
+
+.town-square-small{
+    margin-bottom:3px;
+
+    font-family:"Roboto", sans-serif;
+    font-size:9px;
+    font-weight:700;
+    letter-spacing:1.5px;
+
+    color:var(--purple);
+}
+
+
+/* ==========================================
+   Player Ring
+========================================== */
+
+.player-ring{
+    position:absolute;
+    inset:0;
+
+    pointer-events:none;
+}
+
+
+/* ==========================================
+   Setup Panel
+   Temporary styling only
+========================================== */
+
+.trainer-panel{
+    max-width:1400px;
+
+    margin:0 auto;
+
+    padding:25px 30px;
+
+    background:white;
+
+    border:1px solid var(--border);
+    border-radius:16px;
+}
+
+.panel-heading{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    gap:30px;
+}
+
+.panel-step{
+    display:block;
+
+    margin-bottom:3px;
+
+    font-family:"Roboto", sans-serif;
+    font-size:11px;
+    font-weight:700;
+    letter-spacing:1.5px;
+
+    color:var(--purple);
+}
+
+.panel-heading h2{
+    margin:0 0 4px;
+
+    font-family:"Droid Sans", sans-serif;
+    font-size:24px;
+
+    color:var(--black);
+}
+
+.panel-heading p{
+    margin:0;
+
+    font-family:"Roboto", sans-serif;
+    font-size:14px;
+
+    color:var(--gray);
+}
+
+.selection-count{
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+
+    min-width:80px;
+}
+
+.selection-count span{
+    font-size:11px;
+    color:var(--gray);
+}
+
+.selection-count strong{
+    font-family:"Droid Sans", sans-serif;
+    font-size:28px;
+
+    color:var(--purple);
+}
+
+
+/* ==========================================
+   Temporary Actions
+========================================== */
+
+.panel-actions{
+    display:flex;
+    justify-content:flex-end;
+
+    margin-top:20px;
+}
+
+.primary-button{
+    min-width:120px;
+
+    padding:11px 20px;
+
+    border:0;
+    border-radius:7px;
+
+    background:var(--purple);
+    color:white;
+
+    font-family:"Roboto", sans-serif;
+    font-size:14px;
+    font-weight:700;
+
+    cursor:pointer;
+}
+
+.primary-button:disabled{
+    opacity:.4;
+    cursor:not-allowed;
+}
+
+
+/* ==========================================
+   Responsive
+========================================== */
+
+@media(max-width:900px){
+
+    .trainer-page{
+        margin-left:0;
+        padding:20px;
+    }
+
+    .trainer-header{
+        align-items:flex-start;
+        flex-direction:column;
+    }
+
+    .trainer-game{
+        min-height:560px;
+    }
+
+    .town-square{
+        width:min(500px, 75vw);
+    }
+
+}
