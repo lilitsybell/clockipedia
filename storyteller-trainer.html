@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>
+        Storyteller Trainer | Clockipedia
+    </title>
+
+    <link
+        rel="stylesheet"
+        href="/css/style-global.css"
+    >
+
+    <link
+        rel="stylesheet"
+        href="/css/storyteller-trainer.css"
+    >
+
+    <link
+        rel="icon"
+        type="image/png"
+        href="/images/favicon.png"
+    >
+
+</head>
+
+
+<body>
+
+
+<div id="sidebar-container"></div>
+
+
+<main class="trainer-page">
+
+
+    <!-- ==========================================
+         Trainer Header
+    =========================================== -->
+
+    <header class="trainer-header">
+
+        <div>
+
+            <span class="trainer-eyebrow">
+                TROUBLE BREWING
+            </span>
+
+            <h1>
+                Storyteller Trainer
+            </h1>
+
+        </div>
+
+
+        <div class="trainer-phase">
+
+            <span class="phase-label">
+                SETUP
+            </span>
+
+            <span class="phase-name">
+                Select Characters
+            </span>
+
+        </div>
+
+    </header>
+
+
+
+    <!-- ==========================================
+         Game Area
+    =========================================== -->
+
+    <section class="trainer-game">
+
+
+        <div
+            id="town-square"
+            class="town-square"
+        >
+
+            <div class="town-square-center">
+
+                <span class="town-square-small">
+                    CLOCKIPEDIA
+                </span>
+
+                <strong>
+                    Town Square
+                </strong>
+
+            </div>
+
+
+            <div
+                id="player-ring"
+                class="player-ring"
+            ></div>
+
+        </div>
+
+
+    </section>
+
+
+
+    <!-- ==========================================
+         Setup Panel
+    =========================================== -->
+
+    <section
+        id="character-selection"
+        class="trainer-panel character-selection"
+    >
+
+        <div class="panel-heading">
+
+            <div>
+
+                <span class="panel-step">
+                    SETUP
+                </span>
+
+                <h2>
+                    Select Characters
+                </h2>
+
+                <p>
+                    Build the bag for this game.
+                </p>
+
+            </div>
+
+
+            <div class="selection-count">
+
+                <span>
+                    Selected
+                </span>
+
+                <strong id="selected-count">
+                    0
+                </strong>
+
+            </div>
+
+        </div>
+
+
+
+        <div
+            id="character-groups"
+            class="character-groups"
+        >
+
+            <!-- Character choices will be generated here -->
+
+        </div>
+
+
+
+        <div class="panel-actions">
+
+            <button
+                id="continue-setup"
+                class="primary-button"
+                type="button"
+                disabled
+            >
+                Continue
+            </button>
+
+        </div>
+
+
+    </section>
+
+
+</main>
+
+
+
+<script src="/js/sidebar.js"></script>
+<script src="/js/storyteller-trainer.js"></script>
+
+
+</body>
+
+</html>
