@@ -357,7 +357,86 @@
     cursor:not-allowed;
 }
 
+/* ==========================================
+   Players
+========================================== */
 
+.trainer-player{
+    --player-distance:305px;
+
+    position:absolute;
+
+    left:50%;
+    top:50%;
+
+    width:100px;
+
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+
+    transform:
+        translate(-50%, -50%)
+        rotate(var(--player-angle))
+        translateY(calc(var(--player-distance) * -1))
+        rotate(calc(var(--player-angle) * -1));
+
+    pointer-events:auto;
+}
+
+
+/* ==========================================
+   Player Avatar
+========================================== */
+
+.trainer-player-avatar{
+    width:72px;
+    height:72px;
+
+    display:flex;
+    align-items:center;
+    justify-content:center;
+
+    border-radius:50%;
+
+    background:white;
+
+    border:3px solid var(--purple);
+
+    box-shadow:
+        0 4px 12px rgba(13,24,33,.15);
+
+    font-family:"Droid Sans", sans-serif;
+    font-size:22px;
+    font-weight:700;
+
+    color:var(--purple);
+}
+
+
+/* ==========================================
+   Player Name
+========================================== */
+
+.trainer-player-name{
+    margin-top:6px;
+
+    padding:4px 9px;
+
+    background:var(--black);
+    color:white;
+
+    border-radius:5px;
+
+    font-family:"Roboto", sans-serif;
+    font-size:12px;
+    font-weight:500;
+
+    white-space:nowrap;
+
+    box-shadow:
+        0 2px 6px rgba(13,24,33,.15);
+}
 /* ==========================================
    Responsive
 ========================================== */
