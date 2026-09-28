@@ -186,7 +186,7 @@ document.addEventListener(
         updateCharacterSelection();
 
         bindCharacterSelectionControls();
-
+bindMistakeControls();
     }
 );
 /* ==========================================
@@ -868,7 +868,19 @@ function shuffleCharacters(characters){
 ========================================== */
 
 async function distributeCharacters(){
+const validation =
+    validateBag();
 
+
+if(!validation.valid){
+
+    showSetupMistake(
+        validation
+    );
+
+    return;
+
+}
     if(
         trainerSelectedCharacters.size !==
         trainerPlayerCount
@@ -976,7 +988,107 @@ selection?.classList.add(
 
 }
 
+/* ==========================================
+   Show Setup Mistake
+========================================== */
 
+function showSetupMistake(
+    validation
+){
+
+    const screen =
+        document.querySelector(
+            "#mistake-screen"
+        );
+
+
+    const list =
+        document.querySelector(
+            "#mistake-list"
+        );
+
+
+    if(
+        !screen ||
+        !list
+    ){
+        return;
+    }
+
+
+    list.innerHTML = "";
+
+
+    validation.errors.forEach(
+        error => {
+
+            const item =
+                document.createElement(
+                    "div"
+                );
+
+
+            item.className =
+                "mistake-item";
+
+
+            item.textContent =
+                error;
+
+
+            list.appendChild(
+                item
+            );
+
+        }
+    );
+
+
+    screen.classList.remove(
+        "hidden"
+    );
+
+}
+
+
+/* ==========================================
+   Mistake Controls
+========================================== */
+
+function bindMistakeControls(){
+
+    const button =
+        document.querySelector(
+            "#fix-mistake"
+        );
+
+
+    const screen =
+        document.querySelector(
+            "#mistake-screen"
+        );
+
+
+    if(
+        !button ||
+        !screen
+    ){
+        return;
+    }
+
+
+    button.addEventListener(
+        "click",
+        () => {
+
+            screen.classList.add(
+                "hidden"
+            );
+
+        }
+    );
+
+}
 /* ==========================================
    Animate Character To Seat
 ========================================== */
