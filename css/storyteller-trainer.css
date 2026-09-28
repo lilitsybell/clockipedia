@@ -7,159 +7,379 @@
    Page
 ========================================== */
 
-.trainer-page{
+html,
+body{
+    height:100%;
+}
+
+body{
+    overflow:hidden;
+}
+
+.trainer{
     margin-left:260px;
 
-    min-height:100vh;
+    height:100vh;
 
-    padding:30px 40px 50px;
-
-    background:white;
+    background:#171329;
 }
 
 
 /* ==========================================
-   Header
+   Board
 ========================================== */
 
-.trainer-header{
+.trainer-board{
+    --board-bg:#211a39;
+    --board-mid:#30264d;
+    --board-light:#40355f;
+
+    --line:rgba(196,174,220,.20);
+    --line-strong:rgba(196,174,220,.32);
+
+    --cream:#f3dfad;
+    --panel:#18152a;
+    --purple:#7358a8;
+
     width:100%;
-    max-width:1400px;
-
-    margin:0 auto 24px;
-
-    display:flex;
-    align-items:flex-end;
-    justify-content:space-between;
-
-    gap:30px;
-}
-
-
-.trainer-eyebrow{
-    display:block;
-
-    margin-bottom:4px;
-
-    font-family:"Roboto", sans-serif;
-    font-size:12px;
-    font-weight:700;
-
-    letter-spacing:2px;
-
-    color:var(--purple);
-}
-
-
-.trainer-header h1{
-    margin:0;
-
-    font-family:"Droid Sans", sans-serif;
-    font-size:36px;
-    line-height:1.1;
-
-    color:var(--black);
-}
-
-
-/* ==========================================
-   Phase Indicator
-========================================== */
-
-.trainer-phase{
-    display:flex;
-    align-items:center;
-
-    gap:12px;
-
-    padding:9px 15px;
-
-    background:white;
-
-    border:1px solid var(--border);
-    border-radius:10px;
-}
-
-
-.phase-label{
-    padding:5px 8px;
-
-    background:var(--purple);
-    color:white;
-
-    border-radius:5px;
-
-    font-family:"Roboto", sans-serif;
-    font-size:11px;
-    font-weight:700;
-
-    letter-spacing:1px;
-}
-
-
-.phase-name{
-    font-family:"Roboto", sans-serif;
-    font-size:14px;
-    font-weight:500;
-
-    color:var(--black);
-}
-
-
-/* ==========================================
-   Game Area
-========================================== */
-
-.trainer-game{
-    width:100%;
-    max-width:1400px;
-
-    aspect-ratio:16 / 9;
-
-    margin:0 auto;
+    height:100%;
 
     position:relative;
 
     overflow:hidden;
 
     background:
-        url("/images/storyteller-trainer/background.png")
-        center center / cover
-        no-repeat;
-
-    border-radius:16px;
-
-    box-shadow:
-        0 10px 30px rgba(0,0,0,.25);
+        radial-gradient(
+            circle at 50% 48%,
+            var(--board-light) 0%,
+            var(--board-mid) 38%,
+            var(--board-bg) 72%,
+            #171329 100%
+        );
 }
 
 
 /* ==========================================
-   Town Square
+   Very Subtle Background Glow
 ========================================== */
 
-.town-square{
+.trainer-board::before{
+    content:"";
+
+    position:absolute;
+    inset:0;
+
+    pointer-events:none;
+
+    background:
+        radial-gradient(
+            circle at center,
+            rgba(255,255,255,.025),
+            transparent 60%
+        );
+}
+
+
+/* ==========================================
+   Title Panel
+========================================== */
+
+.trainer-title{
+    position:absolute;
+
+    left:28px;
+    top:26px;
+
+    z-index:20;
+
+    min-width:300px;
+
+    padding:14px 20px 15px;
+
+    background:rgba(24,21,42,.88);
+
+    border:
+        1px solid
+        rgba(196,174,220,.35);
+
+    border-radius:12px;
+
+    box-shadow:
+        0 8px 24px
+        rgba(0,0,0,.22);
+}
+
+
+.trainer-title-small{
+    display:block;
+
+    margin-bottom:3px;
+
+    font-family:"Roboto", sans-serif;
+    font-size:10px;
+    font-weight:700;
+
+    letter-spacing:2px;
+
+    color:#bca9dc;
+}
+
+
+.trainer-title h1{
+    margin:0;
+
+    font-family:"Droid Sans", sans-serif;
+    font-size:25px;
+    line-height:1.1;
+
+    color:white;
+}
+
+
+.trainer-instruction{
+    display:block;
+
+    margin-top:6px;
+
+    font-family:"Roboto", sans-serif;
+    font-size:13px;
+
+    color:rgba(255,255,255,.65);
+}
+
+
+/* ==========================================
+   Phase Panel
+========================================== */
+
+.trainer-phase{
+    position:absolute;
+
+    right:28px;
+    top:26px;
+
+    z-index:20;
+
+    min-width:175px;
+
+    padding:12px 18px;
+
+    background:rgba(24,21,42,.88);
+
+    border:
+        1px solid
+        rgba(196,174,220,.35);
+
+    border-radius:12px;
+
+    box-shadow:
+        0 8px 24px
+        rgba(0,0,0,.22);
+
+    text-align:center;
+}
+
+
+.phase-number{
+    display:block;
+
+    margin-bottom:2px;
+
+    font-family:"Roboto", sans-serif;
+    font-size:11px;
+    font-weight:800;
+
+    letter-spacing:2px;
+
+    color:#bca9dc;
+}
+
+
+.phase-name{
+    display:block;
+
+    font-family:"Droid Sans", sans-serif;
+    font-size:17px;
+
+    color:white;
+}
+
+
+/* ==========================================
+   Player Area
+========================================== */
+
+.player-area{
+    position:absolute;
+
+    left:50%;
+    top:50%;
+
+    width:min(82vh, 860px);
+    aspect-ratio:1;
+
+    transform:
+        translate(-50%, -50%);
+}
+
+
+/* ==========================================
+   Board Rings
+========================================== */
+
+.board-ring{
+    position:absolute;
+
+    left:50%;
+    top:50%;
+
+    aspect-ratio:1;
+
+    transform:
+        translate(-50%, -50%);
+
+    border-radius:50%;
+
+    pointer-events:none;
+}
+
+
+.board-ring-outer{
     width:100%;
+
+    border:
+        2px solid
+        var(--line);
+}
+
+
+.board-ring-middle{
+    width:67%;
+
+    border:
+        2px solid
+        var(--line-strong);
+}
+
+
+.board-ring-inner{
+    width:37%;
+
+    border:
+        2px solid
+        var(--line-strong);
+}
+
+
+/* ==========================================
+   Ring Crosshairs
+========================================== */
+
+.player-area::before,
+.player-area::after{
+    content:"";
+
+    position:absolute;
+
+    left:50%;
+    top:50%;
+
+    z-index:0;
+
+    transform:
+        translate(-50%, -50%);
+
+    background:
+        rgba(196,174,220,.13);
+
+    pointer-events:none;
+}
+
+
+.player-area::before{
+    width:100%;
+    height:1px;
+}
+
+
+.player-area::after{
+    width:1px;
     height:100%;
+}
+
+
+/* ==========================================
+   Center
+========================================== */
+
+.board-center{
+    position:absolute;
+
+    left:50%;
+    top:50%;
+
+    z-index:2;
+
+    width:120px;
+    height:120px;
+
+    transform:
+        translate(-50%, -50%);
+
+    display:flex;
+    align-items:center;
+    justify-content:center;
+}
+
+
+/* ==========================================
+   Center Diamond
+========================================== */
+
+.board-center-mark{
+    width:38px;
+    height:38px;
 
     position:relative;
 
-    background:transparent;
+    transform:rotate(45deg);
+
+    background:#ad829f;
+
+    border-radius:
+        50% 7px 50% 7px;
+
+    box-shadow:
+        0 0 35px
+        rgba(173,130,159,.22);
 }
 
 
-/* Hide old Clockipedia rings */
+.board-center-mark::before,
+.board-center-mark::after{
+    content:"";
 
-.town-square::before,
-.town-square::after{
-    display:none;
+    position:absolute;
+
+    left:50%;
+    top:50%;
+
+    background:#d2aac4;
+
+    transform:
+        translate(-50%, -50%);
 }
 
 
-/* Hide old center label */
+.board-center-mark::before{
+    width:2px;
+    height:68px;
+}
 
-.town-square-center{
-    display:none;
+
+.board-center-mark::after{
+    width:68px;
+    height:2px;
 }
 
 
@@ -169,183 +389,107 @@
 
 .player-ring{
     position:absolute;
+
     inset:0;
 
-    pointer-events:none;
-}
-
-
-.trainer-player{
-    --player-distance:265px;
-
-    position:absolute;
-
-    left:50%;
-    top:50%;
-
-    width:100px;
-
-    display:flex;
-    flex-direction:column;
-    align-items:center;
-
-    transform:
-        translate(-50%, -50%)
-        rotate(var(--player-angle))
-        translateY(
-            calc(
-                var(--player-distance) * -1
-            )
-        )
-        rotate(
-            calc(
-                var(--player-angle) * -1
-            )
-        );
-
-    pointer-events:auto;
+    z-index:10;
 }
 
 
 /* ==========================================
-   Player Token
+   Status Panel
 ========================================== */
 
-.trainer-player-avatar{
-    width:96px;
-    height:96px;
+.trainer-status{
+    position:absolute;
+
+    left:28px;
+    bottom:26px;
+
+    z-index:20;
+
+    min-width:220px;
+
+    padding:13px 16px;
+
+    background:rgba(24,21,42,.9);
+
+    border:
+        1px solid
+        rgba(196,174,220,.35);
+
+    border-radius:12px;
+
+    box-shadow:
+        0 8px 24px
+        rgba(0,0,0,.22);
+}
+
+
+.trainer-status-row{
+    display:flex;
+    align-items:center;
+
+    gap:10px;
+
+    min-height:26px;
+
+    font-family:"Roboto", sans-serif;
+    font-size:13px;
+
+    color:white;
+}
+
+
+.status-icon{
+    width:18px;
+
+    text-align:center;
+
+    color:#bca9dc;
+}
+
+
+/* ==========================================
+   Main Action
+========================================== */
+
+.trainer-main-action{
+    position:absolute;
+
+    right:28px;
+    bottom:26px;
+
+    z-index:20;
 
     display:flex;
     align-items:center;
-    justify-content:center;
 
-    position:relative;
+    gap:10px;
+
+    padding:14px 22px;
 
     background:
-        url("/images/storyteller-trainer/blank.png")
-        center / contain
-        no-repeat;
-
-    border:0;
-    border-radius:0;
-
-    box-shadow:none;
-
-    overflow:visible;
-
-    transition:
-        transform .15s ease;
-}
-
-
-/* Seat number */
-
-.trainer-player-avatar > span{
-    position:absolute;
-
-    left:50%;
-    top:50%;
-
-    transform:translate(-50%, -50%);
-
-    font-family:"Droid Sans", sans-serif;
-    font-size:22px;
-    font-weight:700;
+        linear-gradient(
+            180deg,
+            #8064b8,
+            #654b99
+        );
 
     color:white;
 
-    text-shadow:
-        0 2px 4px rgba(0,0,0,.8);
-}
+    border:
+        1px solid
+        rgba(220,205,245,.55);
 
-
-/* Character token */
-
-.trainer-player-avatar.has-character{
-    padding:0;
-
-    background:none;
-
-    border:0;
-}
-
-
-/* The image itself IS the token */
-
-.trainer-player-avatar.has-character img{
-    width:100%;
-    height:100%;
-
-    display:block;
-
-    object-fit:contain;
-}
-
-
-/* We no longer need CSS team borders */
-
-.trainer-player-avatar.team-good,
-.trainer-player-avatar.team-evil{
-    border:0;
-}
-
-
-/* Distribution landing */
-
-.trainer-player-avatar.token-landed{
-    transform:scale(1.13);
-}
-
-/* ==========================================
-   Player Name
-========================================== */
-
-.trainer-player-name{
-    margin-top:6px;
-
-    padding:4px 9px;
-
-    background:rgba(13,24,33,.88);
-    color:white;
-
-    border-radius:5px;
+    border-radius:12px;
 
     box-shadow:
-        0 2px 6px rgba(0,0,0,.22);
+        0 7px 20px
+        rgba(0,0,0,.3);
 
     font-family:"Roboto", sans-serif;
-    font-size:12px;
-    font-weight:500;
-
-    white-space:nowrap;
-}
-
-
-/* ==========================================
-   Setup Action Button
-========================================== */
-
-.setup-action-button{
-    position:absolute;
-
-    right:24px;
-    bottom:24px;
-
-    z-index:10;
-
-    padding:11px 20px;
-
-    background:var(--purple);
-    color:white;
-
-    border:0;
-    border-radius:7px;
-
-    box-shadow:
-        0 5px 15px rgba(0,0,0,.22);
-
-    font-family:"Roboto", sans-serif;
-    font-size:14px;
+    font-size:15px;
     font-weight:700;
 
     cursor:pointer;
@@ -356,550 +500,40 @@
 }
 
 
-.setup-action-button:hover{
-    transform:translateY(-1px);
+.trainer-main-action:hover{
+    transform:
+        translateY(-2px);
 
-    filter:brightness(.95);
+    filter:brightness(1.08);
 }
 
 
-.setup-action-button.hidden{
-    display:none;
+.trainer-main-action:active{
+    transform:
+        translateY(0);
 }
 
 
-/* ==========================================
-   Character Selection Overlay
-========================================== */
+.trainer-main-action-icon{
+    font-size:18px;
 
-.character-selection-overlay{
-    position:absolute;
-    inset:0;
-
-    z-index:50;
-
-    display:flex;
-    align-items:center;
-    justify-content:center;
-
-    padding:30px;
-
-    background:rgba(13,24,33,.68);
-
-    backdrop-filter:blur(2px);
+    color:#eadcff;
 }
 
-
-.character-selection-overlay.hidden{
-    display:none;
-}
-
-
-/* ==========================================
-   Character Selection Window
-========================================== */
-
-.character-selection-window{
-    width:820px;
-
-    max-width:calc(100% - 40px);
-
-    overflow:hidden;
-
-    background:white;
-
-    border:2px solid var(--purple);
-    border-radius:10px;
-
-    box-shadow:
-        0 18px 55px rgba(0,0,0,.42);
-}
-
-
-/* ==========================================
-   Character Selection Title
-========================================== */
-
-.character-selection-title{
-    padding:9px 20px;
-
-    background:var(--purple);
-    color:white;
-
-    font-family:"Droid Sans", sans-serif;
-    font-size:17px;
-
-    text-align:center;
-}
-
-
-.character-selection-title strong{
-    font-weight:700;
-}
-
-
-/* ==========================================
-   Character Selection Content
-========================================== */
-
-.character-selection-content{
-    display:grid;
-
-    grid-template-columns:
-        64px 1fr;
-
-    gap:18px;
-
-    padding:18px 24px 14px;
-}
-
-
-/* ==========================================
-   Setup Requirements
-========================================== */
-
-.setup-requirements{
-    display:grid;
-
-    grid-template-rows:
-        152px
-        76px
-        76px
-        76px;
-
-    align-items:center;
-
-    padding-right:14px;
-
-    border-right:1px solid #ddd;
-}
-
-
-.setup-requirement{
-    display:flex;
-    align-items:center;
-    justify-content:center;
-
-    gap:6px;
-
-    font-family:"Roboto", sans-serif;
-    font-size:15px;
-    font-weight:700;
-
-    color:var(--black);
-}
-
-
-.requirement-dot{
-    width:8px;
-    height:8px;
-
-    flex:0 0 auto;
-
-    border-radius:50%;
-}
-
-
-/* Townsfolk */
-
-.setup-requirement:nth-child(1)
-.requirement-dot{
-    background:var(--blue);
-}
-
-
-/* Outsiders */
-
-.setup-requirement:nth-child(2)
-.requirement-dot{
-    background:var(--blue);
-}
-
-
-/* Minions */
-
-.setup-requirement:nth-child(3)
-.requirement-dot{
-    background:var(--red);
-}
-
-
-/* Demon */
-
-.setup-requirement:nth-child(4)
-.requirement-dot{
-    background:var(--red);
-}
-
-
-/* Counts remain neutral intentionally */
-
-.requirement-count,
-.requirement-count.complete,
-.requirement-count.over{
-    color:var(--black);
-}
-
-
-/* ==========================================
-   Character Grid
-========================================== */
-
-.character-grid{
-    display:grid;
-
-    grid-template-columns:
-        repeat(7, 1fr);
-
-    grid-auto-rows:76px;
-
-    gap:2px 6px;
-
-    align-items:center;
-}
-
-
-/* ==========================================
-   SAO Team Row Breaks
-========================================== */
-
-/*
-   13 Townsfolk occupy:
-   row 1 = 7
-   row 2 = 6
-*/
-
-.character-choice[
-    data-character="butler"
-]{
-    grid-column:1;
-}
-
-
-/* Outsiders begin row 3 */
-
-.character-choice[
-    data-character="poisoner"
-]{
-    grid-column:1;
-}
-
-
-/* Minions begin row 4 */
-
-.character-choice[
-    data-character="imp"
-]{
-    grid-column:1;
-}
-
-
-/* ==========================================
-   Character Choice
-========================================== */
-
-.character-choice{
-    width:82px;
-
-    justify-self:center;
-
-    display:flex;
-    flex-direction:column;
-    align-items:center;
-    justify-content:center;
-
-    gap:2px;
-
-    padding:2px;
-
-    background:transparent;
-
-    border:0;
-    border-radius:8px;
-
-    color:var(--black);
-
-    font:inherit;
-
-    cursor:pointer;
-
-    transition:
-        background .12s ease,
-        transform .12s ease;
-}
-
-
-.character-choice:hover{
-    background:
-        rgba(102,102,153,.06);
-}
-
-
-.character-choice:hover img{
-    transform:scale(1.06);
-}
-
-
-/* ==========================================
-   Character Image
-========================================== */
-
-.character-choice img{
-    width:62px;
-    height:62px;
-
-    display:block;
-
-    object-fit:contain;
-
-    transition:
-        transform .15s ease,
-        filter .15s ease;
-}
-
-
-/* ==========================================
-   Character Name
-========================================== */
-
-.character-choice span{
-    width:74px;
-
-    overflow:hidden;
-
-    font-family:"Roboto", sans-serif;
-    font-size:9px;
-    font-weight:500;
-    line-height:11px;
-
-    text-align:center;
-
-    text-overflow:ellipsis;
-    white-space:nowrap;
-
-    color:var(--black);
-}
-
-
-/* ==========================================
-   Selected Character
-========================================== */
-
-.character-choice.selected{
-    background:transparent;
-
-    border-color:transparent;
-
-    box-shadow:none;
-}
-
-
-.character-choice.selected img{
-    transform:scale(1.08);
-
-    filter:
-        drop-shadow(
-            0 0 2px white
-        )
-        drop-shadow(
-            0 0 4px var(--purple)
-        );
-}
-
-
-/* ==========================================
-   Character Selection Footer
-========================================== */
-
-.character-selection-footer{
-    min-height:52px;
-
-    display:flex;
-    align-items:center;
-
-    gap:10px;
-
-    padding:8px 18px;
-
-    background:#fafafa;
-
-    border-top:
-        1px solid var(--border);
-}
-
-
-.selection-total{
-    margin-right:auto;
-
-    font-family:"Roboto", sans-serif;
-    font-size:12px;
-    font-weight:500;
-
-    color:var(--gray);
-}
-
-
-/* ==========================================
-   Selection Buttons
-========================================== */
-
-.primary-button,
-.secondary-button{
-    padding:10px 18px;
-
-    border-radius:7px;
-
-    font-family:"Roboto", sans-serif;
-    font-size:13px;
-    font-weight:700;
-
-    cursor:pointer;
-}
-
-
-.primary-button{
-    min-width:150px;
-
-    border:0;
-
-    background:var(--purple);
-    color:white;
-}
-
-
-.primary-button:hover:not(:disabled){
-    filter:brightness(.95);
-}
-
-
-.primary-button:disabled{
-    opacity:.4;
-
-    cursor:not-allowed;
-}
-
-
-.secondary-button{
-    border:1px solid var(--border);
-
-    background:white;
-    color:var(--black);
-}
-
-
-.secondary-button:hover{
-    background:var(--light-gray);
-}
-
-
-/* ==========================================
-   Token Distribution Layer
-========================================== */
-
-.token-distribution-layer{
-    position:absolute;
-    inset:0;
-
-    z-index:40;
-
-    pointer-events:none;
-}
-
-
-/* ==========================================
-   Flying Token
-========================================== */
-
-.distribution-token{
-    position:absolute;
-
-    width:96px;
-    height:96px;
-
-    background:none;
-    border:0;
-
-    border-radius:0;
-
-    box-shadow:none;
-
-    will-change:
-        left,
-        top,
-        transform;
-}
-
-
-.distribution-token img{
-    width:100%;
-    height:100%;
-
-    display:block;
-
-    object-fit:contain;
-}
 
 /* ==========================================
    Responsive
 ========================================== */
 
-@media(max-width:900px){
+@media(max-width:1000px){
 
-    .trainer-page{
+    .trainer{
         margin-left:0;
-
-        padding:20px;
     }
 
 
-    .trainer-header{
-        align-items:flex-start;
-        flex-direction:column;
-    }
-
-
-    .trainer-game{
-        aspect-ratio:auto;
-
-        height:620px;
-    }
-
-
-    .trainer-player{
-        --player-distance:250px;
-    }
-
-
-    .character-selection-window{
-        width:100%;
-    }
-
-
-    .character-selection-content{
-        grid-template-columns:
-            54px 1fr;
-
-        padding:
-            14px 16px 12px;
-    }
-
-
-    .character-grid{
-        grid-template-columns:
-            repeat(7, 1fr);
-
-        gap:2px;
-    }
-
-
-    .character-choice{
-        width:70px;
-    }
-
-
-    .character-choice img{
-        width:54px;
-        height:54px;
+    .player-area{
+        width:min(78vh, 78vw);
     }
 
 }
