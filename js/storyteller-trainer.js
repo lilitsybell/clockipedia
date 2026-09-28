@@ -68,23 +68,23 @@ const troubleBrewingSAO = [
 const setupRequirements = {
 
     Townsfolk: 7,
-    Outsiders: 2,
-    Minions: 2,
-    Demons: 1
+    Outsider: 2,
+    Minion: 2,
+    Demon: 1
 
 };
 
 
 /* ==========================================
-   Team Display
+   Team Display Order
 ========================================== */
 
 const setupTeams = [
 
     "Townsfolk",
-    "Outsiders",
-    "Minions",
-    "Demons"
+    "Outsider",
+    "Minion",
+    "Demon"
 
 ];
 
@@ -120,7 +120,9 @@ async function loadTrainerCharacters(){
     try{
 
         const response =
-            await fetch("/data/characters.json");
+            await fetch(
+                "/data/characters.json"
+            );
 
 
         if(!response.ok){
@@ -193,7 +195,9 @@ function buildPlayerRing(){
     ){
 
         const player =
-            document.createElement("div");
+            document.createElement(
+                "div"
+            );
 
 
         player.className =
@@ -205,7 +209,9 @@ function buildPlayerRing(){
 
 
         const angle =
-            (360 / trainerPlayerCount) * i - 90;
+            (360 / trainerPlayerCount) *
+            i -
+            90;
 
 
         player.style.setProperty(
@@ -231,7 +237,9 @@ function buildPlayerRing(){
         `;
 
 
-        ring.appendChild(player);
+        ring.appendChild(
+            player
+        );
 
     }
 
@@ -335,77 +343,82 @@ function buildCharacterSelection(){
     container.innerHTML = "";
 
 
-    troubleBrewingSAO.forEach(slug => {
+    troubleBrewingSAO.forEach(
+        slug => {
 
-        const character =
-            trainerCharacters[slug];
-
-
-        if(!character){
-
-            console.warn(
-                `Missing Trouble Brewing character: ${slug}`
-            );
-
-            return;
-        }
+            const character =
+                trainerCharacters[slug];
 
 
-        const button =
-            document.createElement("button");
+            if(!character){
 
-
-        button.type =
-            "button";
-
-
-        button.className =
-            "character-choice";
-
-
-        button.dataset.character =
-            slug;
-
-
-        button.dataset.team =
-            character.team;
-
-
-        button.title =
-            character.name;
-
-
-        button.innerHTML = `
-
-            <img
-                src="${character.image}"
-                alt="${character.name}"
-            >
-
-            <span>
-                ${character.name}
-            </span>
-
-        `;
-
-
-        button.addEventListener(
-            "click",
-            () => {
-
-                toggleTrainerCharacter(
-                    slug
+                console.warn(
+                    `Missing Trouble Brewing character: ${slug}`
                 );
 
+                return;
+
             }
-        );
 
 
-        container.appendChild(
-            button
-        );
+            const button =
+                document.createElement(
+                    "button"
+                );
 
-    });
+
+            button.type =
+                "button";
+
+
+            button.className =
+                "character-choice";
+
+
+            button.dataset.character =
+                slug;
+
+
+            button.dataset.team =
+                character.team;
+
+
+            button.title =
+                character.name;
+
+
+            button.innerHTML = `
+
+                <img
+                    src="${character.image}"
+                    alt="${character.name}"
+                >
+
+                <span>
+                    ${character.name}
+                </span>
+
+            `;
+
+
+            button.addEventListener(
+                "click",
+                () => {
+
+                    toggleTrainerCharacter(
+                        slug
+                    );
+
+                }
+            );
+
+
+            container.appendChild(
+                button
+            );
+
+        }
+    );
 
 
     buildSetupRequirements();
@@ -430,34 +443,37 @@ function buildSetupRequirements(){
 
     container.innerHTML =
         setupTeams
-            .map(team => {
+            .map(
+                team => {
 
-                return `
+                    return `
 
-                    <div
-                        class="setup-requirement"
-                        title="${team}"
-                    >
-
-                        <span
-                            class="requirement-dot"
-                        ></span>
-
-                        <strong
-                            class="requirement-count"
-                            data-requirement-team="${team}"
+                        <div
+                            class="setup-requirement"
+                            title="${team}"
                         >
-                            ${setupRequirements[team]}
-                        </strong>
 
-                    </div>
+                            <span
+                                class="requirement-dot"
+                            ></span>
 
-                `;
+                            <strong
+                                class="requirement-count"
+                                data-requirement-team="${team}"
+                            >
+                                0/${setupRequirements[team]}
+                            </strong>
 
-            })
+                        </div>
+
+                    `;
+
+                }
+            )
             .join("");
 
 }
+
 
 /* ==========================================
    Toggle Character
@@ -468,6 +484,7 @@ function toggleTrainerCharacter(slug){
     const character =
         trainerCharacters[slug];
 
+
     if(!character) return;
 
 
@@ -477,7 +494,9 @@ function toggleTrainerCharacter(slug){
         );
 
 
-    /* Remove */
+    /* ======================================
+       Remove
+    ====================================== */
 
     if(existingIndex !== -1){
 
@@ -489,9 +508,20 @@ function toggleTrainerCharacter(slug){
     }
 
 
-    /* Add */
+    /* ======================================
+       Add
+    ====================================== */
 
     else{
+
+        /*
+           The trainee may make an incorrect
+           team distribution.
+
+           We only stop them once the bag
+           contains the correct TOTAL number
+           of characters.
+        */
 
         if(
             selectedTrainerCharacters.length >=
@@ -511,6 +541,8 @@ function toggleTrainerCharacter(slug){
     updateCharacterSelection();
 
 }
+
+
 /* ==========================================
    Update Character Selection
 ========================================== */
@@ -521,24 +553,26 @@ function updateCharacterSelection(){
         .querySelectorAll(
             ".character-choice"
         )
-        .forEach(button => {
+        .forEach(
+            button => {
 
-            const slug =
-                button.dataset.character;
+                const slug =
+                    button.dataset.character;
 
 
-            const selected =
-                selectedTrainerCharacters.includes(
-                    slug
+                const selected =
+                    selectedTrainerCharacters.includes(
+                        slug
+                    );
+
+
+                button.classList.toggle(
+                    "selected",
+                    selected
                 );
 
-
-            button.classList.toggle(
-                "selected",
-                selected
-            );
-
-        });
+            }
+        );
 
 
     updateSetupCounts();
@@ -552,55 +586,34 @@ function updateCharacterSelection(){
 
 function updateSetupCounts(){
 
-    let setupComplete = true;
+    setupTeams.forEach(
+        team => {
+
+            const selectedCount =
+                getSelectedTeamCount(
+                    team
+                );
 
 
-    setupTeams.forEach(team => {
-
-        const selectedCount =
-            getSelectedTeamCount(
-                team
-            );
+            const requiredCount =
+                setupRequirements[team];
 
 
-        const requiredCount =
-            setupRequirements[team];
+            const display =
+                document.querySelector(
+                    `[data-requirement-team="${team}"]`
+                );
 
 
-        const display =
-            document.querySelector(
-                `[data-requirement-team="${team}"]`
-            );
+            if(display){
 
+                display.textContent =
+                    `${selectedCount}/${requiredCount}`;
 
-        if(display){
-
-            display.textContent =
-                `${selectedCount}/${requiredCount}`;
-
-
-            display.classList.toggle(
-                "complete",
-                selectedCount ===
-                requiredCount
-            );
-display.classList.toggle(
-    "over",
-    selectedCount > requiredCount
-);
-        }
-
-
-        if(
-            selectedCount !==
-            requiredCount
-        ){
-
-            setupComplete = false;
+            }
 
         }
-
-    });
+    );
 
 
     /* ======================================
@@ -625,19 +638,19 @@ display.classList.toggle(
        Distribute Button
     ====================================== */
 
-const distributeButton =
-    document.querySelector(
-        "#distribute-tokens"
-    );
+    const distributeButton =
+        document.querySelector(
+            "#distribute-tokens"
+        );
 
 
-if(distributeButton){
+    if(distributeButton){
 
-    distributeButton.disabled =
-        selectedTrainerCharacters.length !==
-        trainerPlayerCount;
+        distributeButton.disabled =
+            selectedTrainerCharacters.length !==
+            trainerPlayerCount;
 
-}
+    }
 
 }
 
@@ -649,14 +662,16 @@ if(distributeButton){
 function getSelectedTeamCount(team){
 
     return selectedTrainerCharacters
-        .filter(slug => {
+        .filter(
+            slug => {
 
-            return (
-                trainerCharacters[slug]?.team ===
-                team
-            );
+                return (
+                    trainerCharacters[slug]?.team ===
+                    team
+                );
 
-        })
+            }
+        )
         .length;
 
 }
@@ -680,7 +695,8 @@ function shuffleArray(array){
 
         const j =
             Math.floor(
-                Math.random() * (i + 1)
+                Math.random() *
+                (i + 1)
             );
 
 
@@ -714,7 +730,9 @@ async function distributeTrainerTokens(){
     }
 
 
-    /* Randomize the seating */
+    /* ======================================
+       Randomize Seating
+    ====================================== */
 
     distributedTrainerCharacters =
         shuffleArray(
@@ -722,12 +740,15 @@ async function distributeTrainerTokens(){
         );
 
 
-    /* Close character selector */
+    /* ======================================
+       Close Character Selector
+    ====================================== */
 
     const overlay =
         document.querySelector(
             "#character-selection"
         );
+
 
     if(overlay){
 
@@ -738,12 +759,15 @@ async function distributeTrainerTokens(){
     }
 
 
-    /* Hide setup button during animation */
+    /* ======================================
+       Hide Setup Button
+    ====================================== */
 
     const openButton =
         document.querySelector(
             "#open-character-selection"
         );
+
 
     if(openButton){
 
@@ -754,17 +778,22 @@ async function distributeTrainerTokens(){
     }
 
 
-    /* Run distribution */
+    /* ======================================
+       Animate Distribution
+    ====================================== */
 
     await animateTokenDistribution();
 
 
-    /* Update phase */
+    /* ======================================
+       Update Phase
+    ====================================== */
 
     const phaseName =
         document.querySelector(
             ".phase-name"
         );
+
 
     if(phaseName){
 
@@ -774,12 +803,15 @@ async function distributeTrainerTokens(){
     }
 
 
-    /* Bring setup button back */
+    /* ======================================
+       Restore Setup Button
+    ====================================== */
 
     if(openButton){
 
         openButton.textContent =
             "Change Characters";
+
 
         openButton.classList.remove(
             "hidden"
@@ -788,6 +820,8 @@ async function distributeTrainerTokens(){
     }
 
 }
+
+
 /* ==========================================
    Animate Token Distribution
 ========================================== */
@@ -817,8 +851,11 @@ async function animateTokenDistribution(){
         !townSquare ||
         players.length === 0
     ){
+
         updatePlayerTokens();
+
         return;
+
     }
 
 
@@ -834,7 +871,9 @@ async function animateTokenDistribution(){
     ====================================== */
 
     const animationLayer =
-        document.createElement("div");
+        document.createElement(
+            "div"
+        );
 
 
     animationLayer.className =
@@ -847,7 +886,7 @@ async function animateTokenDistribution(){
 
 
     /* ======================================
-       Find Center of Town Square
+       Town Square Center
     ====================================== */
 
     const gameRect =
@@ -870,7 +909,7 @@ async function animateTokenDistribution(){
 
 
     /* ======================================
-       Build Center Stack
+       Build Token Stack
     ====================================== */
 
     const flyingTokens = [];
@@ -907,26 +946,31 @@ async function animateTokenDistribution(){
                 `;
 
 
-                /*
-                   Slight random offset makes the
-                   center look like a shuffled pile.
-                */
+                /* Random pile position */
 
                 const offsetX =
-                    Math.random() * 14 - 7;
+                    Math.random() *
+                    14 -
+                    7;
 
                 const offsetY =
-                    Math.random() * 14 - 7;
+                    Math.random() *
+                    14 -
+                    7;
 
                 const rotation =
-                    Math.random() * 20 - 10;
+                    Math.random() *
+                    20 -
+                    10;
 
 
                 token.style.left =
                     `${centerX + offsetX}px`;
 
+
                 token.style.top =
                     `${centerY + offsetY}px`;
+
 
                 token.style.transform =
                     `
@@ -946,36 +990,46 @@ async function animateTokenDistribution(){
 
 
                 flyingTokens.push({
+
                     token,
                     slug,
                     character,
                     player:players[index]
+
                 });
 
             }
         );
 
 
-    /* Let browser paint the pile */
+    /* ======================================
+       Brief Pause
+    ====================================== */
 
     await wait(180);
 
 
     /* ======================================
-       Little Shuffle Effect
+       Shuffle Effect
     ====================================== */
 
     flyingTokens.forEach(
-        ({token}, index) => {
+        ({token}) => {
 
             const x =
-                Math.random() * 34 - 17;
+                Math.random() *
+                34 -
+                17;
 
             const y =
-                Math.random() * 34 - 17;
+                Math.random() *
+                34 -
+                17;
 
             const rotation =
-                Math.random() * 35 - 17.5;
+                Math.random() *
+                35 -
+                17.5;
 
 
             token.style.transition =
@@ -1008,8 +1062,7 @@ async function animateTokenDistribution(){
     ){
 
         await animateTokenToPlayer(
-            item,
-            animationLayer
+            item
         );
 
     }
@@ -1022,13 +1075,14 @@ async function animateTokenDistribution(){
     animationLayer.remove();
 
 }
+
+
 /* ==========================================
    Animate One Token to Player
 ========================================== */
 
 async function animateTokenToPlayer(
-    item,
-    animationLayer
+    item
 ){
 
     const {
@@ -1078,18 +1132,21 @@ async function animateTokenToPlayer(
         avatarRect.height / 2;
 
 
-    /* Move */
+    /* ======================================
+       Fly to Seat
+    ====================================== */
 
-token.style.transition =
-    `
-        left 280ms cubic-bezier(.2,.8,.2,1),
-        top 280ms cubic-bezier(.2,.8,.2,1),
-        transform 280ms cubic-bezier(.2,.8,.2,1)
-    `;
+    token.style.transition =
+        `
+            left 280ms cubic-bezier(.2,.8,.2,1),
+            top 280ms cubic-bezier(.2,.8,.2,1),
+            transform 280ms cubic-bezier(.2,.8,.2,1)
+        `;
 
 
     token.style.left =
         `${destinationX}px`;
+
 
     token.style.top =
         `${destinationY}px`;
@@ -1103,10 +1160,17 @@ token.style.transition =
         `;
 
 
+    /*
+       Start the next token slightly before
+       this one completely finishes.
+    */
+
     await wait(190);
 
 
-    /* Put real character into seat */
+    /* ======================================
+       Place Character
+    ====================================== */
 
     setPlayerCharacter(
         avatar,
@@ -1115,7 +1179,9 @@ token.style.transition =
     );
 
 
-    /* Little landing pop */
+    /* ======================================
+       Landing Pop
+    ====================================== */
 
     avatar.classList.add(
         "token-landed"
@@ -1133,6 +1199,8 @@ token.style.transition =
     );
 
 }
+
+
 /* ==========================================
    Clear Player Tokens
 ========================================== */
@@ -1164,16 +1232,17 @@ function clearPlayerTokens(){
                 `;
 
 
-avatar.classList.remove(
-    "has-character",
-    "team-good",
-    "team-evil"
-);
+                avatar.classList.remove(
+                    "has-character",
+                    "team-good",
+                    "team-evil"
+                );
 
             }
         );
 
 }
+
 
 /* ==========================================
    Set Player Character
@@ -1185,11 +1254,19 @@ function setPlayerCharacter(
     character
 ){
 
+    /* ======================================
+       Reset Team Classes
+    ====================================== */
+
     avatar.classList.remove(
         "team-good",
         "team-evil"
     );
 
+
+    /* ======================================
+       Character Image
+    ====================================== */
 
     avatar.innerHTML = `
 
@@ -1206,12 +1283,16 @@ function setPlayerCharacter(
     );
 
 
-    /* Team border color */
+    /* ======================================
+       Good Team Border
+    ====================================== */
 
     if(
-        character.team === "Townsfolk" ||
-        character.team === "Outsider" ||
-        character.team === "Outsiders"
+        character.team ===
+        "Townsfolk" ||
+
+        character.team ===
+        "Outsider"
     ){
 
         avatar.classList.add(
@@ -1221,11 +1302,16 @@ function setPlayerCharacter(
     }
 
 
+    /* ======================================
+       Evil Team Border
+    ====================================== */
+
     if(
-        character.team === "Minion" ||
-        character.team === "Minions" ||
-        character.team === "Demon" ||
-        character.team === "Demons"
+        character.team ===
+        "Minion" ||
+
+        character.team ===
+        "Demon"
     ){
 
         avatar.classList.add(
@@ -1236,21 +1322,6 @@ function setPlayerCharacter(
 
 }
 
-/* ==========================================
-   Wait
-========================================== */
-
-function wait(milliseconds){
-
-    return new Promise(
-        resolve =>
-            setTimeout(
-                resolve,
-                milliseconds
-            )
-    );
-
-}
 
 /* ==========================================
    Update Player Tokens
@@ -1282,14 +1353,18 @@ function updatePlayerTokens(){
                 ];
 
 
-            /* Empty seat */
+            /* ==================================
+               Empty Seat
+            ================================== */
 
             if(!slug){
 
                 avatar.innerHTML = `
+
                     <span>
                         ${index + 1}
                     </span>
+
                 `;
 
 
@@ -1305,7 +1380,9 @@ function updatePlayerTokens(){
             }
 
 
-            /* Character */
+            /* ==================================
+               Character
+            ================================== */
 
             const character =
                 trainerCharacters[slug];
@@ -1321,6 +1398,23 @@ function updatePlayerTokens(){
             );
 
         }
+    );
+
+}
+
+
+/* ==========================================
+   Wait
+========================================== */
+
+function wait(milliseconds){
+
+    return new Promise(
+        resolve =>
+            setTimeout(
+                resolve,
+                milliseconds
+            )
     );
 
 }
