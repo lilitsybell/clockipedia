@@ -348,7 +348,17 @@ function buildCharacterSelection(){
             );
 
             return;
+avatar.classList.remove(
+    "team-townsfolk",
+    "team-outsiders",
+    "team-minions",
+    "team-demons"
+);
 
+
+avatar.classList.add(
+    `team-${character.team.toLowerCase()}`
+);
         }
 
 
@@ -800,25 +810,29 @@ function updatePlayerTokens(){
                Empty Seat
             ================================== */
 
-            if(!slug){
+         if(!slug){
 
-                avatar.innerHTML = `
+    avatar.innerHTML = `
 
-                    <span>
-                        ${index + 1}
-                    </span>
+        <span>
+            ${index + 1}
+        </span>
 
-                `;
-
-
-                avatar.classList.remove(
-                    "has-character"
-                );
+    `;
 
 
-                return;
+    avatar.classList.remove(
+        "has-character",
+        "team-townsfolk",
+        "team-outsiders",
+        "team-minions",
+        "team-demons"
+    );
 
-            }
+
+    return;
+
+}
 
 
             /* ==================================
