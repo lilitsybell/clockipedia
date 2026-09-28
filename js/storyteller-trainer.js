@@ -609,39 +609,74 @@ function updateCharacterButtons(){
 
 function updateRequirementCounts(){
 
-    Object.keys(
-        trainerCharacters
-    ).forEach(
-        group => {
+    const counts = {
 
-            const count =
-                getSelectedGroupCount(
-                    group
-                );
+        townsfolk:
+            getSelectedGroupCount(
+                "townsfolk"
+            ),
 
+        outsiders:
+            getSelectedGroupCount(
+                "outsiders"
+            ),
 
-            const target =
-                trainerRequirements[
-                    group
-                ];
+        minions:
+            getSelectedGroupCount(
+                "minions"
+            ),
 
+        demons:
+            getSelectedGroupCount(
+                "demons"
+            )
 
-            const counter =
-                document.querySelector(
-                    `[data-requirement="${group}"]`
-                );
-
-
-            if(!counter){
-                return;
-            }
+    };
 
 
-            counter.textContent =
-                `${count} / ${target}`;
+    const townsfolk =
+        document.querySelector(
+            "#townsfolk-selected"
+        );
 
-        }
-    );
+    const outsider =
+        document.querySelector(
+            "#outsider-selected"
+        );
+
+    const minion =
+        document.querySelector(
+            "#minion-selected"
+        );
+
+    const demon =
+        document.querySelector(
+            "#demon-selected"
+        );
+
+
+    if(townsfolk){
+        townsfolk.textContent =
+            counts.townsfolk;
+    }
+
+
+    if(outsider){
+        outsider.textContent =
+            counts.outsiders;
+    }
+
+
+    if(minion){
+        minion.textContent =
+            counts.minions;
+    }
+
+
+    if(demon){
+        demon.textContent =
+            counts.demons;
+    }
 
 }
 
@@ -687,11 +722,10 @@ function updateSelectionTotal(){
 
     }
 
-
-    const distributeButton =
-        document.querySelector(
-            "#distribute-tokens"
-        );
+const distributeButton =
+    document.querySelector(
+        "#distribute-characters"
+    );
 
 
     if(distributeButton){
