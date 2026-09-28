@@ -1572,3 +1572,156 @@ body{
 .player-character{
     border-color:#b72a32;
 }
+/* ==========================================
+   Mistake Screen
+========================================== */
+
+.mistake-screen{
+    position:absolute;
+    inset:0;
+
+    z-index:200;
+
+    display:flex;
+    align-items:center;
+    justify-content:center;
+}
+
+
+.mistake-screen.hidden{
+    display:none;
+}
+
+
+.mistake-backdrop{
+    position:absolute;
+    inset:0;
+
+    background:
+        rgba(10,7,22,.78);
+
+    backdrop-filter:
+        blur(3px);
+}
+
+
+.mistake-panel{
+    position:relative;
+
+    z-index:1;
+
+    width:min(470px, 80vw);
+
+    padding:28px 32px;
+
+    background:
+        linear-gradient(
+            180deg,
+            #fff0c8,
+            #f4d99b
+        );
+
+    border:3px solid #2a1c35;
+
+    border-radius:16px;
+
+    box-shadow:
+        0 20px 60px
+        rgba(0,0,0,.55);
+
+    text-align:center;
+}
+
+
+.mistake-eyebrow{
+    display:block;
+
+    margin-bottom:5px;
+
+    font-family:"Roboto", sans-serif;
+    font-size:10px;
+    font-weight:800;
+
+    letter-spacing:2px;
+
+    color:#a34d50;
+}
+
+
+.mistake-panel h2{
+    margin:0;
+
+    font-family:"Droid Sans", sans-serif;
+    font-size:26px;
+
+    color:#21172c;
+}
+
+
+.mistake-intro{
+    margin:7px 0 20px;
+
+    font-family:"Roboto", sans-serif;
+    font-size:13px;
+
+    color:#594759;
+}
+
+
+.mistake-list{
+    display:flex;
+    flex-direction:column;
+
+    gap:8px;
+
+    margin-bottom:22px;
+
+    text-align:left;
+}
+
+
+.mistake-item{
+    padding:10px 12px;
+
+    background:
+        rgba(255,255,255,.4);
+
+    border-left:
+        4px solid #a34d50;
+
+    border-radius:6px;
+
+    font-family:"Roboto", sans-serif;
+    font-size:13px;
+    font-weight:600;
+
+    color:#342638;
+}
+
+
+.mistake-button{
+    min-width:150px;
+
+    padding:11px 20px;
+
+    background:
+        linear-gradient(
+            180deg,
+            #8064b8,
+            #654b99
+        );
+
+    color:white;
+
+    border:
+        1px solid
+        rgba(255,255,255,.4);
+
+    border-radius:9px;
+
+    font-family:"Roboto", sans-serif;
+    font-size:13px;
+    font-weight:700;
+
+    cursor:pointer;
+}
