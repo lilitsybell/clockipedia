@@ -14,7 +14,7 @@
 
     padding:30px 40px 50px;
 
-    background:#f3f7f0;
+    background:white;
 }
 
 
@@ -420,7 +420,7 @@
 
     overflow:hidden;
 
-    background:#f3f7f0;
+    background:white;
 
     border:2px solid var(--purple);
     border-radius:10px;
