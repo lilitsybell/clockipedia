@@ -623,18 +623,19 @@ function updateSetupCounts(){
        Distribute Button
     ====================================== */
 
-    const distributeButton =
-        document.querySelector(
-            "#distribute-tokens"
-        );
+const distributeButton =
+    document.querySelector(
+        "#distribute-tokens"
+    );
 
 
-    if(distributeButton){
+if(distributeButton){
 
-        distributeButton.disabled =
-            !setupComplete;
+    distributeButton.disabled =
+        selectedTrainerCharacters.length !==
+        trainerPlayerCount;
 
-    }
+}
 
 }
 
