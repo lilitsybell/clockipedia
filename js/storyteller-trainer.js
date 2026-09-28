@@ -460,7 +460,6 @@ function buildSetupRequirements(){
 
 }
 
-
 /* ==========================================
    Toggle Character
 ========================================== */
@@ -470,12 +469,7 @@ function toggleTrainerCharacter(slug){
     const character =
         trainerCharacters[slug];
 
-
     if(!character) return;
-
-
-    const team =
-        character.team;
 
 
     const existingIndex =
@@ -484,9 +478,7 @@ function toggleTrainerCharacter(slug){
         );
 
 
-    /* ======================================
-       Remove
-    ====================================== */
+    /* Remove */
 
     if(existingIndex !== -1){
 
@@ -495,63 +487,31 @@ function toggleTrainerCharacter(slug){
             1
         );
 
-
-        updateCharacterSelection();
-
-        return;
-
     }
 
 
-    /* ======================================
-       Check Team Limit
-    ====================================== */
+    /* Add */
 
-    const selectedFromTeam =
-        selectedTrainerCharacters.filter(
-            selectedSlug =>
-                trainerCharacters[
-                    selectedSlug
-                ]?.team === team
-        ).length;
+    else{
 
-
-    const teamLimit =
-        setupRequirements[team];
+        if(
+            selectedTrainerCharacters.length >=
+            trainerPlayerCount
+        ){
+            return;
+        }
 
 
-    if(teamLimit === undefined){
-
-        console.warn(
-            `No setup requirement for team: ${team}`
+        selectedTrainerCharacters.push(
+            slug
         );
 
-        return;
-
     }
-
-
-    if(selectedFromTeam >= teamLimit){
-
-        return;
-
-    }
-
-
-    /* ======================================
-       Add
-    ====================================== */
-
-    selectedTrainerCharacters.push(
-        slug
-    );
 
 
     updateCharacterSelection();
 
 }
-
-
 /* ==========================================
    Update Character Selection
 ========================================== */
