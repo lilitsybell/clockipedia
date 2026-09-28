@@ -770,7 +770,41 @@
 .secondary-button:hover{
     background:var(--light-gray);
 }
+/* ==========================================
+   Character Team Token Colors
+========================================== */
 
+.trainer-player-avatar.has-character{
+    background:white;
+}
+
+
+/* Townsfolk */
+
+.trainer-player-avatar.team-townsfolk{
+    border-color:var(--blue);
+}
+
+
+/* Outsiders */
+
+.trainer-player-avatar.team-outsiders{
+    border-color:var(--blue);
+}
+
+
+/* Minions */
+
+.trainer-player-avatar.team-minions{
+    border-color:var(--red);
+}
+
+
+/* Demons */
+
+.trainer-player-avatar.team-demons{
+    border-color:var(--red);
+}
 
 /* ==========================================
    Responsive
