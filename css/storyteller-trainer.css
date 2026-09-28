@@ -257,22 +257,20 @@ body{
         rgba(196,174,220,.13);
 }
 
-
 .board-ring-middle{
-    width:54%;
+    width:68%;
+
+    border:
+        2px solid
+        rgba(196,174,220,.28);
+}
+
+.board-ring-inner{
+    width:42%;
 
     border:
         2px solid
         rgba(196,174,220,.34);
-}
-
-
-.board-ring-inner{
-    width:30%;
-
-    border:
-        2px solid
-        rgba(196,174,220,.38);
 }
 .board-ring-middle::before,
 .board-ring-middle::after{
