@@ -970,7 +970,7 @@ async function animateTokenDistribution(){
 
     /* Let browser paint the pile */
 
-    await wait(350);
+    await wait(180);
 
 
     /* ======================================
@@ -991,7 +991,7 @@ async function animateTokenDistribution(){
 
 
             token.style.transition =
-                "transform 260ms ease";
+                "transform 160ms ease";
 
 
             token.style.transform =
@@ -1008,7 +1008,7 @@ async function animateTokenDistribution(){
     );
 
 
-    await wait(300);
+    await wait(180);
 
 
     /* ======================================
@@ -1092,12 +1092,12 @@ async function animateTokenToPlayer(
 
     /* Move */
 
-    token.style.transition =
-        `
-            left 420ms cubic-bezier(.2,.8,.2,1),
-            top 420ms cubic-bezier(.2,.8,.2,1),
-            transform 420ms cubic-bezier(.2,.8,.2,1)
-        `;
+token.style.transition =
+    `
+        left 280ms cubic-bezier(.2,.8,.2,1),
+        top 280ms cubic-bezier(.2,.8,.2,1),
+        transform 280ms cubic-bezier(.2,.8,.2,1)
+    `;
 
 
     token.style.left =
@@ -1115,7 +1115,7 @@ async function animateTokenToPlayer(
         `;
 
 
-    await wait(380);
+    await wait(190);
 
 
     /* Put real character into seat */
@@ -1137,7 +1137,7 @@ async function animateTokenToPlayer(
     token.remove();
 
 
-    await wait(90);
+    await wait(45);
 
 
     avatar.classList.remove(
