@@ -94,21 +94,23 @@ body{
 
     min-width:300px;
 
-    padding:14px 20px 15px;
+    padding:15px 22px 16px;
 
-    background:rgba(24,21,42,.88);
+    background:
+        linear-gradient(
+            180deg,
+            #ffe8b5,
+            #f4d79b
+        );
 
-    border:
-        1px solid
-        rgba(196,174,220,.35);
+    border:2px solid #21182f;
 
-    border-radius:12px;
+    border-radius:11px;
 
     box-shadow:
-        0 8px 24px
-        rgba(0,0,0,.22);
+        0 5px 0 rgba(0,0,0,.12),
+        0 9px 22px rgba(0,0,0,.20);
 }
-
 
 .trainer-title-small{
     display:block;
@@ -117,11 +119,11 @@ body{
 
     font-family:"Roboto", sans-serif;
     font-size:10px;
-    font-weight:700;
+    font-weight:800;
 
     letter-spacing:2px;
 
-    color:#bca9dc;
+    color:#6d5363;
 }
 
 
@@ -132,19 +134,20 @@ body{
     font-size:25px;
     line-height:1.1;
 
-    color:white;
+    color:#20172f;
 }
 
 
 .trainer-instruction{
     display:block;
 
-    margin-top:6px;
+    margin-top:7px;
 
     font-family:"Roboto", sans-serif;
     font-size:13px;
+    font-weight:500;
 
-    color:rgba(255,255,255,.65);
+    color:#44354a;
 }
 
 
@@ -162,19 +165,22 @@ body{
 
     min-width:175px;
 
-    padding:12px 18px;
+    padding:13px 20px;
 
-    background:rgba(24,21,42,.88);
+    background:
+        linear-gradient(
+            180deg,
+            #ffe8b5,
+            #f4d79b
+        );
 
-    border:
-        1px solid
-        rgba(196,174,220,.35);
+    border:2px solid #21182f;
 
-    border-radius:12px;
+    border-radius:11px;
 
     box-shadow:
-        0 8px 24px
-        rgba(0,0,0,.22);
+        0 5px 0 rgba(0,0,0,.12),
+        0 9px 22px rgba(0,0,0,.20);
 
     text-align:center;
 }
@@ -183,7 +189,7 @@ body{
 .phase-number{
     display:block;
 
-    margin-bottom:2px;
+    margin-bottom:3px;
 
     font-family:"Roboto", sans-serif;
     font-size:11px;
@@ -191,7 +197,7 @@ body{
 
     letter-spacing:2px;
 
-    color:#bca9dc;
+    color:#6d5363;
 }
 
 
@@ -201,9 +207,8 @@ body{
     font-family:"Droid Sans", sans-serif;
     font-size:17px;
 
-    color:white;
+    color:#20172f;
 }
-
 
 /* ==========================================
    Player Area
@@ -358,14 +363,12 @@ body{
 ========================================== */
 
 .board-center-mark{
-    width:46px;
-    height:46px;
+    width:54px;
+    height:54px;
 
     position:relative;
 
     background:#b486a4;
-
-    transform:rotate(45deg);
 
     clip-path:polygon(
         50% 0%,
@@ -384,7 +387,6 @@ body{
             rgba(180,134,164,.18)
         );
 }
-
 
 .board-center-mark::before,
 .board-center-mark::after{
@@ -551,20 +553,28 @@ body{
 
     margin-top:-4px;
 
-    padding:5px 7px;
+    padding:5px 8px;
 
     overflow:hidden;
 
-    background:#f3dca8;
-    color:#211a39;
+    background:
+        linear-gradient(
+            180deg,
+            #171528,
+            #0e0d19
+        );
 
-    border:2px solid #211a39;
+    color:white;
+
+    border:
+        1px solid
+        rgba(179,151,224,.65);
 
     border-radius:7px;
 
     box-shadow:
-        0 3px 7px
-        rgba(0,0,0,.22);
+        0 3px 8px
+        rgba(0,0,0,.35);
 
     font-family:"Roboto", sans-serif;
     font-size:12px;
@@ -576,7 +586,6 @@ body{
     white-space:nowrap;
 }
 
-
 /* ==========================================
    Character Name
 ========================================== */
@@ -587,15 +596,15 @@ body{
     padding:2px 8px;
 
     background:
-        rgba(243,220,168,.12);
+        rgba(17,14,29,.55);
 
-    color:#f3dca8;
+    color:rgba(255,255,255,.88);
 
     border-radius:4px;
 
     font-family:"Roboto", sans-serif;
     font-size:9px;
-    font-weight:700;
+    font-weight:600;
 
     text-align:center;
 
