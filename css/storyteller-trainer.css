@@ -1725,3 +1725,52 @@ body{
 
     cursor:pointer;
 }
+/* ==========================================
+   Unavailable Character
+========================================== */
+
+.character-option-disabled{
+    cursor:not-allowed;
+}
+
+
+.character-option-disabled
+.character-option-token{
+    filter:
+        grayscale(1)
+        saturate(0)
+        opacity(.45);
+
+    border-color:
+        rgba(55,35,63,.35);
+
+    box-shadow:
+        0 2px 0
+        rgba(45,29,48,.12);
+}
+
+
+.character-option-disabled
+.character-option-name{
+    color:
+        rgba(40,29,48,.38);
+}
+
+
+/* don't give disabled characters
+   the normal hover animation */
+
+.character-option-disabled:hover
+.character-option-token{
+    transform:
+        rotate(1deg);
+
+    filter:
+        grayscale(1)
+        saturate(0)
+        opacity(.45);
+
+    box-shadow:
+        0 2px 0
+        rgba(45,29,48,.12);
+}
