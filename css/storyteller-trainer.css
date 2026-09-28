@@ -159,7 +159,7 @@
             rgba(102,102,153,.07) 73px,
             transparent 74px
         ),
-        #fafafa;
+        white;
 
     border:3px solid var(--purple);
 
@@ -261,7 +261,7 @@
 }
 
 .trainer-player{
-    --player-distance:305px;
+    --player-distance:265px;
 
     position:absolute;
 
