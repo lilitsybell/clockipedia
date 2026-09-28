@@ -781,7 +781,6 @@
     background:white;
 }
 
-
 /* Townsfolk */
 
 .trainer-player-avatar.team-townsfolk{
@@ -789,26 +788,25 @@
 }
 
 
-/* Outsiders */
+/* Outsider */
 
-.trainer-player-avatar.team-outsiders{
+.trainer-player-avatar.team-outsider{
     border-color:var(--blue);
 }
 
 
-/* Minions */
+/* Minion */
 
-.trainer-player-avatar.team-minions{
+.trainer-player-avatar.team-minion{
     border-color:var(--red);
 }
 
 
-/* Demons */
+/* Demon */
 
-.trainer-player-avatar.team-demons{
+.trainer-player-avatar.team-demon{
     border-color:var(--red);
 }
-
 /* ==========================================
    Responsive
 ========================================== */
