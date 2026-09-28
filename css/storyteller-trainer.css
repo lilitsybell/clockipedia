@@ -777,37 +777,25 @@
     background:var(--light-gray);
 }
 /* ==========================================
-   Character Team Token Colors
+   Character Token Team Colors
 ========================================== */
 
 .trainer-player-avatar.has-character{
     background:white;
+    border-width:3px;
 }
 
-/* Townsfolk */
 
-.trainer-player-avatar.team-townsfolk{
+/* Townsfolk + Outsiders */
+
+.trainer-player-avatar.team-good{
     border-color:var(--blue);
 }
 
 
-/* Outsider */
+/* Minions + Demons */
 
-.trainer-player-avatar.team-outsider{
-    border-color:var(--blue);
-}
-
-
-/* Minion */
-
-.trainer-player-avatar.team-minion{
-    border-color:var(--red);
-}
-
-
-/* Demon */
-
-.trainer-player-avatar.team-demon{
+.trainer-player-avatar.team-evil{
     border-color:var(--red);
 }
 /* ==========================================
