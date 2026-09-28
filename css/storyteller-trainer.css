@@ -1195,20 +1195,233 @@ body{
 .character-selection-distribute:hover{
     filter:brightness(1.05);
 }
-
 /* ==========================================
-   Responsive
+   Character Rows
 ========================================== */
 
-@media(max-width:1000px){
+.character-grid{
+    min-width:0;
 
-    .trainer{
-        margin-left:0;
-    }
+    padding-left:24px;
+
+    display:grid;
+
+    grid-template-rows:
+        repeat(4, 1fr);
+
+    gap:8px;
+
+    overflow:visible;
+}
 
 
-    .player-area{
-        width:min(78vh, 78vw);
-    }
+.character-row{
+    min-width:0;
 
+    display:flex;
+    align-items:center;
+
+    gap:9px;
+}
+
+
+/* ==========================================
+   Character Option
+========================================== */
+
+.character-option{
+    width:72px;
+
+    flex:0 0 72px;
+
+    padding:0;
+
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+
+    gap:5px;
+
+    appearance:none;
+
+    background:none;
+
+    border:0;
+
+    font:inherit;
+
+    cursor:pointer;
+}
+
+
+/* ==========================================
+   Token
+========================================== */
+
+.character-option-token{
+    width:62px;
+    height:62px;
+
+    position:relative;
+
+    display:flex;
+    align-items:center;
+    justify-content:center;
+
+    background:
+        linear-gradient(
+            145deg,
+            #fff4d3,
+            #f4d99b
+        );
+
+    border:
+        2px solid
+        #37233f;
+
+    border-radius:10px;
+
+    box-shadow:
+        0 3px 0
+        rgba(45,29,48,.25),
+        0 5px 9px
+        rgba(40,25,43,.14);
+
+    transform:
+        rotate(-1deg);
+
+    transition:
+        transform .12s ease,
+        box-shadow .12s ease,
+        filter .12s ease;
+}
+
+
+/* slightly irregular */
+
+.character-option:nth-child(even)
+.character-option-token{
+    transform:
+        rotate(1.5deg);
+}
+
+
+.character-option:nth-child(3n)
+.character-option-token{
+    transform:
+        rotate(-2deg);
+}
+
+
+/* ==========================================
+   Character Artwork
+========================================== */
+
+.character-option-icon{
+    display:block;
+
+    width:44px;
+    height:44px;
+
+    object-fit:contain;
+
+    pointer-events:none;
+}
+
+
+/* ==========================================
+   Character Name
+========================================== */
+
+.character-option-name{
+    width:100%;
+
+    overflow:hidden;
+
+    font-family:"Roboto", sans-serif;
+    font-size:10px;
+    font-weight:700;
+
+    line-height:1.1;
+
+    text-align:center;
+    text-overflow:ellipsis;
+    white-space:nowrap;
+
+    color:#281d30;
+}
+
+
+/* ==========================================
+   Team Accents
+========================================== */
+
+.character-option[
+    data-team="Townsfolk"
+]
+.character-option-token,
+.character-option[
+    data-team="Outsider"
+]
+.character-option-token{
+    border-color:#2184bd;
+}
+
+
+.character-option[
+    data-team="Minion"
+]
+.character-option-token,
+.character-option[
+    data-team="Demon"
+]
+.character-option-token{
+    border-color:#b72b32;
+}
+
+
+/* ==========================================
+   Hover
+========================================== */
+
+.character-option:hover
+.character-option-token{
+    transform:
+        translateY(-3px)
+        rotate(0deg);
+
+    filter:brightness(1.04);
+
+    box-shadow:
+        0 4px 0
+        rgba(45,29,48,.22),
+        0 8px 13px
+        rgba(40,25,43,.2);
+}
+
+
+/* ==========================================
+   Selected
+========================================== */
+
+.character-option.selected
+.character-option-token{
+    transform:
+        translateY(-3px)
+        scale(1.06)
+        rotate(0deg);
+
+    box-shadow:
+        0 0 0 3px
+        #7657a8,
+        0 5px 0
+        rgba(45,29,48,.25),
+        0 9px 16px
+        rgba(40,25,43,.24);
+}
+
+
+.character-option.selected
+.character-option-name{
+    color:#6a4894;
 }
