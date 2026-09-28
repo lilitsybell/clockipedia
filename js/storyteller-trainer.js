@@ -473,7 +473,24 @@ function createCharacterButton(
 
     button.dataset.team =
         character.team;
+/*
+   The Drunk is never placed directly
+   into the bag.
 
+   A Townsfolk token is used instead
+   and later receives the
+   "Is the Drunk" reminder.
+*/
+
+if(characterId === "drunk"){
+
+    button.disabled = true;
+
+    button.classList.add(
+        "character-option-disabled"
+    );
+
+}
 
     button.innerHTML = `
 
