@@ -150,7 +150,181 @@
 
         </div>
 
+<!-- ======================================
+     Character Selection
+======================================= -->
 
+<div
+    id="character-selection"
+    class="character-selection hidden"
+>
+
+    <div class="character-selection-backdrop"></div>
+
+
+    <div class="character-selection-panel">
+
+
+        <!-- ==================================
+             Header
+        =================================== -->
+
+        <div class="character-selection-header">
+
+            <span class="character-selection-step">
+                BUILD THE BAG
+            </span>
+
+            <h2>
+                Select the characters for
+                <span id="selection-player-count">
+                    12
+                </span>
+                players
+            </h2>
+
+        </div>
+
+
+
+        <!-- ==================================
+             Character Area
+        =================================== -->
+
+        <div class="character-selection-body">
+
+
+            <!-- ==============================
+                 Required Counts
+            =============================== -->
+
+            <div
+                id="character-requirements"
+                class="character-requirements"
+            >
+
+                <div
+                    class="character-requirement"
+                    data-team="Townsfolk"
+                >
+
+                    <span class="requirement-symbol"></span>
+
+                    <strong>
+                        <span id="townsfolk-selected">0</span>
+                        /
+                        <span id="townsfolk-required">7</span>
+                    </strong>
+
+                </div>
+
+
+                <div
+                    class="character-requirement"
+                    data-team="Outsider"
+                >
+
+                    <span class="requirement-symbol"></span>
+
+                    <strong>
+                        <span id="outsider-selected">0</span>
+                        /
+                        <span id="outsider-required">2</span>
+                    </strong>
+
+                </div>
+
+
+                <div
+                    class="character-requirement"
+                    data-team="Minion"
+                >
+
+                    <span class="requirement-symbol"></span>
+
+                    <strong>
+                        <span id="minion-selected">0</span>
+                        /
+                        <span id="minion-required">2</span>
+                    </strong>
+
+                </div>
+
+
+                <div
+                    class="character-requirement"
+                    data-team="Demon"
+                >
+
+                    <span class="requirement-symbol"></span>
+
+                    <strong>
+                        <span id="demon-selected">0</span>
+                        /
+                        <span id="demon-required">1</span>
+                    </strong>
+
+                </div>
+
+            </div>
+
+
+
+            <!-- ==============================
+                 Characters
+            =============================== -->
+
+            <div
+                id="character-grid"
+                class="character-grid"
+            ></div>
+
+
+        </div>
+
+
+
+        <!-- ==================================
+             Footer
+        =================================== -->
+
+        <div class="character-selection-footer">
+
+            <div
+                id="selection-total"
+                class="selection-total"
+            >
+                0 / 12 selected
+            </div>
+
+
+            <div class="character-selection-actions">
+
+                <button
+                    id="cancel-character-selection"
+                    class="character-selection-cancel"
+                    type="button"
+                >
+                    Cancel
+                </button>
+
+
+                <button
+                    id="distribute-characters"
+                    class="character-selection-distribute"
+                    type="button"
+                >
+                    Distribute Tokens
+                </button>
+
+            </div>
+
+        </div>
+
+
+    </div>
+
+</div>
 
         <!-- ======================================
              Status
