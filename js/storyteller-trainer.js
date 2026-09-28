@@ -744,3 +744,603 @@ function bindCharacterSelectionControls(){
     }
 
 }
+/* ==========================================
+   Shuffle
+========================================== */
+
+function shuffleCharacters(characters){
+
+    const shuffled = [
+        ...characters
+    ];
+
+
+    for(
+        let i = shuffled.length - 1;
+        i > 0;
+        i--
+    ){
+
+        const j =
+            Math.floor(
+                Math.random() *
+                (i + 1)
+            );
+
+
+        [
+            shuffled[i],
+            shuffled[j]
+        ] = [
+            shuffled[j],
+            shuffled[i]
+        ];
+
+    }
+
+
+    return shuffled;
+
+}
+
+
+/* ==========================================
+   Distribute Characters
+========================================== */
+
+async function distributeCharacters(){
+
+    if(
+        !selectedCharacters ||
+        selectedCharacters.length !==
+        trainerPlayerCount
+    ){
+        return;
+    }
+
+
+    const characters =
+        shuffleCharacters(
+            selectedCharacters
+        );
+
+
+    /*
+       Close character selection.
+    */
+
+    const selection =
+        document.querySelector(
+            "#character-selection"
+        );
+
+
+    selection?.classList.remove(
+        "open"
+    );
+
+
+    /*
+       Brief pause so the modal has time
+       to disappear.
+    */
+
+    await wait(120);
+
+
+    /*
+       Clear the existing seats.
+    */
+
+    clearPlayerCharacters();
+
+
+    /*
+       Send characters to seats.
+    */
+
+    for(
+        let i = 0;
+        i < characters.length;
+        i++
+    ){
+
+        animateCharacterToSeat(
+            characters[i],
+            i
+        );
+
+
+        /*
+           Controls the delay between
+           each flying token.
+
+           Smaller = faster.
+    */
+
+        await wait(70);
+
+    }
+
+
+    /*
+       Allow final token to finish flying.
+    */
+
+    await wait(260);
+
+
+    finishCharacterDistribution();
+
+}
+
+
+/* ==========================================
+   Animate Character To Seat
+========================================== */
+
+function animateCharacterToSeat(
+    character,
+    seatIndex
+){
+
+    const layer =
+        document.querySelector(
+            "#distribution-layer"
+        );
+
+
+    const seat =
+        document.querySelector(
+            `.trainer-player[data-seat="${seatIndex}"]`
+        );
+
+
+    const target =
+        seat?.querySelector(
+            ".player-character"
+        );
+
+
+    if(
+        !layer ||
+        !seat ||
+        !target
+    ){
+        return;
+    }
+
+
+    /*
+       Create flying character.
+    */
+
+    const flying =
+        document.createElement(
+            "div"
+        );
+
+
+    flying.className =
+        "distribution-token";
+
+
+    const image =
+        document.createElement(
+            "img"
+        );
+
+
+    image.src =
+        character.image;
+
+
+    image.alt =
+        character.name;
+
+
+    flying.appendChild(
+        image
+    );
+
+
+    layer.appendChild(
+        flying
+    );
+
+
+    /*
+       Start in center.
+    */
+
+    requestAnimationFrame(
+        () => {
+
+            flying.classList.add(
+                "visible"
+            );
+
+        }
+    );
+
+
+    /*
+       Calculate destination relative
+       to the board.
+    */
+
+    const board =
+        document.querySelector(
+            ".trainer-board"
+        );
+
+
+    const boardRect =
+        board.getBoundingClientRect();
+
+
+    const targetRect =
+        target.getBoundingClientRect();
+
+
+    const targetX =
+        targetRect.left -
+        boardRect.left +
+        (
+            targetRect.width /
+            2
+        );
+
+
+    const targetY =
+        targetRect.top -
+        boardRect.top +
+        (
+            targetRect.height /
+            2
+        );
+
+
+    /*
+       Let the token briefly exist
+       in the center before flying.
+    */
+
+    requestAnimationFrame(
+        () => {
+
+            requestAnimationFrame(
+                () => {
+
+                    flying.style.left =
+                        `${targetX}px`;
+
+                    flying.style.top =
+                        `${targetY}px`;
+
+                    flying.style.transform =
+                        `
+                        translate(-50%, -50%)
+                        scale(.92)
+                        `;
+
+                }
+            );
+
+        }
+    );
+
+
+    /*
+       Replace flying token with
+       actual seat contents.
+    */
+
+    window.setTimeout(
+        () => {
+
+            setPlayerCharacter(
+                seat,
+                character
+            );
+
+
+            flying.remove();
+
+        },
+        220
+    );
+
+}
+
+
+/* ==========================================
+   Set Player Character
+========================================== */
+
+function setPlayerCharacter(
+    seat,
+    character
+){
+
+    const characterBox =
+        seat.querySelector(
+            ".player-character"
+        );
+
+
+    const role =
+        seat.querySelector(
+            ".player-role"
+        );
+
+
+    if(
+        !characterBox ||
+        !role
+    ){
+        return;
+    }
+
+
+    /*
+       Character artwork.
+    */
+
+    characterBox.innerHTML = "";
+
+
+    const image =
+        document.createElement(
+            "img"
+        );
+
+
+    image.src =
+        character.image;
+
+
+    image.alt =
+        character.name;
+
+
+    characterBox.appendChild(
+        image
+    );
+
+
+    /*
+       Character name.
+    */
+
+    role.textContent =
+        character.name;
+
+
+    /*
+       Team used for border styling.
+    */
+
+    seat.dataset.team =
+        normalizeTrainerTeam(
+            character.team
+        );
+
+
+    /*
+       Landing animation.
+    */
+
+    seat.classList.remove(
+        "character-landed"
+    );
+
+
+    void seat.offsetWidth;
+
+
+    seat.classList.add(
+        "character-landed"
+    );
+
+
+    window.setTimeout(
+        () => {
+
+            seat.classList.remove(
+                "character-landed"
+            );
+
+        },
+        200
+    );
+
+}
+
+
+/* ==========================================
+   Normalize Team
+========================================== */
+
+function normalizeTrainerTeam(team){
+
+    const normalized =
+        String(team || "")
+        .trim()
+        .toLowerCase();
+
+
+    if(
+        normalized === "townsfolk"
+    ){
+        return "Townsfolk";
+    }
+
+
+    if(
+        normalized === "outsider" ||
+        normalized === "outsiders"
+    ){
+        return "Outsider";
+    }
+
+
+    if(
+        normalized === "minion" ||
+        normalized === "minions"
+    ){
+        return "Minion";
+    }
+
+
+    if(
+        normalized === "demon" ||
+        normalized === "demons"
+    ){
+        return "Demon";
+    }
+
+
+    return team;
+
+}
+
+
+/* ==========================================
+   Clear Player Characters
+========================================== */
+
+function clearPlayerCharacters(){
+
+    document
+        .querySelectorAll(
+            ".trainer-player"
+        )
+        .forEach(
+            seat => {
+
+                const characterBox =
+                    seat.querySelector(
+                        ".player-character"
+                    );
+
+
+                const role =
+                    seat.querySelector(
+                        ".player-role"
+                    );
+
+
+                if(characterBox){
+
+                    characterBox.innerHTML = `
+
+                        <span
+                            class="player-character-placeholder"
+                        >
+                            ?
+                        </span>
+
+                    `;
+
+                }
+
+
+                if(role){
+
+                    role.textContent =
+                        "Unknown";
+
+                }
+
+
+                delete seat.dataset.team;
+
+            }
+        );
+
+}
+
+
+/* ==========================================
+   Finish Distribution
+========================================== */
+
+function finishCharacterDistribution(){
+
+    const phaseNumber =
+        document.querySelector(
+            "#phase-number"
+        );
+
+
+    const phaseName =
+        document.querySelector(
+            "#phase-name"
+        );
+
+
+    const instruction =
+        document.querySelector(
+            "#trainer-instruction"
+        );
+
+
+    const status =
+        document.querySelector(
+            "#selection-status"
+        );
+
+
+    if(phaseNumber){
+
+        phaseNumber.textContent =
+            "SETUP";
+
+    }
+
+
+    if(phaseName){
+
+        phaseName.textContent =
+            "Review Characters";
+
+    }
+
+
+    if(instruction){
+
+        instruction.textContent =
+            "Review the distributed characters";
+
+    }
+
+
+    if(status){
+
+        status.textContent =
+            `${trainerPlayerCount} characters distributed`;
+
+    }
+
+}
+
+
+/* ==========================================
+   Wait
+========================================== */
+
+function wait(milliseconds){
+
+    return new Promise(
+        resolve => {
+
+            window.setTimeout(
+                resolve,
+                milliseconds
+            );
+
+        }
+    );
+
+}
