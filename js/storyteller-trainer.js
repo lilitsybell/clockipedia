@@ -2,18 +2,25 @@ console.log("storyteller-trainer.js loaded");
 
 
 /* ==========================================
-   Temporary Game Settings
+   Game Settings
 ========================================== */
 
 const trainerPlayerCount = 12;
 
 let trainerCharacters = {};
+
 let selectedTrainerCharacters = [];
+
+let distributedTrainerCharacters = [];
+
+
 /* ==========================================
    Trouble Brewing SAO Order
 ========================================== */
 
 const troubleBrewingSAO = [
+
+    /* Townsfolk */
 
     "washerwoman",
     "librarian",
@@ -22,6 +29,7 @@ const troubleBrewingSAO = [
     "empath",
     "fortuneteller",
     "undertaker",
+
     "monk",
     "ravenkeeper",
     "virgin",
@@ -29,138 +37,78 @@ const troubleBrewingSAO = [
     "soldier",
     "mayor",
 
+
+    /* Outsiders */
+
     "butler",
     "drunk",
     "recluse",
     "saint",
+
+
+    /* Minions */
 
     "poisoner",
     "spy",
     "baron",
     "scarletwoman",
 
+
+    /* Demon */
+
     "imp"
 
 ];
+
+
+/* ==========================================
+   Setup Requirements
+========================================== */
+
 const setupRequirements = {
+
     Townsfolk: 7,
     Outsiders: 2,
     Minions: 2,
     Demons: 1
+
 };
+
+
+/* ==========================================
+   Team Display
+========================================== */
+
+const setupTeams = [
+
+    "Townsfolk",
+    "Outsiders",
+    "Minions",
+    "Demons"
+
+];
+
+
 /* ==========================================
    Initialize
 ========================================== */
 
-document.addEventListener("DOMContentLoaded", async () => {
+document.addEventListener(
+    "DOMContentLoaded",
+    async () => {
 
-    buildPlayerRing();
+        buildPlayerRing();
 
-    await loadTrainerCharacters();
+        await loadTrainerCharacters();
 
-    buildCharacterSelection();
-initializeCharacterSelectionWindow();
-});
+        buildCharacterSelection();
 
-/* ==========================================
-   Character Selection Window
-========================================== */
+        initializeCharacterSelectionWindow();
 
-function initializeCharacterSelectionWindow(){
-
-    const openButton =
-        document.querySelector(
-            "#open-character-selection"
-        );
-
-    const closeButton =
-        document.querySelector(
-            "#close-character-selection"
-        );
-
-    const overlay =
-        document.querySelector(
-            "#character-selection"
-        );
-
-
-    if(!openButton || !closeButton || !overlay){
-        return;
-    }
-
-
-    openButton.addEventListener(
-        "click",
-        () => {
-
-            overlay.classList.remove("hidden");
-
-        }
-    );
-
-
-    closeButton.addEventListener(
-        "click",
-        () => {
-
-            overlay.classList.add("hidden");
-
-        }
-    );
-
-}
-/* ==========================================
-   Build Player Ring
-========================================== */
-
-function buildPlayerRing(){
-
-    const ring =
-        document.querySelector("#player-ring");
-
-    if(!ring) return;
-
-    ring.innerHTML = "";
-
-
-    for(
-        let i = 0;
-        i < trainerPlayerCount;
-        i++
-    ){
-
-        const player =
-            document.createElement("div");
-
-        player.className = "trainer-player";
-
-
-        const angle =
-            (360 / trainerPlayerCount) * i - 90;
-
-
-        player.style.setProperty(
-            "--player-angle",
-            `${angle}deg`
-        );
-
-
-        player.innerHTML = `
-            <div class="trainer-player-avatar">
-                ${i + 1}
-            </div>
-
-            <div class="trainer-player-name">
-                Player ${i + 1}
-            </div>
-        `;
-
-
-        ring.appendChild(player);
+        updateCharacterSelection();
 
     }
-
-}
+);
 
 
 /* ==========================================
@@ -173,6 +121,7 @@ async function loadTrainerCharacters(){
 
         const response =
             await fetch("/data/characters.json");
+
 
         if(!response.ok){
 
@@ -191,9 +140,10 @@ async function loadTrainerCharacters(){
             Object.fromEntries(
 
                 Object.entries(allCharacters)
-                    .filter(([slug, character]) =>
-                        character.edition ===
-                        "Trouble Brewing"
+                    .filter(
+                        ([slug, character]) =>
+                            character.edition ===
+                            "Trouble Brewing"
                     )
 
             );
@@ -205,6 +155,7 @@ async function loadTrainerCharacters(){
         );
 
     }
+
     catch(error){
 
         console.error(
@@ -218,108 +169,253 @@ async function loadTrainerCharacters(){
 
 
 /* ==========================================
+   Build Player Ring
+========================================== */
+
+function buildPlayerRing(){
+
+    const ring =
+        document.querySelector(
+            "#player-ring"
+        );
+
+
+    if(!ring) return;
+
+
+    ring.innerHTML = "";
+
+
+    for(
+        let i = 0;
+        i < trainerPlayerCount;
+        i++
+    ){
+
+        const player =
+            document.createElement("div");
+
+
+        player.className =
+            "trainer-player";
+
+
+        player.dataset.seat =
+            i;
+
+
+        const angle =
+            (360 / trainerPlayerCount) * i - 90;
+
+
+        player.style.setProperty(
+            "--player-angle",
+            `${angle}deg`
+        );
+
+
+        player.innerHTML = `
+
+            <div class="trainer-player-avatar">
+
+                <span>
+                    ${i + 1}
+                </span>
+
+            </div>
+
+            <div class="trainer-player-name">
+                Player ${i + 1}
+            </div>
+
+        `;
+
+
+        ring.appendChild(player);
+
+    }
+
+}
+
+
+/* ==========================================
+   Character Selection Window
+========================================== */
+
+function initializeCharacterSelectionWindow(){
+
+    const openButton =
+        document.querySelector(
+            "#open-character-selection"
+        );
+
+    const closeButton =
+        document.querySelector(
+            "#close-character-selection"
+        );
+
+    const distributeButton =
+        document.querySelector(
+            "#distribute-tokens"
+        );
+
+    const overlay =
+        document.querySelector(
+            "#character-selection"
+        );
+
+
+    if(
+        !openButton ||
+        !closeButton ||
+        !distributeButton ||
+        !overlay
+    ){
+        return;
+    }
+
+
+    /* Open */
+
+    openButton.addEventListener(
+        "click",
+        () => {
+
+            overlay.classList.remove(
+                "hidden"
+            );
+
+        }
+    );
+
+
+    /* Cancel */
+
+    closeButton.addEventListener(
+        "click",
+        () => {
+
+            overlay.classList.add(
+                "hidden"
+            );
+
+        }
+    );
+
+
+    /* Distribute */
+
+    distributeButton.addEventListener(
+        "click",
+        () => {
+
+            distributeTrainerTokens();
+
+        }
+    );
+
+}
+
+
+/* ==========================================
    Build Character Selection
 ========================================== */
 
 function buildCharacterSelection(){
 
     const container =
-        document.querySelector("#character-groups");
+        document.querySelector(
+            "#character-groups"
+        );
+
 
     if(!container) return;
 
 
     container.innerHTML = "";
-buildSetupRequirements();
-
-    const teams = [
-        "Townsfolk",
-        "Outsiders",
-        "Minions",
-        "Demons"
-    ];
 
 
-    teams.forEach(team => {
+    troubleBrewingSAO.forEach(slug => {
 
-const characters =
-    troubleBrewingSAO
-        .filter(slug => {
+        const character =
+            trainerCharacters[slug];
 
-            const character =
-                trainerCharacters[slug];
 
-            return (
-                character &&
-                character.team === team
+        if(!character){
+
+            console.warn(
+                `Missing Trouble Brewing character: ${slug}`
             );
 
-        })
-        .map(slug => [
-            slug,
-            trainerCharacters[slug]
-        ]);
+            return;
 
-        if(!characters.length) return;
+        }
 
 
-        const group =
-            document.createElement("div");
-
-        group.className =
-            `character-group team-${team.toLowerCase()}`;
+        const button =
+            document.createElement("button");
 
 
-        group.innerHTML = `
-            <h3>${team}</h3>
+        button.type =
+            "button";
 
-            <div class="character-choice-list">
-                ${characters.map(
-                    ([slug, character]) => `
-<button
-    class="character-choice"
-    data-character="${slug}"
-    type="button"
->
 
-                            <img
-                                src="${character.image}"
-                                alt="${character.name}"
-                            >
+        button.className =
+            "character-choice";
 
-                            <span>
-                                ${character.name}
-                            </span>
 
-                        </button>
-                    `
-                ).join("")}
-            </div>
+        button.dataset.character =
+            slug;
+
+
+        button.dataset.team =
+            character.team;
+
+
+        button.title =
+            character.name;
+
+
+        button.innerHTML = `
+
+            <img
+                src="${character.image}"
+                alt="${character.name}"
+            >
+
+            <span>
+                ${character.name}
+            </span>
+
         `;
 
-
-        container.appendChild(group);
-
-    });
-container
-    .querySelectorAll(".character-choice")
-    .forEach(button => {
 
         button.addEventListener(
             "click",
             () => {
 
                 toggleTrainerCharacter(
-                    button.dataset.character
+                    slug
                 );
 
             }
         );
 
+
+        container.appendChild(
+            button
+        );
+
     });
+
+
+    buildSetupRequirements();
+
 }
+
+
 /* ==========================================
-   Setup Requirements
+   Build Setup Requirements
 ========================================== */
 
 function buildSetupRequirements(){
@@ -329,49 +425,68 @@ function buildSetupRequirements(){
             "#setup-requirements"
         );
 
+
     if(!container) return;
 
 
-    const teams = [
-        "Townsfolk",
-        "Outsiders",
-        "Minions",
-        "Demons"
-    ];
-
-
     container.innerHTML =
-        teams.map(team => `
+        setupTeams
+            .map(team => {
 
-            <div class="setup-requirement">
+                return `
 
-                <span class="requirement-team">
-                    ${team}
-                </span>
+                    <div
+                        class="setup-requirement"
+                        title="${team}"
+                    >
 
-                <strong
-                    class="requirement-count"
-                    data-requirement-team="${team}"
-                >
-                    0 / ${setupRequirements[team]}
-                </strong>
+                        <span
+                            class="requirement-dot"
+                        ></span>
 
-            </div>
+                        <strong
+                            class="requirement-count"
+                            data-requirement-team="${team}"
+                        >
+                            ${setupRequirements[team]}
+                        </strong>
 
-        `).join("");
+                    </div>
+
+                `;
+
+            })
+            .join("");
 
 }
+
+
 /* ==========================================
    Toggle Character
 ========================================== */
 
 function toggleTrainerCharacter(slug){
 
+    const character =
+        trainerCharacters[slug];
+
+
+    if(!character) return;
+
+
+    const team =
+        character.team;
+
+
     const existingIndex =
-        selectedTrainerCharacters.indexOf(slug);
+        selectedTrainerCharacters.indexOf(
+            slug
+        );
 
 
-    /* Remove character */
+    /* ======================================
+       Remove
+    ====================================== */
 
     if(existingIndex !== -1){
 
@@ -380,28 +495,63 @@ function toggleTrainerCharacter(slug){
             1
         );
 
+
+        updateCharacterSelection();
+
+        return;
+
+    }
+
+
+    /* ======================================
+       Check Team Limit
+    ====================================== */
+
+    const selectedFromTeam =
+        selectedTrainerCharacters.filter(
+            selectedSlug =>
+                trainerCharacters[
+                    selectedSlug
+                ]?.team === team
+        ).length;
+
+
+    const teamLimit =
+        setupRequirements[team];
+
+
+    if(teamLimit === undefined){
+
+        console.warn(
+            `No setup requirement for team: ${team}`
+        );
+
+        return;
+
     }
 
 
-    /* Add character */
+    if(selectedFromTeam >= teamLimit){
 
-    else{
-
-        if(
-            selectedTrainerCharacters.length >=
-            trainerPlayerCount
-        ){
-            return;
-        }
-
-        selectedTrainerCharacters.push(slug);
+        return;
 
     }
+
+
+    /* ======================================
+       Add
+    ====================================== */
+
+    selectedTrainerCharacters.push(
+        slug
+    );
 
 
     updateCharacterSelection();
 
 }
+
+
 /* ==========================================
    Update Character Selection
 ========================================== */
@@ -409,11 +559,14 @@ function toggleTrainerCharacter(slug){
 function updateCharacterSelection(){
 
     document
-        .querySelectorAll(".character-choice")
+        .querySelectorAll(
+            ".character-choice"
+        )
         .forEach(button => {
 
             const slug =
                 button.dataset.character;
+
 
             const selected =
                 selectedTrainerCharacters.includes(
@@ -428,43 +581,31 @@ function updateCharacterSelection(){
 
         });
 
-updateSetupCounts();
 
-
-    const continueButton =
-        document.querySelector("#continue-setup");
-
-    if(continueButton){
-
-        continueButton.disabled =
-            selectedTrainerCharacters.length !==
-            trainerPlayerCount;
-
-    }
+    updateSetupCounts();
 
 }
+
+
 /* ==========================================
    Update Setup Counts
 ========================================== */
 
 function updateSetupCounts(){
 
-    const teams = [
-        "Townsfolk",
-        "Outsiders",
-        "Minions",
-        "Demons"
-    ];
+    let setupComplete = true;
 
 
-    teams.forEach(team => {
+    setupTeams.forEach(team => {
 
         const selectedCount =
-            selectedTrainerCharacters.filter(
-                slug =>
-                    trainerCharacters[slug]?.team ===
-                    team
-            ).length;
+            getSelectedTeamCount(
+                team
+            );
+
+
+        const requiredCount =
+            setupRequirements[team];
 
 
         const display =
@@ -476,46 +617,194 @@ function updateSetupCounts(){
         if(display){
 
             display.textContent =
-                `${selectedCount} / ${setupRequirements[team]}`;
+                `${selectedCount}/${requiredCount}`;
+
 
             display.classList.toggle(
                 "complete",
                 selectedCount ===
-                setupRequirements[team]
+                requiredCount
             );
+
+        }
+
+
+        if(
+            selectedCount !==
+            requiredCount
+        ){
+
+            setupComplete = false;
 
         }
 
     });
 
 
+    /* ======================================
+       Total
+    ====================================== */
+
     const total =
         document.querySelector(
             "#selection-total"
         );
 
+
     if(total){
 
         total.textContent =
-            `${selectedTrainerCharacters.length} / ${trainerPlayerCount} characters selected`;
+            `${selectedTrainerCharacters.length} / ${trainerPlayerCount} selected`;
 
     }
 
 
-    const distribute =
+    /* ======================================
+       Distribute Button
+    ====================================== */
+
+    const distributeButton =
         document.querySelector(
             "#distribute-tokens"
         );
 
-    if(distribute){
 
-        distribute.disabled =
-            selectedTrainerCharacters.length !==
-            trainerPlayerCount;
+    if(distributeButton){
+
+        distributeButton.disabled =
+            !setupComplete;
 
     }
 
 }
+
+
+/* ==========================================
+   Get Selected Team Count
+========================================== */
+
+function getSelectedTeamCount(team){
+
+    return selectedTrainerCharacters
+        .filter(slug => {
+
+            return (
+                trainerCharacters[slug]?.team ===
+                team
+            );
+
+        })
+        .length;
+
+}
+
+
+/* ==========================================
+   Shuffle
+========================================== */
+
+function shuffleArray(array){
+
+    const shuffled =
+        [...array];
+
+
+    for(
+        let i = shuffled.length - 1;
+        i > 0;
+        i--
+    ){
+
+        const j =
+            Math.floor(
+                Math.random() * (i + 1)
+            );
+
+
+        [
+            shuffled[i],
+            shuffled[j]
+        ] = [
+            shuffled[j],
+            shuffled[i]
+        ];
+
+    }
+
+
+    return shuffled;
+
+}
+
+
+/* ==========================================
+   Distribute Tokens
+========================================== */
+
+function distributeTrainerTokens(){
+
+    if(
+        selectedTrainerCharacters.length !==
+        trainerPlayerCount
+    ){
+        return;
+    }
+
+
+    distributedTrainerCharacters =
+        shuffleArray(
+            selectedTrainerCharacters
+        );
+
+
+    updatePlayerTokens();
+
+
+    const overlay =
+        document.querySelector(
+            "#character-selection"
+        );
+
+
+    if(overlay){
+
+        overlay.classList.add(
+            "hidden"
+        );
+
+    }
+
+
+    const openButton =
+        document.querySelector(
+            "#open-character-selection"
+        );
+
+
+    if(openButton){
+
+        openButton.textContent =
+            "Characters Distributed";
+
+    }
+
+
+    const phaseName =
+        document.querySelector(
+            ".phase-name"
+        );
+
+
+    if(phaseName){
+
+        phaseName.textContent =
+            "Review Characters";
+
+    }
+
+}
+
+
 /* ==========================================
    Update Player Tokens
 ========================================== */
@@ -528,52 +817,75 @@ function updatePlayerTokens(){
         );
 
 
-    players.forEach((player, index) => {
+    players.forEach(
+        (player, index) => {
 
-        const avatar =
-            player.querySelector(
-                ".trainer-player-avatar"
-            );
-
-
-        const slug =
-            selectedTrainerCharacters[index];
+            const avatar =
+                player.querySelector(
+                    ".trainer-player-avatar"
+                );
 
 
-        /* No character selected for this seat */
+            if(!avatar) return;
 
-        if(!slug){
 
-            avatar.innerHTML =
-                `<span>${index + 1}</span>`;
+            const slug =
+                distributedTrainerCharacters[
+                    index
+                ];
 
-            avatar.classList.remove(
+
+            /* ==================================
+               Empty Seat
+            ================================== */
+
+            if(!slug){
+
+                avatar.innerHTML = `
+
+                    <span>
+                        ${index + 1}
+                    </span>
+
+                `;
+
+
+                avatar.classList.remove(
+                    "has-character"
+                );
+
+
+                return;
+
+            }
+
+
+            /* ==================================
+               Character
+            ================================== */
+
+            const character =
+                trainerCharacters[slug];
+
+
+            if(!character) return;
+
+
+            avatar.innerHTML = `
+
+                <img
+                    src="${character.image}"
+                    alt="${character.name}"
+                >
+
+            `;
+
+
+            avatar.classList.add(
                 "has-character"
             );
 
-            return;
-
         }
-
-
-        const character =
-            trainerCharacters[slug];
-
-        if(!character) return;
-
-
-        avatar.innerHTML = `
-            <img
-                src="${character.image}"
-                alt="${character.name}"
-            >
-        `;
-
-
-        avatar.classList.add(
-            "has-character"
-        );
-
-    });
+    );
 
 }
