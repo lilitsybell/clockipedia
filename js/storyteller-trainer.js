@@ -1189,7 +1189,6 @@ function clearPlayerTokens(){
 
 }
 
-
 /* ==========================================
    Set Player Character
 ========================================== */
@@ -1201,10 +1200,8 @@ function setPlayerCharacter(
 ){
 
     avatar.classList.remove(
-        "team-townsfolk",
-        "team-outsider",
-        "team-minion",
-        "team-demon"
+        "team-good",
+        "team-evil"
     );
 
 
@@ -1219,12 +1216,39 @@ function setPlayerCharacter(
 
 
     avatar.classList.add(
-        "has-character",
-        `team-${character.team.toLowerCase()}`
+        "has-character"
     );
 
-}
 
+    /* Team border color */
+
+    if(
+        character.team === "Townsfolk" ||
+        character.team === "Outsider" ||
+        character.team === "Outsiders"
+    ){
+
+        avatar.classList.add(
+            "team-good"
+        );
+
+    }
+
+
+    if(
+        character.team === "Minion" ||
+        character.team === "Minions" ||
+        character.team === "Demon" ||
+        character.team === "Demons"
+    ){
+
+        avatar.classList.add(
+            "team-evil"
+        );
+
+    }
+
+}
 
 /* ==========================================
    Wait
