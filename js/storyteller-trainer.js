@@ -7,7 +7,76 @@ console.log("storyteller-trainer.js loaded");
 
 const trainerPlayerCount = 12;
 
+/* ==========================================
+   Trouble Brewing Setup
+========================================== */
 
+const troubleBrewingSetup = {
+
+    7:{
+        townsfolk:5,
+        outsiders:0,
+        minions:1,
+        demons:1
+    },
+
+    8:{
+        townsfolk:5,
+        outsiders:1,
+        minions:1,
+        demons:1
+    },
+
+    9:{
+        townsfolk:5,
+        outsiders:2,
+        minions:1,
+        demons:1
+    },
+
+    10:{
+        townsfolk:7,
+        outsiders:0,
+        minions:2,
+        demons:1
+    },
+
+    11:{
+        townsfolk:7,
+        outsiders:1,
+        minions:2,
+        demons:1
+    },
+
+    12:{
+        townsfolk:7,
+        outsiders:2,
+        minions:2,
+        demons:1
+    },
+
+    13:{
+        townsfolk:9,
+        outsiders:0,
+        minions:3,
+        demons:1
+    },
+
+    14:{
+        townsfolk:9,
+        outsiders:1,
+        minions:3,
+        demons:1
+    },
+
+    15:{
+        townsfolk:9,
+        outsiders:2,
+        minions:3,
+        demons:1
+    }
+
+};
 /* ==========================================
    Player Names
 ========================================== */
@@ -1375,5 +1444,193 @@ function wait(milliseconds){
 
         }
     );
+
+}
+/* ==========================================
+   Get Expected Setup
+========================================== */
+
+function getExpectedSetup(){
+
+    const base =
+        troubleBrewingSetup[
+            trainerPlayerCount
+        ];
+
+
+    if(!base){
+        return null;
+    }
+
+
+    const expected = {
+        ...base
+    };
+
+
+    /*
+       Baron adds 2 Outsiders and
+       removes 2 Townsfolk.
+    */
+
+    if(
+        trainerSelectedCharacters.has(
+            "baron"
+        )
+    ){
+
+        expected.townsfolk -= 2;
+        expected.outsiders += 2;
+
+    }
+
+
+    return expected;
+
+}
+/* ==========================================
+   Validate Bag
+========================================== */
+
+function validateBag(){
+
+    const expected =
+        getExpectedSetup();
+
+
+    if(!expected){
+
+        return {
+            valid:false,
+            errors:[
+                "This player count is not supported."
+            ]
+        };
+
+    }
+
+
+    const actual = {
+
+        townsfolk:
+            getSelectedGroupCount(
+                "townsfolk"
+            ),
+
+        outsiders:
+            getSelectedGroupCount(
+                "outsiders"
+            ),
+
+        minions:
+            getSelectedGroupCount(
+                "minions"
+            ),
+
+        demons:
+            getSelectedGroupCount(
+                "demons"
+            )
+
+    };
+
+
+    const errors = [];
+
+
+    /*
+       Detect intended Drunk.
+
+       Exactly one missing Outsider is allowed.
+
+       The missing Outsider will later be
+       represented by a Townsfolk token
+       receiving the "Is the Drunk" reminder.
+    */
+
+    const usingDrunk =
+        actual.outsiders ===
+        expected.outsiders - 1;
+
+
+    /*
+       Townsfolk
+    */
+
+    if(
+        actual.townsfolk !==
+        expected.townsfolk
+    ){
+
+        errors.push(
+            `You selected ${actual.townsfolk} Townsfolk, but this setup requires ${expected.townsfolk}.`
+        );
+
+    }
+
+
+    /*
+       Outsiders
+    */
+
+    if(
+        actual.outsiders !==
+            expected.outsiders &&
+        !usingDrunk
+    ){
+
+        errors.push(
+            `You selected ${actual.outsiders} Outsiders, but this setup requires ${expected.outsiders}.`
+        );
+
+    }
+
+
+    /*
+       Minions
+    */
+
+    if(
+        actual.minions !==
+        expected.minions
+    ){
+
+        errors.push(
+            `You selected ${actual.minions} Minions, but this setup requires ${expected.minions}.`
+        );
+
+    }
+
+
+    /*
+       Demons
+    */
+
+    if(
+        actual.demons !==
+        expected.demons
+    ){
+
+        errors.push(
+            `You selected ${actual.demons} Demons, but this setup requires ${expected.demons}.`
+        );
+
+    }
+
+
+    return {
+
+        valid:
+            errors.length === 0,
+
+        errors,
+
+        expected,
+
+        actual,
+
+        usingDrunk
+
+    };
 
 }
