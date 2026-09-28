@@ -101,73 +101,43 @@
     color:var(--black);
 }
 
-
 /* ==========================================
-   Game Workspace
+   Game Area
 ========================================== */
 
 .trainer-game{
     width:100%;
     max-width:1400px;
-
-    height:700px;
+    aspect-ratio:16 / 9;
 
     margin:0 auto;
 
     position:relative;
 
-    display:flex;
-    align-items:center;
-    justify-content:center;
-
     overflow:hidden;
 
-    background:white;
+    background:
+        url("/images/storyteller-trainer/temp/background.png")
+        center center / cover
+        no-repeat;
 
-    border:1px solid var(--border);
     border-radius:16px;
-}
 
+    box-shadow:
+        0 10px 30px rgba(0,0,0,.25);
+}
 
 /* ==========================================
    Town Square
 ========================================== */
-
 .town-square{
-    width:610px;
-    height:610px;
+    width:100%;
+    height:100%;
 
     position:relative;
 
-    display:flex;
-    align-items:center;
-    justify-content:center;
-
-    border-radius:50%;
-
-    background:
-        radial-gradient(
-            circle at center,
-            rgba(102,102,153,.06) 0%,
-            rgba(102,102,153,.06) 35%,
-            transparent 35.5%
-        ),
-        repeating-radial-gradient(
-            circle at center,
-            transparent 0,
-            transparent 72px,
-            rgba(102,102,153,.07) 73px,
-            transparent 74px
-        ),
-        white;
-
-    border:3px solid var(--purple);
-
-    box-shadow:
-        0 0 0 10px rgba(102,102,153,.06),
-        0 12px 35px rgba(13,24,33,.10);
+    background:transparent;
 }
-
 
 /* ==========================================
    Decorative Rings
@@ -200,7 +170,13 @@
 
     pointer-events:none;
 }
-
+.town-square::before,
+.town-square::after{
+    display:none;
+}
+.town-square-center{
+    display:none;
+}
 
 /* ==========================================
    Town Square Center
