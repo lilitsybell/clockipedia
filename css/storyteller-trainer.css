@@ -1432,3 +1432,143 @@ body{
 .character-option-name{
     color:#6a4894;
 }
+/* ==========================================
+   Character Distribution Animation
+========================================== */
+
+.distribution-layer{
+    position:absolute;
+    inset:0;
+
+    z-index:50;
+
+    pointer-events:none;
+}
+
+
+/* ==========================================
+   Flying Character
+========================================== */
+
+.distribution-token{
+    position:absolute;
+
+    left:50%;
+    top:50%;
+
+    width:82px;
+    height:82px;
+
+    display:flex;
+    align-items:center;
+    justify-content:center;
+
+    transform:
+        translate(-50%, -50%)
+        scale(.9);
+
+    background:
+        linear-gradient(
+            145deg,
+            #fff4d2,
+            #f6d995
+        );
+
+    border:2px solid #d6b96f;
+
+    border-radius:9px;
+
+    box-shadow:
+        0 8px 20px
+        rgba(0,0,0,.35);
+
+    opacity:0;
+
+    transition:
+        left .22s cubic-bezier(.2,.8,.25,1),
+        top .22s cubic-bezier(.2,.8,.25,1),
+        transform .22s cubic-bezier(.2,.8,.25,1),
+        opacity .08s ease;
+}
+
+
+.distribution-token.visible{
+    opacity:1;
+
+    transform:
+        translate(-50%, -50%)
+        scale(1);
+}
+
+
+.distribution-token img{
+    width:64%;
+    height:64%;
+
+    object-fit:contain;
+
+    display:block;
+}
+
+
+/* ==========================================
+   Seat Character Artwork
+========================================== */
+
+.player-character img{
+    width:68%;
+    height:68%;
+
+    object-fit:contain;
+
+    display:block;
+}
+
+
+/* ==========================================
+   Landing Pop
+========================================== */
+
+.trainer-player.character-landed
+.player-character{
+    animation:
+        character-land
+        .18s ease-out;
+}
+
+
+@keyframes character-land{
+
+    0%{
+        transform:scale(.82);
+    }
+
+    65%{
+        transform:scale(1.08);
+    }
+
+    100%{
+        transform:scale(1);
+    }
+
+}
+
+
+/* ==========================================
+   Team Borders
+========================================== */
+
+.trainer-player[data-team="Townsfolk"]
+.player-character,
+.trainer-player[data-team="Outsider"]
+.player-character{
+    border-color:#1688c5;
+}
+
+
+.trainer-player[data-team="Minion"]
+.player-character,
+.trainer-player[data-team="Demon"]
+.player-character{
+    border-color:#b72a32;
+}
