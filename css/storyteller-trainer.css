@@ -811,7 +811,390 @@ body{
 
     color:#eadcff;
 }
+/* ==========================================
+   Character Selection Overlay
+========================================== */
 
+.character-selection{
+    position:absolute;
+    inset:0;
+
+    z-index:100;
+
+    display:flex;
+    align-items:center;
+    justify-content:center;
+
+    padding:60px 80px;
+}
+
+
+.character-selection.hidden{
+    display:none;
+}
+
+
+/* ==========================================
+   Backdrop
+========================================== */
+
+.character-selection-backdrop{
+    position:absolute;
+    inset:0;
+
+    background:
+        rgba(10,7,22,.72);
+
+    backdrop-filter:
+        blur(2px);
+}
+
+
+/* ==========================================
+   Selection Panel
+========================================== */
+
+.character-selection-panel{
+    --selection-cream:#f7e3b0;
+    --selection-cream-light:#fff4d5;
+    --selection-dark:#19142a;
+    --selection-purple:#7657a8;
+    --selection-line:#b99379;
+
+    position:relative;
+
+    z-index:1;
+
+    width:min(900px, 82vw);
+    max-height:82vh;
+
+    display:flex;
+    flex-direction:column;
+
+    overflow:hidden;
+
+    background:
+        linear-gradient(
+            180deg,
+            var(--selection-cream-light),
+            var(--selection-cream)
+        );
+
+    border:
+        3px solid
+        #2a1c35;
+
+    border-radius:18px;
+
+    box-shadow:
+        0 20px 60px
+        rgba(0,0,0,.5),
+        inset 0 0 0 2px
+        rgba(255,255,255,.35);
+}
+
+
+/* ==========================================
+   Selection Header
+========================================== */
+
+.character-selection-header{
+    flex-shrink:0;
+
+    padding:18px 28px 16px;
+
+    text-align:center;
+
+    border-bottom:
+        1px solid
+        rgba(91,62,64,.25);
+
+    background:
+        rgba(255,255,255,.18);
+}
+
+
+.character-selection-step{
+    display:block;
+
+    margin-bottom:4px;
+
+    font-family:"Roboto", sans-serif;
+    font-size:10px;
+    font-weight:800;
+
+    letter-spacing:2.2px;
+
+    color:#73516c;
+}
+
+
+.character-selection-header h2{
+    margin:0;
+
+    font-family:"Droid Sans", sans-serif;
+    font-size:22px;
+    font-weight:700;
+
+    color:#21172c;
+}
+
+
+/* ==========================================
+   Selection Body
+========================================== */
+
+.character-selection-body{
+    min-height:0;
+
+    flex:1;
+
+    display:grid;
+
+    grid-template-columns:
+        105px
+        minmax(0, 1fr);
+
+    padding:20px 24px;
+
+    overflow:hidden;
+}
+
+
+/* ==========================================
+   Team Requirements
+========================================== */
+
+.character-requirements{
+    display:grid;
+
+    grid-template-rows:
+        repeat(4, 1fr);
+
+    align-items:center;
+
+    padding:
+        6px
+        18px
+        6px
+        2px;
+
+    border-right:
+        1px solid
+        rgba(70,46,58,.25);
+}
+
+
+.character-requirement{
+    display:flex;
+    align-items:center;
+
+    gap:10px;
+
+    font-family:"Roboto", sans-serif;
+    font-size:18px;
+
+    color:#21172c;
+}
+
+
+.requirement-symbol{
+    width:11px;
+    height:11px;
+
+    flex:0 0 auto;
+
+    border-radius:50%;
+
+    background:#2686c0;
+
+    box-shadow:
+        0 0 0 2px
+        rgba(255,255,255,.45);
+}
+
+
+/* Townsfolk */
+
+.character-requirement[
+    data-team="Townsfolk"
+]
+.requirement-symbol{
+    background:#2686c0;
+}
+
+
+/* Outsider */
+
+.character-requirement[
+    data-team="Outsider"
+]
+.requirement-symbol{
+    background:#2686c0;
+}
+
+
+/* Minion */
+
+.character-requirement[
+    data-team="Minion"
+]
+.requirement-symbol{
+    background:#b92c31;
+}
+
+
+/* Demon */
+
+.character-requirement[
+    data-team="Demon"
+]
+.requirement-symbol{
+    background:#b92c31;
+}
+
+
+/* ==========================================
+   Character Grid Placeholder
+========================================== */
+
+.character-grid{
+    min-width:0;
+
+    padding-left:24px;
+
+    overflow-y:auto;
+    overflow-x:hidden;
+}
+
+
+/* ==========================================
+   Scrollbar
+========================================== */
+
+.character-grid::-webkit-scrollbar{
+    width:7px;
+}
+
+
+.character-grid::-webkit-scrollbar-track{
+    background:
+        rgba(61,40,51,.08);
+
+    border-radius:10px;
+}
+
+
+.character-grid::-webkit-scrollbar-thumb{
+    background:
+        rgba(93,70,105,.38);
+
+    border-radius:10px;
+}
+
+
+/* ==========================================
+   Footer
+========================================== */
+
+.character-selection-footer{
+    flex-shrink:0;
+
+    min-height:66px;
+
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+
+    gap:20px;
+
+    padding:12px 20px;
+
+    background:
+        rgba(255,255,255,.38);
+
+    border-top:
+        1px solid
+        rgba(70,46,58,.2);
+}
+
+
+.selection-total{
+    font-family:"Roboto", sans-serif;
+    font-size:13px;
+    font-weight:600;
+
+    color:
+        rgba(33,23,44,.65);
+}
+
+
+/* ==========================================
+   Footer Buttons
+========================================== */
+
+.character-selection-actions{
+    display:flex;
+    align-items:center;
+
+    gap:10px;
+}
+
+
+.character-selection-cancel,
+.character-selection-distribute{
+    min-height:40px;
+
+    padding:0 18px;
+
+    border-radius:9px;
+
+    font-family:"Roboto", sans-serif;
+    font-size:13px;
+    font-weight:700;
+
+    cursor:pointer;
+}
+
+
+.character-selection-cancel{
+    background:
+        rgba(255,255,255,.5);
+
+    border:
+        1px solid
+        rgba(51,35,57,.28);
+
+    color:#21172c;
+}
+
+
+.character-selection-distribute{
+    min-width:150px;
+
+    background:
+        linear-gradient(
+            180deg,
+            #8064b8,
+            #654b99
+        );
+
+    border:
+        1px solid
+        rgba(255,255,255,.35);
+
+    color:white;
+
+    box-shadow:
+        0 4px 12px
+        rgba(46,29,67,.22);
+}
+
+
+.character-selection-cancel:hover,
+.character-selection-distribute:hover{
+    filter:brightness(1.05);
+}
 
 /* ==========================================
    Responsive
