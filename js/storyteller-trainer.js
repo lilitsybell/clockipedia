@@ -1176,13 +1176,11 @@ function clearPlayerTokens(){
                 `;
 
 
-                avatar.classList.remove(
-                    "has-character",
-                    "team-townsfolk",
-                    "team-outsider",
-                    "team-minion",
-                    "team-demon"
-                );
+avatar.classList.remove(
+    "has-character",
+    "team-good",
+    "team-evil"
+);
 
             }
         );
