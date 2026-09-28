@@ -442,9 +442,6 @@ updateSetupCounts();
 
     }
 
-
-    updatePlayerTokens();
-
 }
 /* ==========================================
    Update Setup Counts
