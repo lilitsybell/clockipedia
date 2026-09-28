@@ -31,160 +31,46 @@ const trainerPlayerNames = [
 
 
 /* ==========================================
-   Trouble Brewing Characters
+   Character Data
 ========================================== */
 
-const trainerCharacters = {
+let trainerCharacterData = {};
 
-    townsfolk: [
 
-        {
-            id:"washerwoman",
-            name:"Washerwoman",
-            team:"Townsfolk"
-        },
+const troubleBrewingCharacters = {
 
-        {
-            id:"librarian",
-            name:"Librarian",
-            team:"Townsfolk"
-        },
-
-        {
-            id:"investigator",
-            name:"Investigator",
-            team:"Townsfolk"
-        },
-
-        {
-            id:"chef",
-            name:"Chef",
-            team:"Townsfolk"
-        },
-
-        {
-            id:"empath",
-            name:"Empath",
-            team:"Townsfolk"
-        },
-
-        {
-            id:"fortuneteller",
-            name:"Fortune Teller",
-            team:"Townsfolk"
-        },
-
-        {
-            id:"undertaker",
-            name:"Undertaker",
-            team:"Townsfolk"
-        },
-
-        {
-            id:"monk",
-            name:"Monk",
-            team:"Townsfolk"
-        },
-
-        {
-            id:"ravenkeeper",
-            name:"Ravenkeeper",
-            team:"Townsfolk"
-        },
-
-        {
-            id:"virgin",
-            name:"Virgin",
-            team:"Townsfolk"
-        },
-
-        {
-            id:"slayer",
-            name:"Slayer",
-            team:"Townsfolk"
-        },
-
-        {
-            id:"soldier",
-            name:"Soldier",
-            team:"Townsfolk"
-        },
-
-        {
-            id:"mayor",
-            name:"Mayor",
-            team:"Townsfolk"
-        }
-
+    townsfolk:[
+        "washerwoman",
+        "librarian",
+        "investigator",
+        "chef",
+        "empath",
+        "fortuneteller",
+        "undertaker",
+        "monk",
+        "ravenkeeper",
+        "virgin",
+        "slayer",
+        "soldier",
+        "mayor"
     ],
 
-
-    outsiders: [
-
-        {
-            id:"butler",
-            name:"Butler",
-            team:"Outsider"
-        },
-
-        {
-            id:"drunk",
-            name:"Drunk",
-            team:"Outsider"
-        },
-
-        {
-            id:"recluse",
-            name:"Recluse",
-            team:"Outsider"
-        },
-
-        {
-            id:"saint",
-            name:"Saint",
-            team:"Outsider"
-        }
-
+    outsiders:[
+        "butler",
+        "drunk",
+        "recluse",
+        "saint"
     ],
 
-
-    minions: [
-
-        {
-            id:"poisoner",
-            name:"Poisoner",
-            team:"Minion"
-        },
-
-        {
-            id:"spy",
-            name:"Spy",
-            team:"Minion"
-        },
-
-        {
-            id:"baron",
-            name:"Baron",
-            team:"Minion"
-        },
-
-        {
-            id:"scarletwoman",
-            name:"Scarlet Woman",
-            team:"Minion"
-        }
-
+    minions:[
+        "poisoner",
+        "spy",
+        "baron",
+        "scarletwoman"
     ],
 
-
-    demons: [
-
-        {
-            id:"imp",
-            name:"Imp",
-            team:"Demon"
-        }
-
+    demons:[
+        "imp"
     ]
 
 };
@@ -220,9 +106,11 @@ const trainerSelectedCharacters =
 
 document.addEventListener(
     "DOMContentLoaded",
-    () => {
+    async () => {
 
         buildPlayerRing();
+
+        await loadTrainerCharacters();
 
         buildCharacterSelection();
 
@@ -232,8 +120,43 @@ document.addEventListener(
 
     }
 );
+/* ==========================================
+   Load Character Data
+========================================== */
+
+async function loadTrainerCharacters(){
+
+    try{
+
+        const response =
+            await fetch(
+                "/data/characters.json"
+            );
 
 
+        if(!response.ok){
+
+            throw new Error(
+                "Could not load characters.json"
+            );
+
+        }
+
+
+        trainerCharacterData =
+            await response.json();
+
+    }
+    catch(error){
+
+        console.error(
+            "Failed to load trainer characters:",
+            error
+        );
+
+    }
+
+}
 /* ==========================================
    Build Player Ring
 ========================================== */
@@ -351,10 +274,6 @@ function createPlayerSeat(index){
 }
 
 
-/* ==========================================
-   Build Character Selection
-========================================== */
-
 function buildCharacterSelection(){
 
     const grid =
@@ -372,14 +291,14 @@ function buildCharacterSelection(){
 
 
     Object.entries(
-        trainerCharacters
+        troubleBrewingCharacters
     ).forEach(
-        ([group, characters]) => {
+        ([group, characterIds]) => {
 
             const row =
                 createCharacterRow(
                     group,
-                    characters
+                    characterIds
                 );
 
 
@@ -397,7 +316,7 @@ function buildCharacterSelection(){
 
 function createCharacterRow(
     group,
-    characters
+    characterIds
 ){
 
     const row =
@@ -414,11 +333,28 @@ function createCharacterRow(
         group;
 
 
-    characters.forEach(
-        character => {
+    characterIds.forEach(
+        characterId => {
+
+            const character =
+                trainerCharacterData[
+                    characterId
+                ];
+
+
+            if(!character){
+
+                console.warn(
+                    `Missing character: ${characterId}`
+                );
+
+                return;
+            }
+
 
             const button =
                 createCharacterButton(
+                    characterId,
                     character,
                     group
                 );
@@ -434,12 +370,12 @@ function createCharacterRow(
 
 }
 
-
 /* ==========================================
    Create Character Button
 ========================================== */
 
 function createCharacterButton(
+    characterId,
     character,
     group
 ){
@@ -459,7 +395,7 @@ function createCharacterButton(
 
 
     button.dataset.character =
-        character.id;
+        characterId;
 
 
     button.dataset.group =
@@ -472,10 +408,11 @@ function createCharacterButton(
 
     button.innerHTML = `
 
-        <span class="character-option-art">
+        <span class="character-option-token">
 
             <img
-                src="/images/storyteller-trainer/${character.id}.png"
+                class="character-option-icon"
+                src="${character.image}"
                 alt=""
                 draggable="false"
             >
@@ -495,7 +432,7 @@ function createCharacterButton(
         () => {
 
             toggleCharacterSelection(
-                character.id
+                characterId
             );
 
         }
@@ -687,12 +624,12 @@ function updateRequirementCounts(){
 
 function getSelectedGroupCount(group){
 
-    return trainerCharacters[
+    return troubleBrewingCharacters[
         group
     ].filter(
-        character =>
+        characterId =>
             trainerSelectedCharacters.has(
-                character.id
+                characterId
             )
     ).length;
 
