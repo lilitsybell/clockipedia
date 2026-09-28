@@ -699,7 +699,10 @@ function bindCharacterSelectionControls(){
             "#cancel-character-selection"
         );
 
-
+    const distributeButton =
+        document.querySelector(
+            "#distribute-characters"
+        );
     const overlay =
         document.querySelector(
             "#character-selection"
@@ -742,7 +745,14 @@ function bindCharacterSelectionControls(){
         );
 
     }
+    if(distributeButton){
 
+        distributeButton.addEventListener(
+            "click",
+            distributeCharacters
+        );
+
+    }
 }
 /* ==========================================
    Shuffle
@@ -791,7 +801,32 @@ function shuffleCharacters(characters){
 async function distributeCharacters(){
 
     if(
-        !selectedCharacters ||
+        trainerSelectedCharacters.size !==
+        trainerPlayerCount
+    ){
+        return;
+    }
+
+
+    /*
+       Convert the selected character IDs
+       into their full characters.json objects.
+    */
+
+    const selectedCharacters =
+        Array.from(
+            trainerSelectedCharacters
+        )
+        .map(
+            characterId =>
+                trainerCharacterData[
+                    characterId
+                ]
+        )
+        .filter(Boolean);
+
+
+    if(
         selectedCharacters.length !==
         trainerPlayerCount
     ){
@@ -804,7 +839,6 @@ async function distributeCharacters(){
             selectedCharacters
         );
 
-
     /*
        Close character selection.
     */
@@ -814,10 +848,9 @@ async function distributeCharacters(){
             "#character-selection"
         );
 
-
-    selection?.classList.remove(
-        "open"
-    );
+selection?.classList.add(
+    "hidden"
+);
 
 
     /*
