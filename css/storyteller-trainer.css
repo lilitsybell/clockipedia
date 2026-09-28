@@ -148,9 +148,7 @@
 }
 
 
-/* ==========================================
-   Hide Old Decorative Rings
-========================================== */
+/* Hide old Clockipedia rings */
 
 .town-square::before,
 .town-square::after{
@@ -158,10 +156,745 @@
 }
 
 
-/* ==========================================
-   Hide Old Town Square Center
-========================================== */
+/* Hide old center label */
 
 .town-square-center{
     display:none;
+}
+
+
+/* ==========================================
+   Player Ring
+========================================== */
+
+.player-ring{
+    position:absolute;
+    inset:0;
+
+    pointer-events:none;
+}
+
+
+.trainer-player{
+    --player-distance:265px;
+
+    position:absolute;
+
+    left:50%;
+    top:50%;
+
+    width:100px;
+
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+
+    transform:
+        translate(-50%, -50%)
+        rotate(var(--player-angle))
+        translateY(
+            calc(
+                var(--player-distance) * -1
+            )
+        )
+        rotate(
+            calc(
+                var(--player-angle) * -1
+            )
+        );
+
+    pointer-events:auto;
+}
+
+
+/* ==========================================
+   Player Token
+========================================== */
+
+.trainer-player-avatar{
+    width:72px;
+    height:72px;
+
+    display:flex;
+    align-items:center;
+    justify-content:center;
+
+    overflow:hidden;
+
+    background:white;
+
+    border:3px solid #c9c9d8;
+    border-radius:50%;
+
+    box-shadow:
+        0 4px 12px rgba(0,0,0,.22);
+
+    font-family:"Droid Sans", sans-serif;
+    font-size:22px;
+    font-weight:700;
+
+    color:var(--purple);
+
+    transition:
+        transform .15s ease,
+        border-color .15s ease;
+}
+
+
+.trainer-player-avatar.has-character{
+    padding:3px;
+
+    background:white;
+
+    border-width:3px;
+}
+
+
+.trainer-player-avatar.has-character img{
+    width:100%;
+    height:100%;
+
+    display:block;
+
+    object-fit:contain;
+}
+
+
+/* ==========================================
+   Character Team Colors
+========================================== */
+
+.trainer-player-avatar.team-good{
+    border-color:var(--blue);
+}
+
+
+.trainer-player-avatar.team-evil{
+    border-color:var(--red);
+}
+
+
+/* ==========================================
+   Token Landing
+========================================== */
+
+.trainer-player-avatar.token-landed{
+    transform:scale(1.14);
+}
+
+
+/* ==========================================
+   Player Name
+========================================== */
+
+.trainer-player-name{
+    margin-top:6px;
+
+    padding:4px 9px;
+
+    background:rgba(13,24,33,.88);
+    color:white;
+
+    border-radius:5px;
+
+    box-shadow:
+        0 2px 6px rgba(0,0,0,.22);
+
+    font-family:"Roboto", sans-serif;
+    font-size:12px;
+    font-weight:500;
+
+    white-space:nowrap;
+}
+
+
+/* ==========================================
+   Setup Action Button
+========================================== */
+
+.setup-action-button{
+    position:absolute;
+
+    right:24px;
+    bottom:24px;
+
+    z-index:10;
+
+    padding:11px 20px;
+
+    background:var(--purple);
+    color:white;
+
+    border:0;
+    border-radius:7px;
+
+    box-shadow:
+        0 5px 15px rgba(0,0,0,.22);
+
+    font-family:"Roboto", sans-serif;
+    font-size:14px;
+    font-weight:700;
+
+    cursor:pointer;
+
+    transition:
+        transform .12s ease,
+        filter .12s ease;
+}
+
+
+.setup-action-button:hover{
+    transform:translateY(-1px);
+
+    filter:brightness(.95);
+}
+
+
+.setup-action-button.hidden{
+    display:none;
+}
+
+
+/* ==========================================
+   Character Selection Overlay
+========================================== */
+
+.character-selection-overlay{
+    position:absolute;
+    inset:0;
+
+    z-index:50;
+
+    display:flex;
+    align-items:center;
+    justify-content:center;
+
+    padding:30px;
+
+    background:rgba(13,24,33,.68);
+
+    backdrop-filter:blur(2px);
+}
+
+
+.character-selection-overlay.hidden{
+    display:none;
+}
+
+
+/* ==========================================
+   Character Selection Window
+========================================== */
+
+.character-selection-window{
+    width:820px;
+
+    max-width:calc(100% - 40px);
+
+    overflow:hidden;
+
+    background:white;
+
+    border:2px solid var(--purple);
+    border-radius:10px;
+
+    box-shadow:
+        0 18px 55px rgba(0,0,0,.42);
+}
+
+
+/* ==========================================
+   Character Selection Title
+========================================== */
+
+.character-selection-title{
+    padding:9px 20px;
+
+    background:var(--purple);
+    color:white;
+
+    font-family:"Droid Sans", sans-serif;
+    font-size:17px;
+
+    text-align:center;
+}
+
+
+.character-selection-title strong{
+    font-weight:700;
+}
+
+
+/* ==========================================
+   Character Selection Content
+========================================== */
+
+.character-selection-content{
+    display:grid;
+
+    grid-template-columns:
+        64px 1fr;
+
+    gap:18px;
+
+    padding:18px 24px 14px;
+}
+
+
+/* ==========================================
+   Setup Requirements
+========================================== */
+
+.setup-requirements{
+    display:grid;
+
+    grid-template-rows:
+        152px
+        76px
+        76px
+        76px;
+
+    align-items:center;
+
+    padding-right:14px;
+
+    border-right:1px solid #ddd;
+}
+
+
+.setup-requirement{
+    display:flex;
+    align-items:center;
+    justify-content:center;
+
+    gap:6px;
+
+    font-family:"Roboto", sans-serif;
+    font-size:15px;
+    font-weight:700;
+
+    color:var(--black);
+}
+
+
+.requirement-dot{
+    width:8px;
+    height:8px;
+
+    flex:0 0 auto;
+
+    border-radius:50%;
+}
+
+
+/* Townsfolk */
+
+.setup-requirement:nth-child(1)
+.requirement-dot{
+    background:var(--blue);
+}
+
+
+/* Outsiders */
+
+.setup-requirement:nth-child(2)
+.requirement-dot{
+    background:var(--blue);
+}
+
+
+/* Minions */
+
+.setup-requirement:nth-child(3)
+.requirement-dot{
+    background:var(--red);
+}
+
+
+/* Demon */
+
+.setup-requirement:nth-child(4)
+.requirement-dot{
+    background:var(--red);
+}
+
+
+/* Counts remain neutral intentionally */
+
+.requirement-count,
+.requirement-count.complete,
+.requirement-count.over{
+    color:var(--black);
+}
+
+
+/* ==========================================
+   Character Grid
+========================================== */
+
+.character-grid{
+    display:grid;
+
+    grid-template-columns:
+        repeat(7, 1fr);
+
+    grid-auto-rows:76px;
+
+    gap:2px 6px;
+
+    align-items:center;
+}
+
+
+/* ==========================================
+   SAO Team Row Breaks
+========================================== */
+
+/*
+   13 Townsfolk occupy:
+   row 1 = 7
+   row 2 = 6
+*/
+
+.character-choice[
+    data-character="butler"
+]{
+    grid-column:1;
+}
+
+
+/* Outsiders begin row 3 */
+
+.character-choice[
+    data-character="poisoner"
+]{
+    grid-column:1;
+}
+
+
+/* Minions begin row 4 */
+
+.character-choice[
+    data-character="imp"
+]{
+    grid-column:1;
+}
+
+
+/* ==========================================
+   Character Choice
+========================================== */
+
+.character-choice{
+    width:82px;
+
+    justify-self:center;
+
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+    justify-content:center;
+
+    gap:2px;
+
+    padding:2px;
+
+    background:transparent;
+
+    border:0;
+    border-radius:8px;
+
+    color:var(--black);
+
+    font:inherit;
+
+    cursor:pointer;
+
+    transition:
+        background .12s ease,
+        transform .12s ease;
+}
+
+
+.character-choice:hover{
+    background:
+        rgba(102,102,153,.06);
+}
+
+
+.character-choice:hover img{
+    transform:scale(1.06);
+}
+
+
+/* ==========================================
+   Character Image
+========================================== */
+
+.character-choice img{
+    width:62px;
+    height:62px;
+
+    display:block;
+
+    object-fit:contain;
+
+    transition:
+        transform .15s ease,
+        filter .15s ease;
+}
+
+
+/* ==========================================
+   Character Name
+========================================== */
+
+.character-choice span{
+    width:74px;
+
+    overflow:hidden;
+
+    font-family:"Roboto", sans-serif;
+    font-size:9px;
+    font-weight:500;
+    line-height:11px;
+
+    text-align:center;
+
+    text-overflow:ellipsis;
+    white-space:nowrap;
+
+    color:var(--black);
+}
+
+
+/* ==========================================
+   Selected Character
+========================================== */
+
+.character-choice.selected{
+    background:transparent;
+
+    border-color:transparent;
+
+    box-shadow:none;
+}
+
+
+.character-choice.selected img{
+    transform:scale(1.08);
+
+    filter:
+        drop-shadow(
+            0 0 2px white
+        )
+        drop-shadow(
+            0 0 4px var(--purple)
+        );
+}
+
+
+/* ==========================================
+   Character Selection Footer
+========================================== */
+
+.character-selection-footer{
+    min-height:52px;
+
+    display:flex;
+    align-items:center;
+
+    gap:10px;
+
+    padding:8px 18px;
+
+    background:#fafafa;
+
+    border-top:
+        1px solid var(--border);
+}
+
+
+.selection-total{
+    margin-right:auto;
+
+    font-family:"Roboto", sans-serif;
+    font-size:12px;
+    font-weight:500;
+
+    color:var(--gray);
+}
+
+
+/* ==========================================
+   Selection Buttons
+========================================== */
+
+.primary-button,
+.secondary-button{
+    padding:10px 18px;
+
+    border-radius:7px;
+
+    font-family:"Roboto", sans-serif;
+    font-size:13px;
+    font-weight:700;
+
+    cursor:pointer;
+}
+
+
+.primary-button{
+    min-width:150px;
+
+    border:0;
+
+    background:var(--purple);
+    color:white;
+}
+
+
+.primary-button:hover:not(:disabled){
+    filter:brightness(.95);
+}
+
+
+.primary-button:disabled{
+    opacity:.4;
+
+    cursor:not-allowed;
+}
+
+
+.secondary-button{
+    border:1px solid var(--border);
+
+    background:white;
+    color:var(--black);
+}
+
+
+.secondary-button:hover{
+    background:var(--light-gray);
+}
+
+
+/* ==========================================
+   Token Distribution Layer
+========================================== */
+
+.token-distribution-layer{
+    position:absolute;
+    inset:0;
+
+    z-index:40;
+
+    pointer-events:none;
+}
+
+
+/* ==========================================
+   Flying Token
+========================================== */
+
+.distribution-token{
+    position:absolute;
+
+    width:72px;
+    height:72px;
+
+    display:flex;
+    align-items:center;
+    justify-content:center;
+
+    padding:4px;
+
+    background:white;
+
+    border:2px solid #c9c9d8;
+    border-radius:50%;
+
+    box-shadow:
+        0 5px 14px rgba(0,0,0,.25);
+
+    will-change:
+        left,
+        top,
+        transform;
+}
+
+
+.distribution-token img{
+    width:100%;
+    height:100%;
+
+    display:block;
+
+    object-fit:contain;
+}
+
+
+/* ==========================================
+   Responsive
+========================================== */
+
+@media(max-width:900px){
+
+    .trainer-page{
+        margin-left:0;
+
+        padding:20px;
+    }
+
+
+    .trainer-header{
+        align-items:flex-start;
+        flex-direction:column;
+    }
+
+
+    .trainer-game{
+        aspect-ratio:auto;
+
+        height:620px;
+    }
+
+
+    .trainer-player{
+        --player-distance:250px;
+    }
+
+
+    .character-selection-window{
+        width:100%;
+    }
+
+
+    .character-selection-content{
+        grid-template-columns:
+            54px 1fr;
+
+        padding:
+            14px 16px 12px;
+    }
+
+
+    .character-grid{
+        grid-template-columns:
+            repeat(7, 1fr);
+
+        gap:2px;
+    }
+
+
+    .character-choice{
+        width:70px;
+    }
+
+
+    .character-choice img{
+        width:54px;
+        height:54px;
+    }
+
 }
