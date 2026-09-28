@@ -214,7 +214,7 @@ body{
    Player Area
 ========================================== */
 .player-area{
-    --player-radius:350px;
+    --player-radius:315px;
 
     position:absolute;
 
