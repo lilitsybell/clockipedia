@@ -212,43 +212,65 @@
 ========================================== */
 
 .trainer-player-avatar{
-    width:72px;
-    height:72px;
+    width:96px;
+    height:96px;
 
     display:flex;
     align-items:center;
     justify-content:center;
 
-    overflow:hidden;
+    position:relative;
 
-    background:white;
+    background:
+        url("/images/storyteller-trainer/blank.png")
+        center / contain
+        no-repeat;
 
-    border:3px solid #c9c9d8;
-    border-radius:50%;
+    border:0;
+    border-radius:0;
 
-    box-shadow:
-        0 4px 12px rgba(0,0,0,.22);
+    box-shadow:none;
+
+    overflow:visible;
+
+    transition:
+        transform .15s ease;
+}
+
+
+/* Seat number */
+
+.trainer-player-avatar > span{
+    position:absolute;
+
+    left:50%;
+    top:50%;
+
+    transform:translate(-50%, -50%);
 
     font-family:"Droid Sans", sans-serif;
     font-size:22px;
     font-weight:700;
 
-    color:var(--purple);
+    color:white;
 
-    transition:
-        transform .15s ease,
-        border-color .15s ease;
+    text-shadow:
+        0 2px 4px rgba(0,0,0,.8);
 }
 
+
+/* Character token */
 
 .trainer-player-avatar.has-character{
-    padding:3px;
+    padding:0;
 
-    background:white;
+    background:none;
 
-    border-width:3px;
+    border:0;
 }
 
+
+/* The image itself IS the token */
 
 .trainer-player-avatar.has-character img{
     width:100%;
@@ -260,28 +282,19 @@
 }
 
 
-/* ==========================================
-   Character Team Colors
-========================================== */
+/* We no longer need CSS team borders */
 
-.trainer-player-avatar.team-good{
-    border-color:var(--blue);
-}
-
-
+.trainer-player-avatar.team-good,
 .trainer-player-avatar.team-evil{
-    border-color:var(--red);
+    border:0;
 }
 
 
-/* ==========================================
-   Token Landing
-========================================== */
+/* Distribution landing */
 
 .trainer-player-avatar.token-landed{
-    transform:scale(1.14);
+    transform:scale(1.13);
 }
-
 
 /* ==========================================
    Player Name
