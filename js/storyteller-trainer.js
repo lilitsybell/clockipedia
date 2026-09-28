@@ -87,7 +87,52 @@ const setupTeams = [
     "Demon"
 
 ];
+/* ==========================================
+   Normalize Team Name
+========================================== */
 
+function normalizeTrainerTeam(team){
+
+    const normalized =
+        String(team)
+            .trim()
+            .toLowerCase();
+
+
+    if(
+        normalized === "townsfolk"
+    ){
+        return "Townsfolk";
+    }
+
+
+    if(
+        normalized === "outsider" ||
+        normalized === "outsiders"
+    ){
+        return "Outsider";
+    }
+
+
+    if(
+        normalized === "minion" ||
+        normalized === "minions"
+    ){
+        return "Minion";
+    }
+
+
+    if(
+        normalized === "demon" ||
+        normalized === "demons"
+    ){
+        return "Demon";
+    }
+
+
+    return team;
+
+}
 
 /* ==========================================
    Initialize
