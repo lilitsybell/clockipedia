@@ -348,18 +348,6 @@ function buildCharacterSelection(){
             );
 
             return;
-avatar.classList.remove(
-    "has-character",
-    "team-townsfolk",
-    "team-outsider",
-    "team-minion",
-    "team-demon"
-);
-
-
-avatar.classList.add(
-    `team-${character.team.toLowerCase()}`
-);
         }
 
 
@@ -1294,38 +1282,30 @@ function updatePlayerTokens(){
                 ];
 
 
-            /* ==================================
-               Empty Seat
-            ================================== */
+            /* Empty seat */
 
-         if(!slug){
+            if(!slug){
 
-    avatar.innerHTML = `
-
-        <span>
-            ${index + 1}
-        </span>
-
-    `;
+                avatar.innerHTML = `
+                    <span>
+                        ${index + 1}
+                    </span>
+                `;
 
 
-avatar.classList.remove(
-    "has-character",
-    "team-townsfolk",
-    "team-outsider",
-    "team-minion",
-    "team-demon"
-);
+                avatar.classList.remove(
+                    "has-character",
+                    "team-good",
+                    "team-evil"
+                );
 
 
-    return;
+                return;
 
-}
+            }
 
 
-            /* ==================================
-               Character
-            ================================== */
+            /* Character */
 
             const character =
                 trainerCharacters[slug];
@@ -1334,18 +1314,10 @@ avatar.classList.remove(
             if(!character) return;
 
 
-            avatar.innerHTML = `
-
-                <img
-                    src="${character.image}"
-                    alt="${character.name}"
-                >
-
-            `;
-
-
-            avatar.classList.add(
-                "has-character"
+            setPlayerCharacter(
+                avatar,
+                slug,
+                character
             );
 
         }
