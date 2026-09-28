@@ -208,8 +208,9 @@ body{
 /* ==========================================
    Player Area
 ========================================== */
-
 .player-area{
+    --player-radius:350px;
+
     position:absolute;
 
     left:50%;
@@ -394,7 +395,189 @@ body{
 
     z-index:10;
 }
+/* ==========================================
+   Players
+========================================== */
 
+.trainer-player{
+    position:absolute;
+
+    left:50%;
+    top:50%;
+
+    width:110px;
+
+    transform:
+        translate(-50%, -50%)
+        rotate(var(--seat-angle))
+        translateY(
+            calc(
+                var(--player-radius) * -1
+            )
+        )
+        rotate(
+            calc(
+                var(--seat-angle) * -1
+            )
+        );
+}
+
+
+/* ==========================================
+   Player Card
+========================================== */
+
+.player-token{
+    width:110px;
+
+    position:relative;
+
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+}
+
+
+/* ==========================================
+   Character Token
+========================================== */
+
+.player-character{
+    width:78px;
+    height:78px;
+
+    display:flex;
+    align-items:center;
+    justify-content:center;
+
+    position:relative;
+
+    background:#f0dca8;
+
+    border:3px solid #29213c;
+    border-radius:50%;
+
+    box-shadow:
+        0 4px 10px
+        rgba(0,0,0,.28);
+}
+
+
+/* ==========================================
+   Empty Character
+========================================== */
+
+.player-character-placeholder{
+    font-family:"Droid Sans", sans-serif;
+    font-size:30px;
+    font-weight:700;
+
+    color:#766882;
+
+    opacity:.55;
+}
+
+
+/* ==========================================
+   Seat Number
+========================================== */
+
+.player-number{
+    position:absolute;
+
+    left:5px;
+    top:-5px;
+
+    z-index:5;
+
+    width:26px;
+    height:26px;
+
+    display:flex;
+    align-items:center;
+    justify-content:center;
+
+    background:#29213c;
+    color:white;
+
+    border:2px solid #f0dca8;
+    border-radius:50%;
+
+    box-shadow:
+        0 2px 5px
+        rgba(0,0,0,.3);
+
+    font-family:"Roboto", sans-serif;
+    font-size:11px;
+    font-weight:800;
+}
+
+
+/* ==========================================
+   Player Name
+========================================== */
+
+.player-name{
+    width:105px;
+
+    position:relative;
+    z-index:4;
+
+    margin-top:-5px;
+
+    padding:5px 7px;
+
+    overflow:hidden;
+
+    background:#1b172a;
+    color:white;
+
+    border:
+        1px solid
+        rgba(240,220,168,.65);
+
+    border-radius:5px;
+
+    box-shadow:
+        0 3px 7px
+        rgba(0,0,0,.25);
+
+    font-family:"Roboto", sans-serif;
+    font-size:11px;
+    font-weight:700;
+
+    text-align:center;
+
+    text-overflow:ellipsis;
+    white-space:nowrap;
+}
+
+
+/* ==========================================
+   Character Name
+========================================== */
+
+.player-role{
+    margin-top:3px;
+
+    padding:3px 7px;
+
+    background:
+        rgba(27,23,42,.8);
+
+    color:
+        rgba(255,255,255,.7);
+
+    border-radius:4px;
+
+    font-family:"Roboto", sans-serif;
+    font-size:9px;
+    font-weight:600;
+
+    text-align:center;
+
+    white-space:nowrap;
+}
 
 /* ==========================================
    Status Panel
