@@ -986,14 +986,14 @@ async function animateTokenDistribution(){
                     "distribution-token";
 
 
-                token.innerHTML = `
+token.innerHTML = `
 
-                    <img
-                        src="${character.image}"
-                        alt=""
-                    >
+    <img
+        src="/images/storyteller-trainer/${slug}.png"
+        alt=""
+    >
 
-                `;
+`;
 
 
                 /* Random pile position */
@@ -1314,14 +1314,14 @@ function setPlayerCharacter(
 
     /* Character Image */
 
-    avatar.innerHTML = `
+avatar.innerHTML = `
 
-        <img
-            src="${character.image}"
-            alt="${character.name}"
-        >
+    <img
+        src="/images/storyteller-trainer/${slug}.png"
+        alt="${character.name}"
+    >
 
-    `;
+`;
 
 
     avatar.classList.add(
