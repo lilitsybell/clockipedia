@@ -244,38 +244,59 @@ body{
     pointer-events:none;
 }
 
-
 .board-ring-outer{
     width:100%;
 
     border:
         2px solid
-        var(--line);
+        rgba(196,174,220,.13);
 }
 
 
 .board-ring-middle{
-    width:67%;
+    width:54%;
 
     border:
         2px solid
-        var(--line-strong);
+        rgba(196,174,220,.34);
 }
 
 
 .board-ring-inner{
-    width:37%;
+    width:30%;
 
     border:
         2px solid
-        var(--line-strong);
+        rgba(196,174,220,.38);
+}
+.board-ring-middle::before,
+.board-ring-middle::after{
+    content:"◆";
+
+    position:absolute;
+
+    left:50%;
+
+    transform:translateX(-50%);
+
+    color:#b486a4;
+
+    font-size:16px;
+    line-height:1;
 }
 
 
+.board-ring-middle::before{
+    top:-10px;
+}
+
+
+.board-ring-middle::after{
+    bottom:-10px;
+}
 /* ==========================================
    Ring Crosshairs
 ========================================== */
-
 .player-area::before,
 .player-area::after{
     content:"";
@@ -291,23 +312,22 @@ body{
         translate(-50%, -50%);
 
     background:
-        rgba(196,174,220,.13);
+        rgba(196,174,220,.08);
 
     pointer-events:none;
 }
 
 
 .player-area::before{
-    width:100%;
+    width:88%;
     height:1px;
 }
 
 
 .player-area::after{
     width:1px;
-    height:100%;
+    height:88%;
 }
-
 
 /* ==========================================
    Center
@@ -338,37 +358,37 @@ body{
 ========================================== */
 
 .board-center-mark{
-    width:38px;
-    height:38px;
+    width:46px;
+    height:46px;
 
     position:relative;
 
+    background:#b486a4;
+
     transform:rotate(45deg);
 
-    background:#ad829f;
+    clip-path:polygon(
+        50% 0%,
+        61% 39%,
+        100% 50%,
+        61% 61%,
+        50% 100%,
+        39% 61%,
+        0% 50%,
+        39% 39%
+    );
 
-    border-radius:
-        50% 7px 50% 7px;
-
-    box-shadow:
-        0 0 35px
-        rgba(173,130,159,.22);
+    filter:
+        drop-shadow(
+            0 0 15px
+            rgba(180,134,164,.18)
+        );
 }
 
 
 .board-center-mark::before,
 .board-center-mark::after{
-    content:"";
-
-    position:absolute;
-
-    left:50%;
-    top:50%;
-
-    background:#d2aac4;
-
-    transform:
-        translate(-50%, -50%);
+    display:none;
 }
 
 
@@ -452,16 +472,23 @@ body{
 
     position:relative;
 
-    background:#f0dca8;
+    background:
+        linear-gradient(
+            145deg,
+            #ffe8b4,
+            #f4d99b
+        );
 
-    border:3px solid #29213c;
-    border-radius:50%;
+    border:2px solid #20172f;
+
+    border-radius:10px;
 
     box-shadow:
-        0 4px 10px
-        rgba(0,0,0,.28);
-}
+        0 4px 0 rgba(0,0,0,.18),
+        0 7px 14px rgba(0,0,0,.22);
 
+    transform:rotate(-2deg);
+}
 
 /* ==========================================
    Empty Character
@@ -485,33 +512,32 @@ body{
 .player-number{
     position:absolute;
 
-    left:5px;
-    top:-5px;
+    left:-8px;
+    top:-9px;
 
     z-index:5;
 
-    width:26px;
-    height:26px;
+    width:27px;
+    height:27px;
 
     display:flex;
     align-items:center;
     justify-content:center;
 
-    background:#29213c;
-    color:white;
+    background:#ffe5a8;
+    color:#171329;
 
-    border:2px solid #f0dca8;
+    border:2px solid #211a39;
     border-radius:50%;
 
     box-shadow:
         0 2px 5px
-        rgba(0,0,0,.3);
+        rgba(0,0,0,.25);
 
     font-family:"Roboto", sans-serif;
-    font-size:11px;
+    font-size:12px;
     font-weight:800;
 }
-
 
 /* ==========================================
    Player Name
@@ -523,28 +549,26 @@ body{
     position:relative;
     z-index:4;
 
-    margin-top:-5px;
+    margin-top:-4px;
 
     padding:5px 7px;
 
     overflow:hidden;
 
-    background:#1b172a;
-    color:white;
+    background:#f3dca8;
+    color:#211a39;
 
-    border:
-        1px solid
-        rgba(240,220,168,.65);
+    border:2px solid #211a39;
 
-    border-radius:5px;
+    border-radius:7px;
 
     box-shadow:
         0 3px 7px
-        rgba(0,0,0,.25);
+        rgba(0,0,0,.22);
 
     font-family:"Roboto", sans-serif;
-    font-size:11px;
-    font-weight:700;
+    font-size:12px;
+    font-weight:800;
 
     text-align:center;
 
@@ -560,19 +584,18 @@ body{
 .player-role{
     margin-top:3px;
 
-    padding:3px 7px;
+    padding:2px 8px;
 
     background:
-        rgba(27,23,42,.8);
+        rgba(243,220,168,.12);
 
-    color:
-        rgba(255,255,255,.7);
+    color:#f3dca8;
 
     border-radius:4px;
 
     font-family:"Roboto", sans-serif;
     font-size:9px;
-    font-weight:600;
+    font-weight:700;
 
     text-align:center;
 
