@@ -1667,81 +1667,116 @@ function validateBag(){
     const errors = [];
 
 
-    /*
-       Detect intended Drunk.
+    /* ======================================
+       Detect Drunk Setup
 
-       Exactly one missing Outsider is allowed.
+       The Drunk does not have a token
+       placed directly into the bag.
 
-       The missing Outsider will later be
-       represented by a Townsfolk token
-       receiving the "Is the Drunk" reminder.
-    */
+       Instead:
+
+       - 1 fewer Outsider token
+       - 1 extra Townsfolk token
+
+       That extra Townsfolk will later
+       receive the "Is the Drunk" reminder.
+    ====================================== */
 
     const usingDrunk =
+
+        expected.outsiders > 0 &&
+
         actual.outsiders ===
-        expected.outsiders - 1;
+            expected.outsiders - 1 &&
+
+        actual.townsfolk ===
+            expected.townsfolk + 1;
 
 
     /*
-       Townsfolk
+       If we're using the Drunk,
+       adjust what the physical bag
+       should contain.
     */
+
+    const bagExpected = {
+
+        townsfolk:
+            expected.townsfolk +
+            (usingDrunk ? 1 : 0),
+
+        outsiders:
+            expected.outsiders -
+            (usingDrunk ? 1 : 0),
+
+        minions:
+            expected.minions,
+
+        demons:
+            expected.demons
+
+    };
+
+
+    /* ======================================
+       Townsfolk
+    ====================================== */
 
     if(
         actual.townsfolk !==
-        expected.townsfolk
+        bagExpected.townsfolk
     ){
 
         errors.push(
-            `You selected ${actual.townsfolk} Townsfolk, but this setup requires ${expected.townsfolk}.`
+            `You selected ${actual.townsfolk} Townsfolk, but this setup requires ${bagExpected.townsfolk}.`
         );
 
     }
 
 
-    /*
+    /* ======================================
        Outsiders
-    */
+    ====================================== */
 
     if(
         actual.outsiders !==
-            expected.outsiders &&
-        !usingDrunk
+        bagExpected.outsiders
     ){
 
         errors.push(
-            `You selected ${actual.outsiders} Outsiders, but this setup requires ${expected.outsiders}.`
+            `You selected ${actual.outsiders} Outsiders, but this setup requires ${bagExpected.outsiders}.`
         );
 
     }
 
 
-    /*
+    /* ======================================
        Minions
-    */
+    ====================================== */
 
     if(
         actual.minions !==
-        expected.minions
+        bagExpected.minions
     ){
 
         errors.push(
-            `You selected ${actual.minions} Minions, but this setup requires ${expected.minions}.`
+            `You selected ${actual.minions} Minions, but this setup requires ${bagExpected.minions}.`
         );
 
     }
 
 
-    /*
+    /* ======================================
        Demons
-    */
+    ====================================== */
 
     if(
         actual.demons !==
-        expected.demons
+        bagExpected.demons
     ){
 
         errors.push(
-            `You selected ${actual.demons} Demons, but this setup requires ${expected.demons}.`
+            `You selected ${actual.demons} Demons, but this setup requires ${bagExpected.demons}.`
         );
 
     }
@@ -1755,6 +1790,8 @@ function validateBag(){
         errors,
 
         expected,
+
+        bagExpected,
 
         actual,
 
