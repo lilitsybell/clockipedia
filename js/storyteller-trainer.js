@@ -9,7 +9,45 @@ const trainerPlayerCount = 12;
 
 let trainerCharacters = {};
 let selectedTrainerCharacters = [];
+/* ==========================================
+   Trouble Brewing SAO Order
+========================================== */
 
+const troubleBrewingSAO = [
+
+    "washerwoman",
+    "librarian",
+    "investigator",
+    "chef",
+    "empath",
+    "fortuneteller",
+    "undertaker",
+    "monk",
+    "ravenkeeper",
+    "virgin",
+    "slayer",
+    "soldier",
+    "mayor",
+
+    "butler",
+    "drunk",
+    "recluse",
+    "saint",
+
+    "poisoner",
+    "spy",
+    "baron",
+    "scarletwoman",
+
+    "imp"
+
+];
+const setupRequirements = {
+    Townsfolk: 7,
+    Outsiders: 2,
+    Minions: 2,
+    Demons: 1
+};
 /* ==========================================
    Initialize
 ========================================== */
@@ -21,10 +59,56 @@ document.addEventListener("DOMContentLoaded", async () => {
     await loadTrainerCharacters();
 
     buildCharacterSelection();
-
+initializeCharacterSelectionWindow();
 });
 
+/* ==========================================
+   Character Selection Window
+========================================== */
 
+function initializeCharacterSelectionWindow(){
+
+    const openButton =
+        document.querySelector(
+            "#open-character-selection"
+        );
+
+    const closeButton =
+        document.querySelector(
+            "#close-character-selection"
+        );
+
+    const overlay =
+        document.querySelector(
+            "#character-selection"
+        );
+
+
+    if(!openButton || !closeButton || !overlay){
+        return;
+    }
+
+
+    openButton.addEventListener(
+        "click",
+        () => {
+
+            overlay.classList.remove("hidden");
+
+        }
+    );
+
+
+    closeButton.addEventListener(
+        "click",
+        () => {
+
+            overlay.classList.add("hidden");
+
+        }
+    );
+
+}
 /* ==========================================
    Build Player Ring
 ========================================== */
@@ -146,7 +230,7 @@ function buildCharacterSelection(){
 
 
     container.innerHTML = "";
-
+buildSetupRequirements();
 
     const teams = [
         "Townsfolk",
@@ -158,13 +242,23 @@ function buildCharacterSelection(){
 
     teams.forEach(team => {
 
-        const characters =
-            Object.entries(trainerCharacters)
-                .filter(
-                    ([slug, character]) =>
-                        character.team === team
-                );
+const characters =
+    troubleBrewingSAO
+        .filter(slug => {
 
+            const character =
+                trainerCharacters[slug];
+
+            return (
+                character &&
+                character.team === team
+            );
+
+        })
+        .map(slug => [
+            slug,
+            trainerCharacters[slug]
+        ]);
 
         if(!characters.length) return;
 
@@ -223,6 +317,49 @@ container
         );
 
     });
+}
+/* ==========================================
+   Setup Requirements
+========================================== */
+
+function buildSetupRequirements(){
+
+    const container =
+        document.querySelector(
+            "#setup-requirements"
+        );
+
+    if(!container) return;
+
+
+    const teams = [
+        "Townsfolk",
+        "Outsiders",
+        "Minions",
+        "Demons"
+    ];
+
+
+    container.innerHTML =
+        teams.map(team => `
+
+            <div class="setup-requirement">
+
+                <span class="requirement-team">
+                    ${team}
+                </span>
+
+                <strong
+                    class="requirement-count"
+                    data-requirement-team="${team}"
+                >
+                    0 / ${setupRequirements[team]}
+                </strong>
+
+            </div>
+
+        `).join("");
+
 }
 /* ==========================================
    Toggle Character
@@ -291,16 +428,7 @@ function updateCharacterSelection(){
 
         });
 
-
-    const count =
-        document.querySelector("#selected-count");
-
-    if(count){
-
-        count.textContent =
-            `${selectedTrainerCharacters.length} / ${trainerPlayerCount}`;
-
-    }
+updateSetupCounts();
 
 
     const continueButton =
@@ -316,6 +444,79 @@ function updateCharacterSelection(){
 
 
     updatePlayerTokens();
+
+}
+/* ==========================================
+   Update Setup Counts
+========================================== */
+
+function updateSetupCounts(){
+
+    const teams = [
+        "Townsfolk",
+        "Outsiders",
+        "Minions",
+        "Demons"
+    ];
+
+
+    teams.forEach(team => {
+
+        const selectedCount =
+            selectedTrainerCharacters.filter(
+                slug =>
+                    trainerCharacters[slug]?.team ===
+                    team
+            ).length;
+
+
+        const display =
+            document.querySelector(
+                `[data-requirement-team="${team}"]`
+            );
+
+
+        if(display){
+
+            display.textContent =
+                `${selectedCount} / ${setupRequirements[team]}`;
+
+            display.classList.toggle(
+                "complete",
+                selectedCount ===
+                setupRequirements[team]
+            );
+
+        }
+
+    });
+
+
+    const total =
+        document.querySelector(
+            "#selection-total"
+        );
+
+    if(total){
+
+        total.textContent =
+            `${selectedTrainerCharacters.length} / ${trainerPlayerCount} characters selected`;
+
+    }
+
+
+    const distribute =
+        document.querySelector(
+            "#distribute-tokens"
+        );
+
+    if(distribute){
+
+        distribute.disabled =
+            selectedTrainerCharacters.length !==
+            trainerPlayerCount;
+
+    }
 
 }
 /* ==========================================
