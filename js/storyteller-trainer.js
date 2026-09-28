@@ -349,10 +349,11 @@ function buildCharacterSelection(){
 
             return;
 avatar.classList.remove(
+    "has-character",
     "team-townsfolk",
-    "team-outsiders",
-    "team-minions",
-    "team-demons"
+    "team-outsider",
+    "team-minion",
+    "team-demon"
 );
 
 
@@ -821,13 +822,13 @@ function updatePlayerTokens(){
     `;
 
 
-    avatar.classList.remove(
-        "has-character",
-        "team-townsfolk",
-        "team-outsiders",
-        "team-minions",
-        "team-demons"
-    );
+avatar.classList.remove(
+    "has-character",
+    "team-townsfolk",
+    "team-outsider",
+    "team-minion",
+    "team-demon"
+);
 
 
     return;
