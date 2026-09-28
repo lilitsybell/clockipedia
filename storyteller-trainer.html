@@ -100,7 +100,94 @@
                 </strong>
 
             </div>
+<!-- ==========================================
+     Setup Controls
+========================================== -->
 
+<button
+    id="open-character-selection"
+    class="setup-action-button"
+    type="button"
+>
+    Select Characters
+</button>
+
+
+<!-- ==========================================
+     Character Selection
+========================================== -->
+
+<div
+    id="character-selection"
+    class="character-selection-overlay hidden"
+>
+
+    <div class="character-selection-window">
+
+        <div class="character-selection-header">
+
+            <div>
+                <span class="panel-step">
+                    BUILD THE BAG
+                </span>
+
+                <h2>
+                    Select Characters
+                </h2>
+
+                <p>
+                    Select the characters for
+                    <strong id="selection-player-count">12</strong>
+                    players.
+                </p>
+            </div>
+
+
+            <button
+                id="close-character-selection"
+                class="character-selection-close"
+                type="button"
+                aria-label="Close character selection"
+            >
+                ×
+            </button>
+
+        </div>
+
+
+        <div
+            id="setup-requirements"
+            class="setup-requirements"
+        ></div>
+
+
+        <div
+            id="character-groups"
+            class="character-groups"
+        ></div>
+
+
+        <div class="character-selection-footer">
+
+            <span id="selection-total">
+                0 / 12 characters selected
+            </span>
+
+
+            <button
+                id="distribute-tokens"
+                class="primary-button"
+                type="button"
+                disabled
+            >
+                Distribute Tokens
+            </button>
+
+        </div>
+
+    </div>
+
+</div>
 
             <div
                 id="player-ring"
