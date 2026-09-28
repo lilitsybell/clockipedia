@@ -12,11 +12,6 @@ const trainerPlayerCount = 12;
    Temporary Player Names
 ========================================== */
 
-/*
-   We'll replace these with your random
-   name pool later.
-*/
-
 const trainerPlayerNames = [
 
     "Player 1",
@@ -75,15 +70,11 @@ function buildPlayerRing(){
         i++
     ){
 
-        const seat =
-            createPlayerSeat(
-                i
-            );
+        const player =
+            createPlayerSeat(i);
 
 
-        ring.appendChild(
-            seat
-        );
+        ring.appendChild(player);
 
     }
 
@@ -96,40 +87,42 @@ function buildPlayerRing(){
 
 function createPlayerSeat(index){
 
-    const seat =
+    const player =
         document.createElement(
             "div"
         );
 
 
-    seat.className =
+    player.className =
         "trainer-player";
 
 
-    seat.dataset.seat =
+    player.dataset.seat =
         index;
 
 
     /*
-       Seat 1 starts at the top.
+       Player 1 starts at the top.
 
-       The remaining seats continue
-       clockwise around the circle.
+       Players continue clockwise.
     */
 
     const angle =
-        (360 / trainerPlayerCount) *
+        (
+            360 /
+            trainerPlayerCount
+        ) *
         index -
         90;
 
 
-    seat.style.setProperty(
+    player.style.setProperty(
         "--seat-angle",
         `${angle}deg`
     );
 
 
-    seat.innerHTML = `
+    player.innerHTML = `
 
         <div class="player-token">
 
@@ -140,7 +133,9 @@ function createPlayerSeat(index){
 
             <div class="player-character">
 
-                <span class="player-character-placeholder">
+                <span
+                    class="player-character-placeholder"
+                >
                     ?
                 </span>
 
@@ -161,6 +156,6 @@ function createPlayerSeat(index){
     `;
 
 
-    return seat;
+    return player;
 
 }
