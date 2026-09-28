@@ -700,19 +700,25 @@ function updateSetupCounts(){
 }
 
 
-/* ==========================================
-   Get Selected Team Count
-========================================== */
-
 function getSelectedTeamCount(team){
 
     return selectedTrainerCharacters
         .filter(
             slug => {
 
+                const character =
+                    trainerCharacters[slug];
+
+
+                if(!character){
+                    return false;
+                }
+
+
                 return (
-                    trainerCharacters[slug]?.team ===
-                    team
+                    normalizeTrainerTeam(
+                        character.team
+                    ) === team
                 );
 
             }
@@ -720,7 +726,6 @@ function getSelectedTeamCount(team){
         .length;
 
 }
-
 
 /* ==========================================
    Shuffle
@@ -1299,9 +1304,7 @@ function setPlayerCharacter(
     character
 ){
 
-    /* ======================================
-       Reset Team Classes
-    ====================================== */
+    /* Reset */
 
     avatar.classList.remove(
         "team-good",
@@ -1309,9 +1312,7 @@ function setPlayerCharacter(
     );
 
 
-    /* ======================================
-       Character Image
-    ====================================== */
+    /* Character Image */
 
     avatar.innerHTML = `
 
@@ -1328,16 +1329,19 @@ function setPlayerCharacter(
     );
 
 
-    /* ======================================
-       Good Team Border
-    ====================================== */
+    /* Normalize Team */
+
+    const team =
+        normalizeTrainerTeam(
+            character.team
+        );
+
+
+    /* Good */
 
     if(
-        character.team ===
-        "Townsfolk" ||
-
-        character.team ===
-        "Outsider"
+        team === "Townsfolk" ||
+        team === "Outsider"
     ){
 
         avatar.classList.add(
@@ -1347,16 +1351,11 @@ function setPlayerCharacter(
     }
 
 
-    /* ======================================
-       Evil Team Border
-    ====================================== */
+    /* Evil */
 
     if(
-        character.team ===
-        "Minion" ||
-
-        character.team ===
-        "Demon"
+        team === "Minion" ||
+        team === "Demon"
     ){
 
         avatar.classList.add(
@@ -1366,7 +1365,6 @@ function setPlayerCharacter(
     }
 
 }
-
 
 /* ==========================================
    Update Player Tokens
