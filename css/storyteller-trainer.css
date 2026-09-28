@@ -227,8 +227,6 @@ body{
     transform:
         translate(-50%, -50%);
 }
-
-
 /* ==========================================
    Board Rings
 ========================================== */
@@ -249,57 +247,44 @@ body{
     pointer-events:none;
 }
 
+
+/* large outer seating guide */
+
 .board-ring-outer{
     width:100%;
 
     border:
         2px solid
-        rgba(196,174,220,.13);
+        rgba(196,174,220,.12);
 }
+
+
+/* main decorative ring */
 
 .board-ring-middle{
     width:68%;
 
     border:
         2px solid
-        rgba(196,174,220,.28);
+        rgba(196,174,220,.30);
 }
+
+
+/* inner decorative ring */
 
 .board-ring-inner{
     width:42%;
 
     border:
         2px solid
-        rgba(196,174,220,.34);
-}
-.board-ring-middle::before,
-.board-ring-middle::after{
-    content:"◆";
-
-    position:absolute;
-
-    left:50%;
-
-    transform:translateX(-50%);
-
-    color:#b486a4;
-
-    font-size:16px;
-    line-height:1;
+        rgba(196,174,220,.36);
 }
 
 
-.board-ring-middle::before{
-    top:-10px;
-}
-
-
-.board-ring-middle::after{
-    bottom:-10px;
-}
 /* ==========================================
    Ring Crosshairs
 ========================================== */
+
 .player-area::before,
 .player-area::after{
     content:"";
@@ -315,7 +300,7 @@ body{
         translate(-50%, -50%);
 
     background:
-        rgba(196,174,220,.08);
+        rgba(196,174,220,.045);
 
     pointer-events:none;
 }
@@ -332,6 +317,116 @@ body{
     height:88%;
 }
 
+
+/* ==========================================
+   Ring Ornaments
+========================================== */
+
+.ring-ornaments{
+    position:absolute;
+
+    left:50%;
+    top:50%;
+
+    width:68%;
+    aspect-ratio:1;
+
+    transform:
+        translate(-50%, -50%);
+
+    z-index:2;
+
+    pointer-events:none;
+}
+
+
+.ring-ornament{
+    position:absolute;
+
+    width:13px;
+    height:13px;
+
+    background:#b486a4;
+
+    transform:
+        translate(-50%, -50%)
+        rotate(45deg);
+
+    box-shadow:
+        0 0 12px
+        rgba(180,134,164,.15);
+}
+
+
+/* second smaller diamond */
+
+.ring-ornament::after{
+    content:"";
+
+    position:absolute;
+
+    left:50%;
+    top:50%;
+
+    width:8px;
+    height:8px;
+
+    background:#b486a4;
+}
+
+
+/* top */
+
+.ornament-top{
+    left:50%;
+    top:0;
+}
+
+.ornament-top::after{
+    transform:
+        translate(-50%, 15px);
+}
+
+
+/* right */
+
+.ornament-right{
+    left:100%;
+    top:50%;
+}
+
+.ornament-right::after{
+    transform:
+        translate(15px, -50%);
+}
+
+
+/* bottom */
+
+.ornament-bottom{
+    left:50%;
+    top:100%;
+}
+
+.ornament-bottom::after{
+    transform:
+        translate(-50%, -23px);
+}
+
+
+/* left */
+
+.ornament-left{
+    left:0;
+    top:50%;
+}
+
+.ornament-left::after{
+    transform:
+        translate(-23px, -50%);
+}
+
+
 /* ==========================================
    Center
 ========================================== */
@@ -342,7 +437,7 @@ body{
     left:50%;
     top:50%;
 
-    z-index:2;
+    z-index:3;
 
     width:120px;
     height:120px;
@@ -353,16 +448,18 @@ body{
     display:flex;
     align-items:center;
     justify-content:center;
+
+    pointer-events:none;
 }
 
 
 /* ==========================================
-   Center Diamond
+   Center Star / Diamond
 ========================================== */
 
 .board-center-mark{
-    width:54px;
-    height:54px;
+    width:58px;
+    height:58px;
 
     position:relative;
 
@@ -370,39 +467,21 @@ body{
 
     clip-path:polygon(
         50% 0%,
-        61% 39%,
+        59% 41%,
         100% 50%,
-        61% 61%,
+        59% 59%,
         50% 100%,
-        39% 61%,
+        41% 59%,
         0% 50%,
-        39% 39%
+        41% 41%
     );
 
     filter:
         drop-shadow(
             0 0 15px
-            rgba(180,134,164,.18)
+            rgba(180,134,164,.20)
         );
 }
-
-.board-center-mark::before,
-.board-center-mark::after{
-    display:none;
-}
-
-
-.board-center-mark::before{
-    width:2px;
-    height:68px;
-}
-
-
-.board-center-mark::after{
-    width:68px;
-    height:2px;
-}
-
 
 /* ==========================================
    Player Ring
