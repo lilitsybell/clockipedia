@@ -716,7 +716,7 @@ function shuffleArray(array){
    Distribute Tokens
 ========================================== */
 
-function distributeTrainerTokens(){
+async function distributeTrainerTokens(){
 
     if(
         selectedTrainerCharacters.length !==
@@ -726,20 +726,20 @@ function distributeTrainerTokens(){
     }
 
 
+    /* Randomize the seating */
+
     distributedTrainerCharacters =
         shuffleArray(
             selectedTrainerCharacters
         );
 
 
-    updatePlayerTokens();
-
+    /* Close character selector */
 
     const overlay =
         document.querySelector(
             "#character-selection"
         );
-
 
     if(overlay){
 
@@ -750,25 +750,33 @@ function distributeTrainerTokens(){
     }
 
 
+    /* Hide setup button during animation */
+
     const openButton =
         document.querySelector(
             "#open-character-selection"
         );
 
-
     if(openButton){
 
-        openButton.textContent =
-            "Characters Distributed";
+        openButton.classList.add(
+            "hidden"
+        );
 
     }
 
+
+    /* Run distribution */
+
+    await animateTokenDistribution();
+
+
+    /* Update phase */
 
     const phaseName =
         document.querySelector(
             ".phase-name"
         );
-
 
     if(phaseName){
 
@@ -777,8 +785,462 @@ function distributeTrainerTokens(){
 
     }
 
+
+    /* Bring setup button back */
+
+    if(openButton){
+
+        openButton.textContent =
+            "Change Characters";
+
+        openButton.classList.remove(
+            "hidden"
+        );
+
+    }
+
+}
+/* ==========================================
+   Animate Token Distribution
+========================================== */
+
+async function animateTokenDistribution(){
+
+    const game =
+        document.querySelector(
+            "#trainer-game"
+        );
+
+    const townSquare =
+        document.querySelector(
+            "#town-square"
+        );
+
+    const players =
+        Array.from(
+            document.querySelectorAll(
+                ".trainer-player"
+            )
+        );
+
+
+    if(
+        !game ||
+        !townSquare ||
+        players.length === 0
+    ){
+        updatePlayerTokens();
+        return;
+    }
+
+
+    /* ======================================
+       Clear Current Player Tokens
+    ====================================== */
+
+    clearPlayerTokens();
+
+
+    /* ======================================
+       Animation Layer
+    ====================================== */
+
+    const animationLayer =
+        document.createElement("div");
+
+
+    animationLayer.className =
+        "token-distribution-layer";
+
+
+    game.appendChild(
+        animationLayer
+    );
+
+
+    /* ======================================
+       Find Center of Town Square
+    ====================================== */
+
+    const gameRect =
+        game.getBoundingClientRect();
+
+    const squareRect =
+        townSquare.getBoundingClientRect();
+
+
+    const centerX =
+        squareRect.left -
+        gameRect.left +
+        squareRect.width / 2;
+
+
+    const centerY =
+        squareRect.top -
+        gameRect.top +
+        squareRect.height / 2;
+
+
+    /* ======================================
+       Build Center Stack
+    ====================================== */
+
+    const flyingTokens = [];
+
+
+    distributedTrainerCharacters
+        .forEach(
+            (slug, index) => {
+
+                const character =
+                    trainerCharacters[slug];
+
+
+                if(!character) return;
+
+
+                const token =
+                    document.createElement(
+                        "div"
+                    );
+
+
+                token.className =
+                    "distribution-token";
+
+
+                token.innerHTML = `
+
+                    <img
+                        src="${character.image}"
+                        alt=""
+                    >
+
+                `;
+
+
+                /*
+                   Slight random offset makes the
+                   center look like a shuffled pile.
+                */
+
+                const offsetX =
+                    Math.random() * 14 - 7;
+
+                const offsetY =
+                    Math.random() * 14 - 7;
+
+                const rotation =
+                    Math.random() * 20 - 10;
+
+
+                token.style.left =
+                    `${centerX + offsetX}px`;
+
+                token.style.top =
+                    `${centerY + offsetY}px`;
+
+                token.style.transform =
+                    `
+                        translate(-50%, -50%)
+                        rotate(${rotation}deg)
+                        scale(.85)
+                    `;
+
+
+                token.style.zIndex =
+                    100 + index;
+
+
+                animationLayer.appendChild(
+                    token
+                );
+
+
+                flyingTokens.push({
+                    token,
+                    slug,
+                    character,
+                    player:players[index]
+                });
+
+            }
+        );
+
+
+    /* Let browser paint the pile */
+
+    await wait(350);
+
+
+    /* ======================================
+       Little Shuffle Effect
+    ====================================== */
+
+    flyingTokens.forEach(
+        ({token}, index) => {
+
+            const x =
+                Math.random() * 34 - 17;
+
+            const y =
+                Math.random() * 34 - 17;
+
+            const rotation =
+                Math.random() * 35 - 17.5;
+
+
+            token.style.transition =
+                "transform 260ms ease";
+
+
+            token.style.transform =
+                `
+                    translate(
+                        calc(-50% + ${x}px),
+                        calc(-50% + ${y}px)
+                    )
+                    rotate(${rotation}deg)
+                    scale(.95)
+                `;
+
+        }
+    );
+
+
+    await wait(300);
+
+
+    /* ======================================
+       Send Tokens to Players
+    ====================================== */
+
+    for(
+        const item of flyingTokens
+    ){
+
+        await animateTokenToPlayer(
+            item,
+            animationLayer
+        );
+
+    }
+
+
+    /* ======================================
+       Cleanup
+    ====================================== */
+
+    animationLayer.remove();
+
+}
+/* ==========================================
+   Animate One Token to Player
+========================================== */
+
+async function animateTokenToPlayer(
+    item,
+    animationLayer
+){
+
+    const {
+        token,
+        slug,
+        character,
+        player
+    } = item;
+
+
+    const game =
+        document.querySelector(
+            "#trainer-game"
+        );
+
+
+    const avatar =
+        player.querySelector(
+            ".trainer-player-avatar"
+        );
+
+
+    if(
+        !game ||
+        !avatar
+    ){
+        return;
+    }
+
+
+    const gameRect =
+        game.getBoundingClientRect();
+
+    const avatarRect =
+        avatar.getBoundingClientRect();
+
+
+    const destinationX =
+        avatarRect.left -
+        gameRect.left +
+        avatarRect.width / 2;
+
+
+    const destinationY =
+        avatarRect.top -
+        gameRect.top +
+        avatarRect.height / 2;
+
+
+    /* Move */
+
+    token.style.transition =
+        `
+            left 420ms cubic-bezier(.2,.8,.2,1),
+            top 420ms cubic-bezier(.2,.8,.2,1),
+            transform 420ms cubic-bezier(.2,.8,.2,1)
+        `;
+
+
+    token.style.left =
+        `${destinationX}px`;
+
+    token.style.top =
+        `${destinationY}px`;
+
+
+    token.style.transform =
+        `
+            translate(-50%, -50%)
+            rotate(0deg)
+            scale(1)
+        `;
+
+
+    await wait(380);
+
+
+    /* Put real character into seat */
+
+    setPlayerCharacter(
+        avatar,
+        slug,
+        character
+    );
+
+
+    /* Little landing pop */
+
+    avatar.classList.add(
+        "token-landed"
+    );
+
+
+    token.remove();
+
+
+    await wait(90);
+
+
+    avatar.classList.remove(
+        "token-landed"
+    );
+
+}
+/* ==========================================
+   Clear Player Tokens
+========================================== */
+
+function clearPlayerTokens(){
+
+    document
+        .querySelectorAll(
+            ".trainer-player"
+        )
+        .forEach(
+            (player, index) => {
+
+                const avatar =
+                    player.querySelector(
+                        ".trainer-player-avatar"
+                    );
+
+
+                if(!avatar) return;
+
+
+                avatar.innerHTML = `
+
+                    <span>
+                        ${index + 1}
+                    </span>
+
+                `;
+
+
+                avatar.classList.remove(
+                    "has-character",
+                    "team-townsfolk",
+                    "team-outsider",
+                    "team-minion",
+                    "team-demon"
+                );
+
+            }
+        );
+
 }
 
+
+/* ==========================================
+   Set Player Character
+========================================== */
+
+function setPlayerCharacter(
+    avatar,
+    slug,
+    character
+){
+
+    avatar.classList.remove(
+        "team-townsfolk",
+        "team-outsider",
+        "team-minion",
+        "team-demon"
+    );
+
+
+    avatar.innerHTML = `
+
+        <img
+            src="${character.image}"
+            alt="${character.name}"
+        >
+
+    `;
+
+
+    avatar.classList.add(
+        "has-character",
+        `team-${character.team.toLowerCase()}`
+    );
+
+}
+
+
+/* ==========================================
+   Wait
+========================================== */
+
+function wait(milliseconds){
+
+    return new Promise(
+        resolve =>
+            setTimeout(
+                resolve,
+                milliseconds
+            )
+    );
+
+}
 
 /* ==========================================
    Update Player Tokens
