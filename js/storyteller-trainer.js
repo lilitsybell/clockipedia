@@ -596,7 +596,10 @@ function updateSetupCounts(){
                 selectedCount ===
                 requiredCount
             );
-
+display.classList.toggle(
+    "over",
+    selectedCount > requiredCount
+);
         }
 
 
