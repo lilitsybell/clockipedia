@@ -417,7 +417,7 @@
 ========================================== */
 
 .character-selection-window{
-    width:760px;
+    width:820px;
 
     max-width:calc(100% - 40px);
 
@@ -438,17 +438,16 @@
 ========================================== */
 
 .character-selection-title{
-    padding:11px 20px;
+    padding:9px 20px;
 
     background:var(--purple);
     color:white;
 
     font-family:"Droid Sans", sans-serif;
-    font-size:19px;
+    font-size:17px;
 
     text-align:center;
 }
-
 .character-selection-title strong{
     font-weight:700;
 }
@@ -461,13 +460,12 @@
 .character-selection-content{
     display:grid;
 
-    grid-template-columns:58px 1fr;
+    grid-template-columns:64px 1fr;
 
-    gap:14px;
+    gap:18px;
 
-    padding:18px 22px 16px;
+    padding:18px 24px 14px;
 }
-
 
 /* ==========================================
    Setup Requirements
@@ -476,22 +474,17 @@
 .setup-requirements{
     display:grid;
 
-    /*
-       Townsfolk occupy two rows.
-       Then Outsiders, Minions and Demon.
-    */
-
     grid-template-rows:
-        144px
-        72px
-        72px
-        72px;
+        152px
+        76px
+        76px
+        76px;
 
     align-items:center;
 
-    padding-right:12px;
+    padding-right:14px;
 
-    border-right:1px solid var(--border);
+    border-right:1px solid #ddd;
 }
 
 .setup-requirement{
@@ -499,24 +492,23 @@
     align-items:center;
     justify-content:center;
 
-    gap:5px;
+    gap:6px;
 
-    font-family:"Droid Sans", sans-serif;
-    font-size:19px;
+    font-family:"Roboto", sans-serif;
+    font-size:15px;
     font-weight:700;
 
     color:var(--black);
 }
 
 .requirement-dot{
-    width:10px;
-    height:10px;
+    width:8px;
+    height:8px;
+
+    flex:0 0 auto;
 
     border-radius:50%;
-
-    background:var(--gray);
 }
-
 
 /* Townsfolk */
 
@@ -549,24 +541,32 @@
     background:var(--red);
 }
 
+.requirement-count{
+    color:var(--black);
+}
 
+.requirement-count.complete{
+    color:var(--black);
+}
+
+.requirement-count.over{
+    color:var(--red);
+}
 /* ==========================================
    Character Grid
 ========================================== */
-
 .character-grid{
     display:grid;
 
     grid-template-columns:
         repeat(7, 1fr);
 
-    grid-auto-rows:72px;
+    grid-auto-rows:76px;
 
-    gap:0 4px;
+    gap:2px 6px;
 
     align-items:center;
 }
-
 
 /* ==========================================
    Force Team Breaks
@@ -606,7 +606,7 @@
 ========================================== */
 
 .character-choice{
-    width:76px;
+    width:82px;
 
     justify-self:center;
 
@@ -615,14 +615,14 @@
     align-items:center;
     justify-content:center;
 
-    gap:1px;
+    gap:2px;
 
-    padding:3px 2px;
+    padding:2px;
 
     background:transparent;
 
-    border:2px solid transparent;
-    border-radius:7px;
+    border:0;
+    border-radius:8px;
 
     color:var(--black);
 
@@ -632,28 +632,33 @@
 
     transition:
         background .12s ease,
-        border-color .12s ease,
         transform .12s ease;
 }
 
 .character-choice:hover{
-    background:rgba(102,102,153,.08);
+    background:rgba(102,102,153,.06);
 }
 
+.character-choice:hover img{
+    transform:scale(1.06);
+}
 
 /* ==========================================
    Character Image
 ========================================== */
 
 .character-choice img{
-    width:54px;
-    height:54px;
+    width:62px;
+    height:62px;
 
     display:block;
 
     object-fit:contain;
-}
 
+    transition:
+        transform .15s ease,
+        filter .15s ease;
+}
 
 /* ==========================================
    Character Name
@@ -681,37 +686,35 @@
 /* ==========================================
    Selected Character
 ========================================== */
-
 .character-choice.selected{
-    background:white;
-
-    border-color:var(--purple);
-
-    box-shadow:
-        0 2px 7px rgba(13,24,33,.10);
+    background:transparent;
+    border-color:transparent;
+    box-shadow:none;
 }
 
 .character-choice.selected img{
-    transform:scale(.91);
-}
+    transform:scale(1.08);
 
+    filter:
+        drop-shadow(0 0 2px white)
+        drop-shadow(0 0 4px var(--purple));
+}
 
 /* ==========================================
    Selection Footer
 ========================================== */
 
 .character-selection-footer{
-    min-height:58px;
+    min-height:52px;
 
     display:flex;
     align-items:center;
-    justify-content:center;
 
     gap:10px;
 
-    padding:9px 18px;
+    padding:8px 18px;
 
-    background:white;
+    background:#fafafa;
 
     border-top:1px solid var(--border);
 }
