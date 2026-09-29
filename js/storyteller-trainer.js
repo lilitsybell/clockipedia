@@ -2551,12 +2551,12 @@ document.addEventListener(
         if(!player){
             return;
         }
-        if(!selectedSetupReminder){
+        if(!selectedReminder){
             return;
         }
         placeSetupReminder(
             player,
-            selectedSetupReminder
+            selectedReminder
         );
     }
 );
@@ -2589,7 +2589,7 @@ function placeSetupReminder(
     placedReminder.dataset.label =
         reminder.label;
     const character =
-        characters[
+        trainerCharacterData[
             reminder.character
         ];
     const image =
@@ -2598,6 +2598,7 @@ function placeSetupReminder(
         <img
             src="${image}"
             alt=""
+            draggable="false"
         >
         <span>
             ${reminder.label}
@@ -2606,13 +2607,25 @@ function placeSetupReminder(
     reminderArea.appendChild(
         placedReminder
     );
-    clearSelectedSetupReminder();
+    placedReminders.push({
+        seat:
+            Number(
+                player.dataset.seat
+            ),
+        character:
+            reminder.character,
+        reminder:
+            reminder.reminder,
+        label:
+            reminder.label
+    });
+    clearSelectedReminder();
 }
 /* ==========================================
    Clear Selected Reminder
 ========================================== */
-function clearSelectedSetupReminder(){
-    selectedSetupReminder = null;
+function clearSelectedReminder(){
+    selectedReminder = null;
     document
         .querySelectorAll(
             ".setup-reminder-token.selected"
