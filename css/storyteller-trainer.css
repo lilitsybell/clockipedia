@@ -1190,31 +1190,23 @@ body{
         rgba(45,29,48,.12);
 }
 /* ==========================================
-   Reminder Tray
-========================================= */
+   Reminder Token Tray
+========================================== */
 .reminder-tray{
     position:absolute;
-    right:28px;
-    top:220px;
-    bottom:105px;
-    z-index:25;
-    width:190px;
+    right:30px;
+    top:250px;
+    bottom:115px;
+    width:210px;
     display:flex;
     flex-direction:column;
-    background:
-        linear-gradient(
-            145deg,
-            #fff3cf,
-            #f2d58e
-        );
-    border:
-        1px solid
-        rgba(91,62,82,.35);
-    border-radius:12px;
+    background:#f3dfad;
+    border:1px solid rgba(13,24,33,.28);
+    border-radius:16px;
     box-shadow:
-        0 8px 24px
-        rgba(0,0,0,.22);
+        0 10px 30px rgba(0,0,0,.18);
     overflow:hidden;
+    z-index:20;
 }
 .reminder-tray.hidden{
     display:none;
