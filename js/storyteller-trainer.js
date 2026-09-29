@@ -530,45 +530,33 @@ function createPlayerSeat(index){
         ) *
         index -
         90;
-
-
     player.style.setProperty(
         "--seat-angle",
         `${angle}deg`
     );
-
-
     player.innerHTML = `
-
         <div class="player-token">
-
             <div class="player-number">
                 ${index + 1}
             </div>
-
-
             <div class="player-character">
-
                 <span
                     class="player-character-placeholder"
                 >
                     ?
                 </span>
-
             </div>
-
-
             <div class="player-name">
                 ${trainerPlayerNames[index]}
             </div>
-
-
             <div class="player-role">
                 Unknown
             </div>
-
+<div
+    class="player-reminders"
+    data-player-reminders
+></div>
         </div>
-
     `;
 
 
