@@ -1924,3 +1924,102 @@ function beginReminderSetup(){
     }
 
 }
+/* ==========================================
+   Get Setup Reminders
+========================================== */
+
+function getSetupReminders(){
+
+    const groups = [];
+
+
+    /*
+       Characters physically in the bag.
+    */
+
+    trainerSelectedCharacters.forEach(
+        characterId => {
+
+            const reminderData =
+                troubleBrewingReminders[
+                    characterId
+                ];
+
+
+            if(
+                !reminderData ||
+                !reminderData.reminders
+            ){
+                return;
+            }
+
+
+            const setupReminders =
+                reminderData.reminders.filter(
+                    reminder =>
+                        reminder.phase ===
+                        "setup"
+                );
+
+
+            if(
+                setupReminders.length === 0
+            ){
+                return;
+            }
+
+
+            groups.push({
+
+                characterId:
+                    characterId,
+
+                reminders:
+                    setupReminders
+
+            });
+
+        }
+    );
+
+
+    /*
+       The Drunk is special.
+
+       The Drunk token is never physically
+       selected for the bag, so add its
+       reminder separately when the setup
+       validator determined that the Drunk
+       is being used.
+    */
+
+    if(
+        trainerSetupState.usingDrunk
+    ){
+
+        const drunkReminders =
+            troubleBrewingReminders
+                .drunk
+                .reminders
+                .filter(
+                    reminder =>
+                        reminder.phase ===
+                        "setup"
+                );
+
+
+        groups.push({
+
+            characterId:"drunk",
+
+            reminders:
+                drunkReminders
+
+        });
+
+    }
+
+
+    return groups;
+
+}
