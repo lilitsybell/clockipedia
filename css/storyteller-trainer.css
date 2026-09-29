@@ -1190,36 +1190,31 @@ body{
         rgba(45,29,48,.12);
 }
 /* ==========================================
-   Reminder Token Tray
-========================================== */
+   Reminder Tray
+========================================= */
 .reminder-tray{
     position:absolute;
-    left:50%;
-    bottom:24px;
-    z-index:30;
-    width:min(720px, 72vw);
-    min-height:82px;
-    transform:
-        translateX(-50%);
+    right:28px;
+    top:220px;
+    bottom:105px;
+    z-index:25;
+    width:190px;
     display:flex;
-    align-items:center;
+    flex-direction:column;
     background:
         linear-gradient(
-            180deg,
-            #fff0c8,
-            #f4d99b
+            145deg,
+            #fff3cf,
+            #f2d58e
         );
     border:
-        2px solid
-        #2a1c35;
+        1px solid
+        rgba(91,62,82,.35);
     border-radius:12px;
     box-shadow:
-        0 10px 30px
-        rgba(0,0,0,.32);
+        0 8px 24px
+        rgba(0,0,0,.22);
     overflow:hidden;
-    transition:
-        opacity .2s ease,
-        transform .2s ease;
 }
 .reminder-tray.hidden{
     display:none;
@@ -1239,84 +1234,72 @@ body{
 }
 .reminder-group{
     flex:0 0 auto;
+    width:100%;
     display:flex;
     flex-direction:column;
-    align-items:center;
-    gap:4px;
+    align-items:flex-start;
+    gap:5px;
 }
 .reminder-group-name{
-    max-width:115px;
+    width:100%;
+    max-width:none;
     overflow:hidden;
     font-family:"Roboto", sans-serif;
     font-size:9px;
-    font-weight:800;
-    text-align:center;
+    font-weight:900;
+    letter-spacing:.3px;
+    text-align:left;
     text-overflow:ellipsis;
     white-space:nowrap;
+    text-transform:uppercase;
     color:#76536e;
 }
-/* ==========================================
-   Reminder Group Tokens
-========================================== */
 .reminder-group-tokens{
+    width:100%;
     display:flex;
-    align-items:center;
+    flex-wrap:wrap;
     gap:5px;
 }
 /* ==========================================
    Reminder Token
 ========================================== */
 .setup-reminder-token{
-    width:62px;
-    height:54px;
+    width:72px;
+    height:58px;
     padding:3px 4px 4px;
     display:flex;
     flex-direction:column;
     align-items:center;
     justify-content:center;
-    gap:1px;
+    gap:2px;
     background:
-        linear-gradient(
-            145deg,
-            #fff5d7,
-            #efd18d
-        );
+        rgba(255,255,255,.38);
     border:
-        2px solid
-        #5d405e;
-    border-radius:8px;
+        1px solid
+        rgba(68,42,68,.55);
+    border-radius:7px;
     box-shadow:
-        0 3px 0
-        rgba(44,27,47,.2);
-    opacity:1;
+        0 2px 4px
+        rgba(44,27,47,.12);
     color:#281c30;
 }
 .setup-reminder-token:disabled{
     opacity:1;
-    cursor:default;
 }
-/* ==========================================
-   Reminder Artwork
-========================================== */
 .setup-reminder-art{
-    width:26px;
-    height:26px;
+    width:27px;
+    height:27px;
     display:flex;
     align-items:center;
     justify-content:center;
 }
 .setup-reminder-art img{
-    display:block;
     width:100%;
     height:100%;
     object-fit:contain;
 }
-/* ==========================================
-   Reminder Name
-========================================== */
 .setup-reminder-name{
-    display:block;
-    max-width:54px;
+    max-width:64px;
     overflow:hidden;
     font-family:"Roboto", sans-serif;
     font-size:7px;
@@ -1343,15 +1326,26 @@ body{
    Reminder Tray Header
 ========================================== */
 .reminder-tray-header{
-    width:125px;
-    min-height:82px;
-    padding:14px;
-    display:flex;
-    flex-direction:column;
-    justify-content:center;
-    border-right:
+    flex:0 0 auto;
+    padding:12px 14px 10px;
+    border-bottom:
         1px solid
-        rgba(42,28,53,.18);
+        rgba(91,62,82,.18);
+}
+.reminder-tray-step{
+    display:block;
+    margin-bottom:2px;
+    font-family:"Roboto", sans-serif;
+    font-size:8px;
+    font-weight:800;
+    letter-spacing:1.8px;
+    color:#8c5b75;
+}
+.reminder-tray-title{
+    font-family:"Droid Sans", sans-serif;
+    font-size:17px;
+    line-height:1;
+    color:#251b31;
 }
 .reminder-tray-eyebrow{
     display:block;
@@ -1374,10 +1368,12 @@ body{
 .reminder-token-list{
     flex:1;
     min-width:0;
-    min-height:82px;
-    padding:10px 14px;
+    min-height:0;
+    padding:10px;
     display:flex;
-    align-items:center;
-    justify-content:flex-start;
-    gap:10px;
+    flex-direction:column;
+    align-items:stretch;
+    gap:12px;
+    overflow-x:hidden;
+    overflow-y:auto;
 }
