@@ -1409,3 +1409,16 @@ body{
         0 0 0 3px rgba(117,83,173,.25),
         0 5px 12px rgba(0,0,0,.18);
 }
+/* ==========================================
+   Player Reminder Tokens
+========================================== */
+.player-reminders{
+    position:absolute;
+    right:-13px;
+    top:3px;
+    z-index:8;
+    display:flex;
+    flex-direction:column;
+    gap:3px;
+    pointer-events:none;
+}
