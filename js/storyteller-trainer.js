@@ -1800,3 +1800,129 @@ function validateBag(){
     };
 
 }
+/* ==========================================
+   Begin Reminder Setup
+========================================== */
+
+function beginReminderSetup(){
+
+    const instruction =
+        document.querySelector(
+            "#trainer-instruction"
+        );
+
+
+    const phaseNumber =
+        document.querySelector(
+            "#phase-number"
+        );
+
+
+    const phaseName =
+        document.querySelector(
+            "#phase-name"
+        );
+
+
+    const reminderTray =
+        document.querySelector(
+            "#reminder-tray"
+        );
+
+
+    const mainAction =
+        document.querySelector(
+            "#select-characters"
+        );
+
+
+    const selectionStatus =
+        document.querySelector(
+            "#selection-status"
+        );
+
+
+    /*
+       Header
+    */
+
+    if(instruction){
+
+        instruction.textContent =
+            "Place any required setup reminders";
+
+    }
+
+
+    /*
+       Phase
+    */
+
+    if(phaseNumber){
+
+        phaseNumber.textContent =
+            "SETUP";
+
+    }
+
+
+    if(phaseName){
+
+        phaseName.textContent =
+            "Place Reminders";
+
+    }
+
+
+    /*
+       Reminder tray
+    */
+
+    if(reminderTray){
+
+        reminderTray.classList.remove(
+            "hidden"
+        );
+
+    }
+
+
+    /*
+       Status
+    */
+
+    if(selectionStatus){
+
+        selectionStatus.textContent =
+            "Characters distributed";
+
+    }
+
+
+    /*
+       Main action
+    */
+
+    if(mainAction){
+
+        mainAction.innerHTML = `
+
+            <span
+                class="trainer-main-action-icon"
+            >
+                ✓
+            </span>
+
+            <span>
+                Check Setup
+            </span>
+
+        `;
+
+
+        mainAction.dataset.action =
+            "check-setup";
+
+    }
+
+}
