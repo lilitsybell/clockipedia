@@ -1293,6 +1293,14 @@ body{
         0 0 0 3px rgba(128,89,189,.35),
         0 5px 10px rgba(0,0,0,.2);
 }
+.setup-reminder-token[data-team="Townsfolk"],
+.setup-reminder-token[data-team="Outsider"]{
+    border-color:var(--blue);
+}
+.setup-reminder-token[data-team="Minion"],
+.setup-reminder-token[data-team="Demon"]{
+    border-color:var(--red);
+}
 .setup-reminder-art{
     position:absolute;
     width:46px;
