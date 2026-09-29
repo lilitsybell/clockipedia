@@ -2446,6 +2446,8 @@ token.dataset.team =
         "button";
     token.className =
         "setup-reminder-token";
+   token.dataset.team =
+    team;
     token.dataset.character =
         characterId;
     token.dataset.reminder =
