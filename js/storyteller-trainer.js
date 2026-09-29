@@ -2515,14 +2515,16 @@ function selectReminderToken(token){
                 );
             }
         );
-    selectedReminder = {
-        character:
-            token.dataset.character,
-        reminder:
-            token.dataset.reminder,
-        label:
-            token.dataset.label
-    };
+selectedReminder = {
+    tokenId:
+        token.dataset.tokenId,
+    character:
+        token.dataset.character,
+    reminder:
+        token.dataset.reminder,
+    label:
+        token.dataset.label
+};
     token.classList.add(
         "selected"
     );
