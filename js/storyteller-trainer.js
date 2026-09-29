@@ -1922,7 +1922,7 @@ function beginReminderSetup(){
             "check-setup";
 
     }
-
+buildSetupReminderTray();
 }
 /* ==========================================
    Get Setup Reminders
@@ -2021,5 +2021,255 @@ function getSetupReminders(){
 
 
     return groups;
+
+}
+/* ==========================================
+   Build Setup Reminder Tray
+========================================== */
+
+function buildSetupReminderTray(){
+
+    const list =
+        document.querySelector(
+            "#reminder-token-list"
+        );
+
+
+    if(!list){
+        return;
+    }
+
+
+    list.innerHTML = "";
+
+
+    const groups =
+        getSetupReminders();
+
+
+    /*
+       No setup reminders needed.
+    */
+
+    if(groups.length === 0){
+
+        const empty =
+            document.createElement(
+                "div"
+            );
+
+
+        empty.className =
+            "reminder-tray-empty";
+
+
+        empty.textContent =
+            "No setup reminders required";
+
+
+        list.appendChild(
+            empty
+        );
+
+
+        return;
+
+    }
+
+
+    groups.forEach(
+        group => {
+
+            const element =
+                createReminderGroup(
+                    group
+                );
+
+
+            list.appendChild(
+                element
+            );
+
+        }
+    );
+
+}
+/* ==========================================
+   Create Reminder Group
+========================================== */
+
+function createReminderGroup(group){
+
+    const character =
+        trainerCharacterData[
+            group.characterId
+        ];
+
+
+    const wrapper =
+        document.createElement(
+            "div"
+        );
+
+
+    wrapper.className =
+        "reminder-group";
+
+
+    wrapper.dataset.character =
+        group.characterId;
+
+
+    /*
+       Character label
+    */
+
+    const label =
+        document.createElement(
+            "span"
+        );
+
+
+    label.className =
+        "reminder-group-name";
+
+
+    label.textContent =
+        character
+            ? character.name
+            : group.characterId;
+
+
+    wrapper.appendChild(
+        label
+    );
+
+
+    /*
+       Reminder tokens
+    */
+
+    const tokens =
+        document.createElement(
+            "div"
+        );
+
+
+    tokens.className =
+        "reminder-group-tokens";
+
+
+    group.reminders.forEach(
+        reminder => {
+
+            for(
+                let i = 0;
+                i < reminder.count;
+                i++
+            ){
+
+                tokens.appendChild(
+                    createReminderToken(
+                        group.characterId,
+                        reminder,
+                        i
+                    )
+                );
+
+            }
+
+        }
+    );
+
+
+    wrapper.appendChild(
+        tokens
+    );
+
+
+    return wrapper;
+
+}
+/* ==========================================
+   Create Reminder Token
+========================================== */
+
+function createReminderToken(
+    characterId,
+    reminder,
+    index
+){
+
+    const character =
+        trainerCharacterData[
+            characterId
+        ];
+
+
+    const token =
+        document.createElement(
+            "button"
+        );
+
+
+    token.type =
+        "button";
+
+
+    token.className =
+        "setup-reminder-token";
+
+
+    /*
+       Not interactive yet.
+    */
+
+    token.disabled =
+        true;
+
+
+    token.dataset.character =
+        characterId;
+
+
+    token.dataset.reminder =
+        reminder.id;
+
+
+    token.dataset.copy =
+        index;
+
+
+    token.title =
+        reminder.rule;
+
+
+    token.innerHTML = `
+
+        <span class="setup-reminder-art">
+
+            ${
+                character
+                    ? `
+                        <img
+                            src="${character.image}"
+                            alt=""
+                            draggable="false"
+                        >
+                    `
+                    : ""
+            }
+
+        </span>
+
+
+        <strong class="setup-reminder-name">
+            ${reminder.name}
+        </strong>
+
+    `;
+
+
+    return token;
 
 }
