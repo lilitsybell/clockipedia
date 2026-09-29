@@ -1194,10 +1194,10 @@ body{
 ========================================== */
 .reminder-tray{
     position:absolute;
-    top:250px;
-    right:28px;
-    bottom:100px;
-    width:210px;
+    top:225px;
+    right:32px;
+    bottom:92px;
+    width:185px;
     display:flex;
     flex-direction:column;
     background:#f3dfad;
@@ -1214,13 +1214,6 @@ body{
 /* ==========================================
    Reminder Groups
 ========================================== */
-.reminder-token-list{
-    flex:1;
-    min-height:0;
-    padding:12px;
-    overflow-y:auto;
-    overflow-x:hidden;
-}
 .reminder-group{
     flex:0 0 auto;
     width:100%;
@@ -1244,10 +1237,11 @@ body{
     color:#76536e;
 }
 .reminder-group-tokens{
+    width:100%;
     display:grid;
     grid-template-columns:
-        repeat(2, 1fr);
-    gap:7px;
+        repeat(2, minmax(0, 1fr));
+    gap:5px;
 }
 /* ==========================================
    Reminder Token
@@ -1255,8 +1249,8 @@ body{
 .setup-reminder-token{
     width:100%;
     min-width:0;
-    height:58px;
-    padding:8px 4px;
+    height:54px;
+    padding:6px 3px;
     cursor:pointer;
     display:flex;
     flex-direction:column;
@@ -1282,8 +1276,8 @@ body{
     opacity:1;
 }
 .setup-reminder-art{
-    width:27px;
-    height:27px;
+    width:24px;
+    height:24px;
     display:flex;
     align-items:center;
     justify-content:center;
