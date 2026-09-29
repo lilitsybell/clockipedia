@@ -2753,14 +2753,14 @@ function positionPlayerReminders(){
                     angle *
                     Math.PI /
                     180;
-                const directionX =
-                    -Math.cos(
-                        radians
-                    );
-                const directionY =
-                    -Math.sin(
-                        radians
-                    );
+const directionX =
+    -Math.cos(
+        radians
+    );
+const directionY =
+    Math.sin(
+        radians
+    );
                 reminders.forEach(
                     (
                         reminder,
