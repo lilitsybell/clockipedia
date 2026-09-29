@@ -2491,7 +2491,7 @@ function createReminderToken(
             <defs>
                 <path
                     id="${pathId}"
-                    d="M 14 67 A 43 43 0 0 0 86 67"
+                    d="M 10 69 A 46 46 0 0 0 90 69"
                 ></path>
             </defs>
             <text>
