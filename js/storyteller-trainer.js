@@ -2754,12 +2754,12 @@ function positionPlayerReminders(){
                     Math.PI /
                     180;
 const directionX =
-    Math.sin(
+    -Math.sin(
         radians
     );
 
 const directionY =
-    -Math.cos(
+    Math.cos(
         radians
     );
                 reminders.forEach(
