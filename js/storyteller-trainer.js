@@ -144,7 +144,263 @@ const troubleBrewingCharacters = {
 
 };
 
+/* ==========================================
+   Trouble Brewing Reminder Tokens
+========================================== */
 
+const troubleBrewingReminders = {
+
+    washerwoman:{
+        reminders:[
+            {
+                id:"townsfolk",
+                name:"Townsfolk",
+                count:1,
+                phase:"setup",
+                rule:
+                    "Place on a Townsfolk player. Cannot be the Drunk. The Spy may register as Townsfolk."
+            },
+            {
+                id:"wrong",
+                name:"Wrong",
+                count:1,
+                phase:"setup",
+                rule:
+                    "Place on another player."
+            }
+        ]
+    },
+
+
+    librarian:{
+        reminders:[
+            {
+                id:"outsider",
+                name:"Outsider",
+                count:1,
+                phase:"setup",
+                rule:
+                    "Place on an Outsider player. The Drunk and Spy may register as Outsiders."
+            },
+            {
+                id:"wrong",
+                name:"Wrong",
+                count:1,
+                phase:"setup",
+                rule:
+                    "Place on another player."
+            }
+        ]
+    },
+
+
+    investigator:{
+        reminders:[
+            {
+                id:"minion",
+                name:"Minion",
+                count:1,
+                phase:"setup",
+                rule:
+                    "Place on a Minion player. The Recluse may register as a Minion."
+            },
+            {
+                id:"wrong",
+                name:"Wrong",
+                count:1,
+                phase:"setup",
+                rule:
+                    "Place on another player."
+            }
+        ]
+    },
+
+
+    chef:{
+        reminders:[]
+    },
+
+
+    empath:{
+        reminders:[]
+    },
+
+
+    fortuneteller:{
+        reminders:[
+            {
+                id:"red-herring",
+                name:"Red Herring",
+                count:1,
+                phase:"setup",
+                rule:
+                    "This player registers as the Demon to the Fortune Teller."
+            }
+        ]
+    },
+
+
+    undertaker:{
+        reminders:[
+            {
+                id:"died-today",
+                name:"Died Today",
+                count:1,
+                phase:"day",
+                rule:
+                    "Place on the player killed by execution."
+            }
+        ]
+    },
+
+
+    monk:{
+        reminders:[
+            {
+                id:"safe",
+                name:"Safe",
+                count:1,
+                phase:"night",
+                rule:
+                    "Place on the player chosen by the Monk. They cannot be killed by the Demon tonight."
+            }
+        ]
+    },
+
+
+    ravenkeeper:{
+        reminders:[]
+    },
+
+
+    virgin:{
+        reminders:[
+            {
+                id:"no-ability",
+                name:"No Ability",
+                count:1,
+                phase:"day",
+                rule:
+                    "Place on the Virgin after they are nominated for the first time."
+            }
+        ]
+    },
+
+
+    slayer:{
+        reminders:[
+            {
+                id:"no-ability",
+                name:"No Ability",
+                count:1,
+                phase:"day",
+                rule:
+                    "Place on the Slayer after they choose a player."
+            }
+        ]
+    },
+
+
+    soldier:{
+        reminders:[]
+    },
+
+
+    mayor:{
+        reminders:[]
+    },
+
+
+    butler:{
+        reminders:[
+            {
+                id:"master",
+                name:"Master",
+                count:1,
+                phase:"night",
+                rule:
+                    "Place on the player chosen by the Butler."
+            }
+        ]
+    },
+
+
+    drunk:{
+        reminders:[
+            {
+                id:"is-the-drunk",
+                name:"Is the Drunk",
+                count:1,
+                phase:"setup",
+                rule:
+                    "Place on a Townsfolk token. That player is actually the Drunk."
+            }
+        ]
+    },
+
+
+    recluse:{
+        reminders:[]
+    },
+
+
+    saint:{
+        reminders:[]
+    },
+
+
+    poisoner:{
+        reminders:[
+            {
+                id:"poisoned",
+                name:"Poisoned",
+                count:1,
+                phase:"night",
+                rule:
+                    "Place on the player chosen by the Poisoner."
+            }
+        ]
+    },
+
+
+    spy:{
+        reminders:[]
+    },
+
+
+    baron:{
+        reminders:[]
+    },
+
+
+    scarletwoman:{
+        reminders:[
+            {
+                id:"is-the-demon",
+                name:"Is the Demon",
+                count:1,
+                phase:"game",
+                rule:
+                    "Place on the Scarlet Woman if the Imp dies while 5 or more players are alive."
+            }
+        ]
+    },
+
+
+    imp:{
+        reminders:[
+            {
+                id:"dead",
+                name:"Dead",
+                count:1,
+                phase:"night",
+                rule:
+                    "Place on the player chosen by the Imp. That player dies."
+            }
+        ]
+    }
+
+};
 /* ==========================================
    Setup Requirements
 
@@ -164,11 +420,11 @@ const trainerRequirements = {
 /* ==========================================
    Selection State
 ========================================== */
-
 const trainerSelectedCharacters =
     new Set();
-
-
+let trainerSetupState = {
+    usingDrunk:false
+};
 /* ==========================================
    Initialize
 ========================================== */
@@ -887,17 +1143,16 @@ function shuffleCharacters(characters){
 async function distributeCharacters(){
 const validation =
     validateBag();
-
-
 if(!validation.valid){
-
     showSetupMistake(
         validation
     );
-
     return;
-
 }
+trainerSetupState = {
+    usingDrunk:
+        validation.usingDrunk
+};
     if(
         trainerSelectedCharacters.size !==
         trainerPlayerCount
@@ -1954,12 +2209,19 @@ function getSetupReminders(){
             }
 
 
-            const setupReminders =
-                reminderData.reminders.filter(
-                    reminder =>
-                        reminder.phase ===
-                        "setup"
-                );
+const setupReminders =
+    reminderData.reminders.filter(
+        reminder => {
+
+            return (
+                reminder.phase &&
+                reminder.phase
+                    .toLowerCase() ===
+                    "setup"
+            );
+
+        }
+    );
 
 
             if(
@@ -1997,15 +2259,22 @@ function getSetupReminders(){
         trainerSetupState.usingDrunk
     ){
 
-        const drunkReminders =
-            troubleBrewingReminders
-                .drunk
-                .reminders
-                .filter(
-                    reminder =>
-                        reminder.phase ===
+const drunkReminders =
+    troubleBrewingReminders
+        .drunk
+        .reminders
+        .filter(
+            reminder => {
+
+                return (
+                    reminder.phase &&
+                    reminder.phase
+                        .toLowerCase() ===
                         "setup"
                 );
+
+            }
+        );
 
 
         groups.push({
