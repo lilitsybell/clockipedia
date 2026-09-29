@@ -2716,10 +2716,87 @@ function animateReminderMove(
     );
 }
 /* ==========================================
+   Position Player Reminders
+========================================== */
+function positionPlayerReminders(){
+    document
+        .querySelectorAll(
+            ".trainer-player"
+        )
+        .forEach(
+            player => {
+                const reminderArea =
+                    player.querySelector(
+                        "[data-player-reminders]"
+                    );
+                if(!reminderArea){
+                    return;
+                }
+                const reminders =
+                    Array.from(
+                        reminderArea.querySelectorAll(
+                            ".setup-reminder-token.placed"
+                        )
+                    );
+                const angle =
+                    parseFloat(
+                        player.style.getPropertyValue(
+                            "--seat-angle"
+                        )
+                    );
+                if(
+                    Number.isNaN(angle)
+                ){
+                    return;
+                }
+                const radians =
+                    angle *
+                    Math.PI /
+                    180;
+                const directionX =
+                    -Math.cos(
+                        radians
+                    );
+                const directionY =
+                    -Math.sin(
+                        radians
+                    );
+                reminders.forEach(
+                    (
+                        reminder,
+                        index
+                    ) => {
+                        const distance =
+                            70 +
+                            (
+                                index *
+                                62
+                            );
+                        const x =
+                            directionX *
+                            distance;
+                        const y =
+                            directionY *
+                            distance;
+                        reminder.style.setProperty(
+                            "--reminder-x",
+                            `${x}px`
+                        );
+                        reminder.style.setProperty(
+                            "--reminder-y",
+                            `${y}px`
+                        );
+                    }
+                );
+            }
+        );
+}
+/* ==========================================
    Update Reminder State
 ========================================== */
 function updatePlacedReminderState(){
     placedReminders.length = 0;
+    positionPlayerReminders();
     document
         .querySelectorAll(
             ".setup-reminder-token.placed"
