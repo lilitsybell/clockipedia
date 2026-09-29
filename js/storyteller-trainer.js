@@ -2448,6 +2448,8 @@ function createReminderToken(
         index;
     token.dataset.label =
         reminder.name;
+   token.dataset.tokenId =
+    `${characterId}-${reminder.id}-${index}`;
     token.title =
         reminder.rule;
     const pathId =
@@ -2537,10 +2539,12 @@ document.addEventListener(
     event => {
         const placedReminder =
             event.target.closest(
-                ".placed-reminder-token"
+                ".setup-reminder-token.placed"
             );
         if(placedReminder){
-            placedReminder.remove();
+            returnReminderToTray(
+                placedReminder
+            );
             event.stopPropagation();
             return;
         }
@@ -2554,19 +2558,15 @@ document.addEventListener(
         if(!selectedReminder){
             return;
         }
-        placeSetupReminder(
-            player,
-            selectedReminder
+        placeSelectedReminder(
+            player
         );
     }
 );
 /* ==========================================
-   Place Setup Reminder
+   Place Selected Reminder
 ========================================== */
-function placeSetupReminder(
-    player,
-    reminder
-){
+function placeSelectedReminder(player){
     const reminderArea =
         player.querySelector(
             "[data-player-reminders]"
@@ -2574,67 +2574,196 @@ function placeSetupReminder(
     if(!reminderArea){
         return;
     }
-    const placedReminder =
-        document.createElement(
-            "button"
+    const token =
+        document.querySelector(
+            `.setup-reminder-token[data-token-id="${selectedReminder.tokenId}"]`
         );
-    placedReminder.type =
-        "button";
-    placedReminder.className =
-        "placed-reminder-token";
-    placedReminder.dataset.character =
-        reminder.character;
-    placedReminder.dataset.reminder =
-        reminder.reminder;
-    placedReminder.dataset.label =
-        reminder.label;
-    const character =
-        trainerCharacterData[
-            reminder.character
-        ];
-    const image =
-        character?.image || "";
-    placedReminder.innerHTML = `
-        <img
-            src="${image}"
-            alt=""
-            draggable="false"
-        >
-        <span>
-            ${reminder.label}
-        </span>
-    `;
-    reminderArea.appendChild(
-        placedReminder
+    if(!token){
+        return;
+    }
+    token.dataset.seat =
+        player.dataset.seat;
+    animateReminderMove(
+        token,
+        reminderArea,
+        () => {
+            token.classList.remove(
+                "selected"
+            );
+            token.classList.add(
+                "placed"
+            );
+            reminderArea.appendChild(
+                token
+            );
+            selectedReminder = null;
+            updatePlacedReminderState();
+        }
     );
-    placedReminders.push({
-        seat:
-            Number(
-                player.dataset.seat
-            ),
-        character:
-            reminder.character,
-        reminder:
-            reminder.reminder,
-        label:
-            reminder.label
-    });
-    clearSelectedReminder();
 }
 /* ==========================================
-   Clear Selected Reminder
+   Return Reminder To Tray
 ========================================== */
-function clearSelectedReminder(){
-    selectedReminder = null;
+function returnReminderToTray(token){
+    const characterId =
+        token.dataset.character;
+    const trayGroup =
+        document.querySelector(
+            `.reminder-group[data-character="${characterId}"] .reminder-group-tokens`
+        );
+    if(!trayGroup){
+        return;
+    }
+    animateReminderMove(
+        token,
+        trayGroup,
+        () => {
+            token.classList.remove(
+                "placed"
+            );
+            delete token.dataset.seat;
+            insertReminderInTrayOrder(
+                trayGroup,
+                token
+            );
+            updatePlacedReminderState();
+        }
+    );
+}
+/* ==========================================
+   Keep Tray Order
+========================================== */
+function insertReminderInTrayOrder(
+    trayGroup,
+    token
+){
+    const tokenId =
+        token.dataset.tokenId;
+    const allTokens =
+        Array.from(
+            trayGroup.querySelectorAll(
+                ".setup-reminder-token"
+            )
+        );
+    const insertBefore =
+        allTokens.find(
+            otherToken =>
+                otherToken.dataset.tokenId
+                    .localeCompare(
+                        tokenId
+                    ) > 0
+        );
+    if(insertBefore){
+        trayGroup.insertBefore(
+            token,
+            insertBefore
+        );
+    }
+    else{
+        trayGroup.appendChild(
+            token
+        );
+    }
+}
+/* ==========================================
+   Animate Reminder Move
+========================================== */
+function animateReminderMove(
+    token,
+    destination,
+    onComplete
+){
+    const startRect =
+        token.getBoundingClientRect();
+    const flying =
+        token.cloneNode(true);
+    flying.classList.remove(
+        "selected",
+        "placed"
+    );
+    flying.classList.add(
+        "reminder-token-flying"
+    );
+    document.body.appendChild(
+        flying
+    );
+    flying.style.left =
+        `${startRect.left}px`;
+    flying.style.top =
+        `${startRect.top}px`;
+    flying.style.width =
+        `${startRect.width}px`;
+    flying.style.height =
+        `${startRect.height}px`;
+    token.classList.add(
+        "reminder-moving"
+    );
+    const destinationRect =
+        destination.getBoundingClientRect();
+    const targetX =
+        destinationRect.left +
+        (
+            destinationRect.width / 2
+        ) -
+        (
+            startRect.width / 2
+        );
+    const targetY =
+        destinationRect.top +
+        (
+            destinationRect.height / 2
+        ) -
+        (
+            startRect.height / 2
+        );
+    requestAnimationFrame(
+        () => {
+            requestAnimationFrame(
+                () => {
+                    flying.style.left =
+                        `${targetX}px`;
+                    flying.style.top =
+                        `${targetY}px`;
+                }
+            );
+        }
+    );
+    window.setTimeout(
+        () => {
+            flying.remove();
+            token.classList.remove(
+                "reminder-moving"
+            );
+            onComplete();
+        },
+        220
+    );
+}
+/* ==========================================
+   Update Reminder State
+========================================== */
+function updatePlacedReminderState(){
+    placedReminders.length = 0;
     document
         .querySelectorAll(
-            ".setup-reminder-token.selected"
+            ".setup-reminder-token.placed"
         )
         .forEach(
             token => {
-                token.classList.remove(
-                    "selected"
-                );
+                placedReminders.push({
+                    tokenId:
+                        token.dataset.tokenId,
+                    seat:
+                        Number(
+                            token.dataset.seat
+                        ),
+                    character:
+                        token.dataset.character,
+                    reminder:
+                        token.dataset.reminder,
+                    label:
+                        token.dataset.label
+                });
             }
         );
 }
