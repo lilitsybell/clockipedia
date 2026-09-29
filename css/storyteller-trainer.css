@@ -1472,3 +1472,48 @@ body{
     white-space:nowrap;
     text-overflow:ellipsis;
 }
+/* ==========================================
+   Placed Reminder Tokens
+========================================== */
+.player-reminders{
+    position:absolute;
+    left:50%;
+    top:50%;
+    width:0;
+    height:0;
+    pointer-events:none;
+}
+.player-reminders
+.setup-reminder-token{
+    position:absolute;
+    width:62px;
+    height:62px;
+    margin:0;
+    pointer-events:auto;
+}
+.player-reminders
+.setup-reminder-art img{
+    width:30px;
+    height:30px;
+}
+.player-reminders
+.setup-reminder-label text{
+    font-size:10px;
+    font-weight:700;
+}
+/* ==========================================
+   Flying Reminder
+========================================== */
+.reminder-token-flying{
+    position:fixed !important;
+    z-index:10000;
+    margin:0 !important;
+    pointer-events:none;
+    transition:
+        left .22s ease-out,
+        top .22s ease-out,
+        transform .22s ease-out;
+}
+.reminder-moving{
+    visibility:hidden;
+}
