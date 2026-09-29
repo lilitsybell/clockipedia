@@ -2472,15 +2472,13 @@ function createReminderToken(
 ========================================== */
 function selectReminderToken(token){
     if(
-        selectedReminderToken === token
+        selectedReminder &&
+        selectedReminder.token === token
     ){
         token.classList.remove(
             "selected"
         );
-        selectedReminderToken = null;
-        console.log(
-            "Reminder deselected"
-        );
+        selectedReminder = null;
         return;
     }
     document
@@ -2494,21 +2492,19 @@ function selectReminderToken(token){
                 );
             }
         );
-    selectedReminderToken =
-        token;
+    selectedReminder = {
+        token:token,
+        tokenId:
+            token.dataset.tokenId,
+        character:
+            token.dataset.character,
+        reminder:
+            token.dataset.reminder,
+        label:
+            token.dataset.label
+    };
     token.classList.add(
         "selected"
-    );
-    console.log(
-        "Selected reminder:",
-        {
-            character:
-                token.dataset.character,
-            reminder:
-                token.dataset.reminder,
-            label:
-                token.dataset.label
-        }
     );
 }
 /* ==========================================
