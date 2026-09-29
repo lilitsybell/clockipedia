@@ -1786,7 +1786,7 @@ body{
 
     z-index:30;
 
-    width:390px;
+    width:min(720px, 72vw);
     min-height:82px;
 
     transform:
@@ -1824,7 +1824,187 @@ body{
     display:none;
 }
 
+/* ==========================================
+   Reminder Groups
+========================================== */
 
+.reminder-token-list{
+    flex:1;
+
+    min-width:0;
+    min-height:82px;
+
+    padding:9px 12px;
+
+    display:flex;
+    align-items:center;
+
+    gap:14px;
+
+    overflow-x:auto;
+}
+
+
+.reminder-group{
+    flex:0 0 auto;
+
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+
+    gap:4px;
+}
+
+
+.reminder-group-name{
+    max-width:115px;
+
+    overflow:hidden;
+
+    font-family:"Roboto", sans-serif;
+    font-size:9px;
+    font-weight:800;
+
+    text-align:center;
+    text-overflow:ellipsis;
+    white-space:nowrap;
+
+    color:#76536e;
+}
+
+
+/* ==========================================
+   Reminder Group Tokens
+========================================== */
+
+.reminder-group-tokens{
+    display:flex;
+    align-items:center;
+
+    gap:5px;
+}
+
+
+/* ==========================================
+   Reminder Token
+========================================== */
+
+.setup-reminder-token{
+    width:62px;
+    height:54px;
+
+    padding:3px 4px 4px;
+
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+    justify-content:center;
+
+    gap:1px;
+
+    background:
+        linear-gradient(
+            145deg,
+            #fff5d7,
+            #efd18d
+        );
+
+    border:
+        2px solid
+        #5d405e;
+
+    border-radius:8px;
+
+    box-shadow:
+        0 3px 0
+        rgba(44,27,47,.2);
+
+    opacity:1;
+
+    color:#281c30;
+}
+
+
+/*
+   The buttons are intentionally disabled
+   during this visual-only step, but we
+   don't want browser disabled styling.
+*/
+
+.setup-reminder-token:disabled{
+    opacity:1;
+
+    cursor:default;
+}
+
+
+/* ==========================================
+   Reminder Artwork
+========================================== */
+
+.setup-reminder-art{
+    width:26px;
+    height:26px;
+
+    display:flex;
+    align-items:center;
+    justify-content:center;
+}
+
+
+.setup-reminder-art img{
+    display:block;
+
+    width:100%;
+    height:100%;
+
+    object-fit:contain;
+}
+
+
+/* ==========================================
+   Reminder Name
+========================================== */
+
+.setup-reminder-name{
+    display:block;
+
+    max-width:54px;
+
+    overflow:hidden;
+
+    font-family:"Roboto", sans-serif;
+    font-size:7px;
+    font-weight:900;
+
+    line-height:1;
+
+    text-align:center;
+    text-overflow:ellipsis;
+    white-space:nowrap;
+
+    text-transform:uppercase;
+
+    color:#312238;
+}
+
+
+/* ==========================================
+   Empty Tray
+========================================== */
+
+.reminder-tray-empty{
+    width:100%;
+
+    font-family:"Roboto", sans-serif;
+    font-size:12px;
+    font-style:italic;
+
+    text-align:center;
+
+    color:
+        rgba(49,34,56,.55);
+}
 /* ==========================================
    Reminder Tray Header
 ========================================== */
