@@ -2440,19 +2440,15 @@ function createReminderGroup(group){
 /* ==========================================
    Create Reminder Token
 ========================================== */
-
 function createReminderToken(
     characterId,
     reminder,
     index
 ){
-
     const character =
         trainerCharacterData[
             characterId
         ];
-
-
     const token =
         document.createElement(
             "button"
@@ -2467,10 +2463,12 @@ function createReminderToken(
         reminder.id;
     token.dataset.copy =
         index;
-token.dataset.label =
-    reminder.name;
+    token.dataset.label =
+        reminder.name;
     token.title =
         reminder.rule;
+    const pathId =
+        `reminder-path-${characterId}-${reminder.id}-${index}`;
     token.innerHTML = `
         <span class="setup-reminder-art">
             ${
@@ -2485,18 +2483,36 @@ token.dataset.label =
                     : ""
             }
         </span>
-        <strong class="setup-reminder-name">
-            ${reminder.name}
-        </strong>
+        <svg
+            class="setup-reminder-label"
+            viewBox="0 0 100 100"
+            aria-hidden="true"
+        >
+            <defs>
+                <path
+                    id="${pathId}"
+                    d="M 14 67 A 43 43 0 0 0 86 67"
+                ></path>
+            </defs>
+            <text>
+                <textPath
+                    href="#${pathId}"
+                    startOffset="50%"
+                    text-anchor="middle"
+                >
+                    ${reminder.name.toUpperCase()}
+                </textPath>
+            </text>
+        </svg>
     `;
-token.addEventListener(
-    "click",
-    () => {
-        selectReminderToken(
-            token
-        );
-    }
-);
+    token.addEventListener(
+        "click",
+        () => {
+            selectReminderToken(
+                token
+            );
+        }
+    );
     return token;
 }
 /* ==========================================
