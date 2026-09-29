@@ -1517,3 +1517,66 @@ body{
 .reminder-moving{
     visibility:hidden;
 }
+/* ==========================================
+   Reminder Stack Direction
+========================================== */
+.player-reminders{
+    transform:
+        rotate(
+            calc(
+                var(--seat-angle) + 90deg
+            )
+        );
+}
+.player-reminders
+.setup-reminder-token:nth-child(1){
+    transform:
+        translate(
+            -50%,
+            72px
+        )
+        rotate(
+            calc(
+                (var(--seat-angle) + 90deg) * -1
+            )
+        );
+}
+.player-reminders
+.setup-reminder-token:nth-child(2){
+    transform:
+        translate(
+            -50%,
+            128px
+        )
+        rotate(
+            calc(
+                (var(--seat-angle) + 90deg) * -1
+            )
+        );
+}
+.player-reminders
+.setup-reminder-token:nth-child(3){
+    transform:
+        translate(
+            -50%,
+            184px
+        )
+        rotate(
+            calc(
+                (var(--seat-angle) + 90deg) * -1
+            )
+        );
+}
+.player-reminders
+.setup-reminder-token:nth-child(4){
+    transform:
+        translate(
+            -50%,
+            240px
+        )
+        rotate(
+            calc(
+                (var(--seat-angle) + 90deg) * -1
+            )
+        );
+}
