@@ -2327,77 +2327,45 @@ function buildSetupReminderTray(){
 /* ==========================================
    Create Reminder Group
 ========================================== */
-
 function createReminderGroup(group){
-
     const character =
         trainerCharacterData[
             group.characterId
         ];
-
-
     const wrapper =
         document.createElement(
             "div"
         );
-
-
     wrapper.className =
         "reminder-group";
-
-
     wrapper.dataset.character =
         group.characterId;
-
-
-    /*
-       Character label
-    */
-
     const label =
         document.createElement(
             "span"
         );
-
-
     label.className =
         "reminder-group-name";
-
-
     label.textContent =
         character
             ? character.name
             : group.characterId;
-
-
     wrapper.appendChild(
         label
     );
-
-
-    /*
-       Reminder tokens
-    */
-
     const tokens =
         document.createElement(
             "div"
         );
-
-
     tokens.className =
         "reminder-group-tokens";
-
-
     group.reminders.forEach(
         reminder => {
-
             for(
                 let i = 0;
                 i < reminder.count;
                 i++
             ){
-
                 tokens.appendChild(
                     createReminderToken(
                         group.characterId,
@@ -2405,20 +2373,13 @@ function createReminderGroup(group){
                         i
                     )
                 );
-
             }
-
         }
     );
-
-
     wrapper.appendChild(
         tokens
     );
-
-
     return wrapper;
-
 }
 /* ==========================================
    Create Reminder Token
@@ -2432,12 +2393,10 @@ function createReminderToken(
         trainerCharacterData[
             characterId
         ];
-   const team =
-    normalizeTrainerTeam(
-        character?.team
-    );
-token.dataset.team =
-    team;
+    const team =
+        normalizeTrainerTeam(
+            character?.team
+        );
     const token =
         document.createElement(
             "button"
@@ -2446,8 +2405,8 @@ token.dataset.team =
         "button";
     token.className =
         "setup-reminder-token";
-   token.dataset.team =
-    team;
+    token.dataset.team =
+        team;
     token.dataset.character =
         characterId;
     token.dataset.reminder =
@@ -2456,8 +2415,8 @@ token.dataset.team =
         index;
     token.dataset.label =
         reminder.name;
-   token.dataset.tokenId =
-    `${characterId}-${reminder.id}-${index}`;
+    token.dataset.tokenId =
+        `${characterId}-${reminder.id}-${index}`;
     token.title =
         reminder.rule;
     const pathId =
