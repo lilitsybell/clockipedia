@@ -2432,6 +2432,12 @@ function createReminderToken(
         trainerCharacterData[
             characterId
         ];
+   const team =
+    normalizeTrainerTeam(
+        character?.team
+    );
+token.dataset.team =
+    team;
     const token =
         document.createElement(
             "button"
