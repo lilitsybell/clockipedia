@@ -2766,12 +2766,14 @@ function positionPlayerReminders(){
                         reminder,
                         index
                     ) => {
-                        const distance =
-                            70 +
-                            (
-                                index *
-                                62
-                            );
+const firstReminderDistance = 78;
+const reminderSpacing = 66;
+const distance =
+    firstReminderDistance +
+    (
+        index *
+        reminderSpacing
+    );
                         const x =
                             directionX *
                             distance;
