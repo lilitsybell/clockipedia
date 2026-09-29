@@ -1364,3 +1364,25 @@ body{
     overflow-x:hidden;
     overflow-y:auto;
 }
+/* ==========================================
+   Selected Reminder Token
+========================================== */
+.setup-reminder-token{
+    cursor:pointer;
+    transition:
+        transform .12s ease,
+        border-color .12s ease,
+        box-shadow .12s ease;
+}
+.setup-reminder-token:hover{
+    transform:translateY(-2px);
+}
+.setup-reminder-token.selected{
+    transform:
+        translateY(-2px)
+        scale(1.05);
+    border-color:#7553ad;
+    box-shadow:
+        0 0 0 3px rgba(117,83,173,.25),
+        0 5px 12px rgba(0,0,0,.18);
+}
