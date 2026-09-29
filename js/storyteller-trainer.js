@@ -2767,7 +2767,7 @@ const directionY =
                         reminder,
                         index
                     ) => {
-const firstReminderDistance = 78;
+const firstReminderDistance = 105;
 const reminderSpacing = 66;
 const distance =
     firstReminderDistance +
