@@ -2534,3 +2534,90 @@ function selectReminderToken(token){
         selectedReminder
     );
 }
+/* ==========================================
+   Reminder Placement
+========================================== */
+document.addEventListener(
+    "click",
+    event => {
+        const player =
+            event.target.closest(
+                ".trainer-player"
+            );
+        if(!player){
+            return;
+        }
+        if(!selectedSetupReminder){
+            return;
+        }
+        placeSetupReminder(
+            player,
+            selectedSetupReminder
+        );
+    }
+);
+/* ==========================================
+   Place Setup Reminder
+========================================== */
+function placeSetupReminder(
+    player,
+    reminder
+){
+    const reminderArea =
+        player.querySelector(
+            "[data-player-reminders]"
+        );
+    if(!reminderArea){
+        return;
+    }
+    const placedReminder =
+        document.createElement(
+            "button"
+        );
+    placedReminder.type =
+        "button";
+    placedReminder.className =
+        "placed-reminder-token";
+    placedReminder.dataset.character =
+        reminder.character;
+    placedReminder.dataset.reminder =
+        reminder.reminder;
+    placedReminder.dataset.label =
+        reminder.label;
+    const character =
+        characters[
+            reminder.character
+        ];
+    const image =
+        character?.image || "";
+    placedReminder.innerHTML = `
+        <img
+            src="${image}"
+            alt=""
+        >
+        <span>
+            ${reminder.label}
+        </span>
+    `;
+    reminderArea.appendChild(
+        placedReminder
+    );
+    clearSelectedSetupReminder();
+}
+/* ==========================================
+   Clear Selected Reminder
+========================================== */
+function clearSelectedSetupReminder(){
+    selectedSetupReminder = null;
+    document
+        .querySelectorAll(
+            ".setup-reminder-token.selected"
+        )
+        .forEach(
+            token => {
+                token.classList.remove(
+                    "selected"
+                );
+            }
+        );
+}
