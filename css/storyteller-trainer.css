@@ -1194,9 +1194,9 @@ body{
 ========================================== */
 .reminder-tray{
     position:absolute;
-    top:225px;
-    right:32px;
-    bottom:92px;
+    top:110px;
+    right:28px;
+    bottom:100px;
     width:185px;
     display:flex;
     flex-direction:column;
@@ -1204,7 +1204,8 @@ body{
     border:1px solid rgba(13,24,33,.22);
     border-radius:14px;
     box-shadow:
-        0 10px 30px rgba(0,0,0,.18);
+        0 10px 30px
+        rgba(0,0,0,.18);
     overflow:hidden;
     z-index:20;
 }
