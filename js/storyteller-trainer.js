@@ -1002,7 +1002,7 @@ selection?.classList.add(
 
 
     finishCharacterDistribution();
-
+beginReminderSetup();
 }
 
 /* ==========================================
