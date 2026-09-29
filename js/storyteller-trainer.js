@@ -1,113 +1,91 @@
 console.log("storyteller-trainer.js loaded");
-
-
 /* ==========================================
    Game Settings
 ========================================== */
-
 const trainerPlayerCount = 12;
-
+let selectedReminder = null;
+const placedReminders = [];
 /* ==========================================
    Trouble Brewing Setup
 ========================================== */
-
 const troubleBrewingSetup = {
-
     7:{
         townsfolk:5,
         outsiders:0,
         minions:1,
         demons:1
     },
-
     8:{
         townsfolk:5,
         outsiders:1,
         minions:1,
         demons:1
     },
-
     9:{
         townsfolk:5,
         outsiders:2,
         minions:1,
         demons:1
     },
-
     10:{
         townsfolk:7,
         outsiders:0,
         minions:2,
         demons:1
     },
-
     11:{
         townsfolk:7,
         outsiders:1,
         minions:2,
         demons:1
     },
-
     12:{
         townsfolk:7,
         outsiders:2,
         minions:2,
         demons:1
     },
-
     13:{
         townsfolk:9,
         outsiders:0,
         minions:3,
         demons:1
     },
-
     14:{
         townsfolk:9,
         outsiders:1,
         minions:3,
         demons:1
     },
-
     15:{
         townsfolk:9,
         outsiders:2,
         minions:3,
         demons:1
     }
-
 };
 /* ==========================================
    Player Names
 ========================================== */
-
 const trainerPlayerNames = [
-
-    "Player 1",
-    "Player 2",
-    "Player 3",
-    "Player 4",
-    "Player 5",
-    "Player 6",
-    "Player 7",
-    "Player 8",
-    "Player 9",
-    "Player 10",
-    "Player 11",
-    "Player 12"
-
+    "Corey",
+    "Bell",
+    "Eddie",
+    "Ben",
+    "Reece",
+    "Juniper",
+    "Nic",
+    "Petra",
+    "Clayzerr",
+    "Amon",
+    "Broom",
+    "Nate"
 ];
-
-
 /* ==========================================
    Character Data
 ========================================== */
-
 let trainerCharacterData = {};
-
-
 const troubleBrewingCharacters = {
-
     townsfolk:[
         "washerwoman",
         "librarian",
@@ -2479,44 +2457,22 @@ function createReminderToken(
         document.createElement(
             "button"
         );
-
-
     token.type =
         "button";
-
-
     token.className =
         "setup-reminder-token";
-
-
-    /*
-       Not interactive yet.
-    */
-
-    token.disabled =
-        true;
-
-
     token.dataset.character =
         characterId;
-
-
     token.dataset.reminder =
         reminder.id;
-
-
     token.dataset.copy =
         index;
-
-
+token.dataset.label =
+    reminder.name;
     token.title =
         reminder.rule;
-
-
     token.innerHTML = `
-
         <span class="setup-reminder-art">
-
             ${
                 character
                     ? `
@@ -2528,17 +2484,49 @@ function createReminderToken(
                     `
                     : ""
             }
-
         </span>
-
-
         <strong class="setup-reminder-name">
             ${reminder.name}
         </strong>
-
     `;
-
-
+token.addEventListener(
+    "click",
+    () => {
+        selectReminderToken(
+            token
+        );
+    }
+);
     return token;
-
+}
+/* ==========================================
+   Select Reminder Token
+========================================== */
+function selectReminderToken(token){
+    document
+        .querySelectorAll(
+            ".setup-reminder-token"
+        )
+        .forEach(
+            reminderToken => {
+                reminderToken.classList.remove(
+                    "selected"
+                );
+            }
+        );
+    selectedReminder = {
+        character:
+            token.dataset.character,
+        reminder:
+            token.dataset.reminder,
+        label:
+            token.dataset.label
+    };
+    token.classList.add(
+        "selected"
+    );
+    console.log(
+        "Selected reminder:",
+        selectedReminder
+    );
 }
