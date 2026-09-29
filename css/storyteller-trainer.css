@@ -391,7 +391,7 @@ body{
 ========================================== */
 .player-number{
     position:absolute;
-    left:-8px;
+    left:0px;
     top:-9px;
     z-index:5;
     width:27px;
