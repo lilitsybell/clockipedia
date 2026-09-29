@@ -410,15 +410,10 @@ let trainerSetupState = {
 document.addEventListener(
     "DOMContentLoaded",
     async () => {
-
         buildPlayerRing();
-
         await loadTrainerCharacters();
-
         buildCharacterSelection();
-
         updateCharacterSelection();
-
         bindCharacterSelectionControls();
 bindMistakeControls();
     }
@@ -2540,6 +2535,15 @@ function selectReminderToken(token){
 document.addEventListener(
     "click",
     event => {
+        const placedReminder =
+            event.target.closest(
+                ".placed-reminder-token"
+            );
+        if(placedReminder){
+            placedReminder.remove();
+            event.stopPropagation();
+            return;
+        }
         const player =
             event.target.closest(
                 ".trainer-player"
