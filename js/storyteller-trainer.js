@@ -1000,8 +1000,6 @@ selection?.classList.add(
 
     await wait(260);
 
-
-    finishCharacterDistribution();
 beginReminderSetup();
 }
 
