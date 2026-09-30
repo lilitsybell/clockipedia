@@ -1531,20 +1531,17 @@ body{
 .night-order-list{
     display:flex;
     flex-direction:column;
-    gap:2px;
-    padding:9px 8px 10px;
+    gap:0;
+    padding:8px 8px 10px;
     overflow:visible;
 }
-/* ==========================================
-   Character
-========================================== */
 .night-order-character{
     position:relative;
     display:flex;
     align-items:center;
     gap:7px;
-    min-height:40px;
-    padding:3px 4px;
+    min-height:35px;
+    padding:2px 5px;
     border-radius:8px;
     cursor:help;
     transition:
@@ -1556,16 +1553,17 @@ body{
     transform:translateX(2px);
 }
 .night-order-character img{
-    width:32px;
-    height:32px;
+    width:27px;
+    height:27px;
     object-fit:contain;
     flex:0 0 auto;
 }
 .night-order-character-name{
-    font-size:13px;
-    line-height:1.1;
+    min-width:0;
+    font-size:12px;
     font-weight:700;
-    color:#0D1821;
+    line-height:1.1;
+    white-space:nowrap;
 }
 /* ==========================================
    Night Order Tooltip
@@ -1613,4 +1611,24 @@ body{
 }
 .night-order-tooltip{
     translate:0 -50%;
+}
+.night-order-header{
+    padding:14px 14px 12px;
+    border-bottom:
+        1px solid rgba(13,24,33,.12);
+}
+.night-order-eyebrow{
+    display:block;
+    margin-bottom:4px;
+    font-size:10px;
+    font-weight:700;
+    letter-spacing:.18em;
+    color:#7d5872;
+}
+.night-order-header h2{
+    margin:0;
+    font-size:17px;
+    line-height:1.1;
+    font-weight:500;
+    color:#0D1821;
 }
