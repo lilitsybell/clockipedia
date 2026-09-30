@@ -407,7 +407,6 @@ let trainerSetupState = {
 /* ==========================================
    Initialize
 ========================================== */
-
 document.addEventListener(
     "DOMContentLoaded",
     async () => {
@@ -416,7 +415,8 @@ document.addEventListener(
         buildCharacterSelection();
         updateCharacterSelection();
         bindCharacterSelectionControls();
-bindMistakeControls();
+        bindMistakeControls();
+        showTrainerIntro();
     }
 );
 /* ==========================================
@@ -1240,7 +1240,7 @@ selection?.classList.add(
 
     await wait(260);
 
-beginReminderSetup();
+showPrepareNightOnePopup();
 }
 
 /* ==========================================
@@ -3345,7 +3345,7 @@ function checkReminderSetup(){
         );
         return;
     }
-    beginFirstNight();
+    showNightOnePopup();
 }
 /* ==========================================
    Build Night Order
@@ -3836,4 +3836,17 @@ function showNightOnePopup(){
                 beginFirstNight();
             }
     });
+}
+/* ==========================================
+   Open Character Selector
+========================================== */
+function openCharacterSelector(){
+    const overlay =
+        document.querySelector(
+            "#character-selection"
+        );
+    if(!overlay){
+        return;
+    }
+openCharacterSelector();
 }
