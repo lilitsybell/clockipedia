@@ -1758,3 +1758,6 @@ body{
     font-weight:500;
     color:#0D1821;
 }
+.night-order-character.not-in-play{
+    opacity:.35;
+}
