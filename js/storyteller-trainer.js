@@ -3346,3 +3346,200 @@ function checkReminderSetup(){
         "Reminder setup correct!"
     );
 }
+/* ==========================================
+   Build Night Order
+========================================== */
+function buildNightOrder(
+    nightType = "firstNight"
+){
+    const panel =
+        document.querySelector(
+            "#night-order-panel"
+        );
+    const list =
+        document.querySelector(
+            "#night-order-list"
+        );
+    const title =
+        document.querySelector(
+            "#night-order-title"
+        );
+    if(
+        !panel ||
+        !list
+    ){
+        return;
+    }
+    if(title){
+        title.textContent =
+            nightType === "firstNight"
+                ? "First Night"
+                : "Other Nights";
+    }
+    const nightCharacters =
+        Object.entries(
+            trainerCharacterData
+        )
+        .filter(
+            ([id, character]) => {
+                const night =
+                    character
+                        ?.nightOrder
+                        ?.[nightType];
+return (
+    character.edition ===
+        "Trouble Brewing" &&
+    night &&
+    Number(night.order) > 0
+);
+            }
+        )
+        .sort(
+            (a, b) => {
+                return (
+                    Number(
+                        a[1]
+                            .nightOrder[
+                                nightType
+                            ]
+                            .order
+                    ) -
+                    Number(
+                        b[1]
+                            .nightOrder[
+                                nightType
+                            ]
+                            .order
+                    )
+                );
+            }
+        );
+    list.innerHTML = "";
+    nightCharacters.forEach(
+        ([id, character]) => {
+            const night =
+                character
+                    .nightOrder[
+                        nightType
+                    ];
+            const row =
+                document.createElement(
+                    "div"
+                );
+            row.className =
+                "night-order-character";
+            row.dataset.character =
+                id;
+            row.dataset.nightText =
+                night.text || "";
+            row.innerHTML = `
+                <img
+                    src="${character.image}"
+                    alt=""
+                    draggable="false"
+                >
+                <span
+                    class="night-order-character-name"
+                >
+                    ${character.name}
+                </span>
+            `;
+            list.appendChild(
+                row
+            );
+        }
+    );
+    panel.classList.remove(
+        "hidden"
+    );
+    initializeNightOrderTooltips();
+}
+/* ==========================================
+   Night Order Tooltip
+========================================== */
+function initializeNightOrderTooltips(){
+    let tooltip =
+        document.querySelector(
+            "#night-order-tooltip"
+        );
+    if(!tooltip){
+        tooltip =
+            document.createElement(
+                "div"
+            );
+        tooltip.id =
+            "night-order-tooltip";
+        tooltip.className =
+            "night-order-tooltip";
+        tooltip.innerHTML = `
+            <strong
+                class="night-order-tooltip-name"
+            ></strong>
+            <span
+                class="night-order-tooltip-text"
+            ></span>
+        `;
+        document.body.appendChild(
+            tooltip
+        );
+    }
+    document
+        .querySelectorAll(
+            ".night-order-character"
+        )
+        .forEach(
+            row => {
+                row.addEventListener(
+                    "mouseenter",
+                    () => {
+                        const name =
+                            row.querySelector(
+                                ".night-order-character-name"
+                            )
+                            ?.textContent ||
+                            "";
+                        const text =
+                            row.dataset
+                                .nightText ||
+                            "";
+                        tooltip
+                            .querySelector(
+                                ".night-order-tooltip-name"
+                            )
+                            .textContent =
+                                name;
+                        tooltip
+                            .querySelector(
+                                ".night-order-tooltip-text"
+                            )
+                            .textContent =
+                                text;
+                        const rect =
+                            row.getBoundingClientRect();
+                        tooltip.style.left =
+                            `${
+                                rect.right + 12
+                            }px`;
+                        tooltip.style.top =
+                            `${
+                                rect.top +
+                                (
+                                    rect.height / 2
+                                )
+                            }px`;
+                        tooltip.classList.add(
+                            "visible"
+                        );
+                    }
+                );
+                row.addEventListener(
+                    "mouseleave",
+                    () => {
+                        tooltip.classList.remove(
+                            "visible"
+                        );
+                    }
+                );
+            }
+        );
+}
