@@ -2823,3 +2823,239 @@ function updatePlacedReminderState(){
             }
         );
 }
+/* ==========================================
+   Get Character At Seat
+========================================== */
+
+function getCharacterAtSeat(seat){
+
+    const player =
+        document.querySelector(
+            `.trainer-player[data-seat="${seat}"]`
+        );
+
+    if(!player){
+        return null;
+    }
+
+    return player.dataset.character || null;
+}
+/* ==========================================
+   Validate Reminder Setup
+========================================== */
+
+function validateReminderSetup(){
+
+    const errors = [];
+
+
+    /* ======================================
+       Drunk
+    ====================================== */
+
+    if(
+        trainerSetupState.usingDrunk
+    ){
+
+        const drunkReminder =
+            placedReminders.find(
+                reminder =>
+                    reminder.character === "drunk" &&
+                    reminder.reminder === "is-the-drunk"
+            );
+
+
+        if(!drunkReminder){
+
+            errors.push(
+                "The Is the Drunk reminder must be placed on a Townsfolk player."
+            );
+
+        }
+        else{
+
+            const targetCharacterId =
+                getCharacterAtSeat(
+                    drunkReminder.seat
+                );
+
+
+            const targetCharacter =
+                trainerCharacterData[
+                    targetCharacterId
+                ];
+
+
+            const targetTeam =
+                normalizeTrainerTeam(
+                    targetCharacter?.team
+                );
+
+
+            if(
+                targetTeam !==
+                "Townsfolk"
+            ){
+
+                errors.push(
+                    "The Is the Drunk reminder must be placed on a Townsfolk character."
+                );
+
+            }
+
+        }
+
+    }
+
+
+    /* ======================================
+       Fortune Teller
+    ====================================== */
+
+    if(
+        trainerSelectedCharacters.has(
+            "fortuneteller"
+        )
+    ){
+
+        const redHerring =
+            placedReminders.find(
+                reminder =>
+                    reminder.character ===
+                        "fortuneteller" &&
+                    reminder.reminder ===
+                        "red-herring"
+            );
+
+
+        if(!redHerring){
+
+            errors.push(
+                "The Fortune Teller needs a Red Herring."
+            );
+
+        }
+        else{
+
+            const targetCharacterId =
+                getCharacterAtSeat(
+                    redHerring.seat
+                );
+
+
+            const targetCharacter =
+                trainerCharacterData[
+                    targetCharacterId
+                ];
+
+
+            const targetTeam =
+                normalizeTrainerTeam(
+                    targetCharacter?.team
+                );
+
+
+            /*
+               Red Herring must be a good player.
+
+               Townsfolk and Outsiders are good.
+
+               The Spy is also legal because
+               the Spy may register as good.
+
+               The Fortune Teller themself is
+               allowed to be the Red Herring.
+            */
+
+            const legalTarget =
+                targetTeam === "Townsfolk" ||
+                targetTeam === "Outsider" ||
+                targetCharacterId === "spy";
+
+
+            if(!legalTarget){
+
+                errors.push(
+                    "The Red Herring must be a good player. The Spy may also register as good."
+                );
+
+            }
+
+        }
+
+    }
+
+
+    return {
+        valid:
+            errors.length === 0,
+
+        errors:
+            errors
+    };
+
+}
+/* ==========================================
+   Check Reminder Setup
+========================================== */
+
+function checkReminderSetup(){
+
+    /*
+       Make absolutely sure our JS state
+       matches the tokens currently on
+       the board.
+    */
+
+    updatePlacedReminderState();
+
+
+    const validation =
+        validateReminderSetup();
+
+
+    if(!validation.valid){
+
+        showSetupMistake(
+            validation
+        );
+
+        return;
+    }
+
+
+    console.log(
+        "Reminder setup correct!"
+    );
+
+}
+/* ==========================================
+   Main Trainer Action
+========================================== */
+
+document.addEventListener(
+    "click",
+    event => {
+
+        const button =
+            event.target.closest(
+                "#select-characters"
+            );
+
+
+        if(!button){
+            return;
+        }
+
+
+        if(
+            button.dataset.action ===
+            "check-setup"
+        ){
+
+            checkReminderSetup();
+
+        }
+
+    }
+);
