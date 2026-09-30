@@ -1012,23 +1012,46 @@ function bindCharacterSelectionControls(){
         );
 
 
-    if(
-        openButton &&
-        overlay
-    ){
+if(
+    openButton &&
+    overlay
+){
 
-        openButton.addEventListener(
-            "click",
-            () => {
+    openButton.addEventListener(
+        "click",
+        () => {
 
-                overlay.classList.remove(
-                    "hidden"
-                );
+            /*
+               During reminder setup,
+               this button checks the
+               reminder placements instead
+               of reopening character selection.
+            */
+
+            if(
+                openButton.dataset.action ===
+                "check-setup"
+            ){
+
+                checkReminderSetup();
+                return;
 
             }
-        );
 
-    }
+
+            /*
+               Normal setup behavior:
+               open character selection.
+            */
+
+            overlay.classList.remove(
+                "hidden"
+            );
+
+        }
+    );
+
+}
 
 
     if(
@@ -1562,15 +1585,29 @@ function setPlayerCharacter(
         character.name;
 
 
-    /*
-       Team used for border styling.
-    */
+/*
+   Character assigned to this seat.
+*/
 
-    seat.dataset.team =
-        normalizeTrainerTeam(
-            character.team
-        );
+seat.dataset.character =
+    Object.keys(
+        trainerCharacterData
+    ).find(
+        characterId =>
+            trainerCharacterData[
+                characterId
+            ] === character
+    ) || "";
 
+
+/*
+   Team used for border styling.
+*/
+
+seat.dataset.team =
+    normalizeTrainerTeam(
+        character.team
+    );
 
     /*
        Landing animation.
@@ -1698,8 +1735,8 @@ function clearPlayerCharacters(){
 
                 }
 
-
-                delete seat.dataset.team;
+delete seat.dataset.character;
+delete seat.dataset.team;
 
             }
         );
@@ -3029,33 +3066,3 @@ function checkReminderSetup(){
     );
 
 }
-/* ==========================================
-   Main Trainer Action
-========================================== */
-
-document.addEventListener(
-    "click",
-    event => {
-
-        const button =
-            event.target.closest(
-                "#select-characters"
-            );
-
-
-        if(!button){
-            return;
-        }
-
-
-        if(
-            button.dataset.action ===
-            "check-setup"
-        ){
-
-            checkReminderSetup();
-
-        }
-
-    }
-);
