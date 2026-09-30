@@ -3388,9 +3388,19 @@ function buildNightOrder(
                     character
                         ?.nightOrder
                         ?.[nightType];
+const team =
+    normalizeTrainerTeam(
+        character.team
+    );
 return (
     character.edition ===
         "Trouble Brewing" &&
+    (
+        team === "Townsfolk" ||
+        team === "Outsider" ||
+        team === "Minion" ||
+        team === "Demon"
+    ) &&
     night &&
     Number(night.order) > 0
 );
@@ -3510,12 +3520,12 @@ function initializeNightOrderTooltips(){
                             )
                             .textContent =
                                 name;
-                        tooltip
-                            .querySelector(
-                                ".night-order-tooltip-text"
-                            )
-                            .textContent =
-                                text;
+tooltip
+    .querySelector(
+        ".night-order-tooltip-text"
+    )
+    .innerHTML =
+        text;
                         const rect =
                             row.getBoundingClientRect();
                         tooltip.style.left =
