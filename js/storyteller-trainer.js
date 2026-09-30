@@ -3435,6 +3435,15 @@ return (
                 "night-order-character";
             row.dataset.character =
                 id;
+           if(
+    !trainerSelectedCharacters.has(
+        id
+    )
+){
+    row.classList.add(
+        "not-in-play"
+    );
+}
             row.dataset.nightText =
                 night.text || "";
             row.innerHTML = `
