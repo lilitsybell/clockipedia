@@ -3606,20 +3606,20 @@ function beginFirstNight(){
         document.querySelector(
             "#select-characters"
         );
-    if(mainAction){
-        mainAction.innerHTML = `
-            <span
-                class="trainer-main-action-icon"
-            >
-                ◆
-            </span>
-            <span>
-                Begin First Night
-            </span>
-        `;
-       mainAction.dataset.action =
-    "begin-first-night";
-    }
+if(mainAction){
+    mainAction.innerHTML = `
+        <span
+            class="trainer-main-action-icon"
+        >
+            ◆
+        </span>
+        <span>
+            End First Night
+        </span>
+    `;
+    mainAction.dataset.action =
+        "end-first-night";
+}
 }
 function buildFirstNightReminderTray(){
     const tray =
@@ -3677,4 +3677,163 @@ function buildFirstNightReminderTray(){
 
         }
     );
+}
+/* ==========================================
+   Trainer Phase Popup
+========================================== */
+function showTrainerPopup({
+    title,
+    content,
+    buttonText = "Continue",
+    onContinue = null
+}){
+    const popup =
+        document.querySelector(
+            "#trainer-phase-popup"
+        );
+    const titleElement =
+        document.querySelector(
+            "#trainer-popup-title"
+        );
+    const contentElement =
+        document.querySelector(
+            "#trainer-popup-content"
+        );
+    const button =
+        document.querySelector(
+            "#trainer-popup-action"
+        );
+    if(
+        !popup ||
+        !titleElement ||
+        !contentElement ||
+        !button
+    ){
+        return;
+    }
+    titleElement.textContent =
+        title;
+    contentElement.innerHTML =
+        content;
+    button.textContent =
+        buttonText;
+    button.onclick = () => {
+        popup.classList.add(
+            "hidden"
+        );
+        if(onContinue){
+            onContinue();
+        }
+    };
+    popup.classList.remove(
+        "hidden"
+    );
+}
+/* ==========================================
+   Trainer Introduction
+========================================== */
+function showTrainerIntro(){
+    showTrainerPopup({
+        title:
+            "How to Use the Trainer",
+        content: `
+            <p>
+                Welcome to the Storyteller Trainer!
+            </p>
+            <p>
+                You'll run through a simulated game
+                of Trouble Brewing as the Storyteller.
+            </p>
+            <p>
+                The trainer will give you players,
+                character choices, night actions,
+                nominations, and other situations
+                that you'll need to handle correctly.
+            </p>
+            <p>
+                When you make a mistake, the trainer
+                will explain what went wrong so you
+                can try again.
+            </p>
+        `,
+        buttonText:
+            "Select Characters",
+        onContinue:
+            () => {
+                openCharacterSelector();
+            }
+    });
+}
+/* ==========================================
+   Prepare Night One Popup
+========================================== */
+
+function showPrepareNightOnePopup(){
+    showTrainerPopup({
+        title:
+            "Prepare Night One",
+        content: `
+            <p>
+                Before the first night begins,
+                prepare the Grimoire.
+            </p>
+            <p>
+                The reminder tokens you need for
+                setup are shown in the tray.
+            </p>
+            <p>
+                Select a reminder token, then select
+                the player you want to place it on.
+            </p>
+            <p>
+                Use the character abilities and
+                reminder-token rules to decide where
+                each token belongs.
+            </p>
+        `,
+        buttonText:
+            "Place Reminders",
+        onContinue:
+            () => {
+                beginReminderSetup();
+            }
+    });
+}
+/* ==========================================
+   Night One Popup
+========================================== */
+function showNightOnePopup(){
+    showTrainerPopup({
+        title:
+            "Night One",
+        content: `
+            <p>
+                It's time to run the first night.
+            </p>
+            <p>
+                Use the Night Order on the left to
+                work through each character in order.
+            </p>
+            <p>
+                Wake players when their character
+                acts and respond correctly to any
+                choices they make.
+            </p>
+            <p>
+                Reminder tokens needed during the
+                night will appear in the tray on
+                the right.
+            </p>
+            <p>
+                When every required character has
+                acted, end the first night.
+            </p>
+        `,
+        buttonText:
+            "Begin Night One",
+        onContinue:
+            () => {
+                beginFirstNight();
+            }
+    });
 }
