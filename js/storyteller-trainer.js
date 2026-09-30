@@ -6,6 +6,8 @@ const trainerPlayerCount = 12;
 let selectedReminder = null;
 const placedReminders = [];
 let trainerGamePhase = "setup";
+let trainerNightQueue = [];
+let trainerNightIndex = -1;
 /* ==========================================
    Trouble Brewing Setup
 ========================================== */
@@ -3612,6 +3614,10 @@ if(mainAction){
     mainAction.dataset.action =
         "end-first-night";
 }
+buildActiveNightQueue(
+    "firstNight"
+);
+updateActiveNightCharacter();
 }
 function buildFirstNightReminderTray(){
     const tray =
@@ -3842,4 +3848,142 @@ function openCharacterSelector(){
     overlay.classList.remove(
         "hidden"
     );
+}
+/* ==========================================
+   Build Active Night Queue
+========================================== */
+function buildActiveNightQueue(
+    nightType = "firstNight"
+){
+    trainerNightQueue =
+        Object.entries(
+            trainerCharacterData
+        )
+        .filter(
+            ([characterId, character]) => {
+                if(
+                    !trainerSelectedCharacters.has(
+                        characterId
+                    )
+                ){
+                    return false;
+                }
+                const night =
+                    character
+                        ?.nightOrder
+                        ?.[nightType];
+                return (
+                    night &&
+                    Number(
+                        night.order
+                    ) > 0
+                );
+            }
+        )
+        .sort(
+            (a, b) => {
+                const aOrder =
+                    Number(
+                        a[1]
+                            .nightOrder[
+                                nightType
+                            ]
+                            .order
+                    );
+                const bOrder =
+                    Number(
+                        b[1]
+                            .nightOrder[
+                                nightType
+                            ]
+                            .order
+                    );
+                return (
+                    aOrder -
+                    bOrder
+                );
+            }
+        )
+        .map(
+            ([characterId]) =>
+                characterId
+        );
+    trainerNightIndex =
+        trainerNightQueue.length > 0
+            ? 0
+            : -1;
+    console.log(
+        "Night queue:",
+        trainerNightQueue
+    );
+}
+/* ==========================================
+   Update Active Night Character
+========================================== */
+function updateActiveNightCharacter(){
+    document
+        .querySelectorAll(
+            ".night-order-character"
+        )
+        .forEach(
+            row => {
+                row.classList.remove(
+                    "active"
+                );
+            }
+        );
+    if(
+        trainerNightIndex < 0 ||
+        trainerNightIndex >=
+            trainerNightQueue.length
+    ){
+        return;
+    }
+    const characterId =
+        trainerNightQueue[
+            trainerNightIndex
+        ];
+    const row =
+        document.querySelector(
+            `.night-order-character[data-character="${characterId}"]`
+        );
+    if(!row){
+        return;
+    }
+    row.classList.add(
+        "active"
+    );
+    row.scrollIntoView({
+        block:"nearest",
+        behavior:"smooth"
+    });
+    console.log(
+        "Active night character:",
+        characterId
+    );
+}
+/* ==========================================
+   Active Night Character
+========================================== */
+.night-order-character.active{
+    background:
+        #171329;
+    transform:
+        translateX(3px);
+    box-shadow:
+        0 3px 0 rgba(0,0,0,.18);
+}
+.night-order-character.active
+.night-order-character-name{
+    color:
+        #fff;
+}
+.night-order-character.active::after{
+    content:"▶";
+    margin-left:auto;
+    padding-left:4px;
+    color:
+        #f3dfad;
+    font-size:
+        8px;
 }
