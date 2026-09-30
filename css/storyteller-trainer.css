@@ -1485,3 +1485,126 @@ body{
 .reminder-moving{
     visibility:hidden;
 }
+/* ==========================================
+   Night Order Panel
+========================================== */
+.night-order-panel{
+    position:absolute;
+    left:32px;
+    top:250px;
+    width:210px;
+    max-height:610px;
+    background:#f3dfad;
+    border:1px solid rgba(13,24,33,.16);
+    border-radius:16px;
+    box-shadow:
+        0 10px 28px rgba(0,0,0,.18);
+    overflow:hidden;
+    z-index:30;
+}
+/* ==========================================
+   Header
+========================================== */
+.night-order-header{
+    padding:18px 18px 15px;
+    border-bottom:
+        1px solid rgba(13,24,33,.14);
+}
+.night-order-eyebrow{
+    display:block;
+    margin-bottom:4px;
+    font-size:10px;
+    font-weight:700;
+    letter-spacing:.18em;
+    color:#76526f;
+}
+.night-order-header h2{
+    margin:0;
+    font-size:20px;
+    font-weight:500;
+    color:#171329;
+}
+/* ==========================================
+   List
+========================================== */
+.night-order-list{
+    padding:12px;
+    display:flex;
+    flex-direction:column;
+    gap:6px;
+    max-height:530px;
+    overflow-y:auto;
+}
+/* ==========================================
+   Character
+========================================== */
+.night-order-character{
+    position:relative;
+    display:flex;
+    align-items:center;
+    gap:10px;
+    min-height:48px;
+    padding:6px 9px;
+    border-radius:9px;
+    cursor:default;
+    transition:
+        background .15s ease,
+        transform .15s ease;
+}
+.night-order-character:hover{
+    background:
+        rgba(255,255,255,.48);
+    transform:
+        translateX(3px);
+}
+.night-order-character img{
+    width:38px;
+    height:38px;
+    object-fit:contain;
+    flex:none;
+}
+.night-order-character-name{
+    font-size:13px;
+    font-weight:700;
+    color:#171329;
+}
+/* ==========================================
+   Night Order Tooltip
+========================================== */
+.night-order-tooltip{
+    position:fixed;
+    width:250px;
+    padding:13px 15px;
+    background:#171329;
+    border:
+        1px solid rgba(243,223,173,.35);
+    border-radius:11px;
+    box-shadow:
+        0 12px 30px rgba(0,0,0,.3);
+    color:#fff;
+    pointer-events:none;
+    opacity:0;
+    transform:
+        translateY(4px);
+    transition:
+        opacity .12s ease,
+        transform .12s ease;
+    z-index:1000;
+}
+.night-order-tooltip.visible{
+    opacity:1;
+    transform:
+        translateY(0);
+}
+.night-order-tooltip-name{
+    display:block;
+    margin-bottom:5px;
+    font-size:12px;
+    font-weight:700;
+    color:#f3dfad;
+}
+.night-order-tooltip-text{
+    font-size:12px;
+    line-height:1.45;
+    color:rgba(255,255,255,.9);
+}
