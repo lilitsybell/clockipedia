@@ -2905,7 +2905,7 @@ function validateReminderSetup(){
         if(!drunkReminder){
 
             errors.push(
-                "The Is the Drunk reminder must be placed on a Townsfolk player."
+                "The \"Is the Drunk\" reminder must be placed on a Townsfolk player."
             );
 
         }
@@ -2935,7 +2935,7 @@ function validateReminderSetup(){
             ){
 
                 errors.push(
-                    "The Is the Drunk reminder must be placed on a Townsfolk character."
+                    "The \"Is the Drunk\" reminder must be placed on a Townsfolk character."
                 );
 
             }
@@ -2944,7 +2944,284 @@ function validateReminderSetup(){
 
     }
 
+/* ======================================
+   Washerwoman
+====================================== */
+if(
+    trainerSelectedCharacters.has(
+        "washerwoman"
+    )
+){
+    const townsfolkReminder =
+        placedReminders.find(
+            reminder =>
+                reminder.character ===
+                    "washerwoman" &&
+                reminder.reminder ===
+                    "townsfolk"
+        );
+    const wrongReminder =
+        placedReminders.find(
+            reminder =>
+                reminder.character ===
+                    "washerwoman" &&
+                reminder.reminder ===
+                    "wrong"
+        );
+    if(
+        !townsfolkReminder ||
+        !wrongReminder
+    ){
+        errors.push(
+            "The Washerwoman needs both the \"Townsfolk\" and \"Wrong\" reminders placed."
+        );
+    }
+    else{
+        const correctTargetId =
+            getCharacterAtSeat(
+                townsfolkReminder.seat
+            );
+        const drunkReminder =
+            placedReminders.find(
+                reminder =>
+                    reminder.character ===
+                        "drunk" &&
+                    reminder.reminder ===
+                        "is-the-drunk"
+            );
+        const drunkSeat =
+            drunkReminder
+                ? drunkReminder.seat
+                : null;
+        const correctTarget =
+            trainerCharacterData[
+                correctTargetId
+            ];
+        const correctTeam =
+            normalizeTrainerTeam(
+                correctTarget?.team
+            );
+        const legalTarget =
+            (
+                correctTeam ===
+                    "Townsfolk" &&
+                townsfolkReminder.seat !==
+                    drunkSeat
+            ) ||
+            correctTargetId ===
+                "spy";
+        if(!legalTarget){
+            errors.push(
+                "The Washerwoman\'s \"Townsfolk\" reminder must be on a Townsfolk player or the Spy. The player marked \"Is the Drunk\" does not count as a Townsfolk."
+            );
+        }
+        if(
+            townsfolkReminder.seat ===
+            wrongReminder.seat
+        ){
+            errors.push(
+                "The Washerwoman\'s \"Townsfolk\" and \"Wrong\" reminders must be on two different players."
+            );
+        }
+    }
+}
+   /* ======================================
+   Librarian
+====================================== */
 
+if(
+    trainerSelectedCharacters.has(
+        "librarian"
+    )
+){
+
+    const outsiderReminder =
+        placedReminders.find(
+            reminder =>
+                reminder.character ===
+                    "librarian" &&
+                reminder.reminder ===
+                    "outsider"
+        );
+
+
+    const wrongReminder =
+        placedReminders.find(
+            reminder =>
+                reminder.character ===
+                    "librarian" &&
+                reminder.reminder ===
+                    "wrong"
+        );
+
+
+    if(
+        !outsiderReminder ||
+        !wrongReminder
+    ){
+
+        errors.push(
+            "The Librarian needs both the \"Outsider\" and \"Wrong\" reminders placed."
+        );
+
+    }
+    else{
+
+        const correctTargetId =
+            getCharacterAtSeat(
+                outsiderReminder.seat
+            );
+
+
+        const correctTarget =
+            trainerCharacterData[
+                correctTargetId
+            ];
+
+
+        const correctTeam =
+            normalizeTrainerTeam(
+                correctTarget?.team
+            );
+
+
+        const drunkReminder =
+            placedReminders.find(
+                reminder =>
+                    reminder.character ===
+                        "drunk" &&
+                    reminder.reminder ===
+                        "is-the-drunk"
+            );
+
+
+        const drunkSeat =
+            drunkReminder
+                ? drunkReminder.seat
+                : null;
+
+
+        const legalTarget =
+            correctTeam ===
+                "Outsider" ||
+
+            outsiderReminder.seat ===
+                drunkSeat ||
+
+            correctTargetId ===
+                "spy";
+
+
+        if(!legalTarget){
+
+            errors.push(
+                "The Librarian's \"Outsider\" reminder must be on an Outsider, the player marked \"Is the Drunk\", or the Spy."
+            );
+
+        }
+
+
+        if(
+            outsiderReminder.seat ===
+            wrongReminder.seat
+        ){
+
+            errors.push(
+                "The Librarian\'s \"Outsider\" and \"Wrong\" reminders must be on two different players."
+            );
+        }
+    }
+}
+   /* ======================================
+   Investigator
+====================================== */
+
+if(
+    trainerSelectedCharacters.has(
+        "investigator"
+    )
+){
+
+    const minionReminder =
+        placedReminders.find(
+            reminder =>
+                reminder.character ===
+                    "investigator" &&
+                reminder.reminder ===
+                    "minion"
+        );
+
+
+    const wrongReminder =
+        placedReminders.find(
+            reminder =>
+                reminder.character ===
+                    "investigator" &&
+                reminder.reminder ===
+                    "wrong"
+        );
+
+
+    if(
+        !minionReminder ||
+        !wrongReminder
+    ){
+
+        errors.push(
+            "The Investigator needs both the \"Minion\" and \"Wrong\" reminders placed."
+        );
+
+    }
+    else{
+
+        const correctTargetId =
+            getCharacterAtSeat(
+                minionReminder.seat
+            );
+
+
+        const correctTarget =
+            trainerCharacterData[
+                correctTargetId
+            ];
+
+
+        const correctTeam =
+            normalizeTrainerTeam(
+                correctTarget?.team
+            );
+
+
+        const legalTarget =
+            correctTeam ===
+                "Minion" ||
+            correctTargetId ===
+                "recluse";
+
+
+        if(!legalTarget){
+
+            errors.push(
+                "The Investigator\'s \"Minion\" reminder must be on a Minion or the Recluse."
+            );
+
+        }
+
+
+        if(
+            minionReminder.seat ===
+            wrongReminder.seat
+        ){
+
+            errors.push(
+                "The Investigator\'s \"Minion\" and \"Wrong\" reminders must be on two different players."
+            );
+
+        }
+
+    }
+
+}
     /* ======================================
        Fortune Teller
     ====================================== */
@@ -2968,7 +3245,7 @@ function validateReminderSetup(){
         if(!redHerring){
 
             errors.push(
-                "The Fortune Teller needs a Red Herring."
+                "The Fortune Teller needs a \"Red Herring\"."
             );
 
         }
@@ -2991,19 +3268,6 @@ function validateReminderSetup(){
                     targetCharacter?.team
                 );
 
-
-            /*
-               Red Herring must be a good player.
-
-               Townsfolk and Outsiders are good.
-
-               The Spy is also legal because
-               the Spy may register as good.
-
-               The Fortune Teller themself is
-               allowed to be the Red Herring.
-            */
-
             const legalTarget =
                 targetTeam === "Townsfolk" ||
                 targetTeam === "Outsider" ||
@@ -3013,7 +3277,7 @@ function validateReminderSetup(){
             if(!legalTarget){
 
                 errors.push(
-                    "The Red Herring must be a good player. The Spy may also register as good."
+                    "The \"Red Herring\" must be a good player. The Spy may also register as good."
                 );
 
             }
