@@ -534,10 +534,16 @@ function createPlayerSeat(index){
     );
     player.innerHTML = `
         <div class="player-token">
-            <div class="player-number">
-                ${index + 1}
-            </div>
-            <div class="player-character">
+<div class="player-number">
+    ${index + 1}
+</div>
+<div
+    class="player-night-complete"
+    aria-hidden="true"
+>
+    👍
+</div>
+<div class="player-character">
                 <span
                     class="player-character-placeholder"
                 >
