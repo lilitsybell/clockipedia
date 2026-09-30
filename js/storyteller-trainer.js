@@ -2596,23 +2596,24 @@ function placeSelectedReminder(player){
     }
     token.dataset.seat =
         player.dataset.seat;
-    animateReminderMove(
-        token,
-        reminderArea,
-        () => {
-            token.classList.remove(
-                "selected"
-            );
-            token.classList.add(
-                "placed"
-            );
-            reminderArea.appendChild(
-                token
-            );
-            selectedReminder = null;
-            updatePlacedReminderState();
-        }
-    );
+animateReminderMove(
+    token,
+    reminderArea,
+    () => {
+        token.classList.remove(
+            "selected"
+        );
+        token.classList.add(
+            "placed"
+        );
+        reminderArea.appendChild(
+            token
+        );
+        selectedReminder = null;
+        updatePlacedReminderState();
+    },
+    player
+);
 }
 /* ==========================================
    Return Reminder To Tray
@@ -2679,12 +2680,86 @@ function insertReminderInTrayOrder(
     }
 }
 /* ==========================================
+   Get Reminder Destination
+========================================== */
+function getReminderDestination(
+    player,
+    reminderIndex,
+    tokenRect
+){
+    const reminderArea =
+        player.querySelector(
+            "[data-player-reminders]"
+        );
+    if(!reminderArea){
+        return null;
+    }
+    const areaRect =
+        reminderArea.getBoundingClientRect();
+    const angle =
+        parseFloat(
+            player.style.getPropertyValue(
+                "--seat-angle"
+            )
+        );
+    if(Number.isNaN(angle)){
+        return null;
+    }
+    const radians =
+        angle *
+        Math.PI /
+        180;
+    const directionX =
+        -Math.sin(
+            radians
+        );
+    const directionY =
+        Math.cos(
+            radians
+        );
+    const firstReminderDistance = 105;
+    const reminderSpacing = 66;
+    const distance =
+        firstReminderDistance +
+        (
+            reminderIndex *
+            reminderSpacing
+        );
+    const x =
+        directionX *
+        distance;
+    const y =
+        directionY *
+        distance;
+    return {
+        left:
+            areaRect.left +
+            (
+                areaRect.width / 2
+            ) +
+            x -
+            (
+                tokenRect.width / 2
+            ),
+        top:
+            areaRect.top +
+            (
+                areaRect.height / 2
+            ) +
+            y -
+            (
+                tokenRect.height / 2
+            )
+    };
+}
+/* ==========================================
    Animate Reminder Move
 ========================================== */
 function animateReminderMove(
     token,
     destination,
-    onComplete
+    onComplete,
+    targetPlayer = null
 ){
     const startRect =
         token.getBoundingClientRect();
@@ -2711,30 +2786,63 @@ function animateReminderMove(
     token.classList.add(
         "reminder-moving"
     );
-    const destinationRect =
-        destination.getBoundingClientRect();
-    const targetX =
-        destinationRect.left +
-        (
-            destinationRect.width / 2
-        ) -
-        (
-            startRect.width / 2
-        );
-    const targetY =
-        destinationRect.top +
-        (
-            destinationRect.height / 2
-        ) -
-        (
-            startRect.height / 2
-        );
+    let targetX;
+    let targetY;
+    /*
+       ======================================
+       Moving TO a player
+       ======================================
+    */
+    if(targetPlayer){
+        const existingReminders =
+            destination.querySelectorAll(
+                ".setup-reminder-token.placed"
+            );
+        const reminderIndex =
+            existingReminders.length;
+        const finalPosition =
+            getReminderDestination(
+                targetPlayer,
+                reminderIndex,
+                startRect
+            );
+        if(finalPosition){
+            targetX =
+                finalPosition.left;
+            targetY =
+                finalPosition.top;
+        }
+    }
+    if(
+        targetX === undefined ||
+        targetY === undefined
+    ){
+        const destinationRect =
+            destination.getBoundingClientRect();
+        targetX =
+            destinationRect.left +
+            (
+                destinationRect.width / 2
+            ) -
+            (
+                startRect.width / 2
+            );
+        targetY =
+            destinationRect.top +
+            (
+                destinationRect.height / 2
+            ) -
+            (
+                startRect.height / 2
+            );
+    }
     requestAnimationFrame(
         () => {
             requestAnimationFrame(
                 () => {
                     flying.style.left =
                         `${targetX}px`;
+
                     flying.style.top =
                         `${targetY}px`;
                 }
