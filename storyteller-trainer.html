@@ -273,6 +273,171 @@
         class="night-order-list"
     ></div>
 </aside>
+        <!-- ======================================
+     Wake Card
+======================================= -->
+<div
+    id="wake-card-overlay"
+    class="wake-card-overlay hidden"
+>
+    <div
+        id="wake-card"
+        class="wake-card"
+    >
+        <div class="wake-card-header">
+            <span class="wake-card-eyebrow">
+                STORYTELLER
+            </span>
+            <h2 id="wake-card-title">
+                Wake Player
+            </h2>
+            <span
+                id="wake-card-character"
+                class="wake-card-character"
+            ></span>
+        </div>
+        <!-- Signals -->
+        <div class="wake-card-section">
+            <div class="wake-card-signals">
+                <button
+                    type="button"
+                    class="wake-card-option wake-card-signal"
+                    data-wake-action="got-it"
+                >
+                    <strong>✓</strong>
+                    <span>Got It</span>
+                </button>
+                <button
+                    type="button"
+                    class="wake-card-option wake-card-signal"
+                    data-wake-action="yes"
+                >
+                    <strong>✓</strong>
+                    <span>Yes</span>
+                </button>
+                <button
+                    type="button"
+                    class="wake-card-option wake-card-signal"
+                    data-wake-action="no"
+                >
+                    <strong>×</strong>
+                    <span>No</span>
+                </button>
+            </div>
+        </div>
+        <!-- Numbers -->
+        <div class="wake-card-section">
+            <div class="wake-card-numbers">
+                <button
+                    type="button"
+                    class="wake-card-option wake-card-number"
+                    data-wake-action="number"
+                    data-value="0"
+                >
+                    <strong>0</strong>
+                    <span>Zero</span>
+                </button>
+                <button
+                    type="button"
+                    class="wake-card-option wake-card-number"
+                    data-wake-action="number"
+                    data-value="1"
+                >
+                    <strong>1</strong>
+                    <span>One</span>
+                </button>
+                <button
+                    type="button"
+                    class="wake-card-option wake-card-number"
+                    data-wake-action="number"
+                    data-value="2"
+                >
+                    <strong>2</strong>
+                    <span>Two</span>
+                </button>
+                <button
+                    type="button"
+                    class="wake-card-option wake-card-number"
+                    data-wake-action="number"
+                    data-value="3"
+                >
+                    <strong>3</strong>
+                    <span>Three</span>
+                </button>
+                <button
+                    type="button"
+                    class="wake-card-option wake-card-number"
+                    data-wake-action="number"
+                    data-value="4"
+                >
+                    <strong>4</strong>
+                    <span>Four</span>
+                </button>
+                <button
+                    type="button"
+                    class="wake-card-option wake-card-number"
+                    data-wake-action="number"
+                    data-value="5"
+                >
+                    <strong>5</strong>
+                    <span>Five</span>
+                </button>
+            </div>
+        </div>
+        <!-- Player / Character -->
+        <div class="wake-card-section">
+            <div class="wake-card-targets">
+                <button
+                    type="button"
+                    class="wake-card-option wake-card-target"
+                    data-wake-action="player"
+                >
+                    <strong>◯</strong>
+                    <span>Player</span>
+                </button>
+                <button
+                    type="button"
+                    class="wake-card-option wake-card-target"
+                    data-wake-action="character"
+                >
+                    <strong>◇</strong>
+                    <span>Character</span>
+                </button>
+            </div>
+        </div>
+        <!-- Communication Cards -->
+        <div class="wake-card-actions">
+            <button
+                type="button"
+                class="wake-card-action"
+                data-wake-action="make-choice"
+            >
+                Make a Choice
+            </button>
+            <button
+                type="button"
+                class="wake-card-action"
+                data-wake-action="not-in-play"
+            >
+                These Characters Are Not In Play
+            </button>
+            <button
+                type="button"
+                class="wake-card-action"
+                data-wake-action="demon"
+            >
+                This Is the Demon
+            </button>
+            <button
+                type="button"
+                class="wake-card-action"
+                data-wake-action="minions"
+            >
+                These Are Your Minions
+            </button>
+        </div>
+    </div>
+</div>
 <!-- ======================================
      Reminder Token Tray
 ======================================= -->
