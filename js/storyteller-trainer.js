@@ -5,6 +5,7 @@ console.log("storyteller-trainer.js loaded");
 const trainerPlayerCount = 12;
 let selectedReminder = null;
 const placedReminders = [];
+let trainerGamePhase = "setup";
 /* ==========================================
    Trouble Brewing Setup
 ========================================== */
@@ -3344,9 +3345,7 @@ function checkReminderSetup(){
         );
         return;
     }
-    console.log(
-        "Reminder setup correct!"
-    );
+    beginFirstNight();
 }
 /* ==========================================
    Build Night Order
@@ -3554,4 +3553,128 @@ tooltip
                 );
             }
         );
+}
+/* ==========================================
+   Begin First Night
+========================================== */
+function beginFirstNight(){
+    trainerGamePhase = "firstNight";
+    const instruction =
+        document.querySelector(
+            "#trainer-instruction"
+        );
+    if(instruction){
+        instruction.textContent =
+            "Follow the night order";
+    }
+    const phaseNumber =
+        document.querySelector(
+            "#phase-number"
+        );
+    const phaseName =
+        document.querySelector(
+            "#phase-name"
+        );
+    if(phaseNumber){
+        phaseNumber.textContent =
+            "NIGHT 1";
+    }
+    if(phaseName){
+        phaseName.textContent =
+            "First Night";
+    }
+    const nightOrderPanel =
+        document.querySelector(
+            "#night-order-panel"
+        );
+    if(nightOrderPanel){
+        nightOrderPanel.classList.remove(
+            "hidden"
+        );
+    }
+    const reminderTray =
+        document.querySelector(
+            "#reminder-tray"
+        );
+    if(reminderTray){
+        reminderTray.classList.remove(
+            "hidden"
+        );
+    }
+    buildFirstNightReminderTray();
+    const mainAction =
+        document.querySelector(
+            "#select-characters"
+        );
+    if(mainAction){
+        mainAction.innerHTML = `
+            <span
+                class="trainer-main-action-icon"
+            >
+                ◆
+            </span>
+            <span>
+                Begin First Night
+            </span>
+        `;
+       mainAction.dataset.action =
+    "begin-first-night";
+    }
+}
+function buildFirstNightReminderTray(){
+    const tray =
+        document.querySelector(
+            "#reminder-token-list"
+        );
+    if(!tray){
+        return;
+    }
+    tray.innerHTML = "";
+    const firstNightCharacters = [
+        "poisoner",
+        "butler"
+    ];
+    firstNightCharacters.forEach(
+        characterId => {
+            if(
+                !trainerSelectedCharacters.has(
+                    characterId
+                )
+            ){
+                return;
+            }
+            const reminderData =
+                troubleBrewingReminders[
+                    characterId
+                ];
+            if(
+                !reminderData ||
+                !reminderData.reminders
+            ){
+                return;
+            }
+            const nightReminders =
+                reminderData.reminders.filter(
+                    reminder =>
+                        reminder.phase ===
+                        "night"
+                );
+            if(
+                nightReminders.length === 0
+            ){
+                return;
+            }
+            const group =
+                createReminderGroup({
+                    characterId:
+                        characterId,
+                    reminders:
+                        nightReminders
+                });
+            tray.appendChild(
+                group
+            );
+
+        }
+    );
 }
