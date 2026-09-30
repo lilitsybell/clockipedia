@@ -1239,6 +1239,7 @@ body{
     white-space:nowrap;
     text-transform:uppercase;
     color:#76536e;
+    padding-bottom:4px;
 }
 .reminder-group-tokens{
     width:100%;
