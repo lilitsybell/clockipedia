@@ -3971,28 +3971,3 @@ function updateActiveNightCharacter(){
         characterId
     );
 }
-/* ==========================================
-   Active Night Character
-========================================== */
-.night-order-character.active{
-    background:
-        #171329;
-    transform:
-        translateX(3px);
-    box-shadow:
-        0 3px 0 rgba(0,0,0,.18);
-}
-.night-order-character.active
-.night-order-character-name{
-    color:
-        #fff;
-}
-.night-order-character.active::after{
-    content:"▶";
-    margin-left:auto;
-    padding-left:4px;
-    color:
-        #f3dfad;
-    font-size:
-        8px;
-}
