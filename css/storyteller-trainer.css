@@ -1786,3 +1786,246 @@ body{
     font-size:
         8px;
 }
+/* ==========================================
+   Wake Card
+========================================== */
+.wake-card-overlay{
+    position:absolute;
+    inset:0;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    background:rgba(12, 8, 28, .58);
+    backdrop-filter:blur(3px);
+    z-index:120;
+}
+.wake-card-overlay.hidden{
+    display:none;
+}
+/* ==========================================
+   Card
+========================================== */
+.wake-card{
+    width:min(760px, 72vw);
+    background:#171329;
+    border:1px solid rgba(243,223,173,.35);
+    border-radius:18px;
+    box-shadow:
+        0 24px 70px rgba(0,0,0,.45),
+        0 0 0 1px rgba(255,255,255,.04);
+    overflow:hidden;
+}
+/* ==========================================
+   Header
+========================================== */
+.wake-card-header{
+    position:relative;
+    padding:18px 24px 16px;
+    text-align:center;
+    background:
+        linear-gradient(
+            180deg,
+            rgba(243,223,173,.11),
+            rgba(243,223,173,.025)
+        );
+    border-bottom:1px solid rgba(243,223,173,.18);
+}
+.wake-card-eyebrow{
+    display:block;
+    margin-bottom:4px;
+    font-size:10px;
+    font-weight:700;
+    letter-spacing:.18em;
+    color:#c69ac1;
+}
+.wake-card-header h2{
+    margin:0;
+    font-size:24px;
+    font-weight:500;
+    color:#f3dfad;
+}
+.wake-card-character{
+    display:block;
+    margin-top:3px;
+    font-size:12px;
+    font-weight:600;
+    color:#aaa1c4;
+}
+/* ==========================================
+   Sections
+========================================== */
+.wake-card-section{
+    padding:14px 22px 0;
+}
+.wake-card-signals,
+.wake-card-numbers,
+.wake-card-targets{
+    display:flex;
+    justify-content:center;
+    gap:12px;
+}
+/* ==========================================
+   Small Controls
+========================================== */
+.wake-card-option{
+    appearance:none;
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+    justify-content:center;
+    width:76px;
+    min-height:72px;
+    padding:8px 5px;
+    border:1px solid #6e638a;
+    border-radius:12px;
+    background:
+        linear-gradient(
+            180deg,
+            #29213f,
+            #19142b
+        );
+    color:white;
+    cursor:pointer;
+    transition:
+        transform .15s ease,
+        border-color .15s ease,
+        background .15s ease,
+        box-shadow .15s ease;
+}
+.wake-card-option strong{
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    width:36px;
+    height:36px;
+    margin-bottom:4px;
+    font-size:26px;
+    line-height:1;
+    color:#f3dfad;
+}
+.wake-card-option span{
+    font-size:11px;
+    font-weight:600;
+    white-space:nowrap;
+
+    color:#eee9f4;
+}
+.wake-card-option:hover{
+    transform:translateY(-3px);
+    border-color:#b78ad0;
+    background:
+        linear-gradient(
+            180deg,
+            #3a2d55,
+            #211832
+        );
+    box-shadow:
+        0 7px 16px rgba(0,0,0,.3);
+}
+/* ==========================================
+   Signals
+========================================== */
+.wake-card-signal{
+    width:92px;
+}
+/* ==========================================
+   Numbers
+========================================== */
+.wake-card-number{
+    width:66px;
+}
+.wake-card-number strong{
+    border:1px solid rgba(243,223,173,.45);
+    border-radius:8px;
+    font-size:20px;
+}
+/* ==========================================
+   Player / Character
+========================================== */
+.wake-card-target{
+    width:105px;
+}
+.wake-card-target strong{
+    font-size:30px;
+}
+/* ==========================================
+   Communication Cards
+========================================== */
+.wake-card-actions{
+    display:grid;
+    grid-template-columns:
+        repeat(4, 1fr);
+    gap:10px;
+    padding:18px 22px 22px;
+}
+.wake-card-action{
+    appearance:none;
+    min-height:82px;
+    padding:12px 10px;
+    border:1px solid rgba(255,255,255,.18);
+    border-radius:10px;
+    background:
+        linear-gradient(
+            160deg,
+            #46305d,
+            #261b38
+        );
+    color:#fff;
+    font-family:inherit;
+    font-size:12px;
+    font-weight:700;
+    line-height:1.25;
+    cursor:pointer;
+    box-shadow:
+        inset 0 0 0 1px rgba(255,255,255,.04);
+    transition:
+        transform .15s ease,
+        border-color .15s ease,
+        box-shadow .15s ease;
+}
+.wake-card-action:hover{
+    transform:translateY(-3px);
+    border-color:#d2a8d1;
+    box-shadow:
+        0 8px 18px rgba(0,0,0,.28);
+}
+.wake-card-action[
+    data-wake-action="not-in-play"
+]{
+    background:
+        linear-gradient(
+            160deg,
+            #315b7b,
+            #1c354c
+        );
+}
+.wake-card-action[
+    data-wake-action="demon"
+]{
+    background:
+        linear-gradient(
+            160deg,
+            #8b2635,
+            #471725
+        );
+}
+.wake-card-action[
+    data-wake-action="minions"
+]{
+    background:
+        linear-gradient(
+            160deg,
+            #76263c,
+            #401627
+        );
+}
+.wake-card-action[
+    data-wake-action="make-choice"
+]{
+    background:
+        linear-gradient(
+            160deg,
+            #6d472f,
+            #38251d
+        );
+}
