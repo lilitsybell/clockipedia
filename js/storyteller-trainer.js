@@ -3028,13 +3028,11 @@ if(
    /* ======================================
    Librarian
 ====================================== */
-
 if(
     trainerSelectedCharacters.has(
         "librarian"
     )
 ){
-
     const outsiderReminder =
         placedReminders.find(
             reminder =>
@@ -3043,8 +3041,6 @@ if(
                 reminder.reminder ===
                     "outsider"
         );
-
-
     const wrongReminder =
         placedReminders.find(
             reminder =>
@@ -3053,38 +3049,27 @@ if(
                 reminder.reminder ===
                     "wrong"
         );
-
-
     if(
         !outsiderReminder ||
         !wrongReminder
     ){
-
         errors.push(
             "The Librarian needs both the \"Outsider\" and \"Wrong\" reminders placed."
         );
-
     }
     else{
-
         const correctTargetId =
             getCharacterAtSeat(
                 outsiderReminder.seat
             );
-
-
         const correctTarget =
             trainerCharacterData[
                 correctTargetId
             ];
-
-
         const correctTeam =
             normalizeTrainerTeam(
                 correctTarget?.team
             );
-
-
         const drunkReminder =
             placedReminders.find(
                 reminder =>
@@ -3093,39 +3078,26 @@ if(
                     reminder.reminder ===
                         "is-the-drunk"
             );
-
-
         const drunkSeat =
             drunkReminder
                 ? drunkReminder.seat
                 : null;
-
-
         const legalTarget =
             correctTeam ===
                 "Outsider" ||
-
             outsiderReminder.seat ===
                 drunkSeat ||
-
             correctTargetId ===
                 "spy";
-
-
         if(!legalTarget){
-
             errors.push(
                 "The Librarian's \"Outsider\" reminder must be on an Outsider, the player marked \"Is the Drunk\", or the Spy."
             );
-
         }
-
-
         if(
             outsiderReminder.seat ===
             wrongReminder.seat
         ){
-
             errors.push(
                 "The Librarian\'s \"Outsider\" and \"Wrong\" reminders must be on two different players."
             );
@@ -3135,13 +3107,11 @@ if(
    /* ======================================
    Investigator
 ====================================== */
-
 if(
     trainerSelectedCharacters.has(
         "investigator"
     )
 ){
-
     const minionReminder =
         placedReminders.find(
             reminder =>
@@ -3150,8 +3120,6 @@ if(
                 reminder.reminder ===
                     "minion"
         );
-
-
     const wrongReminder =
         placedReminders.find(
             reminder =>
@@ -3160,78 +3128,55 @@ if(
                 reminder.reminder ===
                     "wrong"
         );
-
-
     if(
         !minionReminder ||
         !wrongReminder
     ){
-
         errors.push(
             "The Investigator needs both the \"Minion\" and \"Wrong\" reminders placed."
         );
-
     }
     else{
-
         const correctTargetId =
             getCharacterAtSeat(
                 minionReminder.seat
             );
-
-
         const correctTarget =
             trainerCharacterData[
                 correctTargetId
             ];
-
-
         const correctTeam =
             normalizeTrainerTeam(
                 correctTarget?.team
             );
-
-
         const legalTarget =
             correctTeam ===
                 "Minion" ||
             correctTargetId ===
                 "recluse";
-
-
         if(!legalTarget){
-
             errors.push(
                 "The Investigator\'s \"Minion\" reminder must be on a Minion or the Recluse."
             );
-
         }
-
-
         if(
             minionReminder.seat ===
             wrongReminder.seat
         ){
-
             errors.push(
                 "The Investigator\'s \"Minion\" and \"Wrong\" reminders must be on two different players."
             );
-
         }
-
     }
-
 }
     /* ======================================
        Fortune Teller
     ====================================== */
-
     if(
         trainerSelectedCharacters.has(
             "fortuneteller"
         )
     ){
-
         const redHerring =
             placedReminders.find(
                 reminder =>
@@ -3240,93 +3185,56 @@ if(
                     reminder.reminder ===
                         "red-herring"
             );
-
-
         if(!redHerring){
-
             errors.push(
                 "The Fortune Teller needs a \"Red Herring\"."
             );
-
         }
         else{
-
             const targetCharacterId =
                 getCharacterAtSeat(
                     redHerring.seat
                 );
-
-
             const targetCharacter =
                 trainerCharacterData[
                     targetCharacterId
                 ];
-
-
             const targetTeam =
                 normalizeTrainerTeam(
                     targetCharacter?.team
                 );
-
             const legalTarget =
                 targetTeam === "Townsfolk" ||
                 targetTeam === "Outsider" ||
                 targetCharacterId === "spy";
-
-
             if(!legalTarget){
-
                 errors.push(
                     "The \"Red Herring\" must be a good player. The Spy may also register as good."
                 );
-
             }
-
         }
-
     }
-
-
     return {
         valid:
             errors.length === 0,
-
         errors:
             errors
     };
-
 }
 /* ==========================================
    Check Reminder Setup
 ========================================== */
-
 function checkReminderSetup(){
-
-    /*
-       Make absolutely sure our JS state
-       matches the tokens currently on
-       the board.
-    */
-
     updatePlacedReminderState();
-
-
     const validation =
         validateReminderSetup();
-
-
     if(!validation.valid){
-
         showSetupMistake(
             validation
         );
-
         return;
     }
-
-
     console.log(
         "Reminder setup correct!"
     );
-
 }
