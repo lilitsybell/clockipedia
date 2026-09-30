@@ -1492,49 +1492,49 @@ body{
     position:absolute;
     left:32px;
     top:50%;
-    transform:translateY(-39%);
-    width:235px;
-    max-height:520px;
+    transform:translateY(-32%);
+    width:205px;
     background:#f3dfad;
     border:1px solid rgba(13,24,33,.16);
     border-radius:16px;
     box-shadow:
         0 10px 28px rgba(0,0,0,.18);
-    overflow:hidden;
+    overflow:visible;
     z-index:30;
 }
 /* ==========================================
    Header
 ========================================== */
 .night-order-header{
-    padding:18px 18px 15px;
+    padding:16px 16px 14px;
     border-bottom:
-        1px solid rgba(13,24,33,.14);
+        1px solid rgba(13,24,33,.12);
 }
-.night-order-eyebrow{
-    display:block;
-    margin-bottom:4px;
-    font-size:10px;
+.night-order-header .eyebrow{
+    margin:0 0 4px;
+    font-size:11px;
     font-weight:700;
     letter-spacing:.18em;
-    color:#76526f;
+    text-transform:uppercase;
+    color:#79516f;
 }
 .night-order-header h2{
     margin:0;
-    font-size:20px;
+    font-family:"Droid Sans", sans-serif;
+    font-size:17px;
+    line-height:1.1;
     font-weight:500;
-    color:#171329;
+    color:#0D1821;
 }
 /* ==========================================
    List
 ========================================== */
 .night-order-list{
-    padding:12px;
     display:flex;
     flex-direction:column;
-    gap:4px;
-    max-height:440px;
-    overflow-y:auto;
+    gap:2px;
+    padding:10px 12px 12px;
+    overflow:visible;
 }
 /* ==========================================
    Character
@@ -1543,31 +1543,30 @@ body{
     position:relative;
     display:flex;
     align-items:center;
-    gap:10px;
-    min-height:48px;
-    padding:6px 9px;
-    border-radius:9px;
-    cursor:default;
+    gap:9px;
+    min-height:40px;
+    padding:3px 6px;
+    border-radius:8px;
+    cursor:help;
     transition:
         background .15s ease,
         transform .15s ease;
 }
 .night-order-character:hover{
-    background:
-        rgba(255,255,255,.48);
-    transform:
-        translateX(3px);
+    background:rgba(255,255,255,.34);
+    transform:translateX(2px);
 }
 .night-order-character img{
-    width:42px;
-    height:42px;
+    width:32px;
+    height:32px;
     object-fit:contain;
-    flex:none;
+    flex:0 0 auto;
 }
 .night-order-character-name{
     font-size:13px;
+    line-height:1.1;
     font-weight:700;
-    color:#171329;
+    color:#0D1821;
 }
 /* ==========================================
    Night Order Tooltip
