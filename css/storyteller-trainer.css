@@ -1806,7 +1806,7 @@ body{
    Card
 ========================================== */
 .wake-card{
-    width:min(760px, 72vw);
+    width:min(680px, 72vw);
     background:#171329;
     border:1px solid rgba(243,223,173,.35);
     border-radius:18px;
@@ -1855,14 +1855,14 @@ body{
    Sections
 ========================================== */
 .wake-card-section{
-    padding:14px 22px 0;
+    padding:10px 20px 0;
 }
 .wake-card-signals,
 .wake-card-numbers,
 .wake-card-targets{
     display:flex;
     justify-content:center;
-    gap:12px;
+    gap:8px;
 }
 /* ==========================================
    Small Controls
@@ -1952,15 +1952,16 @@ body{
    Communication Cards
 ========================================== */
 .wake-card-actions{
-    display:grid;
-    grid-template-columns:
-        repeat(4, 1fr);
-    gap:10px;
-    padding:18px 22px 22px;
+    display:flex;
+    justify-content:center;
+    align-items:stretch;
+    gap:9px;
+    padding:14px 20px 20px;
 }
 .wake-card-action{
     appearance:none;
-    min-height:82px;
+    width:145px;
+    min-height:96px;
     padding:12px 10px;
     border:1px solid rgba(255,255,255,.18);
     border-radius:10px;
@@ -1972,7 +1973,7 @@ body{
         );
     color:#fff;
     font-family:inherit;
-    font-size:12px;
+    font-size:11px;
     font-weight:700;
     line-height:1.25;
     cursor:pointer;
