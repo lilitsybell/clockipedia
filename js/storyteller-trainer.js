@@ -991,18 +991,14 @@ const distributeButton =
 ========================================== */
 
 function bindCharacterSelectionControls(){
-
     const openButton =
         document.querySelector(
             "#select-characters"
         );
-
-
     const cancelButton =
         document.querySelector(
             "#cancel-character-selection"
         );
-
     const distributeButton =
         document.querySelector(
             "#distribute-characters"
@@ -1011,8 +1007,6 @@ function bindCharacterSelectionControls(){
         document.querySelector(
             "#character-selection"
         );
-
-
 if(
     openButton &&
     overlay
@@ -1045,9 +1039,7 @@ if(
                open character selection.
             */
 
-            overlay.classList.remove(
-                "hidden"
-            );
+openCharacterSelector();
 
         }
     );
@@ -3767,7 +3759,6 @@ function showTrainerIntro(){
 /* ==========================================
    Prepare Night One Popup
 ========================================== */
-
 function showPrepareNightOnePopup(){
     showTrainerPopup({
         title:
@@ -3848,5 +3839,7 @@ function openCharacterSelector(){
     if(!overlay){
         return;
     }
-openCharacterSelector();
+    overlay.classList.remove(
+        "hidden"
+    );
 }
