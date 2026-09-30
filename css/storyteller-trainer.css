@@ -1961,7 +1961,7 @@ body{
 .wake-card-action{
     appearance:none;
     width:145px;
-    min-height:96px;
+    min-height:40px;
     padding:12px 10px;
     border:1px solid rgba(255,255,255,.18);
     border-radius:10px;
