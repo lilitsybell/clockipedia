@@ -1608,3 +1608,6 @@ body{
     line-height:1.45;
     color:rgba(255,255,255,.9);
 }
+.night-order-tooltip{
+    translate:0 -50%;
+}
