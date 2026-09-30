@@ -1491,9 +1491,8 @@ body{
 .night-order-panel{
     position:absolute;
     left:32px;
-    top:50%;
-    transform:translateY(-32%);
-    width:205px;
+    top:265px;
+    width:163px;
     background:#f3dfad;
     border:1px solid rgba(13,24,33,.16);
     border-radius:16px;
@@ -1533,7 +1532,7 @@ body{
     display:flex;
     flex-direction:column;
     gap:2px;
-    padding:10px 12px 12px;
+    padding:9px 8px 10px;
     overflow:visible;
 }
 /* ==========================================
@@ -1543,9 +1542,9 @@ body{
     position:relative;
     display:flex;
     align-items:center;
-    gap:9px;
+    gap:7px;
     min-height:40px;
-    padding:3px 6px;
+    padding:3px 4px;
     border-radius:8px;
     cursor:help;
     transition:
