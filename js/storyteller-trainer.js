@@ -2359,7 +2359,9 @@ function buildSetupReminderTray(){
 
         }
     );
-
+buildNightOrder(
+    "firstNight"
+);
 }
 /* ==========================================
    Create Reminder Group
