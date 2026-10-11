@@ -4026,11 +4026,35 @@ function bindWakeCardControls(){
             openWakeCard(seat);
         });
     overlay.addEventListener("click", event => {
-
         if(event.target === overlay){
             closeWakeCard();
         }
     });
+overlay.addEventListener("click", event => {
+    const button = event.target.closest(
+        "[data-wake-action]"
+    );
+    if(!button || activeWakeSeat === null){
+        return;
+    }
+    const action = button.dataset.wakeAction;
+    const characterId =
+        getCharacterAtSeat(activeWakeSeat);
+    if(
+        characterId === "poisoner" &&
+        action === "make-choice"
+    ){
+        const targetSeat = choosePoisonerTarget();
+        if(targetSeat === null){
+            return;
+        }
+        const playerName =
+            trainerPlayerNames[targetSeat];
+        showWakeResponse(
+            `The Poisoner chooses ${playerName} (Seat ${targetSeat + 1}).`
+        );
+    }
+});
 }
 function openWakeCard(seat){
     const overlay =
@@ -4055,4 +4079,21 @@ function closeWakeCard(){
     document.querySelector("#wake-card-overlay")
         ?.classList.add("hidden");
     activeWakeSeat = null;
+}
+/* ==========================================
+   Wake Player Response
+========================================== */
+function showWakeResponse(message){
+    const card =
+        document.querySelector("#wake-card");
+    if(!card) return;
+    let response =
+        card.querySelector(".wake-card-response");
+    if(!response){
+        response = document.createElement("div");
+        response.className =
+            "wake-card-response";
+        card.appendChild(response);
+    }
+    response.textContent = message;
 }
