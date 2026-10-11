@@ -18,7 +18,7 @@ function choosePoisonerTarget(){
     }
     const goodSeats = [];
     for(let i = 0; i < trainerPlayerCount; i++){
-        const slug = distributedTrainerCharacters[i];
+        const slug = getCharacterAtSeat(i);
         const character = trainerCharacterData[slug];
         if(!character) continue;
         const isGood = [
