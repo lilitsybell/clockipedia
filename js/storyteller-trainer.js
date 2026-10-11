@@ -9,6 +9,37 @@ let trainerGamePhase = "setup";
 let trainerNightQueue = [];
 let trainerNightIndex = -1;
 /* ==========================================
+   Night Choices
+========================================== */
+const trainerNightChoices = {};
+function choosePoisonerTarget(){
+    if(trainerNightChoices.poisoner !== undefined){
+        return trainerNightChoices.poisoner;
+    }
+    const goodSeats = [];
+    for(let i = 0; i < trainerPlayerCount; i++){
+        const slug = distributedTrainerCharacters[i];
+        const character = trainerCharacterData[slug];
+        if(!character) continue;
+        const isGood = [
+            "Townsfolk",
+            "Outsider",
+            "Outsiders"
+        ].includes(character.team);
+        if(isGood){
+            goodSeats.push(i);
+        }
+    }
+    if(!goodSeats.length){
+        return null;
+    }
+    const chosenSeat = goodSeats[
+        Math.floor(Math.random() * goodSeats.length)
+    ];
+    trainerNightChoices.poisoner = chosenSeat;
+    return chosenSeat;
+}
+/* ==========================================
    Trouble Brewing Setup
 ========================================== */
 const troubleBrewingSetup = {
