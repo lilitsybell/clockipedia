@@ -448,8 +448,9 @@ document.addEventListener(
         buildCharacterSelection();
         updateCharacterSelection();
         bindCharacterSelectionControls();
-        bindMistakeControls();
-        showTrainerIntro();
+bindMistakeControls();
+bindWakeCardControls();
+showTrainerIntro();
     }
 );
 /* ==========================================
@@ -3995,4 +3996,63 @@ function updateActiveNightCharacter(){
         "Active night character:",
         characterId
     );
+}
+/* ==========================================
+   Wake Player Card
+========================================== */
+let activeWakeSeat = null;
+function bindWakeCardControls(){
+    const overlay =
+        document.querySelector("#wake-card-overlay");
+    if(!overlay) return;
+    // Clicking a character token opens their card.
+    document.querySelector("#player-ring")
+        ?.addEventListener("click", event => {
+            if(trainerGamePhase !== "firstNight"){
+                return;
+            }
+            if(selectedReminder){
+                return;
+            }
+            if(event.target.closest(".setup-reminder-token")){
+                return;
+            }
+            const token =
+                event.target.closest(".player-token");
+            if(!token) return;
+            const seat =
+                token.closest(".trainer-player");
+            if(!seat?.dataset.character) return;
+            openWakeCard(seat);
+        });
+    overlay.addEventListener("click", event => {
+
+        if(event.target === overlay){
+            closeWakeCard();
+        }
+    });
+}
+function openWakeCard(seat){
+    const overlay =
+        document.querySelector("#wake-card-overlay");
+    const characterId =
+        seat.dataset.character;
+    const character =
+        trainerCharacterData[characterId];
+    if(!overlay || !character) return;
+    activeWakeSeat = Number(seat.dataset.seat);
+    const heading =
+        document.querySelector("#wake-card-character");
+    const playerName =
+        trainerPlayerNames[activeWakeSeat];
+    if(heading){
+        heading.textContent =
+            `${character.name.toUpperCase()} • ${playerName.toUpperCase()}`;
+    }
+    overlay.classList.remove("hidden");
+}
+function closeWakeCard(){
+    document.querySelector("#wake-card-overlay")
+        ?.classList.add("hidden");
+    activeWakeSeat = null;
 }
