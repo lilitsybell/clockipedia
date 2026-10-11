@@ -2059,3 +2059,13 @@ body{
     opacity:1;
     transform:scale(1);
 }
+.wake-card-response{
+    margin-top:16px;
+    padding:14px 18px;
+    background:#f3dfad;
+    color:#171329;
+    border-radius:10px;
+    text-align:center;
+    font-size:15px;
+    font-weight:700;
+}
