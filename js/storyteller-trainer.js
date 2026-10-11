@@ -514,20 +514,8 @@ function createPlayerSeat(index){
     player.dataset.seat =
         index;
 
-
-    /*
-       Player 1 starts at the top.
-
-       Players continue clockwise.
-    */
-
-    const angle =
-        (
-            360 /
-            trainerPlayerCount
-        ) *
-        index -
-        90;
+const angle =
+    (360 / trainerPlayerCount) * index;
     player.style.setProperty(
         "--seat-angle",
         `${angle}deg`
