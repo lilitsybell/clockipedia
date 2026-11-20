@@ -1,4 +1,5 @@
 [
+    "data/scripts/psycho-babble.json",
     "data/scripts/spooky-tea.json",
     "data/scripts/once-in-a-blue-moon.json",
     "data/scripts/beginners-intrigue.json",
@@ -97,6 +98,5 @@
     "data/scripts/kill-my-darlings.json",
     "data/scripts/ravenkeeper-assembly.json",
     "data/scripts/race-to-the-bottom.json",
-    "data/scripts/kingdom-come.json",
-    "data/scripts/twinning-nadinesyville.json"
+    "data/scripts/kingdom-come.json"
 ]
