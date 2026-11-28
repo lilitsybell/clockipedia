@@ -1,4 +1,5 @@
 [
+    "data/scripts/contact-tracing-ii.json",
     "data/scripts/the-phantom-detectives.json",
     "data/scripts/from-the-depths.json",
     "data/scripts/kill-my-darlings.json",
@@ -97,6 +98,5 @@
     "data/scripts/cards-on-the-table.json",
     "data/scripts/buyers-remorse.json",
     "data/scripts/separation-of-church-and-state.json",
-    "data/scripts/the-ballad-of-seat-7.json",
-    "data/scripts/knife-the-wolf.json"
+    "data/scripts/the-ballad-of-seat-7.json"
 ]
